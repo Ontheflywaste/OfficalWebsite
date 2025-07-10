@@ -7,7 +7,6 @@ import ScrollReveal from '../components/ScrollReveal';
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -15,14 +14,6 @@ function Home() {
     }, 100);
 
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.currentTime = 0;
-      video.play().catch(console.error);
-    }
   }, []);
 
   useEffect(() => {
@@ -124,7 +115,6 @@ function Home() {
           
           {/* Video background */}
           <video
-            ref={videoRef}
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             muted

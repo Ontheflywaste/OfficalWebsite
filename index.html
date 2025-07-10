@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" sizes="24x24 48x48 72x72 96x96 192x192" />
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico" sizes="144x144" />
+    <link rel="apple-touch-icon" href="/Images/favicon.ico" sizes="270x270" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="On The Fly Waste Solutions provides reliable valet trash and bulk removal services to multifamily communities across Central Florida. Professional, dependable, and locally operated." />
+
+    <meta name="google-site-verification" content="iaOHb50bzFlhGkX0Ed7Ycu2j-_TGUgLgaAKsJSfKLPQ" />
+    
+    <!-- Critical font preloading for hero text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" /></noscript>
+    
+    <!-- Preload critical hero assets with high priority -->
+    <link rel="preload" href="/logos/white-logo.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/Images/OTFLogoblack.jpg" as="image" fetchpriority="high" />
+    
+    <!-- Preload hero video -->
+    <link rel="preload" href="/videos/HerosectionvideoNew.mp4" as="video" fetchpriority="high" />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    
+    <!-- Preload critical CSS and main module -->
+    <link rel="preload" href="/src/index.css" as="style" fetchpriority="high" />
+    <link rel="modulepreload" href="/src/main.tsx" fetchpriority="high" />
+    
+    <!-- Prefetch non-critical routes -->
+    <link rel="prefetch" href="/blog" as="document" />
+    <link rel="prefetch" href="/contact" as="document" />
+    <link rel="prefetch" href="/reviews" as="document" />
+    
+    <!-- Google tag (gtag.js) - defer for performance -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17079694713"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17079694713');
+    </script>
+    
+    <title>Valet Trash & Bulk Removal Services | On The Fly Waste Solutions Orlando</title>
+    
+    <!-- Critical CSS for hero section to prevent layout shift -->
+    <style>
+      /* Critical hero styles to prevent CLS */
+      .hero-container {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+      
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.45));
+        z-index: 10;
+      }
+      
+      .hero-content {
+        position: relative;
+        z-index: 20;
+        text-align: center;
+        color: white;
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        padding-top: 20vh; /* Lowered text positioning */
+      }
+      
+      .hero-title {
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        letter-spacing: -0.025em;
+        text-align: center;
+      }
+      
+      .hero-subtitle {
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+        opacity: 0.95;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      
+      /* Mobile-first responsive text sizing */
+      .hero-title { 
+        font-size: 1.5rem; /* 24px */
+      }
+      .hero-subtitle { 
+        font-size: 1.125rem; /* 18px */
+      }
+      
+      /* Small mobile (375px+) */
+      @media (min-width: 375px) {
+        .hero-title { font-size: 1.75rem; } /* 28px */
+        .hero-subtitle { font-size: 1.125rem; } /* 18px */
+      }
+      
+      /* Large mobile (480px+) */
+      @media (min-width: 480px) {
+        .hero-title { font-size: 2rem; } /* 32px */
+        .hero-subtitle { font-size: 1.25rem; } /* 20px */
+      }
+      
+      /* Tablet (640px+) */
+      @media (min-width: 640px) {
+        .hero-title { font-size: 2.5rem; } /* 40px */
+        .hero-subtitle { font-size: 1.375rem; } /* 22px */
+      }
+      
+      /* Large tablet (768px+) */
+      @media (min-width: 768px) {
+        .hero-title { font-size: 3rem; } /* 48px */
+        .hero-subtitle { font-size: 1.5rem; } /* 24px */
+      }
+      
+      /* Desktop (1024px+) */
+      @media (min-width: 1024px) {
+        .hero-title { font-size: 3.5rem; } /* 56px */
+        .hero-subtitle { font-size: 1.625rem; } /* 26px */
+      }
+      
+      /* Large desktop (1280px+) */
+      @media (min-width: 1280px) {
+        .hero-title { font-size: 4rem; } /* 64px */
+        .hero-subtitle { font-size: 1.75rem; } /* 28px */
+      }
+      
+      /* Extra large desktop (1536px+) */
+      @media (min-width: 1536px) {
+        .hero-title { font-size: 4.5rem; } /* 72px */
+        .hero-subtitle { font-size: 1.875rem; } /* 30px */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

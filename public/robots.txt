@@ -1,0 +1,7 @@
+# Robots.txt for On The Fly Waste Solutions
+# https://ontheflywastesolutions.com
+
+User-agent: *
+Disallow:
+
+Sitemap: https://ontheflywastesolutions.com/sitemap.xml

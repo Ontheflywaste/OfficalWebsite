@@ -36,6 +36,8 @@ function Layout({ children }: { children: React.ReactNode }) {
 
   const isPostPage = location.pathname.startsWith('/blog/');
   const shouldUseBlackLogo = isScrolled || isPostPage || window.innerWidth < 768;
+  const isMobile = window.innerWidth < 768;
+  const shouldUseBlackNavbar = shouldUseBlackLogo || isMobile;
 
   return (
     <div className="min-h-screen bg-white">
@@ -113,7 +115,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 
       <nav 
         className={`fixed w-full z-50 transition-all duration-300 ${
-          shouldUseBlackLogo
+          shouldUseBlackNavbar
             ? 'top-0 bg-white shadow-lg border-b border-gray-200' 
             : 'top-10 bg-black/90 backdrop-blur-md'
         }`}
@@ -138,7 +140,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
                   } object-contain ${
-                    shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
+                    shouldUseBlackNavbar ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
                   loading="eager"
                   fetchPriority="high"
@@ -153,7 +155,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
                   } object-contain bg-transparent ${
-                    shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
+                    shouldUseBlackNavbar ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
                   style={{
                     filter: 'brightness(1.1) contrast(1.1)',
@@ -170,7 +172,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`md:hidden transition-colors duration-300 ${
-                shouldUseBlackLogo
+                shouldUseBlackNavbar
                   ? 'text-gray-900 hover:text-[#027502]'
                   : 'text-white hover:text-[#027502]'
               }`}

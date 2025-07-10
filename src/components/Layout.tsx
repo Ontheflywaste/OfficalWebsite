@@ -140,7 +140,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/logos/white-logo.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-8' : 'h-10'
                   } object-contain ${
                     shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
@@ -155,7 +155,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/Images/OTFLogoblack.jpg"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-8' : 'h-10'
                   } object-contain bg-transparent ${
                     shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}

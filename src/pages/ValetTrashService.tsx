@@ -65,14 +65,14 @@ function ValetTrashService() {
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/valet-trash" />
       </Helmet>
 
-      <div className="min-h-screen pt-24 md:pt-0">
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <div className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
+        <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/gallery12813_1920x831@2x.jpg')] bg-cover bg-center opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full pt-20">
-            <div className="flex flex-col justify-center items-center h-full text-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div className="flex flex-col justify-center items-center h-full text-center pt-24">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
@@ -97,7 +97,6 @@ function ValetTrashService() {
               </ScrollReveal>
             </div>
           </div>
-        </div>
 
         {/* Service Overview */}
         <section className="py-20 bg-white">

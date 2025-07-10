@@ -1,6 +1,3 @@
-Here's the fixed version with all missing closing brackets and sections:
-
-```jsx
 import React from 'react';
 import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Mail, Star, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -519,4 +516,3 @@ function ValetTrashService() {
 }
 
 export default ValetTrashService;
-```

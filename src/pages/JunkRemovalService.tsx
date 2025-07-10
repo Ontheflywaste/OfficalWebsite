@@ -71,12 +71,12 @@ function JunkRemovalService() {
 
       <div className="min-h-screen pt-24 md:pt-0">
         {/* Hero Section */}
-        <div className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
+        <div className="relative min-h-[100vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/Junk.jpg')] bg-cover bg-center opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center pt-32 pb-16">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full pt-20">
+            <div className="flex flex-col justify-center items-center h-full text-center">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-[#049704]/20 text-[#049704] rounded-full text-sm font-medium backdrop-blur-sm border border-[#049704]/30">

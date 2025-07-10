@@ -363,7 +363,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -376,7 +376,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/about"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -389,7 +389,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/services"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -439,7 +439,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/blog"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -452,7 +452,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/contact"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -465,7 +465,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/reviews"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
@@ -480,7 +480,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}

@@ -113,6 +113,7 @@ function PressureWashingService() {
               </ScrollReveal>
             </div>
           </div>
+        </section>
 
         {/* Service Overview */}
         <section className="py-20 bg-white">

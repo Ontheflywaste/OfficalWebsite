@@ -34,8 +34,30 @@ function Layout({ children }: { children: React.ReactNode }) {
     setIsServicesDropdownOpen(false);
   }, [location.pathname]);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isMobileMenuOpen && !(event.target as Element).closest('nav')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
   const isPostPage = location.pathname.startsWith('/blog/');
-  const isMobile = window.innerWidth < 768;
   const shouldUseBlackLogo = isScrolled || isPostPage;
   const shouldUseBlackNavbar = isScrolled || isPostPage;
 
@@ -86,11 +108,11 @@ function Layout({ children }: { children: React.ReactNode }) {
       <div 
         className={`fixed top-0 left-0 right-0 bg-[#027502] text-white py-2 transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        } hidden md:block`}
+        } hidden lg:block`}
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center space-x-8">
+          <div className="flex justify-center items-center space-x-4 lg:space-x-8 text-sm lg:text-base">
             <span className="text-sm flex items-center hover:scale-105 transition-transform duration-300" role="text">
               <MapPin className="h-4 w-4 mr-1" aria-hidden="true" />
               <span>Central Florida</span>
@@ -117,16 +139,14 @@ function Layout({ children }: { children: React.ReactNode }) {
         className={`fixed w-full z-50 transition-all duration-300 ${
           shouldUseBlackNavbar
             ? 'top-0 bg-white shadow-lg border-b border-gray-200' 
-            : isMobile 
-              ? 'top-0 bg-black/90 backdrop-blur-md'
-              : 'top-10 bg-black/90 backdrop-blur-md'
+            : 'top-0 lg:top-10 bg-black/90 backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? 'h-16' : 'h-20'
+            isScrolled ? 'h-14 sm:h-16' : 'h-16 sm:h-20'
           }`}>
             <div className="flex-shrink-0 transform transition-all duration-300 hover:scale-105 relative">
               <Link 
@@ -140,7 +160,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/logos/white-logo.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'
                   } object-contain ${
                     shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
@@ -155,7 +175,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/Images/OTFLogoblack.jpg"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'
                   } object-contain bg-transparent ${
                     shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
@@ -173,22 +193,23 @@ function Layout({ children }: { children: React.ReactNode }) {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`md:hidden transition-colors duration-300 ${
+              className={`lg:hidden transition-colors duration-300 p-2 rounded-lg hover:bg-black/10 ${
                 shouldUseBlackLogo
                   ? 'text-gray-900 hover:text-[#027502]'
                   : 'text-white hover:text-[#027502]'
               }`}
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              style={{ minWidth: '44px', minHeight: '44px' }}
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-6 w-6 mx-auto" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-6 w-6 mx-auto" aria-hidden="true" />
               )}
             </button>
 
-            <div className="hidden md:flex items-center space-x-8" role="menubar">
+            <div className="hidden lg:flex items-center space-x-8" role="menubar">
               <Link
                 to="/"
                 className={`font-medium text-base relative group transition-all duration-300 ${
@@ -346,131 +367,133 @@ function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 
+          {/* Mobile Menu Overlay */}
+          {isMobileMenuOpen && (
+            <div 
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          )}
+
+          {/* Mobile Menu */}
           <div 
-            className={`md:hidden transition-all duration-300 ${
+            className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
               isMobileMenuOpen 
-                ? 'max-h-[500px] opacity-100' 
-                : 'max-h-0 opacity-0'
-            } overflow-hidden ${
-              shouldUseBlackNavbar
-                ? 'bg-white'
-                : 'bg-black/90 backdrop-blur-md'
+                ? 'translate-x-0' 
+                : 'translate-x-full'
             }`}
             role="menu"
             aria-label="Mobile navigation"
           >
-            <div className="py-4 space-y-1 px-2">
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <img 
+                src="/Images/OTFLogoblack.jpg"
+                alt="On The Fly Waste Solutions Logo" 
+                className="h-8 object-contain"
+                style={{
+                  filter: 'brightness(1.1) contrast(1.1)',
+                  mixBlendMode: 'multiply'
+                }}
+              />
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                style={{ minWidth: '44px', minHeight: '44px' }}
+              >
+                <X className="h-6 w-6 text-gray-900" />
+              </button>
+            </div>
+
+            {/* Mobile Menu Items */}
+            <div className="py-4 space-y-2 px-4 overflow-y-auto h-full pb-20">
               <Link
                 to="/"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 Home
               </Link>
               
               <Link
                 to="/about"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/about' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 About
               </Link>
               
               <Link
                 to="/services"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/services' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 Services
               </Link>
               
               {/* Mobile Services Submenu */}
-              <div className="pl-6 space-y-1 border-l-2 border-white/20 ml-4">
+              <div className="pl-6 space-y-2 border-l-2 border-gray-200 ml-4">
                 <Link
                   to="/services/valet-trash"
-                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackLogo
-                      ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
-                      : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
-                  }`}
+                  className="flex items-center py-3 px-3 rounded-lg transition-colors duration-300 text-gray-700 hover:text-[#027502] hover:bg-gray-50 text-base"
                   role="menuitem"
+                  style={{ minHeight: '44px' }}
                 >
+                  <Trash2 className="h-4 w-4 mr-3 text-[#027502]" />
                   Valet Trash
                 </Link>
                 <Link
                   to="/services/junk-removal"
-                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackLogo
-                      ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
-                      : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
-                  }`}
+                  className="flex items-center py-3 px-3 rounded-lg transition-colors duration-300 text-gray-700 hover:text-[#027502] hover:bg-gray-50 text-base"
                   role="menuitem"
+                  style={{ minHeight: '44px' }}
                 >
+                  <Package className="h-4 w-4 mr-3 text-[#027502]" />
                   Junk Removal
                 </Link>
                 <Link
                   to="/services/pressure-washing"
-                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackLogo
-                      ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
-                      : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
-                  }`}
+                  className="flex items-center py-3 px-3 rounded-lg transition-colors duration-300 text-gray-700 hover:text-[#027502] hover:bg-gray-50 text-base"
                   role="menuitem"
+                  style={{ minHeight: '44px' }}
                 >
+                  <Droplet className="h-4 w-4 mr-3 text-[#027502]" />
                   Pressure Washing
                 </Link>
               </div>
               
               <Link
                 to="/blog"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/blog' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 Blog
               </Link>
               
               <Link
                 to="/contact"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/contact' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 Contact
               </Link>
               
               <Link
                 to="/reviews"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-current={location.pathname === '/reviews' ? 'page' : undefined}
+                style={{ minHeight: '44px' }}
               >
                 Reviews
               </Link>
@@ -479,16 +502,35 @@ function Layout({ children }: { children: React.ReactNode }) {
                 href="https://www.youtube.com/embed/gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
+                className="flex items-center py-4 px-4 rounded-lg transition-colors duration-300 font-medium text-gray-900 hover:text-[#027502] hover:bg-gray-50 text-lg"
                 role="menuitem"
                 aria-label="Testimonials (opens in new tab)"
+                style={{ minHeight: '44px' }}
               >
                 Testimonials
               </a>
+
+              {/* Mobile Contact Info */}
+              <div className="border-t border-gray-200 mt-6 pt-6">
+                <div className="space-y-4">
+                  <a 
+                    href="tel:407-274-5019" 
+                    className="flex items-center py-3 px-4 rounded-lg bg-[#049704] text-white hover:bg-[#038203] transition-colors duration-300 font-medium text-lg"
+                    style={{ minHeight: '44px' }}
+                  >
+                    <Phone className="h-5 w-5 mr-3" />
+                    407-274-5019
+                  </a>
+                  <a 
+                    href="mailto:info@ontheflywastesolutions.com" 
+                    className="flex items-center py-3 px-4 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors duration-300 font-medium text-base"
+                    style={{ minHeight: '44px' }}
+                  >
+                    <Mail className="h-5 w-5 mr-3" />
+                    Email Us
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -499,22 +541,24 @@ function Layout({ children }: { children: React.ReactNode }) {
       <footer className="bg-gradient-to-b from-gray-900 to-black text-white" role="contentinfo">
         <div className="relative bg-[#038203] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="text-white">
-                <h3 className="text-2xl font-bold mb-2">Ready to Get Started?</h3>
-                <p className="text-white">Experience our professional valet trash services</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-2 text-center lg:text-left">Ready to Get Started?</h3>
+                <p className="text-white text-center lg:text-left">Experience our professional valet trash services</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
                 <Link 
                   to="/contact" 
-                  className="btn-outline"
+                  className="btn-outline text-center"
+                  style={{ minHeight: '44px' }}
                   aria-label="Get a quote for our services"
                 >
                   Get a Quote <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                 </Link>
                 <a 
                   href="tel:407-274-5019" 
-                  className="bg-white text-[#049704] px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-gray-100 hover:scale-105 flex items-center justify-center"
+                  className="bg-white text-[#049704] px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-gray-100 hover:scale-105 flex items-center justify-center text-center"
+                  style={{ minHeight: '44px' }}
                   aria-label="Call us at 407-274-5019"
                 >
                   <Phone className="h-5 w-5 mr-2" aria-hidden="true" /> 407-274-5019
@@ -525,61 +569,65 @@ function Layout({ children }: { children: React.ReactNode }) {
         </div>
 
         <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             <div>
               <img 
                 src="/logos/white-logo.png"
                 alt="On The Fly Waste Solutions Logo" 
-                className="h-10 sm:h-12 object-contain mb-6"
+                className="h-10 sm:h-12 object-contain mb-6 mx-auto sm:mx-0"
                 loading="lazy"
                 width="150"
                 height="48"
               />
-              <p className="text-gray-200 mb-6">
+              <p className="text-gray-200 mb-6 text-center sm:text-left text-base leading-relaxed">
                 Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-6 justify-center sm:justify-start">
                 <a 
                   href="https://www.facebook.com/ontheflywastesolutions" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-gray-200 hover:text-white transition-all duration-300"
+                  className="text-gray-200 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-white/10"
                   aria-label="Visit our Facebook page"
+                  style={{ minWidth: '44px', minHeight: '44px' }}
                 >
-                  <Facebook className="h-6 w-6" aria-hidden="true" />
+                  <Facebook className="h-6 w-6 mx-auto" aria-hidden="true" />
                 </a>
                 <a 
                   href="https://www.instagram.com/ontheflywaste/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-gray-200 hover:text-white transition-all duration-300"
+                  className="text-gray-200 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-white/10"
                   aria-label="Visit our Instagram page"
+                  style={{ minWidth: '44px', minHeight: '44px' }}
                 >
-                  <Instagram className="h-6 w-6" aria-hidden="true" />
+                  <Instagram className="h-6 w-6 mx-auto" aria-hidden="true" />
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-gray-200 hover:text-white transition-all duration-300"
+                  className="text-gray-200 hover:text-white transition-all duration-300 p-2 rounded-lg hover:bg-white/10"
                   aria-label="Visit our LinkedIn page"
+                  style={{ minWidth: '44px', minHeight: '44px' }}
                 >
-                  <Linkedin className="h-6 w-6" aria-hidden="true" />
+                  <Linkedin className="h-6 w-6 mx-auto" aria-hidden="true" />
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
+              <h3 className="text-lg font-semibold text-white mb-6 text-center sm:text-left">Quick Links</h3>
               <ul className="space-y-3" role="list">
                 {['Home', 'About', 'Services', 'Blog', 'Contact', 'Reviews'].map((item) => (
                   <li key={item}>
                     <Link 
                       to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
-                      className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center group"
+                      className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center group py-2 px-3 rounded-lg hover:bg-white/10 text-base"
                       aria-label={`Go to ${item} page`}
+                      style={{ minHeight: '44px' }}
                     >
-                      <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300" aria-hidden="true" />
+                      <ArrowRight className="h-4 w-4 mr-3 opacity-0 group-hover:opacity-100 transition-all duration-300" aria-hidden="true" />
                       {item}
                     </Link>
                   </li>
@@ -588,7 +636,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Our Services</h3>
+              <h3 className="text-lg font-semibold text-white mb-6 text-center sm:text-left">Our Services</h3>
               <ul className="space-y-3" role="list">
                 {[
                   { icon: Trash2, text: 'Valet Trash', link: '/services/valet-trash' },
@@ -598,10 +646,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                   <li key={item.text}>
                     <Link 
                       to={item.link}
-                      className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center"
+                      className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center py-2 px-3 rounded-lg hover:bg-white/10 text-base"
                       aria-label={`Learn more about ${item.text}`}
+                      style={{ minHeight: '44px' }}
                     >
-                      <item.icon className="h-4 w-4 mr-2" aria-hidden="true" />
+                      <item.icon className="h-4 w-4 mr-3" aria-hidden="true" />
                       {item.text}
                     </Link>
                   </li>
@@ -610,10 +659,10 @@ function Layout({ children }: { children: React.ReactNode }) {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-white mb-6">Contact Us</h3>
+              <h3 className="text-lg font-semibold text-white mb-6 text-center sm:text-left">Contact Us</h3>
               <ul className="space-y-4" role="list">
                 <li>
-                  <div className="flex items-center space-x-3 text-gray-200">
+                  <div className="flex items-center space-x-3 text-gray-200 py-2 text-base">
                     <MapPin className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                     <span>Central Florida</span>
                   </div>
@@ -621,8 +670,9 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <a 
                     href="tel:407-274-5019" 
-                    className="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors duration-300"
+                    className="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-white/10 text-base"
                     aria-label="Call us at 407-274-5019"
+                    style={{ minHeight: '44px' }}
                   >
                     <Phone className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                     <span>407-274-5019</span>
@@ -631,15 +681,16 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <a 
                     href="mailto:info@ontheflywastesolutions.com" 
-                    className="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors duration-300"
+                    className="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-white/10 text-base break-all"
                     aria-label="Email us at info@ontheflywastesolutions.com"
+                    style={{ minHeight: '44px' }}
                   >
                     <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-                    <span>info@ontheflywastesolutions.com</span>
+                    <span className="break-all">info@ontheflywastesolutions.com</span>
                   </a>
                 </li>
                 <li>
-                  <div className="flex items-center space-x-3 text-gray-200">
+                  <div className="flex items-center space-x-3 text-gray-200 py-2 text-base">
                     <Clock className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                     <span>Open 7 days a week<br />8:00 AM - 9:00 PM</span>
                   </div>
@@ -648,21 +699,21 @@ function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-200">
+          <div className="mt-12 pt-8 border-t border-gray-600 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <p className="text-gray-200 text-center lg:text-left text-base">
               © {new Date().getFullYear()} On The Fly Waste Solutions. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
               <a 
                 href="https://www.aago.org/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:-translate-y-1"
+                className="transition-transform duration-300 hover:-translate-y-1 p-2"
               >
                 <img 
                   src="/Images/AAGO.png" 
                   alt="Apartment Association of Greater Orlando Member" 
-                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  className="h-10 sm:h-12 lg:h-14 object-contain"
                   loading="lazy"
                   width="64"
                   height="64"
@@ -672,12 +723,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                 href="https://www.faahq.org/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:-translate-y-1"
+                className="transition-transform duration-300 hover:-translate-y-1 p-2"
               >
                 <img 
                   src="/Images/faa-full-color-full-logo.png" 
                   alt="Florida Apartment Association Member" 
-                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  className="h-10 sm:h-12 lg:h-14 object-contain"
                   loading="lazy"
                   width="64"
                   height="64"
@@ -687,12 +738,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                 href="https://naahq.org/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="transition-transform duration-300 hover:-translate-y-1"
+                className="transition-transform duration-300 hover:-translate-y-1 p-2"
               >
                 <img 
                   src="/Images/logo-naahq-white_0.png" 
                   alt="National Apartment Association Member" 
-                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  className="h-10 sm:h-12 lg:h-14 object-contain"
                   loading="lazy"
                   width="64"
                   height="64"

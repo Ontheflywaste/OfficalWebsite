@@ -40,15 +40,6 @@
     <link rel="prefetch" href="/contact" as="document" />
     <link rel="prefetch" href="/reviews" as="document" />
     
-    <!-- Google tag (gtag.js) - defer for performance -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17079694713"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17079694713');
-    </script>
-    
     <title>Valet Trash & Bulk Removal Services | On The Fly Waste Solutions Orlando</title>
     
     <!-- Critical CSS for hero section to prevent layout shift -->
@@ -56,6 +47,7 @@
       /* Critical hero styles to prevent CLS */
       .hero-container {
         min-height: 100vh;
+        min-height: 100dvh; /* Dynamic viewport height for mobile */
         position: relative;
         display: flex;
         align-items: center;
@@ -81,14 +73,14 @@
         color: white;
         max-width: 72rem;
         margin: 0 auto;
-        padding: 0 1.5rem;
-        padding-top: 20vh; /* Lowered text positioning */
+        padding: 0 1rem;
+        padding-top: 15vh; /* Optimized for mobile */
       }
       
       .hero-title {
         font-weight: 700;
         line-height: 1.1;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         letter-spacing: -0.025em;
         text-align: center;
@@ -97,10 +89,10 @@
       .hero-subtitle {
         font-weight: 400;
         line-height: 1.5;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         opacity: 0.95;
-        max-width: 48rem;
+        max-width: 42rem;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -108,21 +100,21 @@
       
       /* Mobile-first responsive text sizing */
       .hero-title { 
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.75rem; /* 28px - larger for better mobile readability */
       }
       .hero-subtitle { 
-        font-size: 1.125rem; /* 18px */
+        font-size: 1rem; /* 16px - minimum readable size */
       }
       
       /* Small mobile (375px+) */
       @media (min-width: 375px) {
-        .hero-title { font-size: 1.75rem; } /* 28px */
+        .hero-title { font-size: 2rem; } /* 32px */
         .hero-subtitle { font-size: 1.125rem; } /* 18px */
       }
       
       /* Large mobile (480px+) */
       @media (min-width: 480px) {
-        .hero-title { font-size: 2rem; } /* 32px */
+        .hero-title { font-size: 2.25rem; } /* 36px */
         .hero-subtitle { font-size: 1.25rem; } /* 20px */
       }
       
@@ -136,6 +128,9 @@
       @media (min-width: 768px) {
         .hero-title { font-size: 3rem; } /* 48px */
         .hero-subtitle { font-size: 1.5rem; } /* 24px */
+        .hero-content {
+          padding-top: 20vh; /* More space on larger screens */
+        }
       }
       
       /* Desktop (1024px+) */
@@ -155,10 +150,42 @@
         .hero-title { font-size: 4.5rem; } /* 72px */
         .hero-subtitle { font-size: 1.875rem; } /* 30px */
       }
+      
+      /* Mobile-specific optimizations */
+      @media (max-width: 768px) {
+        .hero-container {
+          min-height: 100vh;
+          min-height: 100dvh;
+        }
+        
+        .hero-content {
+          padding-top: 12vh;
+          padding-bottom: 8vh;
+        }
+      }
     </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Defer non-essential scripts -->
+    <script>
+      // Defer Google Analytics until after page load
+      window.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          // Google tag (gtag.js)
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17079694713';
+          document.head.appendChild(script);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17079694713');
+        }, 1000); // Delay by 1 second
+      });
+    </script>
   </body>
 </html>

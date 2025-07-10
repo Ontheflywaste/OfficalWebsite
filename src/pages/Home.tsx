@@ -147,7 +147,7 @@ function Home() {
               <div className="flex justify-center mt-8">
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-xl border-2 border-transparent hover:border-white/20"
+                  className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-xl border-2 border-transparent hover:border-white/20"
                 >
                   <span className="text-center">Get Your Free Quote Today</span>
                   <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />

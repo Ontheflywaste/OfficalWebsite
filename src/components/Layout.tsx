@@ -142,6 +142,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                   }`}
                   loading="eager"
                   fetchPriority="high"
+                  width="200"
+                  height="64"
                 />
                 
                 {/* Black logo */}
@@ -159,6 +161,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                   }}
                   loading="eager"
                   fetchPriority="high"
+                  width="200"
+                  height="64"
                 />
               </Link>
             </div>
@@ -522,8 +526,10 @@ function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src="/logos/white-logo.png"
                 alt="On The Fly Waste Solutions Logo" 
-                className="h-12 object-contain mb-6"
+                className="h-10 sm:h-12 object-contain mb-6"
                 loading="lazy"
+                width="150"
+                height="48"
               />
               <p className="text-gray-200 mb-6">
                 Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
@@ -652,8 +658,10 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <img 
                   src="/Images/AAGO.png" 
                   alt="Apartment Association of Greater Orlando Member" 
-                  className="h-16 object-contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
                   loading="lazy"
+                  width="64"
+                  height="64"
                 />
               </a>
               <a 
@@ -665,8 +673,10 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <img 
                   src="/Images/faa-full-color-full-logo.png" 
                   alt="Florida Apartment Association Member" 
-                  className="h-16 object-contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
                   loading="lazy"
+                  width="64"
+                  height="64"
                 />
               </a>
               <a 
@@ -678,8 +688,10 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <img 
                   src="/Images/logo-naahq-white_0.png" 
                   alt="National Apartment Association Member" 
-                  className="h-16 object-contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
                   loading="lazy"
+                  width="64"
+                  height="64"
                 />
               </a>
             </div>

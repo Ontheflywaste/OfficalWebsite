@@ -35,9 +35,9 @@ function Layout({ children }: { children: React.ReactNode }) {
   }, [location.pathname]);
 
   const isPostPage = location.pathname.startsWith('/blog/');
-  const shouldUseBlackLogo = isScrolled || isPostPage || window.innerWidth < 768;
   const isMobile = window.innerWidth < 768;
-  const shouldUseBlackNavbar = shouldUseBlackLogo || isMobile;
+  const shouldUseBlackLogo = isScrolled || isPostPage;
+  const shouldUseBlackNavbar = isScrolled || isPostPage;
 
   return (
     <div className="min-h-screen bg-white">
@@ -117,7 +117,9 @@ function Layout({ children }: { children: React.ReactNode }) {
         className={`fixed w-full z-50 transition-all duration-300 ${
           shouldUseBlackNavbar
             ? 'top-0 bg-white shadow-lg border-b border-gray-200' 
-            : 'top-10 bg-black/90 backdrop-blur-md'
+            : isMobile 
+              ? 'top-0 bg-black/90 backdrop-blur-md'
+              : 'top-10 bg-black/90 backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"
@@ -140,7 +142,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
                   } object-contain ${
-                    shouldUseBlackNavbar ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
+                    shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
                   loading="eager"
                   fetchPriority="high"
@@ -155,7 +157,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
                   } object-contain bg-transparent ${
-                    shouldUseBlackNavbar ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
+                    shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
                   style={{
                     filter: 'brightness(1.1) contrast(1.1)',
@@ -172,7 +174,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`md:hidden transition-colors duration-300 ${
-                shouldUseBlackNavbar
+                shouldUseBlackLogo
                   ? 'text-gray-900 hover:text-[#027502]'
                   : 'text-white hover:text-[#027502]'
               }`}
@@ -350,7 +352,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 ? 'max-h-[400px] opacity-100' 
                 : 'max-h-0 opacity-0'
             } overflow-hidden ${
-              shouldUseBlackLogo
+              shouldUseBlackNavbar
                 ? 'bg-white'
                 : 'bg-black/90 backdrop-blur-md'
             }`}

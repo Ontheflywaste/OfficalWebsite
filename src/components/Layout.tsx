@@ -190,7 +190,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 to="/"
                 className={`font-medium text-base relative group transition-all duration-300 ${
-                  shouldUseBlackNavbar
+                  shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'
                 }`}
@@ -224,7 +224,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   to="/services"
                   className={`font-medium text-base relative group transition-all duration-300 flex items-center ${
-                    shouldUseBlackLogo
+                    shouldUseBlackNavbar
                       ? 'text-gray-900 hover:text-[#027502]'
                       : 'text-white hover:text-[#027502]'
                   }`}

@@ -107,7 +107,7 @@ function PressureWashingService() {
                     Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                   <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-blue-900">
-                    <Phone className="mr-2 h-5 w-5" /> Schedule Service
+                    <Phone className="mr-2 h-4 w-4" /> Call Now
                   </a>
                 </div>
               </ScrollReveal>

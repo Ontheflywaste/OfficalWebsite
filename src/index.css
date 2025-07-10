@@ -114,7 +114,7 @@ html {
   }
 
   .btn-outline {
-    @apply inline-flex items-center px-8 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0;
+    @apply inline-flex items-center px-6 py-2.5 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-sm;
   }
 
   .btn-link {

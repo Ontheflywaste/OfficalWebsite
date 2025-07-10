@@ -109,12 +109,20 @@ html {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-medium rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full md:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
     animation: pulse-glow 2s infinite;
   }
 
+  .btn-primary-inverse {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-[#049704] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-full border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-gray-900 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-md w-full sm:w-auto;
+  }
+
   .btn-outline {
-    @apply inline-flex items-center px-6 py-2.5 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-sm;
+    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-base;
   }
 
   .btn-link {

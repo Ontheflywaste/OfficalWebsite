@@ -87,10 +87,10 @@ function ValetTrashService() {
                   Orlando's most reliable doorstep trash pickup service for apartment communities, condos, and multifamily properties across Central Florida
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact" className="btn-primary bg-white text-[#049704] hover:bg-gray-100">
+                  <Link to="/contact" className="btn-primary-inverse">
                     Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                  <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-[#049704]">
+                  <a href="tel:407-274-5019" className="btn-secondary">
                     <Phone className="mr-2 h-4 w-4" /> Call Now
                   </a>
                 </div>

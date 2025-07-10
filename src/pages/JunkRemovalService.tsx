@@ -94,7 +94,7 @@ function JunkRemovalService() {
                   <Link to="/contact" className="btn-primary">
                     Get Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
-                  <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-[#049704]">
+                  <a href="tel:407-274-5019" className="btn-secondary">
                     <Phone className="mr-2 h-4 w-4" /> Call Now
                   </a>
                 </div>

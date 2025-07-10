@@ -180,9 +180,11 @@ function Home() {
                   <img 
                     src="/Images/AAGO.png" 
                     alt="Apartment Association of Greater Orlando Member" 
-                    className="h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">Apartment Association of Greater Orlando</p>
                 </a>
@@ -198,9 +200,11 @@ function Home() {
                   <img 
                     src="/Images/faa-full-color-full-logo.png" 
                     alt="Florida Apartment Association Member" 
-                    className="h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">Florida Apartment Association</p>
                 </a>
@@ -216,9 +220,11 @@ function Home() {
                   <img 
                     src="/Images/NAA-logo_bgwhite.png" 
                     alt="National Apartment Association Member" 
-                    className="h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">National Apartment Association</p>
                 </a>
@@ -258,9 +264,11 @@ function Home() {
                     <img 
                       src="/Images/artemistradeshow.jpg" 
                       alt="On The Fly Waste Solutions at Artemis Trade Show" 
-                      className="absolute inset-0 w-full h-full object-cover object-center"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                       decoding="async"
+                      width="600"
+                      height="400"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -300,6 +308,8 @@ function Home() {
                         className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
+                        width="400"
+                        height="300"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent pointer-events-none" />
                       <div className="absolute bottom-4 left-4">

@@ -18,7 +18,7 @@ function About() {
           <div className="relative min-h-[60vh] hidden md:block">
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-10" />
             <img
-              src="https://images.pexels.com/photos/416673/pexels-photo-416673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1920"
               alt="On The Fly Waste Solutions Professional Team Meeting in Orlando"
               className="absolute inset-0 w-full h-full object-cover"
               style={{ objectPosition: 'center 15%' }}

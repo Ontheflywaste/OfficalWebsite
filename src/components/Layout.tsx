@@ -349,7 +349,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div 
             className={`md:hidden transition-all duration-300 ${
               isMobileMenuOpen 
-                ? 'max-h-[400px] opacity-100' 
+                ? 'max-h-[500px] opacity-100' 
                 : 'max-h-0 opacity-0'
             } overflow-hidden ${
               shouldUseBlackNavbar
@@ -359,10 +359,10 @@ function Layout({ children }: { children: React.ReactNode }) {
             role="menu"
             aria-label="Mobile navigation"
           >
-            <div className="py-4 space-y-2">
+            <div className="py-4 space-y-1 px-2">
               <Link
                 to="/"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -375,7 +375,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               
               <Link
                 to="/about"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -388,7 +388,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               
               <Link
                 to="/services"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -400,45 +400,45 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
               
               {/* Mobile Services Submenu */}
-              <div className="pl-4 space-y-1">
+              <div className="pl-6 space-y-1 border-l-2 border-white/20 ml-4">
                 <Link
                   to="/services/valet-trash"
-                  className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
+                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
                     shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}
                   role="menuitem"
                 >
-                  • Valet Trash
+                  Valet Trash
                 </Link>
                 <Link
                   to="/services/junk-removal"
-                  className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
+                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
                     shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}
                   role="menuitem"
                 >
-                  • Junk Removal
+                  Junk Removal
                 </Link>
                 <Link
                   to="/services/pressure-washing"
-                  className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
+                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
                     shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}
                   role="menuitem"
                 >
-                  • Pressure Washing
+                  Pressure Washing
                 </Link>
               </div>
               
               <Link
                 to="/blog"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -451,7 +451,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               
               <Link
                 to="/contact"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -464,7 +464,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               
               <Link
                 to="/reviews"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
@@ -479,7 +479,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 href="https://www.youtube.com/embed/gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
                     : 'text-white hover:text-[#027502] hover:bg-white/10'

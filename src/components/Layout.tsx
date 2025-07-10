@@ -140,7 +140,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/logos/white-logo.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-10' : 'h-12'
+                    isScrolled ? 'h-12' : 'h-16'
                   } object-contain ${
                     shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
@@ -155,7 +155,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/Images/OTFLogoblack.jpg"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-10' : 'h-12'
+                    isScrolled ? 'h-12' : 'h-16'
                   } object-contain bg-transparent ${
                     shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
@@ -404,7 +404,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   to="/services/valet-trash"
                   className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackNavbar
+                    shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}
@@ -415,7 +415,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   to="/services/junk-removal"
                   className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackNavbar
+                    shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}
@@ -426,7 +426,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   to="/services/pressure-washing"
                   className={`block py-2 px-4 rounded-lg transition-colors duration-300 text-sm ${
-                    shouldUseBlackNavbar
+                    shouldUseBlackLogo
                       ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
                       : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
                   }`}

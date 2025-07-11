@@ -565,8 +565,7 @@ function Home() {
               {[
                 {
                   city: "Orlando",
-                  description: "Downtown, College Park, Winter Park, Dr. Phillips",
-                  highlight: true
+                  description: "Downtown, College Park, Winter Park, Dr. Phillips"
                 },
                 {
                   city: "Kissimmee",
@@ -595,19 +594,14 @@ function Home() {
                   delay={index * 0.1}
                 >
                   <div className={`p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
-                    area.highlight ? 'bg-gradient-to-br from-[#049704] to-[#038203] text-white' : 'bg-white text-gray-900'
+                    'bg-white text-gray-900'
                   }`}>
-                    <h3 className={`text-xl font-bold mb-3 ${area.highlight ? 'text-white' : 'text-gray-900'}`}>
+                    <h3 className="text-xl font-bold mb-3 text-gray-900">
                       {area.city}
                     </h3>
-                    <p className={`${area.highlight ? 'text-white/90' : 'text-gray-600'}`}>
+                    <p className="text-gray-600">
                       {area.description}
                     </p>
-                    {area.highlight && (
-                      <div className="mt-4 inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium">
-                        Primary Service Area
-                      </div>
-                    )}
                   </div>
                 </ScrollReveal>
               ))}

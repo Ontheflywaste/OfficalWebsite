@@ -113,9 +113,6 @@ function Home() {
         <div className="hero-container">
           <div className="hero-overlay" />
           
-          {/* Green tint overlay */}
-          <div className="absolute inset-0 bg-[#049704]/20 z-5" />
-          
           {/* Video background */}
           <video
             className="absolute inset-0 w-full h-full object-cover"

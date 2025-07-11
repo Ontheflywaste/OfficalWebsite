@@ -8,9 +8,6 @@ interface OptimizedImageProps {
   height?: number;
   priority?: boolean;
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
-  objectPosition?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -20,19 +17,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   priority = false,
-  objectFit = 'cover',
-  objectPosition = 'center',
-  sizes,
-  loading
+  objectFit = 'cover'
 }) => {
-  const [isInView, setIsInView] = useState(priority);
+  const [isInView, setIsInView] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(false);
-  const imageRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -41,7 +33,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: '50px',
+        rootMargin: '100px',
         threshold: 0.1
       }
     );
@@ -51,7 +43,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [priority]);
+  }, []);
 
   const containerClasses = `
     relative overflow-hidden
@@ -73,24 +65,21 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       }}
     >
       {/* Loading skeleton */}
-      {!isLoaded && !error && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skeleton-shimmer" />
-        </div>
-      )}
+      <div className="absolute inset-0 bg-gray-100">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent skeleton-shimmer" />
+      </div>
 
       {/* Main image */}
-      {isInView && (
+      {(priority || isInView) && (
         <img
           src={src}
           alt={alt}
           width={width}
           height={height}
-          sizes={sizes}
-          loading={loading || (priority ? 'eager' : 'lazy')}
+          loading={priority ? 'eager' : 'lazy'}
           decoding="async"
           className={imageClasses}
-          style={{ objectFit, objectPosition }}
+          style={{ objectFit }}
           onLoad={() => setIsLoaded(true)}
           onError={() => setError(true)}
         />

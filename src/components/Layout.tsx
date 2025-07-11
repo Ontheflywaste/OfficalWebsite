@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown } from 'lucide-react';
-import OptimizedImage from './OptimizedImage';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -137,35 +136,35 @@ function Layout({ children }: { children: React.ReactNode }) {
                 className="block"
               >
                 {/* White logo */}
-                <OptimizedImage
+                <img 
                   src="/logos/white-logo.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
-                  } ${
+                  } object-contain ${
                     shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
-                  objectFit="contain"
-                  priority={true}
+                  loading="eager"
+                  fetchPriority="high"
                   width="200"
                   height="64"
                 />
                 
                 {/* Black logo */}
-                <OptimizedImage
+                <img 
                   src="/Images/OTFLogoblack.jpg"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
-                  } bg-transparent ${
+                  } object-contain bg-transparent ${
                     shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
                   style={{
                     filter: 'brightness(1.1) contrast(1.1)',
                     mixBlendMode: 'multiply'
                   }}
-                  objectFit="contain"
-                  priority={true}
+                  loading="eager"
+                  fetchPriority="high"
                   width="200"
                   height="64"
                 />
@@ -528,11 +527,11 @@ function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
-              <OptimizedImage
+              <img 
                 src="/logos/white-logo.png"
                 alt="On The Fly Waste Solutions Logo" 
-                className="h-10 sm:h-12 mb-6"
-                objectFit="contain"
+                className="h-10 sm:h-12 object-contain mb-6"
+                loading="lazy"
                 width="150"
                 height="48"
               />
@@ -660,11 +659,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >
-                <OptimizedImage
+                <img 
                   src="/Images/AAGO.png" 
                   alt="Apartment Association of Greater Orlando Member" 
-                  className="h-12 sm:h-14 md:h-16"
-                  objectFit="contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  loading="lazy"
                   width="64"
                   height="64"
                 />
@@ -675,11 +674,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >
-                <OptimizedImage
+                <img 
                   src="/Images/faa-full-color-full-logo.png" 
                   alt="Florida Apartment Association Member" 
-                  className="h-12 sm:h-14 md:h-16"
-                  objectFit="contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  loading="lazy"
                   width="64"
                   height="64"
                 />
@@ -690,11 +689,11 @@ function Layout({ children }: { children: React.ReactNode }) {
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >
-                <OptimizedImage
+                <img 
                   src="/Images/logo-naahq-white_0.png" 
                   alt="National Apartment Association Member" 
-                  className="h-12 sm:h-14 md:h-16"
-                  objectFit="contain"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  loading="lazy"
                   width="64"
                   height="64"
                 />

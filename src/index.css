@@ -107,12 +107,6 @@ html {
   }
 }
 
-/* Video optimization */
-video {
-  content-visibility: auto;
-  contain-intrinsic-size: 1920px 1080px;
-}
-
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;

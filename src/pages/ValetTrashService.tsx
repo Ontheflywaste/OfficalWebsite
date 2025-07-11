@@ -72,7 +72,7 @@ function ValetTrashService() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center pt-24">
+            <div className="flex flex-col justify-center items-center h-full text-center pt-32 pb-16">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">

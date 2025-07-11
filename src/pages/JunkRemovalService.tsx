@@ -338,7 +338,7 @@ function JunkRemovalService() {
         </section>
 
         {/* Testimonial */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-12">
@@ -370,7 +370,7 @@ function JunkRemovalService() {
 
         {/* CTA Section */}
         {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">

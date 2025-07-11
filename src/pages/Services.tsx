@@ -77,7 +77,7 @@ function Services() {
                           Collection Schedule
                         </h3>
                         <p className="text-sm text-gray-600">
-                          Evening collections between 6-9 PM, up to 7 days per week
+                          Flexible pickup for your community needs
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">

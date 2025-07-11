@@ -338,7 +338,7 @@ function JunkRemovalService() {
         </section>
 
         {/* Testimonial */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-[#049704]/10 to-[#038203]/15">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-12">

@@ -137,7 +137,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               >
                 {/* White logo */}
                 <img 
-                  src="/logos/white-logo.png"
+                  src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-12' : 'h-16'
@@ -528,7 +528,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>
               <img 
-                src="/logos/white-logo.png"
+                src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                 alt="On The Fly Waste Solutions Logo" 
                 className="h-10 sm:h-12 object-contain mb-6"
                 loading="lazy"

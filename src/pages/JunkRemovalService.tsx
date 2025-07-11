@@ -1,10 +1,16 @@
-import React from 'react';
-import { ArrowRight, CheckCircle2, Clock, Shield, Truck, Recycle, Phone, Star, Quote } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle2, Clock, Shield, Truck, Recycle, Phone, Star, Quote, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
 
 function JunkRemovalService() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index);
+  };
+
   const services = [
     {
       title: "Furniture Removal",
@@ -411,9 +417,25 @@ function JunkRemovalService() {
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
-                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                      <ChevronDown 
+                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${
+                      openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="px-6 pb-6">
+                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                      </div>
+                    </div>
                   </div>
                 </ScrollReveal>
               ))}

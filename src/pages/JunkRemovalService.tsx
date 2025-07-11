@@ -363,6 +363,73 @@ function JunkRemovalService() {
         </section>
 
         {/* CTA Section */}
+        {/* FAQ Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Common questions about our junk removal service
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="space-y-6">
+              {[
+                {
+                  question: "What types of items do you remove?",
+                  answer: "We remove furniture, appliances, electronics, construction debris, yard waste, and most household items. We handle everything from single items to complete property cleanouts. Hazardous materials like paint, chemicals, and asbestos require special handling."
+                },
+                {
+                  question: "How do you price junk removal services?",
+                  answer: "Pricing is based on the volume of items removed and the complexity of the job. We provide free, upfront estimates with no hidden fees. You'll know the exact cost before we start, and we never charge extra for labor, transportation, or disposal."
+                },
+                {
+                  question: "How quickly can you remove items?",
+                  answer: "We offer same-day and next-day service for most requests. For urgent situations like unit turnovers or emergency cleanouts, we can often respond within hours. Larger jobs may require scheduling 1-2 days in advance."
+                },
+                {
+                  question: "Do you provide labor for removal?",
+                  answer: "Yes, our trained team handles all the heavy lifting and removal work. You don't need to move items to a specific location - we'll remove them from wherever they are, including upper floors, basements, and tight spaces."
+                },
+                {
+                  question: "What happens to the items you remove?",
+                  answer: "We prioritize responsible disposal. Items in good condition are donated to local charities when possible. Recyclable materials go to appropriate recycling facilities. Only items that cannot be reused or recycled go to landfills."
+                },
+                {
+                  question: "Do you clean up after removal?",
+                  answer: "Absolutely. We sweep and clean the area after removing items, leaving the space ready for immediate use. This is especially important for unit turnovers and property cleanouts."
+                },
+                {
+                  question: "Are you licensed and insured?",
+                  answer: "Yes, we are fully licensed and insured for junk removal services. Our insurance covers property damage and worker injuries, providing peace of mind for property managers and residents."
+                },
+                {
+                  question: "Can you remove items from upper floors?",
+                  answer: "Yes, our team is equipped to safely remove items from any floor level. We have the proper equipment and training to handle stairs, elevators, and challenging removal situations without damaging your property."
+                }
+              ].map((faq, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={0.3}>
+              <div className="text-center mt-12">
+                <p className="text-gray-600 mb-6">Need more information about our junk removal service?</p>
+                <Link to="/contact" className="btn-primary">
+                  Get Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>

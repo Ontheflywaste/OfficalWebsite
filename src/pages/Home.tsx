@@ -550,6 +550,84 @@ function Home() {
         </section>
 
         {/* Contact Section */}
+        <section className="py-16 md:py-20 bg-white px-6 md:px-4">
+          <div className="max-w-7xl mx-auto">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
+                <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                  Professional valet trash and waste management services throughout Central Florida
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  city: "Orlando",
+                  description: "Downtown, College Park, Winter Park, Dr. Phillips",
+                  highlight: true
+                },
+                {
+                  city: "Kissimmee",
+                  description: "Celebration, Poinciana, St. Cloud"
+                },
+                {
+                  city: "Altamonte Springs",
+                  description: "Longwood, Casselberry, Winter Springs"
+                },
+                {
+                  city: "Lake Mary",
+                  description: "Sanford, Heathrow, Lake Forest"
+                },
+                {
+                  city: "Apopka",
+                  description: "Mount Dora, Eustis, Tavares"
+                },
+                {
+                  city: "Clermont",
+                  description: "Minneola, Groveland, Montverde"
+                }
+              ].map((area, index) => (
+                <ScrollReveal 
+                  key={index}
+                  direction={index % 2 === 0 ? 'left' : 'right'}
+                  delay={index * 0.1}
+                >
+                  <div className={`p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                    area.highlight ? 'bg-gradient-to-br from-[#049704] to-[#038203] text-white' : 'bg-white text-gray-900'
+                  }`}>
+                    <h3 className={`text-xl font-bold mb-3 ${area.highlight ? 'text-white' : 'text-gray-900'}`}>
+                      {area.city}
+                    </h3>
+                    <p className={`${area.highlight ? 'text-white/90' : 'text-gray-600'}`}>
+                      {area.description}
+                    </p>
+                    {area.highlight && (
+                      <div className="mt-4 inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-medium">
+                        Primary Service Area
+                      </div>
+                    )}
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal>
+              <div className="text-center bg-gray-50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Don't See Your Area?</h3>
+                <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                  We're continuously expanding our service areas throughout Central Florida. Contact us to discuss service availability in your location.
+                </p>
+                <Link to="/contact" className="btn-primary">
+                  Check Service Availability <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Contact Section */}
         <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">

@@ -392,6 +392,73 @@ function PressureWashingService() {
         </section>
 
         {/* CTA Section */}
+        {/* FAQ Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Common questions about our pressure washing service
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="space-y-6">
+              {[
+                {
+                  question: "What surfaces can you pressure wash?",
+                  answer: "We clean building exteriors, concrete walkways, driveways, parking lots, sidewalks, decks, and most hard surfaces. Our team uses appropriate pressure settings and techniques for different materials including concrete, brick, stucco, and siding."
+                },
+                {
+                  question: "How often should pressure washing be done?",
+                  answer: "Most properties benefit from annual or bi-annual pressure washing. High-traffic areas may need more frequent cleaning. We can assess your property and recommend an optimal maintenance schedule based on your specific conditions and needs."
+                },
+                {
+                  question: "Will pressure washing damage my property?",
+                  answer: "When done properly by trained professionals, pressure washing is safe for most surfaces. We use appropriate pressure settings, proper techniques, and surface-specific cleaning solutions to ensure effective cleaning without damage."
+                },
+                {
+                  question: "Do you use eco-friendly cleaning solutions?",
+                  answer: "Yes, we use environmentally safe cleaning solutions that are effective yet gentle on landscaping and safe for the environment. Our cleaning products are biodegradable and won't harm plants or groundwater."
+                },
+                {
+                  question: "How long does pressure washing take?",
+                  answer: "Project duration depends on the size and scope of work. Small areas can be completed in a few hours, while large commercial properties may take a full day or more. We provide time estimates with our quotes."
+                },
+                {
+                  question: "What's included in your pressure washing service?",
+                  answer: "Our service includes surface assessment, pre-treatment of stains, pressure washing with appropriate equipment, and post-cleaning inspection. We also protect landscaping and clean up any debris from the washing process."
+                },
+                {
+                  question: "Can you remove oil stains and graffiti?",
+                  answer: "Yes, we specialize in removing tough stains including oil, grease, gum, and graffiti. We use specialized cleaning solutions and techniques designed for different types of stains and surface materials."
+                },
+                {
+                  question: "Do you offer maintenance programs?",
+                  answer: "Yes, we offer scheduled maintenance programs with quarterly, bi-annual, or annual cleaning schedules. Maintenance customers receive priority scheduling, discounted rates, and consistent service quality."
+                }
+              ].map((faq, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={0.3}>
+              <div className="text-center mt-12">
+                <p className="text-gray-600 mb-6">Ready to transform your property's appearance?</p>
+                <Link to="/contact" className="btn-primary">
+                  Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>

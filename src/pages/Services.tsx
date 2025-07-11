@@ -126,7 +126,7 @@ function Services() {
                       ))}
                     </ul>
                     <Link to="/contact" className="btn-primary inline-flex items-center">
-                      Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                      Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
                 </ScrollReveal>
@@ -221,7 +221,7 @@ function Services() {
                       ))}
                     </ul>
                     <Link to="/contact" className="btn-primary inline-flex items-center">
-                      Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                      Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
                 </ScrollReveal>
@@ -316,7 +316,7 @@ function Services() {
                       ))}
                     </ul>
                     <Link to="/contact" className="btn-primary inline-flex items-center">
-                      Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                      Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
                 </ScrollReveal>

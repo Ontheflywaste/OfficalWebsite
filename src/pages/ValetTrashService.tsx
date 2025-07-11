@@ -320,12 +320,12 @@ function ValetTrashService() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ScrollReveal direction="left">
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full flex flex-col">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">1</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Consultation & Planning</h3>
-                  <p className="text-white/90 mb-6">
+                  <p className="text-white/90 mb-6 flex-1">
                     We assess your property's unique needs, resident demographics, and operational requirements to design the perfect service plan.
                   </p>
                   <ul className="space-y-3 text-white/90">
@@ -345,12 +345,12 @@ function ValetTrashService() {
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="up" delay={0.1}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full flex flex-col">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Resident Communication</h3>
-                  <p className="text-white/90 mb-6">
+                  <p className="text-white/90 mb-6 flex-1">
                     We provide comprehensive communication materials and support to ensure residents understand and embrace the new service.
                   </p>
                   <ul className="space-y-3 text-white/90">
@@ -370,12 +370,12 @@ function ValetTrashService() {
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={0.2}>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h-full flex flex-col">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-6">
                     <span className="text-2xl font-bold text-white">3</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Service Launch & Support</h3>
-                  <p className="text-white/90 mb-6">
+                  <p className="text-white/90 mb-6 flex-1">
                     Smooth service launch with ongoing monitoring, reporting, and dedicated support to ensure continued success.
                   </p>
                   <ul className="space-y-3 text-white/90">

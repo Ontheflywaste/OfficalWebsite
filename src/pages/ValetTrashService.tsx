@@ -522,7 +522,7 @@ function ValetTrashService() {
                 },
                 {
                   question: "Do you provide bags or containers?",
-                  answer: "Residents use their own trash bags. We provide clear service guidelines and welcome materials to help residents understand the proper procedures for bag placement and collection times."
+                  answer: "Residents use their own trash bags. We provide 13-gallon and large size containers for residents to place their bagged trash inside of. We also provide clear service guidelines and welcome materials to help residents understand the proper procedures for bag placement and collection times."
                 },
                 {
                   question: "How quickly can you start service?",

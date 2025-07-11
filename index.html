@@ -21,11 +21,11 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" /></noscript>
     
     <!-- Preload critical hero assets with high priority -->
-    <link rel="preload" href="/logos/white-logo.png" as="image" fetchpriority="high" media="(min-width: 768px)" />
-    <link rel="preload" href="/Images/OTFLogoblack.jpg" as="image" fetchpriority="high" media="(min-width: 768px)" />
+    <link rel="preload" href="/logos/white-logo.png" as="image" fetchpriority="high" />
+    <link rel="preload" href="/Images/OTFLogoblack.jpg" as="image" fetchpriority="high" />
     
     <!-- Preload hero video -->
-    <link rel="preload" href="/videos/HerosectionvideoNew.mp4" as="video" fetchpriority="high" media="(min-width: 768px)" />
+    <link rel="preload" href="/videos/HerosectionvideoNew.mp4" as="video" type="video/mp4" fetchpriority="high" />
     
     <!-- DNS prefetch for external resources -->
     <link rel="preconnect" href="https://images.unsplash.com" />
@@ -39,6 +39,11 @@
     <link rel="prefetch" href="/blog" as="document" />
     <link rel="prefetch" href="/contact" as="document" />
     <link rel="prefetch" href="/reviews" as="document" />
+    
+    <!-- Preload critical images for above-the-fold content -->
+    <link rel="preload" href="/Images/AAGO.png" as="image" />
+    <link rel="preload" href="/Images/faa-full-color-full-logo.png" as="image" />
+    <link rel="preload" href="/Images/NAA-logo_bgwhite.png" as="image" />
     
     <!-- Google tag (gtag.js) - defer for performance -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17079694713"></script>

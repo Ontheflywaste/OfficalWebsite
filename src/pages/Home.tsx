@@ -3,6 +3,8 @@ import { ArrowRight, Clock, Calendar, Truck, Phone, Mail, MapPin, Star, Quote, T
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
+import OptimizedImage from '../components/OptimizedImage';
+import OptimizedVideo from '../components/OptimizedVideo';
 
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
@@ -114,16 +116,16 @@ function Home() {
           <div className="hero-overlay" />
           
           {/* Video background */}
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
+          <OptimizedVideo
+            src="/videos/HerosectionvideoNew.mp4"
+            className="absolute inset-0"
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
-          >
-            <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
-          </video>
+            preload="metadata"
+            priority={true}
+          />
           
           {/* Hero content */}
           <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
@@ -167,12 +169,11 @@ function Home() {
                   rel="noopener noreferrer"
                   className="text-center group transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <img 
+                  <OptimizedImage
                     src="/Images/AAGO.png" 
                     alt="Apartment Association of Greater Orlando Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
+                    className="h-16 sm:h-20 md:h-24 mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    objectFit="contain"
                     width="96"
                     height="96"
                   />
@@ -187,12 +188,11 @@ function Home() {
                   rel="noopener noreferrer"
                   className="text-center group transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <img 
+                  <OptimizedImage
                     src="/Images/faa-full-color-full-logo.png" 
                     alt="Florida Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
+                    className="h-16 sm:h-20 md:h-24 mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    objectFit="contain"
                     width="96"
                     height="96"
                   />
@@ -207,12 +207,11 @@ function Home() {
                   rel="noopener noreferrer"
                   className="text-center group transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <img 
+                  <OptimizedImage
                     src="/Images/NAA-logo_bgwhite.png" 
                     alt="National Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
+                    className="h-16 sm:h-20 md:h-24 mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    objectFit="contain"
                     width="96"
                     height="96"
                   />
@@ -251,12 +250,12 @@ function Home() {
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="w-full">
                   <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-xl">
-                    <img 
+                    <OptimizedImage
                       src="/Images/artemistradeshow.jpg" 
                       alt="On The Fly Waste Solutions at Artemis Trade Show" 
-                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
+                      className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
+                      objectFit="cover"
+                      objectPosition="center"
                       width="600"
                       height="400"
                     />
@@ -292,12 +291,12 @@ function Home() {
                     className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
                   >
                     <div className="relative w-full aspect-[4/3]">
-                      <img 
+                      <OptimizedImage
                         src={service.image}
                         alt={service.title}
-                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                        loading="lazy"
-                        decoding="async"
+                        className="absolute inset-0 transition-transform duration-300 group-hover:scale-105"
+                        objectFit="cover"
+                        objectPosition="center"
                         width="400"
                         height="300"
                       />

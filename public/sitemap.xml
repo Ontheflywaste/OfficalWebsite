@@ -24,27 +24,27 @@
   <url>
     <loc>https://ontheflywastesolutions.com/services</loc>
     <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Individual Service Sections -->
+  <!-- Individual Service Pages -->
   <url>
-    <loc>https://ontheflywastesolutions.com/services#valet-trash</loc>
+    <loc>https://ontheflywastesolutions.com/services/valet-trash</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ontheflywastesolutions.com/services#junk-removal</loc>
+    <loc>https://ontheflywastesolutions.com/services/junk-removal</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://ontheflywastesolutions.com/services#pressure-washing</loc>
+    <loc>https://ontheflywastesolutions.com/services/pressure-washing</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,22 +76,36 @@
 
   <!-- Blog Posts -->
   <url>
+    <loc>https://ontheflywastesolutions.com/blog/how-to-choose-valet-trash-vendor</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/blog/hidden-costs-in-house-trash-management</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://ontheflywastesolutions.com/blog/valet-trash-benefits</loc>
-    <lastmod>2024-03-15</lastmod>
+    <lastmod>2025-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/blog/sustainable-waste-management</loc>
-    <lastmod>2024-03-10</lastmod>
+    <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/blog/bulk-waste-removal-guide</loc>
-    <lastmod>2024-03-05</lastmod>
+    <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -3,27 +3,52 @@ import { ArrowRight, Clock, Calendar, Truck, Phone, Mail, MapPin, Star, Quote, T
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    propertyName: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    // Check if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    // Initialize EmailJS
+    emailjs.init("JwYfbaBokN347YiVO");
+    
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
       
-      // Lazy load video after paint
-      requestIdleCallback(() => {
-        setVideoLoaded(true);
-      });
+      // Lazy load video after paint (desktop only)
+      if (!isMobile) {
+        requestIdleCallback(() => {
+          setVideoLoaded(true);
+        });
+      }
     }, 100);
 
     return () => {
       clearTimeout(timer);
+      window.removeEventListener('resize', checkMobile);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,6 +66,50 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      await emailjs.send(
+        'service_decr5zt',
+        'template_x34o2r9',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          to_name: 'On The Fly Waste Solutions',
+          to_email: 'info@ontheflywastesolutions.com',
+          phone_number: formData.phone,
+          property_name: formData.propertyName,
+          additional_info: formData.message,
+          reply_to: formData.email
+        },
+        'JwYfbaBokN347YiVO'
+      );
+
+      toast.success('Quote request sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        propertyName: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Failed to send quote request:', error);
+      toast.error('Failed to send request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const services = [
     {
       icon: Trash2,
@@ -122,8 +191,8 @@ function Home() {
         <div className="hero-container">
           <div className="hero-overlay" />
           
-          {/* Video background - lazy loaded */}
-          {videoLoaded && (
+          {/* Video background - desktop only, lazy loaded */}
+          {!isMobile && videoLoaded && (
             <video
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
@@ -138,7 +207,7 @@ function Home() {
           )}
           
           {/* Fallback image while video loads */}
-          {!videoLoaded && (
+          {!isMobile && !videoLoaded && (
             <img
               src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
               alt="On The Fly Waste Solutions Hero"
@@ -148,26 +217,133 @@ function Home() {
             />
           )}
           
-          {/* Hero content */}
-          <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
-            <div className="max-w-6xl mx-auto text-center">
-              <h1 className="hero-title text-center">
-                Valet Trash & Bulk Removal Services
-              </h1>
-              <p className="hero-subtitle text-center mx-auto">
-                Orlando's trusted doorstep trash pickup service for apartments, condos, and resort-style communities
-              </p>
-              <div className="flex justify-center mt-8">
-                <Link 
-                  to="/contact" 
-                  className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-xl border-2 border-transparent hover:border-white/20"
-                >
-                  <span className="text-center">Get Your Free Quote Today</span>
-                  <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
-                </Link>
+          {/* Mobile background image */}
+          {isMobile && (
+            <img
+              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=768"
+              alt="On The Fly Waste Solutions Mobile Hero"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+          )}
+          
+          {/* Hero content - Desktop */}
+          {!isMobile && (
+            <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
+              <div className="max-w-6xl mx-auto text-center">
+                <h1 className="hero-title text-center">
+                  Valet Trash & Bulk Removal Services
+                </h1>
+                <p className="hero-subtitle text-center mx-auto">
+                  Orlando's trusted doorstep trash pickup service for apartments, condos, and resort-style communities
+                </p>
+                <div className="flex justify-center mt-8">
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-xl border-2 border-transparent hover:border-white/20"
+                  >
+                    <span className="text-center">Get Your Free Quote Today</span>
+                    <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          )}
+          
+          {/* Mobile Hero Content with Contact Form */}
+          {isMobile && (
+            <div className={`relative z-20 min-h-screen flex items-center justify-center px-4 py-20 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`}>
+              <div className="w-full max-w-md">
+                <div className="text-center mb-8">
+                  <h1 className="text-3xl font-bold text-white mb-4 text-shadow-lg">
+                    Orlando's Premier Valet Trash Service
+                  </h1>
+                  <p className="text-lg text-white/90 mb-6">
+                    Get your free quote in under 60 seconds
+                  </p>
+                </div>
+                
+                <form onSubmit={handleFormSubmit} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+                  <div className="space-y-4">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleFormChange}
+                        placeholder="Your Name *"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleFormChange}
+                        placeholder="Email Address *"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleFormChange}
+                        placeholder="Phone Number *"
+                        required
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        name="propertyName"
+                        value={formData.propertyName}
+                        onChange={handleFormChange}
+                        placeholder="Property Name"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                      />
+                    </div>
+                    <div>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleFormChange}
+                        placeholder="Tell us about your needs..."
+                        rows={3}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200 resize-none"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#049704] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#038203] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Get Free Quote
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                  <p className="text-xs text-gray-600 text-center mt-4">
+                    * Required fields. We'll respond within 24 hours.
+                  </p>
+                </form>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Membership Badges Section */}

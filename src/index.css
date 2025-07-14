@@ -98,6 +98,10 @@ img {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+.text-shadow-lg {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
 @keyframes pulse-glow {
   0% {
     box-shadow: 0 0 0 0 rgba(4, 151, 4, 0.4);

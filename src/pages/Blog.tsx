@@ -96,7 +96,7 @@ function Blog() {
                   <span className="block text-[#049704]">Insights & Tips</span>
                 </h1>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  Expert insights and practical advice for property managers looking to optimize their waste management operations and enhance resident satisfaction
+                  Expert insights and practical advice for property managers looking to optimize their <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium underline">waste management operations</Link> and enhance resident satisfaction
                 </p>
               </ScrollReveal>
             </div>

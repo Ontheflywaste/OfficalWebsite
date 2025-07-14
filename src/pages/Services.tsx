@@ -125,7 +125,7 @@ function Services() {
                         </ScrollReveal>
                       ))}
                     </ul>
-                    <Link to="/contact" className="btn-primary inline-flex items-center">
+                    <Link to="/services/valet-trash" className="btn-primary inline-flex items-center">
                       Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
@@ -220,7 +220,7 @@ function Services() {
                         </ScrollReveal>
                       ))}
                     </ul>
-                    <Link to="/contact" className="btn-primary inline-flex items-center">
+                    <Link to="/services/junk-removal" className="btn-primary inline-flex items-center">
                       Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>
@@ -315,7 +315,7 @@ function Services() {
                         </ScrollReveal>
                       ))}
                     </ul>
-                    <Link to="/contact" className="btn-primary inline-flex items-center">
+                    <Link to="/services/pressure-washing" className="btn-primary inline-flex items-center">
                       Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>

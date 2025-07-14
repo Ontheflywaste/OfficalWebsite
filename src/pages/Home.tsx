@@ -98,9 +98,9 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Orlando's Premier Valet Trash Service & Doorstep Trash Pickup | On The Fly Waste Solutions</title>
-        <meta name="description" content="Professional valet trash service in Orlando offering reliable doorstep trash pickup and bulk trash removal. Serving apartment communities and condos across Central Florida with 24/7 multifamily waste solutions." />
-        <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, multifamily waste solutions Orlando, valet trash for condos Orlando, reliable trash pickup Orlando" />
+        <title>Orlando Valet Trash & Bulk Removal | On The Fly Solutions</title>
+        <meta name="description" content="Professional valet trash and bulk removal services in Orlando. Reliable doorstep pickup for apartments and condos. Get your free quote today!" />
+        <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, multifamily waste solutions Orlando, valet trash for condos Orlando, reliable trash pickup Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, bulk pickup service for HOA communities, contract valet trash for property managers, on-demand waste removal for resorts" />
         <link rel="canonical" href="https://ontheflywastesolutions.com" />
         <meta name="geo.region" content="US-FL" />
         <meta name="geo.placename" content="Orlando" />

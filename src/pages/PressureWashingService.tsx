@@ -81,9 +81,9 @@ function PressureWashingService() {
   return (
     <>
       <Helmet>
-        <title>Professional Pressure Washing Service Orlando | Building & Driveway Cleaning | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert pressure washing service in Orlando for apartment buildings, driveways, and commercial properties. Professional exterior cleaning with eco-friendly solutions and scheduled maintenance programs." />
-        <meta name="keywords" content="pressure washing Orlando, building exterior cleaning Orlando, driveway cleaning Florida, commercial pressure washing Central Florida, apartment building cleaning Orlando" />
+        <title>Pressure Washing Orlando | Professional Building Cleaning</title>
+        <meta name="description" content="Transform your Orlando property with expert pressure washing. Remove years of grime from buildings and driveways. Free estimates available!" />
+        <meta name="keywords" content="pressure washing Orlando, building exterior cleaning Orlando, driveway cleaning Florida, commercial pressure washing Central Florida, apartment building cleaning Orlando, waste management for apartment complexes" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/pressure-washing" />
       </Helmet>
 

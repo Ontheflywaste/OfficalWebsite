@@ -69,9 +69,9 @@ function JunkRemovalService() {
   return (
     <>
       <Helmet>
-        <title>Professional Junk Removal Service Orlando | Furniture & Appliance Removal | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert junk removal service in Orlando. Same-day furniture removal, appliance disposal, and construction debris cleanup. Licensed, insured, and eco-friendly disposal practices." />
-        <meta name="keywords" content="junk removal Orlando, furniture removal Orlando, appliance disposal Orlando, construction debris removal Florida, same day junk removal Central Florida" />
+        <title>Bulk Waste Removal Orlando | Same-Day Junk Pickup Service</title>
+        <meta name="description" content="Expert bulk waste removal in Orlando. Fast furniture and appliance pickup for properties. Licensed and insured team. Call for immediate service!" />
+        <meta name="keywords" content="junk removal Orlando, furniture removal Orlando, appliance disposal Orlando, construction debris removal Florida, same day junk removal Central Florida, bulk pickup service for HOA communities, on-demand waste removal for resorts" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/junk-removal" />
       </Helmet>
 

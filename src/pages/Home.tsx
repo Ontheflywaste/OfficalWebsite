@@ -264,7 +264,8 @@ function Home() {
                   </p>
                 </div>
                 
-                <form onSubmit={handleFormSubmit} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+                  <form onSubmit={handleFormSubmit}>
                   <div className="space-y-4">
                     <div>
                       <input
@@ -336,11 +337,14 @@ function Home() {
                         </>
                       )}
                     </button>
+                    </div>
+                  </form>
+                  <div className="mt-4">
+                    <p className="text-xs text-gray-600 text-center">
+                      * Required fields. We'll respond within 24 hours.
+                    </p>
                   </div>
-                  <p className="text-xs text-gray-600 text-center mt-4">
-                    * Required fields. We'll respond within 24 hours.
-                  </p>
-                </form>
+                </div>
               </div>
             </div>
           )}

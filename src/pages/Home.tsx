@@ -193,7 +193,7 @@ function Home() {
                   <img 
                     src="/Images/AAGO.png" 
                     alt="Apartment Association of Greater Orlando Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width="96"
@@ -213,7 +213,7 @@ function Home() {
                   <img 
                     src="/Images/faa-full-color-full-logo.png" 
                     alt="Florida Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[120px]"
+                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[140px]"
                     loading="lazy"
                     decoding="async"
                     width="96"
@@ -233,7 +233,7 @@ function Home() {
                   <img 
                     src="/Images/NAA-logo_bgwhite.png" 
                     alt="National Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
                     width="96"

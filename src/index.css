@@ -12,13 +12,37 @@ html {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-/* Performance optimizations */
+/* Critical CSS inlined in HTML head */
 .hero-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   contain: layout style paint;
 }
 
+/* Performance optimizations */
 .hero-video {
   transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize image loading */
+img {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Lazy loading improvements */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
 }
 
 /* Custom DatePicker Styles */
@@ -130,17 +154,15 @@ html {
   }
 }
 
-/* Performance optimizations for images */
-img {
-  content-visibility: auto;
-  contain-intrinsic-size: 300px 200px;
-}
-
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  
+  .hero-video {
+    animation: none !important;
   }
 }

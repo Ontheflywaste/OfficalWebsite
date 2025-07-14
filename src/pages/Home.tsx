@@ -7,13 +7,34 @@ import ScrollReveal from '../components/ScrollReveal';
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
+    // Check if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
+      
+      // Lazy load video on desktop after paint
+      if (!isMobile) {
+        requestIdleCallback(() => {
+          setVideoLoaded(true);
+        });
+      }
     }, 100);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   useEffect(() => {
@@ -113,17 +134,48 @@ function Home() {
         <div className="hero-container">
           <div className="hero-overlay" />
           
-          {/* Video background */}
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-          >
-            <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
-          </video>
+          {/* Mobile static hero image */}
+          {isMobile && (
+            <picture>
+              <source 
+                srcSet="https://res.cloudinary.com/demo/image/upload/w_768,h_1024,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains" 
+                media="(max-width: 767px)" 
+              />
+              <img
+                src="https://res.cloudinary.com/demo/image/upload/w_768,h_1024,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
+                alt="On The Fly Waste Solutions Hero"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </picture>
+          )}
+          
+          {/* Desktop video background - lazy loaded */}
+          {!isMobile && videoLoaded && (
+            <video
+              ref={videoRef}
+              className="absolute inset-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
+            </video>
+          )}
+          
+          {/* Desktop fallback image while video loads */}
+          {!isMobile && !videoLoaded && (
+            <img
+              src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
+              alt="On The Fly Waste Solutions Hero"
+              className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+          )}
           
           {/* Hero content */}
           <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
@@ -170,11 +222,11 @@ function Home() {
                   <img 
                     src="/Images/AAGO.png" 
                     alt="Apartment Association of Greater Orlando Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
-                    width="112"
-                    height="112"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">Apartment Association of Greater Orlando</p>
                 </a>
@@ -190,11 +242,11 @@ function Home() {
                   <img 
                     src="/Images/faa-full-color-full-logo.png" 
                     alt="Florida Apartment Association Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
-                    width="112"
-                    height="112"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">Florida Apartment Association</p>
                 </a>
@@ -210,11 +262,11 @@ function Home() {
                   <img 
                     src="/Images/NAA-logo_bgwhite.png" 
                     alt="National Apartment Association Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
-                    width="112"
-                    height="112"
+                    width="96"
+                    height="96"
                   />
                   <p className="text-sm text-gray-700 text-center">National Apartment Association</p>
                 </a>
@@ -254,11 +306,11 @@ function Home() {
                     <img 
                       src="/Images/artemistradeshow.jpg" 
                       alt="On The Fly Waste Solutions at Artemis Trade Show" 
-                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
                       loading="lazy"
                       decoding="async"
-                      width="600"
-                      height="400"
+                      width="480"
+                      height="360"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -295,11 +347,11 @@ function Home() {
                       <img 
                         src={service.image}
                         alt={service.title}
-                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                        className="absolute inset-0 w-full h-full object-cover object-center"
                         loading="lazy"
                         decoding="async"
-                        width="400"
-                        height="300"
+                        width="320"
+                        height="240"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent pointer-events-none" />
                       <div className="absolute bottom-4 left-4">
@@ -418,7 +470,7 @@ function Home() {
                             max-width: 560px;
                             aspect-ratio: 16/9;
                             cursor: pointer;
-                            background: #000 url('https://img.youtube.com/vi/gFYjibflN3U/hqdefault.jpg') center/cover no-repeat;
+                            background: #000 url('https://img.youtube.com/vi/gFYjibflN3U/mqdefault.jpg') center/cover no-repeat;
                           }
                           .yt-facade::after {
                             content: '';
@@ -427,6 +479,11 @@ function Home() {
                             width: 68px; height: 48px;
                             margin: -24px 0 0 -34px;
                             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.5,7.9c-0.8-3-3-5.4-6-6.2C56.3,0.5,34,0.5,34,0.5s-22.3,0-26.5,1.2c-3,0.8-5.2,3.2-6,6.2C0.3,12.1,0.3,24,0.3,24s0,11.9,1.2,16.1c0.8,3,3,5.4,6,6.2c4.2,1.2,26.5,1.2,26.5,1.2s22.3,0,26.5-1.2c3-0.8,5.2-3.2,6-6.2c1.2-4.2,1.2-16.1,1.2-16.1S67.7,12.1,66.5,7.9z" fill="#f00"/><polygon points="45,24 27,14 27,34" fill="#fff"/></svg>') center/contain no-repeat;
+                          }
+                          @media (max-width: 767px) {
+                            .yt-facade {
+                              background-image: url('https://img.youtube.com/vi/gFYjibflN3U/mqdefault.jpg');
+                            }
                           }
                         `
                       }} />

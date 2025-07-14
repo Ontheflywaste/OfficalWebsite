@@ -126,7 +126,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? 'h-16' : 'h-20'
+            isScrolled ? 'h-20' : 'h-24'
           }`}>
             <div className="flex-shrink-0 transform transition-all duration-300 hover:scale-105 relative">
               <Link 
@@ -140,14 +140,14 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-16' : 'h-20'
                   } object-contain ${
                     shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
                   }`}
                   loading="eager"
                   fetchPriority="high"
-                  width="200"
-                  height="64"
+                  width="250"
+                  height="80"
                 />
                 
                 {/* Black logo */}
@@ -155,7 +155,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                   src="/Images/OTFLogoblack.jpg"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-12' : 'h-16'
+                    isScrolled ? 'h-16' : 'h-20'
                   } object-contain bg-transparent ${
                     shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
                   }`}
@@ -165,8 +165,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                   }}
                   loading="eager"
                   fetchPriority="high"
-                  width="200"
-                  height="64"
+                  width="250"
+                  height="80"
                 />
               </Link>
             </div>

@@ -511,33 +511,18 @@ function Home() {
                         {service.title}
                       </h3>
                       <p className="text-gray-700 mb-4 text-center">{service.description}</p>
-                      {service.title === "Valet Trash" && (
-                        <Link 
-                          to="/services/valet-trash"
-                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                        >
-                          Learn More 
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                        </Link>
-                      )}
-                      {service.title === "Junk Removal" && (
-                        <Link 
-                          to="/services/junk-removal"
-                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                        >
-                          Learn More 
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                        </Link>
-                      )}
-                      {service.title === "Pressure Washing" && (
-                        <Link 
-                          to="/services/pressure-washing"
-                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                        >
-                          Learn More 
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                        </Link>
-                      )}
+                      <Link 
+                        to={
+                          service.title === "Valet Trash" ? "/services/valet-trash" :
+                          service.title === "Junk Removal" ? "/services/junk-removal" :
+                          service.title === "Pressure Washing" ? "/services/pressure-washing" :
+                          "/contact"
+                        }
+                        className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                      >
+                        Learn More 
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                      </Link>
                     </div>
                   </div>
                 </ScrollReveal>

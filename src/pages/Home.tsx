@@ -171,7 +171,7 @@ function Home() {
         </div>
 
         {/* Membership Badges Section */}
-        <section className="py-12 bg-white">
+        <section className="py-16 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8">
@@ -182,66 +182,150 @@ function Home() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-              <ScrollReveal delay={0.1}>
-                <a 
-                  href="https://www.aago.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/AAGO.png" 
-                    alt="Apartment Association of Greater Orlando Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
-                  />
-                  <p className="text-sm text-gray-700 text-center">Apartment Association of Greater Orlando</p>
-                </a>
-              </ScrollReveal>
+            {/* Desktop Version - Static Grid */}
+            <div className="hidden md:grid grid-cols-3 gap-8 items-center justify-items-center">
+              {[
+                {
+                  src: "/Images/AAGO.png",
+                  alt: "Apartment Association of Greater Orlando Member",
+                  href: "https://www.aago.org/",
+                  name: "Apartment Association of Greater Orlando",
+                  className: "h-24 md:h-28"
+                },
+                {
+                  src: "/Images/faa-full-color-full-logo.png",
+                  alt: "Florida Apartment Association Member",
+                  href: "https://www.faahq.org/",
+                  name: "Florida Apartment Association",
+                  className: "h-24 md:h-28 max-w-[140px]"
+                },
+                {
+                  src: "/Images/NAA-logo_bgwhite.png",
+                  alt: "National Apartment Association Member",
+                  href: "https://naahq.org/",
+                  name: "National Apartment Association",
+                  className: "h-24 md:h-28"
+                }
+              ].map((logo, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <a 
+                    href={logo.href}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-center group transition-transform duration-300 hover:-translate-y-1"
+                  >
+                    <img 
+                      src={logo.src}
+                      alt={logo.alt}
+                      className={`${logo.className} object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105`}
+                      loading="lazy"
+                      decoding="async"
+                      width="96"
+                      height="96"
+                    />
+                    <p className="text-sm text-gray-700 text-center">{logo.name}</p>
+                  </a>
+                </ScrollReveal>
+              ))}
+            </div>
 
-              <ScrollReveal delay={0.2}>
-                <a 
-                  href="https://www.faahq.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/faa-full-color-full-logo.png" 
-                    alt="Florida Apartment Association Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[140px]"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
-                  />
-                  <p className="text-sm text-gray-700 text-center">Florida Apartment Association</p>
-                </a>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.3}>
-                <a 
-                  href="https://naahq.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/NAA-logo_bgwhite.png" 
-                    alt="National Apartment Association Member" 
-                    className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
-                  />
-                  <p className="text-sm text-gray-700 text-center">National Apartment Association</p>
-                </a>
-              </ScrollReveal>
+            {/* Mobile Version - Animated Carousel */}
+            <div className="md:hidden relative">
+              <div className="overflow-hidden">
+                <div className="flex animate-slide-infinite">
+                  {/* First set of logos */}
+                  {[
+                    {
+                      src: "/Images/AAGO.png",
+                      alt: "Apartment Association of Greater Orlando Member",
+                      href: "https://www.aago.org/",
+                      name: "AAGO"
+                    },
+                    {
+                      src: "/Images/faa-full-color-full-logo.png",
+                      alt: "Florida Apartment Association Member",
+                      href: "https://www.faahq.org/",
+                      name: "FAA"
+                    },
+                    {
+                      src: "/Images/NAA-logo_bgwhite.png",
+                      alt: "National Apartment Association Member",
+                      href: "https://naahq.org/",
+                      name: "NAA"
+                    }
+                  ].map((logo, index) => (
+                    <div key={`first-${index}`} className="flex-shrink-0 w-1/3 px-4">
+                      <a 
+                        href={logo.href}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-center group"
+                      >
+                        <div className="bg-white rounded-xl p-6 shadow-lg mx-2 transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-xl">
+                          <img 
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-16 object-contain mx-auto mb-2"
+                            loading="lazy"
+                            decoding="async"
+                            width="64"
+                            height="64"
+                          />
+                          <p className="text-xs text-gray-600 font-medium">{logo.name}</p>
+                        </div>
+                      </a>
+                    </div>
+                  ))}
+                  
+                  {/* Duplicate set for seamless loop */}
+                  {[
+                    {
+                      src: "/Images/AAGO.png",
+                      alt: "Apartment Association of Greater Orlando Member",
+                      href: "https://www.aago.org/",
+                      name: "AAGO"
+                    },
+                    {
+                      src: "/Images/faa-full-color-full-logo.png",
+                      alt: "Florida Apartment Association Member",
+                      href: "https://www.faahq.org/",
+                      name: "FAA"
+                    },
+                    {
+                      src: "/Images/NAA-logo_bgwhite.png",
+                      alt: "National Apartment Association Member",
+                      href: "https://naahq.org/",
+                      name: "NAA"
+                    }
+                  ].map((logo, index) => (
+                    <div key={`second-${index}`} className="flex-shrink-0 w-1/3 px-4">
+                      <a 
+                        href={logo.href}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-center group"
+                      >
+                        <div className="bg-white rounded-xl p-6 shadow-lg mx-2 transform transition-all duration-500 hover:scale-105 hover:rotate-2 hover:shadow-xl">
+                          <img 
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-16 object-contain mx-auto mb-2"
+                            loading="lazy"
+                            decoding="async"
+                            width="64"
+                            height="64"
+                          />
+                          <p className="text-xs text-gray-600 font-medium">{logo.name}</p>
+                        </div>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Gradient overlays for smooth edges */}
+              <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+              <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
             </div>
           </div>
         </section>

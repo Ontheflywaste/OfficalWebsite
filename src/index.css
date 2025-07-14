@@ -131,6 +131,25 @@ img {
   }
 }
 
+/* Sliding animation for membership logos */
+@keyframes slide-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-infinite {
+  animation: slide-infinite 15s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-slide-infinite:hover {
+  animation-play-state: paused;
+}
+
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;

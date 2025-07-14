@@ -213,7 +213,7 @@ function Home() {
                   <img 
                     src="/Images/faa-full-color-full-logo.png" 
                     alt="Florida Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
+                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[120px]"
                     loading="lazy"
                     decoding="async"
                     width="96"

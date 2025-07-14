@@ -514,7 +514,7 @@ function Home() {
                         {service.title}
                       </h3>
                       <p className="text-gray-700 mb-4 text-center">{service.description}</p>
-                      <div className="flex items-center justify-center text-[#049704] font-medium">
+                      <div className="flex items-center justify-center text-[#049704] font-medium pointer-events-auto">
                         Learn More 
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </div>

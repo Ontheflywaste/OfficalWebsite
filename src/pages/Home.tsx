@@ -220,8 +220,8 @@ function Home() {
           {/* Mobile background image */}
           {isMobile && (
             <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=768"
-              alt="On The Fly Waste Solutions Mobile Hero"
+              src="/Images/gallery12813_1920x831@2x.jpg"
+              alt="Professional Valet Trash Collection Service Orlando"
               className="absolute inset-0 w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"

@@ -139,13 +139,27 @@ function Home() {
           
           {/* Fallback image while video loads */}
           {!videoLoaded && (
-            <img
-              src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
-              alt="On The Fly Waste Solutions Hero"
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
+            <picture>
+              <source 
+                media="(max-width: 767px)" 
+                srcSet="/Images/hero-mobile.webp"
+                type="image/webp"
+              />
+              <source 
+                media="(min-width: 768px)" 
+                srcSet="/Images/hero-desktop.webp"
+                type="image/webp"
+              />
+              <img
+                src="/Images/hero-desktop.webp"
+                alt="On The Fly Waste Solutions professional staff providing valet trash service at modern apartment community"
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+                width="1920"
+                height="1080"
+              />
+            </picture>
           )}
           
           {/* Hero content */}

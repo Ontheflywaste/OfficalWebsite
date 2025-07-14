@@ -1,11 +1,4 @@
-<!-- Placeholder for mobile hero image -->
-<!-- 
-Image specifications needed:
-- Format: WebP
-- Dimensions: 720×405px (16:9 aspect ratio)
-- File size: Under 100 KB
-- Scene: Same as desktop but optimized for mobile viewing
-- Setting: Modern apartment building, mid-day lighting
-- Composition: Left third open for text overlay
-- Style: Bright natural light, high contrast
--->
+<!-- This is a placeholder for the mobile hero image -->
+<!-- In production, you would replace this with an optimized WebP image -->
+<!-- Recommended size: 768x1024px for mobile portrait orientation -->
+<!-- This file should be created from your existing hero video thumbnail or a static frame -->

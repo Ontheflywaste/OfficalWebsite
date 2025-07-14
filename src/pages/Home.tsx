@@ -7,33 +7,21 @@ import ScrollReveal from '../components/ScrollReveal';
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Check if mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
       
-      // Lazy load video on desktop after paint
-      if (!isMobile) {
-        requestIdleCallback(() => {
-          setVideoLoaded(true);
-        });
-      }
+      // Lazy load video after paint
+      requestIdleCallback(() => {
+        setVideoLoaded(true);
+      });
     }, 100);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', checkMobile);
     };
   }, []);
 
@@ -134,25 +122,8 @@ function Home() {
         <div className="hero-container">
           <div className="hero-overlay" />
           
-          {/* Mobile static hero image */}
-          {isMobile && (
-            <picture>
-              <source 
-                srcSet="https://res.cloudinary.com/demo/image/upload/w_768,h_1024,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains" 
-                media="(max-width: 767px)" 
-              />
-              <img
-                src="https://res.cloudinary.com/demo/image/upload/w_768,h_1024,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
-                alt="On The Fly Waste Solutions Hero"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-                fetchPriority="high"
-              />
-            </picture>
-          )}
-          
-          {/* Desktop video background - lazy loaded */}
-          {!isMobile && videoLoaded && (
+          {/* Video background - lazy loaded */}
+          {videoLoaded && (
             <video
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
@@ -166,8 +137,8 @@ function Home() {
             </video>
           )}
           
-          {/* Desktop fallback image while video loads */}
-          {!isMobile && !videoLoaded && (
+          {/* Fallback image while video loads */}
+          {!videoLoaded && (
             <img
               src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
               alt="On The Fly Waste Solutions Hero"

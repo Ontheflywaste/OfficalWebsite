@@ -490,10 +490,7 @@ function Home() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.2}
                 >
-                  <Link
-                    to={service.link}
-                    className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-                  >
+                  <div className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                     <div className="relative w-full aspect-[4/3]">
                       <img 
                         src={service.image}
@@ -504,7 +501,7 @@ function Home() {
                         width="320"
                         height="240"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
                       <div className="absolute bottom-4 left-4">
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
@@ -514,12 +511,15 @@ function Home() {
                         {service.title}
                       </h3>
                       <p className="text-gray-700 mb-4 text-center">{service.description}</p>
-                      <div className="flex items-center justify-center text-[#049704] font-medium pointer-events-auto">
+                      <Link 
+                        to={service.link}
+                        className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                      >
                         Learn More 
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </div>
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                      </Link>
                     </div>
-                  </Link>
+                  </div>
                 </ScrollReveal>
               ))}
             </div>

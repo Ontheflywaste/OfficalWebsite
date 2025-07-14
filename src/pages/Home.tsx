@@ -511,13 +511,33 @@ function Home() {
                         {service.title}
                       </h3>
                       <p className="text-gray-700 mb-4 text-center">{service.description}</p>
-                      <Link 
-                        to={service.link}
-                        className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                      >
-                        Learn More 
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                      </Link>
+                      {service.title === "Valet Trash" && (
+                        <Link 
+                          to="/services/valet-trash"
+                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                        >
+                          Learn More 
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                        </Link>
+                      )}
+                      {service.title === "Junk Removal" && (
+                        <Link 
+                          to="/services/junk-removal"
+                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                        >
+                          Learn More 
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                        </Link>
+                      )}
+                      {service.title === "Pressure Washing" && (
+                        <Link 
+                          to="/services/pressure-washing"
+                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                        >
+                          Learn More 
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </ScrollReveal>

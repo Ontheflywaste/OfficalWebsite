@@ -220,7 +220,7 @@ function Home() {
           {/* Mobile background image */}
           {isMobile && (
             <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=768"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=768"
               alt="On The Fly Waste Solutions Mobile Hero"
               className="absolute inset-0 w-full h-full object-cover"
               loading="eager"

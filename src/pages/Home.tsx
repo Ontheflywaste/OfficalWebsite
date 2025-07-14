@@ -152,6 +152,12 @@ function Home() {
       location: "Orlando, FL",
       rating: 5,
       text: "Mr. Donnell and Mr. Trevor are outstanding young men with a high drive that makes them excel at what they do. Their crew works hard and quickly and are friendly. I would highly recommend giving these young men a chance."
+    },
+    {
+      name: "Lynn Mollison",
+      location: "Orlando, FL",
+      rating: 5,
+      text: "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated to their job - no short-cuts with them. They work super fast, and they are helpful and friendly. Donnell will go above and beyond to help anyone out - he is amazing."
     }
   ];
 

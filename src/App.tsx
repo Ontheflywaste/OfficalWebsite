@@ -13,7 +13,6 @@ import BlogPost from './pages/BlogPost';
 import ValetTrashService from './pages/ValetTrashService';
 import JunkRemovalService from './pages/JunkRemovalService';
 import PressureWashingService from './pages/PressureWashingService';
-import MovingServices from './pages/MovingServices';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
@@ -40,7 +39,6 @@ function AnimatedRoutes() {
         <Route path="/services/valet-trash" element={<PageTransition><ValetTrashService /></PageTransition>} />
         <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
         <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
-        <Route path="/services/moving" element={<PageTransition><MovingServices /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

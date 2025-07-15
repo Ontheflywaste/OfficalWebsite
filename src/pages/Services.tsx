@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Trash2, Package, Droplet, Calendar, Clock, CheckCircle2, Shield, PenTool as Tool } from 'lucide-react';
+import { ArrowRight, Trash2, Package, Droplet, Truck, Calendar, Clock, CheckCircle2, Shield, PenTool as Tool } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
@@ -316,6 +316,101 @@ function Services() {
                       ))}
                     </ul>
                     <Link to="/services/pressure-washing" className="btn-primary inline-flex items-center">
+                      Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+          </div>
+
+          {/* Moving Services */}
+          <div id="moving-services" className="scroll-mt-32 bg-gradient-to-br from-[#038203]/15 via-[#038203]/5 to-[#038203]/10 py-20">
+            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <ScrollReveal direction="left" distance={200} className="order-1">
+                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+                    <img 
+                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800"
+                      alt="Professional Moving Service"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="right" distance={200} delay={0.2} className="order-2">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+                    <div className="flex items-center space-x-2 text-[#049704] mb-4">
+                      <Truck className="h-6 w-6" />
+                      <span className="text-lg font-medium">Professional Moving Services</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Expert Moving Solutions</h2>
+                    <div className="prose prose-lg text-gray-600 mb-6">
+                      <p>
+                        Professional moving services for residential and commercial relocations throughout Orlando and Central Florida. Our experienced team handles every aspect of your move with care and precision.
+                      </p>
+                      <p>
+                        From careful packing and loading to safe transportation and unpacking, we ensure your belongings arrive at their destination in perfect condition. Licensed, insured, and committed to making your move stress-free.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Shield className="h-5 w-5 text-[#049704] mr-2" />
+                          Licensed & Insured
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          Full protection for your belongings
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Clock className="h-5 w-5 text-[#049704] mr-2" />
+                          Flexible Scheduling
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          Available 7 days a week
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Tool className="h-5 w-5 text-[#049704] mr-2" />
+                          Professional Team
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          Experienced moving specialists
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Tool className="h-5 w-5 text-[#049704] mr-2" />
+                          Full Service
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          Packing to unpacking solutions
+                        </p>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {[
+                        'Local and long-distance moving services',
+                        'Professional packing and unpacking services',
+                        'Residential and commercial relocations',
+                        'Specialty item handling (pianos, artwork, etc.)',
+                        'Storage solutions available',
+                        'Free estimates with transparent pricing'
+                      ].map((item, index) => (
+                        <ScrollReveal key={item} delay={index * 0.1}>
+                          <li className="flex items-center space-x-3">
+                            <CheckCircle2 className="h-5 w-5 text-[#049704] flex-shrink-0" />
+                            <span className="text-gray-700">{item}</span>
+                          </li>
+                        </ScrollReveal>
+                      ))}
+                    </ul>
+                    <Link to="/services/moving" className="btn-primary inline-flex items-center">
                       Learn More <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </div>

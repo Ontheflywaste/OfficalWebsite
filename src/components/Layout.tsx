@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Truck, Linkedin, ChevronDown } from 'lucide-react';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -273,6 +273,16 @@ function Layout({ children }: { children: React.ReactNode }) {
                         <div className="text-sm text-gray-500">Building & surface cleaning</div>
                       </div>
                     </Link>
+                    <Link
+                      to="/services/moving"
+                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200"
+                    >
+                      <Truck className="h-5 w-5 mr-3 text-[#027502]" />
+                      <div>
+                        <div className="font-medium">Moving Services</div>
+                        <div className="text-sm text-gray-500">Residential & commercial</div>
+                      </div>
+                    </Link>
                     <div className="border-t border-gray-100 mt-2 pt-2">
                       <Link
                         to="/services"
@@ -434,6 +444,17 @@ function Layout({ children }: { children: React.ReactNode }) {
                 >
                   Pressure Washing
                 </Link>
+                <Link
+                  to="/services/moving"
+                  className={`block py-2 px-3 rounded-lg transition-colors duration-300 text-sm ${
+                    shouldUseBlackLogo
+                      ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-100'
+                      : 'text-white/80 hover:text-[#027502] hover:bg-white/10'
+                  }`}
+                  role="menuitem"
+                >
+                  Moving Services
+                </Link>
               </div>
               
               <Link
@@ -593,7 +614,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                 {[
                   { icon: Trash2, text: 'Valet Trash', link: '/services/valet-trash' },
                   { icon: Package, text: 'Junk Removal', link: '/services/junk-removal' },
-                  { icon: Droplet, text: 'Pressure Washing', link: '/services/pressure-washing' }
+                  { icon: Droplet, text: 'Pressure Washing', link: '/services/pressure-washing' },
+                  { icon: Truck, text: 'Moving Services', link: '/services/moving' }
                 ].map((item) => (
                   <li key={item.text}>
                     <Link 

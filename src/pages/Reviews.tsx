@@ -58,9 +58,9 @@ function Reviews() {
           />
           <div className="relative h-full z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-              <div className="flex flex-col justify-center items-center h-full text-center" style={{ paddingTop: '25vh', paddingBottom: '10vh' }}>
-                <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-center">Client Reviews</h1>
-                <p className="text-xl text-white/90 max-w-3xl mx-auto text-center">
+              <div className="flex flex-col justify-center items-center h-full text-center">
+                <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 text-center leading-tight">Client Reviews</h1>
+                <p className="text-xl text-white/90 max-w-2xl mx-auto text-center leading-relaxed">
                   See what our satisfied clients have to say about our valet trash services
                 </p>
               </div>

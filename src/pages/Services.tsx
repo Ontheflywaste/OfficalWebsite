@@ -217,6 +217,22 @@ function Services() {
                         </ScrollReveal>
                       ))}
                     </ul>
+                    <div className="mt-8">
+                      <Link 
+                        to="/services/junk-removal" 
+                        className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg"
+                      >
+                        Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+                    <div className="mt-8">
+                      <Link 
+                        to="/services/valet-trash" 
+                        className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg"
+                      >
+                        Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
                   </div>
                 </ScrollReveal>
               </div>
@@ -309,6 +325,14 @@ function Services() {
                         </ScrollReveal>
                       ))}
                     </ul>
+                    <div className="mt-8">
+                      <Link 
+                        to="/services/pressure-washing" 
+                        className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg"
+                      >
+                        Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
                   </div>
                 </ScrollReveal>
               </div>

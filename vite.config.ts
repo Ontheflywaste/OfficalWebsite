@@ -9,10 +9,6 @@ export default defineConfig({
     sourcemap: false,
     minify: 'terser',
     rollupOptions: {
-      input: {
-        main: './index.html',
-        'video-sitemap': './video-sitemap.xml'
-      },
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom'],
@@ -21,12 +17,7 @@ export default defineConfig({
           'email': ['@emailjs/browser'],
           'helmet': ['react-helmet']
         },
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'video-sitemap.xml') {
-            return 'video-sitemap.xml';
-          }
-          return 'assets/[name]-[hash][extname]';
-        }
+        assetFileNames: 'assets/[name]-[hash][extname]'
       }
     }
   },

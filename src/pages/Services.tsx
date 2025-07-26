@@ -41,8 +41,8 @@ function Services() {
 
         <div className="relative">
           <div id="valet-trash" className="scroll-mt-32 bg-gradient-to-br from-[#049704]/5 via-white to-[#049704]/10 py-20">
-            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5" />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5 -z-10" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <ScrollReveal direction="right" distance={200} delay={0.2} className="order-1 lg:order-2">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
@@ -138,8 +138,8 @@ function Services() {
 
           {/* Junk Removal */}
           <div id="junk-removal" className="scroll-mt-32 bg-gradient-to-br from-[#038203]/10 via-[#038203]/5 to-[#038203]/15 py-20">
-            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5" />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5 -z-10" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <ScrollReveal direction="left" distance={200} className="order-1">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
@@ -235,8 +235,8 @@ function Services() {
 
           {/* Pressure Washing */}
           <div id="pressure-washing" className="scroll-mt-32 bg-gradient-to-br from-[#049704]/10 via-white to-[#049704]/5 py-20">
-            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5" />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5 -z-10" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <ScrollReveal direction="right" distance={200} delay={0.2} className="order-1 lg:order-2">
                   <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">

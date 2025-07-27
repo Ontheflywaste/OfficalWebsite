@@ -14,36 +14,36 @@ function JunkRemovalService() {
   const benefits = [
     {
       icon: Clock,
-      title: "Same-Day Service Available",
-      description: "Quick response times for urgent removal needs. We understand that sometimes you need items removed immediately."
+      title: "Rapid Response Service",
+      description: "Same-day and next-day service available for urgent removal needs. Perfect for move-outs, renovations, and emergency cleanouts."
     },
     {
       icon: Shield,
-      title: "Licensed & Insured",
-      description: "Professional team with proper credentials and insurance coverage for your peace of mind and property protection."
+      title: "Professional & Insured",
+      description: "Licensed professionals with full insurance coverage. Our trained team handles your property with care and maintains the highest safety standards."
     },
     {
       icon: Truck,
-      title: "Full-Service Removal",
-      description: "We handle everything from heavy lifting to proper disposal, including cleanup after removal is complete."
+      title: "Complete Removal Service",
+      description: "We handle everything from heavy lifting to loading and hauling. No job too big or small - from single items to complete property cleanouts."
     },
     {
-      icon: Recycle,
-      title: "Eco-Friendly Disposal",
-      description: "Responsible disposal practices including recycling and donation of items in good condition whenever possible."
+      icon: Package,
+      title: "All Items Accepted",
+      description: "Furniture, appliances, electronics, construction debris, and more. We remove almost anything you need gone from your property."
     }
   ];
 
   const features = [
-    "Same-day and next-day service available",
+    "Same-day service available for urgent needs",
     "Professional removal of furniture and appliances",
-    "Construction debris and renovation waste",
-    "Electronics and e-waste disposal",
-    "Yard waste and organic material removal",
+    "Construction debris and renovation cleanup",
+    "Electronics and appliance disposal",
+    "Office furniture and equipment removal",
     "Complete property cleanouts",
-    "Upfront pricing with no hidden fees",
+    "Transparent pricing with no hidden fees",
     "Licensed and insured professional team",
-    "Proper disposal and recycling practices",
+    "Proper disposal practices and cleanup",
     "Complete cleanup after removal"
   ];
 
@@ -75,7 +75,7 @@ function JunkRemovalService() {
         {/* Hero Section */}
         <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/Junk.jpg')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#049704]/80 via-[#038203]/60 to-black/80" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24">
@@ -90,7 +90,7 @@ function JunkRemovalService() {
                   <span className="block text-white/90">Removal Service</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  Fast, reliable junk removal service in Orlando for furniture, appliances, construction debris, and bulk items across Central Florida
+                  Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary-inverse">
@@ -114,10 +114,10 @@ function JunkRemovalService() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Junk Removal Service?</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our professional junk removal service in Orlando handles everything from single items to complete property cleanouts. We specialize in efficient removal of furniture, appliances, electronics, construction debris, and more with same-day service available.
+                      Our professional junk removal service in Orlando transforms cluttered spaces into clean, organized environments. We handle everything from single furniture pieces to complete property cleanouts, serving apartment communities, condos, and commercial properties throughout Central Florida.
                     </p>
                     <p>
-                      With our experienced team and specialized equipment, we ensure quick, safe removal while maintaining proper disposal practices. We handle the heavy lifting, sorting, and cleanup, making the process seamless for you while supporting eco-friendly disposal methods.
+                      Our uniformed professionals arrive on time with the right equipment to safely remove your unwanted items. We handle all the heavy lifting, loading, and proper disposal, making the entire process effortless for property managers and residents. From old furniture to appliance removal, we've got you covered.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -134,8 +134,8 @@ function JunkRemovalService() {
                       <div className="text-sm text-gray-600">& Insured</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-[#049704] mb-2">Eco</div>
-                      <div className="text-sm text-gray-600">Friendly</div>
+                      <div className="text-3xl font-bold text-[#049704] mb-2">Full</div>
+                      <div className="text-sm text-gray-600">Service</div>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ function JunkRemovalService() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Benefits of Our Service</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Discover why property managers and homeowners choose our junk removal service
+                  Discover why property managers and residents choose our professional junk removal service
                 </p>
               </div>
             </ScrollReveal>
@@ -195,7 +195,7 @@ function JunkRemovalService() {
                 <div className="relative">
                   <img 
                     src="/Images/Junk.jpg"
-                    alt="Professional Junk Removal Team"
+                    alt="Professional Junk Removal Equipment and Team"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -206,7 +206,7 @@ function JunkRemovalService() {
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Removal Services</h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Our junk removal service handles items of all sizes, from single pieces of furniture to complete property cleanouts, with professional disposal and recycling practices.
+                    Our junk removal service handles items of all sizes, from single pieces of furniture to complete property cleanouts. We provide professional removal with proper disposal practices, making your space clean and clutter-free.
                   </p>
                   <div className="grid grid-cols-1 gap-4">
                     {features.map((feature, index) => (
@@ -240,7 +240,7 @@ function JunkRemovalService() {
               {[
                 {
                   question: "What items can you remove?",
-                  answer: "We remove furniture, appliances, electronics, construction debris, yard waste, and most household items. We cannot remove hazardous materials, chemicals, or items containing asbestos."
+                  answer: "We remove furniture, appliances, electronics, construction debris, office equipment, and most household items. We cannot remove hazardous materials, chemicals, paint, or items containing asbestos."
                 },
                 {
                   question: "How quickly can you provide service?",
@@ -248,19 +248,19 @@ function JunkRemovalService() {
                 },
                 {
                   question: "How do you price your services?",
-                  answer: "Pricing is based on the volume of items and type of materials being removed. We provide upfront, transparent pricing with no hidden fees. Contact us for a free estimate."
+                  answer: "Pricing is based on the volume of items and complexity of removal. We provide upfront, transparent pricing with no hidden fees. Most jobs are priced on-site for accuracy."
                 },
                 {
-                  question: "Do you recycle or donate items?",
-                  answer: "Yes, we prioritize eco-friendly disposal. Items in good condition are donated to local charities, and recyclable materials are properly processed at recycling facilities."
+                  question: "Do you donate items in good condition?",
+                  answer: "Yes, we work with local charities to donate items in good condition whenever possible. This helps reduce waste while supporting our community."
                 },
                 {
                   question: "Are you licensed and insured?",
-                  answer: "Yes, we are fully licensed and insured for your protection. Our team is trained in safe removal practices and proper disposal methods."
+                  answer: "Yes, we are fully licensed and insured for your protection. Our professional team is trained in safe removal practices and maintains all required certifications."
                 },
                 {
                   question: "Do you clean up after removal?",
-                  answer: "Absolutely. We provide complete cleanup after removal, including sweeping and ensuring the area is left clean and tidy."
+                  answer: "Absolutely. Complete cleanup is included with every job. We sweep, clean, and ensure the area is left spotless after removal."
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>

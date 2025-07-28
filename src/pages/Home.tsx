@@ -226,11 +226,13 @@ function Home() {
           {/* Mobile background image */}
           {isMobile && (
             <img
-              src="/Images/gallery12813_1920x831@2x.jpg"
+              src="/Images/hero-mobile.webp"
               alt="Professional Valet Trash Collection Service Orlando"
               className="absolute inset-0 w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"
+              width="768"
+              height="1024"
             />
           )}
           
@@ -384,6 +386,7 @@ function Home() {
                     decoding="async"
                     width="96"
                     height="96"
+                    sizes="(max-width: 768px) 64px, 96px"
                   />
                   <p className="text-sm text-gray-700 text-center">Apartment Association of Greater Orlando</p>
                 </a>
@@ -404,6 +407,7 @@ function Home() {
                     decoding="async"
                     width="96"
                     height="96"
+                    sizes="(max-width: 768px) 64px, 96px"
                   />
                   <p className="text-sm text-gray-700 text-center">Florida Apartment Association</p>
                 </a>
@@ -424,6 +428,7 @@ function Home() {
                     decoding="async"
                     width="96"
                     height="96"
+                    sizes="(max-width: 768px) 64px, 96px"
                   />
                   <p className="text-sm text-gray-700 text-center">National Apartment Association</p>
                 </a>
@@ -468,6 +473,7 @@ function Home() {
                       decoding="async"
                       width="480"
                       height="360"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   </div>
@@ -506,6 +512,7 @@ function Home() {
                         decoding="async"
                         width="320"
                         height="240"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
                       <div className="absolute bottom-4 left-4">

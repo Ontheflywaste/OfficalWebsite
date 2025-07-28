@@ -28,10 +28,24 @@ html {
   will-change: transform;
 }
 
-/* Optimize image loading */
+/* Optimize image loading for mobile */
 img {
   content-visibility: auto;
   contain-intrinsic-size: 300px 200px;
+}
+
+/* Mobile-specific image optimizations */
+@media (max-width: 768px) {
+  img {
+    contain-intrinsic-size: 200px 150px;
+  }
+  
+  /* Reduce image quality on slower connections */
+  @media (max-width: 768px) and (prefers-reduced-data: reduce) {
+    img {
+      filter: contrast(0.9) brightness(1.1);
+    }
+  }
 }
 
 /* Lazy loading improvements */
@@ -42,6 +56,15 @@ img {
 
 .lazy-load.loaded {
   opacity: 1;
+}
+
+/* Intersection observer fallback for older browsers */
+.no-js img[loading="lazy"] {
+  display: none;
+}
+
+.no-js img[loading="lazy"].fallback {
+  display: block;
 }
 
 /* Custom DatePicker Styles */

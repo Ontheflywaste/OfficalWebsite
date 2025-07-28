@@ -1,4 +1,19 @@
-<!-- This is a placeholder for the mobile hero image -->
-<!-- In production, you would replace this with an optimized WebP image -->
-<!-- Recommended size: 768x1024px for mobile portrait orientation -->
-<!-- This file should be created from your existing hero video thumbnail or a static frame -->
+# Mobile Hero Image Placeholder
+
+This file represents an optimized WebP image for mobile devices.
+
+In a production environment, this would be:
+- A WebP format image (smaller file size)
+- Optimized dimensions: 768x1024px (mobile portrait)
+- Compressed for fast loading
+- Generated from your existing hero video thumbnail
+
+To create this file:
+1. Take a frame from your hero video or use an existing hero image
+2. Resize to 768x1024px for mobile portrait orientation
+3. Convert to WebP format using tools like:
+   - Online converters (squoosh.app, cloudconvert.com)
+   - Command line: `cwebp input.jpg -o hero-mobile.webp -q 80`
+   - Image editing software with WebP export
+
+This optimized mobile image will significantly reduce load times on mobile devices.

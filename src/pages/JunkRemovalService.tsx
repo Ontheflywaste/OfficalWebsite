@@ -290,6 +290,93 @@ function JunkRemovalService() {
           </div>
         </section>
 
+        {/* How It Works */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">How Our Junk Removal Works</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Simple, efficient, and professional junk removal process
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  step: "1",
+                  title: "Schedule Service",
+                  description: "Contact us to schedule your junk removal. We offer same-day service when available and provide upfront pricing estimates."
+                },
+                {
+                  step: "2",
+                  title: "Professional Removal",
+                  description: "Our trained team arrives on time with proper equipment to safely remove all items from your property, handling all the heavy lifting."
+                },
+                {
+                  step: "3",
+                  title: "Complete Cleanup",
+                  description: "We properly dispose of all items, donate what we can, and leave your space clean and ready for use."
+                }
+              ].map((step, index) => (
+                <ScrollReveal 
+                  key={index}
+                  direction="up"
+                  delay={index * 0.2}
+                >
+                  <div className="bg-gray-50 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div className="w-16 h-16 bg-[#049704] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                      {step.step}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Hear from property managers who trust our junk removal service
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <ScrollReveal 
+                  key={index}
+                  direction={index % 2 === 0 ? 'left' : 'right'}
+                  delay={index * 0.2}
+                >
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <Quote className="h-8 w-8 text-[#049704]/20 mb-4" />
+                    <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                        <p className="text-sm text-gray-600">{testimonial.property}</p>
+                      </div>
+                      <div className="flex">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

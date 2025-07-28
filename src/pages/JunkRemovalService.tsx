@@ -65,8 +65,8 @@ function JunkRemovalService() {
   return (
     <>
       <Helmet>
-        <title>Bulk Junk Removal Orlando & Kissimmee | Professional Furniture Removal Central Florida</title>
-        <meta name="description" content="Expert bulk junk removal Orlando & Kissimmee for multifamily properties. Professional furniture removal, appliance pickup Central Florida. Same-day service available. Licensed & insured team." />
+        <title>Professional Junk Removal Orlando | Bulk Item Pickup Service</title>
+        <meta name="description" content="Expert junk removal service in Orlando for furniture, appliances, and bulk items. Same-day pickup available. Licensed and insured team serving Central Florida." />
         <meta name="keywords" content="junk removal Orlando, bulk item pickup Orlando, furniture removal Orlando, appliance removal Central Florida, construction debris removal Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/junk-removal" />
       </Helmet>
@@ -86,11 +86,11 @@ function JunkRemovalService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Bulk Junk Removal
-                  <span className="block text-white/90">Orlando & Kissimmee</span>
+                  Professional Junk
+                  <span className="block text-white/90">Removal Service</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  Central Florida's trusted bulk junk removal Orlando and Kissimmee specialists for furniture, appliances, and bulk items. Professional removal service for multifamily properties, apartments, and condos across Orlando metro area
+                  Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary-inverse">
@@ -111,13 +111,13 @@ function JunkRemovalService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Orlando Bulk Junk Removal Service?</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Junk Removal Service?</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our professional bulk junk removal Orlando service transforms cluttered spaces into clean, organized environments. We handle everything from single furniture pieces to complete property cleanouts, serving multifamily apartment communities, condos, and commercial properties throughout Orlando, Kissimmee, and Central Florida.
+                      Our professional junk removal service in Orlando transforms cluttered spaces into clean, organized environments. We handle everything from single furniture pieces to complete property cleanouts, serving apartment communities, condos, and commercial properties throughout Central Florida.
                     </p>
                     <p>
-                      Our uniformed professionals arrive on time with the right equipment to safely remove your unwanted items. We handle all the heavy lifting, loading, and proper disposal, making the entire bulk junk removal Orlando process effortless for multifamily property managers and residents. From old furniture to appliance removal Central Florida, we've got you covered.
+                      Our uniformed professionals arrive on time with the right equipment to safely remove your unwanted items. We handle all the heavy lifting, loading, and proper disposal, making the entire process effortless for property managers and residents. From old furniture to appliance removal, we've got you covered.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -144,7 +144,7 @@ function JunkRemovalService() {
                 <div className="relative">
                   <img 
                     src="/Images/Junk.jpg"
-                    alt="Professional bulk junk removal Orlando team removing furniture and appliances from multifamily apartment complex"
+                    alt="Professional Junk Removal Service"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -160,9 +160,9 @@ function JunkRemovalService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Bulk Junk Removal Service Benefits</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Benefits of Our Service</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Discover why Orlando property managers and residents choose our professional bulk junk removal service for multifamily communities
+                  Discover why property managers and residents choose our professional junk removal service
                 </p>
               </div>
             </ScrollReveal>
@@ -195,7 +195,7 @@ function JunkRemovalService() {
                 <div className="relative">
                   <img 
                     src="/Images/Junk.jpg"
-                    alt="Orlando bulk junk removal team with professional equipment removing large items from Central Florida apartment community"
+                    alt="Professional Junk Removal Equipment and Team"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -204,9 +204,9 @@ function JunkRemovalService() {
               </ScrollReveal>
               <ScrollReveal direction="right" delay={0.2}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Orlando Bulk Junk Removal Services</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Removal Services</h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Our bulk junk removal Orlando service handles items of all sizes, from single pieces of furniture to complete multifamily property cleanouts. We provide professional removal with proper disposal practices, making your Central Florida space clean and clutter-free.
+                    Our junk removal service handles items of all sizes, from single pieces of furniture to complete property cleanouts. We provide professional removal with proper disposal practices, making your space clean and clutter-free.
                   </p>
                   <div className="grid grid-cols-1 gap-4">
                     {features.map((feature, index) => (
@@ -229,9 +229,9 @@ function JunkRemovalService() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Bulk Junk Removal FAQ</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Common questions about our professional bulk junk removal Orlando and Kissimmee service
+                  Common questions about our junk removal service
                 </p>
               </div>
             </ScrollReveal>
@@ -295,9 +295,9 @@ function JunkRemovalService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Bulk Junk Removal Client Reviews</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Hear from Orlando property managers who trust our professional bulk junk removal service for multifamily communities
+                  Hear from property managers who trust our junk removal service
                 </p>
               </div>
             </ScrollReveal>
@@ -335,10 +335,10 @@ function JunkRemovalService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready for Professional Bulk Junk Removal Orlando Service?
+                Ready for Professional Junk Removal Service?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get fast, reliable bulk junk removal Orlando and Kissimmee with same-day availability and eco-friendly disposal practices for multifamily properties.
+                Get fast, reliable junk removal service in Orlando with same-day availability and eco-friendly disposal practices.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="btn-primary">

@@ -71,8 +71,8 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash Service Blog | Multifamily Waste Management Tips Central Florida</title>
-        <meta name="description" content="Expert insights on valet trash service Orlando & multifamily waste management Central Florida. Professional tips for apartment communities, property managers. Industry best practices blog." />
+        <title>Orlando Valet Trash & Waste Management Blog | On The Fly Waste Solutions</title>
+        <meta name="description" content="Expert insights on valet trash services and waste management in Orlando. Tips and best practices for multifamily communities in Central Florida from industry professionals." />
         <meta name="keywords" content="orlando valet trash blog, waste management tips orlando, apartment waste solutions florida, multifamily trash collection blog" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/blog" />
       </Helmet>
@@ -92,11 +92,11 @@ function Blog() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Orlando Valet Trash Service
+                  Waste Management
                   <span className="block text-[#049704]">Insights & Tips</span>
                 </h1>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  Expert insights and practical advice for Orlando property managers looking to optimize their valet trash service and multifamily waste management operations across Central Florida
+                  Expert insights and practical advice for property managers looking to optimize their waste management operations and enhance resident satisfaction
                 </p>
               </ScrollReveal>
             </div>
@@ -108,7 +108,7 @@ function Blog() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Orlando Valet Trash Service Article</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
                 <div className="w-24 h-1 bg-[#049704] mx-auto rounded-full" />
               </div>
             </ScrollReveal>
@@ -196,8 +196,8 @@ function Blog() {
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   {selectedCategory === 'All' 
-                    ? 'Stay updated with the latest trends and best practices in Orlando valet trash service and multifamily waste management'
-                    : `Explore our ${selectedCategory.toLowerCase()} insights and expertise for Central Florida properties`
+                    ? 'Stay updated with the latest trends and best practices in waste management'
+                    : `Explore our ${selectedCategory.toLowerCase()} insights and expertise`
                   }
                 </p>
               </div>
@@ -275,10 +275,10 @@ function Blog() {
             <ScrollReveal>
               <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                  Stay Updated with Orlando Valet Trash Service Insights
+                  Stay Updated with Industry Insights
                 </h2>
                 <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-                  Get the latest tips and best practices in valet trash service Orlando and multifamily waste management Central Florida delivered to your inbox
+                  Get the latest tips and best practices in waste management delivered to your inbox
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                   <input

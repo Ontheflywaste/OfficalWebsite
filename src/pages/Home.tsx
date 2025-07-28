@@ -182,8 +182,8 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash Service & Bulk Junk Removal | Multifamily Waste Solutions Florida</title>
-        <meta name="description" content="Premier valet trash service Orlando & bulk junk removal Kissimmee. Professional multifamily waste solutions Florida for apartments, condos & communities. 24/7 service, free quotes!" />
+        <title>Orlando Valet Trash & Bulk Removal | On The Fly Solutions</title>
+        <meta name="description" content="Professional valet trash and bulk removal services in Orlando. Reliable doorstep pickup for apartments and condos. Get your free quote today!" />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, multifamily waste solutions Orlando, valet trash for condos Orlando, reliable trash pickup Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, bulk pickup service for HOA communities, contract valet trash for property managers, on-demand waste removal for resorts" />
         <link rel="canonical" href="https://ontheflywastesolutions.com" />
         <meta name="geo.region" content="US-FL" />
@@ -239,10 +239,10 @@ function Home() {
             <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
               <div className="max-w-6xl mx-auto text-center">
                 <h1 className="hero-title text-center">
-                  Orlando Valet Trash Service & Bulk Junk Removal
+                  Valet Trash & Bulk Removal Services
                 </h1>
                 <p className="hero-subtitle text-center mx-auto">
-                  Central Florida's premier multifamily waste solutions for apartments, condos, and resort-style communities across Orlando, Kissimmee, and surrounding areas
+                  Orlando's trusted doorstep trash pickup service for apartments, condos, and resort-style communities
                 </p>
                 <div className="flex justify-center mt-8">
                   <Link 
@@ -263,10 +263,10 @@ function Home() {
               <div className="w-full max-w-md">
                 <div className="text-center mb-8">
                   <h1 className="text-3xl font-bold text-white mb-4 text-shadow-lg">
-                    Orlando Valet Trash Service & Bulk Removal
+                    Orlando's Premier Valet Trash Service
                   </h1>
                   <p className="text-lg text-white/90 mb-6">
-                    Professional multifamily waste solutions - Get your free quote in 60 seconds
+                    Get your free quote in under 60 seconds
                   </p>
                 </div>
                 
@@ -361,9 +361,9 @@ function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Orlando Valet Trash Service - Proud Members Of</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
                 <p className="mt-2 text-lg text-gray-700 text-center">
-                  Affiliated with leading Florida multifamily waste management associations
+                  Affiliated with leading industry associations
                 </p>
               </div>
             </ScrollReveal>
@@ -378,7 +378,7 @@ function Home() {
                 >
                   <img 
                     src="/Images/AAGO.png" 
-                    alt="Orlando valet trash service - Apartment Association of Greater Orlando member badge" 
+                    alt="Apartment Association of Greater Orlando Member" 
                     className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -398,7 +398,7 @@ function Home() {
                 >
                   <img 
                     src="/Images/faa-full-color-full-logo.png" 
-                    alt="Florida multifamily waste solutions - Florida Apartment Association member logo" 
+                    alt="Florida Apartment Association Member" 
                     className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[120px]"
                     loading="lazy"
                     decoding="async"
@@ -418,7 +418,7 @@ function Home() {
                 >
                   <img 
                     src="/Images/NAA-logo_bgwhite.png" 
-                    alt="Professional valet trash Orlando - National Apartment Association member certification" 
+                    alt="National Apartment Association Member" 
                     className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
@@ -438,13 +438,13 @@ function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div className="text-center lg:text-left">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Orlando's Premier Multifamily Waste Solutions Provider</h2>
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Welcome to On The Fly Waste Solutions</h2>
                   <div className="prose prose-lg text-gray-700">
                     <p className="mb-4 text-center lg:text-left">
-                      At On The Fly Waste Solutions, we're raising the bar for valet trash service Orlando and bulk junk removal Kissimmee throughout Central Florida. Since 2020, we've focused on delivering dependable, detail-driven multifamily waste solutions Florida to communities and resort-style properties that expect more than the industry standard.
+                      At On The Fly Waste Solutions, we're raising the bar for valet trash and bulk removal services in Central Florida. Since 2020, we've focused on delivering dependable, detail-driven service to multifamily communities and resort-style properties that expect more than the industry standard.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
-                      Our core services include daily valet trash collection Orlando and on-demand bulk junk removal Kissimmee, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents across Central Florida.
+                      Our core services include daily valet trash collection and on-demand bulk removal, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
                       We don't operate like a distant national vendor. We stay connected, visible, and accountable. Our goal is to help property managers reduce complaints, boost curb appeal, and feel confident that their community is in good hands.
@@ -462,7 +462,7 @@ function Home() {
                   <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-xl">
                     <img 
                       src="/Images/artemistradeshow.jpg" 
-                      alt="Orlando valet trash service team at Florida multifamily trade show representing professional waste solutions" 
+                      alt="On The Fly Waste Solutions at Artemis Trade Show" 
                       className="absolute inset-0 w-full h-full object-cover object-center"
                       loading="lazy"
                       decoding="async"
@@ -482,9 +482,9 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Orlando Multifamily Waste Management Services</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Waste Management Services</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
-                  Comprehensive valet trash service Orlando, bulk junk removal Kissimmee, and multifamily waste solutions Florida
+                  Comprehensive multifamily waste solutions for Orlando apartments and condos
                 </p>
               </div>
             </ScrollReveal>
@@ -500,12 +500,7 @@ function Home() {
                     <div className="relative w-full aspect-[4/3]">
                       <img 
                         src={service.image}
-                        alt={
-                          service.title === "Valet Trash" ? "Professional valet trash service Orlando team collecting doorstep pickup from apartment complex" :
-                          service.title === "Junk Removal" ? "Bulk junk removal Kissimmee team removing furniture and large items from multifamily property" :
-                          service.title === "Pressure Washing" ? "Professional pressure washing services Central Florida cleaning apartment building exterior" :
-                          service.title
-                        }
+                        alt={service.title}
                         className="absolute inset-0 w-full h-full object-cover object-center"
                         loading="lazy"
                         decoding="async"
@@ -553,9 +548,9 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Why Orlando Property Managers Choose Our Multifamily Waste Solutions</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Why Property Managers Choose Us</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
-                  Experience the difference with our professional valet trash service Orlando and reliable multifamily waste solutions Florida
+                  Experience the difference with our professional, reliable, and technology-driven approach
                 </p>
               </div>
             </ScrollReveal>
@@ -585,9 +580,9 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Orlando Valet Trash Service Reviews</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">What Our Clients Say</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
-                  Don't just take our word for it - hear from satisfied Orlando property managers using our multifamily waste solutions
+                  Don't just take our word for it - hear from our satisfied clients
                 </p>
               </div>
             </ScrollReveal>
@@ -656,7 +651,6 @@ function Home() {
                       }} />
                       <div 
                         className="yt-facade" 
-                        title="Orlando valet trash service client testimonial video - property manager review"
                         onClick={(e) => {
                           const iframe = document.createElement('iframe');
                           iframe.setAttribute('src','https://www.youtube-nocookie.com/embed/gFYjibflN3U?autoplay=1');
@@ -664,13 +658,12 @@ function Home() {
                           iframe.setAttribute('frameborder','0');
                           iframe.style.width='100%';
                           iframe.style.height='100%';
-                          iframe.setAttribute('title','Orlando valet trash service testimonial - client review video');
                           e.currentTarget.replaceWith(iframe);
                         }}
                       />
                     </div>
                     <p className="mt-4 text-gray-700 text-center">
-                      Hear directly from satisfied Orlando property managers about their experience with our valet trash service and multifamily waste solutions.
+                      Hear directly from our satisfied clients about their experience with On The Fly Waste Solutions.
                     </p>
                   </div>
                 </div>
@@ -780,9 +773,9 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Orlando Valet Trash Service Coverage Areas</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                  Professional valet trash service Orlando, bulk junk removal Kissimmee, and multifamily waste solutions throughout Central Florida
+                  Professional valet trash and waste management services throughout Central Florida
                 </p>
               </div>
             </ScrollReveal>
@@ -835,9 +828,9 @@ function Home() {
 
             <ScrollReveal>
               <div className="text-center bg-gray-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Valet Trash Service in Your Central Florida Area?</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Don't See Your Area?</h3>
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-                  We're continuously expanding our multifamily waste solutions throughout Central Florida. Contact us to discuss valet trash service Orlando availability in your location.
+                  We're continuously expanding our service areas throughout Central Florida. Contact us to discuss service availability in your location.
                 </p>
                 <Link to="/contact" className="btn-primary">
                   Check Service Availability <ArrowRight className="ml-2 h-5 w-5" />
@@ -851,9 +844,9 @@ function Home() {
         <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Contact Orlando's Premier Valet Trash Service</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Contact Us</h2>
               <p className="mt-4 text-lg text-gray-700 text-center">
-                Get in touch for professional valet trash service Orlando and multifamily waste solutions Florida
+                Get in touch with us for all your waste management needs
               </p>
             </div>
 

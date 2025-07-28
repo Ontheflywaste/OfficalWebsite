@@ -65,8 +65,8 @@ function PressureWashingService() {
   return (
     <>
       <Helmet>
-        <title>Professional Pressure Washing Orlando | Building & Surface Cleaning</title>
-        <meta name="description" content="Expert pressure washing services in Orlando for buildings, driveways, and surfaces. Professional equipment and eco-friendly solutions serving Central Florida." />
+        <title>Pressure Washing Services Orlando & Central Florida | Multifamily Property Cleaning</title>
+        <meta name="description" content="Expert pressure washing services Orlando for multifamily properties, buildings, driveways & surfaces. Professional equipment, eco-friendly solutions Central Florida. Apartment complex cleaning specialists." />
         <meta name="keywords" content="pressure washing Orlando, building cleaning Orlando, driveway cleaning Central Florida, surface cleaning services Orlando, commercial pressure washing Florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/pressure-washing" />
       </Helmet>
@@ -86,11 +86,11 @@ function PressureWashingService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Professional Pressure
-                  <span className="block text-white/90">Washing Service</span>
+                  Pressure Washing Services
+                  <span className="block text-white/90">Orlando & Central Florida</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  Transform your property's appearance with expert pressure washing services for buildings, driveways, and surfaces across Orlando and Central Florida
+                  Transform your multifamily property's appearance with expert pressure washing services Orlando for buildings, driveways, and surfaces across Central Florida apartment communities and condos
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary-inverse">
@@ -111,13 +111,13 @@ function PressureWashingService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Pressure Washing Service?</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Orlando Pressure Washing Services?</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our professional pressure washing service in Orlando uses state-of-the-art equipment and advanced cleaning solutions to effectively remove years of built-up dirt, grime, mold, and stains from all types of surfaces.
+                      Our professional pressure washing services Orlando use state-of-the-art equipment and advanced cleaning solutions to effectively remove years of built-up dirt, grime, mold, and stains from all types of multifamily property surfaces across Central Florida.
                     </p>
                     <p>
-                      Our experienced technicians understand different surface types and use appropriate pressure settings to ensure thorough cleaning without causing damage. We handle everything from buildings and driveways to sidewalks and parking areas with eco-friendly solutions.
+                      Our experienced technicians understand different surface types and use appropriate pressure settings to ensure thorough cleaning without causing damage. We handle everything from apartment buildings and driveways to sidewalks and parking areas with eco-friendly solutions throughout Orlando and Central Florida.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -144,7 +144,7 @@ function PressureWashingService() {
                 <div className="relative">
                   <img 
                     src="/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg"
-                    alt="Professional Pressure Washing Service"
+                    alt="Professional pressure washing services Orlando team cleaning multifamily apartment building exterior in Central Florida"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -160,9 +160,9 @@ function PressureWashingService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Benefits of Our Service</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Pressure Washing Services Benefits</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Discover why property owners choose our professional pressure washing service
+                  Discover why Orlando multifamily property owners choose our professional pressure washing services for apartment communities
                 </p>
               </div>
             </ScrollReveal>
@@ -195,7 +195,7 @@ function PressureWashingService() {
                 <div className="relative">
                   <img 
                     src="/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg"
-                    alt="Professional Pressure Washing Equipment"
+                    alt="Orlando pressure washing services professional equipment cleaning Central Florida multifamily property surfaces"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -204,9 +204,9 @@ function PressureWashingService() {
               </ScrollReveal>
               <ScrollReveal direction="right" delay={0.2}>
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Cleaning Services</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Comprehensive Orlando Pressure Washing Services</h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Our pressure washing service covers all types of surfaces and structures, using professional-grade equipment and eco-friendly cleaning solutions for optimal results.
+                    Our pressure washing services Orlando cover all types of multifamily property surfaces and structures, using professional-grade equipment and eco-friendly cleaning solutions for optimal results across Central Florida.
                   </p>
                   <div className="grid grid-cols-1 gap-4">
                     {features.map((feature, index) => (
@@ -229,9 +229,9 @@ function PressureWashingService() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Pressure Washing Services FAQ</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Common questions about our pressure washing service
+                  Common questions about our professional pressure washing services Orlando for multifamily properties
                 </p>
               </div>
             </ScrollReveal>
@@ -295,9 +295,9 @@ function PressureWashingService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Orlando Pressure Washing Services Client Reviews</h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Hear from property owners who trust our pressure washing service
+                  Hear from Orlando property owners who trust our professional pressure washing services for multifamily communities
                 </p>
               </div>
             </ScrollReveal>
@@ -335,10 +335,10 @@ function PressureWashingService() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Transform Your Property's Appearance?
+                Ready to Transform Your Orlando Property's Appearance?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get professional pressure washing service in Orlando with commercial-grade equipment and eco-friendly solutions.
+                Get professional pressure washing services Orlando with commercial-grade equipment and eco-friendly solutions for multifamily properties across Central Florida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="btn-primary">

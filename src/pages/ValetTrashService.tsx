@@ -86,7 +86,7 @@ function ValetTrashService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Professional Valet
+                  Orlando's Premier Valet
                   <span className="block text-white/90">Trash Service</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">

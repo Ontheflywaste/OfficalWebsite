@@ -86,8 +86,8 @@ function JunkRemovalService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Professional Junk
-                  <span className="block text-white/90">Removal Service</span>
+                  Orlando Junk Removal
+                  <span className="block text-white/90">& Hauling Service</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
                   Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida

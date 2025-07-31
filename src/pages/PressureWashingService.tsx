@@ -86,8 +86,8 @@ function PressureWashingService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Professional Pressure
-                  <span className="block text-white/90">Washing Service</span>
+                  Orlando Pressure Washing
+                  <span className="block text-white/90">& Surface Cleaning</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
                   Transform your property's appearance with expert pressure washing services for buildings, driveways, and surfaces across Orlando and Central Florida

@@ -10,7 +10,7 @@ function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,13 +22,14 @@ function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Check if mobile
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+    // Check if small screen (phones and small tablets)
+    const checkScreenSize = () => {
+      // Use 900px as breakpoint to include most tablets in landscape mode
+      setIsSmallScreen(window.innerWidth < 900);
     };
     
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
     
     // Initialize EmailJS
     emailjs.init("JwYfbaBokN347YiVO");
@@ -36,8 +37,8 @@ function Home() {
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
       
-      // Lazy load video after paint (desktop only)
-      if (!isMobile) {
+      // Lazy load video after paint (larger screens only)
+      if (!isSmallScreen) {
         requestIdleCallback(() => {
           setVideoLoaded(true);
         });
@@ -46,9 +47,9 @@ function Home() {
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('resize', checkScreenSize);
     };
-  }, [isMobile]);
+  }, [isSmallScreen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -198,7 +199,7 @@ function Home() {
           <div className="hero-overlay" />
           
           {/* Video background - desktop only, lazy loaded */}
-          {!isMobile && videoLoaded && (
+          {!isSmallScreen && videoLoaded && (
             <video
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
@@ -213,7 +214,7 @@ function Home() {
           )}
           
           {/* Fallback image while video loads */}
-          {!isMobile && !videoLoaded && (
+          {!isSmallScreen && !videoLoaded && (
             <img
               src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
               alt="On The Fly Waste Solutions Hero"
@@ -223,8 +224,8 @@ function Home() {
             />
           )}
           
-          {/* Mobile background image */}
-          {isMobile && (
+          {/* Small screen background image */}
+          {isSmallScreen && (
             <img
               src="/Images/gallery12813_1920x831@2x.jpg"
               alt="Professional Valet Trash Collection Service Orlando"
@@ -235,7 +236,7 @@ function Home() {
           )}
           
           {/* Hero content - Desktop */}
-          {!isMobile && (
+          {!isSmallScreen && (
             <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
               <div className="max-w-6xl mx-auto text-center">
                 <h1 className="hero-title text-center">
@@ -258,7 +259,7 @@ function Home() {
           )}
           
           {/* Mobile Hero Content with Contact Form */}
-          {isMobile && (
+          {isSmallScreen && (
             <div className={`relative z-20 min-h-screen flex items-center justify-center px-4 py-20 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`}>
               <div className="w-full max-w-md">
                 <div className="text-center mb-8">

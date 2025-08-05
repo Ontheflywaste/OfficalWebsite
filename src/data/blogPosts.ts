@@ -137,11 +137,6 @@ export const blogPosts: BlogPost[] = [
         text: 'This comprehensive guide outlines the non-negotiable standards every property management trash service in Florida should meet, helping you evaluate potential vendors and ensure your residents receive the premium service they deserve.'
       },
       {
-        type: 'image',
-        src: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=1200',
-        alt: 'Professional valet trash team collecting waste at Orlando multifamily community'
-      },
-      {
         type: 'heading2',
         text: '1. Consistent and Reliable Pickup Schedules for Orlando\'s Top Properties'
       },
@@ -174,11 +169,6 @@ export const blogPosts: BlogPost[] = [
         text: 'Training should cover proper lifting techniques, hazardous material identification, and emergency procedures. Professional companies also conduct regular performance reviews and ongoing training to maintain service quality. Your residents should feel comfortable and confident when interacting with collection staff.'
       },
       {
-        type: 'image',
-        src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1200',
-        alt: 'Uniformed valet trash professional providing service at multifamily property in Central Florida'
-      },
-      {
         type: 'heading2',
         text: '3. Transparent Communication and Detailed Reporting'
       },
@@ -209,11 +199,6 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'paragraph',
         text: 'What to expect: Your vendor should offer clear pricing for bulk removal services, emergency cleanup capabilities, and coordination with regular collection schedules. Professional companies also provide guidance on proper disposal procedures for different types of waste and help properties maintain compliance with local regulations.'
-      },
-      {
-        type: 'image',
-        src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1200',
-        alt: 'Professional bulk waste removal service at apartment complex in Orlando Florida'
       },
       {
         type: 'heading2',

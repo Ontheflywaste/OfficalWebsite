@@ -36,6 +36,10 @@ function Reviews() {
     }
   ];
 
+  // Calculate aggregate rating data for schema markup
+  const totalReviews = reviews.length;
+  const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+  const averageRating = totalRating / totalReviews;
   return (
     <>
       <Helmet>
@@ -43,6 +47,47 @@ function Reviews() {
         <meta name="description" content="See what Orlando property managers and residents say about our valet trash services. Read reviews of our professional waste management and bulk removal solutions in Central Florida." />
         <meta name="keywords" content="orlando valet trash reviews, waste management testimonials orlando, apartment trash service reviews florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/reviews" />
+        
+        {/* AggregateRating Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "On The Fly Waste Solutions",
+            "image": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional valet trash and bulk removal services in Orlando, FL",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "telephone": "+1-407-274-5019",
+            "url": "https://ontheflywastesolutions.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": averageRating.toFixed(1),
+              "reviewCount": totalReviews,
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": reviews.map(review => ({
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": review.name
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": review.rating,
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "reviewBody": review.text,
+              "datePublished": new Date(Date.now() - (review.date.includes('month') ? 30 : 2) * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
+            }))
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">

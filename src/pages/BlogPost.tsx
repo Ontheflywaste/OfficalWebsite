@@ -184,6 +184,37 @@ const BlogPost: React.FC = () => {
           <p className="text-gray-700 leading-relaxed mb-6">
             Successful bulk waste management begins with proper planning. Establish clear policies for residents regarding bulk item disposal, including advance notice requirements, acceptable items, and scheduling procedures. This proactive approach prevents unauthorized dumping and ensures efficient removal operations.
           </p>
+
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Professional <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal services</Link> can provide scheduled pickups and emergency removal services, ensuring your property maintains a clean, professional appearance while meeting resident needs efficiently.
+          </p>
+        </div>
+      )
+    }
+  };
+
+  const currentPost = blogPosts[id || ''];
+
+  if (!currentPost) {
+    return (
+      <>
+        <Helmet>
+          <title>Blog Post Not Found | On The Fly Waste Solutions</title>
+          <meta name="description" content="The requested blog post could not be found." />
+        </Helmet>
+        <div className="min-h-screen bg-gray-50 py-12 pt-32">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">Blog Post Not Found</h1>
+            <p className="text-gray-600 mb-8">The requested blog post could not be found.</p>
+            <Link to="/blog" className="btn-primary">
+              Back to Blog <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <Helmet>
@@ -223,7 +254,7 @@ const BlogPost: React.FC = () => {
             </ScrollReveal>
           </div>
         </section>
-          </div>
+
         {/* Article Content */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -232,7 +263,7 @@ const BlogPost: React.FC = () => {
             </ScrollReveal>
           </div>
         </section>
-        </div>
+
         {/* Benefits Grid (for valet-trash-benefits post) */}
         {id === 'valet-trash-benefits' && currentPost.benefits && (
           <section className="py-16 bg-gray-50">
@@ -245,7 +276,7 @@ const BlogPost: React.FC = () => {
                   </p>
                 </div>
               </ScrollReveal>
-      </Layout>
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {currentPost.benefits.map((benefit: any, index: number) => (
                   <ScrollReveal 
@@ -266,7 +297,7 @@ const BlogPost: React.FC = () => {
             </div>
           </section>
         )}
-    </>
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-[#049704] to-[#038203]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -288,7 +319,7 @@ const BlogPost: React.FC = () => {
             </ScrollReveal>
           </div>
         </section>
-  );
+
         {/* Related Articles */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -300,36 +331,11 @@ const BlogPost: React.FC = () => {
                 </Link>
               </div>
             </ScrollReveal>
-};
+          </div>
         </section>
       </div>
-            Professional <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal services</Link> can provide scheduled pickups and emergency removal services, ensuring your property maintains a clean, professional appearance while meeting resident needs efficiently.
-          </p>
-        </div>
-      )
-    }
-  };
-
-  const currentPost = blogPosts[id || ''];
-
-  if (!currentPost) {
-    return (
-      <>
-        <Helmet>
-          <title>Blog Post Not Found | On The Fly Waste Solutions</title>
-          <meta name="description" content="The requested blog post could not be found." />
-        </Helmet>
-        <div className="min-h-screen bg-gray-50 py-12 pt-32">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Blog Post Not Found</h1>
-            <p className="text-gray-600 mb-8">The requested blog post could not be found.</p>
-            <Link to="/blog" className="btn-primary">
-              Back to Blog <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </>
-    );
-  }
+    </>
+  );
+};
 
 export default BlogPost;

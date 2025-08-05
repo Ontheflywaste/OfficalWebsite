@@ -43,22 +43,22 @@ function SustainableWasteManagement() {
     {
       step: "1",
       title: "Waste Audit & Assessment",
-      description: "Conduct a comprehensive waste audit to understand current waste streams, volumes, and disposal costs to identify improvement opportunities."
+      description: "Conduct a comprehensive waste audit to understand current waste streams, volumes, and disposal costs. Identify key improvement opportunities and establish baseline metrics."
     },
     {
       step: "2",
       title: "Program Design & Planning",
-      description: "Develop a customized sustainability program based on your property's needs, local regulations, and available recycling infrastructure."
+      description: "Develop a customized sustainability program based on your property's specific needs, local regulations, and available recycling infrastructure in your area."
     },
     {
       step: "3",
       title: "Infrastructure & Implementation",
-      description: "Install necessary recycling bins, signage, and collection systems while training staff and educating residents about new procedures."
+      description: "Install necessary recycling bins, signage, and collection systems. Train staff and educate residents about new procedures and sustainability goals."
     },
     {
       step: "4",
       title: "Monitoring & Optimization",
-      description: "Track program performance, measure waste diversion rates, and continuously optimize processes for maximum environmental and economic benefits."
+      description: "Track program performance and measure waste diversion rates. Continuously optimize processes for maximum environmental and economic benefits."
     }
   ];
 

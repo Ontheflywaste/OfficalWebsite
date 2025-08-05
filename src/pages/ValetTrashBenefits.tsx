@@ -171,27 +171,6 @@ function ValetTrashBenefits() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-[#049704] to-[#038203]">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <ScrollReveal>
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Transform Your Property with Valet Trash?
-              </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join hundreds of satisfied property managers who have enhanced their communities with professional valet trash services
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="btn-primary-inverse">
-                  Get Your Free Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link to="/services" className="btn-outline border-white text-white hover:bg-white hover:text-[#049704]">
-                  Explore All Services
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
       </div>
     </>
   );

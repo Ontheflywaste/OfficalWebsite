@@ -14,7 +14,6 @@ import ValetTrashService from './pages/ValetTrashService';
 import JunkRemovalService from './pages/JunkRemovalService';
 import PressureWashingService from './pages/PressureWashingService';
 import ValetTrashBenefits from './pages/ValetTrashBenefits';
-import AboutUs from './pages/AboutUs';
 import VendorSelectionGuide from './pages/VendorSelectionGuide';
 import HiddenCostsTrashManagement from './pages/HiddenCostsTrashManagement';
 import SustainableWasteManagement from './pages/SustainableWasteManagement';
@@ -46,7 +45,6 @@ function AnimatedRoutes() {
         <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
         <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
         <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
-        <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
         <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />
         <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsTrashManagement /></PageTransition>} />
         <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />

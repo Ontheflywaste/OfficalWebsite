@@ -13,8 +13,12 @@ import BlogPost from './pages/BlogPost';
 import ValetTrashService from './pages/ValetTrashService';
 import JunkRemovalService from './pages/JunkRemovalService';
 import PressureWashingService from './pages/PressureWashingService';
-import ValetTrashBenefits from './pages/ValetTrashBenefits';
 import AboutUs from './pages/AboutUs';
+import HowToChooseValetTrashVendor from './pages/blog/HowToChooseValetTrashVendor';
+import HiddenCostsInHouseTrashManagement from './pages/blog/HiddenCostsInHouseTrashManagement';
+import ValetTrashBenefits from './pages/ValetTrashBenefits';
+import SustainableWasteManagement from './pages/blog/SustainableWasteManagement';
+import BulkWasteRemovalGuide from './pages/blog/BulkWasteRemovalGuide';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
@@ -41,7 +45,11 @@ function AnimatedRoutes() {
         <Route path="/services/valet-trash" element={<PageTransition><ValetTrashService /></PageTransition>} />
         <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
         <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
+        <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><HowToChooseValetTrashVendor /></PageTransition>} />
+        <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsInHouseTrashManagement /></PageTransition>} />
         <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
+        <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />
+        <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
         <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
       </Routes>
     </AnimatePresence>

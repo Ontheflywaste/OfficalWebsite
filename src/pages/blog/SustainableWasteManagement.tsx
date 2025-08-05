@@ -195,7 +195,7 @@ function SustainableWasteManagement() {
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-8">
-                      For comprehensive waste solutions, consider providers who offer both <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash services</Link> and <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal programs</Link> with environmental focus.
+                      For comprehensive waste solutions, consider providers who offer both <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash services</Link> and <Link to="/services/junk-removal" className=\"text-[#049704] hover:text-[#038203] font-medium">bulk removal programs</Link> with environmental focus.
                     </p>
 
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Measuring Success and Continuous Improvement</h2>

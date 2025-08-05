@@ -16,6 +16,7 @@ import PressureWashingService from './pages/PressureWashingService';
 import ValetTrashBenefits from './pages/ValetTrashBenefits';
 import AboutUs from './pages/AboutUs';
 import VendorSelectionGuide from './pages/VendorSelectionGuide';
+import HiddenCostsTrashManagement from './pages/HiddenCostsTrashManagement';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
@@ -45,6 +46,7 @@ function AnimatedRoutes() {
         <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
         <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
         <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />
+        <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsTrashManagement /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

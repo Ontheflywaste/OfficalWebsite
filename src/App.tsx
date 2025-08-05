@@ -18,6 +18,7 @@ import AboutUs from './pages/AboutUs';
 import VendorSelectionGuide from './pages/VendorSelectionGuide';
 import HiddenCostsTrashManagement from './pages/HiddenCostsTrashManagement';
 import SustainableWasteManagement from './pages/SustainableWasteManagement';
+import BulkWasteRemovalGuide from './pages/BulkWasteRemovalGuide';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
@@ -49,6 +50,7 @@ function AnimatedRoutes() {
         <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />
         <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsTrashManagement /></PageTransition>} />
         <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />
+        <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

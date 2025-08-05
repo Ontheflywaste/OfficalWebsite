@@ -3,63 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
+import { featuredPost, blogPosts } from '../data/blogPosts';
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const featuredPost = {
-    id: 'how-to-choose-valet-trash-vendor',
-    title: 'How to Choose the Right Valet Trash Vendor: Questions Every Property Manager Should Ask',
-    excerpt: 'Essential checklist and key questions property managers need to ask when selecting a valet trash vendor to ensure reliable service and resident satisfaction.',
-    date: 'July 9, 2025',
-    readTime: '6 min read',
-    author: 'Trevor Alston',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200',
-    category: 'Property Management'
-  };
-
-  const blogPosts = [
-    {
-      id: 'hidden-costs-in-house-trash-management',
-      title: 'The Hidden Costs of In-House Trash Management',
-      excerpt: 'Discover the overlooked expenses of managing trash in-house and how professional valet trash services can reduce costs.',
-      date: 'July 8, 2025',
-      readTime: '7 min read',
-      author: 'Donnell Edwards',
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&q=80&w=800',
-      category: 'Cost Analysis'
-    },
-    {
-      id: 'valet-trash-benefits',
-      title: 'The Benefits of Valet Trash Service for Apartment Communities',
-      excerpt: 'Discover how valet trash services can improve resident satisfaction, increase property value, and create a cleaner living environment.',
-      date: 'March 15, 2025',
-      readTime: '5 min read',
-      author: 'Donnell Edwards',
-      image: '/Images/gallery12813_1920x831@2x.jpg',
-      category: 'Valet Trash'
-    },
-    {
-      id: 'sustainable-waste-management',
-      title: 'Sustainable Waste Management Practices for Multifamily Properties',
-      excerpt: 'Learn about eco-friendly waste management solutions that can help reduce environmental impact while maintaining efficient operations.',
-      date: 'March 10, 2025',
-      readTime: '4 min read',
-      author: 'Trevor Alston',
-      image: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&q=80&w=800',
-      category: 'Sustainability'
-    },
-    {
-      id: 'bulk-waste-removal-guide',
-      title: 'A Complete Guide to Bulk Waste Removal',
-      excerpt: 'Everything property managers need to know about managing bulk waste removal efficiently and cost-effectively.',
-      date: 'March 5, 2025',
-      readTime: '6 min read',
-      author: 'Steven Edwards',
-      image: '/Images/Junk.jpg',
-      category: 'Bulk Removal'
-    }
-  ];
 
   const categories = ['All', 'Property Management', 'Cost Analysis', 'Valet Trash', 'Sustainability', 'Bulk Removal'];
 

@@ -414,11 +414,11 @@ function Contact() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
-                <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                <div className="bg-white rounded-xl shadow-lg p-8 mb-8 h-fit">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                     <a href="tel:407-274-5019" className="flex items-start group">
-                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0 mt-1">
                         <Phone className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
@@ -428,7 +428,7 @@ function Contact() {
                     </a>
 
                     <a href="mailto:info@ontheflywastesolutions.com" className="flex items-start group">
-                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0 mt-1">
                         <Mail className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
@@ -440,7 +440,7 @@ function Contact() {
                     </a>
 
                     <div className="flex items-start">
-                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0 mt-1">
                         <MapPin className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
@@ -450,7 +450,7 @@ function Contact() {
                     </div>
 
                     <div className="flex items-start">
-                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0">
+                      <div className="h-12 w-12 rounded-full bg-[#049704]/10 flex items-center justify-center flex-shrink-0 mt-1">
                         <Clock className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
@@ -461,7 +461,7 @@ function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden h-80">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden" style={{ height: '400px' }}>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224444.06另外85899373!2d-81.48754542650833!3d28.53833034591211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1680887892244!5m2!1sen!2sus"
                     width="100%"
@@ -476,7 +476,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8 h-fit">
+              <div className="bg-white rounded-xl shadow-lg p-8" style={{ height: 'fit-content', minHeight: '600px' }}>
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
                   <p className="text-sm text-gray-600">Fill out the form below and we'll get back to you soon</p>
@@ -501,9 +501,9 @@ function Contact() {
                 </div>
 
                 <form noValidate>
-                  <div className="mb-8 min-h-[200px] flex flex-col justify-center">
+                  <div className="mb-8 min-h-[250px] flex flex-col justify-start">
                     <div className="text-lg font-semibold mb-4 text-center">{formSteps[formStep].title}</div>
-                    <div className="flex-1 flex flex-col justify-center">
+                    <div className="flex-1 flex flex-col justify-start">
                       {formSteps[formStep].fields}
                     </div>
                   </div>

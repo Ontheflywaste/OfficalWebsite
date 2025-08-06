@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown } from 'lucide-react';
-import LazyMap from './LazyMap';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -694,7 +693,6 @@ function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
-      <LazyMap />
     </div>
   );
 }

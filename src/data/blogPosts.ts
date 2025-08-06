@@ -254,7 +254,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: '1. How can valet trash services impact resident retention and satisfaction scores?'
+        text: '**1. How can valet trash services impact resident retention and satisfaction scores?**'
       },
       {
         type: 'paragraph',
@@ -262,7 +262,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: '2. What happens if a resident consistently misuses the valet trash service?'
+        text: '**2. What happens if a resident consistently misuses the valet trash service?**'
       },
       {
         type: 'paragraph',
@@ -270,7 +270,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: '3. Can valet trash services be customized to fit my property\'s layout or resident demographic?'
+        text: '**3. Can valet trash services be customized to fit my property\'s layout or resident demographic?**'
       },
       {
         type: 'paragraph',

@@ -312,89 +312,6 @@ function ValetTrashService() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Common questions about our valet trash service
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="space-y-6">
-              {[
-                {
-                  question: "What days and times do you collect trash?",
-                  answer: "We offer flexible collection schedules tailored to your property's needs. Most communities prefer evening collections between 6-9 PM, and we can provide service up to 7 days per week. We work with you to determine the optimal schedule for your residents."
-                },
-                {
-                  question: "What items can residents put out for collection?",
-                  answer: "Residents can place bagged household trash outside their doors. We collect standard kitchen trash, bathroom waste, and other typical household garbage. Large items, hazardous materials, and construction debris require our separate bulk removal service."
-                },
-                {
-                  question: "How much does valet trash service cost?",
-                  answer: "Pricing varies based on your property size, collection frequency, and specific service requirements. We offer competitive rates with transparent pricing and no hidden fees. Contact us for a customized quote based on your property's needs."
-                },
-                {
-                  question: "What happens if collection is missed?",
-                  answer: "We guarantee reliable service with backup plans in place. In the rare event of a missed collection, we provide immediate makeup service at no additional charge. Our service includes photo verification and real-time reporting to ensure accountability."
-                },
-                {
-                  question: "Do you provide bags or containers?",
-                  answer: "Residents use their own trash bags. We provide 13-gallon and large size containers for residents to place their bagged trash inside of. We also provide clear service guidelines and welcome materials to help residents understand the proper procedures for bag placement and collection times."
-                },
-                {
-                  question: "How quickly can you start service?",
-                  answer: "We can typically begin service within 1-2 weeks of contract signing. This allows time for resident communication, staff training on your property layout, and coordination with your management team to ensure a smooth launch."
-                },
-                {
-                  question: "Are your staff members background checked?",
-                  answer: "Yes, all our collection staff undergo comprehensive background checks and drug testing. Our team members are uniformed, trained professionals who represent your property with the highest standards of professionalism."
-                },
-                {
-                  question: "What if residents don't comply with bag placement rules?",
-                  answer: "We work with property management to educate residents about proper procedures. Our team can leave educational notices for non-compliant bags and provide regular reporting to help maintain program standards."
-                }
-              ].map((faq, index) => (
-                <ScrollReveal key={index} delay={index * 0.1}>
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <button
-                      onClick={() => toggleFaq(index)}
-                      className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                    >
-                      <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
-                      <ChevronDown 
-                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
-                          openFaq === index ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    <div className={`overflow-hidden transition-all duration-300 ${
-                      openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                      <div className="px-6 pb-6">
-                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-
-            <ScrollReveal delay={0.3}>
-              <div className="text-center mt-12">
-                <p className="text-gray-600 mb-6">Have more questions about our valet trash service?</p>
-                <Link to="/contact" className="btn-primary">
-                  Contact Us <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
         {/* Pricing Information */}
         <section className="py-20 bg-gradient-to-br from-[#049704] to-[#038203]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -495,6 +412,89 @@ function ValetTrashService() {
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Common questions about our valet trash service
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="space-y-6">
+              {[
+                {
+                  question: "What days and times do you collect trash?",
+                  answer: "We offer flexible collection schedules tailored to your property's needs. Most communities prefer evening collections between 6-9 PM, and we can provide service up to 7 days per week. We work with you to determine the optimal schedule for your residents."
+                },
+                {
+                  question: "What items can residents put out for collection?",
+                  answer: "Residents can place bagged household trash outside their doors. We collect standard kitchen trash, bathroom waste, and other typical household garbage. Large items, hazardous materials, and construction debris require our separate bulk removal service."
+                },
+                {
+                  question: "How much does valet trash service cost?",
+                  answer: "Pricing varies based on your property size, collection frequency, and specific service requirements. We offer competitive rates with transparent pricing and no hidden fees. Contact us for a customized quote based on your property's needs."
+                },
+                {
+                  question: "What happens if collection is missed?",
+                  answer: "We guarantee reliable service with backup plans in place. In the rare event of a missed collection, we provide immediate makeup service at no additional charge. Our service includes photo verification and real-time reporting to ensure accountability."
+                },
+                {
+                  question: "Do you provide bags or containers?",
+                  answer: "Residents use their own trash bags. We provide 13-gallon and large size containers for residents to place their bagged trash inside of. We also provide clear service guidelines and welcome materials to help residents understand the proper procedures for bag placement and collection times."
+                },
+                {
+                  question: "How quickly can you start service?",
+                  answer: "We can typically begin service within 1-2 weeks of contract signing. This allows time for resident communication, staff training on your property layout, and coordination with your management team to ensure a smooth launch."
+                },
+                {
+                  question: "Are your staff members background checked?",
+                  answer: "Yes, all our collection staff undergo comprehensive background checks and drug testing. Our team members are uniformed, trained professionals who represent your property with the highest standards of professionalism."
+                },
+                {
+                  question: "What if residents don't comply with bag placement rules?",
+                  answer: "We work with property management to educate residents about proper procedures. Our team can leave educational notices for non-compliant bags and provide regular reporting to help maintain program standards."
+                }
+              ].map((faq, index) => (
+                <ScrollReveal key={index} delay={index * 0.1}>
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                    >
+                      <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                      <ChevronDown 
+                        className={`h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
+                          openFaq === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    <div className={`overflow-hidden transition-all duration-300 ${
+                      openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="px-6 pb-6">
+                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                      </div>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal delay={0.3}>
+              <div className="text-center mt-12">
+                <p className="text-gray-600 mb-6">Have more questions about our valet trash service?</p>
+                <Link to="/contact" className="btn-primary">
+                  Contact Us <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 

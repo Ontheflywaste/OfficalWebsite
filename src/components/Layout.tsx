@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown } from 'lucide-react';
+import LazyMap from './LazyMap';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -272,17 +273,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                         <div className="font-medium">Pressure Washing</div>
                         <div className="text-sm text-gray-500">Building & surface cleaning</div>
                       </div>
-                    </Link>
-                    <div className="border-t border-gray-100 mt-2 pt-2">
-                      <Link
-                        to="/services"
-                        className="flex items-center px-4 py-2 text-[#027502] hover:bg-gray-50 transition-colors duration-200 font-medium"
-                      >
-                        View All Services
-                        <ArrowRight className="h-4 w-4 ml-2" />
-                      </Link>
-                    </div>
-                  </div>
+                  <LazyMap />
                 </div>
               </div>
               

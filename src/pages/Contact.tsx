@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
-import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+
+// Lazy load EmailJS only when needed
+const loadEmailJS = () => import('@emailjs/browser');
 
 function Contact() {
   const [formStep, setFormStep] = useState(0);
@@ -21,7 +23,7 @@ function Contact() {
   });
 
   useEffect(() => {
-    emailjs.init("JwYfbaBokN347YiVO");
+    // EmailJS will be loaded dynamically when form is submitted
   }, []);
 
   const validateForm = (currentStep = formStep) => {
@@ -90,6 +92,12 @@ function Contact() {
     setFormStatus('submitting');
     
     try {
+      // Dynamically import EmailJS when needed
+      const emailjs = await loadEmailJS();
+      
+      // Initialize EmailJS
+      emailjs.default.init("JwYfbaBokN347YiVO");
+      
       await emailjs.send(
         'service_decr5zt',
         'template_x34o2r9',

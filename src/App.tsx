@@ -3,25 +3,34 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { Toaster } from 'react-hot-toast';
 import { AnimatePresence } from 'framer-motion';
 import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Reviews from './pages/Reviews';
-import Services from './pages/Services';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import ValetTrashService from './pages/ValetTrashService';
-import JunkRemovalService from './pages/JunkRemovalService';
-import PressureWashingService from './pages/PressureWashingService';
-import ValetTrashBenefits from './pages/ValetTrashBenefits';
-import VendorSelectionGuide from './pages/VendorSelectionGuide';
-import HiddenCostsTrashManagement from './pages/HiddenCostsTrashManagement';
-import SustainableWasteManagement from './pages/SustainableWasteManagement';
-import BulkWasteRemovalGuide from './pages/BulkWasteRemovalGuide';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
 import PageTransition from './components/PageTransition';
+
+// Lazy load all pages for better code splitting
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Reviews = React.lazy(() => import('./pages/Reviews'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const ValetTrashService = React.lazy(() => import('./pages/ValetTrashService'));
+const JunkRemovalService = React.lazy(() => import('./pages/JunkRemovalService'));
+const PressureWashingService = React.lazy(() => import('./pages/PressureWashingService'));
+const ValetTrashBenefits = React.lazy(() => import('./pages/ValetTrashBenefits'));
+const VendorSelectionGuide = React.lazy(() => import('./pages/VendorSelectionGuide'));
+const HiddenCostsTrashManagement = React.lazy(() => import('./pages/HiddenCostsTrashManagement'));
+const SustainableWasteManagement = React.lazy(() => import('./pages/SustainableWasteManagement'));
+const BulkWasteRemovalGuide = React.lazy(() => import('./pages/BulkWasteRemovalGuide'));
+
+// Loading component for lazy-loaded pages
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#049704]"></div>
+  </div>
+);
 
 function ScrollToTopOnNavigate() {
   useScrollToTop();
@@ -33,23 +42,25 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-        <Route path="/about" element={<PageTransition><About /></PageTransition>} />
-        <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
-        <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
-        <Route path="/reviews" element={<PageTransition><Reviews /></PageTransition>} />
-        <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
-        <Route path="/blog/:id" element={<PageTransition><BlogPost /></PageTransition>} />
-        <Route path="/services/valet-trash" element={<PageTransition><ValetTrashService /></PageTransition>} />
-        <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
-        <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
-        <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
-        <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />
-        <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsTrashManagement /></PageTransition>} />
-        <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />
-        <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
-      </Routes>
+      <React.Suspense fallback={<PageLoader />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+          <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
+          <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="/reviews" element={<PageTransition><Reviews /></PageTransition>} />
+          <Route path="/blog" element={<PageTransition><Blog /></PageTransition>} />
+          <Route path="/blog/:id" element={<PageTransition><BlogPost /></PageTransition>} />
+          <Route path="/services/valet-trash" element={<PageTransition><ValetTrashService /></PageTransition>} />
+          <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
+          <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
+          <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
+          <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />
+          <Route path="/blog/hidden-costs-in-house-trash-management" element={<PageTransition><HiddenCostsTrashManagement /></PageTransition>} />
+          <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />
+          <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
+        </Routes>
+      </React.Suspense>
     </AnimatePresence>
   );
 }

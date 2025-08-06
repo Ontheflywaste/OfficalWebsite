@@ -3,8 +3,11 @@ import { ArrowRight, Clock, Calendar, Truck, Phone, Mail, MapPin, Star, Quote, T
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
-import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
+import LazyYouTubeEmbed from '../components/LazyYouTubeEmbed';
+
+// Lazy load EmailJS only when needed
+const loadEmailJS = () => import('@emailjs/browser');
 
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
@@ -30,9 +33,6 @@ function Home() {
     
     checkScreenSize();
     window.addEventListener('resize', checkScreenSize);
-    
-    // Initialize EmailJS
-    emailjs.init("JwYfbaBokN347YiVO");
     
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
@@ -80,6 +80,12 @@ function Home() {
     setIsSubmitting(true);
     
     try {
+      // Dynamically import EmailJS when needed
+      const emailjs = await loadEmailJS();
+      
+      // Initialize EmailJS
+      emailjs.default.init("JwYfbaBokN347YiVO");
+      
       await emailjs.send(
         'service_decr5zt',
         'template_x34o2r9',
@@ -624,45 +630,7 @@ function Home() {
                 <div className="sticky top-24">
                   <div className="bg-gray-50 rounded-2xl p-6 shadow-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Watch Our Client Testimonials</h3>
-                    <div className="aspect-video w-full rounded-xl overflow-hidden shadow-xl">
-                      <style dangerouslySetInnerHTML={{
-                        __html: `
-                          .yt-facade {
-                            position: relative;
-                            width: 100%;
-                            max-width: 560px;
-                            aspect-ratio: 16/9;
-                            cursor: pointer;
-                            background: #000 url('https://img.youtube.com/vi/gFYjibflN3U/mqdefault.jpg') center/cover no-repeat;
-                          }
-                          .yt-facade::after {
-                            content: '';
-                            position: absolute;
-                            top: 50%; left: 50%;
-                            width: 68px; height: 48px;
-                            margin: -24px 0 0 -34px;
-                            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.5,7.9c-0.8-3-3-5.4-6-6.2C56.3,0.5,34,0.5,34,0.5s-22.3,0-26.5,1.2c-3,0.8-5.2,3.2-6,6.2C0.3,12.1,0.3,24,0.3,24s0,11.9,1.2,16.1c0.8,3,3,5.4,6,6.2c4.2,1.2,26.5,1.2,26.5,1.2s22.3,0,26.5-1.2c3-0.8,5.2-3.2,6-6.2c1.2-4.2,1.2-16.1,1.2-16.1S67.7,12.1,66.5,7.9z" fill="#f00"/><polygon points="45,24 27,14 27,34" fill="#fff"/></svg>') center/contain no-repeat;
-                          }
-                          @media (max-width: 767px) {
-                            .yt-facade {
-                              background-image: url('https://img.youtube.com/vi/gFYjibflN3U/mqdefault.jpg');
-                            }
-                          }
-                        `
-                      }} />
-                      <div 
-                        className="yt-facade" 
-                        onClick={(e) => {
-                          const iframe = document.createElement('iframe');
-                          iframe.setAttribute('src','https://www.youtube-nocookie.com/embed/gFYjibflN3U?autoplay=1');
-                          iframe.setAttribute('allow','autoplay; encrypted-media');
-                          iframe.setAttribute('frameborder','0');
-                          iframe.style.width='100%';
-                          iframe.style.height='100%';
-                          e.currentTarget.replaceWith(iframe);
-                        }}
-                      />
-                    </div>
+                    <LazyYouTubeEmbed videoId="gFYjibflN3U" />
                     <p className="mt-4 text-gray-700 text-center">
                       Hear directly from our satisfied clients about their experience with On The Fly Waste Solutions.
                     </p>

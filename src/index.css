@@ -28,12 +28,6 @@ html {
   will-change: transform;
 }
 
-/* Optimize image loading */
-img {
-  content-visibility: auto;
-  contain-intrinsic-size: 300px 200px;
-}
-
 /* Lazy loading improvements */
 .lazy-load {
   opacity: 0;

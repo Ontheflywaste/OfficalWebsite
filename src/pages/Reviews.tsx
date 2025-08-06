@@ -1,7 +1,8 @@
 import React, { lazy, Suspense } from 'react';
-import { Star, Quote, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
+// Lazy load ReviewCard component
 const ReviewCard = lazy(() => import('../components/ReviewCard'));
 
 function Reviews() {

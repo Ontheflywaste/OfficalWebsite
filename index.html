@@ -182,17 +182,30 @@
     <script>
       // Defer analytics until after page load
       window.addEventListener('load', function() {
-        setTimeout(function() {
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17079694713';
-          document.head.appendChild(script);
-          
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17079694713');
-        }, 1000);
+        // Load analytics only after user interaction
+        var analyticsLoaded = false;
+        function loadAnalytics() {
+          if (!analyticsLoaded) {
+            analyticsLoaded = true;
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17079694713';
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17079694713');
+          }
+        }
+        
+        // Load analytics on first user interaction
+        ['scroll', 'click', 'touchstart', 'keydown'].forEach(function(event) {
+          document.addEventListener(event, loadAnalytics, { once: true, passive: true });
+        });
+        
+        // Fallback: load after 3 seconds if no interaction
+        setTimeout(loadAnalytics, 3000);
       });
     </script>
     

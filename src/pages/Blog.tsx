@@ -96,7 +96,7 @@ function Blog() {
                         {featuredPost.title}
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        {featuredPost.excerpt}
+                        <span dangerouslySetInnerHTML={{ __html: featuredPost.excerpt }} />
                       </p>
                       <div className="flex items-center text-[#049704] font-medium group-hover:translate-x-2 transition-transform duration-300">
                         Read Article

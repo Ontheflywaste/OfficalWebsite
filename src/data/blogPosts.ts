@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Choosing the right professional valet trash company can transform your property operations and significantly boost resident satisfaction across Central Florida communities. However, not all valet trash companies deliver the same level of service. As property managers at premier communities like Encore Resort at Reunion and Margaritaville Resort in Orlando and Kissimmee have discovered, working with a truly professional <a href="/services/valet-trash" class="text-[#049704] hover:text-[#038203] font-medium">valet trash service</a> makes all the difference between a seamless amenity and a constant source of headaches.'
+        text: 'Choosing the right professional valet trash company can transform your property operations and significantly boost resident satisfaction across Central Florida communities. However, not all valet trash companies deliver the same level of service. As property managers at premier communities like Encore Resort at Reunion and Margaritaville Resort in Orlando and Kissimmee have discovered, working with a truly professional valet trash service makes all the difference between a seamless amenity and a constant source of headaches.'
       },
       {
         type: 'paragraph',
@@ -174,7 +174,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Professional <a href="/services/valet-trash" class="text-[#049704] hover:text-[#038203] font-medium">valet trash</a> companies understand that property managers need visibility into service performance. This means providing detailed reporting, photo verification of service completion, and proactive communication about any issues or concerns.'
+        text: 'Professional valet trash companies understand that property managers need visibility into service performance. This means providing detailed reporting, photo verification of service completion, and proactive communication about any issues or concerns.'
       },
       {
         type: 'paragraph',
@@ -190,7 +190,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Regular valet trash service is just one component of comprehensive waste management. Professional companies also provide solutions for bulk items, overflow situations, and special disposal needs through <a href="/services/junk-removal" class="text-[#049704] hover:text-[#038203] font-medium">bulk removal services</a>. This integrated approach prevents the operational headaches that occur when multiple vendors are required for different waste management tasks.'
+        text: 'Regular valet trash service is just one component of comprehensive waste management. Professional companies also provide solutions for bulk items, overflow situations, and special disposal needs through bulk removal services. This integrated approach prevents the operational headaches that occur when multiple vendors are required for different waste management tasks.'
       },
       {
         type: 'paragraph',
@@ -222,7 +222,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'The most successful property management trash service in Florida relationships are built on partnership rather than simple vendor transactions. Professional <a href="/services/valet-trash" class="text-[#049704] hover:text-[#038203] font-medium">valet trash</a> companies invest time in understanding your property\'s unique needs, resident demographics, and operational challenges. They provide customized solutions rather than one-size-fits-all approaches.'
+        text: 'The most successful property management trash service in Florida relationships are built on partnership rather than simple vendor transactions. Professional companies invest time in understanding your property\'s unique needs, resident demographics, and operational challenges. They provide customized solutions rather than one-size-fits-all approaches.'
       },
       {
         type: 'paragraph',

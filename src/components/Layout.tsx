@@ -488,6 +488,33 @@ function Layout({ children }: { children: React.ReactNode }) {
       {children}
 
       <footer className="bg-gradient-to-b from-gray-900 to-black text-white" role="contentinfo">
+        <div className="relative bg-[#038203] py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="text-white">
+                <h3 className="text-2xl font-bold mb-2">Ready to Get Started?</h3>
+                <p className="text-white">Experience our professional valet trash services</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                  to="/contact" 
+                  className="btn-outline"
+                  aria-label="Get a quote for our services"
+                >
+                  Get a Quote <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                </Link>
+                <a 
+                  href="tel:407-274-5019" 
+                  className="bg-white text-[#049704] px-8 py-3 rounded-full font-medium transition-all duration-300 hover:bg-gray-100 hover:scale-105 flex items-center justify-center"
+                  aria-label="Call us at 407-274-5019"
+                >
+                  <Phone className="h-5 w-5 mr-2" aria-hidden="true" /> 407-274-5019
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto pt-16 pb-8 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div>

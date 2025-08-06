@@ -415,6 +415,86 @@ function ValetTrashService() {
           </div>
         </section>
 
+        {/* Value Proposition */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <ScrollReveal direction="left">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Property Managers Choose Our Service</h2>
+                  <div className="prose prose-lg text-gray-600 mb-8">
+                    <p>
+                      Our <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">doorstep trash pickup in Central Florida</a> isn't just about waste collection—it's about transforming your property into a premium living destination. Property managers consistently report improved resident satisfaction scores, reduced maintenance burdens, and enhanced property marketability.
+                    </p>
+                    <p>
+                      We handle all the operational complexities while you enjoy the benefits of offering a sought-after amenity that residents truly value and appreciate. Our services extend beyond Orlando to include <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash in Kissimmee</a> and surrounding communities.
+                    </p>
+                  </div>
+                  <div className="space-y-6">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Reduced Maintenance Workload</h4>
+                        <p className="text-gray-600 text-sm">Free up your team to focus on revenue-generating activities and property improvements</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Premium Amenity Positioning</h4>
+                        <p className="text-gray-600 text-sm">Market your property as offering luxury conveniences that residents expect</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Improved Resident Retention</h4>
+                        <p className="text-gray-600 text-sm">Convenient services contribute to higher renewal rates and resident satisfaction</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="right" delay={0.2}>
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Service Investment</h3>
+                  <div className="text-center mb-6">
+                    <div className="text-4xl font-bold text-[#049704] mb-2">Competitive</div>
+                    <div className="text-lg text-gray-600">Monthly Rate Per Unit</div>
+                  </div>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <span className="text-sm font-medium text-gray-700">Service Frequency:</span>
+                      <span className="text-sm text-gray-900">Customizable</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <span className="text-sm font-medium text-gray-700">Setup Fees:</span>
+                      <span className="text-sm text-gray-900">None</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <span className="text-sm font-medium text-gray-700">Contract Terms:</span>
+                      <span className="text-sm text-gray-900">Flexible</span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
+                      <span className="text-sm font-medium text-gray-700">Billing:</span>
+                      <span className="text-sm text-gray-900">Property Direct</span>
+                    </div>
+                  </div>
+                  <Link to="/contact" className="btn-primary w-full justify-center">
+                    Request Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -495,86 +575,6 @@ function ValetTrashService() {
                 </Link>
               </div>
             </ScrollReveal>
-          </div>
-        </section>
-
-        {/* Value Proposition */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <ScrollReveal direction="left">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Property Managers Choose Our Service</h2>
-                  <div className="prose prose-lg text-gray-600 mb-8">
-                    <p>
-                      Our <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">doorstep trash pickup in Central Florida</a> isn't just about waste collection—it's about transforming your property into a premium living destination. Property managers consistently report improved resident satisfaction scores, reduced maintenance burdens, and enhanced property marketability.
-                    </p>
-                    <p>
-                      We handle all the operational complexities while you enjoy the benefits of offering a sought-after amenity that residents truly value and appreciate. Our services extend beyond Orlando to include <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash in Kissimmee</a> and surrounding communities.
-                    </p>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Reduced Maintenance Workload</h4>
-                        <p className="text-gray-600 text-sm">Free up your team to focus on revenue-generating activities and property improvements</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Premium Amenity Positioning</h4>
-                        <p className="text-gray-600 text-sm">Market your property as offering luxury conveniences that residents expect</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <CheckCircle2 className="h-5 w-5 text-[#049704]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">Improved Resident Retention</h4>
-                        <p className="text-gray-600 text-sm">Convenient services contribute to higher renewal rates and resident satisfaction</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal direction="right" delay={0.2}>
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Service Investment</h3>
-                  <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-[#049704] mb-2">Competitive</div>
-                    <div className="text-lg text-gray-600">Monthly Rate Per Unit</div>
-                  </div>
-                  <div className="space-y-4 mb-8">
-                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">Service Frequency:</span>
-                      <span className="text-sm text-gray-900">Customizable</span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">Setup Fees:</span>
-                      <span className="text-sm text-gray-900">None</span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">Contract Terms:</span>
-                      <span className="text-sm text-gray-900">Flexible</span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 bg-white rounded-lg">
-                      <span className="text-sm font-medium text-gray-700">Billing:</span>
-                      <span className="text-sm text-gray-900">Property Direct</span>
-                    </div>
-                  </div>
-                  <Link to="/contact" className="btn-primary w-full justify-center">
-                    Request Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </div>
-              </ScrollReveal>
-            </div>
           </div>
         </section>
 

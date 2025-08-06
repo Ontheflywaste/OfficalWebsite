@@ -15,22 +15,22 @@ function ValetTrashService() {
     {
       icon: Users,
       title: "Enhanced Resident Satisfaction",
-      description: "Eliminate the hassle of trips to the dumpster. Residents enjoy convenient doorstep pickup, especially during bad weather or late hours."
+      description: "Eliminate the hassle of trips to the dumpster. Residents enjoy convenient doorstep pickup, especially during bad weather or late hours, creating a premium living experience."
     },
     {
       icon: Shield,
       title: "Improved Property Safety",
-      description: "Reduce liability risks by eliminating resident trips to potentially unsafe dumpster areas, especially during evening hours."
+      description: "Reduce liability risks by eliminating resident trips to potentially unsafe dumpster areas, especially during evening hours, while improving overall property security."
     },
     {
       icon: BarChart3,
       title: "Increased Property Value",
-      description: "Valet trash service becomes a premium amenity that justifies higher rents and improves resident retention rates."
+      description: "Valet trash service becomes a premium amenity that justifies higher rents and improves resident retention rates, directly impacting your property's profitability."
     },
     {
       icon: Clock,
       title: "Operational Efficiency",
-      description: "Free up your maintenance staff to focus on revenue-generating activities like unit turnovers and preventive maintenance."
+      description: "Free up your maintenance staff to focus on revenue-generating activities like unit turnovers and preventive maintenance, maximizing operational productivity."
     }
   ];
 

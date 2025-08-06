@@ -91,6 +91,42 @@ function VendorSelectionGuide() {
           </div>
         </section>
 
+        {/* Image Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <ScrollReveal direction="left">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Making the Right Choice</h2>
+                  <div className="prose prose-lg text-gray-600">
+                    <p className="mb-4">
+                      Selecting the right valet trash vendor requires careful evaluation of multiple factors beyond just price. The best providers combine reliable service delivery with professional staff, comprehensive insurance coverage, and technology systems that provide transparency and accountability.
+                    </p>
+                    <p className="mb-4">
+                      Professional <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash services</Link> should enhance your property's operations while providing residents with the convenience they expect. The right vendor becomes a true partner in your property's success.
+                    </p>
+                    <p>
+                      Use the comprehensive evaluation criteria in this guide to identify providers who can deliver the consistent, professional service that will benefit your property for years to come.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+              <ScrollReveal direction="right" delay={0.2}>
+                <div className="w-full">
+                  <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1200"
+                      alt="Property Manager Evaluating Valet Trash Vendors"
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
         {/* Main Content */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

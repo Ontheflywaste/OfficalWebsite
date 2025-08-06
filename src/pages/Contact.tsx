@@ -591,18 +591,6 @@ function Contact() {
                   {
                     city: "Clermont",
                     description: "Minneola, Groveland, Montverde"
-                  },
-                  {
-                    city: "Davenport",
-                    description: "ChampionsGate, Reunion, Four Corners"
-                  },
-                  {
-                    city: "Winter Garden",
-                    description: "Windermere, Ocoee, Oakland"
-                  },
-                  {
-                    city: "Clermont",
-                    description: "Minneola, Groveland, Montverde"
                   }
                 ].map((area, index) => (
                   <ScrollReveal 

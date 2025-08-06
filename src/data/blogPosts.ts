@@ -282,7 +282,6 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'We proudly serve premier communities throughout Central Florida — including Encore Resort, Reunion, Margaritaville, Orlando, Kissimmee, and Davenport. Ready to upgrade your waste services? Contact us today for a custom quote or consultation and discover why property managers choose On The Fly Waste Solutions for reliable trash collection for multifamily communities.'
         text: 'We proudly serve premier communities throughout Central Florida — including Encore Resort, Reunion, and Margaritaville — across Orlando, Kissimmee, and Davenport. Ready to upgrade your waste services? Contact us today for a custom quote or consultation and discover why property managers choose On The Fly Waste Solutions for reliable trash collection for multifamily communities.'
       }
     ]

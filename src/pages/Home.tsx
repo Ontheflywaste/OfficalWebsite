@@ -243,7 +243,7 @@ function Home() {
                   Valet Trash & Bulk Removal Services
                 </h1>
                 <p className="hero-subtitle text-center mx-auto">
-                  Orlando's trusted doorstep trash pickup service for apartments, condos, and resort-style communities
+                  Orlando's trusted door to door trash pickup service for apartments, condos, and resort-style communities
                 </p>
                 <div className="flex justify-center mt-8">
                   <Link 

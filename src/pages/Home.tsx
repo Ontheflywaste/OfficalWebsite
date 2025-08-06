@@ -269,9 +269,9 @@ function Home() {
             <div className={`relative z-20 min-h-screen flex items-center justify-center px-4 py-20 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`}>
               <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                  <h1 className="text-3xl font-bold text-white mb-4 text-shadow-lg">
+                  <h2 className="text-3xl font-bold text-white mb-4 text-shadow-lg">
                     Orlando's Premier Valet Trash Service
-                  </h1>
+                  </h2>
                   <p className="text-lg text-white/90 mb-6">
                     Get your free quote in under 60 seconds
                   </p>
@@ -489,7 +489,7 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Waste Management Services</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Our Services</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
                   Comprehensive multifamily waste solutions for Orlando apartments and condos
                 </p>
@@ -608,7 +608,7 @@ function Home() {
                         <p className="text-gray-700 mb-6 text-center">{review.text}</p>
                         <div className="flex items-center justify-between">
                           <div className="text-center flex-1">
-                            <h3 className="font-semibold text-gray-900 text-center">{review.name}</h3>
+                            <div className="font-semibold text-gray-900 text-center">{review.name}</div>
                             <p className="text-sm text-gray-600 text-center">{review.location}</p>
                           </div>
                           <div className="flex">
@@ -742,7 +742,7 @@ function Home() {
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Areas We Serve</h2>
                 <p className="text-lg text-gray-700 max-w-2xl mx-auto">
                   Professional valet trash and waste management services throughout Central Florida
                 </p>

@@ -420,7 +420,7 @@ function Contact() {
                         <Phone className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">407-274-5019</h3>
+                        <div className="text-lg font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">407-274-5019</div>
                         <p className="text-gray-600">Available 7 days a week</p>
                       </div>
                     </a>
@@ -430,9 +430,9 @@ function Contact() {
                         <Mail className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#049704] transition-colors break-all">
+                        <div className="text-lg font-semibold text-gray-900 group-hover:text-[#049704] transition-colors break-all">
                           info@ontheflywastesolutions.com
-                        </h3>
+                        </div>
                         <p className="text-gray-600">We reply within 24 hours</p>
                       </div>
                     </a>
@@ -442,7 +442,7 @@ function Contact() {
                         <MapPin className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-gray-900">Central Florida</h3>
+                        <div className="text-lg font-semibold text-gray-900">Central Florida</div>
                         <p className="text-gray-600">Serving the greater Central Florida area</p>
                       </div>
                     </div>
@@ -452,7 +452,7 @@ function Contact() {
                         <Clock className="h-6 w-6 text-[#049704]" />
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-gray-900">8:00 AM - 9:00 PM</h3>
+                        <div className="text-lg font-semibold text-gray-900">8:00 AM - 9:00 PM</div>
                         <p className="text-gray-600">Monday - Sunday</p>
                       </div>
                     </div>
@@ -500,7 +500,7 @@ function Contact() {
 
                 <form noValidate>
                   <div className="mb-8 min-h-[200px] flex flex-col justify-center">
-                    <h3 className="text-lg font-semibold mb-4 text-center">{formSteps[formStep].title}</h3>
+                    <div className="text-lg font-semibold mb-4 text-center">{formSteps[formStep].title}</div>
                     <div className="flex-1 flex flex-col justify-center">
                       {formSteps[formStep].fields}
                     </div>

@@ -23,7 +23,7 @@ const ReviewCard: React.FC<ReviewProps> = ({ review }) => {
           </div>
         </div>
         <div className="ml-4">
-          <h3 className="text-lg font-semibold text-gray-900">{review.name}</h3>
+          <div className="text-lg font-semibold text-gray-900">{review.name}</div>
           <p className="text-sm text-gray-600">{review.location}</p>
         </div>
       </div>

@@ -159,7 +159,7 @@ function BulkWasteRemovalGuide() {
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{type.title}</h3>
                     <p className="text-gray-600 mb-4">{type.description}</p>
                     <div className="space-y-2">
-                      <h4 className="font-semibold text-gray-900 text-sm">Common Examples:</h4>
+                      <div className="font-semibold text-gray-900 text-sm">Common Examples:</div>
                       <ul className="grid grid-cols-1 gap-1">
                         {type.examples.map((example, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">

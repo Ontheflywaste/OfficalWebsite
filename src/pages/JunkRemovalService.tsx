@@ -248,7 +248,7 @@ function JunkRemovalService() {
                     <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
                     <div className="flex items-center justify-between">
                       <div>
-                        <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                        <div className="font-semibold text-gray-900">{testimonial.name}</div>
                         <p className="text-sm text-gray-600">{testimonial.property}</p>
                       </div>
                       <div className="flex">
@@ -309,7 +309,7 @@ function JunkRemovalService() {
                       onClick={() => toggleFaq(index)}
                       className="w-full p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                     >
-                      <h3 className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</h3>
+                      <div className="text-lg font-semibold text-gray-900 pr-4">{faq.question}</div>
                       <ChevronDown 
                         className={`h-5 w-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ${
                           openFaq === index ? 'rotate-180' : ''

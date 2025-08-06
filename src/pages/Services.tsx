@@ -72,37 +72,37 @@ function Services() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Clock className="h-5 w-5 text-[#049704] mr-2" />
                           Collection Schedule
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Flexible pickup for your community needs
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Shield className="h-5 w-5 text-[#049704] mr-2" />
                           Service Guarantee
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Consistent, reliable service with photo verification
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Professional Team
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Trained and uniformed staff
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Full Management
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Complete waste management solutions
                         </p>
@@ -169,37 +169,37 @@ function Services() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Clock className="h-5 w-5 text-[#049704] mr-2" />
                           Quick Response
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Same-day service available for urgent needs
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Shield className="h-5 w-5 text-[#049704] mr-2" />
                           Licensed & Insured
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Professional team with proper credentials
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Professional Team
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Experienced removal specialists
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Full Service
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Complete removal and cleanup
                         </p>
@@ -266,37 +266,37 @@ function Services() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Professional Equipment
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Commercial-grade machines and tools
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Shield className="h-5 w-5 text-[#049704] mr-2" />
                           Surface Protection
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Safe cleaning for all surfaces
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Tool className="h-5 w-5 text-[#049704] mr-2" />
                           Expert Team
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Trained cleaning specialists
                         </p>
                       </div>
                       <div className="bg-[#049704]/5 p-4 rounded-lg">
-                        <h3 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
                           <Calendar className="h-5 w-5 text-[#049704] mr-2" />
                           Maintenance Plans
-                        </h3>
+                        </div>
                         <p className="text-sm text-gray-600">
                           Regular service schedules
                         </p>

@@ -503,7 +503,7 @@ function Home() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.2}
                 >
-                  <div className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                  <div className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
                     <div className="relative w-full aspect-[4/3]">
                       <img 
                         src={service.image}
@@ -519,23 +519,25 @@ function Home() {
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
                     </div>
-                    <div className="p-6 text-center">
+                    <div className="p-6 text-center flex-1 flex flex-col">
                       <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#049704] text-center">
                         {service.title}
                       </h3>
-                      <p className="text-gray-700 mb-4 text-center">{service.description}</p>
-                      <Link 
-                        to={
-                          service.title === "Valet Trash" ? "/services/valet-trash" :
-                          service.title === "Junk Removal" ? "/services/junk-removal" :
-                          service.title === "Pressure Washing" ? "/services/pressure-washing" :
-                          "/contact"
-                        }
-                        className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                      >
-                        Learn More 
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                      </Link>
+                      <p className="text-gray-700 mb-4 text-center flex-1">{service.description}</p>
+                      <div className="mt-auto">
+                        <Link 
+                          to={
+                            service.title === "Valet Trash" ? "/services/valet-trash" :
+                            service.title === "Junk Removal" ? "/services/junk-removal" :
+                            service.title === "Pressure Washing" ? "/services/pressure-washing" :
+                            "/contact"
+                          }
+                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
+                        >
+                          Learn More 
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </ScrollReveal>

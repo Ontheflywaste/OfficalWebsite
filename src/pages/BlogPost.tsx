@@ -55,7 +55,7 @@ const BlogPost: React.FC = () => {
       case 'paragraph':
         return (
           <p key={index} className="text-gray-700 leading-relaxed mb-6">
-            {block.text}
+            <span dangerouslySetInnerHTML={{ __html: block.text || '' }} />
           </p>
         );
       case 'image':
@@ -73,7 +73,9 @@ const BlogPost: React.FC = () => {
         return (
           <ul key={index} className="list-disc list-inside space-y-2 mb-6 text-gray-700">
             {block.items?.map((item, itemIndex) => (
-              <li key={itemIndex} className="leading-relaxed">{item}</li>
+              <li key={itemIndex} className="leading-relaxed">
+                <span dangerouslySetInnerHTML={{ __html: item }} />
+              </li>
             ))}
           </ul>
         );

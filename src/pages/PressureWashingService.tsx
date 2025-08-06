@@ -264,6 +264,76 @@ function PressureWashingService() {
           </div>
         </section>
 
+        {/* Areas We Serve Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Professional pressure washing services throughout Central Florida
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  city: "Orlando",
+                  description: "Downtown, College Park, Winter Park, Dr. Phillips"
+                },
+                {
+                  city: "Kissimmee",
+                  description: "Celebration, Poinciana, St. Cloud"
+                },
+                {
+                  city: "Altamonte Springs",
+                  description: "Longwood, Casselberry, Winter Springs"
+                },
+                {
+                  city: "Lake Mary",
+                  description: "Sanford, Heathrow, Lake Forest"
+                },
+                {
+                  city: "Apopka",
+                  description: "Mount Dora, Eustis, Tavares"
+                },
+                {
+                  city: "Clermont",
+                  description: "Minneola, Groveland, Montverde"
+                }
+              ].map((area, index) => (
+                <ScrollReveal 
+                  key={index}
+                  direction={index % 2 === 0 ? 'left' : 'right'}
+                  delay={index * 0.1}
+                >
+                  <div className="bg-gray-50 p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {area.city}
+                    </h3>
+                    <p className="text-gray-600">
+                      {area.description}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <ScrollReveal>
+              <div className="text-center bg-gradient-to-br from-[#049704]/5 to-[#038203]/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Don't See Your Area?</h3>
+                <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                  We're continuously expanding our pressure washing services throughout Central Florida. Contact us to discuss service availability in your location.
+                </p>
+                <Link to="/contact" className="btn-primary">
+                  Check Service Availability <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

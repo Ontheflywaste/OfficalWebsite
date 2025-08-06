@@ -243,9 +243,9 @@ function PressureWashingService() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.2}
                 >
-                  <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                     <Quote className="h-8 w-8 text-[#049704]/20 mb-4" />
-                    <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
+                    <p className="text-gray-700 mb-6 italic flex-1">"{testimonial.text}"</p>
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="font-semibold text-gray-900">{testimonial.name}</div>

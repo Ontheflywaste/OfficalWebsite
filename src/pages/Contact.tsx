@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, ArrowRight, ArrowLeft, Loader2 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import toast from 'react-hot-toast';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Lazy load EmailJS only when needed
 const loadEmailJS = () => import('@emailjs/browser');

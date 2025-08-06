@@ -198,7 +198,7 @@ function Blog() {
                             {post.title}
                           </h3>
                           <p className="text-gray-600 mb-4 flex-1 line-clamp-3">
-                            {post.excerpt}
+                            <span dangerouslySetInnerHTML={{ __html: post.excerpt }} />
                           </p>
                           <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                             <div className="flex items-center text-[#049704] font-medium text-sm group-hover:translate-x-1 transition-transform duration-300">

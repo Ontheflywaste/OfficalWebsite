@@ -273,7 +273,8 @@ function Layout({ children }: { children: React.ReactNode }) {
                         <div className="font-medium">Pressure Washing</div>
                         <div className="text-sm text-gray-500">Building & surface cleaning</div>
                       </div>
-                  <LazyMap />
+                    </Link>
+                  </div>
                 </div>
               </div>
               
@@ -693,6 +694,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      <LazyMap />
     </div>
   );
 }

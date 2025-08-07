@@ -783,7 +783,7 @@ function Home() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.1}
                 >
-                  <div className\="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                  <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <h3 className="text-xl font-bold mb-3 text-gray-900">
                       {area.city}
                     </h3>

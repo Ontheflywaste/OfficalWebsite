@@ -694,7 +694,7 @@ function Home() {
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-10 opacity-0'
                   }`}
-                  style={{ transitionDelay: \`${index * 200}ms` }}
+                  style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
                     <div className="flex items-center justify-center mb-3">

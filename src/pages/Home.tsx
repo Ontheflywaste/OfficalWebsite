@@ -517,10 +517,10 @@ function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
                       <div className="absolute bottom-4 left-4">
                         <service.icon className="h-8 w-8 text-white" />
-                      </div>
+                    <div className={`p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col ${
                     </div>
                     <div className="p-6 text-center flex-1 flex flex-col">
-                      <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2 transition-colors duration-300 group-hover:text-[#049704] text-center">
+                      <h3 className="text-xl font-bold mb-3 text-gray-900 flex-shrink-0">
                         {service.title}
                       </h3>
                       <p className="text-gray-700 mb-4 text-center flex-1">{service.description}</p>
@@ -709,7 +709,7 @@ function Home() {
                       <div className="text-lg font-semibold text-white mb-1 text-center">
                         {stat.label}
                       </div>
-                      <p className="text-white text-sm text-center">
+                      <p className="text-gray-600 flex-1">
                         {stat.description}
                       </p>
                     </div>

@@ -337,7 +337,7 @@ function Home() {
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-[#049704] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#038203] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                >
+                    >
                       {isSubmitting ? (
                         <>
                           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -517,7 +517,7 @@ function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
                       <div className="absolute bottom-4 left-4">
                         <service.icon className="h-8 w-8 text-white" />
-                    <div className={`p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col ${
+                      </div>
                     </div>
                     <div className="p-6 text-center flex-1 flex flex-col">
                       <h3 className="text-xl font-bold mb-3 text-gray-900 flex-shrink-0">
@@ -694,7 +694,7 @@ function Home() {
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-10 opacity-0'
                   }`}
-                  style={{ transitionDelay: `${index * 200}ms` }}
+                  style={{ transitionDelay: \`${index * 200}ms` }}
                 >
                   <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
                     <div className="flex items-center justify-center mb-3">
@@ -709,7 +709,7 @@ function Home() {
                       <div className="text-lg font-semibold text-white mb-1 text-center">
                         {stat.label}
                       </div>
-                      <p className="text-gray-600 flex-1">
+                      <p className="text-white/80 text-center">
                         {stat.description}
                       </p>
                     </div>
@@ -783,9 +783,7 @@ function Home() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.1}
                 >
-                  <div className={`p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
-                    'bg-white text-gray-900'
-                  }`}>
+                  <div className\="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                     <h3 className="text-xl font-bold mb-3 text-gray-900">
                       {area.city}
                     </h3>

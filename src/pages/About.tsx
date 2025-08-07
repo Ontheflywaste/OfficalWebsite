@@ -213,12 +213,12 @@ function About() {
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.1}
                 >
-                  <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                  <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
                     <div className="flex items-start space-x-3">
                       <CheckCircle2 className="h-6 w-6 text-[#038203] flex-shrink-0 mt-1" />
-                      <div>
+                      <div className="flex-1 flex flex-col">
                         <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                        <p className="text-gray-600">{item.description}</p>
+                        <p className="text-gray-600 flex-1">{item.description}</p>
                       </div>
                     </div>
                   </div>

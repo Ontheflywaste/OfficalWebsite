@@ -266,7 +266,7 @@ function Home() {
           
           {/* Mobile Hero Content with Contact Form */}
           {isSmallScreen && (
-            <div className={`relative z-20 min-h-screen flex items-center justify-center px-4 py-20 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`}>
+            <div className={`relative z-20 min-h-screen flex items-center justify-center px-4 py-20 pt-32 ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`}>
               <div className="w-full max-w-md">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl font-bold text-white mb-4 text-shadow-lg">

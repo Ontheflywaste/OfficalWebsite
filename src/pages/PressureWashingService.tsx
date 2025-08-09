@@ -362,8 +362,11 @@ function PressureWashingService() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-800/70 via-blue-700/50 to-blue-900/80">
+        <section className="relative py-20 bg-gradient-to-br from-blue-800/70 via-blue-700/50 to-blue-900/80 overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg')] bg-cover bg-center opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-800/70 via-blue-700/50 to-blue-900/80" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="relative z-10">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-white mb-6">
                 Ready to Transform Your Property's Appearance?
@@ -380,6 +383,7 @@ function PressureWashingService() {
                 </a>
               </div>
             </ScrollReveal>
+            </div>
           </div>
         </section>
       </div>

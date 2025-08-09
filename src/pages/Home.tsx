@@ -365,7 +365,7 @@ function Home() {
                   </p>
                 </div>
                 <p className="mb-4 text-center lg:text-left">
-                  Our core services include daily <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash collection</Link> and on-demand <Link to="/services/junk-removal" className=\"text-[#049704] hover:text-[#038203] font-medium">bulk removal</Link>, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
+                  Our core services include daily <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash collection</Link> and on-demand <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal</Link>, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
                 </p>
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
                   <form onSubmit={handleFormSubmit}>

@@ -44,12 +44,12 @@ function Reviews() {
   return (
     <>
       <Helmet>
-        <title>Client Reviews | Orlando Valet Trash Service</title>
-        <meta name="description" content="Read what Orlando property managers say about our valet trash service. Real reviews from satisfied clients across Central Florida." />
+        <title>Orlando Valet Trash Service Reviews | On The Fly Waste Solutions</title>
+        <meta name="description" content="See what Orlando property managers and residents say about our valet trash services. Read reviews of our professional waste management and bulk removal solutions in Central Florida." />
         <meta name="keywords" content="orlando valet trash reviews, waste management testimonials orlando, apartment trash service reviews florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/reviews" />
         
-        {/* Enhanced AggregateRating Schema */}
+        {/* AggregateRating Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -119,7 +119,7 @@ function Reviews() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900">What Our Clients Say</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Don't just take our word for it - hear from property managers who've experienced the difference
+                Don't just take our word for it - hear from our satisfied clients
               </p>
             </div>
 
@@ -132,11 +132,6 @@ function Reviews() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="mb-6">
-                <p className="text-gray-600 mb-4">
-                  Ready to join our family of satisfied clients? We'd love to show you what professional valet trash service can do for your property.
-                </p>
-              </div>
               <a
                 href="https://www.google.com/search?q=on+the+fly+waste+solutions+orlando"
                 target="_blank"

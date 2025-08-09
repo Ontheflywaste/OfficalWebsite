@@ -189,7 +189,7 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash & Bulk Removal | On The Fly Solutions</title>
+        <title>Orlando Valet Trash Service | On The Fly Waste Solutions</title>
         <meta name="description" content="Professional valet trash and bulk removal services in Orlando. Reliable doorstep pickup for apartments and condos. Get your free quote today!" />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, multifamily waste solutions Orlando, valet trash for condos Orlando, reliable trash pickup Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, bulk pickup service for HOA communities, contract valet trash for property managers, on-demand waste removal for resorts" />
         <link rel="canonical" href="https://ontheflywastesolutions.com" />
@@ -197,6 +197,93 @@ function Home() {
         <meta name="geo.placename" content="Orlando" />
         <meta name="geo.position" content="28.5383;-81.3792" />
         <meta name="ICBM" content="28.5383, -81.3792" />
+        
+        {/* Enhanced LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "On The Fly Waste Solutions",
+            "image": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional valet trash and bulk removal services for multifamily communities in Orlando and Central Florida",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.5383,
+              "longitude": -81.3792
+            },
+            "url": "https://ontheflywastesolutions.com",
+            "telephone": "+1-407-274-5019",
+            "email": "info@ontheflywastesolutions.com",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "21:00"
+            },
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 28.5383,
+                "longitude": -81.3792
+              },
+              "geoRadius": "50000"
+            },
+            "areaServed": [
+              "Orlando, FL",
+              "Kissimmee, FL",
+              "Altamonte Springs, FL",
+              "Lake Mary, FL",
+              "Apopka, FL",
+              "Clermont, FL",
+              "Winter Garden, FL",
+              "Davenport, FL"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Waste Management Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Valet Trash Service",
+                    "description": "Door-to-door trash collection for multifamily properties"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bulk Removal Service",
+                    "description": "Furniture and large item removal for properties"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pressure Washing Service",
+                    "description": "Professional building and surface cleaning"
+                  }
+                }
+              ]
+            },
+            "sameAs": [
+              "https://www.facebook.com/ontheflywastesolutions",
+              "https://www.instagram.com/ontheflywaste/",
+              "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+            ]
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen">
@@ -251,6 +338,24 @@ function Home() {
                 <p className="hero-subtitle text-center mx-auto">
                   Orlando's trusted door to door trash pickup service for apartments, condos, and resort-style communities
                 </p>
+                <div className="mb-6">
+                  <div className="inline-flex items-center space-x-6 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3">
+                    <div className="flex items-center text-white">
+                      <Clock className="h-5 w-5 mr-2" />
+                      <span>24/7 Support</span>
+                    </div>
+                    <div className="hidden md:block w-px h-6 bg-white/20"></div>
+                    <div className="flex items-center text-white">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      <span>7 Days a Week</span>
+                    </div>
+                    <div className="hidden md:block w-px h-6 bg-white/20"></div>
+                    <div className="flex items-center text-white">
+                      <Truck className="h-5 w-5 mr-2" />
+                      <span>Same Day Service</span>
+                    </div>
+                  </div>
+                </div>
                 <div className="flex justify-center mt-8">
                   <Link 
                     to="/contact" 
@@ -451,7 +556,7 @@ function Home() {
                       At On The Fly Waste Solutions, we're raising the bar for valet trash and bulk removal services in Central Florida. Since 2020, we've focused on delivering dependable, detail-driven service to multifamily communities and resort-style properties that expect more than the industry standard.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
-                      Our core services include daily valet trash collection and on-demand bulk removal, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
+                      Our core services include daily <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash collection</Link> and on-demand <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal</Link>, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
                       We don't operate like a distant national vendor. We stay connected, visible, and accountable. Our goal is to help property managers reduce complaints, boost curb appeal, and feel confident that their community is in good hands.
@@ -490,9 +595,16 @@ function Home() {
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Our Services</h2>
-                <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
-                  Comprehensive multifamily waste solutions for Orlando apartments and condos
-                </p>
+                <div className="prose prose-lg text-gray-700">
+                  <p className="mb-4 text-center lg:text-left">
+                    Comprehensive multifamily waste solutions for Orlando apartments and condos
+                  </p>
+                  <div className="text-center lg:text-left mb-6">
+                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
+                      <p className="text-[#049704] font-medium">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 

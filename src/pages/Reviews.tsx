@@ -44,12 +44,12 @@ function Reviews() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash Service Reviews | On The Fly Waste Solutions</title>
-        <meta name="description" content="See what Orlando property managers and residents say about our valet trash services. Read reviews of our professional waste management and bulk removal solutions in Central Florida." />
+        <title>Orlando Valet Trash Reviews | Client Testimonials</title>
+        <meta name="description" content="See what Orlando property managers say about our valet trash services. Read reviews of professional waste management in Central Florida." />
         <meta name="keywords" content="orlando valet trash reviews, waste management testimonials orlando, apartment trash service reviews florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/reviews" />
         
-        {/* AggregateRating Schema Markup */}
+        {/* Enhanced AggregateRating Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

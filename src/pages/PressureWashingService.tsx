@@ -65,10 +65,41 @@ function PressureWashingService() {
   return (
     <>
       <Helmet>
-        <title>Professional Pressure Washing Orlando | Building & Surface Cleaning</title>
-        <meta name="description" content="Expert pressure washing services in Orlando for buildings, driveways, and surfaces. Professional equipment and eco-friendly solutions serving Central Florida." />
+        <title>Pressure Washing Orlando | Building Cleaning</title>
+        <meta name="description" content="Expert pressure washing services in Orlando for buildings driveways and surfaces. Professional equipment and eco-friendly solutions." />
         <meta name="keywords" content="pressure washing Orlando, building cleaning Orlando, driveway cleaning Central Florida, surface cleaning services Orlando, commercial pressure washing Florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/pressure-washing" />
+        
+        {/* Pressure Washing Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Pressure Washing Service",
+            "description": "Professional building and surface cleaning services using commercial-grade equipment and eco-friendly solutions",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "On The Fly Waste Solutions",
+              "telephone": "+1-407-274-5019",
+              "url": "https://ontheflywastesolutions.com"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Orlando",
+              "containedInPlace": {
+                "@type": "State",
+                "name": "Florida"
+              }
+            },
+            "serviceType": "Pressure Washing",
+            "category": "Building Maintenance",
+            "offers": {
+              "@type": "Offer",
+              "description": "Professional pressure washing for buildings, driveways, and surfaces",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">

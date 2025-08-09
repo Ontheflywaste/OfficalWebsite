@@ -8,11 +8,68 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Professional Valet Trash Service & Bulk Removal Orlando | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert valet trash service and doorstep trash pickup in Orlando. Reliable apartment trash services, bulk trash removal, and pressure washing services for multifamily communities across Central Florida." />
+        <title>Valet Trash & Waste Management Services | Orlando</title>
+        <meta name="description" content="Complete valet trash and waste management solutions. Doorstep pickup, bulk removal, and pressure washing for Orlando properties. Get a quote." />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, pressure washing services Orlando, multifamily waste solutions Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services" />
         <link rel="preload" as="image" href="/Images/our services image.png" />
+        
+        {/* Service Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "On The Fly Waste Solutions",
+            "url": "https://ontheflywastesolutions.com/services",
+            "logo": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional waste management services for multifamily properties in Orlando and Central Florida",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Waste Management Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Valet Trash Service",
+                    "description": "Professional door-to-door trash collection for apartments and condos",
+                    "provider": {
+                      "@type": "Organization",
+                      "name": "On The Fly Waste Solutions"
+                    },
+                    "areaServed": "Orlando, FL"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Junk Removal Service",
+                    "description": "Furniture and bulk item removal for residential and commercial properties",
+                    "provider": {
+                      "@type": "Organization",
+                      "name": "On The Fly Waste Solutions"
+                    },
+                    "areaServed": "Central Florida"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pressure Washing Service",
+                    "description": "Professional building and surface cleaning services",
+                    "provider": {
+                      "@type": "Organization",
+                      "name": "On The Fly Waste Solutions"
+                    },
+                    "areaServed": "Orlando, FL"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen pt-24 md:pt-0">
@@ -34,6 +91,11 @@ function Services() {
                 <p className="text-xl text-white/90 max-w-3xl mx-auto">
                   Professional waste management and property maintenance solutions tailored to your needs
                 </p>
+                <div className="mt-8">
+                  <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-white/20 text-white rounded-full font-medium hover:bg-white/30 transition-all duration-300 backdrop-blur-sm border border-white/30">
+                    Get Your Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -64,11 +126,14 @@ function Services() {
                     <h2 className="text-3xl font-bold text-gray-900 mb-6">Orlando's Premier Doorstep Trash Pickup</h2>
                     <div className="prose prose-lg text-gray-600 mb-6">
                       <p>
-                        Experience reliable valet trash service in Orlando with our professional doorstep trash pickup. We serve apartment communities and condos across Central Florida with consistent, dependable waste collection services.
+                        Experience reliable <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash service in Orlando</Link> with our professional doorstep trash pickup. We serve apartment communities and condos across Central Florida with consistent, dependable waste collection services.
                       </p>
                       <p>
                         Our uniformed professionals handle everything from collection to proper disposal, maintaining strict schedules and high standards of cleanliness. We go beyond basic pickup – we monitor compliance, maintain collection areas, and provide detailed reporting to property management.
                       </p>
+                      <div className="bg-[#049704]/10 rounded-lg p-4 my-6">
+                        <p className="text-[#049704] font-medium">Interested in learning more about how valet trash can transform your property operations? <Link to="/blog/valet-trash-benefits" className="underline hover:no-underline">Discover the key benefits</Link> property managers are seeing.</p>
+                      </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                       <div className="bg-[#049704]/5 p-4 rounded-lg">

@@ -18,10 +18,44 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash & Waste Management Blog | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert insights on valet trash services and waste management in Orlando. Tips and best practices for multifamily communities in Central Florida from industry professionals." />
+        <title>Valet Trash Tips & Property Management Blog</title>
+        <meta name="description" content="Expert insights on valet trash services and waste management. Tips and best practices for multifamily communities from industry professionals." />
         <meta name="keywords" content="orlando valet trash blog, waste management tips orlando, apartment waste solutions florida, multifamily trash collection blog" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/blog" />
+        
+        {/* Blog Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "On The Fly Waste Solutions Blog",
+            "description": "Expert insights and tips on valet trash services and waste management for multifamily properties",
+            "url": "https://ontheflywastesolutions.com/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "On The Fly Waste Solutions",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png"
+              }
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "itemListElement": blogPosts.slice(0, 5).map((post, index) => ({
+                "@type": "BlogPosting",
+                "position": index + 1,
+                "headline": post.title,
+                "description": post.excerpt.replace(/<[^>]*>/g, ''),
+                "url": `https://ontheflywastesolutions.com/blog/${post.id}`,
+                "datePublished": new Date(post.date).toISOString(),
+                "author": {
+                  "@type": "Person",
+                  "name": post.author
+                }
+              }))
+            }
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen">
@@ -45,6 +79,11 @@ function Blog() {
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                   Expert insights and practical advice for property managers looking to optimize their waste management operations and enhance resident satisfaction
                 </p>
+                <div className="mt-8">
+                  <div className="inline-block bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                    <p className="text-white">New to valet trash services? <Link to="/blog/valet-trash-benefits" className="underline hover:no-underline font-medium">Start with our benefits guide</Link> to learn how it can transform your property.</p>
+                  </div>
+                </div>
               </ScrollReveal>
             </div>
           </div>

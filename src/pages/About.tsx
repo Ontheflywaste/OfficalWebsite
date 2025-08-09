@@ -7,10 +7,55 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About Our Orlando Valet Trash Services | On The Fly Waste Solutions</title>
-        <meta name="description" content="Learn about Orlando's premier valet trash service. On The Fly Waste Solutions provides professional waste management services to multifamily communities across Central Florida with 24/7 support." />
+        <title>About Orlando's Valet Trash Experts | On The Fly</title>
+        <meta name="description" content="Learn about Orlando's premier valet trash service. Professional team with proven experience serving multifamily communities since 2020." />
         <meta name="keywords" content="orlando valet trash service, central florida waste management, professional trash collection orlando, apartment waste services florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/about" />
+        
+        {/* About Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "On The Fly Waste Solutions",
+            "url": "https://ontheflywastesolutions.com/about",
+            "logo": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional valet trash and waste management services for multifamily communities in Orlando and Central Florida since 2020",
+            "foundingDate": "2020",
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Donnell Edwards",
+                "jobTitle": "Founder & CEO"
+              }
+            ],
+            "employee": [
+              {
+                "@type": "Person",
+                "name": "Donnell Edwards",
+                "jobTitle": "Founder & CEO"
+              },
+              {
+                "@type": "Person",
+                "name": "Trevor Alston",
+                "jobTitle": "Vice President"
+              },
+              {
+                "@type": "Person",
+                "name": "Steven Edwards",
+                "jobTitle": "Chief Financial Officer"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "telephone": "+1-407-274-5019",
+            "email": "info@ontheflywastesolutions.com"
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen pt-24 md:pt-0">
@@ -51,6 +96,9 @@ function About() {
                     <p className="mb-4">
                       What sets us apart is our unwavering commitment to excellence and our innovative approach to valet trash and bulk removal. We've invested in cutting-edge technology and developed streamlined processes that ensure efficient, environmentally responsible service delivery. Our team undergoes rigorous training to maintain the highest standards of professionalism and safety.
                     </p>
+                    <div className="bg-[#049704]/10 rounded-lg p-4 my-6">
+                      <p className="text-[#049704] font-medium">Curious about what makes a great valet trash provider? <Link to="/blog/how-to-choose-valet-trash-vendor" className="underline hover:no-underline">Read our guide</Link> on selecting the right vendor for your property.</p>
+                    </div>
                     <p className="mb-4">
                       Today, we serve a diverse portfolio of residential and commercial properties throughout Central Florida, earning a reputation for reliability and exceptional customer service. Our growth is a testament to our dedication to continuous improvement and our ability to adapt to our clients' evolving needs.
                     </p>

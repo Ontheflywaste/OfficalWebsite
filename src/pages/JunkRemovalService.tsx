@@ -65,10 +65,41 @@ function JunkRemovalService() {
   return (
     <>
       <Helmet>
-        <title>Professional Junk Removal Orlando | Bulk Item Pickup Service</title>
-        <meta name="description" content="Expert junk removal service in Orlando for furniture, appliances, and bulk items. Same-day pickup available. Licensed and insured team serving Central Florida." />
+        <title>Junk Removal Orlando | Furniture & Bulk Items</title>
+        <meta name="description" content="Expert junk removal service in Orlando for furniture appliances and bulk items. Same-day pickup available. Licensed and insured team." />
         <meta name="keywords" content="junk removal Orlando, bulk item pickup Orlando, furniture removal Orlando, appliance removal Central Florida, construction debris removal Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/junk-removal" />
+        
+        {/* Junk Removal Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Junk Removal Service",
+            "description": "Professional furniture and bulk item removal service for residential and commercial properties in Orlando",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "On The Fly Waste Solutions",
+              "telephone": "+1-407-274-5019",
+              "url": "https://ontheflywastesolutions.com"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Orlando",
+              "containedInPlace": {
+                "@type": "State",
+                "name": "Florida"
+              }
+            },
+            "serviceType": "Junk Removal",
+            "category": "Waste Management",
+            "offers": {
+              "@type": "Offer",
+              "description": "Same-day junk removal service for furniture, appliances, and bulk items",
+              "availability": "https://schema.org/InStock"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">

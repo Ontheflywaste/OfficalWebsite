@@ -396,10 +396,33 @@ function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Orlando's Top Valet Trash Service | On The Fly Waste Solutions</title>
-        <meta name="description" content="Get in touch with Orlando's leading valet trash service. Schedule a consultation for your apartment community or request a quote for professional waste management services in Central Florida." />
+        <title>Contact Orlando Valet Trash Service | Get Quote</title>
+        <meta name="description" content="Get in touch with Orlando's leading valet trash service. Schedule consultation for your apartment community or request quote today." />
         <meta name="keywords" content="valet trash orlando contact, waste management quote orlando, apartment trash service florida, contact waste solutions orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/contact" />
+        
+        {/* Contact Page Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact On The Fly Waste Solutions",
+            "description": "Get in touch with Orlando's premier valet trash service for professional waste management solutions",
+            "url": "https://ontheflywastesolutions.com/contact",
+            "mainEntity": {
+              "@type": "LocalBusiness",
+              "name": "On The Fly Waste Solutions",
+              "telephone": "+1-407-274-5019",
+              "email": "info@ontheflywastesolutions.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Orlando",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+              }
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">

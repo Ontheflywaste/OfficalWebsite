@@ -292,16 +292,30 @@ function Layout({ children }: { children: React.ReactNode }) {
               </Link>
               
               <Link
-                to="/blog"
+                to="/contact"
                 className={`font-medium text-base relative group transition-all duration-300 ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'
                 }`}
                 role="menuitem"
-                aria-current={location.pathname === '/blog' ? 'page' : undefined}
+                aria-current={location.pathname === '/contact' ? 'page' : undefined}
               >
-                Blog
+                Contact
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
+              </Link>
+              
+              <Link
+                to="/reviews"
+                className={`font-medium text-base relative group transition-all duration-300 ${
+                  shouldUseBlackLogo
+                    ? 'text-gray-900 hover:text-[#027502]'
+                    : 'text-white hover:text-[#027502]'
+                }`}
+                role="menuitem"
+                aria-current={location.pathname === '/reviews' ? 'page' : undefined}
+              >
+                Reviews
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
               </Link>
               
@@ -414,6 +428,19 @@ function Layout({ children }: { children: React.ReactNode }) {
               </div>
               
               <Link
+                to="/blog"
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
+                  shouldUseBlackLogo
+                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
+                    : 'text-white hover:text-[#027502] hover:bg-white/10'
+                }`}
+                role="menuitem"
+                aria-current={location.pathname === '/blog' ? 'page' : undefined}
+              >
+                Blog
+              </Link>
+              
+              <Link
                 to="/contact"
                 className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
                   shouldUseBlackLogo
@@ -437,19 +464,6 @@ function Layout({ children }: { children: React.ReactNode }) {
                 aria-current={location.pathname === '/reviews' ? 'page' : undefined}
               >
                 Reviews
-              </Link>
-              
-              <Link
-                to="/blog"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
-                role="menuitem"
-                aria-current={location.pathname === '/blog' ? 'page' : undefined}
-              >
-                Blog
               </Link>
               
               <a

@@ -65,10 +65,44 @@ function ValetTrashService() {
   return (
     <>
       <Helmet>
-        <title>Valet Trash Orlando | Professional Doorstep Pickup Service</title>
-        <meta name="description" content="Premium valet trash service in Orlando for apartment communities. Reliable daily pickup enhances resident satisfaction. Schedule your consultation!" />
+        <title>Orlando Valet Trash Service | Professional Doorstep Pickup</title>
+        <meta name="description" content="Orlando's most reliable valet trash service for apartments & condos. Professional doorstep pickup that residents love. Get your free quote today." />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash collection Orlando, professional valet trash Florida, multifamily waste services Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, contract valet trash for property managers" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/valet-trash" />
+        
+        {/* Valet Trash Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Valet Trash Service",
+            "description": "Professional door-to-door trash collection service for apartment communities and condos",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "On The Fly Waste Solutions",
+              "telephone": "+1-407-274-5019",
+              "url": "https://ontheflywastesolutions.com"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Orlando",
+                "addressRegion": "FL"
+              },
+              {
+                "@type": "City",
+                "name": "Kissimmee", 
+                "addressRegion": "FL"
+              }
+            ],
+            "serviceType": "Waste Management",
+            "offers": {
+              "@type": "Offer",
+              "description": "Professional valet trash collection service",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">
@@ -114,10 +148,10 @@ function ValetTrashService() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Valet Trash Service?</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our professional <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash service in Orlando</a> transforms waste management from a daily chore into a seamless amenity. We provide reliable, door-to-door collection that enhances resident satisfaction while reducing operational burdens for property management teams.
+                      Our professional valet trash service in Orlando transforms waste management from a daily chore into a seamless amenity. We provide reliable, door-to-door collection that enhances resident satisfaction while reducing operational burdens for property management teams.
                     </p>
                     <p>
-                      With uniformed professionals, flexible schedules tailored to your community's needs, and comprehensive reporting, we deliver the reliability and professionalism that sets your property apart in Orlando's competitive multifamily market. For larger items that can't be handled through regular collection, our <a href="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal services in Central Florida</a> provide comprehensive solutions.
+                      With uniformed professionals, flexible schedules tailored to your community's needs, and comprehensive reporting, we deliver the reliability and professionalism that sets your property apart in Orlando's competitive multifamily market. For larger items that can't be handled through regular collection, our <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal services</Link> provide comprehensive solutions.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -424,12 +458,24 @@ function ValetTrashService() {
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Property Managers Choose Our Service</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">doorstep trash pickup in Central Florida</a> isn't just about waste collection—it's about transforming your property into a premium living destination. Property managers consistently report improved resident satisfaction scores, reduced maintenance burdens, and enhanced property marketability.
+                      Our doorstep trash pickup service isn't just about waste collection—it's about transforming your property into a premium living destination. Property managers consistently report improved resident satisfaction scores, reduced maintenance burdens, and enhanced property marketability.
                     </p>
                     <p>
-                      We handle all the operational complexities while you enjoy the benefits of offering a sought-after amenity that residents truly value and appreciate. Our services extend beyond Orlando to include <a href="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash in Kissimmee</a> and surrounding communities.
+                      We handle all the operational complexities while you enjoy the benefits of offering a sought-after amenity that residents truly value and appreciate. Our services extend beyond Orlando to include Kissimmee and surrounding Central Florida communities.
                     </p>
                   </div>
+                  
+                  {/* Mid-page CTA */}
+                  <div className="bg-[#049704]/5 rounded-xl p-6 mb-8">
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Ready to enhance your property?</h3>
+                      <p className="text-gray-600 mb-4">Join hundreds of satisfied property managers who've made the switch to professional valet trash service.</p>
+                      <Link to="/contact" className="btn-primary">
+                        Get Your Custom Quote <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+                  </div>
+                  
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-8 h-8 bg-[#049704]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">

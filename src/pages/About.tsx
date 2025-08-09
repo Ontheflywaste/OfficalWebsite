@@ -7,10 +7,54 @@ function About() {
   return (
     <>
       <Helmet>
-        <title>About Our Orlando Valet Trash Services | On The Fly Waste Solutions</title>
-        <meta name="description" content="Learn about Orlando's premier valet trash service. On The Fly Waste Solutions provides professional waste management services to multifamily communities across Central Florida with 24/7 support." />
+        <title>About Orlando's Valet Trash Experts | On The Fly</title>
+        <meta name="description" content="Meet the team behind Orlando's most trusted valet trash service. Professional waste management for Central Florida properties since 2020." />
         <meta name="keywords" content="orlando valet trash service, central florida waste management, professional trash collection orlando, apartment waste services florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/about" />
+        
+        {/* Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "On The Fly Waste Solutions",
+            "url": "https://ontheflywastesolutions.com",
+            "logo": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional valet trash and waste management services for multifamily properties in Central Florida",
+            "foundingDate": "2020",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-407-274-5019",
+              "contactType": "customer service",
+              "email": "info@ontheflywastesolutions.com"
+            },
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Donnell Edwards",
+                "jobTitle": "Founder & CEO"
+              }
+            ],
+            "employee": [
+              {
+                "@type": "Person", 
+                "name": "Trevor Alston",
+                "jobTitle": "Vice President"
+              },
+              {
+                "@type": "Person",
+                "name": "Steven Edwards", 
+                "jobTitle": "Chief Financial Officer"
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen pt-24 md:pt-0">
@@ -52,7 +96,7 @@ function About() {
                       What sets us apart is our unwavering commitment to excellence and our innovative approach to valet trash and bulk removal. We've invested in cutting-edge technology and developed streamlined processes that ensure efficient, environmentally responsible service delivery. Our team undergoes rigorous training to maintain the highest standards of professionalism and safety.
                     </p>
                     <p className="mb-4">
-                      Today, we serve a diverse portfolio of residential and commercial properties throughout Central Florida, earning a reputation for reliability and exceptional customer service. Our growth is a testament to our dedication to continuous improvement and our ability to adapt to our clients' evolving needs.
+                      Today, we serve a diverse portfolio of residential and commercial properties throughout Central Florida, earning a reputation for reliability and exceptional customer service. Our growth is a testament to our dedication to continuous improvement and our ability to adapt to our clients' evolving needs. Learn more about our comprehensive <Link to="/services" className="text-[#049704] hover:text-[#038203] font-medium">waste management services</Link>.
                     </p>
                     <p>
                       As we look to the future, we remain committed to our founding principles while embracing new technologies and sustainable practices that will shape the future of valet trash and bulk removal services. Our success is measured not just in numbers, but in the lasting relationships we build with our clients and the positive impact we make in our community.

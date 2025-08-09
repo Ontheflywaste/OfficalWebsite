@@ -18,10 +18,40 @@ function Blog() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash & Waste Management Blog | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert insights on valet trash services and waste management in Orlando. Tips and best practices for multifamily communities in Central Florida from industry professionals." />
+        <title>Valet Trash Tips & Property Management Insights | Blog</title>
+        <meta name="description" content="Expert insights on valet trash and property management. Industry tips and best practices for apartment communities from Orlando professionals." />
         <meta name="keywords" content="orlando valet trash blog, waste management tips orlando, apartment waste solutions florida, multifamily trash collection blog" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/blog" />
+        
+        {/* Blog Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "On The Fly Waste Solutions Blog",
+            "description": "Expert insights on valet trash services and property management",
+            "url": "https://ontheflywastesolutions.com/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "On The Fly Waste Solutions",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png"
+              }
+            },
+            "blogPost": allBlogPosts.slice(0, 5).map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt.replace(/<[^>]*>/g, ''),
+              "url": `https://ontheflywastesolutions.com/blog/${post.id}`,
+              "datePublished": new Date(post.date).toISOString(),
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen">

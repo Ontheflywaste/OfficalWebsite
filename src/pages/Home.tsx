@@ -189,14 +189,102 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash & Bulk Removal | On The Fly Solutions</title>
-        <meta name="description" content="Professional valet trash and bulk removal services in Orlando. Reliable doorstep pickup for apartments and condos. Get your free quote today!" />
+        <title>Valet Trash Service Orlando | On The Fly Waste Solutions</title>
+        <meta name="description" content="Orlando's trusted valet trash service for apartments & condos. Professional doorstep pickup with bulk removal. Serving Central Florida since 2020." />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, multifamily waste solutions Orlando, valet trash for condos Orlando, reliable trash pickup Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, bulk pickup service for HOA communities, contract valet trash for property managers, on-demand waste removal for resorts" />
         <link rel="canonical" href="https://ontheflywastesolutions.com" />
         <meta name="geo.region" content="US-FL" />
         <meta name="geo.placename" content="Orlando" />
         <meta name="geo.position" content="28.5383;-81.3792" />
         <meta name="ICBM" content="28.5383, -81.3792" />
+        
+        {/* Enhanced LocalBusiness Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "On The Fly Waste Solutions",
+            "image": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+            "description": "Professional valet trash and bulk removal services for multifamily properties in Central Florida",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "postalCode": "32801",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.5383,
+              "longitude": -81.3792
+            },
+            "url": "https://ontheflywastesolutions.com",
+            "telephone": "+1-407-274-5019",
+            "email": "info@ontheflywastesolutions.com",
+            "priceRange": "$$",
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 28.5383,
+                "longitude": -81.3792
+              },
+              "geoRadius": "50000"
+            },
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Orlando",
+                "addressRegion": "FL"
+              },
+              {
+                "@type": "City", 
+                "name": "Kissimmee",
+                "addressRegion": "FL"
+              },
+              {
+                "@type": "City",
+                "name": "Winter Park", 
+                "addressRegion": "FL"
+              }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "21:00"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ontheflywastesolutions",
+              "https://www.instagram.com/ontheflywaste/",
+              "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Waste Management Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Valet Trash Service",
+                    "description": "Door-to-door trash collection for apartment communities"
+                  }
+                },
+                {
+                  "@type": "Offer", 
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Bulk Removal Service",
+                    "description": "Furniture and large item removal for properties"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       
       <div className="min-h-screen">
@@ -276,7 +364,7 @@ function Home() {
                     Get your free quote in under 60 seconds
                   </p>
                 </div>
-                
+                    Our core services include daily <Link to="/services/valet-trash" className="text-[#049704] hover:text-[#038203] font-medium">valet trash collection</Link> and on-demand <Link to="/services/junk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal</Link>, handled by a hands-on team that shows up on time and gets the job done right. We pay attention to the small things—clean compactor areas, bag limits enforced, and quick communication when issues arise—because those details matter to your residents.
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
                   <form onSubmit={handleFormSubmit}>
                   <div className="space-y-4">
@@ -801,6 +889,11 @@ function Home() {
                 <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
                   We're continuously expanding our service areas throughout Central Florida. Contact us to discuss service availability in your location.
                 </p>
+                <div className="mb-6">
+                  <p className="text-base text-gray-700 mb-4">
+                    Ready to enhance your property with professional waste management? Our team is standing by to create a custom solution that fits your community's needs.
+                  </p>
+                </div>
                 <Link to="/contact" className="btn-primary">
                   Check Service Availability <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

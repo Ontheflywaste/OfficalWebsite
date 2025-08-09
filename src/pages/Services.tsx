@@ -8,11 +8,60 @@ function Services() {
   return (
     <>
       <Helmet>
-        <title>Professional Valet Trash Service & Bulk Removal Orlando | On The Fly Waste Solutions</title>
-        <meta name="description" content="Expert valet trash service and doorstep trash pickup in Orlando. Reliable apartment trash services, bulk trash removal, and pressure washing services for multifamily communities across Central Florida." />
+        <title>Valet Trash & Waste Management Services | On The Fly</title>
+        <meta name="description" content="Complete waste management solutions for Orlando properties. Valet trash, bulk removal & pressure washing services for apartments and condos." />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, pressure washing services Orlando, multifamily waste solutions Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services" />
         <link rel="preload" as="image" href="/Images/our services image.png" />
+        
+        {/* Service Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Waste Management Services",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "On The Fly Waste Solutions",
+              "telephone": "+1-407-274-5019",
+              "url": "https://ontheflywastesolutions.com"
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "Florida"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Property Waste Management Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Valet Trash Service",
+                    "url": "https://ontheflywastesolutions.com/services/valet-trash"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service", 
+                    "name": "Junk Removal Service",
+                    "url": "https://ontheflywastesolutions.com/services/junk-removal"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pressure Washing Service", 
+                    "url": "https://ontheflywastesolutions.com/services/pressure-washing"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen pt-24 md:pt-0">

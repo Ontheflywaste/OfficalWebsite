@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Leaf, Award, Target, CheckCircle2, Phone, Mail, Linkedin } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 
 function About() {

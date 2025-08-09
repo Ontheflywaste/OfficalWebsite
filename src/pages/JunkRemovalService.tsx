@@ -363,27 +363,6 @@ function JunkRemovalService() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <ScrollReveal>
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready for Professional Junk Removal Service?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get fast, reliable junk removal service in Orlando with same-day availability and eco-friendly disposal practices.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact" className="btn-primary">
-                  Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-gray-900">
-                  <Phone className="mr-2 h-5 w-5" /> 407-274-5019
-                </a>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
       </div>
     </>
   );

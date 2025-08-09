@@ -362,7 +362,7 @@ function PressureWashingService() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-900">
+        <section className="py-20 bg-gradient-to-br from-[#049704] to-[#038203]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <ScrollReveal>
               <h2 className="text-3xl font-bold text-white mb-6">

@@ -277,7 +277,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+
         {/* Company Timeline */}
         <div className="py-20 bg-gradient-to-br from-[#049704]/5 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -394,6 +394,8 @@ function About() {
             </ScrollReveal>
           </div>
         </div>
+      </div>
+    </>
 
   );
 }

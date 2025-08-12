@@ -311,7 +311,7 @@ function About() {
                   {
                     year: "2022",
                     title: "Industry Recognition",
-                    description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), solidifying our commitment to professional standards and industry best practices.",
+                    description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), Florida Apartment Association (FAA), and National Apartment Association (NAA), solidifying our commitment to professional standards and industry best practices.",
                     side: "left"
                   },
                   {

@@ -278,6 +278,123 @@ function About() {
         </div>
       </div>
     </>
+        {/* Company Timeline */}
+        <div className="py-20 bg-gradient-to-br from-[#049704]/5 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Journey Through the Years</h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  From startup to industry leader - discover the key milestones that shaped On The Fly Waste Solutions
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-[#049704]/20 hidden md:block"></div>
+              
+              <div className="space-y-12">
+                {[
+                  {
+                    year: "2020",
+                    title: "Company Launch",
+                    description: "On The Fly Waste Solutions officially launched into the valet trash industry, bringing professional waste management services to Central Florida multifamily communities.",
+                    side: "left"
+                  },
+                  {
+                    year: "2021",
+                    title: "Major Partnership Milestone",
+                    description: "Acquired our first major partnership with Encore Resort at Reunion, establishing our reputation for serving premium resort-style communities with exceptional service standards.",
+                    side: "right"
+                  },
+                  {
+                    year: "2022",
+                    title: "Industry Recognition",
+                    description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), solidifying our commitment to professional standards and industry best practices.",
+                    side: "left"
+                  },
+                  {
+                    year: "2023",
+                    title: "1,500+ Happy Clients",
+                    description: "Reached a significant milestone of serving over 1,500 satisfied residents across Central Florida, demonstrating our commitment to reliable service and customer satisfaction.",
+                    side: "right"
+                  },
+                  {
+                    year: "2024",
+                    title: "Premium Partnership Expansion",
+                    description: "Acquired major partnerships with prestigious properties including Margaritaville Resort and Reunion Resort at Orlando, expanding our portfolio of luxury community services.",
+                    side: "left"
+                  },
+                  {
+                    year: "2025",
+                    title: "Industry Leadership",
+                    description: "Now proudly serving 2,500+ residents and partnered with leading management companies including ZRS Management, Rangewater Management, Artemis Lifestyles, Venterra Realty, and RPM Living.",
+                    side: "right"
+                  }
+                ].map((milestone, index) => (
+                  <ScrollReveal 
+                    key={milestone.year}
+                    direction={milestone.side === 'left' ? 'left' : 'right'}
+                    delay={index * 0.1}
+                  >
+                    <div className={`relative flex items-center ${
+                      milestone.side === 'left' 
+                        ? 'md:justify-start' 
+                        : 'md:justify-end'
+                    } justify-center`}>
+                      {/* Timeline dot */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#049704] rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
+                      
+                      {/* Content card */}
+                      <div className={`bg-white rounded-xl shadow-lg p-6 max-w-md w-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                        milestone.side === 'left' 
+                          ? 'md:mr-8 md:text-right' 
+                          : 'md:ml-8 md:text-left'
+                      } text-center md:text-left`}>
+                        <div className={`flex items-center mb-3 ${
+                          milestone.side === 'left' 
+                            ? 'md:justify-end justify-center' 
+                            : 'md:justify-start justify-center'
+                        }`}>
+                          <div className="w-12 h-12 bg-[#049704] text-white rounded-full flex items-center justify-center font-bold text-sm mr-3 md:mr-0">
+                            {milestone.year}
+                          </div>
+                          {milestone.side === 'right' && (
+                            <div className="hidden md:block ml-3">
+                              <h3 className="text-xl font-bold text-gray-900">{milestone.title}</h3>
+                            </div>
+                          )}
+                          {milestone.side === 'left' && (
+                            <div className="hidden md:block mr-3 text-right">
+                              <h3 className="text-xl font-bold text-gray-900">{milestone.title}</h3>
+                            </div>
+                          )}
+                        </div>
+                        <div className="md:hidden mb-3">
+                          <h3 className="text-xl font-bold text-gray-900">{milestone.title}</h3>
+                        </div>
+                        <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+
+            <ScrollReveal delay={0.6}>
+              <div className="text-center mt-16">
+                <div className="bg-[#049704]/10 rounded-2xl p-8 max-w-3xl mx-auto">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Looking Ahead</h3>
+                  <p className="text-lg text-gray-700">
+                    As we continue to grow and serve more communities across Central Florida, our commitment to excellence, innovation, and exceptional service remains stronger than ever. The future holds exciting opportunities to expand our impact and continue setting new standards in the valet trash industry.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+
   );
 }
 

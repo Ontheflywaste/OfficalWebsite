@@ -271,6 +271,30 @@ function About() {
                     title: "1,000+ Happy Residents",
                     description: "Now serving over 1,000 residents across Central Florida with 100% customer satisfaction rate.",
                     side: "right"
+                  },
+                  {
+                    year: "2024",
+                    title: "Technology Integration",
+                    description: "Implemented advanced service tracking technology with photo verification and real-time reporting for enhanced transparency.",
+                    side: "left"
+                  },
+                  {
+                    year: "2023",
+                    title: "Sustainability Initiative",
+                    description: "Launched comprehensive recycling and eco-friendly disposal programs, diverting 40% of waste from landfills.",
+                    side: "right"
+                  },
+                  {
+                    year: "2022",
+                    title: "Emergency Response Program",
+                    description: "Established 24/7 emergency response capabilities with same-day service guarantee for urgent waste removal needs.",
+                    side: "left"
+                  },
+                  {
+                    year: "2021",
+                    title: "Staff Certification Program",
+                    description: "Implemented comprehensive training and certification program ensuring all team members meet industry safety and service standards.",
+                    side: "right"
                   }
                 ].map((milestone, index) => (
                   <ScrollReveal 

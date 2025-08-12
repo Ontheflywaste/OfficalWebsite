@@ -218,6 +218,92 @@ function About() {
           </div>
         </div>
 
+        {/* Company Milestones */}
+        <div className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-gray-900">Company Milestones</h2>
+                <p className="mt-4 text-lg text-gray-600">
+                  Key achievements that demonstrate our growth and commitment to excellence
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-[#049704]"></div>
+              
+              <div className="space-y-12">
+                {[
+                  {
+                    year: "2020",
+                    title: "Company Founded",
+                    description: "On The Fly Waste Solutions established with a mission to revolutionize valet trash services in Central Florida.",
+                    side: "left"
+                  },
+                  {
+                    year: "2021",
+                    title: "First 100 Units Served",
+                    description: "Reached our first major milestone serving 100 residential units across Orlando area properties.",
+                    side: "right"
+                  },
+                  {
+                    year: "2022",
+                    title: "Industry Association Memberships",
+                    description: "Became proud members of AAGO, Florida Apartment Association, and National Apartment Association.",
+                    side: "left"
+                  },
+                  {
+                    year: "2023",
+                    title: "500+ Units Under Management",
+                    description: "Expanded service to over 500 residential units, establishing ourselves as a trusted partner for property managers.",
+                    side: "right"
+                  },
+                  {
+                    year: "2024",
+                    title: "Premium Property Partnerships",
+                    description: "Secured contracts with premier communities including Encore Resort at Reunion and Margaritaville Resort.",
+                    side: "left"
+                  },
+                  {
+                    year: "2025",
+                    title: "1,000+ Happy Residents",
+                    description: "Now serving over 1,000 residents across Central Florida with 100% customer satisfaction rate.",
+                    side: "right"
+                  }
+                ].map((milestone, index) => (
+                  <ScrollReveal 
+                    key={index}
+                    direction={milestone.side === 'left' ? 'left' : 'right'}
+                    delay={index * 0.1}
+                  >
+                    <div className={`relative flex items-center ${milestone.side === 'left' ? 'justify-start' : 'justify-end'}`}>
+                      {/* Timeline dot */}
+                      <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#049704] rounded-full border-4 border-white shadow-lg z-10"></div>
+                      
+                      {/* Content */}
+                      <div className={`w-5/12 ${milestone.side === 'left' ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+                          <div className={`text-2xl font-bold text-[#049704] mb-2 ${milestone.side === 'left' ? 'text-right' : 'text-left'}`}>
+                            {milestone.year}
+                          </div>
+                          <h3 className={`text-xl font-bold text-gray-900 mb-3 ${milestone.side === 'left' ? 'text-right' : 'text-left'}`}>
+                            {milestone.title}
+                          </h3>
+                          <p className={`text-gray-600 ${milestone.side === 'left' ? 'text-right' : 'text-left'}`}>
+                            {milestone.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Why Choose Us */}
         <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

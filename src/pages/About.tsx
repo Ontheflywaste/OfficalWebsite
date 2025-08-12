@@ -394,7 +394,6 @@ function About() {
             </ScrollReveal>
           </div>
         </div>
-      </div>
     </>
 
   );

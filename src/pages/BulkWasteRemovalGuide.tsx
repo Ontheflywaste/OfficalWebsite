@@ -83,7 +83,7 @@ function BulkWasteRemovalGuide() {
       <div className="min-h-screen pt-24">
         {/* Hero Section */}
         <section className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-20" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">

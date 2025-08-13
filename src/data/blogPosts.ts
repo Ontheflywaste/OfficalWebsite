@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
     id: 'new-construction-apartments-valet-trash-guide',
     title: 'Valet Trash for New Construction Apartments: A Property Manager\'s Implementation Guide',
     excerpt: 'Essential considerations for property managers implementing <a href="/services/valet-trash" class="text-[#049704] hover:text-[#038203] font-medium">valet trash services</a> in new construction apartment communities from day one.',
-    date: 'January 20, 2025',
+    date: 'August 13, 2025',
     readTime: '8 min read',
     author: 'Donnell Edwards',
     image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1200',

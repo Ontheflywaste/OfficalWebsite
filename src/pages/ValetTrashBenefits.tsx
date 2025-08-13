@@ -49,21 +49,27 @@ function ValetTrashBenefits() {
 
       <div className="min-h-screen pt-24">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-[#049704]/10 text-[#049704] rounded-full text-sm font-medium mb-4">
-                  Property Management Insights
-                </span>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Valet Trash Benefits for Apartment Communities
+        <section className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-28">
+              <ScrollReveal>
+                <div className="mb-6">
+                  <span className="inline-block px-4 py-2 bg-[#049704]/20 text-[#049704] rounded-full text-sm font-medium backdrop-blur-sm border border-[#049704]/30">
+                    Property Management Insights
+                  </span>
+                </div>
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  Valet Trash Benefits for
+                  <span className="block text-[#049704]">Apartment Communities</span>
                 </h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                   Discover how professional valet trash services transform apartment living while boosting property value and resident satisfaction
                 </p>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
         </section>
 

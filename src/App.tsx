@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AnimatePresence } from 'framer-motion';
+import React, { Suspense } from 'react';
 import Layout from './components/Layout';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
@@ -38,6 +39,16 @@ function ScrollToTopOnNavigate() {
   return null;
 }
 
+// Error Boundary Component
+class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean}> {
+  state = { hasError: false };
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(err: Error) { console.error(err); }
+  render() { 
+    return this.state.hasError ? <div className="p-6">Something went wrong. Please refresh.</div> : this.props.children; 
+  }
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -45,7 +56,9 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <React.Suspense fallback={<PageLoader />}>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/" element={
+            <PageTransition><Home /></PageTransition>
+          } />
           <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
@@ -70,11 +83,15 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <SkipToMain />
-      <ScrollToTopOnNavigate />
-      <Layout>
-        <main id="main-content">
-          <AnimatedRoutes />
+      <ErrorBoundary>
+        <SkipToMain />
+        <ScrollToTopOnNavigate />
+        <Layout>
+          <main id="main-content">
+            <Suspense fallback={<div className="p-6">Loading...</div>}>
+              <AnimatedRoutes />
+            </Suspense>
+          </main>
         </main>
       </Layout>
       <ScrollToTop />
@@ -89,6 +106,7 @@ function App() {
         }}
       />
     </Router>
+      </ErrorBoundary>
   );
 }
 

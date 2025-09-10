@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AnimatePresence } from 'framer-motion';
+import { lazy, Suspense } from 'react';
 import Layout from './components/Layout';
 import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
@@ -9,7 +10,7 @@ import SkipToMain from './components/SkipToMain';
 import PageTransition from './components/PageTransition';
 
 // Lazy load all pages for better code splitting
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Reviews = React.lazy(() => import('./pages/Reviews'));
@@ -38,6 +39,16 @@ function ScrollToTopOnNavigate() {
   return null;
 }
 
+// Error Boundary Component
+class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean}> {
+  state = { hasError: false };
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(err: Error) { console.error(err); }
+  render() { 
+    return this.state.hasError ? <div className="p-6">Something went wrong. Please refresh.</div> : this.props.children; 
+  }
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -45,7 +56,9 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait">
       <React.Suspense fallback={<PageLoader />}>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/" element={
+            <PageTransition><Home /></PageTransition>
+          } />
           <Route path="/about" element={<PageTransition><About /></PageTransition>} />
           <Route path="/services" element={<PageTransition><Services /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
@@ -69,13 +82,34 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <SkipToMain />
-      <ScrollToTopOnNavigate />
-      <Layout>
-        <main id="main-content">
-          <AnimatedRoutes />
-        </main>
+    <ErrorBoundary>
+      <Router>
+        <SkipToMain />
+        <ScrollToTopOnNavigate />
+        <Layout>
+          <main id="main-content">
+            <Suspense fallback={<div className="p-6">Loading...</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/reviews" element={<Reviews />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
+                <Route path="/services/valet-trash" element={<ValetTrashService />} />
+                <Route path="/services/junk-removal" element={<JunkRemovalService />} />
+                <Route path="/services/pressure-washing" element={<PressureWashingService />} />
+                <Route path="/blog/valet-trash-benefits" element={<ValetTrashBenefits />} />
+                <Route path="/blog/how-to-choose-valet-trash-vendor" element={<VendorSelectionGuide />} />
+                <Route path="/blog/hidden-costs-in-house-trash-management" element={<HiddenCostsTrashManagement />} />
+                <Route path="/blog/sustainable-waste-management" element={<SustainableWasteManagement />} />
+                <Route path="/blog/bulk-waste-removal-guide" element={<BulkWasteRemovalGuide />} />
+                <Route path="/blog/new-construction-apartments-valet-trash-guide" element={<NewConstructionValetTrashGuide />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
       </Layout>
       <ScrollToTop />
       <Toaster 
@@ -88,7 +122,8 @@ function App() {
           },
         }}
       />
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

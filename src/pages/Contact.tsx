@@ -616,6 +616,18 @@ function Contact() {
                     description: "Minneola, Groveland, Montverde"
                   },
                   {
+                    city: "Melbourne",
+                    description: "Palm Bay, Rockledge, Satellite Beach"
+                  },
+                  {
+                    city: "Davenport",
+                    description: "ChampionsGate, Reunion, Four Corners"
+                  },
+                  {
+                    city: "Winter Garden",
+                    description: "Windermere, Ocoee, Oakland"
+                  },
+                  {
                     city: "Davenport",
                     description: "ChampionsGate, Reunion, Four Corners"
                   },

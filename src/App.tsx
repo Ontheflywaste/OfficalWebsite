@@ -10,7 +10,7 @@ import SkipToMain from './components/SkipToMain';
 import PageTransition from './components/PageTransition';
 
 // Lazy load all pages for better code splitting
-const Home = React.lazy(() => import('./pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Reviews = React.lazy(() => import('./pages/Reviews'));

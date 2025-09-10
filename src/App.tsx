@@ -89,7 +89,25 @@ function App() {
         <Layout>
           <main id="main-content">
             <Suspense fallback={<div className="p-6">Loading...</div>}>
-              <AnimatedRoutes />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/reviews" element={<Reviews />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:id" element={<BlogPost />} />
+                <Route path="/services/valet-trash" element={<ValetTrashService />} />
+                <Route path="/services/junk-removal" element={<JunkRemovalService />} />
+                <Route path="/services/pressure-washing" element={<PressureWashingService />} />
+                <Route path="/blog/valet-trash-benefits" element={<ValetTrashBenefits />} />
+                <Route path="/blog/how-to-choose-valet-trash-vendor" element={<VendorSelectionGuide />} />
+                <Route path="/blog/hidden-costs-in-house-trash-management" element={<HiddenCostsTrashManagement />} />
+                <Route path="/blog/sustainable-waste-management" element={<SustainableWasteManagement />} />
+                <Route path="/blog/bulk-waste-removal-guide" element={<BulkWasteRemovalGuide />} />
+                <Route path="/blog/new-construction-apartments-valet-trash-guide" element={<NewConstructionValetTrashGuide />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
             </Suspense>
           </main>
       </Layout>

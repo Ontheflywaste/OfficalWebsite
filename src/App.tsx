@@ -92,7 +92,6 @@ function App() {
               <AnimatedRoutes />
             </Suspense>
           </main>
-        </main>
       </Layout>
       <ScrollToTop />
       <Toaster 

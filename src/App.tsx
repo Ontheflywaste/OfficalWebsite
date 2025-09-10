@@ -82,8 +82,8 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <ErrorBoundary>
+    <ErrorBoundary>
+      <Router>
         <SkipToMain />
         <ScrollToTopOnNavigate />
         <Layout>
@@ -104,8 +104,8 @@ function App() {
           },
         }}
       />
-    </Router>
-      </ErrorBoundary>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

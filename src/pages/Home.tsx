@@ -14,6 +14,7 @@ function Home() {
   const [isImpactVisible, setIsImpactVisible] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,6 +24,28 @@ function Home() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Membership badges data
+  const membershipBadges = [
+    {
+      image: "/Images/AAGO.png",
+      alt: "Apartment Association of Greater Orlando Member",
+      title: "Apartment Association of Greater Orlando",
+      url: "https://www.aago.org/"
+    },
+    {
+      image: "/Images/faa-full-color-full-logo.png",
+      alt: "Florida Apartment Association Member", 
+      title: "Florida Apartment Association",
+      url: "https://www.faahq.org/"
+    },
+    {
+      image: "/Images/NAA-logo_bgwhite.png",
+      alt: "National Apartment Association Member",
+      title: "National Apartment Association", 
+      url: "https://naahq.org/"
+    }
+  ];
 
   useEffect(() => {
     // Check if small screen (phones and small tablets)
@@ -66,6 +89,15 @@ function Home() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % membershipBadges.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [membershipBadges.length]);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -480,66 +512,50 @@ function Home() {
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-              <ScrollReveal delay={0.1}>
-                <a 
-                  href="https://www.aago.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/AAGO.png" 
-                    alt="Apartment Association of Greater Orlando Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
+            {/* Carousel Container */}
+            <div className="relative overflow-hidden">
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {membershipBadges.map((badge, index) => (
+                  <div key={index} className="w-full flex-shrink-0 flex justify-center">
+                    <a 
+                      href={badge.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-center group transition-transform duration-300 hover:-translate-y-1 max-w-xs"
+                    >
+                      <img 
+                        src={badge.image} 
+                        alt={badge.alt} 
+                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        width="120"
+                        height="120"
+                      />
+                      <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
+                    </a>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Carousel Indicators */}
+              <div className="flex justify-center mt-6 space-x-2">
+                {membershipBadges.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentSlide === index 
+                        ? 'bg-[#049704] scale-110' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
                   />
-                  <p className="text-sm text-gray-700 text-center">Apartment Association of Greater Orlando</p>
-                </a>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <a 
-                  href="https://www.faahq.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/faa-full-color-full-logo.png" 
-                    alt="Florida Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105 max-w-[120px]"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
-                  />
-                  <p className="text-sm text-gray-700 text-center">Florida Apartment Association</p>
-                </a>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.3}>
-                <a 
-                  href="https://naahq.org/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-center group transition-transform duration-300 hover:-translate-y-1"
-                >
-                  <img 
-                    src="/Images/NAA-logo_bgwhite.png" 
-                    alt="National Apartment Association Member" 
-                    className="h-16 sm:h-20 md:h-24 object-contain mx-auto mb-3 transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width="96"
-                    height="96"
-                  />
-                  <p className="text-sm text-gray-700 text-center">National Apartment Association</p>
-                </a>
-              </ScrollReveal>
+                ))}
+              </div>
             </div>
           </div>
         </section>

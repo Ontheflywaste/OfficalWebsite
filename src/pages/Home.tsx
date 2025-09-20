@@ -329,38 +329,43 @@ function Home() {
         <div className="hero-container">
           <div className="hero-overlay" />
           
-          {/* Video background - desktop only, lazy loaded */}
+          {/* Mobile: static hero image */}
+          <picture className="block md:hidden absolute inset-0 w-full h-full">
+            <source srcSet="/Images/gallery12813_1920x831@2x.jpg" type="image/jpeg" />
+            <img
+              src="/Images/gallery12813_1920x831@2x.jpg"
+              alt="Professional Valet Trash Collection Service Orlando"
+              width="1920"
+              height="831"
+              className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </picture>
+
+          {/* Desktop: video with poster; mobile hidden */}
           {!isSmallScreen && videoLoaded && (
             <video
               ref={videoRef}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="hidden md:block absolute inset-0 w-full h-full object-cover"
               autoPlay
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
+              poster="/Images/gallery12813_1920x831@2x.jpg"
             >
+              <source src="/videos/HerosectionvideoNew.webm" type="video/webm" />
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
             </video>
           )}
           
-          {/* Fallback image while video loads */}
+          {/* Desktop fallback image while video loads */}
           {!isSmallScreen && !videoLoaded && (
             <img
-              src="https://res.cloudinary.com/demo/image/upload/w_1920,h_1080,c_fill,f_webp,q_auto/v1/samples/landscapes/nature-mountains"
-              alt="On The Fly Waste Solutions Hero"
-              className="absolute inset-0 w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
-          )}
-          
-          {/* Small screen background image */}
-          {isSmallScreen && (
-            <img
               src="/Images/gallery12813_1920x831@2x.jpg"
-              alt="Professional Valet Trash Collection Service Orlando"
-              className="absolute inset-0 w-full h-full object-cover"
+              alt="On The Fly Waste Solutions Hero"
+              className="hidden md:block absolute inset-0 w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"
             />
@@ -567,7 +572,7 @@ function Home() {
         </section>
 
         {/* About Section */}
-        <section className="py-16 md:py-24 bg-gray-100 px-6 md:px-4">
+        <section className="py-16 md:py-24 bg-gray-100 px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
@@ -620,7 +625,7 @@ function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4">
+        <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
@@ -695,7 +700,7 @@ function Home() {
         </section>
 
         {/* Why Property Managers Choose Us */}
-        <section className="py-16 md:py-24 bg-white px-6 md:px-4">
+        <section className="py-16 md:py-24 bg-white px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
@@ -727,7 +732,7 @@ function Home() {
         </section>
 
         {/* Reviews Section */}
-        <section className="py-16 md:py-20 bg-white px-6 md:px-4">
+        <section className="py-16 md:py-20 bg-white px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
@@ -792,7 +797,7 @@ function Home() {
         </section>
 
         {/* Impact Section */}
-        <section id="impact-section" className="py-16 md:py-20 bg-gradient-to-br from-[#026502] to-[#038203] relative overflow-hidden px-6 md:px-4">
+        <section id="impact-section" className="py-16 md:py-20 bg-gradient-to-br from-[#026502] to-[#038203] relative overflow-hidden px-6 md:px-4 content-visibility-auto">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
@@ -882,7 +887,7 @@ function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 md:py-20 bg-white px-6 md:px-4">
+        <section className="py-16 md:py-20 bg-white px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
@@ -952,7 +957,7 @@ function Home() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4">
+        <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Contact Us</h2>

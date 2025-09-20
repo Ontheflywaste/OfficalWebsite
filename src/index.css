@@ -5,10 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
 /* Base styles */
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-display: swap;
 }
 
 /* Critical CSS inlined in HTML head */

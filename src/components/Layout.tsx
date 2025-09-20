@@ -486,7 +486,7 @@ function Layout({ children }: { children: React.ReactNode }) {
               <img 
                 src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                 alt="On The Fly Waste Solutions Logo" 
-                className="h-10 sm:h-12 object-contain mb-6"
+                className="h-12 sm:h-14 md:h-16 object-contain mb-6"
                 loading="lazy"
                 width="150"
                 height="48"

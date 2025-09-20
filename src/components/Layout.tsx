@@ -135,34 +135,12 @@ function Layout({ children }: { children: React.ReactNode }) {
                 aria-label="On The Fly Waste Solutions - Home"
                 className="block"
               >
-                {/* White logo */}
                 <img 
                   src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                   alt="On The Fly Waste Solutions Logo" 
                   className={`transition-all duration-500 ease-in-out ${
                     isScrolled ? 'h-16' : 'h-20'
-                  } object-contain ${
-                    shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
-                  }`}
-                  loading="eager"
-                  fetchPriority="high"
-                  width="250"
-                  height="80"
-                />
-                
-                {/* Black logo */}
-                <img 
-                  src="/Images/OTFLogoblack.jpg"
-                  alt="On The Fly Waste Solutions Logo" 
-                  className={`transition-all duration-500 ease-in-out ${
-                    isScrolled ? 'h-16' : 'h-20'
-                  } object-contain bg-transparent ${
-                    shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
-                  }`}
-                  style={{
-                    filter: 'brightness(1.1) contrast(1.1)',
-                    mixBlendMode: 'multiply'
-                  }}
+                  } object-contain`}
                   loading="eager"
                   fetchPriority="high"
                   width="250"

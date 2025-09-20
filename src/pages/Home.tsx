@@ -44,6 +44,12 @@ function Home() {
       alt: "National Apartment Association Member",
       title: "National Apartment Association", 
       url: "https://naahq.org/"
+    },
+    {
+      image: "/ReunionWestPOALOgo.jpg",
+      alt: "Reunion West Property Owners' Association Member",
+      title: "Reunion West Property Owners' Association",
+      url: "#"
     }
   ];
 

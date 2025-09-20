@@ -135,14 +135,33 @@ function Layout({ children }: { children: React.ReactNode }) {
                 aria-label="On The Fly Waste Solutions – Home"
                 className="block"
               >
-                <img 
+                {/* White logo - shows when not scrolled */}
+                <img
                   src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
-                  alt="On The Fly Waste Solutions logo"
-                  width={160}
-                  height={40}
-                  className="h-10 w-auto"
+                  alt="On The Fly Waste Solutions Logo"
+                  className={`transition-all duration-500 ease-in-out ${
+                    isScrolled ? 'h-8' : 'h-10'
+                  } object-contain ${
+                    shouldUseBlackLogo ? 'opacity-0 absolute inset-0' : 'opacity-100 relative'
+                  }`}
                   loading="eager"
-                  decoding="async"
+                  fetchPriority="high"
+                  width="160"
+                  height="40"
+                />
+                
+                {/* Black logo - shows when scrolled */}
+                <img
+                  src="/Images/OTFLogoblack.jpg"
+                  alt="On The Fly Waste Solutions Logo"
+                  className={`transition-all duration-500 ease-in-out ${
+                    isScrolled ? 'h-8' : 'h-10'
+                  } object-contain ${
+                    shouldUseBlackLogo ? 'opacity-100 relative' : 'opacity-0 absolute inset-0'
+                  }`}
+                  loading="lazy"
+                  width="160"
+                  height="40"
                 />
               </Link>
             </div>

@@ -175,18 +175,22 @@ function About() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                     <div className="p-6">
                       {member.hasImage ? (
-                        <div className="w-48 h-48 rounded-full overflow-hidden mb-6 mx-auto relative">
+                        <div className="relative w-full overflow-hidden rounded-t-xl mb-6" style={{ paddingTop: "75%" }}>
                           <img
                             src={member.image}
                             alt={member.name}
+                            width={1200}
+                            height={900}
+                            className="absolute inset-0 w-full h-full object-cover select-none"
+                            style={{
+                              objectPosition: member.name === "Trevor Alston" ? "50% 38%" : 
+                                            member.name === "Donnell Edwards" ? "50% 20%" : "50% 20%"
+                            }}
+                            loading="lazy"
+                            decoding="async"
                             onError={(e) => {
                               console.error(`Failed to load image: ${member.image}`);
                               e.currentTarget.style.display = 'none';
-                            }}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                            style={{
-                              objectPosition: member.objectPosition
                             }}
                           />
                         </div>

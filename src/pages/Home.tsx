@@ -14,6 +14,7 @@ function Home() {
   const [isImpactVisible, setIsImpactVisible] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
     name: '',
@@ -54,10 +55,12 @@ function Home() {
   ];
 
   useEffect(() => {
-    // Check if small screen (phones and small tablets)
+    // Check screen sizes
     const checkScreenSize = () => {
-      // Use 900px as breakpoint to include most tablets in landscape mode
+      // Small screen: phones and small tablets
       setIsSmallScreen(window.innerWidth < 900);
+      // Tablet: between 768px and 1024px
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth <= 1024);
     };
     
     checkScreenSize();
@@ -78,7 +81,7 @@ function Home() {
       clearTimeout(timer);
       window.removeEventListener('resize', checkScreenSize);
     };
-  }, [isSmallScreen]);
+  }, [isSmallScreen, isTablet]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -343,8 +346,23 @@ function Home() {
             />
           </picture>
 
+          {/* iPad: static hero image */}
+          {isTablet && (
+            <picture className="hidden md:block lg:hidden absolute inset-0 w-full h-full">
+              <img
+                src="/Images/ChatGPT Image May 21, 2025, 12_09_47 PM.png"
+                alt="Professional Valet Trash Collection Service Orlando"
+                width="1920"
+                height="831"
+                className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </picture>
+          )}
+
           {/* Desktop: video with poster; mobile hidden */}
-          {!isSmallScreen && videoLoaded && (
+          {!isSmallScreen && !isTablet && videoLoaded && (
             <video
               ref={videoRef}
               className="hidden md:block absolute inset-0 w-full h-full object-cover"
@@ -360,7 +378,48 @@ function Home() {
           )}
           
           {/* Hero content - Desktop */}
-          {!isSmallScreen && (
+          {!isSmallScreen && !isTablet && (
+            <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
+              <div className="max-w-6xl mx-auto text-center">
+                <h1 className="hero-title text-center">
+                  Valet Trash & Bulk Removal Services
+                </h1>
+                <p className="hero-subtitle text-center mx-auto">
+                  Orlando's trusted door to door trash pickup service for apartments, condos, and resort-style communities
+                </p>
+                <div className="mb-6">
+                  <div className="inline-flex items-center space-x-6 bg-white/10 backdrop-blur-lg rounded-full px-6 py-3">
+                    <div className="flex items-center text-white">
+                      <Clock className="h-5 w-5 mr-2" />
+                      <span>24/7 Support</span>
+                    </div>
+                    <div className="hidden md:block w-px h-6 bg-white/20"></div>
+                    <div className="flex items-center text-white">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      <span>7 Days a Week</span>
+                    </div>
+                    <div className="hidden md:block w-px h-6 bg-white/20"></div>
+                    <div className="flex items-center text-white">
+                      <Truck className="h-5 w-5 mr-2" />
+                      <span>Same Day Service</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex justify-center mt-8">
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-xl border-2 border-transparent hover:border-white/20"
+                  >
+                    <span className="text-center">Get Your Free Quote Today</span>
+                    <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          {/* Hero content - iPad */}
+          {isTablet && (
             <div className={`hero-content ${isHeroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transition-all duration-1000`} style={{ paddingTop: '15vh' }}>
               <div className="max-w-6xl mx-auto text-center">
                 <h1 className="hero-title text-center">

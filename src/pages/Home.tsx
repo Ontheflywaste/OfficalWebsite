@@ -51,12 +51,6 @@ function Home() {
       alt: "Reunion West Property Owners' Association Member",
       title: "Reunion West Property Owners' Association",
       url: "#"
-    },
-    {
-      image: "/Images/IMG_9868.JPG",
-      alt: "Professional Association Member",
-      title: "Professional Association Member",
-      url: "#"
     }
   ];
 

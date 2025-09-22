@@ -181,7 +181,7 @@ function About() {
                             alt={member.name}
                             width={1000}
                             height={1000}
-                            className="w-full h-64 object-cover rounded-lg"
+                            className="absolute inset-0 h-full w-full object-cover select-none"
                             style={{
                               objectPosition: member.name === "Donnell Edwards" ? "50% 32%" :
                                             member.name === "Trevor Alston" ? "50% 45%" : "50% 46%"
@@ -189,7 +189,8 @@ function About() {
                             loading="lazy"
                             decoding="async"
                             onError={(e) => {
-                              e.currentTarget.src = '/Images/placeholder.jpg';
+                              console.error(`Failed to load image: ${member.image}`);
+                              e.currentTarget.style.display = 'none';
                             }}
                           />
                         </div>

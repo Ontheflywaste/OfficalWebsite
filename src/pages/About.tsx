@@ -173,22 +173,22 @@ function About() {
                   delay={index * 0.1}
                 >
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
+                    {member.hasImage ? (
+                      <div className="w-full h-48 relative overflow-hidden">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                          style={{ objectPosition: 'center top' }}
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-full h-48 bg-[#049704] flex items-center justify-center">
+                        <span className="text-4xl font-bold text-white">{member.name.charAt(0)}</span>
+                      </div>
+                    )}
                     <div className="p-6">
-                      {member.hasImage ? (
-                        <div className="w-32 h-32 rounded-full overflow-hidden mb-6 mx-auto relative">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover"
-                            style={{ objectPosition: 'center top' }}
-                            loading="lazy"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-16 h-16 bg-[#049704] rounded-full flex items-center justify-center mb-4 mx-auto">
-                          <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
-                        </div>
-                      )}
                       <h3 className="text-xl font-bold text-gray-900 text-center">{member.name}</h3>
                       <p className="text-[#049704] font-medium mb-4 text-center">{member.title}</p>
                       <p className="text-gray-600 mb-6 text-center leading-relaxed">{member.bio}</p>

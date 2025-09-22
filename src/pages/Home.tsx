@@ -72,6 +72,24 @@ function Home() {
     };
   }, [isSmallScreen]);
 
+  // Attempt to play video programmatically for better iPad support
+  useEffect(() => {
+    if (videoRef.current && !isSmallScreen) {
+      const playVideo = async () => {
+        try {
+          await videoRef.current?.play();
+        } catch (error) {
+          console.warn('Video autoplay failed:', error);
+          // This is expected on some devices/browsers due to autoplay policies
+        }
+      };
+      
+      // Small delay to ensure video element is fully loaded
+      const timer = setTimeout(playVideo, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isSmallScreen]);
+
   useEffect(() => {
     const handleScroll = () => {
       const impactSection = document.getElementById('impact-section');

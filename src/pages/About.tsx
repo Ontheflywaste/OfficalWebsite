@@ -173,21 +173,21 @@ function About() {
                   delay={index * 0.1}
                 >
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
-                    {member.hasImage ? (
-                      <div className="w-full h-48 relative overflow-hidden">
+                    <div className="w-full h-64 aspect-[3/4] relative overflow-hidden">
+                      {member.hasImage ? (
                         <img
                           src={member.image}
                           alt={member.name}
-                          className="w-full h-full object-cover"
-                         style={{ objectPosition: member.name === 'Donnell Edwards' ? 'center 15%' : 'center top' }}
+                          className="object-cover w-full h-full rounded-t-lg"
+                          style={{ objectPosition: member.name === 'Donnell Edwards' ? 'center 15%' : 'center top' }}
                           loading="lazy"
                         />
-                      </div>
-                    ) : (
-                      <div className="w-full h-48 bg-[#049704] flex items-center justify-center">
-                        <span className="text-4xl font-bold text-white">{member.name.charAt(0)}</span>
-                      </div>
-                    )}
+                      ) : (
+                        <div className="w-full h-full bg-[#049704] flex items-center justify-center rounded-t-lg">
+                          <span className="text-4xl font-bold text-white">{member.name.charAt(0)}</span>
+                        </div>
+                      )}
+                    </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 text-center">{member.name}</h3>
                       <p className="text-[#049704] font-medium mb-4 text-center">{member.title}</p>

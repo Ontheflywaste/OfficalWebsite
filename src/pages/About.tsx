@@ -183,7 +183,8 @@ function About() {
                             height={1200}
                             className="absolute inset-0 w-full h-full object-cover select-none rounded-none"
                             style={{
-                              objectPosition: member.name === "Trevor Alston" ? "50% 42%" : 
+                              objectFit: member.name === "Trevor Alston" ? "contain" : "cover",
+                              objectPosition: member.name === "Trevor Alston" ? "50% 50%" : 
                                             member.name === "Donnell Edwards" ? "50% 30%" : "50% 48%"
                             }}
                             style={{

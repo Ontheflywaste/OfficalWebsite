@@ -188,8 +188,7 @@ function About() {
                                             member.name === "Donnell Edwards" ? "50% 40%" : "50% 48%"
                             }}
                             style={{
-                              objectFit: member.name === "Donnell Edwards" ? "contain" : 
-                                        member.name === "Trevor Alston" ? "contain" : "cover",
+                              objectFit: "contain",
                               objectPosition: member.name === "Trevor Alston" ? "50% 50%" : 
                                             member.name === "Donnell Edwards" ? "50% 50%" : "50% 48%"
                             }}

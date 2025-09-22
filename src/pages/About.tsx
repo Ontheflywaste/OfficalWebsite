@@ -142,7 +142,7 @@ function About() {
                 {
                   name: "Donnell Edwards",
                   title: "Founder & CEO",
-                  image: "/images/team/donnell-edwards.jpg",
+                  image: "/Images/Donnell2.jpg",
                   bio: "As the visionary founder of On The Fly Waste Solutions, Donnell has revolutionized valet trash services across Central Florida. With an unwavering commitment to excellence and innovation, he has built a company that sets new standards in the industry. His leadership philosophy combines cutting-edge operational efficiency with exceptional customer service, ensuring that every client receives the highest quality waste management solutions.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -151,7 +151,7 @@ function About() {
                 {
                   name: "Trevor Alston",
                   title: "Vice President",
-                  image: "/images/team/trevor-alston.jpg",
+                  image: "/Images/Trevor.jpg",
                   bio: "Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -160,7 +160,7 @@ function About() {
                 {
                   name: "Steven Edwards",
                   title: "Chief Financial Officer",
-                  image: "/images/team/steven-edwards.jpg",
+                  image: "/Images/Steven2.jpg",
                   bio: "With over 20 years of experience in financial management and tax strategy, Steven brings unparalleled expertise to On The Fly Waste Solutions. His comprehensive background in corporate finance, tax planning, and business development has been crucial in driving our company's financial success and sustainable growth. Steven's strategic financial leadership ensures strong fiscal management while maximizing operational efficiency and maintaining the highest standards of financial compliance and transparency.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -181,7 +181,7 @@ function About() {
                             alt={member.name}
                             width={1000}
                             height={1000}
-                            className="absolute inset-0 h-full w-full object-cover rounded-none select-none"
+                            className="absolute inset-0 h-full w-full object-cover select-none"
                             style={{
                               objectPosition: member.name === "Donnell Edwards" ? "50% 32%" :
                                             member.name === "Trevor Alston" ? "50% 45%" : "50% 46%"
@@ -189,7 +189,8 @@ function About() {
                             loading="lazy"
                             decoding="async"
                             onError={(e) => {
-                              (e.currentTarget as HTMLImageElement).src = "/images/team/placeholder.webp";
+                              console.error(`Failed to load image: ${member.image}`);
+                              e.currentTarget.style.display = 'none';
                             }}
                           />
                         </div>

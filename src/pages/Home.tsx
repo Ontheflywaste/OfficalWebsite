@@ -12,6 +12,7 @@ const loadEmailJS = () => import('@emailjs/browser');
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
@@ -64,6 +65,13 @@ function Home() {
     
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
+      
+      // Lazy load video after paint (larger screens only)
+      if (!isSmallScreen) {
+        requestIdleCallback(() => {
+          setVideoLoaded(true);
+        });
+      }
     }, 100);
 
     return () => {
@@ -336,7 +344,7 @@ function Home() {
           </picture>
 
           {/* Desktop: video with poster; mobile hidden */}
-          {!isSmallScreen && (
+          {!isSmallScreen && videoLoaded && (
             <video
               ref={videoRef}
               className="hidden md:block absolute inset-0 w-full h-full object-cover"
@@ -344,7 +352,7 @@ function Home() {
               muted
               loop
               playsInline
-              preload="auto"
+              preload="none"
             >
               <source src="/videos/HerosectionvideoNew.webm" type="video/webm" />
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />

@@ -274,7 +274,6 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
 
         {/* Company Timeline */}
         <div className="py-20 bg-gradient-to-br from-[#049704]/5 to-white">
@@ -297,7 +296,8 @@ function About() {
                   {
                     year: "2020",
                     title: "Company Launch",
-                   image: "/images/team/donnell.webp",
+                    description: "Founded On The Fly Waste Solutions with a vision to revolutionize valet trash services in Central Florida through innovation and exceptional customer service.",
+                    image: "/images/team/donnell.webp",
                     side: "left"
                   },
                   {
@@ -310,25 +310,30 @@ function About() {
                     year: "2022",
                     title: "Industry Recognition",
                     description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), Florida Apartment Association (FAA), and National Apartment Association (NAA), solidifying our commitment to professional standards and industry best practices.",
-                   focalClass: "object-[50%_28%]"
+                    focalClass: "object-[50%_28%]",
+                    side: "left"
                   },
                   {
                     year: "2023",
                     title: "1,500+ Happy Clients",
-                   image: "/images/team/trevor.webp",
+                    description: "Reached a major milestone of serving over 1,500 satisfied clients across Central Florida, demonstrating our commitment to quality service and customer satisfaction.",
+                    image: "/images/team/trevor.webp",
                     side: "right"
                   },
                   {
-                   focalClass: "object-[50%_30%]"
+                    year: "2024",
+                    focalClass: "object-[50%_30%]",
                     title: "Premium Partnership Expansion",
                     description: "Acquired major partnerships with prestigious properties including Margaritaville Resort and Reunion Resort at Orlando, expanding our portfolio of luxury community services.",
                     side: "left"
                   },
-                   image: "/images/team/steven.webp",
+                  {
+                    image: "/images/team/steven.webp",
                     year: "2025",
                     title: "Industry Leadership",
                     description: "Now proudly serving 2,500+ residents and partnered with leading management companies including ZRS Management, Rangewater Management, Artemis Lifestyles, Venterra Realty, and RPM Living.",
-                   focalClass: "object-[50%_36%]"
+                    focalClass: "object-[50%_36%]",
+                    side: "right"
                   }
                 ].map((milestone, index) => (
                   <ScrollReveal 
@@ -337,7 +342,7 @@ function About() {
                     delay={index * 0.1}
                   >
                     <div className={`relative flex items-center ${
-                     <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
+                      milestone.side === 'left' 
                         ? 'md:justify-start' 
                         : 'md:justify-end'
                     } justify-center`}>
@@ -349,15 +354,13 @@ function About() {
                         milestone.side === 'left' 
                           ? 'md:mr-8 md:text-right' 
                           : 'md:ml-8 md:text-left'
-                           alt={`${member.name} - ${member.title}`}
-                           width="1200"
-                           height="900"
-                           className={`absolute inset-0 h-full w-full object-cover ${member.focalClass} select-none`}
+                      }`}>
+                        <div className={`flex items-center mb-4 ${
+                          milestone.side === 'left' 
                             ? 'md:justify-end justify-center' 
-                           decoding="async"
                             : 'md:justify-start justify-center'
                         }`}>
-                         <div className="w-full h-full bg-[#049704] flex items-center justify-center">
+                          <div className="bg-[#049704] text-white px-4 py-2 rounded-full font-bold text-lg">
                             {milestone.year}
                           </div>
                           {milestone.side === 'right' && (
@@ -394,8 +397,8 @@ function About() {
             </ScrollReveal>
           </div>
         </div>
+      </div>
     </>
-
   );
 }
 

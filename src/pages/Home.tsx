@@ -560,8 +560,8 @@ function Home() {
 
         {/* Membership Badges Section */}
         <section className="py-12 bg-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/Images/artemistradeshow.jpg')] bg-cover bg-center opacity-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/90" />
+          <div className="absolute inset-0 bg-[url('/Images/artemistradeshow.jpg')] bg-cover bg-center opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/70" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">

@@ -353,22 +353,10 @@ function Home() {
               loop
               playsInline
               preload="none"
-              poster="/Images/gallery12813_1920x831@2x.jpg"
             >
               <source src="/videos/HerosectionvideoNew.webm" type="video/webm" />
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
             </video>
-          )}
-          
-          {/* Desktop fallback image while video loads */}
-          {!isSmallScreen && !videoLoaded && (
-            <img
-              src="/Images/gallery12813_1920x831@2x.jpg"
-              alt="On The Fly Waste Solutions Hero"
-              className="hidden md:block absolute inset-0 w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
-            />
           )}
           
           {/* Hero content - Desktop */}

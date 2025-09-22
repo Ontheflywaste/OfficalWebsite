@@ -151,10 +151,10 @@ function About() {
                 {
                   name: "Trevor Alston",
                   title: "Vice President",
-                  image: "/Images/Trevor.jpg",
+                  image: "/Images/TrevorAlston.jpg",
                   bio: "Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
-                  hasImage: false,
+                  hasImage: true,
                   objectPosition: "50% 20%"
                 },
                 {

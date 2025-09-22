@@ -151,7 +151,7 @@ function About() {
                 {
                   name: "Trevor Alston",
                   title: "Vice President",
-                  image: "/Images/Trevor.jpg",
+                  image: "/Images/4D4435D3-67E3-4455-925B-2543F5C84AEC.jpeg",
                   bio: "Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -173,22 +173,24 @@ function About() {
                   delay={index * 0.1}
                 >
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
-                    <div className="w-full h-64 aspect-[3/4] relative overflow-hidden">
+                    <div className="p-6">
                       {member.hasImage ? (
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          className="object-cover w-full h-full rounded-t-lg"
-                          style={{ objectPosition: member.name === 'Donnell Edwards' ? 'center 15%' : 'center top' }}
-                          loading="lazy"
-                        />
+                        <div className="w-48 h-48 rounded-full overflow-hidden mb-6 mx-auto relative">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                            style={{
+                              objectPosition: member.objectPosition
+                            }}
+                          />
+                        </div>
                       ) : (
-                        <div className="w-full h-full bg-[#049704] flex items-center justify-center rounded-t-lg">
-                          <span className="text-4xl font-bold text-white">{member.name.charAt(0)}</span>
+                        <div className="w-16 h-16 bg-[#049704] rounded-full flex items-center justify-center mb-4 mx-auto">
+                          <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
                         </div>
                       )}
-                    </div>
-                    <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 text-center">{member.name}</h3>
                       <p className="text-[#049704] font-medium mb-4 text-center">{member.title}</p>
                       <p className="text-gray-600 mb-6 text-center leading-relaxed">{member.bio}</p>
@@ -274,6 +276,7 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Company Timeline */}
         <div className="py-20 bg-gradient-to-br from-[#049704]/5 to-white">
@@ -296,8 +299,7 @@ function About() {
                   {
                     year: "2020",
                     title: "Company Launch",
-                    description: "Founded On The Fly Waste Solutions with a vision to revolutionize valet trash services in Central Florida through innovation and exceptional customer service.",
-                    image: "/images/team/donnell.webp",
+                    description: "On The Fly Waste Solutions officially launched into the valet trash industry, bringing professional waste management services to Central Florida multifamily communities.",
                     side: "left"
                   },
                   {
@@ -310,29 +312,24 @@ function About() {
                     year: "2022",
                     title: "Industry Recognition",
                     description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), Florida Apartment Association (FAA), and National Apartment Association (NAA), solidifying our commitment to professional standards and industry best practices.",
-                    focalClass: "object-[50%_28%]",
                     side: "left"
                   },
                   {
                     year: "2023",
                     title: "1,500+ Happy Clients",
-                    description: "Reached a major milestone of serving over 1,500 satisfied clients across Central Florida, demonstrating our commitment to quality service and customer satisfaction.",
-                    image: "/images/team/trevor.webp",
+                    description: "Reached a significant milestone of serving over 1,500 satisfied residents across Central Florida, demonstrating our commitment to reliable service and customer satisfaction.",
                     side: "right"
                   },
                   {
                     year: "2024",
-                    focalClass: "object-[50%_30%]",
                     title: "Premium Partnership Expansion",
                     description: "Acquired major partnerships with prestigious properties including Margaritaville Resort and Reunion Resort at Orlando, expanding our portfolio of luxury community services.",
                     side: "left"
                   },
                   {
-                    image: "/images/team/steven.webp",
                     year: "2025",
                     title: "Industry Leadership",
                     description: "Now proudly serving 2,500+ residents and partnered with leading management companies including ZRS Management, Rangewater Management, Artemis Lifestyles, Venterra Realty, and RPM Living.",
-                    focalClass: "object-[50%_36%]",
                     side: "right"
                   }
                 ].map((milestone, index) => (
@@ -354,13 +351,13 @@ function About() {
                         milestone.side === 'left' 
                           ? 'md:mr-8 md:text-right' 
                           : 'md:ml-8 md:text-left'
-                      }`}>
-                        <div className={`flex items-center mb-4 ${
+                      } text-center md:text-left`}>
+                        <div className={`flex items-center mb-3 ${
                           milestone.side === 'left' 
                             ? 'md:justify-end justify-center' 
                             : 'md:justify-start justify-center'
                         }`}>
-                          <div className="bg-[#049704] text-white px-4 py-2 rounded-full font-bold text-lg">
+                          <div className="w-12 h-12 bg-[#049704] text-white rounded-full flex items-center justify-center font-bold text-sm mr-3 md:mr-0">
                             {milestone.year}
                           </div>
                           {milestone.side === 'right' && (
@@ -397,8 +394,8 @@ function About() {
             </ScrollReveal>
           </div>
         </div>
-      </div>
     </>
+
   );
 }
 

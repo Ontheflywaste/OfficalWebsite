@@ -175,7 +175,7 @@ function About() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                     <div className="p-6">
                       {member.hasImage ? (
-                        <div className="relative w-full overflow-hidden rounded-t-xl mb-6" style={{ paddingTop: "133.3333%" }}>
+                        <div className="relative w-full overflow-hidden rounded-t-xl mb-6" style={{ paddingTop: "100%" }}>
                           <img
                             src={member.image}
                             alt={member.name}

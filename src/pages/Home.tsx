@@ -12,7 +12,6 @@ const loadEmailJS = () => import('@emailjs/browser');
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [formData, setFormData] = useState({
@@ -65,19 +64,30 @@ function Home() {
     
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
-      
-      // Lazy load video after paint (larger screens only)
-      if (!isSmallScreen) {
-        requestIdleCallback(() => {
-          setVideoLoaded(true);
-        });
-      }
     }, 100);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener('resize', checkScreenSize);
     };
+  }, [isSmallScreen]);
+
+  // Attempt to play video programmatically for better iPad support
+  useEffect(() => {
+    if (videoRef.current && !isSmallScreen) {
+      const playVideo = async () => {
+        try {
+          await videoRef.current?.play();
+        } catch (error) {
+          console.warn('Video autoplay failed:', error);
+          // This is expected on some devices/browsers due to autoplay policies
+        }
+      };
+      
+      // Small delay to ensure video element is fully loaded
+      const timer = setTimeout(playVideo, 500);
+      return () => clearTimeout(timer);
+    }
   }, [isSmallScreen]);
 
   useEffect(() => {
@@ -344,7 +354,7 @@ function Home() {
           </picture>
 
           {/* Desktop: video with poster; mobile hidden */}
-          {!isSmallScreen && videoLoaded && (
+          {!isSmallScreen && (
             <video
               ref={videoRef}
               className="hidden md:block absolute inset-0 w-full h-full object-cover"
@@ -352,7 +362,7 @@ function Home() {
               muted
               loop
               playsInline
-              preload="none"
+              preload="auto"
             >
               <source src="/videos/HerosectionvideoNew.webm" type="video/webm" />
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />

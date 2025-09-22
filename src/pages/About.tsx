@@ -142,11 +142,11 @@ function About() {
                 {
                   name: "Donnell Edwards",
                   title: "Founder & CEO",
-                  image: "/Images/Donnell2.jpg",
+                  image: "/Images/Donnell.jpg",
                   bio: "As the visionary founder of On The Fly Waste Solutions, Donnell has revolutionized valet trash services across Central Florida. With an unwavering commitment to excellence and innovation, he has built a company that sets new standards in the industry. His leadership philosophy combines cutting-edge operational efficiency with exceptional customer service, ensuring that every client receives the highest quality waste management solutions.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
-                  objectPosition: "50% 20%"
+                  objectPosition: "center 20%"
                 },
                 {
                   name: "Trevor Alston",

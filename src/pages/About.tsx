@@ -3,6 +3,7 @@ import { Users, Leaf, Award, Target, CheckCircle2, Phone, Mail, Linkedin } from 
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import TeamMemberCard from '../components/TeamMemberCard';
 
 function About() {
   return (
@@ -138,82 +139,104 @@ function About() {
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Donnell Edwards",
-                  title: "Founder & CEO",
-                  image: "/Images/Donnell2.jpg",
-                  bio: "As the visionary founder of On The Fly Waste Solutions, Donnell has revolutionized valet trash services across Central Florida. With an unwavering commitment to excellence and innovation, he has built a company that sets new standards in the industry. His leadership philosophy combines cutting-edge operational efficiency with exceptional customer service, ensuring that every client receives the highest quality waste management solutions.",
-                  linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
-                  hasImage: true,
-                  objectPosition: "50% 20%"
-                },
-                {
-                  name: "Trevor Alston",
-                  title: "Vice President",
-                  image: "/Images/Trevor.jpg",
-                  bio: "Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.",
-                  linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
-                  hasImage: true,
-                  objectPosition: "50% 20%"
-                },
-                {
-                  name: "Steven Edwards",
-                  title: "Chief Financial Officer",
-                  image: "/Images/Steven2.jpg",
-                  bio: "With over 20 years of experience in financial management and tax strategy, Steven brings unparalleled expertise to On The Fly Waste Solutions. His comprehensive background in corporate finance, tax planning, and business development has been crucial in driving our company's financial success and sustainable growth. Steven's strategic financial leadership ensures strong fiscal management while maximizing operational efficiency and maintaining the highest standards of financial compliance and transparency.",
-                  linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
-                  hasImage: true,
-                  objectPosition: "50% 20%"
-                }
-              ].map((member, index) => (
-                <ScrollReveal 
-                  key={index}
-                  direction={index % 2 === 0 ? 'left' : 'right'}
-                  delay={index * 0.1}
+              <ScrollReveal 
+                direction="left"
+                delay={0}
+              >
+                <TeamMemberCard
+                  name="Donnell Edwards"
+                  title="Founder & CEO"
+                  photoSrc="/images/team/donnell.webp"
+                  photoAlt="Donnell Edwards"
+                  objectPosition="50% 28%"
                 >
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
-                    <div className="p-6">
-                      {member.hasImage ? (
-                        <div className="w-48 h-48 rounded-full overflow-hidden mb-6 mx-auto relative">
-                          <img
-                            src={member.image}
-                            alt={member.name}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                            style={{
-                              objectPosition: member.objectPosition
-                            }}
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-16 h-16 bg-[#049704] rounded-full flex items-center justify-center mb-4 mx-auto">
-                          <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
-                        </div>
-                      )}
-                      <h3 className="text-xl font-bold text-gray-900 text-center">{member.name}</h3>
-                      <p className="text-[#049704] font-medium mb-4 text-center">{member.title}</p>
-                      <p className="text-gray-600 mb-6 text-center leading-relaxed">{member.bio}</p>
-                      <div className="flex items-center justify-center space-x-4">
-                        <a 
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
-                        >
-                          <Linkedin className="h-5 w-5" />
-                        </a>
-                        <a 
-                          href="mailto:info@ontheflywastesolutions.com"
-                          className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
-                        >
-                          <Mail className="h-5 w-5" />
-                        </a>
-                      </div>
-                    </div>
+                  <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                    As the visionary founder of On The Fly Waste Solutions, Donnell has revolutionized valet trash services across Central Florida. With an unwavering commitment to excellence and innovation, he has built a company that sets new standards in the industry. His leadership philosophy combines cutting-edge operational efficiency with exceptional customer service, ensuring that every client receives the highest quality waste management solutions.
+                  </p>
+                  <div className="flex items-center justify-center space-x-4">
+                    <a 
+                      href="https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href="mailto:info@ontheflywastesolutions.com"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Mail className="h-5 w-5" />
+                    </a>
                   </div>
-                </ScrollReveal>
-              ))}
+                </TeamMemberCard>
+              </ScrollReveal>
+
+              <ScrollReveal 
+                direction="right"
+                delay={0.1}
+              >
+                <TeamMemberCard
+                  name="Trevor Alston"
+                  title="Vice President"
+                  photoSrc="/images/team/trevor.webp"
+                  photoAlt="Trevor Alston"
+                  objectPosition="50% 30%"
+                >
+                  <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                    Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.
+                  </p>
+                  <div className="flex items-center justify-center space-x-4">
+                    <a 
+                      href="https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href="mailto:info@ontheflywastesolutions.com"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </TeamMemberCard>
+              </ScrollReveal>
+
+              <ScrollReveal 
+                direction="left"
+                delay={0.2}
+              >
+                <TeamMemberCard
+                  name="Steven Edwards"
+                  title="Chief Financial Officer"
+                  photoSrc="/images/team/steven.webp"
+                  photoAlt="Steven Edwards"
+                  objectPosition="50% 45%"
+                >
+                  <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                    With over 20 years of experience in financial management and tax strategy, Steven brings unparalleled expertise to On The Fly Waste Solutions. His comprehensive background in corporate finance, tax planning, and business development has been crucial in driving our company's financial success and sustainable growth. Steven's strategic financial leadership ensures strong fiscal management while maximizing operational efficiency and maintaining the highest standards of financial compliance and transparency.
+                  </p>
+                  <div className="flex items-center justify-center space-x-4">
+                    <a 
+                      href="https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href="mailto:info@ontheflywastesolutions.com"
+                      className="text-gray-600 hover:text-[#049704] transition-colors duration-300"
+                    >
+                      <Mail className="h-5 w-5" />
+                    </a>
+                  </div>
+                </TeamMemberCard>
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -276,7 +299,6 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
 
         {/* Company Timeline */}
         <div className="py-20 bg-gradient-to-br from-[#049704]/5 to-white">
@@ -299,7 +321,8 @@ function About() {
                   {
                     year: "2020",
                     title: "Company Launch",
-                    description: "On The Fly Waste Solutions officially launched into the valet trash industry, bringing professional waste management services to Central Florida multifamily communities.",
+                    description: "Founded On The Fly Waste Solutions with a vision to revolutionize valet trash services in Central Florida through innovation and exceptional customer service.",
+                    image: "/images/team/donnell.webp",
                     side: "left"
                   },
                   {
@@ -312,24 +335,29 @@ function About() {
                     year: "2022",
                     title: "Industry Recognition",
                     description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), Florida Apartment Association (FAA), and National Apartment Association (NAA), solidifying our commitment to professional standards and industry best practices.",
+                    focalClass: "object-[50%_28%]",
                     side: "left"
                   },
                   {
                     year: "2023",
                     title: "1,500+ Happy Clients",
-                    description: "Reached a significant milestone of serving over 1,500 satisfied residents across Central Florida, demonstrating our commitment to reliable service and customer satisfaction.",
+                    description: "Reached a major milestone of serving over 1,500 satisfied clients across Central Florida, demonstrating our commitment to quality service and customer satisfaction.",
+                    image: "/images/team/trevor.webp",
                     side: "right"
                   },
                   {
                     year: "2024",
+                    focalClass: "object-[50%_30%]",
                     title: "Premium Partnership Expansion",
                     description: "Acquired major partnerships with prestigious properties including Margaritaville Resort and Reunion Resort at Orlando, expanding our portfolio of luxury community services.",
                     side: "left"
                   },
                   {
+                    image: "/images/team/steven.webp",
                     year: "2025",
                     title: "Industry Leadership",
                     description: "Now proudly serving 2,500+ residents and partnered with leading management companies including ZRS Management, Rangewater Management, Artemis Lifestyles, Venterra Realty, and RPM Living.",
+                    focalClass: "object-[50%_36%]",
                     side: "right"
                   }
                 ].map((milestone, index) => (
@@ -351,13 +379,13 @@ function About() {
                         milestone.side === 'left' 
                           ? 'md:mr-8 md:text-right' 
                           : 'md:ml-8 md:text-left'
-                      } text-center md:text-left`}>
-                        <div className={`flex items-center mb-3 ${
+                      }`}>
+                        <div className={`flex items-center mb-4 ${
                           milestone.side === 'left' 
                             ? 'md:justify-end justify-center' 
                             : 'md:justify-start justify-center'
                         }`}>
-                          <div className="w-12 h-12 bg-[#049704] text-white rounded-full flex items-center justify-center font-bold text-sm mr-3 md:mr-0">
+                          <div className="bg-[#049704] text-white px-4 py-2 rounded-full font-bold text-lg">
                             {milestone.year}
                           </div>
                           {milestone.side === 'right' && (
@@ -394,8 +422,8 @@ function About() {
             </ScrollReveal>
           </div>
         </div>
+      </div>
     </>
-
   );
 }
 

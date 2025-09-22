@@ -297,7 +297,7 @@ function About() {
                   {
                     year: "2020",
                     title: "Company Launch",
-                    description: "On The Fly Waste Solutions officially launched into the valet trash industry, bringing professional waste management services to Central Florida multifamily communities.",
+                   image: "/images/team/donnell.webp",
                     side: "left"
                   },
                   {
@@ -310,25 +310,25 @@ function About() {
                     year: "2022",
                     title: "Industry Recognition",
                     description: "Became proud partners with the Apartment Association of Greater Orlando (AAGO), Florida Apartment Association (FAA), and National Apartment Association (NAA), solidifying our commitment to professional standards and industry best practices.",
-                    side: "left"
+                   focalClass: "object-[50%_28%]"
                   },
                   {
                     year: "2023",
                     title: "1,500+ Happy Clients",
-                    description: "Reached a significant milestone of serving over 1,500 satisfied residents across Central Florida, demonstrating our commitment to reliable service and customer satisfaction.",
+                   image: "/images/team/trevor.webp",
                     side: "right"
                   },
                   {
-                    year: "2024",
+                   focalClass: "object-[50%_30%]"
                     title: "Premium Partnership Expansion",
                     description: "Acquired major partnerships with prestigious properties including Margaritaville Resort and Reunion Resort at Orlando, expanding our portfolio of luxury community services.",
                     side: "left"
                   },
-                  {
+                   image: "/images/team/steven.webp",
                     year: "2025",
                     title: "Industry Leadership",
                     description: "Now proudly serving 2,500+ residents and partnered with leading management companies including ZRS Management, Rangewater Management, Artemis Lifestyles, Venterra Realty, and RPM Living.",
-                    side: "right"
+                   focalClass: "object-[50%_36%]"
                   }
                 ].map((milestone, index) => (
                   <ScrollReveal 
@@ -337,7 +337,7 @@ function About() {
                     delay={index * 0.1}
                   >
                     <div className={`relative flex items-center ${
-                      milestone.side === 'left' 
+                     <div className="relative w-full aspect-[4/3] overflow-hidden rounded-t-xl">
                         ? 'md:justify-start' 
                         : 'md:justify-end'
                     } justify-center`}>
@@ -349,13 +349,15 @@ function About() {
                         milestone.side === 'left' 
                           ? 'md:mr-8 md:text-right' 
                           : 'md:ml-8 md:text-left'
-                      } text-center md:text-left`}>
-                        <div className={`flex items-center mb-3 ${
-                          milestone.side === 'left' 
+                           alt={`${member.name} - ${member.title}`}
+                           width="1200"
+                           height="900"
+                           className={`absolute inset-0 h-full w-full object-cover ${member.focalClass} select-none`}
                             ? 'md:justify-end justify-center' 
+                           decoding="async"
                             : 'md:justify-start justify-center'
                         }`}>
-                          <div className="w-12 h-12 bg-[#049704] text-white rounded-full flex items-center justify-center font-bold text-sm mr-3 md:mr-0">
+                         <div className="w-full h-full bg-[#049704] flex items-center justify-center">
                             {milestone.year}
                           </div>
                           {milestone.side === 'right' && (

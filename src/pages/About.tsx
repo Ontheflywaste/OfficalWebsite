@@ -180,7 +180,7 @@ function About() {
                             src={member.image}
                             alt={member.name}
                             className="w-full h-full object-cover"
-                            style={{ objectPosition: member.name === 'Trevor Alston' ? 'center 20%' : 'center' }}
+                            style={{ objectPosition: 'center top' }}
                             loading="lazy"
                           />
                         </div>

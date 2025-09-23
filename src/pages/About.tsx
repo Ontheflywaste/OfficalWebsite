@@ -184,7 +184,7 @@ function About() {
                             className="absolute inset-0 h-full w-full object-cover select-none"
                             style={{
                               objectPosition: member.name === "Donnell Edwards" ? "50% 32%" :
-                                            member.name === "Trevor Alston" ? "50% 50%" : "50% 46%"
+                                            member.name === "Trevor Alston" ? "50% 25%" : "50% 46%"
                             }}
                             loading="lazy"
                             decoding="async"

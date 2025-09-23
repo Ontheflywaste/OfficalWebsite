@@ -142,7 +142,7 @@ function About() {
                 {
                   name: "Donnell Edwards",
                   title: "Founder & CEO",
-                  image: "/Images/Donnell2.jpg",
+                  image: "https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNmJuNEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--07360e0108b586ff25a79c440b0a804ee03e86c9/-Donnell2.jpg",
                   bio: "As the visionary founder of On The Fly Waste Solutions, Donnell has revolutionized valet trash services across Central Florida. With an unwavering commitment to excellence and innovation, he has built a company that sets new standards in the industry. His leadership philosophy combines cutting-edge operational efficiency with exceptional customer service, ensuring that every client receives the highest quality waste management solutions.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -151,7 +151,7 @@ function About() {
                 {
                   name: "Trevor Alston",
                   title: "Vice President",
-                  image: "/Images/Trevor.jpg",
+                  image: "https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeE44b0E9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--59e66ecdae24fc687157bfd388d36bfd86999d61/Trevor.jpg",
                   bio: "Trevor brings a wealth of operational expertise and strategic vision to On The Fly Waste Solutions. His innovative approach to service delivery and team management has been instrumental in our company's growth and success. With a focus on continuous improvement and customer satisfaction, Trevor ensures that our services consistently exceed client expectations while maintaining the highest standards of efficiency and reliability.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,
@@ -160,7 +160,7 @@ function About() {
                 {
                   name: "Steven Edwards",
                   title: "Chief Financial Officer",
-                  image: "/Images/Steven2.jpg",
+                  image: "https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVRvNEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--54dc6e7dc450fb7613a1a45e82e9b44bb7e6df01/-Steven2.jpg",
                   bio: "With over 20 years of experience in financial management and tax strategy, Steven brings unparalleled expertise to On The Fly Waste Solutions. His comprehensive background in corporate finance, tax planning, and business development has been crucial in driving our company's financial success and sustainable growth. Steven's strategic financial leadership ensures strong fiscal management while maximizing operational efficiency and maintaining the highest standards of financial compliance and transparency.",
                   linkedin: "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/",
                   hasImage: true,

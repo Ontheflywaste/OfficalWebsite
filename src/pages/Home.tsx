@@ -16,7 +16,6 @@ function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -55,6 +54,8 @@ function Home() {
     }
   ];
 
+  // Create extended array with first item duplicated at the end for seamless loop
+  const extendedBadges = [...membershipBadges, membershipBadges[0]];
   useEffect(() => {
     // Check screen sizes
     const checkScreenSize = () => {
@@ -104,42 +105,19 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => {
-        const nextSlide = prev + 1;
-        if (nextSlide >= extendedBadges.length) {
-          // When we reach the end, continue to the duplicate first slide
-          return nextSlide;
-        }
-        return nextSlide;
-      });
-        const nextSlide = prev + 1;
-        if (nextSlide >= membershipBadges.length) {
-          // When we reach the duplicate first slide, reset to actual first slide without animation
+        if (prev === membershipBadges.length) {
+          // Reset to first slide without animation after showing duplicate
           setTimeout(() => {
             setCurrentSlide(0);
-          }, 1000); // Wait for transition to complete
-          return nextSlide;
+          }, 50);
+          return prev + 1;
         }
-        return nextSlide;
+        return prev + 1;
       });
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Handle the seamless loop reset
-  useEffect(() => {
-    if (currentSlide === extendedBadges.length) {
-      // We're at the duplicate first slide, reset to actual first slide
-      const timer = setTimeout(() => {
-        setIsTransitioning(false);
-        setCurrentSlide(0);
-        // Re-enable transition after reset
-        setTimeout(() => setIsTransitioning(true), 50);
-      }, 500); // Wait for transition to complete
-      
-      return () => clearTimeout(timer);
-    }
-  }, [currentSlide, extendedBadges.length]);
+  }, [membershipBadges.length]);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -608,10 +586,12 @@ function Home() {
             {/* Carousel Container */}
             <div className="relative overflow-hidden z-10">
               <div 
-                className="flex transition-transform duration-1000 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${(membershipBadges.length + 1) * 100}%` }}
+                className={`flex transition-transform duration-1000 ease-in-out ${
+                  currentSlide === membershipBadges.length + 1 ? 'transition-none' : ''
+                }`}
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {membershipBadges.map((badge, index) => (
+                {extendedBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
                     <a 
                       href={badge.url} 
@@ -632,26 +612,6 @@ function Home() {
                     </a>
                   </div>
                 ))}
-                {/* Duplicate first badge for seamless loop */}
-                <div className="w-full flex-shrink-0 flex justify-center">
-                  <a 
-                    href={membershipBadges[0].url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-center group transition-transform duration-300 hover:-translate-y-1 max-w-xs"
-                  >
-                    <img 
-                      src={membershipBadges[0].image} 
-                      alt={membershipBadges[0].alt} 
-                      className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      decoding="async"
-                      width="120"
-                      height="120"
-                    />
-                    <p className="text-base font-medium text-white text-center leading-tight">{membershipBadges[0].title}</p>
-                  </a>
-                </div>
               </div>
               
               {/* Carousel Indicators */}

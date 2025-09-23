@@ -680,10 +680,10 @@ function Home() {
               <div className="text-center mb-12 md:mb-16">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Our Services</h2>
                 <div className="prose prose-lg text-gray-700">
-                  <p className="mb-4 text-center lg:text-left">
+                  <p className="mb-4 text-center">
                     Comprehensive multifamily waste solutions for Orlando apartments and condos
                   </p>
-                  <div className="text-center lg:text-left mb-6">
+                  <div className="text-center mb-6">
                     <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
                       <p className="text-[#049704] font-medium text-center">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
                     </div>

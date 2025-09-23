@@ -565,9 +565,9 @@ function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Proud Members Of</h2>
                 <p className="mt-2 text-lg text-gray-700 text-center">
-                  Affiliated with leading industry associations
+                  <span className="text-white">Affiliated with leading industry associations</span>
                 </p>
               </div>
             </ScrollReveal>
@@ -589,13 +589,13 @@ function Home() {
                       <img 
                         src={badge.image} 
                         alt={badge.alt} 
-                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                        className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
                         width="120"
                         height="120"
                       />
-                      <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
+                      <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
                     </a>
                   </div>
                 ))}
@@ -609,7 +609,7 @@ function Home() {
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       currentSlide === index 
-                        ? 'bg-[#049704] scale-110' 
+                        ? 'bg-black scale-110' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
@@ -683,9 +683,9 @@ function Home() {
                   <p className="mb-4 text-center lg:text-left">
                     Comprehensive multifamily waste solutions for Orlando apartments and condos
                   </p>
-                  <div className="text-center lg:text-left mb-6">
-                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
-                      <p className="text-[#049704] font-medium">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
+                  <div className="text-center mb-6">
+                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4 max-w-2xl">
+                      <p className="text-[#049704] font-medium text-center max-w-2xl">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
                     </div>
                   </div>
                 </div>

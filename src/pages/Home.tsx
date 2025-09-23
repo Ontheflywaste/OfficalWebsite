@@ -684,7 +684,7 @@ function Home() {
                     Comprehensive multifamily waste solutions for Orlando apartments and condos
                   </p>
                   <div className="text-center mb-6">
-                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
+                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4 max-w-2xl">
                       <p className="text-[#049704] font-medium text-center max-w-2xl">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
                     </div>
                   </div>

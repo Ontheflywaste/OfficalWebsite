@@ -685,7 +685,7 @@ function Home() {
                   </p>
                   <div className="text-center lg:text-left mb-6">
                     <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
-                      <p className="text-[#049704] font-medium">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
+                      <p className="text-[#049704] font-medium text-center">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
                     </div>
                   </div>
                 </div>

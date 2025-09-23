@@ -102,7 +102,17 @@ function Home() {
   // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % membershipBadges.length);
+      setCurrentSlide((prev) => {
+        const nextSlide = prev + 1;
+        if (nextSlide >= membershipBadges.length) {
+          // When we reach the duplicate first slide, reset to actual first slide without animation
+          setTimeout(() => {
+            setCurrentSlide(0);
+          }, 1000); // Wait for transition to complete
+          return nextSlide;
+        }
+        return nextSlide;
+      });
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
@@ -576,7 +586,7 @@ function Home() {
             <div className="relative overflow-hidden z-10">
               <div 
                 className="flex transition-transform duration-1000 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${(membershipBadges.length + 1) * 100}%` }}
               >
                 {membershipBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
@@ -599,6 +609,26 @@ function Home() {
                     </a>
                   </div>
                 ))}
+                {/* Duplicate first badge for seamless loop */}
+                <div className="w-full flex-shrink-0 flex justify-center">
+                  <a 
+                    href={membershipBadges[0].url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-center group transition-transform duration-300 hover:-translate-y-1 max-w-xs"
+                  >
+                    <img 
+                      src={membershipBadges[0].image} 
+                      alt={membershipBadges[0].alt} 
+                      className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                      width="120"
+                      height="120"
+                    />
+                    <p className="text-base font-medium text-white text-center leading-tight">{membershipBadges[0].title}</p>
+                  </a>
+                </div>
               </div>
               
               {/* Carousel Indicators */}

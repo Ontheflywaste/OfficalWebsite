@@ -628,7 +628,7 @@ function Home() {
                 <div className="text-center lg:text-left">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Welcome to On The Fly Waste Solutions</h2>
                   <div className="prose prose-lg text-gray-700">
-                    <p className="mb-4 text-center lg:text-left">
+                    <p className="mb-4 text-center">
                       At On The Fly Waste Solutions, we're raising the bar for valet trash and bulk removal services in Central Florida. Since 2020, we've focused on delivering dependable, detail-driven service to multifamily communities and resort-style properties that expect more than the industry standard.
                     </p>
                     <p className="mb-4 text-center lg:text-left">

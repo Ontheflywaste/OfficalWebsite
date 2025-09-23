@@ -54,6 +54,8 @@ function Home() {
     }
   ];
 
+  // Create extended array with first item duplicated at the end for seamless loop
+  const extendedBadges = [...membershipBadges, membershipBadges[0]];
   useEffect(() => {
     // Check screen sizes
     const checkScreenSize = () => {
@@ -102,7 +104,16 @@ function Home() {
   // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % membershipBadges.length);
+      setCurrentSlide((prev) => {
+        if (prev === membershipBadges.length) {
+          // Reset to first slide without animation after showing duplicate
+          setTimeout(() => {
+            setCurrentSlide(0);
+          }, 50);
+          return prev + 1;
+        }
+        return prev + 1;
+      });
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
@@ -575,10 +586,12 @@ function Home() {
             {/* Carousel Container */}
             <div className="relative overflow-hidden z-10">
               <div 
-                className="flex transition-transform duration-1000 ease-in-out"
+                className={`flex transition-transform duration-1000 ease-in-out ${
+                  currentSlide === membershipBadges.length + 1 ? 'transition-none' : ''
+                }`}
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {membershipBadges.map((badge, index) => (
+                {extendedBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
                     <a 
                       href={badge.url} 

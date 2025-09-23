@@ -16,6 +16,7 @@ function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,8 +55,6 @@ function Home() {
     }
   ];
 
-  // Create extended array with first item duplicated at the end for seamless loop
-  const extendedBadges = [...membershipBadges, membershipBadges[0]];
   useEffect(() => {
     // Check screen sizes
     const checkScreenSize = () => {
@@ -105,19 +104,20 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => {
-        if (prev === membershipBadges.length) {
-          // Reset to first slide without animation after showing duplicate
+        const nextSlide = prev + 1;
+        if (nextSlide >= membershipBadges.length) {
+          // When we reach the duplicate first slide, reset to actual first slide without animation
           setTimeout(() => {
             setCurrentSlide(0);
-          }, 50);
-          return prev + 1;
+          }, 1000); // Wait for transition to complete
+          return nextSlide;
         }
-        return prev + 1;
+        return nextSlide;
       });
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
-  }, [membershipBadges.length]);
+  }, []);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -587,11 +587,11 @@ function Home() {
             <div className="relative overflow-hidden z-10">
               <div 
                 className={`flex transition-transform duration-1000 ease-in-out ${
-                  currentSlide === membershipBadges.length + 1 ? 'transition-none' : ''
+                  isTransitioning ? '' : 'transition-none'
                 }`}
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${(membershipBadges.length + 1) * 100}%` }}
               >
-                {extendedBadges.map((badge, index) => (
+                {membershipBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
                     <a 
                       href={badge.url} 
@@ -612,6 +612,26 @@ function Home() {
                     </a>
                   </div>
                 ))}
+                {/* Duplicate first badge for seamless loop */}
+                <div className="w-full flex-shrink-0 flex justify-center">
+                  <a 
+                    href={membershipBadges[0].url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-center group transition-transform duration-300 hover:-translate-y-1 max-w-xs"
+                  >
+                    <img 
+                      src={membershipBadges[0].image} 
+                      alt={membershipBadges[0].alt} 
+                      className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                      width="120"
+                      height="120"
+                    />
+                    <p className="text-base font-medium text-white text-center leading-tight">{membershipBadges[0].title}</p>
+                  </a>
+                </div>
               </div>
               
               {/* Carousel Indicators */}

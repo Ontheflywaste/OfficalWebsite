@@ -589,7 +589,7 @@ function Home() {
                       <img 
                         src={badge.image} 
                         alt={badge.alt} 
-                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                        className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
                         width="120"

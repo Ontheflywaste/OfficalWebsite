@@ -565,8 +565,8 @@ function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
-                <p className="mt-2 text-lg text-gray-700 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Proud Members Of</h2>
+                <p className="mt-2 text-lg text-white text-center">
                   Affiliated with leading industry associations
                 </p>
               </div>
@@ -596,6 +596,7 @@ function Home() {
                         height="120"
                       />
                       <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
+                      <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
                     </a>
                   </div>
                 ))}
@@ -609,7 +610,7 @@ function Home() {
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       currentSlide === index 
-                        ? 'bg-[#049704] scale-110' 
+                        ? 'bg-black scale-110' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

@@ -16,6 +16,7 @@ function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -104,6 +105,13 @@ function Home() {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => {
         const nextSlide = prev + 1;
+        if (nextSlide >= extendedBadges.length) {
+          // When we reach the end, continue to the duplicate first slide
+          return nextSlide;
+        }
+        return nextSlide;
+      });
+        const nextSlide = prev + 1;
         if (nextSlide >= membershipBadges.length) {
           // When we reach the duplicate first slide, reset to actual first slide without animation
           setTimeout(() => {
@@ -116,7 +124,22 @@ function Home() {
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
-  }, [membershipBadges.length]);
+  }, []);
+
+  // Handle the seamless loop reset
+  useEffect(() => {
+    if (currentSlide === extendedBadges.length) {
+      // We're at the duplicate first slide, reset to actual first slide
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentSlide(0);
+        // Re-enable transition after reset
+        setTimeout(() => setIsTransitioning(true), 50);
+      }, 500); // Wait for transition to complete
+      
+      return () => clearTimeout(timer);
+    }
+  }, [currentSlide, extendedBadges.length]);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

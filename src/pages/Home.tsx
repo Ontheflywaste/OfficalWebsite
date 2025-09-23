@@ -566,8 +566,8 @@ function Home() {
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
                 <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Proud Members Of</h2>
-                <p className="mt-2 text-lg text-gray-700 text-center">
-                  <span className="text-white">Affiliated with leading industry associations</span>
+                <p className="mt-2 text-lg text-white text-center">
+                  Affiliated with leading industry associations
                 </p>
               </div>
             </ScrollReveal>
@@ -589,12 +589,13 @@ function Home() {
                       <img 
                         src={badge.image} 
                         alt={badge.alt} 
-                        className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
                         width="120"
                         height="120"
                       />
+                      <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
                       <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
                     </a>
                   </div>
@@ -628,7 +629,7 @@ function Home() {
                 <div className="text-center lg:text-left">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Welcome to On The Fly Waste Solutions</h2>
                   <div className="prose prose-lg text-gray-700">
-                    <p className="mb-4 text-center">
+                    <p className="mb-4 text-center lg:text-left">
                       At On The Fly Waste Solutions, we're raising the bar for valet trash and bulk removal services in Central Florida. Since 2020, we've focused on delivering dependable, detail-driven service to multifamily communities and resort-style properties that expect more than the industry standard.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
@@ -683,9 +684,9 @@ function Home() {
                   <p className="mb-4 text-center lg:text-left">
                     Comprehensive multifamily waste solutions for Orlando apartments and condos
                   </p>
-                  <div className="text-center mb-6">
-                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4 max-w-2xl">
-                      <p className="text-[#049704] font-medium text-center max-w-2xl">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
+                  <div className="text-center lg:text-left mb-6">
+                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
+                      <p className="text-[#049704] font-medium">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
                     </div>
                   </div>
                 </div>

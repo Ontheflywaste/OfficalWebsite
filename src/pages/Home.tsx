@@ -595,7 +595,6 @@ function Home() {
                         width="120"
                         height="120"
                       />
-                      <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
                       <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
                     </a>
                   </div>

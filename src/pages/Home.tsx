@@ -54,8 +54,6 @@ function Home() {
     }
   ];
 
-  // Create extended array with first item duplicated at the end for seamless loop
-  const extendedBadges = [...membershipBadges, membershipBadges[0]];
   useEffect(() => {
     // Check screen sizes
     const checkScreenSize = () => {
@@ -104,16 +102,7 @@ function Home() {
   // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => {
-        if (prev === membershipBadges.length) {
-          // Reset to first slide without animation after showing duplicate
-          setTimeout(() => {
-            setCurrentSlide(0);
-          }, 50);
-          return prev + 1;
-        }
-        return prev + 1;
-      });
+      setCurrentSlide((prev) => (prev + 1) % membershipBadges.length);
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
@@ -576,9 +565,9 @@ function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Proud Members Of</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
                 <p className="mt-2 text-lg text-gray-700 text-center">
-                  <span className="text-white">Affiliated with leading industry associations</span>
+                  Affiliated with leading industry associations
                 </p>
               </div>
             </ScrollReveal>
@@ -586,12 +575,10 @@ function Home() {
             {/* Carousel Container */}
             <div className="relative overflow-hidden z-10">
               <div 
-                className={`flex transition-transform duration-1000 ease-in-out ${
-                  currentSlide === membershipBadges.length + 1 ? 'transition-none' : ''
-                }`}
+                className="flex transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {extendedBadges.map((badge, index) => (
+                {membershipBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
                     <a 
                       href={badge.url} 
@@ -602,13 +589,13 @@ function Home() {
                       <img 
                         src={badge.image} 
                         alt={badge.alt} 
-                        className="h-24 sm:h-28 md:h-32 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
+                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                         decoding="async"
                         width="120"
                         height="120"
                       />
-                      <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
+                      <p className="text-base font-medium text-gray-700 text-center leading-tight">{badge.title}</p>
                     </a>
                   </div>
                 ))}
@@ -622,7 +609,7 @@ function Home() {
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       currentSlide === index 
-                        ? 'bg-black scale-110' 
+                        ? 'bg-[#049704] scale-110' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

@@ -175,16 +175,16 @@ function About() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full">
                     <div className="p-6">
                       {member.hasImage ? (
-                        <div className="relative w-full overflow-hidden rounded-xl mb-6" style={{ paddingTop: "100%" }}>
+                        <div className="relative w-full overflow-hidden rounded-xl aspect-square mb-6">
                           <img
                             src={member.image}
                             alt={member.name}
                             width={1000}
                             height={1000}
-                            className="absolute inset-0 h-full w-full object-cover select-none"
+                            className="absolute inset-0 w-full h-full object-cover rounded-none select-none"
                             style={{
                               objectPosition: member.name === "Donnell Edwards" ? "50% 32%" :
-                                            member.name === "Trevor Alston" ? "50% 25%" : "50% 46%"
+                                            member.name === "Trevor Alston" ? "50% 42%" : "50% 46%"
                             }}
                             loading="lazy"
                             decoding="async"

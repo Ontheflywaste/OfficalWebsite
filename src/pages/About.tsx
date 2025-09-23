@@ -57,6 +57,11 @@ function About() {
             "email": "info@ontheflywastesolutions.com"
           })}
         </script>
+        
+        {/* Preload team member images for faster loading */}
+        <link rel="preload" href="https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNmJuNEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--07360e0108b586ff25a79c440b0a804ee03e86c9/-Donnell2.jpg" as="image" />
+        <link rel="preload" href="/Images/team/Trevor-Alston.jpg" as="image" />
+        <link rel="preload" href="https://stackblitz.com/storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVRvNEE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--54dc6e7dc450fb7613a1a45e82e9b44bb7e6df01/-Steven2.jpg" as="image" />
       </Helmet>
 
       <div className="min-h-screen pt-24 md:pt-0">
@@ -186,7 +191,7 @@ function About() {
                               objectPosition: member.name === "Donnell Edwards" ? "50% 32%" :
                                             member.name === "Trevor Alston" ? "50% 42%" : "50% 46%"
                             }}
-                            loading="lazy"
+                            loading="eager"
                             decoding="async"
                             onError={(e) => {
                               console.error(`Failed to load image: ${member.image}`);

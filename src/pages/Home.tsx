@@ -350,7 +350,7 @@ function Home() {
           {isTablet && (
             <picture className="hidden md:block lg:hidden absolute inset-0 w-full h-full">
               <img
-                src="/Images/ChatGPT Image May 21, 2025, 12_09_47 PM.png"
+                src="/Images/gallery12813_1920x831@2x.jpg"
                 alt="Professional Valet Trash Collection Service Orlando"
                 width="1920"
                 height="831"

@@ -109,21 +109,21 @@ function ValetTrashService() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24">
+            <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24 min-h-screen">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
                     Premium Service
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Orlando's Premier Valet
                   <span className="block text-white/90">Trash Service</span>
                 </h1>
-                <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+                <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Orlando's most reliable doorstep trash pickup service for apartment communities, condos, and multifamily properties across Central Florida
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
                     Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>

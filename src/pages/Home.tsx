@@ -160,10 +160,7 @@ function Home() {
   };
   const services = [
     {
-      icon
-    }
-  ]
-}: Trash2,
+      icon: Trash2,
       title: "Valet Trash",
       description: "Experience hassle-free living with our premium valet trash service. Our professional team provides door-to-door waste collection directly from your doorstep up to 7 days a week, maintaining a clean and healthy environment. Perfect for apartment communities and residential complexes seeking to enhance tenant satisfaction and property value through convenient doorstep pickup.",
       image: "/Images/gallery12813_1920x831@2x.jpg",

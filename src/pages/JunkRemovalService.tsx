@@ -111,19 +111,19 @@ function JunkRemovalService() {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24">
               <ScrollReveal>
-                <div className="mb-6">
+                <div className="mb-6 flex justify-center">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
                     Professional Service
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Orlando Junk Removal
                   <span className="block text-white/90">& Hauling Service</span>
                 </h1>
-                <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+                <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
                     Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>

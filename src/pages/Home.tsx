@@ -560,7 +560,8 @@ function Home() {
 
         {/* Membership Badges Section */}
         <section className="py-12 bg-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/Images/futuremillionaire.JPG')] bg-cover opacity-20" style={{ backgroundPosition: 'center 35%' }} />
+          <div className="absolute inset-0 bg-[url('/Images/futuremillionaire.JPG')] bg-cover opacity-15" style={{ backgroundPosition: 'center 35%' }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
@@ -583,18 +584,20 @@ function Home() {
                       href={badge.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-center group transition-transform duration-300 hover:-translate-y-1 max-w-xs"
+                      className="text-center group transition-all duration-300 hover:-translate-y-2 hover:scale-105 max-w-xs"
                     >
-                      <img 
-                        src={badge.image} 
-                        alt={badge.alt} 
-                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-105"
-                        loading="lazy"
-                        decoding="async"
-                        width="120"
-                        height="120"
-                      />
-                      <p className="text-base font-medium text-white text-center leading-tight">{badge.title}</p>
+                      <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 group-hover:shadow-2xl group-hover:bg-white transition-all duration-300">
+                        <img 
+                          src={badge.image} 
+                          alt={badge.alt} 
+                          className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
+                          loading="lazy"
+                          decoding="async"
+                          width="120"
+                          height="120"
+                        />
+                        <p className="text-base font-medium text-gray-800 text-center leading-tight">{badge.title}</p>
+                      </div>
                     </a>
                   </div>
                 ))}

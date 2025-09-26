@@ -567,6 +567,7 @@ function Home() {
               <div className="text-center mb-8 relative z-10">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
                 <p className="mt-2 text-lg text-white text-center">
+                <p className="mt-2 text-lg text-black text-center">
                   Affiliated with leading industry associations
                 </p>
               </div>

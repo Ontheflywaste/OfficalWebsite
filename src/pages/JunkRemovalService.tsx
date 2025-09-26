@@ -109,7 +109,7 @@ function JunkRemovalService() {
           <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24">
+            <div className="flex flex-col justify-center items-center h-full text-center min-h-screen">
               <ScrollReveal>
                 <div className="mb-6 flex justify-center">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">

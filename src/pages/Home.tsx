@@ -561,11 +561,10 @@ function Home() {
         {/* Membership Badges Section */}
         <section className="py-12 bg-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/futuremillionaire.JPG')] bg-cover opacity-20" style={{ backgroundPosition: 'center 35%' }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#049704]/20 to-[#049704]/30" style={{ backgroundPosition: 'center 75%' }} />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <div className="text-center mb-8 relative z-10">
-                <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Proud Members Of</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center">Proud Members Of</h2>
                 <p className="mt-2 text-lg text-white text-center">
                   Affiliated with leading industry associations
                 </p>
@@ -609,7 +608,7 @@ function Home() {
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       currentSlide === index 
-                        ? 'bg-black scale-110' 
+                        ? 'bg-[#049704] scale-110' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

@@ -626,14 +626,6 @@ function Contact() {
                   {
                     city: "Winter Garden",
                     description: "Windermere, Ocoee, Oakland"
-                  },
-                  {
-                    city: "Davenport",
-                    description: "ChampionsGate, Reunion, Four Corners"
-                  },
-                  {
-                    city: "Winter Garden",
-                    description: "Windermere, Ocoee, Oakland"
                   }
                 ].map((area, index) => (
                   <ScrollReveal 

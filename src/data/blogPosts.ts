@@ -602,7 +602,7 @@ export const blogPosts: BlogPost[] = [
     id: 'valet-trash-benefits',
     title: 'The Benefits of Valet Trash Service for Apartment Communities',
     excerpt: 'Discover how <a href="/services/valet-trash" class="text-[#049704] hover:text-[#038203] font-medium">valet trash services</a> can improve resident satisfaction, increase property value, and create a cleaner living environment.',
-    date: 'March 15, 2025',
+    date: 'September 27, 2025',
     readTime: '5 min read',
     author: 'Donnell Edwards',
     image: '/Images/gallery12813_1920x831@2x.jpg',

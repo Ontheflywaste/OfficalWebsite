@@ -93,22 +93,22 @@ const BlogPost: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{currentPost.metaTitle}</title>
-        <meta name="description" content={currentPost.metaDescription} />
-        <meta name="keywords" content={currentPost.metaKeywords} />
+        <title>{currentPost.metaTitle || currentPost.title}</title>
+        <meta name="description" content={currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, '')} />
+        <meta name="keywords" content={currentPost.metaKeywords || ''} />
         <link rel="canonical" href={`https://ontheflywastesolutions.com/blog/${currentPost.id}`} />
         
         {/* Open Graph tags */}
-        <meta property="og:title" content={currentPost.metaTitle} />
-        <meta property="og:description" content={currentPost.metaDescription} />
+        <meta property="og:title" content={currentPost.metaTitle || currentPost.title} />
+        <meta property="og:description" content={currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, '')} />
         <meta property="og:image" content={currentPost.image} />
         <meta property="og:url" content={`https://ontheflywastesolutions.com/blog/${currentPost.id}`} />
         <meta property="og:type" content="article" />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={currentPost.metaTitle} />
-        <meta name="twitter:description" content={currentPost.metaDescription} />
+        <meta name="twitter:title" content={currentPost.metaTitle || currentPost.title} />
+        <meta name="twitter:description" content={currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, '')} />
         <meta name="twitter:image" content={currentPost.image} />
         
         {/* Article structured data */}
@@ -117,7 +117,7 @@ const BlogPost: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": currentPost.title,
-            "description": currentPost.metaDescription,
+            "description": currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, ''),
             "image": currentPost.image,
             "author": {
               "@type": "Person",

@@ -76,7 +76,7 @@ function Services() {
         <div className="relative min-h-[60vh] hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-10" />
           <img
-            src="/Images/our services image.png"
+            src="/Images/ApartmentBuildingHero.webp"
             alt="Professional Valet Trash Collection Services in Orlando"
             className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center 60%' }}

@@ -1,11 +1,23 @@
 import React, { lazy, Suspense } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Star, Send } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
+import ScrollReveal from '../components/ScrollReveal';
 
 // Lazy load ReviewCard component
 const ReviewCard = lazy(() => import('../components/ReviewCard'));
 
 function Reviews() {
+  const [newReview, setNewReview] = useState({
+    name: '',
+    location: '',
+    rating: 5,
+    text: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submittedReviews, setSubmittedReviews] = useState<any[]>([]);
+
   const reviews = [
     {
       name: "Antonio Marcuz",
@@ -41,6 +53,57 @@ function Reviews() {
   const totalReviews = reviews.length;
   const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
   const averageRating = totalRating / totalReviews;
+
+  const handleReviewChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setNewReview(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleRatingChange = (rating: number) => {
+    setNewReview(prev => ({
+      ...prev,
+      rating
+    }));
+  };
+
+  const handleSubmitReview = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Add the new review to the submitted reviews
+      const reviewWithDate = {
+        ...newReview,
+        date: 'Just now'
+      };
+      
+      setSubmittedReviews(prev => [reviewWithDate, ...prev]);
+      
+      // Reset form
+      setNewReview({
+        name: '',
+        location: '',
+        rating: 5,
+        text: ''
+      });
+      
+      toast.success('Thank you for your review!');
+    } catch (error) {
+      toast.error('Failed to submit review. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  // Combine original reviews with submitted reviews
+  const allReviews = [...submittedReviews, ...reviews];
+
   return (
     <>
       <Helmet>
@@ -125,11 +188,123 @@ function Reviews() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Suspense fallback={<div className="animate-pulse bg-gray-200 h-64 rounded-xl"></div>}>
-                {reviews.map((review, index) => (
+                {allReviews.map((review, index) => (
                   <ReviewCard key={index} review={review} />
                 ))}
               </Suspense>
             </div>
+
+            {/* Review Submission Section */}
+            <section className="mt-20">
+              <ScrollReveal>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">We Would Like to Hear From You!</h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Share your experience with our valet trash and waste management services
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.2}>
+                <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+                  <form onSubmit={handleSubmitReview}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          Your Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={newReview.name}
+                          onChange={handleReviewChange}
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                          placeholder="John Doe"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
+                          Location *
+                        </label>
+                        <input
+                          type="text"
+                          id="location"
+                          name="location"
+                          value={newReview.location}
+                          onChange={handleReviewChange}
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200"
+                          placeholder="Orlando, FL"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Rating *
+                      </label>
+                      <div className="flex items-center space-x-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <button
+                            key={star}
+                            type="button"
+                            onClick={() => handleRatingChange(star)}
+                            className="focus:outline-none transition-colors duration-200"
+                          >
+                            <Star
+                              className={`h-8 w-8 ${
+                                star <= newReview.rating
+                                  ? 'text-yellow-400 fill-current'
+                                  : 'text-gray-300'
+                              } hover:text-yellow-400 hover:fill-current`}
+                            />
+                          </button>
+                        ))}
+                        <span className="ml-3 text-sm text-gray-600">
+                          ({newReview.rating} star{newReview.rating !== 1 ? 's' : ''})
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <label htmlFor="text" className="block text-sm font-medium text-gray-700 mb-2">
+                        Your Review *
+                      </label>
+                      <textarea
+                        id="text"
+                        name="text"
+                        value={newReview.text}
+                        onChange={handleReviewChange}
+                        required
+                        rows={4}
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#049704] focus:border-transparent transition duration-200 resize-none"
+                        placeholder="Tell us about your experience with our services..."
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#049704] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#038203] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                          Submitting...
+                        </>
+                      ) : (
+                        <>
+                          Submit Review
+                          <Send className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </div>
+              </ScrollReveal>
+            </section>
 
             <div className="mt-12 text-center">
               <a

@@ -22,6 +22,15 @@ function Reviews() {
   const [submittedReviews, setSubmittedReviews] = useState<any[]>([]);
 
   const reviews = [
+    // ADD NEW APPROVED REVIEWS HERE AT THE TOP
+    // Example of how to add a new review:
+    // {
+    //   name: "Customer Name",
+    //   location: "Orlando, FL",
+    //   rating: 5,
+    //   text: "Their review text here...",
+    //   date: "1 day ago"
+    // },
     {
       name: "Antonio Marcuz",
       location: "Orlando, FL",

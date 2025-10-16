@@ -94,7 +94,7 @@ function Reviews() {
       
       await emailjs.send(
         'service_decr5zt',
-        'template_reviews', // New template for reviews
+        'template_i6ii8c6', // Review submission template
         {
           from_name: newReview.name,
           from_email: 'noreply@ontheflywastesolutions.com',

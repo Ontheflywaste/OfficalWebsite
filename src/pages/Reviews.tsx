@@ -85,10 +85,10 @@ function Reviews() {
       
       await emailjs.send(
         'service_decr5zt',
-        'template_x34o2r9', // You'll need a new template for reviews
+        'template_reviews', // New template for reviews
         {
           from_name: newReview.name,
-          from_email: 'reviews@ontheflywastesolutions.com',
+          from_email: 'noreply@ontheflywastesolutions.com',
           to_name: 'On The Fly Waste Solutions',
           to_email: 'info@ontheflywastesolutions.com',
           subject: 'New Review Submission',
@@ -96,7 +96,8 @@ function Reviews() {
           review_location: newReview.location,
           review_rating: newReview.rating,
           review_text: newReview.text,
-          review_date: new Date().toLocaleDateString()
+          review_date: new Date().toLocaleDateString(),
+          stars: '★'.repeat(newReview.rating) + '☆'.repeat(5 - newReview.rating)
         },
         'JwYfbaBokN347YiVO'
       );
@@ -111,6 +112,7 @@ function Reviews() {
       
       toast.success('Thank you for your review! We will review it and add it to our page soon.');
     } catch (error) {
+      console.error('Review submission error:', error);
       toast.error('Failed to submit review. Please try again.');
     } finally {
       setIsSubmitting(false);

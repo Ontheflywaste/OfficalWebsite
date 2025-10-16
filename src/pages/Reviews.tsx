@@ -5,6 +5,9 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import ScrollReveal from '../components/ScrollReveal';
 
+// Lazy load EmailJS only when needed
+const loadEmailJS = () => import('@emailjs/browser');
+
 // Lazy load ReviewCard component
 const ReviewCard = lazy(() => import('../components/ReviewCard'));
 
@@ -74,16 +77,29 @@ function Reviews() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Dynamically import EmailJS when needed
+      const emailjs = await loadEmailJS();
       
-      // Add the new review to the submitted reviews
-      const reviewWithDate = {
-        ...newReview,
-        date: 'Just now'
-      };
+      // Initialize EmailJS
+      emailjs.default.init("JwYfbaBokN347YiVO");
       
-      setSubmittedReviews(prev => [reviewWithDate, ...prev]);
+      await emailjs.send(
+        'service_decr5zt',
+        'template_x34o2r9', // You'll need a new template for reviews
+        {
+          from_name: newReview.name,
+          from_email: 'reviews@ontheflywastesolutions.com',
+          to_name: 'On The Fly Waste Solutions',
+          to_email: 'info@ontheflywastesolutions.com',
+          subject: 'New Review Submission',
+          review_name: newReview.name,
+          review_location: newReview.location,
+          review_rating: newReview.rating,
+          review_text: newReview.text,
+          review_date: new Date().toLocaleDateString()
+        },
+        'JwYfbaBokN347YiVO'
+      );
       
       // Reset form
       setNewReview({
@@ -93,7 +109,7 @@ function Reviews() {
         text: ''
       });
       
-      toast.success('Thank you for your review!');
+      toast.success('Thank you for your review! We will review it and add it to our page soon.');
     } catch (error) {
       toast.error('Failed to submit review. Please try again.');
     } finally {
@@ -102,7 +118,7 @@ function Reviews() {
   };
 
   // Combine original reviews with submitted reviews
-  const allReviews = [...submittedReviews, ...reviews];
+  const allReviews = [...reviews]; // Only show approved reviews
 
   return (
     <>

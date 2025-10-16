@@ -32,6 +32,13 @@ function Reviews() {
     //   date: "1 day ago"
     // },
     {
+      name: "Donnell",
+      location: "Orlando, FL",
+      rating: 5,
+      text: "dafdfda",
+      date: "1 day ago"
+    },
+    {
       name: "Antonio Marcuz",
       location: "Orlando, FL",
       rating: 5,

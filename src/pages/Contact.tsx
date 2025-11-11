@@ -628,16 +628,16 @@ function Contact() {
                     description: "Windermere, Ocoee, Oakland"
                   }
                 ].map((area, index) => (
-                  <ScrollReveal 
+                  <ScrollReveal
                     key={index}
                     direction={index % 2 === 0 ? 'left' : 'right'}
                     delay={index * 0.1}
                   >
-                    <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">
                         {area.city}
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 flex-grow">
                         {area.description}
                       </p>
                     </div>

@@ -130,17 +130,17 @@ function ValetTrashBenefits() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <ScrollReveal 
+                <ScrollReveal
                   key={index}
                   delay={index * 0.1}
                   direction={index % 2 === 0 ? 'left' : 'right'}
                 >
-                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                     <div className="w-12 h-12 bg-[#049704]/10 rounded-xl flex items-center justify-center mb-4">
                       <benefit.icon className="h-6 w-6 text-[#049704]" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
+                    <p className="text-gray-600 flex-grow">{benefit.description}</p>
                   </div>
                 </ScrollReveal>
               ))}

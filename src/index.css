@@ -26,7 +26,6 @@ html {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  contain: layout style paint;
 }
 
 /* Performance optimizations */

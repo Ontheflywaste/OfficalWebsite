@@ -12,7 +12,6 @@ const loadEmailJS = () => import('@emailjs/browser');
 function Home() {
   const [isHeroVisible, setIsHeroVisible] = useState(false);
   const [isImpactVisible, setIsImpactVisible] = useState(false);
-  const [videoLoaded, setVideoLoaded] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -68,20 +67,13 @@ function Home() {
     
     const timer = setTimeout(() => {
       setIsHeroVisible(true);
-      
-      // Lazy load video after paint (larger screens only)
-      if (!isSmallScreen) {
-        requestIdleCallback(() => {
-          setVideoLoaded(true);
-        }, { timeout: 2000 });
-      }
     }, 100);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener('resize', checkScreenSize);
     };
-  }, [isSmallScreen, isTablet]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -362,7 +354,7 @@ function Home() {
           )}
 
           {/* Desktop: video with poster; mobile hidden */}
-          {!isSmallScreen && !isTablet && videoLoaded && (
+          {!isSmallScreen && !isTablet && (
             <video
               ref={videoRef}
               className="hidden md:block absolute inset-0 w-full h-full object-cover hero-video"

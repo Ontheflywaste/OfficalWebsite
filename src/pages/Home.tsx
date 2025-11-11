@@ -363,7 +363,6 @@ function Home() {
               loop
               playsInline
               preload="metadata"
-              poster="/Images/gallery12813_1920x831@2x.jpg"
               onLoadedData={() => {
                 if (videoRef.current) videoRef.current.play().catch(() => {});
               }}

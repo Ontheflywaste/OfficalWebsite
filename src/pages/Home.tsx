@@ -73,7 +73,7 @@ function Home() {
       if (!isSmallScreen) {
         requestIdleCallback(() => {
           setVideoLoaded(true);
-        });
+        }, { timeout: 2000 });
       }
     }, 100);
 
@@ -365,15 +365,19 @@ function Home() {
           {!isSmallScreen && !isTablet && videoLoaded && (
             <video
               ref={videoRef}
-              className="hidden md:block absolute inset-0 w-full h-full object-cover"
+              className="hidden md:block absolute inset-0 w-full h-full object-cover hero-video"
               autoPlay
               muted
               loop
               playsInline
-              preload="none"
+              preload="metadata"
+              poster="/Images/gallery12813_1920x831@2x.jpg"
+              onLoadedData={() => {
+                if (videoRef.current) videoRef.current.play().catch(() => {});
+              }}
             >
-              <source src="/videos/HerosectionvideoNew.webm" type="video/webm" />
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
+              <source src="/videos/HerosectionvideoNew.webm" type="video/webv" />
             </video>
           )}
           

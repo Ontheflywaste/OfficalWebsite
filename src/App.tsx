@@ -25,6 +25,7 @@ const HiddenCostsTrashManagement = React.lazy(() => import('./pages/HiddenCostsT
 const SustainableWasteManagement = React.lazy(() => import('./pages/SustainableWasteManagement'));
 const BulkWasteRemovalGuide = React.lazy(() => import('./pages/BulkWasteRemovalGuide'));
 const NewConstructionValetTrashGuide = React.lazy(() => import('./pages/NewConstructionValetTrashGuide'));
+const WhatPropertyManagersShouldExpect = React.lazy(() => import('./pages/WhatPropertyManagersShouldExpect'));
 
 // Loading component for lazy-loaded pages
 const PageLoader = () => (
@@ -61,6 +62,7 @@ function AnimatedRoutes() {
           <Route path="/blog/sustainable-waste-management" element={<PageTransition><SustainableWasteManagement /></PageTransition>} />
           <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
           <Route path="/blog/new-construction-apartments-valet-trash-guide" element={<PageTransition><NewConstructionValetTrashGuide /></PageTransition>} />
+          <Route path="/blog/what-property-managers-should-expect-valet-trash-company" element={<PageTransition><WhatPropertyManagersShouldExpect /></PageTransition>} />
         </Routes>
       </React.Suspense>
     </AnimatePresence>

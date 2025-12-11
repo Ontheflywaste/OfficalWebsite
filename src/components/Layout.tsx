@@ -633,39 +633,24 @@ function Layout({ children }: { children: React.ReactNode }) {
               © {new Date().getFullYear()} On The Fly Waste Solutions. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a
-                href="https://www.aago.org/"
-                target="_blank"
+              <a 
+                href="https://www.aago.org/" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >
-                <img
-                  src="/Images/AAGO.png"
-                  alt="Apartment Association of Greater Orlando Member"
+                <img 
+                  src="/Images/AAGO.png" 
+                  alt="Apartment Association of Greater Orlando Member" 
                   className="h-12 sm:h-14 md:h-16 object-contain"
                   loading="lazy"
                   width="64"
                   height="64"
                 />
               </a>
-              <a
-                href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
-                target="_blank"
-                rel="nofollow noopener noreferrer"
-                className="transition-transform duration-300 hover:-translate-y-1"
-              >
-                <img
-                  src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-bbb-235977450.png"
-                  alt="On The Fly Waste Solutions BBB Business Review"
-                  className="h-12 sm:h-14 md:h-16 object-contain"
-                  loading="lazy"
-                  width="64"
-                  height="64"
-                />
-              </a>
-              <a
-                href="https://www.faahq.org/"
-                target="_blank"
+              <a 
+                href="https://www.faahq.org/" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >

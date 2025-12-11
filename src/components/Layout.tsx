@@ -687,7 +687,7 @@ function Layout({ children }: { children: React.ReactNode }) {
                 <img
                   src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-bbb-235977450.png"
                   alt="On The Fly Waste Solutions BBB Business Review"
-                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  className="h-9 sm:h-10 md:h-12 object-contain"
                   loading="lazy"
                   width="250"
                   height="52"

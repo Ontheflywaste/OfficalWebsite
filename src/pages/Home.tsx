@@ -35,15 +35,21 @@ function Home() {
     },
     {
       image: "/Images/faa-full-color-full-logo.png",
-      alt: "Florida Apartment Association Member", 
+      alt: "Florida Apartment Association Member",
       title: "Florida Apartment Association",
       url: "https://www.faahq.org/"
     },
     {
       image: "/Images/NAA-logo_bgwhite.png",
       alt: "National Apartment Association Member",
-      title: "National Apartment Association", 
+      title: "National Apartment Association",
       url: "https://naahq.org/"
+    },
+    {
+      image: "https://seal-centralflorida.bbb.org/seals/blue-seal-187-130-bbb-235977450.png",
+      alt: "On The Fly Waste Solutions BBB Business Review",
+      title: "Better Business Bureau Accredited",
+      url: "https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
     },
     {
       image: "/ReunionWestPOALOgo.jpg",

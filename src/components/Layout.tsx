@@ -678,6 +678,21 @@ function Layout({ children }: { children: React.ReactNode }) {
                   height="64"
                 />
               </a>
+              <a
+                href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                className="transition-transform duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src="https://seal-centralflorida.bbb.org/seals/blue-seal-187-130-bbb-235977450.png"
+                  alt="On The Fly Waste Solutions BBB Business Review"
+                  className="h-12 sm:h-14 md:h-16 object-contain"
+                  loading="lazy"
+                  width="187"
+                  height="130"
+                />
+              </a>
               <div
                 id="bbb-seal-container"
                 className="transition-transform duration-300 hover:-translate-y-1"

@@ -632,7 +632,7 @@ function Layout({ children }: { children: React.ReactNode }) {
             <p className="text-gray-200">
               © {new Date().getFullYear()} On The Fly Waste Solutions. All rights reserved.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <a 
                 href="https://www.aago.org/" 
                 target="_blank" 

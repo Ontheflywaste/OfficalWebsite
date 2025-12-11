@@ -34,6 +34,30 @@ function Layout({ children }: { children: React.ReactNode }) {
     setIsServicesDropdownOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const loadBBBScript = () => {
+      const bbbWindow = window as any;
+      bbbWindow.bbb = bbbWindow.bbb || [];
+      bbbWindow.bbb.push(["bbbid", "central-florida"]);
+      bbbWindow.bbb.push(["bid", "235977450"]);
+      bbbWindow.bbb.push(["chk", "407F815C7C"]);
+      bbbWindow.bbb.push(["pos", "bottom-left"]);
+
+      const scheme = (("https:" === document.location.protocol) ? "https://" : "http://");
+      const script = document.createElement("script");
+      script.type = "text/javascript";
+      script.async = true;
+      script.src = scheme + "seal-centralflorida.bbb.org/badge/badge.min.js";
+
+      const firstScript = document.getElementsByTagName("script")[0];
+      if (firstScript && firstScript.parentNode) {
+        firstScript.parentNode.insertBefore(script, firstScript);
+      }
+    };
+
+    loadBBBScript();
+  }, []);
+
   const isPostPage = location.pathname.startsWith('/blog/');
   const isMobile = window.innerWidth < 768;
   const shouldUseBlackLogo = isScrolled || isPostPage;
@@ -639,21 +663,25 @@ function Layout({ children }: { children: React.ReactNode }) {
                   height="64"
                 />
               </a>
-              <a 
-                href="https://naahq.org/" 
-                target="_blank" 
+              <a
+                href="https://naahq.org/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="transition-transform duration-300 hover:-translate-y-1"
               >
-                <img 
-                  src="/Images/logo-naahq-white_0.png" 
-                  alt="National Apartment Association Member" 
+                <img
+                  src="/Images/logo-naahq-white_0.png"
+                  alt="National Apartment Association Member"
                   className="h-12 sm:h-14 md:h-16 object-contain"
                   loading="lazy"
                   width="64"
                   height="64"
                 />
               </a>
+              <div
+                id="bbb-seal-container"
+                className="transition-transform duration-300 hover:-translate-y-1"
+              />
             </div>
           </div>
         </div>

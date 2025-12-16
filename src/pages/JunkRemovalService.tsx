@@ -231,14 +231,6 @@ function JunkRemovalService() {
                   },
                   {
                     "@type": "Question",
-                    "name": "What documentation do I receive after junk removal?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Every job includes comprehensive documentation for your records. You receive photo documentation showing all items removed from the property, disposal receipts from transfer stations, and disposal manifests tracking where materials went. Property managers particularly value this transparent record-keeping for compliance, tenant disputes, and accounting purposes. All documentation is provided immediately after job completion."
-                    }
-                  },
-                  {
-                    "@type": "Question",
                     "name": "Do you offer junk removal for apartment complexes and commercial properties?",
                     "acceptedAnswer": {
                       "@type": "Answer",
@@ -511,10 +503,6 @@ function JunkRemovalService() {
                 {
                   question: "Do you provide same-day junk removal service in Orlando?",
                   answer: "Yes, we offer same-day junk removal service throughout Orlando and Central Florida when you call before noon. Most appointments are scheduled within 24-48 hours. For urgent property cleanouts, move-outs, or time-sensitive removals, contact us directly at (407) 274-5019 and we'll prioritize your request. Our fast response keeps your property management operations running smoothly."
-                },
-                {
-                  question: "What documentation do I receive after junk removal?",
-                  answer: "Every job includes comprehensive documentation for your records. You receive photo documentation showing all items removed from the property, disposal receipts from transfer stations, and disposal manifests tracking where materials went. Property managers particularly value this transparent record-keeping for compliance, tenant disputes, and accounting purposes. All documentation is provided immediately after job completion."
                 },
                 {
                   question: "Do you offer junk removal for apartment complexes and commercial properties?",

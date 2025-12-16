@@ -65,39 +65,139 @@ function JunkRemovalService() {
   return (
     <>
       <Helmet>
-        <title>Junk Removal Orlando | Furniture & Bulk Items</title>
-        <meta name="description" content="Expert junk removal service in Orlando for furniture appliances and bulk items. Same-day pickup available. Licensed and insured team." />
-        <meta name="keywords" content="junk removal Orlando, bulk item pickup Orlando, furniture removal Orlando, appliance removal Central Florida, construction debris removal Orlando" />
+        <title>Junk Removal Orlando | Same-Day Bulk Hauling Service</title>
+        <meta name="description" content="Professional junk removal in Orlando for apartments & properties. Same-day service, licensed & insured. Call (407) 274-5019 for free quote." />
+        <meta name="keywords" content="junk removal Orlando, bulk removal orlando, apartment junk removal, junk removal & hauling, furniture removal Orlando, appliance removal Central Florida, construction debris removal Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/junk-removal" />
         
-        {/* Junk Removal Service Schema */}
+        {/* Comprehensive Structured Data - LocalBusiness + Service + FAQ + Reviews */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Junk Removal Service",
-            "description": "Professional furniture and bulk item removal service for residential and commercial properties in Orlando",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "On The Fly Waste Solutions",
-              "telephone": "+1-407-274-5019",
-              "url": "https://ontheflywastesolutions.com"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Orlando",
-              "containedInPlace": {
-                "@type": "State",
-                "name": "Florida"
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "name": "On The Fly Waste Solutions",
+                "image": "https://ontheflywastesolutions.com/logos/white-logo.png",
+                "description": "Professional junk removal and hauling service in Orlando, Central Florida. Licensed, insured, minority-owned waste solutions provider.",
+                "url": "https://ontheflywastesolutions.com/services/junk-removal",
+                "telephone": "+1-407-274-5019",
+                "priceRange": "$$",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Orlando",
+                  "addressRegion": "FL",
+                  "addressCountry": "US"
+                },
+                "areaServed": [
+                  {
+                    "@type": "City",
+                    "name": "Orlando",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Kissimmee",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Apopka",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  }
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5.0",
+                  "reviewCount": "29"
+                }
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Junk Removal & Hauling",
+                "name": "Junk Removal Service",
+                "description": "Professional junk removal and hauling service for apartments, condos, and commercial properties. Same-day service available for furniture, appliances, and bulk item removal.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "On The Fly Waste Solutions"
+                },
+                "areaServed": [
+                  "Orlando, FL",
+                  "Kissimmee, FL",
+                  "Apopka, FL",
+                  "Central Florida"
+                ],
+                "offers": {
+                  "@type": "Offer",
+                  "description": "Same-day junk removal service with transparent pricing",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How does junk removal work?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our junk removal process is simple: contact us for a free quote, schedule your pickup time, and our uniformed professionals arrive on-site to safely remove all items. We handle all heavy lifting, loading, and hauling, then dispose of items responsibly through recycling or donation when possible. Complete cleanup is included with every service."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How is pricing determined for junk removal?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Junk removal pricing is based on the volume of items, accessibility, and labor required. We provide transparent, upfront quotes with no hidden fees. Most jobs receive on-site pricing for accuracy. Factors include item type, weight, disposal requirements, and pickup location accessibility within Orlando and Central Florida communities."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What items are accepted for junk removal?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We accept furniture, appliances, electronics, mattresses, construction debris, office equipment, yard waste, and most household items. We cannot remove hazardous materials, chemicals, paint, asbestos, or biological waste. Items in good condition are donated to local charities when possible to support our Orlando community."
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "William Barber"
+                },
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                },
+                "reviewBody": "Mr. Donnell and Mr. Trevor are outstanding young men with a high drive that makes them excel at what they do. Their crew works hard and quickly and are friendly."
+              },
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "Lynn Mollison"
+                },
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                },
+                "reviewBody": "They are professional and dedicated to their job - no short-cuts with them. They work super fast, and they are helpful and friendly. Donnell will go above and beyond to help anyone out."
               }
-            },
-            "serviceType": "Junk Removal",
-            "category": "Waste Management",
-            "offers": {
-              "@type": "Offer",
-              "description": "Same-day junk removal service for furniture, appliances, and bulk items",
-              "availability": "https://schema.org/InStock"
-            }
+            ]
           })}
         </script>
       </Helmet>
@@ -117,22 +217,75 @@ function JunkRemovalService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Orlando Junk Removal
-                  <span className="block text-white/90">& Hauling Service</span>
+                  Junk Removal Orlando
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
-                  Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida
+                  Professional junk removal and hauling service for apartments, condos, and commercial properties in Orlando and Central Florida.
                 </p>
+
+                {/* Above-the-fold benefit bullets */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl mx-auto">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <Clock className="h-6 w-6 text-white mb-2 mx-auto" />
+                    <p className="text-white text-sm font-medium text-center">Same-Day Service Available</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <Shield className="h-6 w-6 text-white mb-2 mx-auto" />
+                    <p className="text-white text-sm font-medium text-center">Licensed & Insured Professionals</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <Truck className="h-6 w-6 text-white mb-2 mx-auto" />
+                    <p className="text-white text-sm font-medium text-center">Complete Removal & Cleanup</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                    <Package className="h-6 w-6 text-white mb-2 mx-auto" />
+                    <p className="text-white text-sm font-medium text-center">Furniture, Appliances & More</p>
+                  </div>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
-                    Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                    Request Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                   <a href="tel:407-274-5019" className="btn-secondary">
-                    <Phone className="mr-2 h-4 w-4" /> Call Now
+                    <Phone className="mr-2 h-4 w-4" /> (407) 274-5019
                   </a>
                 </div>
               </ScrollReveal>
             </div>
+          </div>
+        </section>
+
+        {/* Why Property Managers Choose Us */}
+        <section className="py-16 bg-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl font-bold text-white mb-6">Why Property Managers Choose Us</h2>
+                <p className="text-lg text-gray-300 leading-relaxed mb-8">
+                  Property managers across Orlando trust our junk removal service for reliable documentation, including signed driver tickets and monthly reporting. We provide spare containers for emergencies, respond to urgent requests with same-day service, and maintain comprehensive insurance coverage. Our minority-owned business brings professional accountability to every property cleanout, move-out, and bulk removal project.
+                </p>
+
+                {/* Trust badges */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <Shield className="h-8 w-8 text-[#049704] mb-3 mx-auto" />
+                    <h3 className="text-white font-semibold mb-2">Licensed & Insured</h3>
+                    <p className="text-gray-300 text-sm">Fully licensed waste removal professionals with comprehensive insurance coverage for your property protection.</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <BarChart3 className="h-8 w-8 text-[#049704] mb-3 mx-auto" />
+                    <h3 className="text-white font-semibold mb-2">BBB Accredited</h3>
+                    <p className="text-gray-300 text-sm">Better Business Bureau accredited business maintaining the highest standards of service excellence.</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                    <Users className="h-8 w-8 text-[#049704] mb-3 mx-auto" />
+                    <h3 className="text-white font-semibold mb-2">Minority-Owned</h3>
+                    <p className="text-gray-300 text-sm">Proud minority-owned business serving Orlando communities with dedication and professional integrity.</p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -173,9 +326,9 @@ function JunkRemovalService() {
               </ScrollReveal>
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <img 
+                  <img
                     src="/Images/Junk.jpg"
-                    alt="Professional Junk Removal Service"
+                    alt="Professional junk removal truck loading furniture and bulk items at Orlando apartment community property"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -226,9 +379,9 @@ function JunkRemovalService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div className="relative">
-                  <img 
+                  <img
                     src="/Images/Junk.jpg"
-                    alt="Professional Junk Removal Equipment and Team"
+                    alt="Licensed junk removal team safely hauling appliances and construction debris from Central Florida commercial property"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -312,28 +465,28 @@ function JunkRemovalService() {
             <div className="space-y-6">
               {[
                 {
-                  question: "What items can you remove?",
-                  answer: "We remove furniture, appliances, electronics, construction debris, office equipment, and most household items. We cannot remove hazardous materials, chemicals, paint, or items containing asbestos."
+                  question: "How does junk removal work?",
+                  answer: "Our junk removal process is simple: contact us for a free quote, schedule your pickup time, and our uniformed professionals arrive on-site to safely remove all items. We handle all heavy lifting, loading, and hauling, then dispose of items responsibly through recycling or donation when possible. Complete cleanup is included with every service."
+                },
+                {
+                  question: "How is pricing determined for junk removal?",
+                  answer: "Junk removal pricing is based on the volume of items, accessibility, and labor required. We provide transparent, upfront quotes with no hidden fees. Most jobs receive on-site pricing for accuracy. Factors include item type, weight, disposal requirements, and pickup location accessibility within Orlando and Central Florida communities."
+                },
+                {
+                  question: "What items are accepted for junk removal?",
+                  answer: "We accept furniture, appliances, electronics, mattresses, construction debris, office equipment, yard waste, and most household items. We cannot remove hazardous materials, chemicals, paint, asbestos, or biological waste. Items in good condition are donated to local charities when possible to support our Orlando community."
                 },
                 {
                   question: "How quickly can you provide service?",
-                  answer: "We offer same-day service when available, and can typically schedule removal within 24-48 hours of your request. For urgent needs, call us directly for immediate assistance."
-                },
-                {
-                  question: "How do you price your services?",
-                  answer: "Pricing is based on the volume of items and complexity of removal. We provide upfront, transparent pricing with no hidden fees. Most jobs are priced on-site for accuracy."
-                },
-                {
-                  question: "Do you donate items in good condition?",
-                  answer: "Yes, we work with local charities to donate items in good condition whenever possible. This helps reduce waste while supporting our community."
+                  answer: "We offer same-day service when available and can typically schedule removal within 24-48 hours of your request. For urgent property management needs, call us directly at (407) 274-5019 for immediate assistance with move-outs, turnovers, and emergency cleanouts."
                 },
                 {
                   question: "Are you licensed and insured?",
-                  answer: "Yes, we are fully licensed and insured for your protection. Our professional team is trained in safe removal practices and maintains all required certifications."
+                  answer: "Yes, we are fully licensed and insured for your protection. Our professional team is trained in safe removal practices and maintains all required certifications. We provide proof of insurance and signed driver tickets for property management documentation requirements."
                 },
                 {
-                  question: "Do you clean up after removal?",
-                  answer: "Absolutely. Complete cleanup is included with every job. We sweep, clean, and ensure the area is left spotless after removal."
+                  question: "Do you provide documentation for property managers?",
+                  answer: "Absolutely. We provide signed driver tickets for every pickup, monthly service reports, and complete disposal documentation. This helps property managers maintain accurate records and ensures accountability for all junk removal services at your Orlando property."
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
@@ -373,13 +526,23 @@ function JunkRemovalService() {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get fast, reliable junk removal service in Orlando with same-day availability and eco-friendly disposal practices.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link to="/contact" className="btn-primary">
                   Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-gray-900">
-                  <Phone className="mr-2 h-5 w-5" /> 407-274-5019
+                  <Phone className="mr-2 h-5 w-5" /> (407) 274-5019
                 </a>
+              </div>
+
+              {/* Trust snippets */}
+              <div className="max-w-2xl mx-auto mt-8 pt-8 border-t border-white/20">
+                <p className="text-gray-400 text-sm mb-3">
+                  Licensed and insured junk removal professionals serving Orlando, Kissimmee, and Apopka. Our trained team maintains comprehensive insurance coverage and follows strict safety protocols for every removal project.
+                </p>
+                <p className="text-gray-400 text-sm">
+                  BBB accredited, minority-owned business committed to excellence. We provide signed driver tickets, monthly reporting, and complete documentation for all property management accounts.
+                </p>
               </div>
             </ScrollReveal>
           </div>

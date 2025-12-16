@@ -220,6 +220,30 @@ function JunkRemovalService() {
                       "@type": "Answer",
                       "text": "We remove furniture, appliances, electronics, mattresses, office equipment, construction debris, and most household items. Items in good condition are donated when possible. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste. For large-scale projects, we coordinate multiple truckload trips to handle complete property cleanouts efficiently."
                     }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you provide same-day junk removal service in Orlando?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, we offer same-day junk removal service throughout Orlando and Central Florida when you call before noon. Most appointments are scheduled within 24-48 hours. For urgent property cleanouts, move-outs, or time-sensitive removals, contact us directly at (407) 274-5019 and we'll prioritize your request. Our fast response keeps your property management operations running smoothly."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What documentation do I receive after junk removal?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Every job includes comprehensive documentation for your records. You receive photo documentation showing all items removed from the property, disposal receipts from transfer stations, and disposal manifests tracking where materials went. Property managers particularly value this transparent record-keeping for compliance, tenant disputes, and accounting purposes. All documentation is provided immediately after job completion."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do you offer junk removal for apartment complexes and commercial properties?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal."
+                    }
                   }
                 ]
               },
@@ -388,8 +412,8 @@ function JunkRemovalService() {
               <ScrollReveal direction="left">
                 <div className="relative">
                   <img
-                    src="/Images/Junk.jpg"
-                    alt="On The Fly Waste Solutions team performing truckload cleanout service for property managers in Central Florida"
+                    src="/Residential-Junk-Removal-McAllen-Dumpster-Rental-Junk-Removal-Services-1024x768-2.jpg"
+                    alt="Licensed and insured junk removal specialists hauling appliances and furniture from multifamily residential property Orlando"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -483,6 +507,18 @@ function JunkRemovalService() {
                 {
                   question: "What items can you remove and what is excluded?",
                   answer: "We remove furniture, appliances, electronics, mattresses, office equipment, construction debris, and most household items. Items in good condition are donated when possible. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste. For large-scale projects, we coordinate multiple truckload trips to handle complete property cleanouts efficiently."
+                },
+                {
+                  question: "Do you provide same-day junk removal service in Orlando?",
+                  answer: "Yes, we offer same-day junk removal service throughout Orlando and Central Florida when you call before noon. Most appointments are scheduled within 24-48 hours. For urgent property cleanouts, move-outs, or time-sensitive removals, contact us directly at (407) 274-5019 and we'll prioritize your request. Our fast response keeps your property management operations running smoothly."
+                },
+                {
+                  question: "What documentation do I receive after junk removal?",
+                  answer: "Every job includes comprehensive documentation for your records. You receive photo documentation showing all items removed from the property, disposal receipts from transfer stations, and disposal manifests tracking where materials went. Property managers particularly value this transparent record-keeping for compliance, tenant disputes, and accounting purposes. All documentation is provided immediately after job completion."
+                },
+                {
+                  question: "Do you offer junk removal for apartment complexes and commercial properties?",
+                  answer: "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal."
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>

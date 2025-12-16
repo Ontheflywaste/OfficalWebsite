@@ -65,39 +65,201 @@ function JunkRemovalService() {
   return (
     <>
       <Helmet>
-        <title>Junk Removal Orlando | Furniture & Bulk Items</title>
-        <meta name="description" content="Expert junk removal service in Orlando for furniture appliances and bulk items. Same-day pickup available. Licensed and insured team." />
-        <meta name="keywords" content="junk removal Orlando, bulk item pickup Orlando, furniture removal Orlando, appliance removal Central Florida, construction debris removal Orlando" />
+        <title>Junk Removal Orlando | On The Fly Waste Solutions</title>
+        <meta name="description" content="Fast junk removal & hauling in Orlando. Same-day service, licensed crews, photo documentation. Property managers & residents trust us. Call (407) 274-5019." />
+        <meta name="keywords" content="junk removal orlando, bulk removal orlando, junk removal & hauling, apartment junk removal, door-to-door trash pickup, junk removal central florida, property manager junk removal" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/junk-removal" />
-        
-        {/* Junk Removal Service Schema */}
+
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Junk Removal Service",
-            "description": "Professional furniture and bulk item removal service for residential and commercial properties in Orlando",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "On The Fly Waste Solutions",
-              "telephone": "+1-407-274-5019",
-              "url": "https://ontheflywastesolutions.com"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Orlando",
-              "containedInPlace": {
-                "@type": "State",
-                "name": "Florida"
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://ontheflywastesolutions.com/#organization",
+                "name": "On The Fly Waste Solutions",
+                "image": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+                "logo": "https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png",
+                "url": "https://ontheflywastesolutions.com/services/junk-removal",
+                "telephone": "+1-407-274-5019",
+                "email": "info@ontheflywastesolutions.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Orlando",
+                  "addressRegion": "FL",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 28.5383,
+                  "longitude": -81.3792
+                },
+                "areaServed": [
+                  {
+                    "@type": "City",
+                    "name": "Orlando",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Kissimmee",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Apopka",
+                    "containedInPlace": {
+                      "@type": "State",
+                      "name": "Florida"
+                    }
+                  },
+                  {
+                    "@type": "State",
+                    "name": "Central Florida"
+                  }
+                ],
+                "openingHoursSpecification": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                  "opens": "08:00",
+                  "closes": "21:00"
+                },
+                "priceRange": "$$",
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5.0",
+                  "reviewCount": "29",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                }
+              },
+              {
+                "@type": "Service",
+                "@id": "https://ontheflywastesolutions.com/services/junk-removal#service",
+                "serviceType": "Junk Removal & Hauling Service",
+                "name": "Junk Removal & Hauling Service Orlando",
+                "description": "Professional truckload cleanout service for furniture, appliances, and bulk items. Every job includes photo documentation, disposal manifests, and receipts. We partner with donation centers and recycling facilities to responsibly divert items from landfills. Licensed and insured crews provide same-day and next-day service throughout Orlando and Central Florida.",
+                "provider": {
+                  "@id": "https://ontheflywastesolutions.com/#organization"
+                },
+                "areaServed": [
+                  {
+                    "@type": "City",
+                    "name": "Orlando"
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Kissimmee"
+                  },
+                  {
+                    "@type": "City",
+                    "name": "Apopka"
+                  }
+                ],
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Junk Removal Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Furniture Removal",
+                        "description": "Professional removal of furniture with photo documentation and disposal receipts"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Appliance Removal",
+                        "description": "Safe appliance hauling with proper disposal and recycling options"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Property Cleanouts",
+                        "description": "Complete truckload cleanout service for apartments and commercial properties"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "@id": "https://ontheflywastesolutions.com/services/junk-removal#faq",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How does junk removal work in Orlando?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our crew arrives at your scheduled time with trucks ready for immediate loading. We provide a free on-site estimate, then handle all lifting, loading, and hauling. After removal, you receive photo documentation showing items removed, plus disposal receipts and manifests. Most jobs are completed same-day or next-day, with complete cleanup included."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How is junk removal pricing determined?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Pricing is based on the volume of items and labor required for safe removal. We provide transparent, upfront quotes with no hidden fees. Most property managers receive on-site estimates that account for truckload space needed, item weight, disposal costs, and crew time. Pricing is finalized before work begins, ensuring budget certainty for commercial accounts."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What items can you remove and what is excluded?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We remove furniture, appliances, electronics, mattresses, office equipment, construction debris, and most household items. Items in good condition are donated when possible. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste. For large-scale projects, we coordinate multiple truckload trips to handle complete property cleanouts efficiently."
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "William Barber"
+                },
+                "datePublished": "2024-11-15",
+                "reviewBody": "Mr. Donnell and Mr. Trevor are outstanding young men with a high drive that makes them excel at what they do. Their crew works hard and quickly and are friendly.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "itemReviewed": {
+                  "@id": "https://ontheflywastesolutions.com/services/junk-removal#service"
+                }
+              },
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "Lynn Mollison"
+                },
+                "datePublished": "2024-10-22",
+                "reviewBody": "They are professional and dedicated to their job - no short-cuts with them. They work super fast, and they are helpful and friendly. Donnell will go above and beyond to help anyone out.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "itemReviewed": {
+                  "@id": "https://ontheflywastesolutions.com/services/junk-removal#service"
+                }
               }
-            },
-            "serviceType": "Junk Removal",
-            "category": "Waste Management",
-            "offers": {
-              "@type": "Offer",
-              "description": "Same-day junk removal service for furniture, appliances, and bulk items",
-              "availability": "https://schema.org/InStock"
-            }
+            ]
           })}
         </script>
       </Helmet>
@@ -117,18 +279,17 @@ function JunkRemovalService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Orlando Junk Removal
-                  <span className="block text-white/90">& Hauling Service</span>
+                  Junk Removal & Hauling Service Orlando
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
-                  Orlando's trusted junk removal specialists for furniture, appliances, and bulk items. Professional removal service for apartments, condos, and commercial properties across Central Florida
+                  On The Fly Waste Solutions provides fast, professional junk removal and hauling service throughout Orlando and Central Florida. Trusted by property managers and residents for reliable truckload cleanouts with complete documentation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
-                    Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                    Get Free On-Site Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                   <a href="tel:407-274-5019" className="btn-secondary">
-                    <Phone className="mr-2 h-4 w-4" /> Call Now
+                    <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
               </ScrollReveal>
@@ -142,13 +303,13 @@ function JunkRemovalService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose Our Junk Removal Service?</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Property Managers Choose Us</h2>
                   <div className="prose prose-lg text-gray-600 mb-8">
                     <p>
-                      Our professional junk removal service in Orlando transforms cluttered spaces into clean, organized environments. We handle everything from single furniture pieces to complete property cleanouts, serving apartment communities, condos, and commercial properties throughout Central Florida.
+                      Property managers rely on our dependable scheduling and transparent documentation. Every junk removal job includes photo documentation of removed items, disposal manifests, and receipts for your records. We partner with local donation centers and recycling facilities to divert usable items from landfills. Our fully insured crews protect your property while delivering fast, professional service that keeps residents satisfied.
                     </p>
                     <p>
-                      Our uniformed professionals arrive on time with the right equipment to safely remove your unwanted items. We handle all the heavy lifting, loading, and proper disposal, making the entire process effortless for property managers and residents. From old furniture to appliance removal, we've got you covered.
+                      Our professional junk removal service in Orlando transforms cluttered spaces into clean, organized environments. We handle everything from single furniture pieces to complete property cleanouts, serving apartment communities, condos, and commercial properties throughout Central Florida. On The Fly Waste Solutions is a licensed and insured, BBB-accredited junk removal company. As a minority-owned business, we're committed to professional service, transparent documentation, and responsible disposal practices.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -173,9 +334,9 @@ function JunkRemovalService() {
               </ScrollReveal>
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
-                  <img 
+                  <img
                     src="/Images/Junk.jpg"
-                    alt="Professional Junk Removal Service"
+                    alt="Professional junk removal crew loading furniture and bulk items onto truck in Orlando Florida apartment community"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -226,9 +387,9 @@ function JunkRemovalService() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div className="relative">
-                  <img 
+                  <img
                     src="/Images/Junk.jpg"
-                    alt="Professional Junk Removal Equipment and Team"
+                    alt="On The Fly Waste Solutions team performing truckload cleanout service for property managers in Central Florida"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"
                   />
@@ -312,28 +473,16 @@ function JunkRemovalService() {
             <div className="space-y-6">
               {[
                 {
-                  question: "What items can you remove?",
-                  answer: "We remove furniture, appliances, electronics, construction debris, office equipment, and most household items. We cannot remove hazardous materials, chemicals, paint, or items containing asbestos."
+                  question: "How does junk removal work in Orlando?",
+                  answer: "Our crew arrives at your scheduled time with trucks ready for immediate loading. We provide a free on-site estimate, then handle all lifting, loading, and hauling. After removal, you receive photo documentation showing items removed, plus disposal receipts and manifests. Most jobs are completed same-day or next-day, with complete cleanup included."
                 },
                 {
-                  question: "How quickly can you provide service?",
-                  answer: "We offer same-day service when available, and can typically schedule removal within 24-48 hours of your request. For urgent needs, call us directly for immediate assistance."
+                  question: "How is junk removal pricing determined?",
+                  answer: "Pricing is based on the volume of items and labor required for safe removal. We provide transparent, upfront quotes with no hidden fees. Most property managers receive on-site estimates that account for truckload space needed, item weight, disposal costs, and crew time. Pricing is finalized before work begins, ensuring budget certainty for commercial accounts."
                 },
                 {
-                  question: "How do you price your services?",
-                  answer: "Pricing is based on the volume of items and complexity of removal. We provide upfront, transparent pricing with no hidden fees. Most jobs are priced on-site for accuracy."
-                },
-                {
-                  question: "Do you donate items in good condition?",
-                  answer: "Yes, we work with local charities to donate items in good condition whenever possible. This helps reduce waste while supporting our community."
-                },
-                {
-                  question: "Are you licensed and insured?",
-                  answer: "Yes, we are fully licensed and insured for your protection. Our professional team is trained in safe removal practices and maintains all required certifications."
-                },
-                {
-                  question: "Do you clean up after removal?",
-                  answer: "Absolutely. Complete cleanup is included with every job. We sweep, clean, and ensure the area is left spotless after removal."
+                  question: "What items can you remove and what is excluded?",
+                  answer: "We remove furniture, appliances, electronics, mattresses, office equipment, construction debris, and most household items. Items in good condition are donated when possible. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste. For large-scale projects, we coordinate multiple truckload trips to handle complete property cleanouts efficiently."
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
@@ -371,14 +520,14 @@ function JunkRemovalService() {
                 Ready for Professional Junk Removal Service?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get fast, reliable junk removal service in Orlando with same-day availability and eco-friendly disposal practices.
+                Fast response within 2 hours. Same-day service available for urgent junk removal needs. Licensed crews, photo documentation, and complete disposal receipts included.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact" className="btn-primary">
-                  Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                  Get Free On-Site Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a href="tel:407-274-5019" className="btn-outline border-white text-white hover:bg-white hover:text-gray-900">
-                  <Phone className="mr-2 h-5 w-5" /> 407-274-5019
+                  <Phone className="mr-2 h-5 w-5" /> Call (407) 274-5019 Now
                 </a>
               </div>
             </ScrollReveal>

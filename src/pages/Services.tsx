@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Trash2, Package, Droplet, Calendar, Clock, CheckCircle2, Shield, PenTool as Tool } from 'lucide-react';
+import { ArrowRight, Trash2, Package, Droplet, Calendar, Clock, CheckCircle2, Shield, PenTool as Tool, Building2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
@@ -289,6 +289,103 @@ function Services() {
                     </ul>
                     <div className="text-center">
                       <Link to="/services/junk-removal" className="btn-primary">
+                        Learn More <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              </div>
+            </div>
+          </div>
+
+          {/* Bulk Removal */}
+          <div id="bulk-removal" className="scroll-mt-32 bg-gradient-to-br from-[#049704]/5 via-white to-[#049704]/10 py-20">
+            <div className="absolute inset-0 bg-[url('/Images/pattern.png')] opacity-5 -z-10" />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <ScrollReveal direction="right" distance={200} delay={0.2} className="order-1 lg:order-2">
+                  <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+                    <img
+                      src="/Images/ApartmentBuildingHero.webp"
+                      alt="Bulk Removal for Property Managers"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  </div>
+                </ScrollReveal>
+                <ScrollReveal direction="left" distance={200} className="order-2 lg:order-1">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+                    <div className="flex items-center space-x-2 text-[#049704] mb-4">
+                      <Building2 className="h-6 w-6" />
+                      <span className="text-lg font-medium">Professional Bulk Removal</span>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Bulk Removal for Property Managers</h2>
+                    <div className="prose prose-lg text-gray-600 mb-6">
+                      <p>
+                        Specialized <Link to="/services/bulk-removal" className="text-[#049704] hover:text-[#038203] font-medium">bulk removal programs</Link> designed for apartment communities, HOAs, and commercial properties. SLA-backed service with complete documentation, rapid mobilization, and transparent pricing throughout Central Florida.
+                      </p>
+                      <p>
+                        Our institutional-focused service provides photo documentation, disposal manifests, and receipts for every job. With 2-hour response time and same-day availability, we handle move-out cleanouts, common area cleanup, and renovation debris efficiently.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Clock className="h-5 w-5 text-[#049704] mr-2" />
+                          Rapid Response
+                        </div>
+                        <p className="text-sm text-gray-600">
+                          2-hour response time with same-day service
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Shield className="h-5 w-5 text-[#049704] mr-2" />
+                          SLA Guarantees
+                        </div>
+                        <p className="text-sm text-gray-600">
+                          Service level agreements for predictable service
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Tool className="h-5 w-5 text-[#049704] mr-2" />
+                          Complete Documentation
+                        </div>
+                        <p className="text-sm text-gray-600">
+                          Photos, manifests, and receipts for compliance
+                        </p>
+                      </div>
+                      <div className="bg-[#049704]/5 p-4 rounded-lg">
+                        <div className="font-semibold text-gray-900 mb-2 flex items-center">
+                          <Tool className="h-5 w-5 text-[#049704] mr-2" />
+                          Flexible Contracts
+                        </div>
+                        <p className="text-sm text-gray-600">
+                          On-demand or recurring service options
+                        </p>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {[
+                        'On-demand bulk removal for urgent property needs',
+                        'Scheduled cleanouts for move-out seasons',
+                        'Photo documentation and disposal tracking',
+                        'Transparent pricing with no hidden fees',
+                        'Licensed and insured professional crews',
+                        'Partnership with donation centers and recycling facilities'
+                      ].map((item, index) => (
+                        <ScrollReveal key={item} delay={index * 0.1}>
+                          <li className="flex items-center space-x-3">
+                            <CheckCircle2 className="h-5 w-5 text-[#049704] flex-shrink-0" />
+                            <span className="text-gray-700">{item}</span>
+                          </li>
+                        </ScrollReveal>
+                      ))}
+                    </ul>
+                    <div className="text-center">
+                      <Link to="/services/bulk-removal" className="btn-primary">
                         Learn More <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </div>

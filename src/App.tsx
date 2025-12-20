@@ -18,6 +18,7 @@ const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const ValetTrashService = React.lazy(() => import('./pages/ValetTrashService'));
 const JunkRemovalService = React.lazy(() => import('./pages/JunkRemovalService'));
+const BulkRemovalService = React.lazy(() => import('./pages/BulkRemovalService'));
 const PressureWashingService = React.lazy(() => import('./pages/PressureWashingService'));
 const ValetTrashBenefits = React.lazy(() => import('./pages/ValetTrashBenefits'));
 const VendorSelectionGuide = React.lazy(() => import('./pages/VendorSelectionGuide'));
@@ -55,6 +56,7 @@ function AnimatedRoutes() {
           <Route path="/blog/:id" element={<PageTransition><BlogPost /></PageTransition>} />
           <Route path="/services/valet-trash" element={<PageTransition><ValetTrashService /></PageTransition>} />
           <Route path="/services/junk-removal" element={<PageTransition><JunkRemovalService /></PageTransition>} />
+          <Route path="/services/bulk-removal" element={<PageTransition><BulkRemovalService /></PageTransition>} />
           <Route path="/services/pressure-washing" element={<PageTransition><PressureWashingService /></PageTransition>} />
           <Route path="/blog/valet-trash-benefits" element={<PageTransition><ValetTrashBenefits /></PageTransition>} />
           <Route path="/blog/how-to-choose-valet-trash-vendor" element={<PageTransition><VendorSelectionGuide /></PageTransition>} />

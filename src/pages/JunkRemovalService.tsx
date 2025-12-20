@@ -351,7 +351,7 @@ function JunkRemovalService() {
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="relative">
                   <img
-                    src="https://images.unsplash.com/photo-1628744876497-eb30460be9f6?w=800&q=80"
+                    src="/Images/haberdoedas-ii-wbx6kmc1wvq-unsplash.jpg"
                     alt="Professional junk removal crew loading furniture and bulk items onto truck in Orlando Florida apartment community"
                     className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                     loading="lazy"

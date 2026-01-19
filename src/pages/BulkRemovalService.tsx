@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Clock, Shield, Users, FileText, Truck, Building2, Phone, Mail, Star, Quote, ChevronDown, ClipboardCheck, TrendingUp } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle2, Clock, Shield, Users, FileText, Truck, Building2, Phone, Mail, Star, Quote, ChevronDown, ClipboardCheck, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';

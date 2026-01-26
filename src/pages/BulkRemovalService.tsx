@@ -199,10 +199,10 @@ function BulkRemovalService() {
                   },
                   {
                     "@type": "Question",
-                    "name": "What documentation do you provide for bulk removal jobs?",
+                    "name": "What is your invoicing process for property management companies?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Every bulk removal job includes comprehensive documentation: before and after photos, disposal manifests showing where items went, receipts for your records, and diversion reports detailing donated and recycled items. This complete audit trail helps property managers maintain compliance, track expenses, and communicate with residents about sustainable disposal practices."
+                      "text": "Our B2B invoicing is designed for property management workflows. We accept purchase orders and include PO numbers on all invoices for easy tracking and approval. Invoices are typically sent within 24 hours of service completion and include itemized breakdowns and photo documentation. We offer flexible payment terms for established accounts, accept ACH/wire transfers, and can integrate with most AP systems. Net-30 terms available for qualified property management companies."
                     }
                   },
                   {
@@ -560,8 +560,8 @@ function BulkRemovalService() {
                   answer: "We provide 2-hour response time for urgent bulk removal needs, with same-day service available when you call before noon. Most scheduled appointments are completed within 24-48 hours. For property managers with recurring needs, we establish service level agreements that guarantee specific response times based on your operational requirements."
                 },
                 {
-                  question: "What documentation do you provide for bulk removal jobs?",
-                  answer: "Every bulk removal job includes comprehensive documentation: before and after photos, disposal manifests showing where items went, receipts for your records, and diversion reports detailing donated and recycled items. This complete audit trail helps property managers maintain compliance, track expenses, and communicate with residents about sustainable disposal practices."
+                  question: "What is your invoicing process for property management companies?",
+                  answer: "Our B2B invoicing is designed for property management workflows. We accept purchase orders and include PO numbers on all invoices for easy tracking and approval. Invoices are typically sent within 24 hours of service completion and include itemized breakdowns and photo documentation. We offer flexible payment terms for established accounts, accept ACH/wire transfers, and can integrate with most AP systems. Net-30 terms available for qualified property management companies."
                 },
                 {
                   question: "How is bulk removal pricing structured for apartment communities?",

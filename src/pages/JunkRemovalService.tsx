@@ -6,10 +6,21 @@ import ScrollReveal from '../components/ScrollReveal';
 
 function JunkRemovalService() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [showStickyButton, setShowStickyButton] = useState(false);
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight;
+      setShowStickyButton(window.scrollY > heroHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const benefits = [
     {
@@ -308,6 +319,16 @@ function JunkRemovalService() {
                     <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
+                <div className="mt-6">
+                  <Link
+                    to="/services/bulk-removal"
+                    className="inline-flex items-center text-white/90 hover:text-white transition-colors duration-200 text-sm font-medium border-b border-white/40 hover:border-white pb-1"
+                  >
+                    <Users className="mr-2 h-4 w-4" />
+                    Property Manager? View Our Bulk Removal Programs
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </ScrollReveal>
             </div>
           </div>
@@ -363,6 +384,29 @@ function JunkRemovalService() {
           </div>
         </section>
 
+        {/* Property Manager Callout */}
+        <section className="py-16 bg-gradient-to-br from-[#049704] to-[#026502]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                <div className="relative text-center">
+                  <Users className="h-12 w-12 text-white mx-auto mb-4" />
+                  <h2 className="text-3xl font-bold text-white mb-4">Property Managers: Need Bulk Removal?</h2>
+                  <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
+                    We offer specialized bulk removal programs for apartment communities, HOAs, and commercial properties with SLA-backed service, complete documentation, and rapid mobilization.
+                  </p>
+                  <Link
+                    to="/services/bulk-removal"
+                    className="relative z-10 inline-flex items-center px-8 py-4 bg-white text-[#049704] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    View Bulk Removal Services <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
         {/* Key Benefits */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -394,29 +438,6 @@ function JunkRemovalService() {
                 </ScrollReveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Property Manager Callout */}
-        <section className="py-16 bg-gradient-to-br from-[#049704] to-[#026502]">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal>
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
-                <div className="relative text-center">
-                  <Users className="h-12 w-12 text-white mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold text-white mb-4">Property Managers: Need Bulk Removal?</h2>
-                  <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
-                    We offer specialized bulk removal programs for apartment communities, HOAs, and commercial properties with SLA-backed service, complete documentation, and rapid mobilization.
-                  </p>
-                  <Link
-                    to="/services/bulk-removal"
-                    className="relative z-10 inline-flex items-center px-8 py-4 bg-white text-[#049704] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  >
-                    View Bulk Removal Services <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
           </div>
         </section>
 
@@ -580,6 +601,21 @@ function JunkRemovalService() {
             </ScrollReveal>
           </div>
         </section>
+
+        {/* Sticky Floating CTA for Bulk Removal */}
+        <div className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ${
+          showStickyButton ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
+        }`}>
+          <Link
+            to="/services/bulk-removal"
+            className="flex items-center px-6 py-4 bg-gradient-to-r from-[#049704] to-[#026502] text-white rounded-full font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            <Users className="mr-2 h-5 w-5" />
+            <span className="hidden sm:inline">Property Managers: </span>
+            <span className="font-bold ml-1">Bulk Removal</span>
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </>
   );

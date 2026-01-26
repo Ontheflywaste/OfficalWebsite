@@ -65,39 +65,123 @@ function ValetTrashService() {
   return (
     <>
       <Helmet>
-        <title>Orlando Valet Trash Service | Professional Pickup</title>
-        <meta name="description" content="Professional valet trash service for Orlando apartments and condos. Reliable daily pickup enhances resident satisfaction. Schedule consultation!" />
+        <title>Door-to-Door Valet Trash Service Orlando - Apartment Communities | Call (407) 274-5019</title>
+        <meta name="description" content="Professional valet trash service for Orlando, Kissimmee & Central Florida apartment communities. Licensed & insured with 5+ days weekly service. Door-to-door pickup, uniformed staff, 24/7 support. Call (407) 274-5019 for free quote!" />
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash collection Orlando, professional valet trash Florida, multifamily waste services Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, contract valet trash for property managers" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/valet-trash" />
         
-        {/* Valet Trash Service Schema */}
+        {/* Comprehensive Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Valet Trash Service",
-            "description": "Professional door-to-door trash collection service for apartment communities and condos in Orlando",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "On The Fly Waste Solutions",
-              "telephone": "+1-407-274-5019",
-              "url": "https://ontheflywastesolutions.com"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Orlando",
-              "containedInPlace": {
-                "@type": "State",
-                "name": "Florida"
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://ontheflywastesolutions.com/#organization",
+                "name": "On The Fly Waste Solutions",
+                "url": "https://ontheflywastesolutions.com",
+                "logo": "https://ontheflywastesolutions.com/logos/white-logo.png",
+                "image": "https://ontheflywastesolutions.com/Images/gallery12813_1920x831@2x.jpg",
+                "telephone": "+1-407-274-5019",
+                "email": "info@ontheflywastesolutions.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Orlando",
+                  "addressRegion": "FL",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "28.5383",
+                  "longitude": "-81.3792"
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                    "opens": "00:00",
+                    "closes": "23:59"
+                  }
+                ],
+                "priceRange": "$$",
+                "areaServed": [
+                  { "@type": "City", "name": "Orlando", "@id": "https://en.wikipedia.org/wiki/Orlando,_Florida" },
+                  { "@type": "City", "name": "Kissimmee" },
+                  { "@type": "City", "name": "Apopka" },
+                  { "@type": "City", "name": "Winter Park" },
+                  { "@type": "City", "name": "Altamonte Springs" },
+                  { "@type": "City", "name": "Maitland" },
+                  { "@type": "City", "name": "Oviedo" },
+                  { "@type": "City", "name": "Lake Mary" }
+                ],
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Waste Management Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Valet Trash Service",
+                        "description": "Professional door-to-door trash collection for apartment communities"
+                      }
+                    }
+                  ]
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5",
+                  "reviewCount": "2"
+                }
+              },
+              {
+                "@type": "Service",
+                "@id": "https://ontheflywastesolutions.com/services/valet-trash",
+                "serviceType": "Valet Trash Collection",
+                "name": "Door-to-Door Valet Trash Service Orlando",
+                "description": "Professional door-to-door trash collection service for Orlando, Kissimmee, and Central Florida apartment communities with 5-7 days weekly pickup",
+                "provider": {
+                  "@id": "https://ontheflywastesolutions.com/#organization"
+                },
+                "areaServed": [
+                  { "@type": "City", "name": "Orlando" },
+                  { "@type": "City", "name": "Kissimmee" },
+                  { "@type": "City", "name": "Apopka" },
+                  { "@type": "City", "name": "Winter Park" }
+                ],
+                "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "servicePhone": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-407-274-5019",
+                    "contactType": "Customer Service",
+                    "availableLanguage": ["English", "Spanish"]
+                  },
+                  "serviceUrl": "https://ontheflywastesolutions.com/services/valet-trash"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What days and times do you collect trash?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We offer flexible collection schedules tailored to your property's needs. Most communities prefer evening collections between 6-9 PM, and we can provide service up to 7 days per week."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How much does valet trash service cost?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Pricing varies based on your property size, collection frequency, and specific service requirements. We offer competitive rates with transparent pricing and no hidden fees."
+                    }
+                  }
+                ]
               }
-            },
-            "serviceType": "Waste Management",
-            "category": "Valet Trash Collection",
-            "offers": {
-              "@type": "Offer",
-              "description": "Professional valet trash pickup service for multifamily properties",
-              "availability": "https://schema.org/InStock"
-            }
+            ]
           })}
         </script>
       </Helmet>
@@ -106,29 +190,29 @@ function ValetTrashService() {
         {/* Hero Section */}
         <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/gallery12813_1920x831@2x.jpg')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
-          
+          <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24 min-h-screen">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
-                    Premium Service
+                    5+ Days Weekly Service Available
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Orlando's Premier Valet
-                  <span className="block text-white/90">Trash Service</span>
+                  Door-to-Door Valet Trash Service Orlando
+                  <span className="block text-white/90">Apartment Communities & Multifamily Properties</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
-                  Orlando's most reliable doorstep trash pickup service for apartment communities, condos, and multifamily properties across Central Florida
+                  Professional door-to-door trash collection service for Orlando, Kissimmee, and Central Florida apartment communities. Licensed and insured with uniformed staff, flexible 5-7 days weekly pickup schedules, complete reporting, and 24/7 support. Enhance resident satisfaction while reducing maintenance burden.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
-                    Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                    Get Free Property Assessment <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                   <a href="tel:407-274-5019" className="btn-secondary">
-                    <Phone className="mr-2 h-4 w-4" /> Call Now
+                    <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
               </ScrollReveal>

@@ -65,39 +65,140 @@ function PressureWashingService() {
   return (
     <>
       <Helmet>
-        <title>Pressure Washing Orlando | Building Cleaning</title>
-        <meta name="description" content="Expert pressure washing services in Orlando for buildings driveways and surfaces. Professional equipment and eco-friendly solutions." />
+        <title>Commercial & Residential Pressure Washing Orlando - Buildings, Driveways & Surfaces | (407) 274-5019</title>
+        <meta name="description" content="Professional pressure washing in Orlando, Kissimmee & Central Florida. Commercial-grade equipment for building exteriors, driveways, parking lots, sidewalks, patios. Mold removal, graffiti cleaning. Licensed & insured. Call (407) 274-5019 for free estimate!" />
         <meta name="keywords" content="pressure washing Orlando, building cleaning Orlando, driveway cleaning Central Florida, surface cleaning services Orlando, commercial pressure washing Florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services/pressure-washing" />
         
-        {/* Pressure Washing Service Schema */}
+        {/* Comprehensive Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Pressure Washing Service",
-            "description": "Professional building and surface cleaning services using commercial-grade equipment and eco-friendly solutions",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "On The Fly Waste Solutions",
-              "telephone": "+1-407-274-5019",
-              "url": "https://ontheflywastesolutions.com"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": "Orlando",
-              "containedInPlace": {
-                "@type": "State",
-                "name": "Florida"
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://ontheflywastesolutions.com/#organization",
+                "name": "On The Fly Waste Solutions",
+                "url": "https://ontheflywastesolutions.com",
+                "logo": "https://ontheflywastesolutions.com/logos/white-logo.png",
+                "image": "https://ontheflywastesolutions.com/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg",
+                "telephone": "+1-407-274-5019",
+                "email": "info@ontheflywastesolutions.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Orlando",
+                  "addressRegion": "FL",
+                  "addressCountry": "US"
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "28.5383",
+                  "longitude": "-81.3792"
+                },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                    "opens": "00:00",
+                    "closes": "23:59"
+                  }
+                ],
+                "priceRange": "$$",
+                "areaServed": [
+                  { "@type": "City", "name": "Orlando", "@id": "https://en.wikipedia.org/wiki/Orlando,_Florida" },
+                  { "@type": "City", "name": "Kissimmee" },
+                  { "@type": "City", "name": "Apopka" },
+                  { "@type": "City", "name": "Winter Park" },
+                  { "@type": "City", "name": "Altamonte Springs" },
+                  { "@type": "City", "name": "Maitland" },
+                  { "@type": "City", "name": "Oviedo" },
+                  { "@type": "City", "name": "Lake Mary" }
+                ],
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Pressure Washing Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Building Exterior Cleaning",
+                        "description": "Professional building facade and exterior pressure washing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Driveway and Parking Lot Cleaning",
+                        "description": "Commercial-grade pressure washing for driveways and parking areas"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Sidewalk and Walkway Cleaning",
+                        "description": "Professional sidewalk restoration and cleaning services"
+                      }
+                    }
+                  ]
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "5",
+                  "reviewCount": "2"
+                }
+              },
+              {
+                "@type": "Service",
+                "@id": "https://ontheflywastesolutions.com/services/pressure-washing",
+                "serviceType": "Pressure Washing",
+                "name": "Professional Pressure Washing Orlando",
+                "description": "Expert pressure washing services for buildings, driveways, parking lots, sidewalks, and surfaces in Orlando and Central Florida with commercial-grade equipment",
+                "provider": {
+                  "@id": "https://ontheflywastesolutions.com/#organization"
+                },
+                "areaServed": [
+                  { "@type": "City", "name": "Orlando" },
+                  { "@type": "City", "name": "Kissimmee" },
+                  { "@type": "City", "name": "Apopka" },
+                  { "@type": "City", "name": "Winter Park" },
+                  { "@type": "City", "name": "Altamonte Springs" }
+                ],
+                "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "servicePhone": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-407-274-5019",
+                    "contactType": "Customer Service",
+                    "availableLanguage": ["English", "Spanish"]
+                  },
+                  "serviceUrl": "https://ontheflywastesolutions.com/services/pressure-washing"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What surfaces can you pressure wash?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "We can pressure wash building exteriors, driveways, parking lots, sidewalks, decks, patios, and various other surfaces using appropriate pressure settings for each surface type."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is pressure washing safe for all surfaces?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our experienced technicians understand different surface types and use appropriate pressure settings to ensure thorough cleaning without causing damage."
+                    }
+                  }
+                ]
               }
-            },
-            "serviceType": "Pressure Washing",
-            "category": "Building Maintenance",
-            "offers": {
-              "@type": "Offer",
-              "description": "Professional pressure washing for buildings, driveways, and surfaces",
-              "availability": "https://schema.org/InStock"
-            }
+            ]
           })}
         </script>
       </Helmet>
@@ -106,29 +207,29 @@ function PressureWashingService() {
         {/* Hero Section */}
         <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-800/70 via-blue-700/50 to-blue-900/80" />
-          
+          <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
+
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex flex-col justify-center items-center h-full text-center min-h-screen">
               <ScrollReveal>
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
-                    Professional Service
+                    Commercial Grade Equipment
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Orlando Pressure Washing
-                  <span className="block text-white/90">& Surface Cleaning</span>
+                  Professional Pressure Washing Orlando
+                  <span className="block text-white/90">Commercial & Residential Surface Cleaning</span>
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  Transform your property's appearance with expert pressure washing services for buildings, driveways, and surfaces across Orlando and Central Florida
+                  Expert pressure washing services for Orlando, Kissimmee, and Central Florida properties. Professional building exterior cleaning, driveway restoration, parking lot washing, sidewalk cleaning, deck and patio renewal. Commercial-grade equipment removes dirt, grime, mold, mildew, and stains. Licensed and insured teams with eco-friendly solutions for all surface types.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary-inverse">
-                    Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+                    Get Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                   <a href="tel:407-274-5019" className="btn-secondary">
-                    <Phone className="mr-2 h-4 w-4" /> Call Now
+                    <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
               </ScrollReveal>

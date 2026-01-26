@@ -190,7 +190,7 @@ function ValetTrashService() {
         {/* Hero Section */}
         <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/gallery12813_1920x831@2x.jpg')] bg-cover bg-center opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
             <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24 min-h-screen">

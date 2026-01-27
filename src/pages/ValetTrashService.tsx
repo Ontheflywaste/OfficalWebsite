@@ -201,11 +201,10 @@ function ValetTrashService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Door-to-Door Valet Trash Service Orlando
-                  <span className="block text-white/90">Apartment Communities & Multifamily Properties</span>
+                  Valet Trash Service Orlando
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
-                  Professional door-to-door trash collection service for Orlando, Kissimmee, and Central Florida apartment communities. Licensed and insured with uniformed staff, flexible 5-7 days weekly pickup schedules, complete reporting, and 24/7 support. Enhance resident satisfaction while reducing maintenance burden.
+                  Professional door-to-door trash collection for Orlando apartment communities. Licensed, insured crews provide flexible pickup schedules with complete reporting. Enhance resident satisfaction while reducing maintenance workload.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">

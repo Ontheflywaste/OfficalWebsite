@@ -218,11 +218,10 @@ function PressureWashingService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Professional Pressure Washing Orlando
-                  <span className="block text-white/90">Commercial & Residential Surface Cleaning</span>
+                  Pressure Washing Orlando
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  Expert pressure washing services for Orlando, Kissimmee, and Central Florida properties. Professional building exterior cleaning, driveway restoration, parking lot washing, sidewalk cleaning, deck and patio renewal. Commercial-grade equipment removes dirt, grime, mold, mildew, and stains. Licensed and insured teams with eco-friendly solutions for all surface types.
+                  Professional pressure washing for Orlando commercial and residential properties. Commercial-grade equipment cleans buildings, driveways, sidewalks, and more. Licensed, insured teams use eco-friendly solutions for all surfaces.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link to="/contact" className="btn-primary-inverse">

@@ -193,15 +193,15 @@ function ValetTrashService() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-24 min-h-screen">
+            <div className="flex flex-col justify-center items-center h-full text-center min-h-screen">
               <ScrollReveal>
-                <div className="mb-6">
+                <div className="mb-6 flex justify-center">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
                     5+ Days Weekly Service Available
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Door-to-Door Valet Trash Orlando - 5+ Days Weekly
+                  Professional Valet Trash - 5+ Days Weekly Service
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Professional door-to-door trash collection for Orlando apartment communities. Licensed, insured crews provide flexible pickup schedules with complete reporting. Enhance resident satisfaction while reducing maintenance workload.

@@ -383,7 +383,11 @@ function JunkRemovalService() {
                   <Users className="h-12 w-12 text-white mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-white mb-4">Property Managers: Need Bulk Removal?</h2>
                   <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto">
-                    We offer specialized bulk removal programs for apartment communities, HOAs, and commercial properties with SLA-backed service, complete documentation, and rapid mobilization.
+                    We offer{' '}
+                    <Link to="/services/bulk-removal" className="text-white hover:text-white/80 font-semibold underline">
+                      specialized bulk removal programs
+                    </Link>
+                    {' '}for apartment communities, HOAs, and commercial properties with SLA-backed service, complete documentation, and rapid mobilization.
                   </p>
                   <Link
                     to="/services/bulk-removal"
@@ -540,7 +544,15 @@ function JunkRemovalService() {
                 },
                 {
                   question: "Do you offer junk removal for apartment complexes and commercial properties?",
-                  answer: "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal."
+                  answer: (
+                    <>
+                      Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain{' '}
+                      <Link to="/services/bulk-removal" className="text-[#049704] hover:text-[#038203] font-medium underline">
+                        ongoing service agreements
+                      </Link>
+                      {' '}with us for consistent, reliable junk removal.
+                    </>
+                  )
                 }
               ].map((faq, index) => (
                 <ScrollReveal key={index} delay={index * 0.1}>
@@ -560,7 +572,7 @@ function JunkRemovalService() {
                       openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}>
                       <div className="px-6 pb-6">
-                        <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                        <div className="text-gray-600 leading-relaxed">{faq.answer}</div>
                       </div>
                     </div>
                   </div>

@@ -319,16 +319,6 @@ function JunkRemovalService() {
                     <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
-                <div className="mt-6">
-                  <Link
-                    to="/services/bulk-removal"
-                    className="inline-flex items-center text-white/90 hover:text-white transition-colors duration-200 text-sm font-medium border-b border-white/40 hover:border-white pb-1"
-                  >
-                    <Users className="mr-2 h-4 w-4" />
-                    Property Manager? View Our Bulk Removal Programs
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
               </ScrollReveal>
             </div>
           </div>

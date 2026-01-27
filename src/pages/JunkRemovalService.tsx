@@ -298,7 +298,7 @@ function JunkRemovalService() {
           <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-            <div className="flex flex-col justify-center items-center h-full text-center min-h-screen py-20">
+            <div className="flex flex-col justify-center items-center h-full text-center min-h-screen">
               <ScrollReveal>
                 <div className="mb-6 flex justify-center">
                   <span className="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium backdrop-blur-sm border border-white/30">
@@ -311,7 +311,7 @@ function JunkRemovalService() {
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Affordable junk removal for Orlando residents. We remove furniture, appliances, mattresses, and more with same-day service available. Licensed, insured crews provide upfront pricing and complete cleanup.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full mb-8">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                   <Link to="/contact" className="btn-primary-inverse">
                     Get Free On-Site Quote <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -319,12 +319,12 @@ function JunkRemovalService() {
                     <Phone className="mr-2 h-4 w-4" /> Call (407) 274-5019 Now
                   </a>
                 </div>
-                <div className="pt-4 border-t border-white/20">
+                <div className="mt-6">
                   <Link
                     to="/services/bulk-removal"
-                    className="inline-flex items-center text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 group"
+                    className="inline-flex items-center text-white/90 hover:text-white font-medium transition-colors duration-200 group"
                   >
-                    <Users className="mr-2 h-4 w-4" />
+                    <Users className="mr-2 h-5 w-5" />
                     Property Managers: View Bulk Removal Services
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </Link>

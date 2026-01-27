@@ -245,7 +245,7 @@ function JunkRemovalService() {
                     "name": "Do you offer junk removal for apartment complexes and commercial properties?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal."
+                      "text": "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal. Learn more at our bulk removal service page."
                     }
                   }
                 ]
@@ -546,11 +546,10 @@ function JunkRemovalService() {
                   question: "Do you offer junk removal for apartment complexes and commercial properties?",
                   answer: (
                     <>
-                      Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain{' '}
+                      Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal.{' '}
                       <Link to="/services/bulk-removal" className="text-[#049704] hover:text-[#038203] font-medium underline">
-                        ongoing service agreements
+                        Learn more
                       </Link>
-                      {' '}with us for consistent, reliable junk removal.
                     </>
                   )
                 }

@@ -258,7 +258,7 @@ function BulkRemovalService() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-[100vh] bg-gradient-to-br from-[#049704] via-[#038203] to-[#026502] overflow-hidden">
+        <section className="relative min-h-[100vh] bg-gradient-to-br from-[#1e40af] via-[#1e3a8a] to-[#172554] overflow-hidden">
           <div className="absolute inset-0 bg-[url('/Images/ApartmentBuildingHero.webp')] bg-cover bg-center opacity-20" />
           <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/70 to-black/90" />
 

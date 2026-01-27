@@ -201,7 +201,7 @@ function ValetTrashService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
-                  Valet Trash Service Orlando
+                  Door-to-Door Valet Trash Orlando - 5+ Days Weekly
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Professional door-to-door trash collection for Orlando apartment communities. Licensed, insured crews provide flexible pickup schedules with complete reporting. Enhance resident satisfaction while reducing maintenance workload.

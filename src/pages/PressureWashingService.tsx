@@ -218,7 +218,7 @@ function PressureWashingService() {
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Pressure Washing Orlando
+                  Commercial Pressure Washing Orlando - All Surfaces
                 </h1>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
                   Professional pressure washing for Orlando commercial and residential properties. Commercial-grade equipment cleans buildings, driveways, sidewalks, and more. Licensed, insured teams use eco-friendly solutions for all surfaces.

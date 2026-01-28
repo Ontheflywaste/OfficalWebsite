@@ -807,8 +807,15 @@ function Home() {
           </div>
         </section>
 
+        {/* Decorative Divider */}
+        <div className="relative h-24 bg-gradient-to-b from-white via-gray-50 to-gray-50">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#049704] to-transparent opacity-30"></div>
+          </div>
+        </div>
+
         {/* Reviews Section */}
-        <section className="py-16 md:py-20 bg-white px-6 md:px-4 content-visibility-auto">
+        <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">

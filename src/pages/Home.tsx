@@ -808,14 +808,14 @@ function Home() {
         </section>
 
         {/* Decorative Divider */}
-        <div className="relative h-24 bg-gradient-to-b from-white via-gray-50 to-gray-50">
+        <div className="relative h-24 bg-gradient-to-b from-white via-gray-200 to-gray-200 shadow-inner">
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#049704] to-transparent opacity-30"></div>
+            <div className="w-48 h-1.5 bg-gradient-to-r from-transparent via-[#049704] to-transparent opacity-70 shadow-lg"></div>
           </div>
         </div>
 
         {/* Reviews Section */}
-        <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4 content-visibility-auto">
+        <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4 content-visibility-auto border-t-4 border-gray-300">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12 md:mb-16">
@@ -835,7 +835,7 @@ function Home() {
                       direction="left"
                       delay={index * 0.2}
                     >
-                      <div className="bg-gray-50 rounded-2xl p-6 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <Quote className="h-8 w-8 text-[#049704]/20 mb-4" />
                         <p className="text-gray-700 mb-6 text-center">{review.text}</p>
                         <div className="flex items-center justify-between">
@@ -860,7 +860,7 @@ function Home() {
 
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="sticky top-24">
-                  <div className="bg-gray-50 rounded-2xl p-6 shadow-lg">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Watch Our Client Testimonials</h3>
                     <LazyYouTubeEmbed videoId="gFYjibflN3U" />
                     <p className="mt-4 text-gray-700 text-center">

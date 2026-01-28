@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, ArrowRight, Menu, X, Trash2, Package, Droplet, Linkedin, ChevronDown, ChevronRight } from 'lucide-react';
 
 function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isJunkRemovalNestedOpen, setIsJunkRemovalNestedOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsServicesDropdownOpen(false);
+    setIsJunkRemovalNestedOpen(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -269,16 +271,51 @@ function Layout({ children }: { children: React.ReactNode }) {
                         <div className="text-sm text-gray-500">Doorstep trash pickup</div>
                       </div>
                     </Link>
-                    <Link
-                      to="/services/junk-removal"
-                      className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200"
+
+                    {/* Junk Removal with Nested Dropdown */}
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setIsJunkRemovalNestedOpen(true)}
+                      onMouseLeave={() => setIsJunkRemovalNestedOpen(false)}
                     >
-                      <Package className="h-5 w-5 mr-3 text-[#027502]" />
-                      <div>
-                        <div className="font-medium">Junk Removal</div>
-                        <div className="text-sm text-gray-500">Furniture & bulk items</div>
+                      <div className="flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200 cursor-pointer">
+                        <div className="flex items-center">
+                          <Package className="h-5 w-5 mr-3 text-[#027502]" />
+                          <div>
+                            <div className="font-medium">Junk Removal</div>
+                            <div className="text-sm text-gray-500">Furniture & bulk items</div>
+                          </div>
+                        </div>
+                        <ChevronRight className="h-4 w-4 text-gray-400" />
                       </div>
-                    </Link>
+
+                      {/* Nested Dropdown */}
+                      <div className={`absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-xl border border-gray-200 transition-all duration-300 ${
+                        isJunkRemovalNestedOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible -translate-x-2'
+                      }`}>
+                        <div className="py-2">
+                          <Link
+                            to="/services/junk-removal"
+                            className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200"
+                          >
+                            <div>
+                              <div className="font-medium">Junk Removal</div>
+                              <div className="text-sm text-gray-500">Residential service</div>
+                            </div>
+                          </Link>
+                          <Link
+                            to="/services/bulk-removal"
+                            className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200"
+                          >
+                            <div>
+                              <div className="font-medium">Bulk Removal</div>
+                              <div className="text-sm text-gray-500">Property managers</div>
+                            </div>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+
                     <Link
                       to="/services/pressure-washing"
                       className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#027502] transition-colors duration-200"
@@ -428,7 +465,18 @@ function Layout({ children }: { children: React.ReactNode }) {
                   }`}
                   role="menuitem"
                 >
-                  Junk Removal
+                  Junk Removal (Residential)
+                </Link>
+                <Link
+                  to="/services/bulk-removal"
+                  className={`block py-2 px-3 pl-6 rounded-lg transition-colors duration-300 text-sm ${
+                    shouldUseBlackLogo
+                      ? 'text-gray-600 hover:text-[#027502] hover:bg-gray-100'
+                      : 'text-white/70 hover:text-[#027502] hover:bg-white/10'
+                  }`}
+                  role="menuitem"
+                >
+                  ↳ Bulk Removal (Property Mgmt)
                 </Link>
                 <Link
                   to="/services/pressure-washing"

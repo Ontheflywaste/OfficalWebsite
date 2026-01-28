@@ -443,31 +443,31 @@ function BulkRemovalService() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ScrollReveal delay={0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center h-full flex flex-col">
                   <FileText className="h-12 w-12 text-[#049704] mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Photo Documentation</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 flex-1">
                     Before, during, and after photos for every removal job provide visual proof of service completion and property condition.
                   </p>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center h-full flex flex-col">
                   <ClipboardCheck className="h-12 w-12 text-[#049704] mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Disposal Manifests</h3>
-                  <p className="text-gray-600">
-                    Detailed manifests show where items were disposed, donated, or recycled, ensuring compliance with regulations.
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">PO-Based Invoicing</h3>
+                  <p className="text-gray-600 flex-1">
+                    Purchase orders are included on every invoice for streamlined tracking and approval through your accounting system.
                   </p>
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={0.3}>
-                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center h-full flex flex-col">
                   <BarChart3 className="h-12 w-12 text-[#049704] mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Diversion Reports</h3>
-                  <p className="text-gray-600">
-                    Track sustainability impact with reports detailing items donated to charities and materials sent for recycling.
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Transparent Billing</h3>
+                  <p className="text-gray-600 flex-1">
+                    Detailed invoices with itemized breakdowns sent within 24 hours of service completion for complete cost transparency.
                   </p>
                 </div>
               </ScrollReveal>

@@ -642,7 +642,14 @@ function Home() {
                       >
                         valet trash
                       </Link>
-                      , bulk removal, and community waste solutions tailored for resorts and
+                      ,{" "}
+                      <Link
+                        to="/services/bulk-removal"
+                        className="text-[#049704] hover:text-[#038203] font-medium"
+                      >
+                        bulk removal
+                      </Link>
+                      , and community waste solutions tailored for resorts and
                       multifamily communities.
                     </p>
                     <p className="mb-4 text-center lg:text-left">
@@ -765,7 +772,7 @@ function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <ScrollReveal 
+                <ScrollReveal
                   key={index}
                   direction={index % 2 === 0 ? 'left' : 'right'}
                   delay={index * 0.2}
@@ -780,6 +787,23 @@ function Home() {
                 </ScrollReveal>
               ))}
             </div>
+
+            <ScrollReveal delay={0.6}>
+              <div className="mt-12 text-center">
+                <div className="inline-block bg-[#049704]/10 rounded-xl p-6">
+                  <p className="text-gray-900 font-medium mb-3">
+                    Property Managers: Need help with move-outs, renovations, or seasonal cleanups?
+                  </p>
+                  <Link
+                    to="/services/bulk-removal"
+                    className="inline-flex items-center text-[#049704] hover:text-[#038203] font-semibold transition-colors duration-300 group"
+                  >
+                    Learn About Our Bulk Removal Services
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 

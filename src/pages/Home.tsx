@@ -160,7 +160,7 @@ function Home() {
     {
       icon: Trash2,
       title: "Valet Trash",
-      description: "Professional door-to-door trash pickup for Orlando apartment communities, up to seven days weekly.",
+      description: "Professional door-to-door valet trash pickup for Orlando apartment communities — available up to seven days a week.",
       image: "/Images/gallery12813_1920x831@2x.jpg",
       link: "/services/valet-trash"
     },

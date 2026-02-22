@@ -160,21 +160,21 @@ function Home() {
     {
       icon: Trash2,
       title: "Valet Trash",
-      description: "Experience hassle-free living with our premium valet trash service. Our professional team provides door-to-door waste collection directly from your doorstep up to 7 days a week, maintaining a clean and healthy environment. Perfect for apartment communities and residential complexes seeking to enhance tenant satisfaction and property value through convenient doorstep pickup.",
+      description: "Professional door-to-door trash pickup for Orlando apartment communities, up to seven days weekly.",
       image: "/Images/gallery12813_1920x831@2x.jpg",
       link: "/services/valet-trash"
     },
     {
       icon: Package,
       title: "Junk Removal",
-      description: "From old furniture to renovation debris, our comprehensive junk removal service handles it all. Our trained team efficiently removes and properly disposes of large items, ensuring your space stays clean and clutter-free. We handle heavy lifting, sorting, and responsible disposal so you don't have to worry about the details.",
+      description: "Full-service furniture and bulk item removal—from move-outs to renovation debris throughout Orlando properties.",
       image: "/Images/Junk.jpg",
       link: "/services/junk-removal"
     },
     {
       icon: Droplet,
       title: "Pressure Washing",
-      description: "Transform your property's appearance with our professional pressure washing services. Using state-of-the-art equipment and eco-friendly cleaning solutions, we remove years of built-up dirt, grime, and stains from buildings, driveways, and walkways, restoring their original beauty and enhancing curb appeal for your property.",
+      description: "Professional pressure washing for buildings, driveways, and walkways—restoring curb appeal with eco-friendly Orlando cleaning solutions.",
       image: "/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg",
       link: "/services/pressure-washing"
     }

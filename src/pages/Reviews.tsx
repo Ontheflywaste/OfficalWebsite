@@ -138,7 +138,14 @@ function Reviews() {
         <meta name="description" content="See what Orlando property managers say about our valet trash services. Read reviews of professional waste management in Central Florida." />
         <meta name="keywords" content="orlando valet trash reviews, waste management testimonials orlando, apartment trash service reviews florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/reviews" />
-        
+
+        <meta property="og:title" content="Orlando Valet Trash Reviews | Client Testimonials" />
+        <meta property="og:description" content="See what Orlando property managers say about our valet trash services. Read reviews of professional waste management in Central Florida." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ontheflywastesolutions.com/reviews" />
+        <meta property="og:image" content="https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png" />
+        <meta name="robots" content="index, follow" />
+
         {/* Enhanced AggregateRating Schema Markup */}
         <script type="application/ld+json">
           {JSON.stringify({

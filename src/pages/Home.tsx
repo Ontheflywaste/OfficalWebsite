@@ -236,6 +236,13 @@ function Home() {
         <meta name="geo.placename" content="Orlando" />
         <meta name="geo.position" content="28.5383;-81.3792" />
         <meta name="ICBM" content="28.5383, -81.3792" />
+
+        <meta property="og:title" content="Orlando Valet Trash Service | On The Fly Waste Solutions" />
+        <meta property="og:description" content="Professional valet trash and bulk removal services in Orlando. Reliable doorstep pickup for apartments and condos. Get your free quote today!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ontheflywastesolutions.com" />
+        <meta property="og:image" content="https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png" />
+        <meta name="robots" content="index, follow" />
         
         {/* Enhanced LocalBusiness Schema */}
         <script type="application/ld+json">

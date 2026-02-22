@@ -13,7 +13,14 @@ function Services() {
         <meta name="keywords" content="valet trash service Orlando, doorstep trash pickup Orlando, apartment trash services Orlando, bulk trash removal Orlando, pressure washing services Orlando, multifamily waste solutions Orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/services" />
         <link rel="preload" as="image" href="/Images/our services image.png" />
-        
+
+        <meta property="og:title" content="Valet Trash & Waste Management Services | Orlando" />
+        <meta property="og:description" content="Complete valet trash and waste management solutions. Doorstep pickup, bulk removal, and pressure washing for Orlando properties. Get a quote." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ontheflywastesolutions.com/services" />
+        <meta property="og:image" content="https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png" />
+        <meta name="robots" content="index, follow" />
+
         {/* Service Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

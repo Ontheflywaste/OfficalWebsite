@@ -400,7 +400,14 @@ function Contact() {
         <meta name="description" content="Get in touch with Orlando's leading valet trash service. Schedule consultation for your apartment community or request quote today." />
         <meta name="keywords" content="valet trash orlando contact, waste management quote orlando, apartment trash service florida, contact waste solutions orlando" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/contact" />
-        
+
+        <meta property="og:title" content="Contact Orlando Valet Trash Service | Get Quote" />
+        <meta property="og:description" content="Get in touch with Orlando's leading valet trash service. Schedule consultation for your apartment community or request quote today." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ontheflywastesolutions.com/contact" />
+        <meta property="og:image" content="https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png" />
+        <meta name="robots" content="index, follow" />
+
         {/* Contact Page Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

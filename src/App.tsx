@@ -7,6 +7,7 @@ import useScrollToTop from './hooks/useScrollToTop';
 import ScrollToTop from './components/ScrollToTop';
 import SkipToMain from './components/SkipToMain';
 import PageTransition from './components/PageTransition';
+import TrailingSlashRedirect from './components/TrailingSlashRedirect';
 
 // Lazy load all pages for better code splitting
 const Home = React.lazy(() => import('./pages/Home'));
@@ -27,6 +28,8 @@ const SustainableWasteManagement = React.lazy(() => import('./pages/SustainableW
 const BulkWasteRemovalGuide = React.lazy(() => import('./pages/BulkWasteRemovalGuide'));
 const NewConstructionValetTrashGuide = React.lazy(() => import('./pages/NewConstructionValetTrashGuide'));
 const WhatPropertyManagersShouldExpect = React.lazy(() => import('./pages/WhatPropertyManagersShouldExpect'));
+const HolidayWasteManagementGuide = React.lazy(() => import('./pages/HolidayWasteManagementGuide'));
+const ValetTrashBenefitsOrlando = React.lazy(() => import('./pages/ValetTrashBenefitsOrlando'));
 
 // Loading component for lazy-loaded pages
 const PageLoader = () => (
@@ -65,6 +68,8 @@ function AnimatedRoutes() {
           <Route path="/blog/bulk-waste-removal-guide" element={<PageTransition><BulkWasteRemovalGuide /></PageTransition>} />
           <Route path="/blog/new-construction-apartments-valet-trash-guide" element={<PageTransition><NewConstructionValetTrashGuide /></PageTransition>} />
           <Route path="/blog/what-property-managers-should-expect-valet-trash-company" element={<PageTransition><WhatPropertyManagersShouldExpect /></PageTransition>} />
+          <Route path="/blog/holiday-waste-management-guide-thanksgiving-christmas-newyears" element={<PageTransition><HolidayWasteManagementGuide /></PageTransition>} />
+          <Route path="/blog/valet-trash-benefits-orlando-apartments" element={<PageTransition><ValetTrashBenefitsOrlando /></PageTransition>} />
         </Routes>
       </React.Suspense>
     </AnimatePresence>
@@ -75,6 +80,7 @@ function App() {
   return (
     <Router>
       <SkipToMain />
+      <TrailingSlashRedirect />
       <ScrollToTopOnNavigate />
       <Layout>
         <main id="main-content">
@@ -82,7 +88,7 @@ function App() {
         </main>
       </Layout>
       <ScrollToTop />
-      <Toaster 
+      <Toaster
         position="top-right"
         toastOptions={{
           duration: 3000,

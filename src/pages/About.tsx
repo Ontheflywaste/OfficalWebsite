@@ -12,7 +12,14 @@ function About() {
         <meta name="description" content="Learn about Orlando's premier valet trash service. Professional team with proven experience serving multifamily communities since 2020." />
         <meta name="keywords" content="orlando valet trash service, central florida waste management, professional trash collection orlando, apartment waste services florida" />
         <link rel="canonical" href="https://ontheflywastesolutions.com/about" />
-        
+
+        <meta property="og:title" content="About Orlando's Valet Trash Experts | On The Fly" />
+        <meta property="og:description" content="Learn about Orlando's premier valet trash service. Professional team with proven experience serving multifamily communities since 2020." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ontheflywastesolutions.com/about" />
+        <meta property="og:image" content="https://ontheflywastesolutions.com/Images/OnTheFlyRecycleLogoWhitenobackground.png" />
+        <meta name="robots" content="index, follow" />
+
         {/* About Organization Schema */}
         <script type="application/ld+json">
           {JSON.stringify({

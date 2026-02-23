@@ -636,13 +636,33 @@ function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <ScrollReveal direction="left">
                 <div className="text-center lg:text-left">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Welcome to On The Fly Waste Solutions</h2>
-                  <div className="prose prose-lg text-gray-700">
-                    <p className="mb-4 text-center lg:text-left">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 text-center lg:text-left leading-tight">Welcome to On The Fly Waste Solutions</h2>
+                  <div className="prose prose-lg text-gray-700 max-w-none">
+                    <p className="mb-6 text-center lg:text-left text-lg leading-relaxed">
                       On The Fly Waste Solutions provides professional valet trash and waste management services throughout Central Florida. We serve multifamily communities, resort properties, and commercial locations with reliable, detail-focused service.
                     </p>
+                    <p className="mb-6 text-center lg:text-left text-lg leading-relaxed">
+                      Our commitment to excellence and customer satisfaction has made us a trusted partner for property managers seeking dependable waste solutions. From nightly valet trash pickup to comprehensive recycling programs, we deliver customized services that keep your properties clean and residents happy.
+                    </p>
                   </div>
-                  <div className="mt-8 text-center lg:text-left">
+
+                  {/* Trust Indicators */}
+                  <div className="grid grid-cols-3 gap-4 my-8 py-6 border-t border-b border-gray-300">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-[#049704] mb-1">500+</div>
+                      <div className="text-sm text-gray-600">Properties Served</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-[#049704] mb-1">24/7</div>
+                      <div className="text-sm text-gray-600">Support Available</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-[#049704] mb-1">100%</div>
+                      <div className="text-sm text-gray-600">Satisfaction Focus</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-8 text-center">
                     <Link to="/about" className="btn-primary">
                       Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>

@@ -97,24 +97,14 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Auto-advance carousel with infinite loop
+  // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => prev + 1);
+      setCurrentSlide((prev) => (prev + 1) % membershipBadges.length);
     }, 4000); // Change slide every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Handle infinite loop transition
-  useEffect(() => {
-    if (currentSlide === membershipBadges.length) {
-      // Wait for the transition to complete, then reset without animation
-      setTimeout(() => {
-        setCurrentSlide(0);
-      }, 1000); // Match the transition duration
-    }
-  }, [currentSlide, membershipBadges.length]);
+  }, [membershipBadges.length]);
 
   const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -592,23 +582,22 @@ function Home() {
 
             {/* Carousel Container */}
             <div className="relative overflow-hidden z-10">
-              <div
-                className={`flex ${currentSlide === membershipBadges.length ? '' : 'transition-transform duration-1000 ease-in-out'}`}
+              <div 
+                className="flex transition-transform duration-1000 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {/* Original slides */}
                 {membershipBadges.map((badge, index) => (
                   <div key={index} className="w-full flex-shrink-0 flex justify-center">
-                    <a
-                      href={badge.url}
-                      target="_blank"
+                    <a 
+                      href={badge.url} 
+                      target="_blank" 
                       rel="noopener noreferrer"
                       className="text-center group transition-all duration-300 hover:-translate-y-2 hover:scale-105 max-w-xs"
                     >
                       <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 group-hover:shadow-2xl group-hover:bg-white transition-all duration-300">
-                        <img
-                          src={badge.image}
-                          alt={badge.alt}
+                        <img 
+                          src={badge.image} 
+                          alt={badge.alt} 
                           className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
                           loading="lazy"
                           decoding="async"
@@ -620,30 +609,8 @@ function Home() {
                     </a>
                   </div>
                 ))}
-                {/* Duplicate first slide for seamless loop */}
-                <div className="w-full flex-shrink-0 flex justify-center">
-                  <a
-                    href={membershipBadges[0].url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-center group transition-all duration-300 hover:-translate-y-2 hover:scale-105 max-w-xs"
-                  >
-                    <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200/50 group-hover:shadow-2xl group-hover:bg-white transition-all duration-300">
-                      <img
-                        src={membershipBadges[0].image}
-                        alt={membershipBadges[0].alt}
-                        className="h-20 sm:h-24 md:h-28 object-contain mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                        loading="lazy"
-                        decoding="async"
-                        width="120"
-                        height="120"
-                      />
-                      <p className="text-base font-medium text-gray-800 text-center leading-tight">{membershipBadges[0].title}</p>
-                    </div>
-                  </a>
-                </div>
               </div>
-
+              
               {/* Carousel Indicators */}
               <div className="flex justify-center mt-6 space-x-2">
                 {membershipBadges.map((_, index) => (
@@ -651,8 +618,8 @@ function Home() {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      currentSlide % membershipBadges.length === index
-                        ? 'bg-[#049704] scale-110'
+                      currentSlide === index 
+                        ? 'bg-[#049704] scale-110' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                     aria-label={`Go to slide ${index + 1}`}

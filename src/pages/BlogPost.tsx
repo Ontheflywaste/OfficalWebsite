@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
 import { allBlogPosts, ContentBlock } from '../data/blogPosts';
+import { getBlogPostCanonicalUrl } from '../config/seo';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -90,19 +91,21 @@ const BlogPost: React.FC = () => {
     }
   };
 
+  const canonicalUrl = getBlogPostCanonicalUrl(currentPost.id);
+
   return (
     <>
       <Helmet>
         <title>{currentPost.metaTitle || currentPost.title}</title>
         <meta name="description" content={currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, '')} />
         <meta name="keywords" content={currentPost.metaKeywords || ''} />
-        <link rel="canonical" href={`https://ontheflywastesolutions.com/blog/${currentPost.id}`} />
-        
+        <link rel="canonical" href={canonicalUrl} />
+
         {/* Open Graph tags */}
         <meta property="og:title" content={currentPost.metaTitle || currentPost.title} />
         <meta property="og:description" content={currentPost.metaDescription || currentPost.excerpt.replace(/<[^>]*>/g, '')} />
         <meta property="og:image" content={currentPost.image} />
-        <meta property="og:url" content={`https://ontheflywastesolutions.com/blog/${currentPost.id}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         
         {/* Twitter Card tags */}
@@ -135,7 +138,7 @@ const BlogPost: React.FC = () => {
             "dateModified": new Date(currentPost.date).toISOString(),
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://ontheflywastesolutions.com/blog/${currentPost.id}`
+              "@id": canonicalUrl
             }
           })}
         </script>

@@ -6,9 +6,9 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://ontheflywastesolutions.com</loc>
+    <loc>https://ontheflywastesolutions.com/</loc>
     <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
@@ -33,25 +33,25 @@
     <loc>https://ontheflywastesolutions.com/services/valet-trash</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/services/junk-removal</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/services/pressure-washing</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/services/bulk-removal</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/services/pressure-washing</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -83,24 +83,52 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://ontheflywastesolutions.com/blog/how-to-choose-valet-trash-vendor</loc>
-    <lastmod>2025-01-09</lastmod>
+    <loc>https://ontheflywastesolutions.com/blog/holiday-waste-management-guide-thanksgiving-christmas-newyears</loc>
+    <lastmod>2025-11-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/blog/valet-trash-benefits-orlando-apartments</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/blog/new-construction-apartments-valet-trash-guide</loc>
+    <lastmod>2025-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/blog/what-property-managers-should-expect-valet-trash-company</loc>
+    <lastmod>2025-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/blog/hidden-costs-in-house-trash-management</loc>
     <lastmod>2025-07-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ontheflywastesolutions.com/blog/valet-trash-benefits</loc>
     <lastmod>2025-09-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ontheflywastesolutions.com/blog/how-to-choose-valet-trash-vendor</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -113,34 +141,6 @@
   <url>
     <loc>https://ontheflywastesolutions.com/blog/bulk-waste-removal-guide</loc>
     <lastmod>2025-03-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/blog/what-property-managers-should-expect-valet-trash-company</loc>
-    <lastmod>2025-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/blog/new-construction-apartments-valet-trash-guide</loc>
-    <lastmod>2025-08-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/blog/holiday-waste-management-guide-thanksgiving-christmas-newyears</loc>
-    <lastmod>2025-11-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/blog/valet-trash-benefits-orlando-apartments</loc>
-    <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

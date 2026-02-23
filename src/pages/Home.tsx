@@ -707,14 +707,14 @@ function Home() {
                   key={service.title}
                   delay={index * 0.1}
                 >
-                  <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-                    <div className="w-16 h-16 bg-[#049704]/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <service.icon className="h-8 w-8 text-[#049704]" />
+                  <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 text-center flex flex-col h-full">
+                    <div className="w-20 h-20 bg-[#049704]/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                      <service.icon className="h-10 w-10 text-[#049704]" />
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-gray-900">
+                    <h3 className="text-2xl font-bold mb-4 text-gray-900">
                       {service.title}
                     </h3>
-                    <p className="text-gray-700 text-center">{service.description}</p>
+                    <p className="text-gray-700 text-center leading-relaxed flex-grow">{service.description}</p>
                   </div>
                 </ScrollReveal>
               ))}

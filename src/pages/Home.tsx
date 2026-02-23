@@ -639,28 +639,7 @@ function Home() {
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center lg:text-left">Welcome to On The Fly Waste Solutions</h2>
                   <div className="prose prose-lg text-gray-700">
                     <p className="mb-4 text-center lg:text-left">
-                      At On The Fly Waste Solutions, we're raising the bar for valet trash and bulk removal services in Central Florida. Since 2020, we've focused on delivering dependable, detail-driven service to multifamily communities and resort-style properties that expect more than the industry standard.
-                    </p>
-                    <p className="mb-4 text-center lg:text-left">
-                      Our core services include daily{" "}
-                      <Link
-                        to="/services/valet-trash"
-                        className="text-[#049704] hover:text-[#038203] font-medium"
-                      >
-                        valet trash
-                      </Link>
-                      ,{" "}
-                      <Link
-                        to="/services/bulk-removal"
-                        className="text-[#049704] hover:text-[#038203] font-medium"
-                      >
-                        bulk removal
-                      </Link>
-                      , and community waste solutions tailored for resorts and
-                      multifamily communities.
-                    </p>
-                    <p className="mb-4 text-center lg:text-left">
-                      We don't operate like a distant national vendor. We stay connected, visible, and accountable. Our goal is to help property managers reduce complaints, boost curb appeal, and feel confident that their community is in good hands.
+                      On The Fly Waste Solutions provides professional valet trash and waste management services throughout Central Florida. We serve multifamily communities, resort properties, and commercial locations with reliable, detail-focused service.
                     </p>
                   </div>
                   <div className="mt-8 text-center lg:text-left">
@@ -673,9 +652,9 @@ function Home() {
               <ScrollReveal direction="right" delay={0.2}>
                 <div className="w-full">
                   <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-xl">
-                    <img 
-                      src="/Images/artemistradeshow.jpg" 
-                      alt="On The Fly Waste Solutions at Artemis Trade Show" 
+                    <img
+                      src="/Images/artemistradeshow.jpg"
+                      alt="On The Fly Waste Solutions at Artemis Trade Show"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                       loading="lazy"
                       decoding="async"
@@ -694,132 +673,41 @@ function Home() {
         <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
-              <div className="text-center mb-12 md:mb-16">
+              <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Our Services</h2>
-                <div className="prose prose-lg text-gray-700">
-                  <p className="mb-4 text-center">
-                    Comprehensive multifamily waste solutions for Orlando apartments and condos
-                  </p>
-                  <div className="text-center mb-6">
-                    <div className="inline-block bg-[#049704]/10 rounded-lg p-4">
-                      <p className="text-[#049704] font-medium text-center">Ready to enhance your property's operations? <Link to="/contact" className="underline hover:no-underline">Get your free consultation</Link> and see how our services can boost resident satisfaction.</p>
-                    </div>
-                  </div>
-                </div>
+                <p className="text-lg text-gray-700 mb-8 text-center">
+                  Professional waste management solutions for Central Florida communities
+                </p>
               </div>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {services.map((service, index) => (
-                <ScrollReveal 
-                  key={service.title} 
-                  direction={index % 2 === 0 ? 'left' : 'right'}
-                  delay={index * 0.2}
+                <ScrollReveal
+                  key={service.title}
+                  delay={index * 0.1}
                 >
-                  <div className="group bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
-                    <div className="relative w-full aspect-[4/3]">
-                      <img 
-                        src={service.image}
-                        alt={service.title}
-                        className="absolute inset-0 w-full h-full object-cover object-center"
-                        loading="lazy"
-                        decoding="async"
-                        width="320"
-                        height="240"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
-                      <div className="absolute bottom-4 left-4">
-                        <service.icon className="h-8 w-8 text-white" />
-                      </div>
+                  <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 text-center">
+                    <div className="w-16 h-16 bg-[#049704]/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                      <service.icon className="h-8 w-8 text-[#049704]" />
                     </div>
-                    <div className="p-6 text-center flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold mb-3 text-gray-900 flex-shrink-0">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-700 mb-4 text-center flex-1">{service.description}</p>
-                      <div className="mt-auto">
-                        <Link 
-                          to={
-                            service.title === "Valet Trash" ? "/services/valet-trash" :
-                            service.title === "Junk Removal" ? "/services/junk-removal" :
-                            service.title === "Pressure Washing" ? "/services/pressure-washing" :
-                            "/contact"
-                          }
-                          className="inline-flex items-center justify-center text-[#049704] font-medium hover:text-[#038203] transition-colors duration-300"
-                        >
-                          Learn More 
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 hover:translate-x-1" />
-                        </Link>
-                      </div>
-                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-gray-900">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-700 text-center">{service.description}</p>
                   </div>
                 </ScrollReveal>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Link to="/contact" className="btn-primary">
-                Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+            <div className="text-center">
+              <Link to="/services" className="btn-primary">
+                View All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Why Property Managers Choose Us */}
-        <section className="py-16 md:py-24 bg-white px-6 md:px-4 content-visibility-auto">
-          <div className="max-w-7xl mx-auto">
-            <ScrollReveal>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Why Property Managers Choose Us</h2>
-                <p className="text-lg text-gray-700 max-w-2xl mx-auto text-center">
-                  Experience the difference with our professional, reliable, and technology-driven approach
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <ScrollReveal
-                  key={index}
-                  direction={index % 2 === 0 ? 'left' : 'right'}
-                  delay={index * 0.2}
-                >
-                  <div className="bg-gray-50 rounded-xl p-8 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center">
-                    <div className="w-14 h-14 bg-[#049704]/10 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                      <feature.icon className="h-8 w-8 text-[#049704]" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">{feature.title}</h3>
-                    <p className="text-gray-700 text-center">{feature.description}</p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-
-            <ScrollReveal delay={0.6}>
-              <div className="mt-12 text-center">
-                <div className="inline-block bg-[#049704]/10 rounded-xl p-6">
-                  <p className="text-gray-900 font-medium mb-3">
-                    Property Managers: Need help with move-outs, renovations, or seasonal cleanups?
-                  </p>
-                  <Link
-                    to="/services/bulk-removal"
-                    className="inline-flex items-center text-[#049704] hover:text-[#038203] font-semibold transition-colors duration-300 group"
-                  >
-                    Learn About Our Bulk Removal Services
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* Decorative Divider */}
-        <div className="relative h-24 bg-gradient-to-b from-white via-gray-200 to-gray-200 shadow-inner">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-48 h-1.5 bg-gradient-to-r from-transparent via-[#049704] to-transparent opacity-70 shadow-lg"></div>
-          </div>
-        </div>
 
         {/* Reviews Section */}
         <section className="py-16 md:py-20 bg-gray-100 px-6 md:px-4 content-visibility-auto border-t-4 border-gray-300">
@@ -976,61 +864,17 @@ function Home() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Areas We Serve Section */}
         <section className="py-16 md:py-20 bg-white px-6 md:px-4 content-visibility-auto">
           <div className="max-w-7xl mx-auto">
             <ScrollReveal>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">Areas We Serve</h2>
-                <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-                  Professional valet trash and waste management services throughout Central Florida
+                <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8 text-center">
+                  We proudly serve Orlando, Kissimmee, Altamonte Springs, Lake Mary, Apopka, Clermont, and surrounding Central Florida communities with professional valet trash and waste management services.
                 </p>
               </div>
             </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {[
-                {
-                  city: "Orlando",
-                  description: "Downtown, College Park, Winter Park, Dr. Phillips"
-                },
-                {
-                  city: "Kissimmee",
-                  description: "Celebration, Poinciana, St. Cloud"
-                },
-                {
-                  city: "Altamonte Springs",
-                  description: "Longwood, Casselberry, Winter Springs"
-                },
-                {
-                  city: "Lake Mary",
-                  description: "Sanford, Heathrow, Lake Forest"
-                },
-                {
-                  city: "Apopka",
-                  description: "Mount Dora, Eustis, Tavares"
-                },
-                {
-                  city: "Clermont",
-                  description: "Minneola, Groveland, Montverde"
-                }
-              ].map((area, index) => (
-                <ScrollReveal
-                  key={index}
-                  direction={index % 2 === 0 ? 'left' : 'right'}
-                  delay={index * 0.1}
-                >
-                  <div className="bg-white p-6 rounded-xl shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl h-full flex flex-col">
-                    <h3 className="text-xl font-bold mb-3 text-gray-900">
-                      {area.city}
-                    </h3>
-                    <p className="text-gray-600 flex-grow">
-                      {area.description}
-                    </p>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
 
             <ScrollReveal>
               <div className="text-center bg-gray-50 rounded-2xl p-8">

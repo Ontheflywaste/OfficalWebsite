@@ -646,22 +646,6 @@ function Home() {
                     </p>
                   </div>
 
-                  {/* Trust Indicators */}
-                  <div className="grid grid-cols-3 gap-4 my-8 py-6 border-t border-b border-gray-300">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-[#049704] mb-1">500+</div>
-                      <div className="text-sm text-gray-600">Properties Served</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-[#049704] mb-1">24/7</div>
-                      <div className="text-sm text-gray-600">Support Available</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-[#049704] mb-1">100%</div>
-                      <div className="text-sm text-gray-600">Satisfaction Focus</div>
-                    </div>
-                  </div>
-
                   <div className="mt-8 text-center">
                     <Link to="/about" className="btn-primary">
                       Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />

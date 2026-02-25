@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { ArrowRight, Clock, Calendar, Truck, Phone, Mail, MapPin, Star, Quote, Trash2, Package, Droplet, Users, Award, MessageSquare, UserCog, BarChart3 } from 'lucide-react';
+import { ArrowRight, Clock, Calendar, Truck, Phone, Mail, MapPin, Star, Quote, Trash2, Package, Droplet, Users, Award, MessageSquare, UserCog, BarChart3, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import ScrollReveal from '../components/ScrollReveal';
 import toast from 'react-hot-toast';
 import LazyYouTubeEmbed from '../components/LazyYouTubeEmbed';
+import { featuredPost } from '../data/blogPosts';
 
 // Lazy load EmailJS only when needed
 const loadEmailJS = () => import('@emailjs/browser');
@@ -775,6 +776,92 @@ function Home() {
                 See More Reviews <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Featured Blog of the Month */}
+        <section className="py-16 md:py-20 bg-gray-50 px-6 md:px-4">
+          <div className="max-w-7xl mx-auto">
+            <ScrollReveal>
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-2 bg-[#049704] text-white px-4 py-2 rounded-full mb-4">
+                  <BookOpen className="h-5 w-5" />
+                  <span className="font-semibold">Featured Article</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Blog of the Month
+                </h2>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Expert insights and practical tips for property managers and residents
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="relative h-64 md:h-full overflow-hidden">
+                    <img
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-[#049704] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        {featuredPost.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        {featuredPost.date}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" />
+                        {featuredPost.readTime}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      {featuredPost.title}
+                    </h3>
+
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {featuredPost.excerpt}
+                    </p>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        By {featuredPost.author}
+                      </span>
+                      <Link
+                        to={`/blog/${featuredPost.id}`}
+                        className="inline-flex items-center gap-2 bg-[#049704] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#038203] transition-colors duration-200"
+                      >
+                        Read Full Article
+                        <ArrowRight className="h-5 w-5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="text-center mt-10">
+                <Link
+                  to="/blog"
+                  className="inline-flex items-center gap-2 text-[#049704] font-semibold hover:text-[#038203] transition-colors duration-200"
+                >
+                  View All Articles
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 

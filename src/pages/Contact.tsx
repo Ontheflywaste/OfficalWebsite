@@ -435,7 +435,7 @@ function Contact() {
       <div className="min-h-screen">
         <div className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 pt-24">
+            <div className="text-center mb-12 pt-32 md:pt-40">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Orlando's Top Valet Trash Service</h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Get in touch for professional valet trash and waste management services
@@ -493,7 +493,7 @@ function Contact() {
 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden" style={{ height: '400px' }}>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1793552.5389899373!2d-82.48754542650833!3d28.23833034591211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd8394f0e6c5f1%3A0x6c8b0b0b0b0b0b0b!2sCentral%20Florida!5e0!3m2!1sen!2sus!4v1680887892244!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898776.2694949686!2d-81.88754542650833!3d28.53833034591211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20FL!5e0!3m2!1sen!2sus!4v1680887892244!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

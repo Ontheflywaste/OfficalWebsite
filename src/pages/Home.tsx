@@ -903,22 +903,22 @@ function Home() {
                   description: "Consistently exceeding expectations"
                 }
               ].map((stat, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`transform transition-all duration-1000 ${
-                    isImpactVisible 
-                      ? 'translate-y-0 opacity-100' 
+                  className={`transform transition-all duration-1000 flex ${
+                    isImpactVisible
+                      ? 'translate-y-0 opacity-100'
                       : 'translate-y-10 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 group w-full flex flex-col">
                     <div className="flex items-center justify-center mb-3">
                       <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <stat.icon className="h-6 w-6 text-white" />
                       </div>
                     </div>
-                    <div className="text-center">
+                    <div className="text-center flex-1 flex flex-col justify-between">
                       <div className="text-3xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300 text-center">
                         {stat.number}
                       </div>

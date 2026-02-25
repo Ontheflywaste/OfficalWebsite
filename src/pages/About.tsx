@@ -125,7 +125,7 @@ function About() {
                 <div className="w-full">
                   <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105">
                     <img
-                      src="/Images/excellence image.jpg"
+                      src="/Images/excellence_image.jpg"
                       alt="On The Fly Waste Solutions Excellence"
                       className="absolute inset-0 w-full h-full object-cover object-center"
                       loading="lazy"

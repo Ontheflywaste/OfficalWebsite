@@ -165,18 +165,26 @@ function ValetTrashService() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What days and times do you collect trash?",
+                    "name": "How often can valet trash be scheduled for our community?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We offer flexible collection schedules tailored to your property's needs. Most communities prefer evening collections between 6-9 PM, and we can provide service up to 7 days per week."
+                      "text": "Most multifamily communities choose five to seven nights per week based on occupancy and compactor capacity. We build a fixed service calendar with backup coverage and holiday handling so your team has predictable operations, fewer overflow events, and clear resident expectations throughout the month."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How much does valet trash service cost?",
+                    "name": "Do you provide proof that service was completed each night?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Pricing varies based on your property size, collection frequency, and specific service requirements. We offer competitive rates with transparent pricing and no hidden fees."
+                      "text": "Yes. We provide property-level proof-of-service with completion logs and photo verification when required by your policy. Managers receive clear documentation for accountability, resident follow-up, and internal reporting, helping your staff confirm execution without manually auditing every building after pickup windows."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Are your teams insured, and what coverage is included?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our teams operate with active business insurance and follow documented safety procedures for multifamily service environments. Certificates of insurance can be provided during onboarding. This helps reduce vendor risk exposure, supports compliance requirements, and gives property ownership confidence that service is professionally managed."
                     }
                   }
                 ]
@@ -203,6 +211,10 @@ function ValetTrashService() {
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Professional Valet Trash - 5+ Days Weekly Service
                 </h1>
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-3">Why Property Managers Choose Us</h2>
+                <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 text-center">
+                  On The Fly Waste Solutions gives property managers predictable nightly execution, clear resident-facing standards, and fast issue resolution. Our teams arrive on schedule, document completion, and coordinate with onsite staff so operations stay clean without adding management overhead. You get a dependable amenity that supports retention and protects curb appeal.
+                </p>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Professional door-to-door trash collection for Orlando apartment communities. Licensed, insured crews provide flexible pickup schedules with complete reporting. Enhance resident satisfaction while reducing maintenance workload.
                 </p>

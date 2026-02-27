@@ -210,42 +210,26 @@ function JunkRemovalService() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "How does junk removal work in Orlando?",
+                    "name": "Can junk removal be coordinated around turns and inspections?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Our crew arrives at your scheduled time with trucks ready for immediate loading. We provide a free on-site estimate, then handle all lifting, loading, and hauling. After removal, you receive photo documentation showing items removed, plus disposal receipts and manifests. Most jobs are completed same-day or next-day, with complete cleanup included."
+                      "text": "Absolutely. We schedule pickups around turn calendars, inspection timelines, and access windows so your operations stay on track. Our team confirms scope in advance and executes within agreed time blocks, helping property managers avoid make-ready delays and keep vacant units progressing toward leasing readiness."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How is junk removal pricing determined?",
+                    "name": "What reporting do managers receive after a junk removal job?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Pricing is based on the volume of items and labor required for safe removal. We provide transparent, upfront quotes with no hidden fees. Most property managers receive on-site estimates that account for truckload space needed, item weight, disposal costs, and crew time. Pricing is finalized before work begins, ensuring budget certainty for commercial accounts."
+                      "text": "After service, managers receive completion confirmation with itemized scope notes and optional before-and-after photos. This provides documentation for ownership updates, resident chargeback workflows, and vendor accountability reviews. Standardized reporting reduces follow-up calls and gives teams a clear record of what was removed and when."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "What items can you remove and what is excluded?",
+                    "name": "How do you handle liability and site protection during removals?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We remove furniture, appliances, electronics, mattresses, office equipment, construction debris, and most household items. Items in good condition are donated when possible. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste. For large-scale projects, we coordinate multiple truckload trips to handle complete property cleanouts efficiently."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Do you provide same-day junk removal service in Orlando?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes, we offer same-day junk removal service throughout Orlando and Central Florida when you call before noon. Most appointments are scheduled within 24-48 hours. For urgent property cleanouts, move-outs, or time-sensitive removals, contact us directly at (407) 274-5019 and we'll prioritize your request. Our fast response keeps your property management operations running smoothly."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Do you offer junk removal for apartment complexes and commercial properties?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Absolutely. We specialize in serving apartment communities, condos, HOAs, and commercial properties throughout Central Florida. Our crews handle move-out cleanouts, common area cleanup, renovation debris, and bulk item removal. We work around your residents' schedules and provide the documentation property managers need. Many apartment communities and commercial properties maintain ongoing service agreements with us for consistent, reliable junk removal. Learn more at our bulk removal service page."
+                      "text": "We use insured crews, controlled loading practices, and route planning to minimize risk in occupied communities. Teams protect common areas during transport and follow onsite rules for elevators, gates, and disposal points. This structured process helps property managers maintain safe operations while reducing exposure to damage claims."
                     }
                   }
                 ]
@@ -308,6 +292,10 @@ function JunkRemovalService() {
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Fast Junk Removal Orlando - Same Day Service
                 </h1>
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-3">Why Property Managers Choose Us</h2>
+                <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 text-center">
+                  Property managers rely on our junk removal crews for controlled timelines, safe hauling practices, and minimal disruption to residents. We scope jobs quickly, confirm access requirements, and clear units, breezeways, and common areas with professional handling. The result is faster turns, fewer compliance headaches, and cleaner presentation for prospects and residents.
+                </p>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Affordable junk removal for Orlando residents. We remove furniture, appliances, mattresses, and more with same-day service available. Licensed, insured crews provide upfront pricing and complete cleanup.
                 </p>

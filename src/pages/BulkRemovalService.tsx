@@ -191,26 +191,26 @@ function BulkRemovalService() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What is your response time for bulk removal requests?",
+                    "name": "How frequently should bulk item removal be scheduled?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We provide 2-hour response time for urgent bulk removal needs, with same-day service available when you call before noon. Most scheduled appointments are completed within 24-48 hours. For property managers with recurring needs, we establish service level agreements that guarantee specific response times based on your operational requirements."
+                      "text": "Frequency depends on move-out volume, student turnover cycles, and local disposal constraints. Many communities run weekly or biweekly pickups, then increase cadence during peak turnover months. We help managers set a schedule that prevents pileups, protects curb appeal, and keeps maintenance teams focused on higher-value tasks."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "What is your invoicing process for property management companies?",
+                    "name": "Do you provide proof-of-service and pickup summaries?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Our B2B invoicing is designed for property management workflows. We accept purchase orders and include PO numbers on all invoices for easy tracking and approval. Invoices are typically sent within 24 hours of service completion and include itemized breakdowns and photo documentation. We offer flexible payment terms for established accounts, accept ACH/wire transfers, and can integrate with most AP systems. Net-30 terms available for qualified property management companies."
+                      "text": "Yes. Each visit can include confirmation notes, pickup summaries, and photo documentation for designated areas. This gives managers visibility into execution, supports operational reporting to ownership, and creates a consistent record for compliance reviews or resident communication when recurring bulk disposal issues appear."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "How is bulk removal pricing structured for apartment communities?",
+                    "name": "Are your bulk removal operations insured and compliant?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Pricing is based on volume (truckload space), labor requirements, and disposal costs. Property managers receive transparent, upfront quotes with no hidden fees. We offer flexible contract options including per-job pricing, monthly retainer agreements, and volume-based discounts for recurring service. All pricing is finalized before work begins to ensure budget predictability."
+                      "text": "Our crews are insured and operate using established handling and disposal procedures aligned with property policies and local requirements. We coordinate approved loading zones and service windows with onsite teams. This reduces risk, improves predictability, and helps management maintain a professional, audit-ready vendor program."
                     }
                   }
                 ]
@@ -273,6 +273,10 @@ function BulkRemovalService() {
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Bulk Removal Services for Property Managers in Orlando
                 </h1>
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-3">Why Property Managers Choose Us</h2>
+                <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 text-center">
+                  Our bulk removal service helps managers keep oversized-item accumulation from escalating into complaints, citations, or labor drains. We provide scheduled pickups, organized staging guidance, and accountable completion reporting, so teams can plan confidently. Communities stay cleaner, maintenance staff stays focused, and move-out periods remain manageable across high-volume properties.
+                </p>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Professional bulk removal programs for apartment communities, HOAs, and commercial properties. SLA-backed service with complete documentation, rapid mobilization, and transparent pricing throughout Central Florida.
                 </p>

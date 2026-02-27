@@ -5,21 +5,110 @@ publish = "dist"
 [build.environment]
 NODE_VERSION = "18"
 
+# Canonical URL redirects (targeted list only)
+[[redirects]]
+from = "/services/valet-trash/"
+to = "https://ontheflywastesolutions.com/services/valet-trash"
+status = 301
+force = true
+
+[[redirects]]
+from = "/services/junk-removal/"
+to = "https://ontheflywastesolutions.com/services/junk-removal"
+status = 301
+force = true
+
+[[redirects]]
+from = "/services/bulk-removal/"
+to = "https://ontheflywastesolutions.com/services/bulk-removal"
+status = 301
+force = true
+
+[[redirects]]
+from = "/services/pressure-washing/"
+to = "https://ontheflywastesolutions.com/services/pressure-washing"
+status = 301
+force = true
+
+[[redirects]]
+from = "/about/"
+to = "https://ontheflywastesolutions.com/about"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/"
+to = "https://ontheflywastesolutions.com/blog"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/valet-trash-benefits/"
+to = "https://ontheflywastesolutions.com/blog/valet-trash-benefits"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/holiday-waste-management-guide-thanksgiving-christmas-newyears/"
+to = "https://ontheflywastesolutions.com/blog/holiday-waste-management-guide-thanksgiving-christmas-newyears"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/valet-trash-benefits-orlando-apartments/"
+to = "https://ontheflywastesolutions.com/blog/valet-trash-benefits-orlando-apartments"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/new-construction-apartments-valet-trash-guide/"
+to = "https://ontheflywastesolutions.com/blog/new-construction-apartments-valet-trash-guide"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/what-property-managers-should-expect-valet-trash-company/"
+to = "https://ontheflywastesolutions.com/blog/what-property-managers-should-expect-valet-trash-company"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/hidden-costs-in-house-trash-management/"
+to = "https://ontheflywastesolutions.com/blog/hidden-costs-in-house-trash-management"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/sustainable-waste-management/"
+to = "https://ontheflywastesolutions.com/blog/sustainable-waste-management"
+status = 301
+force = true
+
+[[redirects]]
+from = "/blog/bulk-waste-removal-guide/"
+to = "https://ontheflywastesolutions.com/blog/bulk-waste-removal-guide"
+status = 301
+force = true
+
+[[redirects]]
+from = "/contact/"
+to = "https://ontheflywastesolutions.com/contact"
+status = 301
+force = true
+
+[[redirects]]
+from = "/reviews/"
+to = "https://ontheflywastesolutions.com/reviews"
+status = 301
+force = true
+
+# Preserve static endpoints
 [[redirects]]
 from = "/favicon.ico"
 to = "/Images/Favicon1.png"
 status = 200
 
-[[redirects]]
-from = "/sitemap.xml"
-to = "/sitemap.xml"
-status = 200
-
-[[redirects]]
-from = "/video-sitemap.xml"
-to = "/video-sitemap.xml"
-status = 200
-
+# SPA fallback must remain last
 [[redirects]]
 from = "/*"
 to = "/index.html"
@@ -33,13 +122,6 @@ X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin-when-cross-origin"
-
-[[headers]]
-for = "/favicon.ico"
-
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-Content-Type = "image/png"
 
 [[headers]]
 for = "/sitemap.xml"
@@ -60,20 +142,6 @@ for = "/assets/*"
 
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-for = "/*.js"
-
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-Content-Type = "text/javascript"
-
-[[headers]]
-for = "/*.css"
-
-[headers.values]
-Cache-Control = "public, max-age=31536000, immutable"
-Content-Type = "text/css"
 
 [[headers]]
 for = "/Images/*"

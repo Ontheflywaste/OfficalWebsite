@@ -182,18 +182,26 @@ function PressureWashingService() {
                 "mainEntity": [
                   {
                     "@type": "Question",
-                    "name": "What surfaces can you pressure wash?",
+                    "name": "Can pressure washing be scheduled to avoid resident disruption?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "We can pressure wash building exteriors, driveways, parking lots, sidewalks, decks, patios, and various other surfaces using appropriate pressure settings for each surface type."
+                      "text": "Yes. We coordinate service windows around leasing traffic, resident peak hours, and access constraints to minimize disruption. Managers receive a clear area sequence and timeline before work starts. This planning-first approach keeps operations predictable while improving cleanliness across high-visibility community surfaces."
                     }
                   },
                   {
                     "@type": "Question",
-                    "name": "Is pressure washing safe for all surfaces?",
+                    "name": "How do managers verify completed pressure washing areas?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Our experienced technicians understand different surface types and use appropriate pressure settings to ensure thorough cleaning without causing damage."
+                      "text": "We provide completion reporting by area, including notes and optional photo verification for prioritized zones. This documentation supports vendor accountability, ownership updates, and maintenance planning. Property teams can quickly confirm what was completed and flag follow-up items without relying on ad hoc walk-throughs."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What insurance and risk controls are in place for this service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our pressure washing crews are insured and follow site-specific safety controls, including equipment handling standards and hazard awareness in active multifamily environments. We align with property access and safety requirements before work begins. This helps reduce risk exposure while ensuring professional service quality."
                     }
                   }
                 ]
@@ -220,6 +228,10 @@ function PressureWashingService() {
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center mx-auto max-w-5xl">
                   Commercial Pressure Washing - All Surfaces
                 </h1>
+                <h2 className="text-lg md:text-xl font-semibold text-white mb-3">Why Property Managers Choose Us</h2>
+                <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto leading-relaxed mb-6 text-center">
+                  Managers choose our pressure washing service to maintain asset appearance without disrupting daily community flow. We coordinate around peak traffic windows, use surface-appropriate methods, and verify completion by area. This structured approach improves curb appeal, supports leasing outcomes, and reduces the burden on onsite teams managing vendor follow-through.
+                </p>
                 <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8 text-center">
                   Professional pressure washing for Orlando commercial and residential properties. Commercial-grade equipment cleans buildings, driveways, sidewalks, and more. Licensed, insured teams use eco-friendly solutions for all surfaces.
                 </p>

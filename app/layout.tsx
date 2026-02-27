@@ -7,6 +7,15 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'On The Fly Waste Solutions | Professional Valet Trash Services Orlando FL',
   description: 'Professional valet trash, bulk removal, and pressure washing services for Central Florida communities.',
+  icons: {
+    icon: [
+      { url: '/Images/Favicon1.png' },
+      { url: '/Images/Favicon1.png', sizes: '32x32', type: 'image/png' },
+      { url: '/Images/Favicon1.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/Images/Favicon1.png',
+  },
+  metadataBase: new URL('https://ontheflywastesolutions.com'),
 };
 
 export default function RootLayout({

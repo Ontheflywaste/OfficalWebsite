@@ -1,0 +1,171 @@
+/* Import optimized font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import '../node_modules/react-datepicker/dist/react-datepicker.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Performance optimizations */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-display: swap;
+}
+
+/* Critical CSS inlined in HTML head */
+.hero-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Performance optimizations */
+.hero-video {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Lazy loading improvements */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+/* Custom DatePicker Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border-color: #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.react-datepicker__header {
+  background-color: #049704;
+  border-bottom: none;
+  padding-top: 0.75rem;
+}
+
+.react-datepicker__current-month {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.react-datepicker__day-name {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.react-datepicker__day--selected {
+  background-color: #049704 !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: rgba(4, 151, 4, 0.2);
+}
+
+.react-datepicker__day:hover {
+  background-color: rgba(4, 151, 4, 0.1);
+}
+
+.react-datepicker__time-container {
+  border-left-color: #e5e7eb;
+}
+
+.react-datepicker__time-list-item--selected {
+  background-color: #049704 !important;
+}
+
+/* Essential animations only */
+.hero-text {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(4, 151, 4, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(4, 151, 4, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(4, 151, 4, 0);
+  }
+}
+
+/* Image optimization styles */
+.skeleton-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+    animation: pulse-glow 2s infinite;
+  }
+
+  .btn-primary-inverse {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-[#049704] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-full border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-gray-900 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-md w-full sm:w-auto;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-base;
+  }
+
+  .btn-link {
+    @apply inline-flex items-center text-[#049704] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#049704] after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-video {
+    animation: none !important;
+  }
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import BlogPostClient from './BlogPostClient';
-import { allBlogPosts } from '../../data/blogPosts';
+import { allBlogPosts } from '@/app/data/blogPosts';
 
 export async function generateStaticParams() {
   return allBlogPosts.map((post) => ({

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
-import ScrollReveal from '../../components/ScrollReveal';
+import ScrollReveal from '@/app/components/ScrollReveal';
 
 export default function ValetTrashClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

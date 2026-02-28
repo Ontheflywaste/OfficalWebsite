@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 } from 'lucide-react';
-import ScrollReveal from '../components/ScrollReveal';
+import ScrollReveal from '@/app/components/ScrollReveal';
 
 export default function ContactClient() {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');

@@ -3,9 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag } from 'lucide-react';
-import ScrollReveal from '../../components/ScrollReveal';
-import type { BlogPost } from '../../data/blogPosts';
-import { allBlogPosts } from '../../data/blogPosts';
+import ScrollReveal from '@/app/components/ScrollReveal';
+import type { BlogPost } from '@/app/data/blogPosts';
+import { allBlogPosts } from '@/app/data/blogPosts';
 
 export default function BlogPostClient({ post }: { post: BlogPost }) {
   const currentIndex = allBlogPosts.findIndex((p) => p.id === post.id);

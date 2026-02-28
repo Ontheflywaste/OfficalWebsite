@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
-import ScrollReveal from '../components/ScrollReveal';
-import { featuredPost, blogPosts } from '../data/blogPosts';
+import ScrollReveal from '@/app/components/ScrollReveal';
+import { featuredPost, blogPosts } from '@/app/data/blogPosts';
 
 export default function BlogClient() {
   const [selectedCategory, setSelectedCategory] = useState('All');

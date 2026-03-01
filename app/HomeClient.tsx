@@ -34,14 +34,14 @@ export default function HomeClient() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Professional Valet Trash<br />
-              <span className="text-[#049704]">Solutions</span>
+              Premier Doorstep<br />
+              <span className="text-[#049704]">Trash Pickup</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Elevating apartment communities across Central Florida with reliable valet trash, bulk removal, and pressure washing services
+              SLA-backed valet trash service with 99.5% collection rate guarantee. Serving apartment communities across Central Florida with photo-verified, accountable service.
             </p>
           </ScrollReveal>
 
@@ -87,37 +87,37 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-[#038503]" />
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704]">
+                <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="w-8 h-8 text-[#049704]" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Reliable Service</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">SLA-Backed Guarantee</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Consistent, on-time service 7 days a week. Our team ensures your community stays clean and your residents stay happy.
+                  99.5% collection rate backed by Service Level Agreement with documented photo verification for complete accountability.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                  <Building2 className="w-8 h-8 text-blue-600" />
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-gray-900">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
+                  <Building2 className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Property Focused</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Specialized in multi-family properties. We understand the unique needs of apartment communities and HOAs.
+                  Specialized in multi-family properties with dedicated account management and real-time service notifications.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                  <Recycle className="w-8 h-8 text-purple-600" />
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704]">
+                <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                  <Recycle className="w-8 h-8 text-[#049704]" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Eco-Friendly</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Transparency</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Committed to sustainable practices. We prioritize recycling and proper waste disposal to protect our environment.
+                  Real-time photo documentation, detailed service reports, and 24/7 customer support ensure total visibility.
                 </p>
               </div>
             </ScrollReveal>
@@ -138,58 +138,61 @@ export default function HomeClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
               <Link href="/services/valet-trash/" className="group">
-                <div className="bg-gradient-to-br from-gray-50 to-green-50 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  <Trash2 className="w-12 h-12 text-[#038503] mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Valet Trash</h3>
-                  <p className="text-gray-600 mb-4">Door-to-door trash collection for apartment residents</p>
-                  <span className="text-[#038503] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Premier doorstep trash pickup with SLA-backed 99.5% collection rate and photo verification</p>
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
               </Link>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Link href="/services/bulk-removal/" className="group">
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  <Recycle className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-4">Fast removal of large items and furniture</p>
-                  <span className="text-blue-600 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
+              <Link href="/services/junk-removal/" className="group">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-gray-900 transition-all transform hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
+                    <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Fast, professional removal with same-day service available for urgent needs</p>
+                  <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
               </Link>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Link href="/services/junk-removal/" className="group">
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  <Building2 className="w-12 h-12 text-purple-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-4">Complete cleanouts and debris removal</p>
-                  <span className="text-purple-600 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
+              <Link href="/services/bulk-removal/" className="group">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Scheduled pickup of oversized items with flexible property-wide services</p>
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
               </Link>
             </ScrollReveal>
+          </div>
 
-            <ScrollReveal delay={0.4}>
-              <Link href="/services/pressure-washing/" className="group">
-                <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  <Sparkles className="w-12 h-12 text-cyan-600 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Pressure Washing</h3>
-                  <p className="text-gray-600 mb-4">Professional exterior cleaning services</p>
-                  <span className="text-cyan-600 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
+          <div className="mt-12 text-center">
+            <Link
+              href="/services/"
+              className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

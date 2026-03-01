@@ -135,8 +135,40 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div className="border-t border-gray-800 mt-12 pt-12">
+          <div className="mb-12">
+            <h3 className="text-center text-gray-400 text-sm font-semibold mb-8 uppercase tracking-wider">
+              Trusted Industry Partnerships
+            </h3>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+                <img
+                  src="/Images/faa-full-color-full-logo.png"
+                  alt="Florida Apartment Association Member"
+                  className="h-full w-full object-contain filter brightness-0 invert"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+                <img
+                  src="/Images/NAA-logo_bgwhite.png"
+                  alt="National Apartment Association Member"
+                  className="h-full w-full object-contain filter brightness-0 invert"
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+                <img
+                  src="/Images/AAGO.png"
+                  alt="AAGO Member"
+                  className="h-full w-full object-contain filter brightness-0 invert"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-8">
             <p className="text-gray-400 text-sm text-center md:text-left">
               &copy; {new Date().getFullYear()} On The Fly Waste Solutions. All rights reserved.
             </p>

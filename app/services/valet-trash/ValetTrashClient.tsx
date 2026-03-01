@@ -10,14 +10,14 @@ export default function ValetTrashClient() {
 
   const benefits = [
     {
+      icon: <Shield className="w-8 h-8" />,
+      title: "SLA-Backed Service Guarantee",
+      description: "Our 99.5% collection rate is backed by a Service Level Agreement with documented photo verification for every service night."
+    },
+    {
       icon: <Users className="w-8 h-8" />,
       title: "Improved Resident Satisfaction",
       description: "Convenient door-to-door service enhances the living experience and reduces complaints about overflowing dumpsters."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Enhanced Property Cleanliness",
-      description: "Regular collection keeps your property clean, reducing pest problems and maintaining curb appeal."
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -26,20 +26,22 @@ export default function ValetTrashClient() {
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Reduced Maintenance Costs",
-      description: "Less wear and tear on dumpster areas and reduced need for frequent dumpster cleanings."
+      title: "Complete Accountability",
+      description: "Real-time photo documentation, service reports, and dedicated account management ensure total transparency."
     }
   ];
 
   const features = [
+    "SLA-backed 99.5% collection rate guarantee",
+    "Photo verification for every service",
     "Sunday through Thursday evening service",
     "Professional, uniformed collection staff",
+    "Dedicated account management portal",
+    "Real-time service notifications",
     "Eco-friendly disposal and recycling practices",
-    "Customizable collection schedules",
     "24/7 customer support",
     "Insurance and bonding included",
-    "No long-term contracts required",
-    "Flexible service adjustments"
+    "Customizable collection schedules"
   ];
 
   const faqs = [

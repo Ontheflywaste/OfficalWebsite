@@ -83,6 +83,58 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-[#049704] mb-6">
+                  Welcome to On The Fly Waste Solutions
+                </h2>
+                <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+                  <p>
+                    Since 2020, On The Fly Waste Solutions has been transforming property waste management across Central Florida with our innovative valet trash and comprehensive waste services.
+                  </p>
+                  <p>
+                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#049704]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#049704]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
+                  </p>
+                  <p>
+                    As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
+                  </p>
+                  <p>
+                    Our team doesn't just collect trash—we partner with property managers to enhance resident satisfaction, reduce maintenance calls, and maintain pristine communities that prospects want to call home.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/about/"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold border-2 border-[#049704] text-[#049704] hover:bg-[#049704] hover:text-white transition-all duration-300 transform hover:scale-105"
+                  >
+                    Learn More About Us
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="relative">
+                <img
+                  src="/Images/artemistradeshow.jpg"
+                  alt="On The Fly Waste Solutions team at trade show"
+                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  loading="lazy"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl hidden lg:block">
+                  <div className="text-3xl font-bold">100%</div>
+                  <div className="text-sm">Collection Rate</div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

@@ -12,7 +12,7 @@ export default function ValetTrashClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "SLA-Backed Service Guarantee",
-      description: "Our 100% collection rate is backed by a Service Level Agreement with documented photo verification for every service night."
+      description: "Our 100% collection rate is backed by a Service Level Agreement with advanced GPS tracking ensuring complete property coverage."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -26,28 +26,28 @@ export default function ValetTrashClient() {
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Complete Accountability",
-      description: "Real-time photo documentation, service reports, and dedicated account management ensure total transparency."
+      title: "Advanced GPS Tracking",
+      description: "Real-time geo-location tracking ensures 100% of your property footprint and every street is serviced with verified route completion."
     }
   ];
 
   const features = [
     "SLA-backed 100% collection rate guarantee",
-    "Photo verification for every service",
-    "Sunday through Thursday evening service",
+    "Advanced GPS geo-location tracking",
+    "Flexible scheduling up to 7 days per week",
     "Professional, uniformed collection staff",
     "Dedicated account management portal",
     "Real-time service notifications",
-    "Eco-friendly disposal and recycling practices",
+    "Eco-friendly disposal practices",
     "24/7 customer support",
     "Insurance and bonding included",
-    "Customizable collection schedules"
+    "Customizable collection windows"
   ];
 
   const faqs = [
     {
       question: "What days do you collect trash?",
-      answer: "We provide valet trash collection Sunday through Thursday evenings. Our team typically collects between 8 PM and midnight, ensuring convenient service without disrupting your residents' day."
+      answer: "We offer flexible scheduling up to 7 days per week based on your property's needs. Our customizable collection windows are tailored to your property's specific requirements, ensuring convenient service without disrupting your residents."
     },
     {
       question: "What can residents place out for collection?",
@@ -59,11 +59,11 @@ export default function ValetTrashClient() {
     },
     {
       question: "What happens if trash is missed?",
-      answer: "We maintain a 100% collection rate with our SLA-backed guarantee. In the rare event of any issue, residents can contact us directly for immediate resolution. We also provide property managers with real-time service reports and photo verification."
+      answer: "We maintain a 100% collection rate with our SLA-backed guarantee and GPS-verified route completion. In the rare event of any issue, residents can contact us directly for immediate resolution. We provide property managers with real-time service reports and route tracking data."
     },
     {
       question: "Do you provide recycling services?",
-      answer: "Yes! We're committed to sustainability and include recycling as part of our standard service. We properly sort and dispose of recyclable materials according to local regulations."
+      answer: "Yes! Recycling services are available for communities with an existing recycling plan in place. We work within your property's established recycling program and properly sort and dispose of recyclable materials according to local regulations."
     },
     {
       question: "How quickly can service start?",

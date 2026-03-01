@@ -48,9 +48,9 @@ export default function PressureWashingClient() {
       description: "Commercial-grade pressure washers and eco-friendly cleaning solutions for optimal results without damage."
     },
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Flexible Scheduling",
-      description: "We work around your property's schedule, including evenings and weekends to minimize resident disruption."
+      icon: <Camera className="w-8 h-8" />,
+      title: "Before & After Photos",
+      description: "Every job includes complete photo documentation showing the transformation and quality of our work for your records."
     },
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -157,7 +157,7 @@ export default function PressureWashingClient() {
                 <h1 className="text-5xl font-bold">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Professional pressure washing for breezeways, sidewalks, pool decks, building exteriors, and all concrete surfaces
+                Professional pressure washing for breezeways, sidewalks, pool decks, building exteriors, and all concrete surfaces. Before & after photo verification included.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

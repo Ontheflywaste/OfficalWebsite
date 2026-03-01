@@ -24,23 +24,23 @@ export default function BulkRemovalClient() {
   const benefits = [
     {
       icon: <Calendar className="w-8 h-8" />,
-      title: "Scheduled Pickups",
-      description: "Set a convenient date and time for bulk item removal. We work around your schedule for maximum convenience."
+      title: "Recurring Service Plans",
+      description: "Weekly, bi-weekly, or monthly scheduled pickups designed specifically for property managers with predictable budgets."
+    },
+    {
+      icon: <Camera className="w-8 h-8" />,
+      title: "Before & After Photos",
+      description: "Every service includes photo verification and detailed documentation for your property management records."
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Property Protection",
-      description: "Our experienced team carefully removes items without damaging walls, floors, or doorways."
-    },
-    {
-      icon: <Recycle className="w-8 h-8" />,
-      title: "Eco-Friendly Disposal",
-      description: "We donate usable items and recycle materials whenever possible, keeping waste out of landfills."
+      title: "Property-First Approach",
+      description: "Our experienced team carefully removes items without damaging walls, floors, or doorways, protecting your investment."
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Fast & Efficient",
-      description: "Most bulk removals are completed within 1-2 hours. We're in and out quickly with minimal disruption."
+      title: "Flexible Scheduling",
+      description: "We work around your property's schedule and resident needs, including after-hours service to minimize disruption."
     }
   ];
 
@@ -125,7 +125,7 @@ export default function BulkRemovalClient() {
                 <h1 className="text-5xl font-bold">Bulk Removal Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Professional removal of large items and bulk waste for properties and residents across Central Florida
+                Recurring and scheduled bulk waste removal exclusively for property managers and commercial clients. Before & after photo verification included.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

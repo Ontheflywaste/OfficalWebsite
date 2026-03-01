@@ -10,12 +10,12 @@ export default function ServicesClient() {
     {
       icon: <Trash2 className="w-12 h-12" />,
       title: "Valet Trash Service",
-      description: "Premier doorstep trash pickup for apartment communities. Sunday-Thursday service with professional, uniformed staff.",
+      description: "Premier doorstep trash pickup for apartment communities. Flexible scheduling up to 7 days per week with GPS-verified route completion.",
       features: [
-        "SLA-backed 99.5% collection rate",
-        "Photo verification for every service",
-        "Dedicated account management",
-        "Resident communication portal"
+        "SLA-backed 100% collection rate",
+        "Advanced GPS geo-location tracking",
+        "Flexible scheduling up to 7 days/week",
+        "Customizable collection windows"
       ],
       link: "/services/valet-trash/",
       image: "/Images/Trash-pickup.jpg"
@@ -23,12 +23,12 @@ export default function ServicesClient() {
     {
       icon: <Package className="w-12 h-12" />,
       title: "Junk Removal",
-      description: "Fast, professional removal of furniture, appliances, and unwanted items. Same-day service available for urgent needs.",
+      description: "Fast, professional junk removal for homeowners and residents. Same-day service available with before & after photo verification.",
       features: [
-        "Free on-site quotes",
+        "Same-day service available",
+        "Before & after photo verification",
         "Full-service removal",
-        "Eco-friendly disposal",
-        "Same-day availability"
+        "Eco-friendly disposal"
       ],
       link: "/services/junk-removal/",
       image: "/Images/Junk.jpg"
@@ -36,11 +36,11 @@ export default function ServicesClient() {
     {
       icon: <Package className="w-12 h-12" />,
       title: "Bulk Removal",
-      description: "Scheduled pickup of oversized items for properties and residents. Perfect for move-outs and property turnovers.",
+      description: "Recurring and scheduled bulk removal exclusively for property managers. Perfect for move-outs and property turnovers with photo documentation.",
       features: [
-        "Flexible scheduling",
+        "Recurring service plans",
+        "Before & after photo verification",
         "Property-wide services",
-        "Volume-based pricing",
         "Turn-ready solutions"
       ],
       link: "/services/bulk-removal/",
@@ -49,12 +49,12 @@ export default function ServicesClient() {
     {
       icon: <Sparkles className="w-12 h-12" />,
       title: "Pressure Washing",
-      description: "Professional exterior cleaning that restores property appearance and maintains curb appeal year-round.",
+      description: "Professional exterior cleaning for breezeways, sidewalks, and all concrete surfaces. Complete before & after photo documentation included.",
       features: [
         "Commercial-grade equipment",
-        "Eco-friendly solutions",
+        "Before & after photo verification",
         "Licensed & insured",
-        "Flexible scheduling"
+        "Eco-friendly solutions"
       ],
       link: "/services/pressure-washing/",
       image: "/Images/pressure-wash.jpg"
@@ -65,12 +65,12 @@ export default function ServicesClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "SLA-Backed Service",
-      description: "Our service level agreements guarantee 99.5% collection rates with documented photo verification"
+      description: "Our service level agreements guarantee 100% collection rates with advanced GPS tracking technology"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,
-      title: "Photo Verification",
-      description: "Every service is documented with timestamped photos for complete accountability and transparency"
+      title: "Advanced Technology",
+      description: "GPS geo-location tracking for valet trash, photo verification for junk removal, bulk services, and pressure washing"
     },
     {
       icon: <Clock className="w-8 h-8" />,

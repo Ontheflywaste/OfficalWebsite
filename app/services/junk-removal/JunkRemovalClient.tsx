@@ -45,12 +45,12 @@ export default function JunkRemovalClient() {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Same-Day Service Available",
-      description: "Need it gone today? We offer fast same-day and next-day junk removal services for urgent situations."
+      description: "Need it gone today? We offer fast same-day and next-day junk removal services for homeowners and residents."
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Upfront Pricing",
-      description: "No hidden fees. We provide transparent quotes before we start, so you know exactly what you'll pay."
+      icon: <Camera className="w-8 h-8" />,
+      title: "Before & After Photos",
+      description: "Every job includes before and after photo verification so you have documentation of the completed work."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -60,7 +60,7 @@ export default function JunkRemovalClient() {
     {
       icon: <Recycle className="w-8 h-8" />,
       title: "Eco-Friendly Disposal",
-      description: "We donate, recycle, and properly dispose of items to minimize environmental impact."
+      description: "We donate usable items, recycle materials, and properly dispose of waste to minimize environmental impact."
     }
   ];
 
@@ -150,7 +150,7 @@ export default function JunkRemovalClient() {
                 <h1 className="text-5xl font-bold">Junk Removal Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Fast, affordable junk removal for homes and businesses across Central Florida
+                Fast, affordable junk removal for homeowners and residents across Central Florida. Same-day service available with before & after photo verification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

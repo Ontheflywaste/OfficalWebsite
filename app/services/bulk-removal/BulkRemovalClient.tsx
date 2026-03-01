@@ -1,0 +1,347 @@
+'use client';
+
+import React, { useState } from 'react';
+import { ArrowRight, CheckCircle2, Package, Clock, Shield, Calendar, Phone, Star, Quote, ChevronDown, Recycle, Truck } from 'lucide-react';
+import Link from 'next/link';
+import ScrollReveal from '@/app/components/ScrollReveal';
+
+export default function BulkRemovalClient() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const items = [
+    "Furniture (sofas, beds, dressers)",
+    "Appliances (refrigerators, washers, dryers)",
+    "Mattresses and box springs",
+    "Electronics and TVs",
+    "Exercise equipment",
+    "Carpeting and flooring",
+    "Cabinets and countertops",
+    "Hot tubs and playground equipment",
+    "Construction debris",
+    "Yard waste and landscaping materials"
+  ];
+
+  const benefits = [
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: "Scheduled Pickups",
+      description: "Set a convenient date and time for bulk item removal. We work around your schedule for maximum convenience."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Property Protection",
+      description: "Our experienced team carefully removes items without damaging walls, floors, or doorways."
+    },
+    {
+      icon: <Recycle className="w-8 h-8" />,
+      title: "Eco-Friendly Disposal",
+      description: "We donate usable items and recycle materials whenever possible, keeping waste out of landfills."
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: "Fast & Efficient",
+      description: "Most bulk removals are completed within 1-2 hours. We're in and out quickly with minimal disruption."
+    }
+  ];
+
+  const propertyServices = [
+    {
+      title: "Apartment Communities",
+      description: "Regular bulk item pickup for residents, keeping dumpster areas clean and organized.",
+      features: ["Weekly or bi-weekly pickups", "Resident notification systems", "After-hours service available"]
+    },
+    {
+      title: "Property Management",
+      description: "Turn-ready solutions for move-outs and property renovations.",
+      features: ["Unit cleanouts", "Appliance removal", "Construction debris hauling"]
+    },
+    {
+      title: "HOA Communities",
+      description: "Scheduled bulk pickup days for homeowners associations.",
+      features: ["Community-wide pickup events", "Flexible scheduling", "Transparent pricing"]
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "What qualifies as a bulk item?",
+      answer: "Bulk items are large household items that cannot fit in regular trash bags or bins. This includes furniture, appliances, mattresses, and other oversized items. If you're unsure, give us a call and we'll help determine if your item qualifies."
+    },
+    {
+      question: "How do I schedule a bulk removal?",
+      answer: "You can schedule bulk removal by calling us at (407) 274-5019 or using our online contact form. Provide details about the items and your preferred pickup date, and we'll confirm your appointment."
+    },
+    {
+      question: "Do you remove items from inside my home?",
+      answer: "Yes! We provide full-service removal. Our team will enter your home, carefully remove the items, and haul them away. No heavy lifting required on your part."
+    },
+    {
+      question: "What items do you NOT accept?",
+      answer: "We cannot accept hazardous materials, chemicals, paint, asbestos, medical waste, or explosives. For everything else, contact us to confirm."
+    },
+    {
+      question: "How much does bulk removal cost?",
+      answer: "Pricing varies based on the volume and type of items. For apartment communities, we offer competitive monthly rates. For individual removals, we provide upfront quotes. Contact us for a free estimate."
+    },
+    {
+      question: "Do you offer service for apartment complexes?",
+      answer: "Absolutely! We specialize in serving apartment communities with regular scheduled bulk pickup services. This keeps your property clean and residents happy."
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Amanda Rodriguez",
+      property: "Riverview Apartments - Property Manager",
+      rating: 5,
+      text: "On The Fly handles all our bulk removals. They're reliable, professional, and always clean up after themselves. Our residents appreciate the convenient service."
+    },
+    {
+      name: "James Patterson",
+      location: "Orlando, FL",
+      rating: 5,
+      text: "I had an old couch and refrigerator that needed to go. They came the next day, quoted me a fair price, and had everything removed in 30 minutes. Excellent service!"
+    },
+    {
+      name: "Melissa Chen",
+      property: "Sunset Ridge HOA",
+      rating: 5,
+      text: "We use On The Fly for our quarterly bulk pickup days. They handle everything professionally and make the process easy for our homeowners."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen pt-32">
+      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('/Images/Residential-Junk-Removal-McAllen-Dumpster-Rental-Junk-Removal-Services-1024x768-2.jpg')] bg-cover bg-center"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-3 mb-6">
+                <Package className="w-12 h-12 text-[#049704]" />
+                <h1 className="text-5xl font-bold">Bulk Removal Service</h1>
+              </div>
+              <p className="text-2xl text-gray-200 mb-8">
+                Professional removal of large items and bulk waste for properties and residents across Central Florida
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact/"
+                  className="inline-flex items-center justify-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+                >
+                  Get Free Quote
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a
+                  href="tel:407-274-5019"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+                >
+                  <Phone className="w-5 h-5" />
+                  (407) 274-5019
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                What We Remove
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                If it's too big for regular trash pickup, we can handle it
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((item, index) => (
+              <ScrollReveal key={index} delay={index * 0.05}>
+                <div className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
+                  <CheckCircle2 className="w-6 h-6 text-[#049704] flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{item}</span>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our Bulk Removal Service?
+              </h2>
+              <p className="text-xl text-gray-600">
+                Professional, reliable, and convenient
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704]">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Services for Properties & Communities
+              </h2>
+              <p className="text-xl text-gray-600">
+                Customized bulk removal solutions for property managers and HOAs
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {propertyServices.map((service, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-[#049704] flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600">
+                Trusted by property managers and residents across Central Florida
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="bg-white p-8 rounded-xl shadow-sm">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-[#049704] text-[#049704]" />
+                    ))}
+                  </div>
+                  <Quote className="w-10 h-10 text-[#049704] opacity-20 mb-4" />
+                  <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-600">{testimonial.property || testimonial.location}</div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Common questions about our bulk removal service
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <ScrollReveal key={index} delay={index * 0.05}>
+                <div className="bg-gray-50 rounded-xl shadow-sm overflow-hidden">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="font-semibold text-lg text-gray-900 pr-8">{faq.question}</span>
+                    <ChevronDown
+                      className={`w-6 h-6 text-[#049704] flex-shrink-0 transition-transform duration-300 ${
+                        openFaq === index ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  {openFaq === index && (
+                    <div className="px-8 pb-6">
+                      <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#049704] text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <Truck className="w-16 h-16 mx-auto mb-6" />
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Schedule Your Bulk Removal?
+            </h2>
+            <p className="text-xl text-gray-100 mb-8">
+              Contact us today for a free quote and convenient scheduling
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact/"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#049704] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+              >
+                Request Free Quote
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <a
+                href="tel:407-274-5019"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+              >
+                <Phone className="w-5 h-5" />
+                Call (407) 274-5019
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </div>
+  );
+}

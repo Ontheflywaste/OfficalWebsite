@@ -245,6 +245,21 @@ export default function Navbar() {
                 Reviews
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
               </Link>
+
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`font-medium text-base relative group transition-all duration-300 ${
+                  shouldUseBlackLogo
+                    ? 'text-gray-900 hover:text-[#027502]'
+                    : 'text-white hover:text-[#027502]'
+                }`}
+                role="menuitem"
+              >
+                Testimonials
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
+              </a>
             </div>
           </div>
         </div>
@@ -317,6 +332,19 @@ export default function Navbar() {
               >
                 Reviews
               </Link>
+
+              <a
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
+                  shouldUseBlackLogo
+                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
+                    : 'text-white hover:text-[#027502] hover:bg-white/10'
+                }`}
+              >
+                Testimonials
+              </a>
             </div>
           </div>
         )}

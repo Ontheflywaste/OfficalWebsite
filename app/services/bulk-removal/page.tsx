@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
+import BulkRemovalClient from './BulkRemovalClient';
 
 export const metadata: Metadata = {
-  title: 'Service Coming Soon | On The Fly Waste Solutions',
-  description: 'Service page under construction',
+  title: 'Bulk Removal Services for Apartments & Properties | On The Fly',
+  description: 'Professional bulk item removal for apartment communities, HOAs, and residents in Central Florida. Furniture, appliances, and oversized items removed quickly.',
+  keywords: 'bulk removal orlando, furniture removal apartments, bulk pickup service, apartment bulk waste, property bulk removal central florida',
 };
 
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen pt-32">
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Service Coming Soon</h1>
-          <p className="text-xl text-gray-600">This service page is under construction.</p>
-        </div>
-      </section>
-    </div>
-  );
+export default function BulkRemovalPage() {
+  return <BulkRemovalClient />;
 }

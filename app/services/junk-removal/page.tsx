@@ -1,19 +1,12 @@
 import type { Metadata } from 'next';
+import JunkRemovalClient from './JunkRemovalClient';
 
 export const metadata: Metadata = {
-  title: 'Service Coming Soon | On The Fly Waste Solutions',
-  description: 'Service page under construction',
+  title: 'Professional Junk Removal Services Orlando FL | On The Fly',
+  description: 'Fast, affordable junk removal for homes and businesses in Central Florida. Furniture, appliances, estate cleanouts, and more. Same-day service available.',
+  keywords: 'junk removal orlando, furniture removal, appliance disposal, estate cleanout, same day junk removal central florida',
 };
 
-export default function ServicePage() {
-  return (
-    <div className="min-h-screen pt-32">
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Service Coming Soon</h1>
-          <p className="text-xl text-gray-600">This service page is under construction.</p>
-        </div>
-      </section>
-    </div>
-  );
+export default function JunkRemovalPage() {
+  return <JunkRemovalClient />;
 }

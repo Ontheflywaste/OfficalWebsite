@@ -35,7 +35,7 @@ export default function HomeClient() {
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Professional Valet Trash<br />
-              <span className="text-emerald-400">Solutions</span>
+              <span className="text-[#049704]">Solutions</span>
             </h1>
           </ScrollReveal>
 
@@ -49,7 +49,7 @@ export default function HomeClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -88,8 +88,8 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
               <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-emerald-600" />
+                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="w-8 h-8 text-[#038503]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Reliable Service</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -141,11 +141,11 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ScrollReveal delay={0.1}>
               <Link href="/services/valet-trash/" className="group">
-                <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  <Trash2 className="w-12 h-12 text-emerald-600 mb-4" />
+                <div className="bg-gradient-to-br from-gray-50 to-green-50 p-8 rounded-xl hover:shadow-xl transition-all transform hover:-translate-y-1">
+                  <Trash2 className="w-12 h-12 text-[#038503] mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Valet Trash</h3>
                   <p className="text-gray-600 mb-4">Door-to-door trash collection for apartment residents</p>
-                  <span className="text-emerald-600 font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+                  <span className="text-[#038503] font-semibold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-emerald-600">
+      <section className="py-20 bg-[#038503]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -202,25 +202,25 @@ export default function HomeClient() {
                 <h2 className="text-4xl font-bold text-white mb-6">
                   Serving Central Florida's Premier Communities
                 </h2>
-                <p className="text-emerald-50 text-lg mb-8 leading-relaxed">
+                <p className="text-gray-50 text-lg mb-8 leading-relaxed">
                   From Orlando to Kissimmee and beyond, we partner with property managers to deliver exceptional waste management services that enhance resident satisfaction and property value.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-200 flex-shrink-0 mt-1" />
-                    <span className="text-emerald-50">Licensed and insured professionals</span>
+                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
+                    <span className="text-gray-50">Licensed and insured professionals</span>
                   </li>
                   <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-200 flex-shrink-0 mt-1" />
-                    <span className="text-emerald-50">Flexible service plans tailored to your property</span>
+                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
+                    <span className="text-gray-50">Flexible service plans tailored to your property</span>
                   </li>
                   <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-200 flex-shrink-0 mt-1" />
-                    <span className="text-emerald-50">24/7 customer support</span>
+                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
+                    <span className="text-gray-50">24/7 customer support</span>
                   </li>
                   <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-200 flex-shrink-0 mt-1" />
-                    <span className="text-emerald-50">Competitive pricing with no hidden fees</span>
+                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
+                    <span className="text-gray-50">Competitive pricing with no hidden fees</span>
                   </li>
                 </ul>
               </div>
@@ -238,19 +238,19 @@ export default function HomeClient() {
                   <div className="space-y-4">
                     <a
                       href="tel:407-274-5019"
-                      className="flex items-center gap-3 p-4 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors group"
+                      className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-green-50 transition-colors group"
                     >
-                      <Phone className="w-6 h-6 text-emerald-600" />
+                      <Phone className="w-6 h-6 text-[#038503]" />
                       <div>
                         <div className="text-sm text-gray-600">Call us</div>
-                        <div className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                        <div className="font-semibold text-gray-900 group-hover:text-[#038503] transition-colors">
                           (407) 274-5019
                         </div>
                       </div>
                     </a>
                     <Link
                       href="/contact/"
-                      className="flex items-center justify-center gap-2 w-full bg-emerald-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-all"
+                      className="flex items-center justify-center gap-2 w-full bg-[#038503] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#027002] transition-all"
                     >
                       Request Quote Online
                       <ArrowRight className="w-5 h-5" />
@@ -279,15 +279,15 @@ export default function HomeClient() {
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-emerald-600 mb-2">500+</div>
+                <div className="text-5xl font-bold text-[#038503] mb-2">500+</div>
                 <div className="text-gray-600 font-semibold">Units Served</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-emerald-600 mb-2">98%</div>
+                <div className="text-5xl font-bold text-[#038503] mb-2">98%</div>
                 <div className="text-gray-600 font-semibold">Client Satisfaction</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-emerald-600 mb-2">7</div>
+                <div className="text-5xl font-bold text-[#038503] mb-2">7</div>
                 <div className="text-gray-600 font-semibold">Days a Week Service</div>
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function HomeClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center gap-2 bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
             >
               Schedule Consultation
               <ArrowRight className="w-5 h-5" />

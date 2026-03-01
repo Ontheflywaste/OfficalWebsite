@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
@@ -153,7 +154,7 @@ export default function Navbar() {
                 }`}
                 role="menuitem"
               >
-                About
+                About Us
                 <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
               </Link>
 
@@ -304,19 +305,69 @@ export default function Navbar() {
                     : 'text-white hover:text-[#027502] hover:bg-white/10'
                 }`}
               >
-                About
+                About Us
               </Link>
 
-              <Link
-                href="/services/"
-                className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
-                  shouldUseBlackLogo
-                    ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
-                    : 'text-white hover:text-[#027502] hover:bg-white/10'
-                }`}
-              >
-                Services
-              </Link>
+              <div>
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className={`w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${
+                    shouldUseBlackLogo
+                      ? 'text-gray-900 hover:text-[#027502] hover:bg-gray-100'
+                      : 'text-white hover:text-[#027502] hover:bg-white/10'
+                  }`}
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
+                    isMobileServicesOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
+
+                {isMobileServicesOpen && (
+                  <div className={`ml-4 mt-2 space-y-1 border-l-2 ${shouldUseBlackLogo ? 'border-gray-300' : 'border-white/30'} pl-4`}>
+                    <Link
+                      href="/services/valet-trash/"
+                      className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                        shouldUseBlackLogo
+                          ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-50'
+                          : 'text-gray-300 hover:text-[#027502] hover:bg-white/5'
+                      }`}
+                    >
+                      Valet Trash
+                    </Link>
+                    <Link
+                      href="/services/junk-removal/"
+                      className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                        shouldUseBlackLogo
+                          ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-50'
+                          : 'text-gray-300 hover:text-[#027502] hover:bg-white/5'
+                      }`}
+                    >
+                      Junk Removal
+                    </Link>
+                    <Link
+                      href="/services/bulk-removal/"
+                      className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                        shouldUseBlackLogo
+                          ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-50'
+                          : 'text-gray-300 hover:text-[#027502] hover:bg-white/5'
+                      }`}
+                    >
+                      Bulk Removal
+                    </Link>
+                    <Link
+                      href="/services/pressure-washing/"
+                      className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
+                        shouldUseBlackLogo
+                          ? 'text-gray-700 hover:text-[#027502] hover:bg-gray-50'
+                          : 'text-gray-300 hover:text-[#027502] hover:bg-white/5'
+                      }`}
+                    >
+                      Pressure Washing
+                    </Link>
+                  </div>
+                )}
+              </div>
 
               <Link
                 href="/blog/"

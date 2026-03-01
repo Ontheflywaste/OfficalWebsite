@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown, Trash2, Calendar } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown, Trash2, Calendar, Camera } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
@@ -12,7 +12,7 @@ export default function ValetTrashClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "SLA-Backed Service Guarantee",
-      description: "Our 99.5% collection rate is backed by a Service Level Agreement with documented photo verification for every service night."
+      description: "Our 100% collection rate is backed by a Service Level Agreement with documented photo verification for every service night."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -32,7 +32,7 @@ export default function ValetTrashClient() {
   ];
 
   const features = [
-    "SLA-backed 99.5% collection rate guarantee",
+    "SLA-backed 100% collection rate guarantee",
     "Photo verification for every service",
     "Sunday through Thursday evening service",
     "Professional, uniformed collection staff",
@@ -59,7 +59,7 @@ export default function ValetTrashClient() {
     },
     {
       question: "What happens if trash is missed?",
-      answer: "We maintain a 99% collection rate, but if a collection is missed, residents can contact us directly for same-day or next-day pickup. We also provide property managers with regular service reports."
+      answer: "We maintain a 100% collection rate with our SLA-backed guarantee. In the rare event of any issue, residents can contact us directly for immediate resolution. We also provide property managers with real-time service reports and photo verification."
     },
     {
       question: "Do you provide recycling services?",
@@ -238,6 +238,54 @@ export default function ValetTrashClient() {
                     ))}
                   </ul>
                 </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-[#049704] to-[#027502] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div>
+                <Camera className="w-16 h-16 mb-6" />
+                <h2 className="text-4xl font-bold mb-6">
+                  100% Photo Verification
+                </h2>
+                <p className="text-xl text-gray-100 mb-6 leading-relaxed">
+                  Every service is documented with time-stamped photos sent directly to property managers. Complete accountability and transparency with every collection.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Real-time photo documentation of every service</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Time-stamped verification for complete accountability</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Instant notifications sent to property management</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Detailed service reports with visual proof</span>
+                  </li>
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                <h3 className="text-2xl font-bold mb-4">Why Photo Verification Matters</h3>
+                <p className="text-gray-100 mb-6 leading-relaxed">
+                  Unlike traditional waste services, we provide documented proof of every collection. Property managers receive instant notifications with photos showing completed work, ensuring you always know your service was completed on time and to our high standards.
+                </p>
+                <p className="text-gray-100 leading-relaxed">
+                  This level of transparency eliminates resident complaints, provides legal protection, and gives you peace of mind knowing your property is being serviced exactly as promised.
+                </p>
               </div>
             </ScrollReveal>
           </div>

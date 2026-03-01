@@ -265,7 +265,7 @@ export default function Navbar() {
               </Link>
 
               <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`font-medium text-base relative group transition-all duration-300 ${
@@ -352,7 +352,7 @@ export default function Navbar() {
               </Link>
 
               <a
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block py-3 px-4 rounded-lg transition-colors duration-300 font-medium ${

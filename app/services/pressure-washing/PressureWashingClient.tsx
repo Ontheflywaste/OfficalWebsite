@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Sparkles, Clock, Shield, Home, Phone, Star, Quote, ChevronDown, Droplets, Building2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Sparkles, Clock, Shield, Home, Phone, Star, Quote, ChevronDown, Droplets, Building2, Camera } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
@@ -21,8 +21,8 @@ export default function PressureWashingClient() {
     },
     {
       icon: <Droplets className="w-8 h-8" />,
-      title: "Sidewalks & Walkways",
-      description: "Clean high-traffic areas to maintain safety and curb appeal"
+      title: "Sidewalks, Walkways & Breezeways",
+      description: "Clean high-traffic areas including breezeways to maintain safety and curb appeal"
     },
     {
       icon: <Building2 className="w-8 h-8" />,
@@ -68,8 +68,8 @@ export default function PressureWashingClient() {
     {
       title: "Apartment Communities",
       features: [
-        "Regular maintenance schedules",
-        "Common area cleaning",
+        "Breezeway pressure washing",
+        "Sidewalk & walkway cleaning",
         "Building exterior washing",
         "Pool deck maintenance"
       ]
@@ -156,7 +156,7 @@ export default function PressureWashingClient() {
                 <h1 className="text-5xl font-bold">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Professional exterior cleaning services that restore and protect your property's appearance
+                Professional pressure washing for breezeways, sidewalks, pool decks, building exteriors, and all concrete surfaces
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -268,6 +268,54 @@ export default function PressureWashingClient() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-br from-[#049704] to-[#027502] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div>
+                <Camera className="w-16 h-16 mb-6" />
+                <h2 className="text-4xl font-bold mb-6">
+                  100% Photo Verification
+                </h2>
+                <p className="text-xl text-gray-100 mb-6 leading-relaxed">
+                  Every pressure washing job is documented with time-stamped before and after photos. Complete accountability and transparency with every service.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Before and after photos of every surface</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Time-stamped verification for complete accountability</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Instant notifications with visual proof</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
+                    <span className="text-lg">Detailed service reports included</span>
+                  </li>
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                <h3 className="text-2xl font-bold mb-4">Why Photo Verification Matters</h3>
+                <p className="text-gray-100 mb-6 leading-relaxed">
+                  We provide documented proof of every pressure washing service. You receive photos showing surfaces before cleaning and the dramatic results after, ensuring complete transparency.
+                </p>
+                <p className="text-gray-100 leading-relaxed">
+                  This documentation shows the value of our service and gives you confidence that your property looks its absolute best.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

@@ -116,22 +116,16 @@ export default function JunkRemovalClient() {
 
   const testimonials = [
     {
-      name: "Michael Thompson",
-      location: "Orlando, FL",
+      name: "Aura Zeland",
+      location: "Manager at Reunion West",
       rating: 5,
-      text: "Needed my garage cleaned out before a move. These guys were fantastic - professional, fast, and very reasonably priced. Highly recommend!"
+      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
     },
     {
-      name: "Linda Garcia",
-      location: "Kissimmee, FL",
+      name: "William Barber",
+      location: "Vendor Supervisor",
       rating: 5,
-      text: "They removed an old couch, refrigerator, and tons of boxes same day. The crew was respectful and did a great job cleaning up after themselves."
-    },
-    {
-      name: "David Wilson",
-      location: "Winter Park, FL",
-      rating: 5,
-      text: "Best junk removal service in Central Florida. Fair pricing, professional team, and they got everything done in under an hour."
+      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
     }
   ];
 

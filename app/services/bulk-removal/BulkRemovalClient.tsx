@@ -91,22 +91,16 @@ export default function BulkRemovalClient() {
 
   const testimonials = [
     {
-      name: "Amanda Rodriguez",
-      property: "Riverview Apartments - Property Manager",
+      name: "Aura Zeland",
+      property: "Manager at Reunion West",
       rating: 5,
-      text: "On The Fly handles all our bulk removals. They're reliable, professional, and always clean up after themselves. Our residents appreciate the convenient service."
+      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
     },
     {
-      name: "James Patterson",
-      location: "Orlando, FL",
+      name: "William Barber",
+      property: "Vendor Supervisor",
       rating: 5,
-      text: "I had an old couch and refrigerator that needed to go. They came the next day, quoted me a fair price, and had everything removed in 30 minutes. Excellent service!"
-    },
-    {
-      name: "Melissa Chen",
-      property: "Sunset Ridge HOA",
-      rating: 5,
-      text: "We use On The Fly for our quarterly bulk pickup days. They handle everything professionally and make the process easy for our homeowners."
+      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
     }
   ];
 
@@ -313,7 +307,7 @@ export default function BulkRemovalClient() {
                   <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
                   <div>
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.property || testimonial.location}</div>
+                    <div className="text-sm text-gray-600">{testimonial.property}</div>
                   </div>
                 </div>
               </ScrollReveal>

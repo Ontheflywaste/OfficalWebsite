@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown, Trash2, Calendar, Camera } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown, Trash2, Calendar, Camera, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
@@ -73,22 +73,16 @@ export default function ValetTrashClient() {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      property: "Sunset Palms Apartments",
+      name: "Aura Zeland",
+      property: "Manager at Reunion West",
       rating: 5,
-      text: "On The Fly has been servicing our 200-unit property for over a year now. Resident satisfaction has noticeably improved, and we've seen a significant reduction in maintenance calls about trash issues."
+      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
     },
     {
-      name: "Robert Chen",
-      property: "Lake View Residences",
+      name: "William Barber",
+      property: "Vendor Supervisor",
       rating: 5,
-      text: "Professional, reliable, and responsive. The team is always on time, and their customer service is exceptional. Our property has never looked better."
-    },
-    {
-      name: "Sarah Williams",
-      property: "Downtown Heights",
-      rating: 5,
-      text: "Switching to On The Fly was one of the best decisions we made. The service is consistent, and the pricing is transparent with no hidden fees."
+      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
     }
   ];
 
@@ -250,29 +244,29 @@ export default function ValetTrashClient() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <div>
-                <Camera className="w-16 h-16 mb-6" />
+                <MapPin className="w-16 h-16 mb-6" />
                 <h2 className="text-4xl font-bold mb-6">
-                  100% Photo Verification
+                  Route-Completion Assurance via GPS
                 </h2>
                 <p className="text-xl text-gray-100 mb-6 leading-relaxed">
-                  Every service is documented with time-stamped photos sent directly to property managers. Complete accountability and transparency with every collection.
+                  Every service is verified using advanced geo-location tracking that ensures 100% of your property footprint and every street is serviced. Complete accountability through GPS-verified route completion.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Real-time photo documentation of every service</span>
+                    <span className="text-lg">Real-time GPS tracking of every route and service area</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Time-stamped verification for complete accountability</span>
+                    <span className="text-lg">Verified coverage of 100% property footprint</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Instant notifications sent to property management</span>
+                    <span className="text-lg">Instant route completion notifications</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Detailed service reports with visual proof</span>
+                    <span className="text-lg">Detailed service reports with GPS verification data</span>
                   </li>
                 </ul>
               </div>
@@ -280,12 +274,12 @@ export default function ValetTrashClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                <h3 className="text-2xl font-bold mb-4">Why Photo Verification Matters</h3>
+                <h3 className="text-2xl font-bold mb-4">Why GPS Tracking Matters</h3>
                 <p className="text-gray-100 mb-6 leading-relaxed">
-                  Unlike traditional waste services, we provide documented proof of every collection. Property managers receive instant notifications with photos showing completed work, ensuring you always know your service was completed on time and to our high standards.
+                  Unlike traditional waste services, we use enterprise-level GPS technology to verify every street and building is serviced. Property managers receive instant route completion notifications with GPS verification data, ensuring you always know your entire property was covered on time and to our high standards.
                 </p>
                 <p className="text-gray-100 leading-relaxed">
-                  This level of transparency eliminates resident complaints, provides legal protection, and gives you peace of mind knowing your property is being serviced exactly as promised.
+                  This advanced fleet management technology eliminates resident complaints, provides comprehensive coverage assurance, and gives you peace of mind knowing every corner of your property is being serviced exactly as promised.
                 </p>
               </div>
             </ScrollReveal>
@@ -325,6 +319,20 @@ export default function ValetTrashClient() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={0.3}>
+            <div className="text-center mt-12">
+              <a
+                href="https://g.page/r/CQxqX8YvX9YQEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+              >
+                <Star className="w-5 h-5" />
+                Write a Review on Google
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

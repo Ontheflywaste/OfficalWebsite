@@ -129,11 +129,11 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@ontheflywastesolutions.com"
-                  className="flex items-center space-x-3 text-gray-200 hover:text-white transition-colors duration-300"
+                  className="flex items-start space-x-3 text-gray-200 hover:text-white transition-colors duration-300"
                   aria-label="Email us at info@ontheflywastesolutions.com"
                 >
-                  <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-                  <span className="break-all">info@ontheflywastesolutions.com</span>
+                  <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                  <span className="break-words text-sm sm:text-base">info@ontheflywastesolutions.com</span>
                 </a>
               </li>
               <li>

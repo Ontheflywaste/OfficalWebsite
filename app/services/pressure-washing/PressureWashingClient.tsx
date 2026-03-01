@@ -123,22 +123,16 @@ export default function PressureWashingClient() {
 
   const testimonials = [
     {
-      name: "Patricia Lee",
-      property: "Lakeside Villas - Property Manager",
+      name: "Aura Zeland",
+      property: "Manager at Reunion West",
       rating: 5,
-      text: "On The Fly pressure washes our buildings and common areas quarterly. The difference is incredible - our property always looks pristine. Residents and prospects notice immediately."
+      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
     },
     {
-      name: "Mark Anderson",
-      property: "Cornerstone Shopping Center",
+      name: "William Barber",
+      property: "Vendor Supervisor",
       rating: 5,
-      text: "We've used several pressure washing companies, and On The Fly is by far the best. Professional, thorough, and their pricing is very competitive."
-    },
-    {
-      name: "Susan Taylor",
-      property: "Meadowbrook HOA",
-      rating: 5,
-      text: "They transformed our clubhouse exterior and pool deck. The stains and algae we thought were permanent are completely gone. Highly recommend their services!"
+      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
     }
   ];
 

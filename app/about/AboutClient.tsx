@@ -52,19 +52,34 @@ export default function AboutClient() {
 
   const milestones = [
     {
-      year: "Founded",
-      title: "Local Roots",
-      description: "Started in Central Florida with a vision to transform property waste management"
+      year: "2020",
+      title: "Company Launch",
+      description: "Founded in Central Florida with a vision to transform property waste management"
     },
     {
-      year: "Today",
-      title: "Growing Strong",
-      description: "Serving apartment communities across Orlando, Kissimmee, and surrounding areas"
+      year: "2021",
+      title: "Major Partnership",
+      description: "Established partnership with Encore Resort at Reunion, marking our first major property"
     },
     {
-      year: "Future",
-      title: "Expanding Services",
-      description: "Continuously adding new services and expanding our reach throughout Florida"
+      year: "2022",
+      title: "Industry Recognition",
+      description: "Joined AAGO, FAA, and NAA industry associations, cementing our professional standing"
+    },
+    {
+      year: "2023",
+      title: "1,500+ Residents",
+      description: "Reached milestone of serving 1,500+ satisfied residents across Central Florida"
+    },
+    {
+      year: "2024",
+      title: "Premium Properties",
+      description: "Expanded to premier locations including Margaritaville and Reunion Resort"
+    },
+    {
+      year: "2025",
+      title: "2,500+ Residents",
+      description: "Now serving 2,500+ residents with partners like ZRS, Rangewater, and RPM Living"
     }
   ];
 
@@ -78,7 +93,7 @@ export default function AboutClient() {
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                About On The Fly Waste Solutions
+                About Orlando's Valet Trash Experts
               </h1>
               <p className="text-2xl text-gray-200 mb-8">
                 Central Florida's premier waste management partner, built on local roots and national-level service
@@ -224,7 +239,7 @@ export default function AboutClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {milestones.map((milestone, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-center">

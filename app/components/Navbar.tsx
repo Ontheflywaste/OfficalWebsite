@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -158,8 +159,19 @@ export default function Navbar() {
 
               <div
                 className="relative"
-                onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                onMouseLeave={() => setIsServicesDropdownOpen(false)}
+                onMouseEnter={() => {
+                  if (closeTimeout) {
+                    clearTimeout(closeTimeout);
+                    setCloseTimeout(null);
+                  }
+                  setIsServicesDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  const timeout = setTimeout(() => {
+                    setIsServicesDropdownOpen(false);
+                  }, 300);
+                  setCloseTimeout(timeout);
+                }}
               >
                 <Link
                   href="/services/"
@@ -177,34 +189,40 @@ export default function Navbar() {
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]`} />
                 </Link>
 
-                {isServicesDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 border border-gray-200">
+                <div
+                  className={`absolute top-full left-0 pt-0 w-56 transition-all duration-200 ${
+                    isServicesDropdownOpen
+                      ? 'opacity-100 visible translate-y-0'
+                      : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                >
+                  <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
                     <Link
                       href="/services/valet-trash/"
-                      className="block px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-[#027502] transition-colors"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-[#027502] transition-colors"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-[#027502] transition-colors"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-[#027502] transition-colors"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
                     >
                       Pressure Washing
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
 
               <Link

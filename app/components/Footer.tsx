@@ -133,7 +133,7 @@ export default function Footer() {
                   aria-label="Email us at info@ontheflywastesolutions.com"
                 >
                   <Mail className="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-                  <span>info@ontheflywastesolutions.com</span>
+                  <span className="break-all">info@ontheflywastesolutions.com</span>
                 </a>
               </li>
               <li>
@@ -155,27 +155,27 @@ export default function Footer() {
               Trusted Industry Partnerships
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
                 <img
                   src="/Images/faa-full-color-full-logo.png"
                   alt="Florida Apartment Association Member"
-                  className="h-full w-full object-contain filter brightness-0 invert"
+                  className="h-full w-full object-contain"
                   loading="lazy"
                 />
               </div>
-              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
                 <img
                   src="/Images/NAA-logo_bgwhite.png"
                   alt="National Apartment Association Member"
-                  className="h-full w-full object-contain filter brightness-0 invert"
+                  className="h-full w-full object-contain"
                   loading="lazy"
                 />
               </div>
-              <div className="flex items-center justify-center h-16 w-32 opacity-70 hover:opacity-100 transition-opacity">
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
                 <img
                   src="/Images/AAGO.png"
                   alt="AAGO Member"
-                  className="h-full w-full object-contain filter brightness-0 invert"
+                  className="h-full w-full object-contain"
                   loading="lazy"
                 />
               </div>

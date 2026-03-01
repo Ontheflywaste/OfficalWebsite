@@ -138,9 +138,10 @@ export default function JunkRemovalClient() {
   return (
     <div className="min-h-screen pt-32">
       <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/Images/Junk.jpg')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 opacity-30">
+          <img src="/Images/Junk.jpg" alt="Junk Removal Service" className="w-full h-full object-cover" />
         </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">

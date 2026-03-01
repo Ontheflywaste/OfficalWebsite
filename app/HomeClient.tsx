@@ -293,15 +293,15 @@ export default function HomeClient() {
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#038503] mb-2">500+</div>
+                <div className="text-5xl font-bold text-[#049704] mb-2">2,000+</div>
                 <div className="text-gray-600 font-semibold">Units Served</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#038503] mb-2">98%</div>
+                <div className="text-5xl font-bold text-[#049704] mb-2">100%</div>
                 <div className="text-gray-600 font-semibold">Client Satisfaction</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#038503] mb-2">7</div>
+                <div className="text-5xl font-bold text-[#049704] mb-2">7</div>
                 <div className="text-gray-600 font-semibold">Days a Week Service</div>
               </div>
             </div>

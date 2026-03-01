@@ -31,9 +31,9 @@ export default function AboutClient() {
 
   const team = [
     {
-      name: "Steven Edwards",
+      name: "Donnell Edwards",
       title: "CEO & Founder",
-      image: "/Images/team/Steven2.jpg",
+      image: "/Images/team/Donnell2.jpg",
       description: "Visionary leader committed to revolutionizing waste management in Central Florida"
     },
     {
@@ -43,9 +43,9 @@ export default function AboutClient() {
       description: "Ensures flawless execution and customer satisfaction across all properties"
     },
     {
-      name: "Donnell",
-      title: "Field Operations Lead",
-      image: "/Images/team/Donnell2.jpg",
+      name: "Steven Edwards",
+      title: "CFO",
+      image: "/Images/team/Steven2.jpg",
       description: "Leads our dedicated team with hands-on expertise and commitment to quality"
     }
   ];
@@ -85,10 +85,8 @@ export default function AboutClient() {
 
   return (
     <div className="min-h-screen pt-32">
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/Images/about-us.jpg')] bg-cover bg-center"></div>
-        </div>
+      <section className="relative py-20 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
@@ -239,18 +237,28 @@ export default function AboutClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {milestones.map((milestone, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-center">
-                  <div className="inline-block px-6 py-2 bg-[#049704] text-white rounded-full text-lg font-bold mb-6">
-                    {milestone.year}
+          <div className="max-w-4xl mx-auto relative">
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#049704] hidden md:block"></div>
+            <div className="space-y-12">
+              {milestones.map((milestone, index) => (
+                <ScrollReveal key={index} delay={index * 0.15}>
+                  <div className="relative flex items-center gap-8">
+                    <div className="hidden md:flex w-16 h-16 bg-[#049704] text-white rounded-full items-center justify-center font-bold text-lg flex-shrink-0 shadow-lg z-10">
+                      {milestone.year.slice(2)}
+                    </div>
+                    <div className="flex-1 bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1">
+                      <div className="flex items-center gap-4 mb-4">
+                        <span className="md:hidden inline-block px-4 py-1 bg-[#049704] text-white rounded-full text-sm font-bold">
+                          {milestone.year}
+                        </span>
+                        <h3 className="text-2xl font-bold text-gray-900">{milestone.title}</h3>
+                      </div>
+                      <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{milestone.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>

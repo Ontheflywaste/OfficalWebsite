@@ -1,45 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
 export default function ContactClient() {
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    propertyName: '',
-    unitCount: '',
-    message: ''
-  });
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://js.hsforms.net/forms/embed/22416220.js';
+    script.defer = true;
+    document.body.appendChild(script);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormStatus('submitting');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setFormStatus('success');
-        setFormData({ name: '', email: '', phone: '', propertyName: '', unitCount: '', message: '' });
-      } else {
-        setFormStatus('error');
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
       }
-    } catch (error) {
-      setFormStatus('error');
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white pt-32">
@@ -66,142 +43,9 @@ export default function ContactClient() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="bg-white rounded-2xl shadow-xl p-8">
+                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
-
-                  {formStatus === 'success' ? (
-                    <div className="text-center py-12">
-                      <CheckCircle2 className="h-16 w-16 text-[#049704] mx-auto mb-4" />
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                      <p className="text-gray-600">We've received your message and will contact you shortly.</p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                            Full Name *
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                            placeholder="John Doe"
-                          />
-                        </div>
-
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                            Email Address *
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                            placeholder="john@example.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                            Phone Number *
-                          </label>
-                          <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                            placeholder="(407) 274-5019"
-                          />
-                        </div>
-
-                        <div>
-                          <label htmlFor="propertyName" className="block text-sm font-medium text-gray-700 mb-2">
-                            Property Name *
-                          </label>
-                          <input
-                            type="text"
-                            id="propertyName"
-                            name="propertyName"
-                            value={formData.propertyName}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                            placeholder="Your Property Name"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label htmlFor="unitCount" className="block text-sm font-medium text-gray-700 mb-2">
-                          Number of Units *
-                        </label>
-                        <input
-                          type="number"
-                          id="unitCount"
-                          name="unitCount"
-                          value={formData.unitCount}
-                          onChange={handleChange}
-                          required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                          placeholder="100"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                          Message *
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          rows={4}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#049704] focus:border-transparent"
-                          placeholder="Tell us about your property and what services you're interested in..."
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        disabled={formStatus === 'submitting'}
-                        className="w-full bg-[#049704] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#027502] transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                      >
-                        {formStatus === 'submitting' ? (
-                          <>
-                            <Loader2 className="animate-spin mr-2 h-5 w-5" />
-                            Sending...
-                          </>
-                        ) : (
-                          <>
-                            <Send className="mr-2 h-5 w-5" />
-                            Send Message
-                          </>
-                        )}
-                      </button>
-
-                      {formStatus === 'error' && (
-                        <p className="text-red-600 text-center">
-                          There was an error sending your message. Please try again or call us directly.
-                        </p>
-                      )}
-                    </form>
-                  )}
+                  <div className="hs-form-frame" data-region="na1" data-form-id="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d" data-portal-id="22416220"></div>
                 </div>
               </ScrollReveal>
             </div>

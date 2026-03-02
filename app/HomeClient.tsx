@@ -13,6 +13,19 @@ export default function HomeClient() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://js.hsforms.net/forms/embed/22416220.js';
+    script.defer = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -310,6 +323,24 @@ export default function HomeClient() {
                   </div>
                 </div>
               </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+              <div className="text-center mb-8">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Get Your Free Quote
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Ready to elevate your property's waste management? Contact us today for a free, no-obligation quote.
+                </p>
+              </div>
+              <div className="hs-form-frame" data-region="na1" data-form-id="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d" data-portal-id="22416220"></div>
             </div>
           </ScrollReveal>
         </div>

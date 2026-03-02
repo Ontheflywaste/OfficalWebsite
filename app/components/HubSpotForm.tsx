@@ -25,10 +25,15 @@ export default function HubSpotForm({
 }: HubSpotFormProps) {
   const formRef = useRef<HTMLDivElement>(null);
   const scriptLoadedRef = useRef(false);
+  const formCreatedRef = useRef(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (scriptLoadedRef.current) return;
+    if (scriptLoadedRef.current && formCreatedRef.current) return;
+
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
 
     const script = document.createElement('script');
     script.src = 'https://js.hsforms.net/forms/embed/v2.js';
@@ -38,7 +43,7 @@ export default function HubSpotForm({
       scriptLoadedRef.current = true;
 
       const createForm = () => {
-        if (window.hbspt?.forms) {
+        if (window.hbspt?.forms && !formCreatedRef.current) {
           try {
             window.hbspt.forms.create({
               region,
@@ -46,12 +51,22 @@ export default function HubSpotForm({
               formId,
               target: '#hubspot-form-container',
               onFormReady: () => {
+                formCreatedRef.current = true;
                 setIsLoading(false);
+                clearTimeout(loadingTimeout);
+              },
+              onFormSubmit: () => {
+                console.log('Form submitted');
               }
             });
+
+            setTimeout(() => {
+              setIsLoading(false);
+            }, 2000);
           } catch (error) {
             console.error('Error creating HubSpot form:', error);
             setIsLoading(false);
+            clearTimeout(loadingTimeout);
           }
         }
       };
@@ -66,11 +81,13 @@ export default function HubSpotForm({
     script.onerror = () => {
       console.error('Failed to load HubSpot form script');
       setIsLoading(false);
+      clearTimeout(loadingTimeout);
     };
 
     document.body.appendChild(script);
 
     return () => {
+      clearTimeout(loadingTimeout);
       if (script.parentNode) {
         script.parentNode.removeChild(script);
       }
@@ -80,10 +97,10 @@ export default function HubSpotForm({
   return (
     <div className="relative w-full" style={{ minHeight: '600px' }}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-10">
           <div className="flex flex-col items-center gap-4">
             <div className="w-12 h-12 border-4 border-[#027502] border-t-transparent rounded-full animate-spin"></div>
-            <p className="text-[#1A1A1A] text-sm">Loading form...</p>
+            <p className="text-[#1A1A1A] text-sm font-medium">Loading form...</p>
           </div>
         </div>
       )}

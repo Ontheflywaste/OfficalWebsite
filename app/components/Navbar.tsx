@@ -74,8 +74,8 @@ export default function Navbar() {
           shouldUseBlackNavbar
             ? 'top-0 bg-white shadow-lg border-b border-gray-200'
             : isMobile
-              ? 'top-0 bg-black/90 backdrop-blur-md'
-              : 'top-10 bg-black/90 backdrop-blur-md'
+              ? 'top-0 bg-gradient-to-b from-[#111111] to-[#1a1a1a] backdrop-blur-md'
+              : 'top-10 bg-gradient-to-b from-[#111111] to-[#1a1a1a] backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"
@@ -284,7 +284,7 @@ export default function Navbar() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className={`md:hidden border-t ${shouldUseBlackLogo ? 'border-gray-200 bg-white' : 'border-white/20 bg-black/95'}`}>
+          <div className={`md:hidden border-t ${shouldUseBlackLogo ? 'border-gray-200 bg-white' : 'border-white/20 bg-gradient-to-b from-[#111111] to-[#1a1a1a]'}`}>
             <div className="px-4 py-4 space-y-2">
               <Link
                 href="/"
@@ -323,7 +323,7 @@ export default function Navbar() {
                   }`} />
                 </button>
 
-                {isMobileServicesOpen && (
+                <div className={`overflow-hidden transition-all duration-300 ${isMobileServicesOpen ? 'max-h-96' : 'max-h-0'}`}>
                   <div className={`ml-4 mt-2 space-y-1 border-l-2 ${shouldUseBlackLogo ? 'border-gray-300' : 'border-white/30'} pl-4`}>
                     <Link
                       href="/services/valet-trash/"
@@ -366,7 +366,7 @@ export default function Navbar() {
                       Pressure Washing
                     </Link>
                   </div>
-                )}
+                </div>
               </div>
 
               <Link

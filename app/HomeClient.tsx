@@ -61,7 +61,13 @@ export default function HomeClient() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.6}>
-            <div className="flex items-center justify-center gap-3 mt-8 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg inline-flex mx-auto border border-white/20">
+            <a
+              href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 mt-8 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg inline-flex mx-auto border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
+              aria-label="View our 5-star Google reviews"
+            >
               <svg viewBox="0 0 24 24" className="w-6 h-6" fill="#4285F4">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -74,7 +80,7 @@ export default function HomeClient() {
                 ))}
               </div>
               <span className="text-white font-semibold">5-Star Rated on Google</span>
-            </div>
+            </a>
           </ScrollReveal>
 
           <div className="absolute bottom-6 left-0 right-0 text-center">
@@ -86,6 +92,10 @@ export default function HomeClient() {
       </section>
 
       <section className="relative py-20 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute inset-0 -mt-16 clip-slant">
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+        </div>
         <div className="absolute inset-0">
           {isVideoLoaded && (
             <video
@@ -105,7 +115,7 @@ export default function HomeClient() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 lg:whitespace-nowrap">
                   Welcome to On The Fly Waste Solutions
                 </h2>
                 <div className="space-y-4 text-gray-100 text-lg leading-relaxed">
@@ -135,11 +145,11 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative">
+              <div className="relative -mt-32 lg:-mt-20">
                 <img
                   src="/Images/artemistradeshow.jpg"
                   alt="On The Fly Waste Solutions team at trade show"
-                  className="w-full h-auto rounded-2xl shadow-2xl"
+                  className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/10"
                   loading="lazy"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl hidden lg:block">

@@ -14,36 +14,35 @@ export default function HubSpotForm({
   formId
 }: HubSpotFormProps) {
   const formRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
+  const formCreatedRef = useRef(false);
 
   useEffect(() => {
-    if (scriptLoadedRef.current) return;
+    const createForm = () => {
+      if (formCreatedRef.current) return;
 
-    const script = document.createElement('script');
-    script.src = `https://js.hsforms.net/forms/embed/${portalId}.js`;
-    script.defer = true;
-    script.charset = 'utf-8';
-    script.type = 'text/javascript';
-
-    script.onload = () => {
-      scriptLoadedRef.current = true;
-      if (window.hbspt && formRef.current) {
+      if (window.hbspt && window.hbspt.forms) {
         window.hbspt.forms.create({
           region,
           portalId,
           formId,
           target: `#hubspot-form-${formId}`,
         });
+        formCreatedRef.current = true;
       }
     };
 
-    document.body.appendChild(script);
+    if (window.hbspt && window.hbspt.forms) {
+      createForm();
+    } else {
+      const checkHubSpot = setInterval(() => {
+        if (window.hbspt && window.hbspt.forms) {
+          createForm();
+          clearInterval(checkHubSpot);
+        }
+      }, 100);
 
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
+      return () => clearInterval(checkHubSpot);
+    }
   }, [region, portalId, formId]);
 
   return (

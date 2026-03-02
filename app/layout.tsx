@@ -71,6 +71,12 @@ export default function RootLayout({
             })
           }}
         />
+        <Script
+          id="hs-script-loader"
+          type="text/javascript"
+          src="//js.hs-scripts.com/22416220.js"
+          strategy="lazyOnload"
+        />
       </head>
       <body className="min-h-screen bg-white">
         <Navbar />

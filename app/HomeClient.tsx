@@ -331,10 +331,10 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-4 border-[#027502]">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
                   Get Your Free Quote

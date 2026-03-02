@@ -44,7 +44,7 @@ export default function AboutClient() {
     },
     {
       name: "Steven Edwards",
-      title: "CFO",
+      title: "Chief Financial Officer",
       image: "/Images/team/Steven2.jpg",
       description: "Leads our dedicated team with hands-on expertise and commitment to quality"
     }

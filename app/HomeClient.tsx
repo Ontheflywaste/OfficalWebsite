@@ -17,18 +17,14 @@ export default function HomeClient() {
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          {isVideoLoaded && (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover opacity-50"
-            >
-              <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
-            </video>
-          )}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
+          <img
+            src="/Images/gallery12813_1920x831@2x.jpg"
+            alt="Luxury apartment community"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
@@ -83,15 +79,30 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          {isVideoLoaded && (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
+            </video>
+          )}
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#049704] mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Welcome to On The Fly Waste Solutions
                 </h2>
-                <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+                <div className="space-y-4 text-gray-100 text-lg leading-relaxed">
                   <p>
                     Since 2020, On The Fly Waste Solutions has been transforming property waste management across Central Florida with our innovative valet trash and comprehensive waste services.
                   </p>
@@ -108,7 +119,7 @@ export default function HomeClient() {
                 <div className="mt-8">
                   <Link
                     href="/about/"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold border-2 border-[#049704] text-[#049704] hover:bg-[#049704] hover:text-white transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-[#049704] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Learn More About Us
                     <ArrowRight className="w-5 h-5" />

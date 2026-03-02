@@ -147,7 +147,7 @@ export default function PressureWashingClient() {
           <ScrollReveal>
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
-                <Sparkles className="w-12 h-12 text-[#049704]" />
+                <Sparkles className="w-12 h-12 text-[#027502]" />
                 <h1 className="text-5xl font-bold">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
@@ -156,7 +156,7 @@ export default function PressureWashingClient() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
                 >
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
@@ -191,7 +191,7 @@ export default function PressureWashingClient() {
             {services.map((service, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704] mb-4">
+                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center text-[#027502] mb-4">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -220,7 +220,7 @@ export default function PressureWashingClient() {
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704]">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center text-[#027502]">
                     {benefit.icon}
                   </div>
                   <div>
@@ -255,7 +255,7 @@ export default function PressureWashingClient() {
                   <ul className="space-y-3">
                     {type.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-[#049704] flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-[#027502] flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -267,7 +267,7 @@ export default function PressureWashingClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#049704] to-[#027502] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#027502] to-[#027502] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -334,10 +334,10 @@ export default function PressureWashingClient() {
                 <div className="bg-white p-8 rounded-xl shadow-sm">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-[#049704] text-[#049704]" />
+                      <Star key={i} className="w-5 h-5 fill-[#027502] text-[#027502]" />
                     ))}
                   </div>
-                  <Quote className="w-10 h-10 text-[#049704] opacity-20 mb-4" />
+                  <Quote className="w-10 h-10 text-[#027502] opacity-20 mb-4" />
                   <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
                   <div>
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
@@ -373,7 +373,7 @@ export default function PressureWashingClient() {
                   >
                     <span className="font-semibold text-lg text-gray-900 pr-8">{faq.question}</span>
                     <ChevronDown
-                      className={`w-6 h-6 text-[#049704] flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-6 h-6 text-[#027502] flex-shrink-0 transition-transform duration-300 ${
                         openFaq === index ? 'rotate-180' : ''
                       }`}
                     />
@@ -390,7 +390,7 @@ export default function PressureWashingClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#049704] text-white">
+      <section className="py-20 bg-[#027502] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <Sparkles className="w-16 h-16 mx-auto mb-6" />
@@ -403,7 +403,7 @@ export default function PressureWashingClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#049704] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#027502] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Request Free Quote
                 <ArrowRight className="w-5 h-5" />

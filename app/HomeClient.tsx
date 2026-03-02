@@ -32,7 +32,7 @@ export default function HomeClient() {
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Valet Trash & Bulk Removal<br />
-              <span className="text-[#049704]">Services</span>
+              <span className="text-[#027502]">Services</span>
             </h1>
           </ScrollReveal>
 
@@ -46,7 +46,7 @@ export default function HomeClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -121,7 +121,7 @@ export default function HomeClient() {
                     Since 2020, On The Fly Waste Solutions has been transforming property waste management across Central Florida with our innovative valet trash and comprehensive waste services.
                   </p>
                   <p>
-                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#049704]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#049704]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
+                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#027502]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#027502]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
                   </p>
                   <p>
                     As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
@@ -133,7 +133,7 @@ export default function HomeClient() {
                 <div className="mt-8">
                   <Link
                     href="/about/"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-[#049704] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-[#027502] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Learn More About Us
                     <ArrowRight className="w-5 h-5" />
@@ -150,7 +150,7 @@ export default function HomeClient() {
                   className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/10"
                   loading="lazy"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl hidden lg:block">
+                <div className="absolute -bottom-6 -right-6 bg-[#027502] text-white p-6 rounded-xl shadow-xl hidden lg:block">
                   <div className="text-3xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>
                 </div>
@@ -160,8 +160,9 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-white overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#027502]/10 pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -176,13 +177,13 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
               <Link href="/services/valet-trash/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
-                    <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
+                    <Trash2 className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash pickup with SLA-backed 100% collection rate and photo verification</p>
-                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -206,13 +207,13 @@ export default function HomeClient() {
 
             <ScrollReveal delay={0.3}>
               <Link href="/services/bulk-removal/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
-                    <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
+                    <Recycle className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Recurring commercial bulk removal solutions for property managers. Scheduled pickups and flexible service plans.</p>
-                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -221,13 +222,13 @@ export default function HomeClient() {
 
             <ScrollReveal delay={0.4}>
               <Link href="/services/pressure-washing/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
-                    <Sparkles className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
+                    <Sparkles className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Pressure Washing</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional pressure washing services to maintain clean, attractive common areas and building exteriors.</p>
-                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -238,7 +239,7 @@ export default function HomeClient() {
           <div className="mt-12 text-center">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 text-[#027502] font-semibold text-lg hover:gap-4 transition-all"
             >
               View All Services
               <ArrowRight className="w-5 h-5" />
@@ -353,8 +354,9 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gray-50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#027502]/10 pointer-events-none"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -368,9 +370,9 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704] h-full flex flex-col">
-                <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-[#049704]" />
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#027502] h-full flex flex-col">
+                <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="w-8 h-8 text-[#027502]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">SLA-Backed Guarantee</h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
@@ -392,9 +394,9 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704] h-full flex flex-col">
-                <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                  <Recycle className="w-8 h-8 text-[#049704]" />
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#027502] h-full flex flex-col">
+                <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
+                  <Recycle className="w-8 h-8 text-[#027502]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Transparency</h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
@@ -491,15 +493,15 @@ export default function HomeClient() {
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#049704] mb-2">2,000+</div>
+                <div className="text-5xl font-bold text-[#027502] mb-2">2,000+</div>
                 <div className="text-gray-600 font-semibold">Units Served</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#049704] mb-2">100%</div>
+                <div className="text-5xl font-bold text-[#027502] mb-2">100%</div>
                 <div className="text-gray-600 font-semibold">Client Satisfaction</div>
               </div>
               <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#049704] mb-2">7</div>
+                <div className="text-5xl font-bold text-[#027502] mb-2">7</div>
                 <div className="text-gray-600 font-semibold">Days a Week Service</div>
               </div>
             </div>
@@ -518,7 +520,7 @@ export default function HomeClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
             >
               Schedule Consultation
               <ArrowRight className="w-5 h-5" />

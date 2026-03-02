@@ -75,7 +75,7 @@ export default function RootLayout({
           id="hs-script-loader"
           type="text/javascript"
           src="//js.hs-scripts.com/22416220.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
       </head>
       <body className="min-h-screen bg-white">

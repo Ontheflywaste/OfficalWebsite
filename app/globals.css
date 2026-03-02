@@ -57,7 +57,7 @@ html {
 }
 
 .react-datepicker__header {
-  background-color: #049704;
+  background-color: #027502;
   border-bottom: none;
   padding-top: 0.75rem;
 }
@@ -73,7 +73,7 @@ html {
 }
 
 .react-datepicker__day--selected {
-  background-color: #049704 !important;
+  background-color: #027502 !important;
 }
 
 .react-datepicker__day--keyboard-selected {
@@ -89,7 +89,7 @@ html {
 }
 
 .react-datepicker__time-list-item--selected {
-  background-color: #049704 !important;
+  background-color: #027502 !important;
 }
 
 /* Essential animations only */
@@ -136,12 +136,12 @@ html {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#027502] transition-all duration-300 transform hover:bg-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
     animation: pulse-glow 2s infinite;
   }
 
   .btn-primary-inverse {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-[#049704] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-[#027502] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
   }
 
   .btn-secondary {
@@ -149,11 +149,11 @@ html {
   }
 
   .btn-outline {
-    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-base;
+    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#027502] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-base;
   }
 
   .btn-link {
-    @apply inline-flex items-center text-[#049704] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#049704] after:transition-all after:duration-300 hover:after:w-full;
+    @apply inline-flex items-center text-[#027502] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#027502] after:transition-all after:duration-300 hover:after:w-full;
   }
 }
 

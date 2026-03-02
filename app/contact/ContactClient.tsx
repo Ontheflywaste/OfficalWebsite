@@ -9,14 +9,14 @@ export default function ContactClient() {
 
   return (
     <div className="min-h-screen bg-white pt-32">
-      <div className="relative bg-gradient-to-br from-gray-900 to-[#049704] py-20">
+      <div className="relative bg-gradient-to-br from-gray-900 to-[#027502] py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Let's Transform Your
-              <span className="block text-[#049704] bg-white px-4 py-2 rounded-lg inline-block mt-2">
+              <span className="block text-[#027502] bg-white px-4 py-2 rounded-lg inline-block mt-2">
                 Community Together
               </span>
             </h1>
@@ -45,7 +45,7 @@ export default function ContactClient() {
 
             <div className="space-y-6">
               <ScrollReveal delay={0.1}>
-                <div className="bg-gradient-to-br from-[#049704] to-[#027502] rounded-2xl p-8 text-white">
+                <div className="bg-gradient-to-br from-[#027502] to-[#027502] rounded-2xl p-8 text-white">
                   <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
 
                   <div className="space-y-6">
@@ -97,19 +97,19 @@ export default function ContactClient() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-[#049704] mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#027502] mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">Licensed & Insured</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-[#049704] mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#027502] mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">24/7 Customer Support</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-[#049704] mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#027502] mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">Flexible Service Schedules</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle2 className="h-5 w-5 text-[#049704] mr-3 flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#027502] mr-3 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">Eco-Friendly Practices</span>
                     </li>
                   </ul>

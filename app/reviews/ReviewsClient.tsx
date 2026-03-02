@@ -116,6 +116,54 @@ export default function ReviewsClient() {
           </div>
         </ScrollReveal>
 
+        <ScrollReveal>
+          <div className="mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4 text-center">
+              Client Success Stories
+            </h2>
+            <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+              Hear directly from property managers and community leaders about their experience with On The Fly.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-[#1A1A1A] border-2 border-[#049704] rounded-2xl p-6 shadow-2xl">
+                <div className="aspect-video mb-6 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/gFYjibflN3U"
+                    title="Encore Resort at Reunion - On The Fly Testimonial"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Encore Resort at Reunion - 700+ Units Managed
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Community Manager Aura Zeland and Vendor Supervisor William Barber discuss why On The Fly is the most reliable partner they've ever worked with.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border-2 border-[#049704] rounded-2xl p-6 shadow-2xl flex items-center justify-center">
+                <div className="text-center py-12">
+                  <div className="w-20 h-20 bg-[#049704] bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Star className="w-10 h-10 text-[#049704]" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    More Success Stories Coming Soon
+                  </h3>
+                  <p className="text-gray-400">
+                    We're capturing more client testimonials to share with you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
         <div className="mb-16">
           <div
             ref={scrollRef}

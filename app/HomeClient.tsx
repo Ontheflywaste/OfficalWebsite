@@ -398,15 +398,15 @@ export default function HomeClient() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "On The Fly has been exceptional for our apartment community. Their valet trash service is reliable, and residents love the convenience. The photo verification gives us peace of mind that every unit is serviced."
+                  "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated—no short-cuts. Donnell will go above and beyond."
                 </p>
                 <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
-                    M
+                    L
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Maria S.</div>
-                    <div className="text-sm text-gray-600">Property Manager, Orlando</div>
+                    <div className="font-semibold text-gray-900">Lynn Mollison</div>
+                    <div className="text-sm text-gray-600">HOA Board Member</div>
                   </div>
                 </div>
               </div>
@@ -420,15 +420,15 @@ export default function HomeClient() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "Professional, punctual, and dependable. We switched to On The Fly for our bulk removal needs and haven't looked back. Their team is responsive and the service quality is outstanding."
+                  "I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
                 </p>
                 <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
-                    J
+                    A
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">James T.</div>
-                    <div className="text-sm text-gray-600">HOA Board Member, Kissimmee</div>
+                    <div className="font-semibold text-gray-900">Antonio Marcuz</div>
+                    <div className="text-sm text-gray-600">Property Management Company Owner</div>
                   </div>
                 </div>
               </div>
@@ -442,15 +442,15 @@ export default function HomeClient() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "The best valet trash service we've had! Their 100% collection guarantee is real - they've never missed a pickup. GPS tracking and photo proof make reporting easy for our residents."
+                  "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions."
                 </p>
                 <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
-                    L
+                    W
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Lisa M.</div>
-                    <div className="text-sm text-gray-600">Community Manager, Winter Park</div>
+                    <div className="font-semibold text-gray-900">William Barber</div>
+                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
                   </div>
                 </div>
               </div>

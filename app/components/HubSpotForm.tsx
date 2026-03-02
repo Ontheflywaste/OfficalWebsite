@@ -18,79 +18,102 @@ declare global {
   }
 }
 
+let scriptLoaded = false;
+let scriptLoading = false;
+
 export default function HubSpotForm({
   region = 'na1',
   portalId,
   formId
 }: HubSpotFormProps) {
   const formRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
   const formCreatedRef = useRef(false);
   const [isLoading, setIsLoading] = useState(true);
+  const containerIdRef = useRef(`hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
 
   useEffect(() => {
-    if (scriptLoadedRef.current && formCreatedRef.current) return;
+    if (formCreatedRef.current) return;
 
     const loadingTimeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+      if (!formCreatedRef.current) {
+        setIsLoading(false);
+        console.warn('HubSpot form loading timeout');
+      }
+    }, 5000);
 
-    const script = document.createElement('script');
-    script.src = 'https://js.hsforms.net/forms/embed/v2.js';
-    script.async = true;
-
-    script.onload = () => {
-      scriptLoadedRef.current = true;
-
-      const createForm = () => {
-        if (window.hbspt?.forms && !formCreatedRef.current) {
-          try {
-            window.hbspt.forms.create({
-              region,
-              portalId,
-              formId,
-              target: '#hubspot-form-container',
-              onFormReady: () => {
-                formCreatedRef.current = true;
-                setIsLoading(false);
-                clearTimeout(loadingTimeout);
-              },
-              onFormSubmit: () => {
-                console.log('Form submitted');
-              }
-            });
-
-            setTimeout(() => {
+    const createForm = () => {
+      if (window.hbspt?.forms && formRef.current && !formCreatedRef.current) {
+        try {
+          window.hbspt.forms.create({
+            region,
+            portalId,
+            formId,
+            target: `#${containerIdRef.current}`,
+            onFormReady: () => {
+              formCreatedRef.current = true;
               setIsLoading(false);
-            }, 2000);
-          } catch (error) {
-            console.error('Error creating HubSpot form:', error);
-            setIsLoading(false);
-            clearTimeout(loadingTimeout);
+              clearTimeout(loadingTimeout);
+            },
+            onFormSubmit: () => {
+              console.log('Form submitted');
+            }
+          });
+        } catch (error) {
+          console.error('Error creating HubSpot form:', error);
+          setIsLoading(false);
+          clearTimeout(loadingTimeout);
+        }
+      }
+    };
+
+    const loadScript = () => {
+      if (scriptLoaded) {
+        createForm();
+        return;
+      }
+
+      if (scriptLoading) {
+        const checkInterval = setInterval(() => {
+          if (scriptLoaded && window.hbspt?.forms) {
+            clearInterval(checkInterval);
+            createForm();
           }
+        }, 100);
+        return;
+      }
+
+      scriptLoading = true;
+      const script = document.createElement('script');
+      script.src = 'https://js.hsforms.net/forms/embed/v2.js';
+      script.async = true;
+      script.charset = 'utf-8';
+      script.type = 'text/javascript';
+
+      script.onload = () => {
+        scriptLoaded = true;
+        scriptLoading = false;
+
+        if (window.hbspt?.forms) {
+          createForm();
+        } else {
+          setTimeout(createForm, 100);
         }
       };
 
-      if (window.hbspt?.forms) {
-        createForm();
-      } else {
-        setTimeout(createForm, 100);
-      }
+      script.onerror = () => {
+        console.error('Failed to load HubSpot form script');
+        scriptLoading = false;
+        setIsLoading(false);
+        clearTimeout(loadingTimeout);
+      };
+
+      document.body.appendChild(script);
     };
 
-    script.onerror = () => {
-      console.error('Failed to load HubSpot form script');
-      setIsLoading(false);
-      clearTimeout(loadingTimeout);
-    };
-
-    document.body.appendChild(script);
+    loadScript();
 
     return () => {
       clearTimeout(loadingTimeout);
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
     };
   }, [region, portalId, formId]);
 
@@ -105,7 +128,7 @@ export default function HubSpotForm({
         </div>
       )}
       <div
-        id="hubspot-form-container"
+        id={containerIdRef.current}
         ref={formRef}
         className="hubspot-form-wrapper w-full"
       />

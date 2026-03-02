@@ -22,7 +22,7 @@ export default function HomeClient() {
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
-      answer: "Valet trash service costs typically range from $15-25 per unit per month depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
+      answer: "Valet trash service costs typically range from $25-60 per unit per month for high-end resort style communities depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
     },
     {
       question: "Do you offer bulk item removal for apartment complexes in Central Florida?",

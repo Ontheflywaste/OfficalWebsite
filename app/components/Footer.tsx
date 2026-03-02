@@ -21,10 +21,8 @@ export default function Footer() {
             <p className="text-gray-200 mb-6">
               Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
             </p>
-            <a
-              href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/reviews"
               className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 w-fit hover:bg-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
               aria-label="View our 5-star Google reviews"
             >
@@ -40,7 +38,7 @@ export default function Footer() {
                 ))}
               </div>
               <span className="text-white text-sm font-semibold">5.0</span>
-            </a>
+            </Link>
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/ontheflywastesolutions"

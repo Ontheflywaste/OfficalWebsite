@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Star, Quote, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -35,12 +35,47 @@ export default function ReviewsClient() {
 
   const googleReviewUrl = "https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1";
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationId: number;
+    let scrollPosition = 0;
+    const scrollSpeed = 0.5;
+
+    const scroll = () => {
+      if (!isPaused && scrollContainer) {
+        scrollPosition += scrollSpeed;
+
+        if (scrollPosition >= scrollContainer.scrollWidth / 2) {
+          scrollPosition = 0;
+        }
+
+        scrollContainer.scrollLeft = scrollPosition;
+      }
+      animationId = requestAnimationFrame(scroll);
+    };
+
+    animationId = requestAnimationFrame(scroll);
+
+    return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, [isPaused]);
+
+  const duplicatedReviews = [...reviews, ...reviews, ...reviews];
+
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#027502] text-white px-6 py-3 rounded-full mb-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#027502] text-white px-6 py-3 rounded-full mb-6 shadow-lg">
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -52,54 +87,63 @@ export default function ReviewsClient() {
             <h1 className="text-5xl md:text-6xl font-bold text-[#1A1A1A] mb-6">
               What Our Clients Say
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Real reviews from property managers, HOAs, and residents who trust On The Fly Waste Solutions.
             </p>
-
-            <a
-              href={googleReviewUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
-            >
-              Leave Us a Review on Google
-              <ExternalLink className="w-5 h-5" />
-            </a>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {reviews.map((review, index) => (
-            <ScrollReveal key={review.id} delay={index * 0.1}>
-              <div
-                className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                style={{
-                  gridRow: index === 1 ? 'span 2' : 'span 1'
-                }}
-              >
-                <Quote className="w-12 h-12 text-[#027502] mb-4 opacity-30" />
+        <div className="mb-16">
+          <div
+            ref={scrollRef}
+            className="overflow-hidden cursor-grab active:cursor-grabbing"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            style={{
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+            }}
+          >
+            <div className="flex gap-6 py-4">
+              {duplicatedReviews.map((review, index) => (
+                <div
+                  key={`${review.id}-${index}`}
+                  className="flex-shrink-0 w-[400px] h-[320px] relative group"
+                  style={{ minWidth: '400px' }}
+                >
+                  <div
+                    className="h-full bg-white/80 backdrop-blur-sm border border-[#027502] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col justify-between"
+                    style={{
+                      boxShadow: '0 20px 60px rgba(2, 117, 2, 0.15)'
+                    }}
+                  >
+                    <div>
+                      <Quote className="w-10 h-10 text-[#027502] mb-4 opacity-40" />
 
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                      <div className="flex gap-1 mb-4">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+
+                      <p className="text-[#1A1A1A] text-base leading-relaxed mb-6">
+                        "{review.text}"
+                      </p>
+                    </div>
+
+                    <div className="border-t border-[#027502]/20 pt-4">
+                      <p className="font-bold text-[#1A1A1A] text-lg">{review.author}</p>
+                      <p className="text-sm text-gray-600 font-medium">Google Review</p>
+                    </div>
+                  </div>
                 </div>
-
-                <p className="text-[#1A1A1A] text-lg leading-relaxed mb-6">
-                  {review.text}
-                </p>
-
-                <div className="border-t border-gray-100 pt-4">
-                  <p className="font-semibold text-[#1A1A1A]">{review.author}</p>
-                  <p className="text-sm text-gray-500">Google Review</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
 
         <ScrollReveal>
-          <div className="text-center bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12">
+          <div className="text-center bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm border border-[#027502]/30 rounded-3xl p-12 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
               Join Our Happy Clients
             </h2>
@@ -110,7 +154,7 @@ export default function ReviewsClient() {
               href={googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#027502] text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-[#027502] text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
             >
               Leave Us a Review on Google
               <ExternalLink className="w-5 h-5" />
@@ -125,14 +169,14 @@ export default function ReviewsClient() {
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
               >
                 Request a Quote
               </Link>
               <a
                 href="tel:407-274-5019"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#027502] border-2 border-[#027502] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#027502] border-2 border-[#027502] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-md"
               >
                 Call (407) 274-5019
               </a>

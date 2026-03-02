@@ -300,14 +300,14 @@ export default function HomeClient() {
                     />
                   </div>
                   <a
-                    href="https://www.bbb.org/us/fl/kissimmee/profile/waste-removal/on-the-fly-waste-solutions-0733-90656041"
+                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                     className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
                   >
                     <img
-                      src="https://www.bbb.org/ProfileImages/7cc07fc0-4d2a-437d-afb5-e2726c8f4a39.png"
-                      alt="BBB Accredited Business"
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      alt="On The Fly Waste Solutions BBB Business Review"
                       className="h-full w-full object-contain"
                       loading="lazy"
                     />
@@ -339,14 +339,14 @@ export default function HomeClient() {
                     />
                   </div>
                   <a
-                    href="https://www.bbb.org/us/fl/kissimmee/profile/waste-removal/on-the-fly-waste-solutions-0733-90656041"
+                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                     className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
                   >
                     <img
-                      src="https://www.bbb.org/ProfileImages/7cc07fc0-4d2a-437d-afb5-e2726c8f4a39.png"
-                      alt="BBB Accredited Business"
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      alt="On The Fly Waste Solutions BBB Business Review"
                       className="h-full w-full object-contain"
                       loading="lazy"
                     />

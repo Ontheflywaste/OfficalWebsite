@@ -2,17 +2,41 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
 
 export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   React.useEffect(() => {
     const timer = setTimeout(() => setIsVideoLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  const faqs = [
+    {
+      question: "What is valet trash service for apartments?",
+      answer: "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with photo verification and a 100% collection guarantee."
+    },
+    {
+      question: "How much does valet trash cost for an apartment community in Orlando?",
+      answer: "Valet trash service costs typically range from $15-25 per unit per month depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
+    },
+    {
+      question: "Do you offer bulk item removal for apartment complexes in Central Florida?",
+      answer: "Yes! We provide comprehensive bulk item pickup services for apartment complexes throughout Central Florida. Our bulk removal service handles furniture, appliances, mattresses, and other large items on a scheduled basis. We offer flexible pickup schedules and can accommodate both routine and on-demand bulk removal needs for property managers."
+    },
+    {
+      question: "What areas in Central Florida do you serve?",
+      answer: "We proudly serve Orlando, Kissimmee, Altamonte Springs, Winter Park, Lake Nona, and surrounding Central Florida communities. Our service area covers apartment communities, condos, and resort-style properties throughout the region. Contact us to confirm service availability in your specific location."
+    },
+    {
+      question: "Do you serve resort communities and condos?",
+      answer: "Absolutely! We specialize in providing valet trash service for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove service, photo verification, and dedicated account management."
+    }
+  ];
 
   return (
     <>
@@ -25,20 +49,20 @@ export default function HomeClient() {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/35"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Valet Trash & Bulk Removal<br />
-              <span className="text-[#027502]">Services</span>
+              Valet Trash, Bulk & Junk Removal Services<br />
+              <span className="text-[#027502]">Orlando, FL</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Orlando's trusted door to door trash pickup service for apartments, condos, and resort-style communities.
+              Orlando's trusted valet trash service for apartments, condos, and resort communities. Professional bulk removal and junk removal services across Central Florida.
             </p>
           </ScrollReveal>
 
@@ -160,6 +184,106 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="#4285F4">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  5-Star Rated on Google
+                </h2>
+              </div>
+              <p className="text-xl text-gray-600 mb-8">
+                See what property managers and residents say about our valet trash service in Orlando
+              </p>
+              <a
+                href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#027502] font-semibold hover:gap-4 transition-all"
+              >
+                View All Reviews on Google
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <ScrollReveal delay={0.1}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  "On The Fly has been exceptional for our apartment community. Their valet trash service is reliable, and residents love the convenience. The photo verification gives us peace of mind that every unit is serviced."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                    M
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Maria S.</div>
+                    <div className="text-sm text-gray-600">Property Manager, Orlando</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  "Professional, punctual, and dependable. We switched to On The Fly for our bulk removal needs and haven't looked back. Their team is responsive and the service quality is outstanding."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                    J
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">James T.</div>
+                    <div className="text-sm text-gray-600">HOA Board Member, Kissimmee</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  "The best valet trash service we've had! Their 100% collection guarantee is real - they've never missed a pickup. GPS tracking and photo proof make reporting easy for our residents."
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                    L
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Lisa M.</div>
+                    <div className="text-sm text-gray-600">Community Manager, Winter Park</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#027502]/10 pointer-events-none"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +293,7 @@ export default function HomeClient() {
                 Our Services
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive waste management solutions for your property
+                Comprehensive apartment community waste management solutions. Serving Orlando, Kissimmee & Central Florida resorts and apartment communities.
               </p>
             </div>
           </ScrollReveal>
@@ -182,7 +306,7 @@ export default function HomeClient() {
                     <Trash2 className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash pickup with SLA-backed 100% collection rate and photo verification</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash collection for apartments and condos in Orlando FL. SLA-backed 100% collection rate with photo verification.</p>
                   <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -197,7 +321,7 @@ export default function HomeClient() {
                     <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal services for residents and homeowners. Fast, reliable, and eco-friendly disposal solutions.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal Orlando services for residents and apartment communities. Fast, reliable, and eco-friendly disposal solutions.</p>
                   <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -212,7 +336,7 @@ export default function HomeClient() {
                     <Recycle className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Recurring commercial bulk removal solutions for property managers. Scheduled pickups and flexible service plans.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Bulk removal Central Florida solutions for apartment complexes and property managers. Scheduled bulk item pickup and flexible service plans.</p>
                   <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -245,6 +369,48 @@ export default function HomeClient() {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Serving Apartments, Condos & Resorts Across Central Florida
+              </h2>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-xl text-gray-700 mb-6 leading-relaxed">
+                  Our <strong>valet trash service Orlando FL</strong> teams provide professional waste management solutions throughout the region. From luxury apartment communities to resort-style properties, we deliver reliable <strong>doorstep trash collection</strong> services that property managers trust.
+                </p>
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  We proudly serve Orlando, Kissimmee, Altamonte Springs, Winter Park, Lake Nona, and surrounding Central Florida communities with comprehensive <strong>condo trash pickup Orlando</strong> services, <strong>bulk removal Central Florida</strong> solutions, and <strong>junk removal Orlando</strong> for apartment complexes and resort properties.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 text-gray-700">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <span className="font-semibold">Orlando</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <span className="font-semibold">Kissimmee</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <span className="font-semibold">Altamonte Springs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <span className="font-semibold">Winter Park</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <span className="font-semibold">Lake Nona</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -358,6 +524,57 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our valet trash service in Orlando
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <div className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#027502] transition-colors">
+                  <button
+                    onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                    className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                    aria-expanded={openFaqIndex === index}
+                  >
+                    <span className="text-lg font-semibold text-gray-900 pr-8">
+                      {faq.question}
+                    </span>
+                    <ChevronDown
+                      className={`w-6 h-6 text-[#027502] flex-shrink-0 transition-transform duration-300 ${
+                        openFaqIndex === index ? 'transform rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  <div
+                    className={`transition-all duration-300 ease-in-out ${
+                      openFaqIndex === index
+                        ? 'max-h-96 opacity-100'
+                        : 'max-h-0 opacity-0 overflow-hidden'
+                    }`}
+                  >
+                    <div className="px-6 pb-5 pt-2">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -452,17 +669,17 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#027502] mb-2">2,000+</div>
-                <div className="text-gray-600 font-semibold">Units Served</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="text-6xl font-bold text-[#027502] mb-3">2,000+</div>
+                <div className="text-gray-800 font-semibold text-lg">Units Served</div>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#027502] mb-2">100%</div>
-                <div className="text-gray-600 font-semibold">Client Satisfaction</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="text-6xl font-bold text-[#027502] mb-3">100%</div>
+                <div className="text-gray-800 font-semibold text-lg">Client Satisfaction</div>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center">
-                <div className="text-5xl font-bold text-[#027502] mb-2">7</div>
-                <div className="text-gray-600 font-semibold">Days a Week Service</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+                <div className="text-6xl font-bold text-[#027502] mb-3">7</div>
+                <div className="text-gray-800 font-semibold text-lg">Days a Week Service</div>
               </div>
             </div>
           </ScrollReveal>
@@ -538,6 +755,24 @@ export default function HomeClient() {
           </ScrollReveal>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
     </>
   );
 }

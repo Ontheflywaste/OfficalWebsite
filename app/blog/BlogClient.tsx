@@ -11,9 +11,13 @@ export default function BlogClient() {
 
   const categories = ['All', 'Property Management', 'Holiday Tips', 'Cost Analysis', 'Valet Trash', 'Sustainability', 'Bulk Removal'];
 
+  const sortedBlogPosts = [...blogPosts].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
   const filteredPosts = selectedCategory === 'All'
-    ? blogPosts
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? sortedBlogPosts
+    : sortedBlogPosts.filter(post => post.category === selectedCategory);
 
   return (
     <div className="min-h-screen">

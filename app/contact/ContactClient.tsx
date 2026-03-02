@@ -3,7 +3,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import HubSpotForm from '@/app/components/HubSpotForm';
+import ContactForm from '@/app/components/ContactForm';
 
 export default function ContactClient() {
 
@@ -32,13 +32,9 @@ export default function ContactClient() {
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <div className="mb-6">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
-                  <HubSpotForm
-                    region="na1"
-                    portalId="22416220"
-                    formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
-                  />
+                  <ContactForm />
                 </div>
               </ScrollReveal>
             </div>

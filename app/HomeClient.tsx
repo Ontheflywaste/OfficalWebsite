@@ -18,8 +18,8 @@ export default function HomeClient() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <img
-            src="/Images/gallery12813_1920x831@2x.jpg"
-            alt="Luxury apartment community"
+            src="/Images/Theastonatuptownheroimage.webp"
+            alt="On The Fly Waste Solutions providing valet trash services at The Aston at Uptown luxury apartments in Altamonte Springs"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
@@ -76,6 +76,12 @@ export default function HomeClient() {
               <span className="text-white font-semibold">5-Star Rated on Google</span>
             </div>
           </ScrollReveal>
+
+          <div className="absolute bottom-6 left-0 right-0 text-center">
+            <p className="text-white/80 text-sm md:text-base font-light tracking-wide">
+              Proudly serving premier communities like The Aston at Uptown
+            </p>
+          </div>
         </div>
       </section>
 

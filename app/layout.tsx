@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Script from 'next/script';
+import HubSpotChat from './components/HubSpotChat';
 
 export const metadata: Metadata = {
   title: 'On The Fly Waste Solutions | Professional Valet Trash Services Orlando FL',
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
+        <script
           id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -71,17 +71,12 @@ export default function RootLayout({
             })
           }}
         />
-        <Script
-          id="hs-script-loader"
-          type="text/javascript"
-          src="//js.hs-scripts.com/22416220.js"
-          strategy="afterInteractive"
-        />
       </head>
       <body className="min-h-screen bg-white">
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <HubSpotChat />
       </body>
     </html>
   );

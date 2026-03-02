@@ -118,9 +118,9 @@ export default function HubSpotForm({
   }, [region, portalId, formId]);
 
   return (
-    <div className="relative w-full" style={{ minHeight: '600px' }}>
+    <div className="relative w-full">
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-10">
+        <div className="flex items-center justify-center py-8">
           <div className="flex flex-col items-center gap-4">
             <div className="w-12 h-12 border-4 border-[#049704] border-t-transparent rounded-full animate-spin"></div>
             <p className="text-[#1A1A1A] text-sm font-medium">Loading form...</p>

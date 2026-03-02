@@ -239,7 +239,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`fixed right-4 transition-all duration-300 z-50 ${
+          className={`fixed right-4 transition-all duration-300 z-40 ${
             shouldUseBlackNavbar || isMobile
               ? 'top-24'
               : 'top-36'
@@ -251,6 +251,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white text-gray-900 px-4 py-3 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 border-2 border-[#027502]"
             aria-label="View our 5.0 Google Rating"
+            style={{ marginBottom: '100px' }}
           >
             <div className="flex gap-0.5">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />

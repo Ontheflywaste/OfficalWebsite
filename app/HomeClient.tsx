@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
 
@@ -380,53 +380,55 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="relative py-20 bg-gray-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#027502]/10 pointer-events-none"></div>
+      <section className="relative py-20 bg-gradient-to-b from-[#050505] to-[#1A1A1A] overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose On The Fly?
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                The On The Fly Advantage
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Trusted by property managers across Orlando, Kissimmee, and Central Florida
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Next-generation waste management with enterprise-grade accountability
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#027502] h-full flex flex-col">
-                <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-[#027502]" />
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">SLA-Backed Guarantee</h3>
-                <p className="text-gray-600 leading-relaxed flex-grow">
-                  100% collection rate backed by Service Level Agreement with documented photo verification for complete accountability.
+                <h3 className="text-2xl font-bold text-white mb-4">GPS-Verified Accountability</h3>
+                <p className="text-gray-300 leading-relaxed flex-grow">
+                  Every bag, every building, tracked in real-time. Advanced geo-location technology ensures 100% route completion with documented proof of service.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-gray-900 h-full flex flex-col">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                  <Building2 className="w-8 h-8 text-gray-900" />
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Property Focused</h3>
-                <p className="text-gray-600 leading-relaxed flex-grow">
-                  Specialized in multi-family properties with dedicated account management and real-time service notifications.
+                <h3 className="text-2xl font-bold text-white mb-4">100% Collection Guarantee</h3>
+                <p className="text-gray-300 leading-relaxed flex-grow">
+                  Backed by our strict Service Level Agreement (SLA). If we miss it, we make it right immediately with full transparency and accountability.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#027502] h-full flex flex-col">
-                <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
-                  <Recycle className="w-8 h-8 text-[#027502]" />
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Camera className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Transparency</h3>
-                <p className="text-gray-600 leading-relaxed flex-grow">
-                  Real-time photo documentation, detailed service reports, and 24/7 customer support ensure total visibility.
+                <h3 className="text-2xl font-bold text-white mb-4">Property Manager Portal</h3>
+                <p className="text-gray-300 leading-relaxed flex-grow">
+                  Instant access to service reports and photo verification. Complete visibility into every pickup with time-stamped documentation at your fingertips.
                 </p>
               </div>
             </ScrollReveal>
@@ -434,74 +436,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#038503]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <ScrollReveal>
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Serving Central Florida's Premier Communities
-                </h2>
-                <p className="text-gray-50 text-lg mb-8 leading-relaxed">
-                  From Orlando to Kissimmee and beyond, we partner with property managers to deliver exceptional waste management services that enhance resident satisfaction and property value.
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
-                    <span className="text-gray-50">Licensed and insured professionals</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
-                    <span className="text-gray-50">Flexible service plans tailored to your property</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
-                    <span className="text-gray-50">24/7 customer support</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-white">
-                    <CheckCircle2 className="w-6 h-6 text-green-200 flex-shrink-0 mt-1" />
-                    <span className="text-gray-50">Competitive pricing with no hidden fees</span>
-                  </li>
-                </ul>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white p-8 rounded-2xl shadow-2xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get Your Free Quote</h3>
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-gray-600 mb-4">
-                      Ready to elevate your property's waste management? Contact us today for a free, no-obligation quote.
-                    </p>
-                  </div>
-                  <div className="space-y-4">
-                    <a
-                      href="tel:407-274-5019"
-                      className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-green-50 transition-colors group"
-                    >
-                      <Phone className="w-6 h-6 text-[#038503]" />
-                      <div>
-                        <div className="text-sm text-gray-600">Call us</div>
-                        <div className="font-semibold text-gray-900 group-hover:text-[#038503] transition-colors">
-                          (407) 274-5019
-                        </div>
-                      </div>
-                    </a>
-                    <Link
-                      href="/contact/"
-                      className="flex items-center justify-center gap-2 w-full bg-[#038503] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#027002] transition-all"
-                    >
-                      Request Quote Online
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -529,6 +463,56 @@ export default function HomeClient() {
               <div className="bg-white p-6 rounded-xl text-center">
                 <div className="text-5xl font-bold text-[#027502] mb-2">7</div>
                 <div className="text-gray-600 font-semibold">Days a Week Service</div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Areas We Serve
+              </h2>
+              <p className="text-xl text-gray-600">
+                Proudly serving communities across Central Florida
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Orlando</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Kissimmee</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Altamonte Springs</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Lake Mary</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Apopka</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Clermont</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Winter Park</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Sanford</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">St. Cloud</span>
+              </div>
+              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Davenport</span>
               </div>
             </div>
           </ScrollReveal>

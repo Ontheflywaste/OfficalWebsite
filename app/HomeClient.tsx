@@ -43,8 +43,8 @@ export default function HomeClient() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <img
-            src="/Images/Theastonatuptownheroimage.webp"
-            alt="On The Fly Waste Solutions providing valet trash services at The Aston at Uptown luxury apartments in Altamonte Springs"
+            src="/Images/hero-desktop.jpg"
+            alt="On The Fly Waste Solutions providing valet trash services at luxury apartment communities in Central Florida"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"

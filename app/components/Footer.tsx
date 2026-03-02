@@ -119,8 +119,11 @@ export default function Footer() {
                 { text: 'Kissimmee Valet Trash', link: '/valet-trash-kissimmee-fl/' },
                 { text: 'Altamonte Springs', link: '/valet-trash-altamonte-springs-fl/' },
                 { text: 'Lake Mary', link: '/valet-trash-lake-mary-fl/' },
-                { text: 'Orlando Bulk Removal', link: '/bulk-removal-orlando-fl/' },
-                { text: 'Orlando Junk Removal', link: '/junk-removal-orlando-fl/' }
+                { text: 'Davenport', link: '/service-areas/davenport-fl/' },
+                { text: 'ChampionsGate', link: '/service-areas/championsgate-fl/' },
+                { text: 'Celebration', link: '/service-areas/celebration-fl/' },
+                { text: 'Winter Haven', link: '/service-areas/winter-haven-fl/' },
+                { text: 'Winter Garden', link: '/service-areas/winter-garden-fl/' }
               ].map((item) => (
                 <li key={item.text}>
                   <Link

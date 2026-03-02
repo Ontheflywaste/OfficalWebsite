@@ -88,7 +88,7 @@ export default function AboutClient() {
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <img
-            src="/Images/downtown.jpg"
+            src="/Images/ApartmentBuildingHero.webp"
             alt="Orlando skyline and Central Florida communities we serve"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"

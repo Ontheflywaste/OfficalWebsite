@@ -1,29 +1,17 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
+import HubSpotForm from './components/HubSpotForm';
 
 export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setTimeout(() => setIsVideoLoaded(true), 100);
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://js.hsforms.net/forms/embed/22416220.js';
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
   }, []);
 
   return (
@@ -185,7 +173,7 @@ export default function HomeClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
               <Link href="/services/valet-trash/" className="group h-full">
                 <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
@@ -208,7 +196,7 @@ export default function HomeClient() {
                     <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Fast, professional removal with same-day service available for urgent needs</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal services for residents and homeowners. Fast, reliable, and eco-friendly disposal solutions.</p>
                   <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -223,7 +211,22 @@ export default function HomeClient() {
                     <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Scheduled pickup of oversized items with flexible property-wide services</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Recurring commercial bulk removal solutions for property managers. Scheduled pickups and flexible service plans.</p>
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
+                  </span>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Link href="/services/pressure-washing/" className="group h-full">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Sparkles className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Pressure Washing</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional pressure washing services to maintain clean, attractive common areas and building exteriors.</p>
                   <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -340,7 +343,11 @@ export default function HomeClient() {
                   Ready to elevate your property's waste management? Contact us today for a free, no-obligation quote.
                 </p>
               </div>
-              <div className="hs-form-frame" data-region="na1" data-form-id="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d" data-portal-id="22416220"></div>
+              <HubSpotForm
+                region="na1"
+                portalId="22416220"
+                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+              />
             </div>
           </ScrollReveal>
         </div>

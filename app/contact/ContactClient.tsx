@@ -1,22 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import HubSpotForm from '@/app/components/HubSpotForm';
 
 export default function ContactClient() {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://js.hsforms.net/forms/embed/22416220.js';
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <div className="min-h-screen bg-white pt-32">
@@ -45,7 +34,11 @@ export default function ContactClient() {
               <ScrollReveal>
                 <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
-                  <div className="hs-form-frame" data-region="na1" data-form-id="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d" data-portal-id="22416220"></div>
+                  <HubSpotForm
+                    region="na1"
+                    portalId="22416220"
+                    formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+                  />
                 </div>
               </ScrollReveal>
             </div>

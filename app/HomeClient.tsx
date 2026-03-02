@@ -247,13 +247,13 @@ export default function HomeClient() {
 
             <ScrollReveal delay={0.2}>
               <Link href="/services/junk-removal/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-gray-900 transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
-                    <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Building2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal Orlando services for residents and apartment communities. Fast, reliable, and eco-friendly disposal solutions.</p>
-                  <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>

@@ -214,18 +214,18 @@ export default function HomeClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all h-full flex flex-col">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
                   "On The Fly has been exceptional for our apartment community. Their valet trash service is reliable, and residents love the convenience. The photo verification gives us peace of mind that every unit is serviced."
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     M
                   </div>
@@ -238,16 +238,16 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all h-full flex flex-col">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
                   "Professional, punctual, and dependable. We switched to On The Fly for our bulk removal needs and haven't looked back. Their team is responsive and the service quality is outstanding."
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     J
                   </div>
@@ -260,16 +260,16 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all h-full flex flex-col">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
                   "The best valet trash service we've had! Their 100% collection guarantee is real - they've never missed a pickup. GPS tracking and photo proof make reporting easy for our residents."
                 </p>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 mt-auto">
                   <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     L
                   </div>

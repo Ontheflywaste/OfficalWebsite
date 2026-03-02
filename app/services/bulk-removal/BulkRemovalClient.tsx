@@ -105,12 +105,17 @@ export default function BulkRemovalClient() {
   ];
 
   return (
-    <div className="min-h-screen pt-32">
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <img src="/Images/Dumpster.jpg" alt="Bulk Removal Service" className="w-full h-full object-cover" />
+    <div className="min-h-screen">
+      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black">
+          <img
+            src="/Images/Residential-Junk-Removal-McAllen-Dumpster-Rental-Junk-Removal-Services-1024x768-2.jpg"
+            alt="Professional bulk removal service for apartment communities"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">

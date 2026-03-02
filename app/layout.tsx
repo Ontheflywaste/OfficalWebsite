@@ -225,7 +225,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-white">
         <Navbar />
-        <main className="pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
         <HubSpotChat />
       </body>

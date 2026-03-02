@@ -84,9 +84,17 @@ export default function AboutClient() {
   ];
 
   return (
-    <div className="min-h-screen pt-32">
-      <section className="relative py-20 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
+    <div className="min-h-screen">
+      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black">
+          <img
+            src="/Images/downtown.jpg"
+            alt="Orlando skyline and Central Florida communities we serve"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">

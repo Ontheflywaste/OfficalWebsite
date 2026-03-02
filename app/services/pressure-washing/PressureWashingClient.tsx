@@ -137,12 +137,17 @@ export default function PressureWashingClient() {
   ];
 
   return (
-    <div className="min-h-screen pt-32">
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <img src="/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg" alt="Pressure Washing Service" className="w-full h-full object-cover" />
+    <div className="min-h-screen">
+      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black">
+          <img
+            src="/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg"
+            alt="Professional pressure washing services for commercial properties"
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">

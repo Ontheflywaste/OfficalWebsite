@@ -40,7 +40,7 @@ export default function HomeClient() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-36">
         <div className="absolute inset-0 bg-black">
           <img
             src="/Images/hero-desktop.jpg"

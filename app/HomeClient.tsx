@@ -30,14 +30,14 @@ export default function HomeClient() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Premier Doorstep<br />
-              <span className="text-[#049704]">Trash Pickup</span>
+              Valet Trash & Bulk Removal<br />
+              <span className="text-[#049704]">Services</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              SLA-backed valet trash service with 100% collection rate guarantee. Serving apartment communities across Central Florida with photo-verified, accountable service.
+              Orlando's trusted door to door trash pickup service for apartments, condos, and resort-style communities.
             </p>
           </ScrollReveal>
 
@@ -92,10 +92,7 @@ export default function HomeClient() {
       </section>
 
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute inset-0 -mt-16 clip-slant">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-        </div>
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
         <div className="absolute inset-0">
           {isVideoLoaded && (
             <video
@@ -111,7 +108,7 @@ export default function HomeClient() {
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
               <div>
@@ -145,7 +142,7 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative -mt-32 lg:-mt-20">
+              <div className="relative">
                 <img
                   src="/Images/artemistradeshow.jpg"
                   alt="On The Fly Waste Solutions team at trade show"
@@ -159,6 +156,90 @@ export default function HomeClient() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/Images/TradeshowPicture"
+            alt="Trade show background"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-[#1a1a1a]/85"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Proud Members Of
+              </h2>
+              <p className="text-xl text-gray-300">
+                Affiliated with leading industry associations
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="relative overflow-hidden">
+              <div className="flex animate-scroll">
+                <div className="flex items-center gap-16 pr-16">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/faa-full-color-full-logo.png"
+                      alt="Florida Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/NAA-logo_bgwhite.png"
+                      alt="National Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/AAGO.png"
+                      alt="AAGO"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center gap-16 pr-16" aria-hidden="true">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/faa-full-color-full-logo.png"
+                      alt="Florida Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/NAA-logo_bgwhite.png"
+                      alt="National Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                    <img
+                      src="/Images/AAGO.png"
+                      alt="AAGO"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

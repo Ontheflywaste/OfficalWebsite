@@ -74,8 +74,8 @@ export default function Navbar() {
           shouldUseBlackNavbar
             ? 'top-0 bg-white shadow-lg border-b border-gray-200'
             : isMobile
-              ? 'top-0 bg-gradient-to-b from-[#111111] to-[#1a1a1a] backdrop-blur-md'
-              : 'top-10 bg-gradient-to-b from-[#111111] to-[#1a1a1a] backdrop-blur-md'
+              ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
+              : 'top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"
@@ -134,7 +134,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-8" role="menubar">
               <Link
                 href="/"
-                className={`font-medium text-base relative group transition-all duration-300 ${
+                className={`font-semibold text-base relative group transition-all duration-300 ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'
@@ -147,7 +147,7 @@ export default function Navbar() {
 
               <Link
                 href="/about/"
-                className={`font-medium text-base relative group transition-all duration-300 ${
+                className={`font-semibold text-base relative group transition-all duration-300 ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'
@@ -176,7 +176,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/services/"
-                  className={`font-medium text-base relative group transition-all duration-300 flex items-center ${
+                  className={`font-semibold text-base relative group transition-all duration-300 flex items-center ${
                     shouldUseBlackLogo
                       ? 'text-gray-900 hover:text-[#027502]'
                       : 'text-white hover:text-[#027502]'
@@ -191,7 +191,7 @@ export default function Navbar() {
                 </Link>
 
                 <div
-                  className={`absolute top-full left-0 pt-0 w-56 transition-all duration-200 ${
+                  className={`absolute top-full left-0 pt-2 w-56 transition-all duration-200 ${
                     isServicesDropdownOpen
                       ? 'opacity-100 visible translate-y-0'
                       : 'opacity-0 invisible -translate-y-2'
@@ -228,7 +228,7 @@ export default function Navbar() {
 
               <Link
                 href="/blog/"
-                className={`font-medium text-base relative group transition-all duration-300 ${
+                className={`font-semibold text-base relative group transition-all duration-300 ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'
@@ -241,7 +241,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact/"
-                className={`font-medium text-base relative group transition-all duration-300 ${
+                className={`font-semibold text-base relative group transition-all duration-300 ${
                   shouldUseBlackLogo
                     ? 'text-gray-900 hover:text-[#027502]'
                     : 'text-white hover:text-[#027502]'

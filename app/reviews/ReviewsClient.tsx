@@ -108,11 +108,11 @@ export default function ReviewsClient() {
               {duplicatedReviews.map((review, index) => (
                 <div
                   key={`${review.id}-${index}`}
-                  className="flex-shrink-0 w-[400px] h-[320px] relative group"
+                  className="flex-shrink-0 w-[400px] min-h-[350px] relative group"
                   style={{ minWidth: '400px' }}
                 >
                   <div
-                    className="h-full bg-white/80 backdrop-blur-sm border border-[#027502] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col justify-between"
+                    className="h-full bg-white/80 backdrop-blur-sm border border-[#027502] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col"
                     style={{
                       boxShadow: '0 20px 60px rgba(2, 117, 2, 0.15)'
                     }}
@@ -125,13 +125,15 @@ export default function ReviewsClient() {
                           <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
+                    </div>
 
-                      <p className="text-[#1A1A1A] text-base leading-relaxed mb-6">
+                    <div className="flex-grow mb-6">
+                      <p className="text-[#1A1A1A] text-base leading-relaxed">
                         "{review.text}"
                       </p>
                     </div>
 
-                    <div className="border-t border-[#027502]/20 pt-4">
+                    <div className="border-t border-[#027502]/20 pt-4 mt-auto">
                       <p className="font-bold text-[#1A1A1A] text-lg">{review.author}</p>
                       <p className="text-sm text-gray-600 font-medium">Google Review</p>
                     </div>

@@ -361,10 +361,10 @@ export default function HomeClient() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-4 border-[#027502]">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-[#027502]">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  Get Your Free Quote
+                  Start Your 100% Collection Guarantee Today
                 </h2>
                 <p className="text-xl text-gray-600">
                   Ready to elevate your property's waste management? Contact us today for a free, no-obligation quote.

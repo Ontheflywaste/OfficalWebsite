@@ -262,3 +262,17 @@ html {
   margin-bottom: 8px !important;
   display: block !important;
 }
+
+/* HubSpot Chat Widget - ensure visibility */
+#hubspot-messages-iframe-container {
+  z-index: 9999 !important;
+}
+
+iframe#hubspot-conversations-iframe {
+  z-index: 9999 !important;
+}
+
+#hs-eu-cookie-confirmation,
+#hs-eu-cookie-confirmation-inner {
+  z-index: 10000 !important;
+}

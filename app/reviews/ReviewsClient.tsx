@@ -74,7 +74,7 @@ export default function ReviewsClient() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 mt-8">
             <div className="inline-flex items-center gap-2 bg-[#027502] text-white px-6 py-3 rounded-full mb-6 shadow-lg">
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />

@@ -183,6 +183,20 @@ export default function Footer() {
                   loading="lazy"
                 />
               </div>
+              <a
+                href="https://www.bbb.org/us/fl/kissimmee/profile/waste-removal/on-the-fly-waste-solutions-0733-90656041"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity"
+                aria-label="View our BBB Accredited Business profile"
+              >
+                <img
+                  src="https://www.bbb.org/ProfileImages/7cc07fc0-4d2a-437d-afb5-e2726c8f4a39.png"
+                  alt="BBB Accredited Business"
+                  className="h-full w-full object-contain"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 

@@ -299,6 +299,19 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
+                  <a
+                    href="https://www.bbb.org/us/fl/kissimmee/profile/waste-removal/on-the-fly-waste-solutions-0733-90656041"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
+                  >
+                    <img
+                      src="https://www.bbb.org/ProfileImages/7cc07fc0-4d2a-437d-afb5-e2726c8f4a39.png"
+                      alt="BBB Accredited Business"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
                 </div>
                 <div className="flex items-center gap-16 pr-16" aria-hidden="true">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
@@ -325,6 +338,19 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
+                  <a
+                    href="https://www.bbb.org/us/fl/kissimmee/profile/waste-removal/on-the-fly-waste-solutions-0733-90656041"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
+                  >
+                    <img
+                      src="https://www.bbb.org/ProfileImages/7cc07fc0-4d2a-437d-afb5-e2726c8f4a39.png"
+                      alt="BBB Accredited Business"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

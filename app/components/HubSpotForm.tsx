@@ -99,7 +99,7 @@ export default function HubSpotForm({
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-10">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-[#027502] border-t-transparent rounded-full animate-spin"></div>
+            <div className="w-12 h-12 border-4 border-[#049704] border-t-transparent rounded-full animate-spin"></div>
             <p className="text-[#1A1A1A] text-sm font-medium">Loading form...</p>
           </div>
         </div>

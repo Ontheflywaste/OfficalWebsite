@@ -56,7 +56,7 @@ export default function HomeClient() {
           <ScrollReveal>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Valet Trash, Bulk & Junk Removal Services<br />
-              <span className="text-[#027502]">Orlando, FL</span>
+              <span className="text-[#049704]">Orlando, FL</span>
             </h1>
           </ScrollReveal>
 
@@ -70,7 +70,7 @@ export default function HomeClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -145,7 +145,7 @@ export default function HomeClient() {
                     Since 2020, On The Fly Waste Solutions has been transforming property waste management across Central Florida with our innovative valet trash and comprehensive waste services.
                   </p>
                   <p>
-                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#027502]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#027502]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
+                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#049704]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#049704]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
                   </p>
                   <p>
                     As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
@@ -157,7 +157,7 @@ export default function HomeClient() {
                 <div className="mt-8">
                   <Link
                     href="/about/"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-[#027502] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-[#049704] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Learn More About Us
                     <ArrowRight className="w-5 h-5" />
@@ -174,7 +174,7 @@ export default function HomeClient() {
                   className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/10"
                   loading="lazy"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-[#027502] text-white p-6 rounded-xl shadow-xl hidden lg:block">
+                <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl hidden lg:block">
                   <div className="text-3xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>
                 </div>
@@ -206,7 +206,7 @@ export default function HomeClient() {
                 href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#027502] font-semibold hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 text-[#049704] font-semibold hover:gap-4 transition-all"
               >
                 View All Reviews on Google
                 <ArrowRight className="w-5 h-5" />
@@ -216,7 +216,7 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -226,7 +226,7 @@ export default function HomeClient() {
                   "On The Fly has been exceptional for our apartment community. Their valet trash service is reliable, and residents love the convenience. The photo verification gives us peace of mind that every unit is serviced."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     M
                   </div>
                   <div>
@@ -238,7 +238,7 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -248,7 +248,7 @@ export default function HomeClient() {
                   "Professional, punctual, and dependable. We switched to On The Fly for our bulk removal needs and haven't looked back. Their team is responsive and the service quality is outstanding."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     J
                   </div>
                   <div>
@@ -260,7 +260,7 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -270,7 +270,7 @@ export default function HomeClient() {
                   "The best valet trash service we've had! Their 100% collection guarantee is real - they've never missed a pickup. GPS tracking and photo proof make reporting easy for our residents."
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#027502] rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-[#049704] rounded-full flex items-center justify-center text-white font-bold">
                     L
                   </div>
                   <div>
@@ -285,7 +285,7 @@ export default function HomeClient() {
       </section>
 
       <section className="relative py-20 bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#027502]/10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#049704]/10 pointer-events-none"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
@@ -301,13 +301,13 @@ export default function HomeClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
               <Link href="/services/valet-trash/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
-                    <Trash2 className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash collection for apartments and condos in Orlando FL. SLA-backed 100% collection rate with photo verification.</p>
-                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -331,13 +331,13 @@ export default function HomeClient() {
 
             <ScrollReveal delay={0.3}>
               <Link href="/services/bulk-removal/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
-                    <Recycle className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Bulk removal Central Florida solutions for apartment complexes and property managers. Scheduled bulk item pickup and flexible service plans.</p>
-                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -346,13 +346,13 @@ export default function HomeClient() {
 
             <ScrollReveal delay={0.4}>
               <Link href="/services/pressure-washing/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#027502] transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#027502] transition-colors">
-                    <Sparkles className="w-10 h-10 text-[#027502] group-hover:text-white transition-colors" />
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Sparkles className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Pressure Washing</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional pressure washing services to maintain clean, attractive common areas and building exteriors.</p>
-                  <span className="text-[#027502] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
                 </div>
@@ -363,7 +363,7 @@ export default function HomeClient() {
           <div className="mt-12 text-center">
             <Link
               href="/services/"
-              className="inline-flex items-center gap-2 text-[#027502] font-semibold text-lg hover:gap-4 transition-all"
+              className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
             >
               View All Services
               <ArrowRight className="w-5 h-5" />
@@ -388,23 +388,23 @@ export default function HomeClient() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-gray-700">
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <MapPin className="w-5 h-5 text-[#049704]" />
                     <span className="font-semibold">Orlando</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <MapPin className="w-5 h-5 text-[#049704]" />
                     <span className="font-semibold">Kissimmee</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <MapPin className="w-5 h-5 text-[#049704]" />
                     <span className="font-semibold">Altamonte Springs</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <MapPin className="w-5 h-5 text-[#049704]" />
                     <span className="font-semibold">Winter Park</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-[#027502]" />
+                    <MapPin className="w-5 h-5 text-[#049704]" />
                     <span className="font-semibold">Lake Nona</span>
                   </div>
                 </div>
@@ -540,7 +540,7 @@ export default function HomeClient() {
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#027502] transition-colors">
+                <div className="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-[#049704] transition-colors">
                   <button
                     onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
                     className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
@@ -550,7 +550,7 @@ export default function HomeClient() {
                       {faq.question}
                     </span>
                     <ChevronDown
-                      className={`w-6 h-6 text-[#027502] flex-shrink-0 transition-transform duration-300 ${
+                      className={`w-6 h-6 text-[#049704] flex-shrink-0 transition-transform duration-300 ${
                         openFaqIndex === index ? 'transform rotate-180' : ''
                       }`}
                     />
@@ -578,7 +578,7 @@ export default function HomeClient() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-[#027502]">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-[#049704]">
               <div className="text-center mb-8">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
                   Start Your 100% Collection Guarantee Today
@@ -615,8 +615,8 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#049704]/30 hover:border-[#049704] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#049704] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">GPS-Verified Accountability</h3>
@@ -627,8 +627,8 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#049704]/30 hover:border-[#049704] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#049704] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">100% Collection Guarantee</h3>
@@ -639,8 +639,8 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#027502]/30 hover:border-[#027502] transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-[#027502] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-[#049704]/30 hover:border-[#049704] transition-all h-full flex flex-col group">
+                <div className="w-16 h-16 bg-[#049704] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Camera className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Property Manager Portal</h3>
@@ -669,16 +669,16 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
-                <div className="text-6xl font-bold text-[#027502] mb-3">2,000+</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+                <div className="text-6xl font-bold text-[#049704] mb-3">2,000+</div>
                 <div className="text-gray-800 font-semibold text-lg">Units Served</div>
               </div>
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
-                <div className="text-6xl font-bold text-[#027502] mb-3">100%</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+                <div className="text-6xl font-bold text-[#049704] mb-3">100%</div>
                 <div className="text-gray-800 font-semibold text-lg">Client Satisfaction</div>
               </div>
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#027502] transition-all">
-                <div className="text-6xl font-bold text-[#027502] mb-3">7</div>
+              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-[#049704] transition-all">
+                <div className="text-6xl font-bold text-[#049704] mb-3">7</div>
                 <div className="text-gray-800 font-semibold text-lg">Days a Week Service</div>
               </div>
             </div>
@@ -701,35 +701,35 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Orlando</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Orlando</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Kissimmee</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Kissimmee</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Altamonte Springs</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Altamonte Springs</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Lake Mary</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Lake Mary</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Apopka</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Apopka</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Clermont</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Clermont</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Winter Park</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Winter Park</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Sanford</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Sanford</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">St. Cloud</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">St. Cloud</span>
               </div>
-              <div className="bg-gray-50 border-2 border-[#027502]/20 hover:border-[#027502] hover:bg-[#027502]/5 transition-all p-4 rounded-lg text-center group">
-                <span className="font-semibold text-gray-900 group-hover:text-[#027502] transition-colors">Davenport</span>
+              <div className="bg-gray-50 border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Davenport</span>
               </div>
             </div>
           </ScrollReveal>
@@ -747,7 +747,7 @@ export default function HomeClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
             >
               Schedule Consultation
               <ArrowRight className="w-5 h-5" />

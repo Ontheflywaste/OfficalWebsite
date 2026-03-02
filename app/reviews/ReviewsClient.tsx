@@ -98,7 +98,7 @@ export default function ReviewsClient() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16 mt-8">
-            <div className="inline-flex items-center gap-2 bg-[#027502] text-white px-6 py-3 rounded-full mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#049704] text-white px-6 py-3 rounded-full mb-6 shadow-lg">
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
               <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
@@ -133,13 +133,13 @@ export default function ReviewsClient() {
                   style={{ minWidth: '400px' }}
                 >
                   <div
-                    className="h-full bg-white/80 backdrop-blur-sm border border-[#027502] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col"
+                    className="h-full bg-white/80 backdrop-blur-sm border border-[#049704] rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 flex flex-col"
                     style={{
                       boxShadow: '0 20px 60px rgba(2, 117, 2, 0.15)'
                     }}
                   >
                     <div>
-                      <Quote className="w-10 h-10 text-[#027502] mb-4 opacity-40" />
+                      <Quote className="w-10 h-10 text-[#049704] mb-4 opacity-40" />
 
                       <div className="flex gap-1 mb-4">
                         {[...Array(review.rating)].map((_, i) => (
@@ -154,7 +154,7 @@ export default function ReviewsClient() {
                       </p>
                     </div>
 
-                    <div className="border-t border-[#027502]/20 pt-4 mt-auto">
+                    <div className="border-t border-[#049704]/20 pt-4 mt-auto">
                       <p className="font-bold text-[#1A1A1A] text-lg">{review.author}</p>
                       <p className="text-sm text-gray-600 font-medium">Google Review</p>
                     </div>
@@ -166,7 +166,7 @@ export default function ReviewsClient() {
         </div>
 
         <ScrollReveal>
-          <div className="text-center bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm border border-[#027502]/30 rounded-3xl p-12 shadow-2xl">
+          <div className="text-center bg-gradient-to-br from-white/90 to-gray-50/90 backdrop-blur-sm border border-[#049704]/30 rounded-3xl p-12 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-4">
               Join Our Happy Clients
             </h2>
@@ -177,7 +177,7 @@ export default function ReviewsClient() {
               href={googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-[#027502] text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-[#049704] text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
             >
               Leave Us a Review on Google
               <ExternalLink className="w-5 h-5" />
@@ -193,13 +193,13 @@ export default function ReviewsClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#025502] transition-all transform hover:scale-105 shadow-lg"
               >
                 Request a Quote
               </Link>
               <a
                 href="tel:407-274-5019"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#027502] border-2 border-[#027502] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#049704] border-2 border-[#049704] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-md"
               >
                 Call (407) 274-5019
               </a>

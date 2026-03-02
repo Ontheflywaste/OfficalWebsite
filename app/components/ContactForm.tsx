@@ -118,7 +118,7 @@ export default function ContactForm() {
     return (
       <div className="w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <div className="text-center">
-          <div className="w-16 h-16 bg-[#027502] rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-[#049704] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
               className="w-8 h-8 text-white"
               fill="none"
@@ -141,7 +141,7 @@ export default function ContactForm() {
           </p>
           <button
             onClick={() => setSubmitStatus('idle')}
-            className="bg-[#027502] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#025502] transition-colors"
+            className="bg-[#049704] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#025502] transition-colors"
           >
             Submit Another Inquiry
           </button>
@@ -166,7 +166,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`w-full px-4 py-3 border ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all`}
               placeholder="John Doe"
             />
             {errors.name && (
@@ -186,7 +186,7 @@ export default function ContactForm() {
               onChange={handleChange}
               className={`w-full px-4 py-3 border ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
-              } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all`}
+              } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all`}
               placeholder="john@example.com"
             />
             {errors.email && (
@@ -206,7 +206,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all"
               placeholder="(555) 123-4567"
             />
           </div>
@@ -221,7 +221,7 @@ export default function ContactForm() {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all"
               placeholder="Your Company"
             />
           </div>
@@ -237,7 +237,7 @@ export default function ContactForm() {
               name="property_type"
               value={formData.property_type}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all bg-white"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all bg-white"
             >
               <option value="">Select a type</option>
               <option value="apartment">Apartment Complex</option>
@@ -259,7 +259,7 @@ export default function ContactForm() {
               name="units"
               value={formData.units}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all"
               placeholder="100"
               min="1"
             />
@@ -278,7 +278,7 @@ export default function ContactForm() {
             rows={6}
             className={`w-full px-4 py-3 border ${
               errors.message ? 'border-red-500' : 'border-gray-300'
-            } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#027502] focus:border-transparent transition-all resize-none`}
+            } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#049704] focus:border-transparent transition-all resize-none`}
             placeholder="Tell us about your needs..."
           />
           {errors.message && (
@@ -296,7 +296,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[#027502] text-white py-4 rounded-lg font-bold text-lg hover:bg-[#025502] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full bg-[#049704] text-white py-4 rounded-lg font-bold text-lg hover:bg-[#025502] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <>

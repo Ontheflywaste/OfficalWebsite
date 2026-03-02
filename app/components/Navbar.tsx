@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#027502] to-[#037a03] text-white py-2 transition-transform duration-300 z-50 ${
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } hidden md:block`}
         role="banner"
@@ -103,7 +103,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden absolute left-4 transition-colors duration-300 text-white hover:text-[#027502]"
+              className="md:hidden absolute left-4 transition-colors duration-300 text-white hover:text-[#049704]"
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -117,20 +117,20 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-8" role="menubar">
               <Link
                 href="/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
               <Link
                 href="/about/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 About Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
               <div
@@ -151,14 +151,14 @@ export default function Navbar() {
               >
                 <Link
                   href="/services/"
-                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-[#027502]"
+                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-[#049704]"
                   role="menuitem"
                 >
                   Services
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
                     isServicesDropdownOpen ? 'rotate-180' : ''
                   }`} />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
                 </Link>
 
                 <div
@@ -171,25 +171,25 @@ export default function Navbar() {
                   <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
                     <Link
                       href="/services/valet-trash/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#027502] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#027502] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#027502] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#027502] hover:bg-opacity-10 hover:text-[#027502] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
                     >
                       Pressure Washing
                     </Link>
@@ -199,40 +199,40 @@ export default function Navbar() {
 
               <Link
                 href="/blog/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 Blog
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
               <Link
                 href="/contact/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
               <Link
                 href="/reviews/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 Reviews
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
               <a
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#027502]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
                 role="menuitem"
               >
                 Testimonials
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#027502]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </a>
             </div>
           </div>
@@ -243,14 +243,14 @@ export default function Navbar() {
             <div className="px-4 py-4 space-y-2">
               <Link
                 href="/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Home
               </Link>
 
               <Link
                 href="/about/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 About Us
               </Link>
@@ -258,7 +258,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
                 >
                   Services
                   <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
@@ -270,25 +270,25 @@ export default function Navbar() {
                   <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
                     <Link
                       href="/services/valet-trash/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#027502] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#027502] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#027502] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#027502] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
                     >
                       Pressure Washing
                     </Link>
@@ -298,21 +298,21 @@ export default function Navbar() {
 
               <Link
                 href="/blog/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Blog
               </Link>
 
               <Link
                 href="/contact/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Contact
               </Link>
 
               <Link
                 href="/reviews/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Reviews
               </Link>
@@ -321,7 +321,7 @@ export default function Navbar() {
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#027502] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Testimonials
               </a>

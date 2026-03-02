@@ -96,7 +96,7 @@ export default function ServicesClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -130,7 +130,7 @@ export default function ServicesClient() {
             {whyChooseUs.map((item, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-full flex items-center justify-center text-[#027502] mx-auto mb-4">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center text-[#049704] mx-auto mb-4">
                     {item.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
@@ -145,7 +145,7 @@ export default function ServicesClient() {
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                    <div className="w-16 h-16 bg-[#027502] bg-opacity-10 rounded-lg flex items-center justify-center text-[#027502] mb-6">
+                    <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704] mb-6">
                       {service.icon}
                     </div>
                     <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -157,14 +157,14 @@ export default function ServicesClient() {
                     <ul className="space-y-3 mb-8">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-6 h-6 text-[#027502] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-6 h-6 text-[#049704] flex-shrink-0 mt-0.5" />
                           <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
                       href={service.link}
-                      className="inline-flex items-center gap-2 text-[#027502] font-semibold text-lg hover:gap-4 transition-all"
+                      className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
                     >
                       Learn More
                       <ArrowRight className="w-5 h-5" />
@@ -198,22 +198,22 @@ export default function ServicesClient() {
                   </p>
                   <ul className="space-y-4 mb-8">
                     <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#027502]" />
+                      <CheckCircle2 className="w-6 h-6 text-[#049704]" />
                       <span>Free on-site assessment</span>
                     </li>
                     <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#027502]" />
+                      <CheckCircle2 className="w-6 h-6 text-[#049704]" />
                       <span>Customized service plans</span>
                     </li>
                     <li className="flex items-center gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-[#027502]" />
+                      <CheckCircle2 className="w-6 h-6 text-[#049704]" />
                       <span>No long-term contracts required</span>
                     </li>
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       href="/contact/"
-                      className="inline-flex items-center justify-center gap-2 bg-[#027502] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
+                      className="inline-flex items-center justify-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105"
                     >
                       Get Free Quote
                       <ArrowRight className="w-5 h-5" />

@@ -21,7 +21,7 @@ export default function BlogClient() {
 
   return (
     <div className="min-h-screen">
-      <div className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#027502] overflow-hidden">
+      <div className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
 
@@ -29,13 +29,13 @@ export default function BlogClient() {
           <div className="flex flex-col justify-center items-center h-full text-center pt-40 pb-28">
             <ScrollReveal>
               <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-[#027502]/20 text-[#027502] rounded-full text-sm font-medium backdrop-blur-sm border border-[#027502]/30">
+                <span className="inline-block px-4 py-2 bg-[#049704]/20 text-[#049704] rounded-full text-sm font-medium backdrop-blur-sm border border-[#049704]/30">
                   Industry Insights
                 </span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Orlando Waste Management
-                <span className="block text-[#027502]">Insights & Tips</span>
+                <span className="block text-[#049704]">Insights & Tips</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Expert insights and practical advice for property managers looking to optimize their waste management operations and enhance resident satisfaction
@@ -50,7 +50,7 @@ export default function BlogClient() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
-              <div className="w-24 h-1 bg-[#027502] mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-[#049704] mx-auto rounded-full" />
             </div>
           </ScrollReveal>
 
@@ -66,7 +66,7 @@ export default function BlogClient() {
                       loading="eager"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-block px-4 py-2 bg-[#027502] text-white rounded-full text-sm font-medium">
+                      <span className="inline-block px-4 py-2 bg-[#049704] text-white rounded-full text-sm font-medium">
                         {featuredPost.category}
                       </span>
                     </div>
@@ -84,7 +84,7 @@ export default function BlogClient() {
                       </span>
                     </div>
 
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#027502] transition-colors">
+                    <h3 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-[#049704] transition-colors">
                       {featuredPost.title}
                     </h3>
 
@@ -92,7 +92,7 @@ export default function BlogClient() {
                       {featuredPost.excerpt}
                     </p>
 
-                    <div className="flex items-center text-[#027502] font-semibold group-hover:translate-x-2 transition-transform">
+                    <div className="flex items-center text-[#049704] font-semibold group-hover:translate-x-2 transition-transform">
                       Read Full Article
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
@@ -109,7 +109,7 @@ export default function BlogClient() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">All Articles</h2>
-              <div className="w-24 h-1 bg-[#027502] mx-auto rounded-full mb-8" />
+              <div className="w-24 h-1 bg-[#049704] mx-auto rounded-full mb-8" />
 
               <div className="flex flex-wrap justify-center gap-3">
                 {categories.map((category) => (
@@ -118,7 +118,7 @@ export default function BlogClient() {
                     onClick={() => setSelectedCategory(category)}
                     className={`px-6 py-2 rounded-full font-medium transition-all ${
                       selectedCategory === category
-                        ? 'bg-[#027502] text-white shadow-lg'
+                        ? 'bg-[#049704] text-white shadow-lg'
                         : 'bg-white text-gray-700 hover:bg-gray-100'
                     }`}
                   >
@@ -142,7 +142,7 @@ export default function BlogClient() {
                         loading="lazy"
                       />
                       <div className="absolute top-3 left-3">
-                        <span className="inline-block px-3 py-1 bg-[#027502] text-white rounded-full text-xs font-medium">
+                        <span className="inline-block px-3 py-1 bg-[#049704] text-white rounded-full text-xs font-medium">
                           {post.category}
                         </span>
                       </div>
@@ -160,7 +160,7 @@ export default function BlogClient() {
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#027502] transition-colors line-clamp-2">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#049704] transition-colors line-clamp-2">
                         {post.title}
                       </h3>
 
@@ -168,7 +168,7 @@ export default function BlogClient() {
                         {post.excerpt.replace(/<[^>]*>/g, '')}
                       </p>
 
-                      <div className="flex items-center text-[#027502] font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                      <div className="flex items-center text-[#049704] font-semibold text-sm group-hover:translate-x-2 transition-transform">
                         Read More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
@@ -187,7 +187,7 @@ export default function BlogClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-[#027502] to-[#027502]">
+      <section className="py-20 bg-gradient-to-r from-[#049704] to-[#049704]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -198,7 +198,7 @@ export default function BlogClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center px-8 py-4 bg-white text-[#027502] font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-white text-[#049704] font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />

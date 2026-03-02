@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div>
             <img
               src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
@@ -104,6 +104,31 @@ export default function Footer() {
                     aria-label={`Learn more about ${item.text}`}
                   >
                     <item.icon className="h-4 w-4 mr-2" aria-hidden="true" />
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-6">Service Areas</h3>
+            <ul className="space-y-3" role="list">
+              {[
+                { text: 'Orlando Valet Trash', link: '/valet-trash-orlando-fl/' },
+                { text: 'Kissimmee Valet Trash', link: '/valet-trash-kissimmee-fl/' },
+                { text: 'Altamonte Springs', link: '/valet-trash-altamonte-springs-fl/' },
+                { text: 'Lake Mary', link: '/valet-trash-lake-mary-fl/' },
+                { text: 'Orlando Bulk Removal', link: '/bulk-removal-orlando-fl/' },
+                { text: 'Orlando Junk Removal', link: '/junk-removal-orlando-fl/' }
+              ].map((item) => (
+                <li key={item.text}>
+                  <Link
+                    href={item.link}
+                    className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center group text-sm"
+                    aria-label={`${item.text} service area`}
+                  >
+                    <MapPin className="h-3 w-3 mr-2 flex-shrink-0" aria-hidden="true" />
                     {item.text}
                   </Link>
                 </li>

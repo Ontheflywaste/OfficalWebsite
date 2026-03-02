@@ -108,7 +108,7 @@ export default function BulkRemovalClient() {
     <div className="min-h-screen pt-32">
       <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&q=80&w=1920" alt="Bulk Removal Service" className="w-full h-full object-cover" />
+          <img src="/Images/Dumpster.jpg" alt="Bulk Removal Service" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

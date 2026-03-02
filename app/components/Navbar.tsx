@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Phone, Mail, MapPin, Clock, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Menu, X, ChevronDown, Star } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,9 +81,9 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex items-center justify-between transition-all duration-300 ${
+          <div className={`flex items-center justify-center md:justify-between transition-all duration-300 ${
             isScrolled ? 'h-20' : 'h-24'
-          }`}>
+          } relative`}>
             <div className="flex-shrink-0 transform transition-all duration-300 hover:scale-105 relative">
               <Link
                 href="/"
@@ -103,7 +103,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden transition-colors duration-300 text-white hover:text-[#027502]"
+              className="md:hidden absolute left-4 transition-colors duration-300 text-white hover:text-[#027502]"
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -236,6 +236,31 @@ export default function Navbar() {
               </a>
             </div>
           </div>
+        </div>
+
+        <div
+          className={`fixed right-4 transition-all duration-300 z-50 ${
+            shouldUseBlackNavbar || isMobile
+              ? 'top-24'
+              : 'top-36'
+          }`}
+        >
+          <a
+            href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white text-gray-900 px-4 py-3 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-105 border-2 border-[#027502]"
+            aria-label="View our 5.0 Google Rating"
+          >
+            <div className="flex gap-0.5">
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            </div>
+            <span className="font-bold text-sm whitespace-nowrap">5.0</span>
+          </a>
         </div>
 
         {isMobileMenuOpen && (

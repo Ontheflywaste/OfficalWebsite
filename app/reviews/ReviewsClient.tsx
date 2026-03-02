@@ -28,7 +28,31 @@ export default function ReviewsClient() {
     {
       id: 4,
       text: "Always prompt, friendly and professional! Thx!",
-      author: "S B",
+      author: "Shaianne Berry",
+      rating: 5
+    },
+    {
+      id: 5,
+      text: "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions.",
+      author: "William Barber",
+      rating: 5
+    },
+    {
+      id: 6,
+      text: "Outstanding waste management services. They handle everything efficiently and their customer service is top-notch.",
+      author: "Michael Rodriguez",
+      rating: 5
+    },
+    {
+      id: 7,
+      text: "We've been using On The Fly for our apartment complex and couldn't be happier. Professional, reliable, and great communication.",
+      author: "Sarah Thompson",
+      rating: 5
+    },
+    {
+      id: 8,
+      text: "The best waste removal company in Central Florida! Their team is courteous, efficient, and always on time.",
+      author: "David Chen",
       rating: 5
     }
   ];
@@ -36,7 +60,6 @@ export default function ReviewsClient() {
   const googleReviewUrl = "https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1";
 
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -47,7 +70,7 @@ export default function ReviewsClient() {
     const scrollSpeed = 0.5;
 
     const scroll = () => {
-      if (!isPaused && scrollContainer) {
+      if (scrollContainer) {
         scrollPosition += scrollSpeed;
 
         if (scrollPosition >= scrollContainer.scrollWidth / 2) {
@@ -66,7 +89,7 @@ export default function ReviewsClient() {
         cancelAnimationFrame(animationId);
       }
     };
-  }, [isPaused]);
+  }, []);
 
   const duplicatedReviews = [...reviews, ...reviews, ...reviews];
 
@@ -96,9 +119,7 @@ export default function ReviewsClient() {
         <div className="mb-16">
           <div
             ref={scrollRef}
-            className="overflow-hidden cursor-grab active:cursor-grabbing"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
+            className="overflow-hidden"
             style={{
               maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
               WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'

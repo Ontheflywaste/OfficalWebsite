@@ -159,6 +159,78 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive waste management solutions for your property
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ScrollReveal delay={0.1}>
+              <Link href="/services/valet-trash/" className="group h-full">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash pickup with SLA-backed 100% collection rate and photo verification</p>
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
+                  </span>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Link href="/services/junk-removal/" className="group h-full">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-gray-900 transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
+                    <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Fast, professional removal with same-day service available for urgent needs</p>
+                  <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
+                  </span>
+                </div>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <Link href="/services/bulk-removal/" className="group h-full">
+                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
+                    <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Scheduled pickup of oversized items with flexible property-wide services</p>
+                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Learn More <ArrowRight className="w-5 h-5" />
+                  </span>
+                </div>
+              </Link>
+            </ScrollReveal>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/services/"
+              className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
@@ -258,112 +330,40 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704]">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704] h-full flex flex-col">
                 <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-8 h-8 text-[#049704]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">SLA-Backed Guarantee</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed flex-grow">
                   100% collection rate backed by Service Level Agreement with documented photo verification for complete accountability.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-gray-900">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-gray-900 h-full flex flex-col">
                 <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6">
                   <Building2 className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Property Focused</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed flex-grow">
                   Specialized in multi-family properties with dedicated account management and real-time service notifications.
                 </p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704]">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#049704] h-full flex flex-col">
                 <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-full flex items-center justify-center mb-6">
                   <Recycle className="w-8 h-8 text-[#049704]" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Transparency</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed flex-grow">
                   Real-time photo documentation, detailed service reports, and 24/7 customer support ensure total visibility.
                 </p>
               </div>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive waste management solutions for your property
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Link href="/services/valet-trash/" className="group">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
-                    <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">Premier doorstep trash pickup with SLA-backed 100% collection rate and photo verification</p>
-                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <Link href="/services/junk-removal/" className="group">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-gray-900 transition-all transform hover:-translate-y-2">
-                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-900 transition-colors">
-                    <Building2 className="w-10 h-10 text-gray-900 group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">Fast, professional removal with same-day service available for urgent needs</p>
-                  <span className="text-gray-900 font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <Link href="/services/bulk-removal/" className="group">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
-                    <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">Scheduled pickup of oversized items with flexible property-wide services</p>
-                  <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 text-[#049704] font-semibold text-lg hover:gap-4 transition-all"
-            >
-              View All Services
-              <ArrowRight className="w-5 h-5" />
-            </Link>
           </div>
         </div>
       </section>

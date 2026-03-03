@@ -39,9 +39,10 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-transform duration-300 z-50 ${
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-all duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } hidden md:block`}
+        style={{ willChange: 'transform' }}
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,6 +75,7 @@ export default function Navbar() {
             ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
             : 'top-0 md:top-10 bg-gradient-to-b from-[#050505]/95 to-[#1A1A1A]/95 backdrop-blur-md'
         }`}
+        style={{ willChange: 'transform, top' }}
         role="navigation"
         aria-label="Main navigation"
       >

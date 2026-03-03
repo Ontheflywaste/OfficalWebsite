@@ -547,6 +547,12 @@ export default function HomeClient() {
               <Link href="/service-areas/davenport-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Davenport</span>
               </Link>
+              <Link href="/service-areas/space-coast-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Space Coast</span>
+              </Link>
+              <Link href="/service-areas/daytona-beach-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
+                <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Daytona Beach</span>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

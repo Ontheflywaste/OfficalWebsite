@@ -55,12 +55,12 @@ export default function ServiceAreaClient({
 
   return (
     <>
-      <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
+      <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/Images/Dumpster.jpg')] bg-cover bg-center"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[calc(60vh-8rem)]">
           <ScrollReveal>
             <div className="flex items-center gap-2 text-white/80 mb-4">
               <MapPin className="w-5 h-5" />

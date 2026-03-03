@@ -585,7 +585,7 @@ export default function HomeClient() {
             <div className="relative overflow-hidden">
               <div className="flex animate-scroll">
                 <div className="flex items-center gap-16 pr-16">
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
@@ -593,7 +593,7 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
@@ -601,7 +601,7 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/AAGO.png"
                       alt="AAGO"
@@ -613,7 +613,7 @@ export default function HomeClient() {
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
                     rel="nofollow"
-                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
+                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:scale-105 transition-transform"
                   >
                     <img
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
@@ -624,7 +624,7 @@ export default function HomeClient() {
                   </a>
                 </div>
                 <div className="flex items-center gap-16 pr-16" aria-hidden="true">
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
@@ -632,7 +632,7 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
@@ -640,7 +640,7 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                     <img
                       src="/Images/AAGO.png"
                       alt="AAGO"
@@ -652,7 +652,7 @@ export default function HomeClient() {
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
                     rel="nofollow"
-                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white rounded-lg p-4 hover:scale-105 transition-transform"
+                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:scale-105 transition-transform"
                   >
                     <img
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"

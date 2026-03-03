@@ -3,7 +3,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import ContactForm from '@/app/components/ContactForm';
+import HubSpotForm from '@app/components/HubSpotForm';
 
 export default function ContactClient() {
 

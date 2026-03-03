@@ -165,7 +165,7 @@ export default function Footer() {
                   aria-label="Email us at info@ontheflywastesolutions.com"
                 >
                   <Mail className="h-5 w-5 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="break-words text-sm sm:text-base">info@ontheflywastesolutions.com</span>
+                  <span className="break-all text-sm sm:text-base">info@ontheflywastesolutions.com</span>
                 </a>
               </li>
               <li>

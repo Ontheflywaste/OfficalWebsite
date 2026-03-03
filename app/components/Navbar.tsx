@@ -33,7 +33,6 @@ export default function Navbar() {
   }, [pathname]);
 
   const isPostPage = pathname?.startsWith('/blog/') || false;
-  const isMobile = typeof window !== 'undefined' ? window.innerWidth < 768 : false;
   const shouldUseBlackLogo = isScrolled || isPostPage;
   const shouldUseBlackNavbar = isScrolled || isPostPage;
 
@@ -73,9 +72,7 @@ export default function Navbar() {
         className={`fixed w-full z-50 transition-all duration-300 ${
           shouldUseBlackNavbar
             ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
-            : isMobile
-              ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
-              : 'top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
+            : 'top-0 md:top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"

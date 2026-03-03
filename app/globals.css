@@ -18,6 +18,10 @@ html {
   font-display: swap;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Critical CSS inlined in HTML head */
 .hero-container {
   min-height: 100vh;
@@ -203,11 +207,22 @@ html {
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Smooth scroll padding for fixed header */
+html {
+  scroll-padding-top: 120px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+  }
 }
 
 /* HubSpot Form Styling */

@@ -22,7 +22,7 @@ export default function Footer() {
               Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
             </p>
             <Link
-              href="/reviews"
+              href="/reviews/"
               className="flex items-center gap-2 mb-6 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20 w-fit hover:bg-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
               aria-label="View our 5-star Google reviews"
             >

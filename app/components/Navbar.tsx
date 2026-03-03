@@ -69,10 +69,10 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 ${
+        className={`fixed w-full z-40 transition-all duration-300 ${
           shouldUseBlackNavbar
             ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
-            : 'top-0 md:top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] backdrop-blur-md'
+            : 'top-0 md:top-10 bg-gradient-to-b from-[#050505]/95 to-[#1A1A1A]/95 backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"

@@ -40,7 +40,7 @@ export default function HomeClient() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-36">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <img
             src="/Images/hero-desktop.jpg"
@@ -52,16 +52,16 @@ export default function HomeClient() {
           <div className="absolute inset-0 bg-black/35"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
           <ScrollReveal>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Valet Trash, Bulk & Junk Removal Services<br />
               <span className="text-[#049704]">Orlando, FL</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto px-4">
               Orlando's trusted valet trash service for apartments, condos, and resort communities. Professional bulk removal and junk removal services across Central Florida.
             </p>
           </ScrollReveal>
@@ -108,8 +108,8 @@ export default function HomeClient() {
             </a>
           </ScrollReveal>
 
-          <div className="absolute bottom-6 left-0 right-0 text-center">
-            <p className="text-white/80 text-sm md:text-base font-light tracking-wide">
+          <div className="absolute bottom-6 left-0 right-0 text-center px-4">
+            <p className="text-white/80 text-xs sm:text-sm md:text-base font-light tracking-wide">
               Proudly serving premier communities like The Aston at Uptown
             </p>
           </div>

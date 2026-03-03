@@ -33,7 +33,7 @@ export default function AboutClient() {
     {
       name: "Donnell Edwards",
       title: "CEO & Founder",
-      image: "/Images/team/Donnell2.jpg",
+      image: "/Images/Donnell2.jpg",
       description: "Visionary leader committed to revolutionizing waste management in Central Florida"
     },
     {
@@ -45,7 +45,7 @@ export default function AboutClient() {
     {
       name: "Steven Edwards",
       title: "Chief Financial Officer",
-      image: "/Images/team/Steven2.jpg",
+      image: "/Images/Steven2.jpg",
       description: "Leads our dedicated team with hands-on expertise and commitment to quality"
     }
   ];
@@ -150,11 +150,9 @@ export default function AboutClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <img
-                  src="/Images/about-us.jpg"
-                  alt="On The Fly team delivering exceptional service"
-                  className="rounded-2xl shadow-2xl"
-                />
+                <div className="bg-gray-200 rounded-2xl shadow-2xl flex items-center justify-center aspect-square">
+                  <span className="text-gray-600 text-xl font-medium">Image Coming Soon</span>
+                </div>
                 <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl">
                   <div className="text-4xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>

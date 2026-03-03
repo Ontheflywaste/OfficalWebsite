@@ -57,7 +57,7 @@ export default function ServiceAreaClient({
     <>
       <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/Images/Theastonatuptownheroimage.webp')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/Images/Dumpster.jpg')] bg-cover bg-center"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

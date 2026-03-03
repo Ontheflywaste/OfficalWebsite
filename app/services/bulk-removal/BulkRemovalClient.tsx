@@ -109,7 +109,7 @@ export default function BulkRemovalClient() {
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <img
-            src="/Images/Residential-Junk-Removal-McAllen-Dumpster-Rental-Junk-Removal-Services-1024x768-2.jpg"
+            src="/Images/Dumpster.jpg"
             alt="Professional bulk removal service for apartment communities"
             className="w-full h-full object-cover"
             loading="eager"
@@ -186,10 +186,10 @@ export default function BulkRemovalClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow">
+                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow h-full">
                   <div className="flex-shrink-0 w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704]">
                     {benefit.icon}
                   </div>
@@ -217,10 +217,10 @@ export default function BulkRemovalClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {propertyServices.map((service, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow h-full">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <ul className="space-y-3">
@@ -299,10 +299,10 @@ export default function BulkRemovalClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {testimonials.map((testimonial, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-sm">
+                <div className="bg-white p-8 rounded-xl shadow-sm h-full">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#049704] text-[#049704]" />

@@ -57,7 +57,7 @@ export default function ServicesClient() {
         "Eco-friendly solutions"
       ],
       link: "/services/pressure-washing/",
-      image: "/Images/pressure-wash.jpg"
+      image: "/Images/PressureWashingService.jpeg"
     }
   ];
 

@@ -221,10 +221,10 @@ export default function PressureWashingClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow">
+                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow h-full">
                   <div className="flex-shrink-0 w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704]">
                     {benefit.icon}
                   </div>
@@ -252,10 +252,10 @@ export default function PressureWashingClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {propertyTypes.map((type, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow h-full">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">{type.title}</h3>
                   <ul className="space-y-3">
                     {type.features.map((feature, idx) => (
@@ -333,10 +333,10 @@ export default function PressureWashingClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {testimonials.map((testimonial, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-sm">
+                <div className="bg-white p-8 rounded-xl shadow-sm h-full">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#049704] text-[#049704]" />

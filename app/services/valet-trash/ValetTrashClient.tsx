@@ -162,7 +162,7 @@ export default function ValetTrashClient() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             <ScrollReveal>
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -221,9 +221,9 @@ export default function ValetTrashClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <div className="bg-white p-8 rounded-2xl shadow-xl h-full">
                 <img
-                  src="/Images/Trash-pickup.jpg"
+                  src="/Images/Valettrashimage.jpg"
                   alt="Professional valet trash collection service"
                   className="w-full h-96 object-cover rounded-lg mb-6"
                 />
@@ -305,10 +305,10 @@ export default function ValetTrashClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {testimonials.map((testimonial, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 p-8 rounded-xl">
+                <div className="bg-gray-50 p-8 rounded-xl h-full">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#049704] text-[#049704]" />

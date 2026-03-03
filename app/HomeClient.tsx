@@ -516,36 +516,36 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              <Link href="/valet-trash-orlando-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Orlando</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-kissimmee-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Kissimmee</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-altamonte-springs-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Altamonte Springs</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-lake-mary-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Lake Mary</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-apopka-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Apopka</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-clermont-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Clermont</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-winter-park-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Winter Park</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-sanford-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Sanford</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/valet-trash-st-cloud-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">St. Cloud</span>
-              </div>
-              <div className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group">
+              </Link>
+              <Link href="/service-areas/davenport-fl/" className="bg-white border-2 border-[#049704]/20 hover:border-[#049704] hover:bg-[#049704]/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
                 <span className="font-semibold text-gray-900 group-hover:text-[#049704] transition-colors">Davenport</span>
-              </div>
+              </Link>
             </div>
           </ScrollReveal>
         </div>

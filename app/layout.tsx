@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     ],
     apple: '/Images/Favicon1.png',
   },
-  metadataBase: new URL('https://ontheflywastesolutions.com'),
+  metadataBase: new URL('https://www.ontheflywastesolutions.com'),
 };
 
 export default function RootLayout({

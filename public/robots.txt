@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
 Sitemap: https://www.ontheflywastesolutions.com/sitemap.xml

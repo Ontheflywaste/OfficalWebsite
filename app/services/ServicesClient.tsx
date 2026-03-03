@@ -18,7 +18,7 @@ export default function ServicesClient() {
         "Customizable collection windows"
       ],
       link: "/services/valet-trash/",
-      image: "/Images/Trash-pickup.jpg"
+      image: "/Images/Valettrashimage.jpg"
     },
     {
       icon: <Package className="w-12 h-12" />,
@@ -44,7 +44,7 @@ export default function ServicesClient() {
         "Turn-ready solutions"
       ],
       link: "/services/bulk-removal/",
-      image: "/Images/Residential-Junk-Removal-McAllen-Dumpster-Rental-Junk-Removal-Services-1024x768-2.jpg"
+      image: "/Images/Dumpster.jpg"
     },
     {
       icon: <Sparkles className="w-12 h-12" />,

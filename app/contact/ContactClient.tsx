@@ -8,19 +8,19 @@ import ContactForm from '@/app/components/ContactForm';
 export default function ContactClient() {
 
   return (
-    <div className="min-h-screen bg-white pt-32">
+    <div className="min-h-screen bg-white pt-20 md:pt-24">
       <div className="relative bg-gradient-to-br from-gray-900 to-[#049704] py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Let's Transform Your
               <span className="block text-[#049704] bg-white px-4 py-2 rounded-lg inline-block mt-2">
                 Community Together
               </span>
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
               Ready to enhance your property with professional valet trash services? We're here to help you every step of the way.
             </p>
           </ScrollReveal>
@@ -33,7 +33,7 @@ export default function ContactClient() {
             <div className="lg:col-span-2">
               <ScrollReveal>
                 <div className="mb-6">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
                   <ContactForm />
                 </div>
               </ScrollReveal>
@@ -41,8 +41,8 @@ export default function ContactClient() {
 
             <div className="space-y-6">
               <ScrollReveal delay={0.1}>
-                <div className="bg-gradient-to-br from-[#049704] to-[#049704] rounded-2xl p-8 text-white">
-                  <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                <div className="bg-gradient-to-br from-[#049704] to-[#049704] rounded-2xl p-6 sm:p-8 text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-6">Contact Information</h3>
 
                   <div className="space-y-6">
                     <div className="flex items-start">
@@ -89,8 +89,8 @@ export default function ContactClient() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <div className="bg-gray-50 rounded-2xl p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
+                <div className="bg-gray-50 rounded-2xl p-6 sm:p-8">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <CheckCircle2 className="h-5 w-5 text-[#049704] mr-3 flex-shrink-0 mt-0.5" />

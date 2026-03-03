@@ -301,3 +301,33 @@ iframe#hubspot-conversations-iframe {
 #hs-eu-cookie-confirmation-inner {
   z-index: 10000 !important;
 }
+
+/* Hide HubSpot form side image wrapper */
+#hubspot-form-container .hs-form-iframe,
+#hubspot-form-container iframe[src*="image"],
+#hubspot-form-container .hbspt-form iframe,
+.hubspot-form-wrapper .hs-form-iframe,
+.hubspot-form-wrapper iframe[src*="image"] {
+  display: none !important;
+}
+
+#hubspot-form-container img[src*="hubspot"],
+.hubspot-form-wrapper img[src*="hubspot"] {
+  display: none !important;
+}
+
+/* Modal animation */
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}

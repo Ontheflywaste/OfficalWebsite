@@ -45,18 +45,19 @@ export default function HomeClient() {
           <img
             src="/Images/TruckImage.JPG"
             alt="On The Fly Waste Solutions providing valet trash services at luxury apartment communities in Central Florida"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{ filter: 'brightness(0.9) contrast(1.1) saturate(1.2)' }}
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/35"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
           <ScrollReveal>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
               Valet Trash, Bulk & Junk Removal Services<br />
-              <span className="text-[#049704]">Orlando, FL</span>
+              <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>Orlando, FL</span>
             </h1>
           </ScrollReveal>
 

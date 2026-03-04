@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-all duration-300 z-50 ${
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-all duration-300 z-30 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } hidden md:block`}
         style={{ willChange: 'transform' }}

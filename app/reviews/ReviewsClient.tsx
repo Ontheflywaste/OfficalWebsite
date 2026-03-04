@@ -131,8 +131,8 @@ export default function ReviewsClient() {
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/3tCkAWYyJuE"
-                    title="Client Success Story - On The Fly Testimonial"
+                    src="https://www.youtube.com/embed/gFYjibflN3U"
+                    title="Encore Testimonial - On The Fly Waste Solutions"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -140,25 +140,32 @@ export default function ReviewsClient() {
                   ></iframe>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Client Success Story
+                  Encore Testimonial
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Hear from our satisfied clients about their experience with On The Fly Waste Solutions and how we've transformed their property's waste management.
+                  Hear from the Encore community about their experience with On The Fly Waste Solutions and our reliable valet trash services.
                 </p>
               </div>
 
-              <div className="bg-[#1A1A1A] border-2 border-[#049704] rounded-2xl p-6 shadow-2xl flex items-center justify-center">
-                <div className="text-center py-12">
-                  <div className="w-20 h-20 bg-[#049704] bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Star className="w-10 h-10 text-[#049704]" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
-                    More Success Stories Coming Soon
-                  </h3>
-                  <p className="text-gray-400">
-                    We're capturing more client testimonials to share with you.
-                  </p>
+              <div className="bg-[#1A1A1A] border-2 border-[#049704] rounded-2xl p-6 shadow-2xl">
+                <div className="aspect-video mb-6 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/3tCkAWYyJuE"
+                    title="The Aston at Uptown Testimonial - On The Fly Waste Solutions"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  The Aston at Uptown
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  See how On The Fly Waste Solutions has transformed waste management at The Aston at Uptown community.
+                </p>
               </div>
             </div>
           </div>

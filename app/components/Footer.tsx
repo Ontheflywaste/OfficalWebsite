@@ -115,15 +115,22 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-white mb-6">Service Areas</h3>
             <ul className="space-y-3" role="list">
               {[
-                { text: 'Orlando Valet Trash', link: '/valet-trash-orlando-fl/' },
-                { text: 'Kissimmee Valet Trash', link: '/valet-trash-kissimmee-fl/' },
+                { text: 'Orlando', link: '/valet-trash-orlando-fl/' },
+                { text: 'Kissimmee', link: '/valet-trash-kissimmee-fl/' },
                 { text: 'Altamonte Springs', link: '/valet-trash-altamonte-springs-fl/' },
                 { text: 'Lake Mary', link: '/valet-trash-lake-mary-fl/' },
+                { text: 'Apopka', link: '/valet-trash-apopka-fl/' },
+                { text: 'Sanford', link: '/valet-trash-sanford-fl/' },
+                { text: 'Winter Park', link: '/valet-trash-winter-park-fl/' },
+                { text: 'St. Cloud', link: '/valet-trash-st-cloud-fl/' },
+                { text: 'Clermont', link: '/valet-trash-clermont-fl/' },
                 { text: 'Davenport', link: '/service-areas/davenport-fl/' },
                 { text: 'ChampionsGate', link: '/service-areas/championsgate-fl/' },
                 { text: 'Celebration', link: '/service-areas/celebration-fl/' },
                 { text: 'Winter Haven', link: '/service-areas/winter-haven-fl/' },
-                { text: 'Winter Garden', link: '/service-areas/winter-garden-fl/' }
+                { text: 'Winter Garden', link: '/service-areas/winter-garden-fl/' },
+                { text: 'Space Coast', link: '/service-areas/space-coast-fl/' },
+                { text: 'Daytona Beach', link: '/service-areas/daytona-beach-fl/' }
               ].map((item) => (
                 <li key={item.text}>
                   <Link

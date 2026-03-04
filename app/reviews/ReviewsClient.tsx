@@ -131,8 +131,8 @@ export default function ReviewsClient() {
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/gFYjibflN3U"
-                    title="Encore Resort at Reunion - On The Fly Testimonial"
+                    src="https://www.youtube.com/embed/3tCkAWYyJuE"
+                    title="Client Success Story - On The Fly Testimonial"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
@@ -140,10 +140,10 @@ export default function ReviewsClient() {
                   ></iframe>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Encore Resort at Reunion - 700+ Units Managed
+                  Client Success Story
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Community Manager Aura Zeland and Vendor Supervisor William Barber discuss why On The Fly is the most reliable partner they've ever worked with.
+                  Hear from our satisfied clients about their experience with On The Fly Waste Solutions and how we've transformed their property's waste management.
                 </p>
               </div>
 

@@ -110,33 +110,8 @@ export default function ContactClient() {
             {/* Left Column - Form */}
             <div>
               <ScrollReveal>
-                <div className="bg-white rounded-2xl shadow-xl p-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                    Get Your Free Quote
-                  </h2>
-                  <p className="text-lg text-gray-600 mb-6">
-                    Fill out the form below and we will contact you within 24 hours
-                  </p>
-
-                  {/* Contact Info */}
-                  <div className="mb-8 space-y-4 pb-8 border-b border-gray-200">
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5 text-[#049704]" />
-                      <a href="tel:407-274-5019" className="text-gray-700 hover:text-[#049704] transition-colors font-medium">
-                        (407) 274-5019
-                      </a>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-[#049704]" />
-                      <a href="mailto:info@ontheflywastesolutions.com" className="text-gray-700 hover:text-[#049704] transition-colors font-medium">
-                        info@ontheflywastesolutions.com
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* HubSpot Form Container */}
-                  <div id="hubspot-form-container"></div>
-                </div>
+                {/* HubSpot Form Container */}
+                <div id="hubspot-form-container"></div>
               </ScrollReveal>
             </div>
 

@@ -16,41 +16,23 @@ export default function ReviewsPage() {
   const videoSchema1 = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "Encore Resort at Reunion - On The Fly Waste Solutions Testimonial",
-    "description": "Community Manager Aura Zeland and Vendor Supervisor William Barber from Encore Resort at Reunion discuss why On The Fly is the most reliable valet trash partner they've ever worked with. Serving over 700 units in Orlando, Florida.",
+    "name": "On The Fly Waste Solutions - Customer Reviews & Service Overview",
+    "description": "Watch what customers and apartment communities say about On The Fly Waste Solutions valet trash and bulk removal services in Orlando and Central Florida.",
     "thumbnailUrl": "https://img.youtube.com/vi/gFYjibflN3U/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
-    "contentUrl": "https://www.youtube.com/watch?v=gFYjibflN3U",
+    "uploadDate": "2024-01-01T00:00:00+00:00",
     "embedUrl": "https://www.youtube.com/embed/gFYjibflN3U",
-    "duration": "PT2M",
-    "publisher": {
-      "@type": "Organization",
-      "name": "On The Fly Waste Solutions",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ontheflywastesolutions.com/logos/white-logo.png"
-      }
-    }
+    "contentUrl": "https://www.youtube.com/watch?v=gFYjibflN3U"
   };
 
   const videoSchema2 = {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    "name": "The Aston at Uptown - On The Fly Waste Solutions Testimonial",
-    "description": "Property management team at The Aston at Uptown shares their experience with On The Fly Waste Solutions' reliable valet trash and waste management services in Orlando, Florida.",
+    "name": "On The Fly Waste Solutions - Valet Trash Service Testimonials Orlando FL",
+    "description": "Real testimonials from satisfied apartment communities and residents about On The Fly Waste Solutions reliable valet trash pickup, junk removal, and waste solutions in Central Florida.",
     "thumbnailUrl": "https://img.youtube.com/vi/3tCkAWYyJuE/maxresdefault.jpg",
-    "uploadDate": "2024-01-01",
-    "contentUrl": "https://www.youtube.com/watch?v=3tCkAWYyJuE",
+    "uploadDate": "2024-01-01T00:00:00+00:00",
     "embedUrl": "https://www.youtube.com/embed/3tCkAWYyJuE",
-    "duration": "PT2M",
-    "publisher": {
-      "@type": "Organization",
-      "name": "On The Fly Waste Solutions",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ontheflywastesolutions.com/logos/white-logo.png"
-      }
-    }
+    "contentUrl": "https://www.youtube.com/watch?v=3tCkAWYyJuE"
   };
 
   return (

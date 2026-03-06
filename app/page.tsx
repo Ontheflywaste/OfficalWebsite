@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
@@ -33,5 +34,25 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <HomeClient />;
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "On The Fly Waste Solutions - Professional Valet Trash & Junk Removal Services",
+    "description": "See how On The Fly Waste Solutions provides professional valet trash pickup, junk removal, and waste management services for apartment communities and residents in Central Florida.",
+    "thumbnailUrl": "https://img.youtube.com/vi/gFYjibflN3U/maxresdefault.jpg",
+    "uploadDate": "2024-01-01T00:00:00+00:00",
+    "embedUrl": "https://www.youtube.com/embed/gFYjibflN3U",
+    "contentUrl": "https://www.youtube.com/watch?v=gFYjibflN3U"
+  };
+
+  return (
+    <>
+      <Script
+        id="video-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
+      <HomeClient />
+    </>
+  );
 }

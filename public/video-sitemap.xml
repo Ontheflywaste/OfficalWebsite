@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-
-  <url>
-    <loc>https://ontheflywastesolutions.com/</loc>
-    <video:video>
-      <video:thumbnail_loc>https://ontheflywastesolutions.com/path/to/hero-poster.webp</video:thumbnail_loc>
-      <video:title>Hero Video Tour</video:title>
-      <video:description>A quick overview of our valet trash and bulk removal service.</video:description>
-      <video:content_loc>https://ontheflywastesolutions.com/videos/HerosectionvideoNew.mp4</video:content_loc>
-      <video:player_loc></video:player_loc>
-    </video:video>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://ontheflywastesolutions.com/</loc>
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/gFYjibflN3U/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>Client Testimonial</video:title>
-      <video:description>Hear from Reunion East management about our reliable service.</video:description>
-      <video:content_loc>https://www.youtube.com/watch?v=gFYjibflN3U</video:content_loc>
+      <video:title>On The Fly Waste Solutions - Professional Valet Trash &amp; Junk Removal Services</video:title>
+      <video:description>See how On The Fly Waste Solutions provides professional valet trash pickup, junk removal, and waste management services for apartment communities and residents in Central Florida.</video:description>
       <video:player_loc>https://www.youtube.com/embed/gFYjibflN3U</video:player_loc>
+      <video:duration>120</video:duration>
+      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
     </video:video>
   </url>
-
+  <url>
+    <loc>https://ontheflywastesolutions.com/reviews/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/gFYjibflN3U/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>On The Fly Waste Solutions - Customer Reviews &amp; Service Overview</video:title>
+      <video:description>Watch what customers and apartment communities say about On The Fly Waste Solutions valet trash and bulk removal services in Orlando and Central Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/gFYjibflN3U</video:player_loc>
+      <video:duration>120</video:duration>
+      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3tCkAWYyJuE/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>On The Fly Waste Solutions - Valet Trash Service Testimonials Orlando FL</video:title>
+      <video:description>Real testimonials from satisfied apartment communities and residents about On The Fly Waste Solutions reliable valet trash pickup, junk removal, and waste solutions in Central Florida.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/3tCkAWYyJuE</video:player_loc>
+      <video:duration>120</video:duration>
+      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
 </urlset>

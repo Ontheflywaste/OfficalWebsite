@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
@@ -13,11 +13,11 @@ export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setIsClient(true);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!isClient) return;
 
     const observer = new IntersectionObserver(
@@ -66,13 +66,13 @@ export default function HomeClient() {
     }
   ];
 
-  if (!isClient) {
-    return <div className="min-h-screen bg-white" />;
-  }
-
   return (
-    <div suppressHydrationWarning={true}>
+    <>
       <FAQSchema faqs={faqs} />
+      {!isClient ? (
+        <div className="min-h-screen bg-white" />
+      ) : (
+        <div suppressHydrationWarning={true}>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <Image
@@ -800,6 +800,8 @@ export default function HomeClient() {
           </ScrollReveal>
         </div>
       </section>
-    </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
 
+// Dynamic import for client-side rendering
 const HomeClient = dynamic(() => import('./HomeClient'), { ssr: false });
 
 export const metadata: Metadata = {

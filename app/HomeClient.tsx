@@ -9,8 +9,13 @@ import HubSpotForm from './components/HubSpotForm';
 import FAQSchema from './components/FAQSchema';
 
 export default function HomeClient() {
+  const [mounted, setMounted] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   React.useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,8 +64,12 @@ export default function HomeClient() {
     }
   ];
 
+  if (!mounted) {
+    return <div className="min-h-screen" />;
+  }
+
   return (
-    <div suppressHydrationWarning>
+    <div suppressHydrationWarning={true}>
       <FAQSchema faqs={faqs} />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">

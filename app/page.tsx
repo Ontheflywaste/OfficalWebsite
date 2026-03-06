@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description: 'Trusted by property managers across Central Florida for reliable valet trash and waste management solutions.',
     type: 'website',
     url: 'https://www.ontheflywastesolutions.com/',
+    siteName: 'On The Fly Waste Solutions',
+    locale: 'en_US',
     images: [
       {
         url: 'https://www.ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp',
@@ -21,6 +23,12 @@ export const metadata: Metadata = {
         alt: 'On The Fly Waste Solutions - Valet Trash Services Orlando FL',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Professional Valet Trash & Junk Removal Services Orlando FL',
+    description: 'Trusted by property managers across Central Florida for reliable valet trash and waste management solutions.',
+    images: ['https://www.ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp'],
   },
 };
 

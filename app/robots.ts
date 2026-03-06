@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/api/', '/_next/', '/admin/'],
     },
-    sitemap: 'https://ontheflywastesolutions.com/sitemap.xml',
+    sitemap: 'https://www.ontheflywastesolutions.com/sitemap.xml',
   };
 }

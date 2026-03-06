@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, Trash2, Package, Droplet, Star } from 'lucide-react';
 
 export default function Footer() {
@@ -10,13 +11,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div>
-            <img
+            <Image
               src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
               alt="On The Fly Waste Solutions Logo"
-              className="h-12 sm:h-14 md:h-16 object-contain mb-6"
+              width={150}
+              height={48}
+              className="h-12 sm:h-14 md:h-16 w-auto object-contain mb-6"
               loading="lazy"
-              width="150"
-              height="48"
             />
             <p className="text-gray-200 mb-6">
               Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.

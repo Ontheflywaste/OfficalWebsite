@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Phone, Mail, MapPin, Clock, Menu, X, ChevronDown, Star } from 'lucide-react';
 
@@ -89,13 +90,13 @@ export default function Navbar() {
                 aria-label="On The Fly Waste Solutions – Home"
                 className="block"
               >
-                <img
+                <Image
                   src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                   alt="On The Fly Waste Solutions logo"
-                  width="250"
-                  height="80"
+                  width={250}
+                  height={80}
+                  priority
                   className={`${isScrolled ? 'h-16' : 'h-20'} w-auto transition-all duration-300 object-contain opacity-100 relative`}
-                  loading="eager"
                 />
               </Link>
             </div>

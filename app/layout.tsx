@@ -1,8 +1,17 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HubSpotChat from './components/HubSpotChat';
+import { WebVitals } from './components/WebVitals';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'On The Fly Waste Solutions | Professional Valet Trash Services Orlando FL',
@@ -16,6 +25,20 @@ export const metadata: Metadata = {
     apple: '/Images/Favicon1.png',
   },
   metadataBase: new URL('https://www.ontheflywastesolutions.com'),
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -24,8 +47,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//js.hs-scripts.com" />
+        <link rel="dns-prefetch" href="//js.hsforms.net" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
         <script
           id="schema-org"
           type="application/ld+json"
@@ -224,6 +252,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white">
+        <WebVitals />
         <Navbar />
         <main>{children}</main>
         <Footer />

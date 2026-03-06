@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
@@ -11,9 +12,28 @@ export default function HomeClient() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => setIsVideoLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVideoLoaded) {
+            setIsVideoLoaded(true);
+          }
+        });
+      },
+      { rootMargin: '50px' }
+    );
+
+    const videoSection = document.getElementById('video-section');
+    if (videoSection) {
+      observer.observe(videoSection);
+    }
+
+    return () => {
+      if (videoSection) {
+        observer.unobserve(videoSection);
+      }
+    };
+  }, [isVideoLoaded]);
 
   const faqs = [
     {
@@ -42,13 +62,15 @@ export default function HomeClient() {
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/TruckImage.JPG"
             alt="On The Fly Waste Solutions providing valet trash services at luxury apartment communities in Central Florida"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            fill
+            priority
+            quality={85}
+            sizes="100vw"
+            className="object-cover object-center"
             style={{ filter: 'brightness(0.9) contrast(1.1) saturate(1.2)' }}
-            loading="eager"
-            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
         </div>
@@ -149,7 +171,7 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="relative py-20 overflow-hidden">
+      <section id="video-section" className="relative py-20 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
         <div className="absolute inset-0">
           {isVideoLoaded && (
@@ -158,6 +180,7 @@ export default function HomeClient() {
               loop
               muted
               playsInline
+              preload="none"
               className="absolute inset-0 w-full h-full object-cover"
             >
               <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
@@ -200,11 +223,13 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative">
-                <img
+              <div className="relative aspect-[4/3] w-full">
+                <Image
                   src="/Images/artemistradeshow.jpg"
                   alt="On The Fly Waste Solutions team at trade show"
-                  className="w-full h-auto rounded-2xl shadow-2xl border-4 border-white/10"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-2xl shadow-2xl border-4 border-white/10 object-cover"
                   loading="lazy"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl hidden lg:block">

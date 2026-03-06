@@ -33,7 +33,7 @@ export default function HubSpotChat() {
     <Script
       id="hs-script-loader"
       src="//js.hs-scripts.com/22416220.js"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
     />
   );
 }

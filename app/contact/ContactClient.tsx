@@ -19,18 +19,23 @@ export default function ContactClient() {
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//js.hsforms.net/forms/embed/v2.js';
-    script.async = true;
-    script.charset = 'utf-8';
-    script.onload = () => {
-      setScriptLoaded(true);
-    };
-    document.body.appendChild(script);
+    const timer = setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = '//js.hsforms.net/forms/embed/v2.js';
+      script.async = true;
+      script.defer = true;
+      script.charset = 'utf-8';
+      script.onload = () => {
+        setScriptLoaded(true);
+      };
+      document.body.appendChild(script);
+    }, 1000);
 
     return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+      clearTimeout(timer);
+      const existingScript = document.querySelector('script[src*="hsforms.net"]');
+      if (existingScript && document.body.contains(existingScript)) {
+        document.body.removeChild(existingScript);
       }
     };
   }, []);

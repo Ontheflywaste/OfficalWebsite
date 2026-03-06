@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import HomeClient from './HomeClient';
+import dynamic from 'next/dynamic';
+
+const HomeClient = dynamic(() => import('./HomeClient'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'Professional Valet Trash & Junk Removal Services Orlando FL | On The Fly',

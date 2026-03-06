@@ -9,17 +9,10 @@ import HubSpotForm from './components/HubSpotForm';
 import FAQSchema from './components/FAQSchema';
 
 export default function HomeClient() {
-  const [isClient, setIsClient] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -41,7 +34,7 @@ export default function HomeClient() {
         observer.unobserve(videoSection);
       }
     };
-  }, [isClient, isVideoLoaded]);
+  }, [isVideoLoaded]);
 
   const faqs = [
     {
@@ -69,10 +62,7 @@ export default function HomeClient() {
   return (
     <>
       <FAQSchema faqs={faqs} />
-      {!isClient ? (
-        <div className="min-h-screen bg-white" />
-      ) : (
-        <div suppressHydrationWarning={true}>
+      <div suppressHydrationWarning={true}>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <Image
@@ -800,8 +790,7 @@ export default function HomeClient() {
           </ScrollReveal>
         </div>
       </section>
-        </div>
-      )}
+      </div>
     </>
   );
 }

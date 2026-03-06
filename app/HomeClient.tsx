@@ -9,15 +9,17 @@ import HubSpotForm from './components/HubSpotForm';
 import FAQSchema from './components/FAQSchema';
 
 export default function HomeClient() {
-  const [mounted, setMounted] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   React.useEffect(() => {
-    setMounted(true);
+    setIsClient(true);
   }, []);
 
   React.useEffect(() => {
+    if (!isClient) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -39,7 +41,7 @@ export default function HomeClient() {
         observer.unobserve(videoSection);
       }
     };
-  }, [isVideoLoaded]);
+  }, [isClient, isVideoLoaded]);
 
   const faqs = [
     {
@@ -64,8 +66,8 @@ export default function HomeClient() {
     }
   ];
 
-  if (!mounted) {
-    return <div className="min-h-screen" />;
+  if (!isClient) {
+    return <div className="min-h-screen bg-white" />;
   }
 
   return (

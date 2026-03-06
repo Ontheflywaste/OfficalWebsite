@@ -61,6 +61,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.ontheflywastesolutions.com',
+          },
+        ],
+        destination: 'https://ontheflywastesolutions.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/index.html',
         destination: '/',
         permanent: true,

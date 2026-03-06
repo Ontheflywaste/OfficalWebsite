@@ -1,11 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "https://www.ontheflywastesolutions.com/:path*",
-      "destination": "https://ontheflywastesolutions.com/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",

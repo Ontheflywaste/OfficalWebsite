@@ -4,3 +4,10 @@ publish = ".next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
+
+# Redirect www to non-www
+[[redirects]]
+from = "https://www.ontheflywastesolutions.com/*"
+to = "https://ontheflywastesolutions.com/:splat"
+status = 301
+force = true

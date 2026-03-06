@@ -82,7 +82,7 @@ export default function HomePage() {
   };
 
   return (
-    <main>
+    <main suppressHydrationWarning={true}>
       <Script
         id="video-schema"
         type="application/ld+json"

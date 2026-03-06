@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: 'Valet Trash Service Clermont, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartments, condos, and resorts in Clermont, FL. 100% collection rate guarantee with GPS tracking and photo verification. Serving all Clermont neighborhoods.',
   alternates: {
-    canonical: 'https://www.ontheflywastesolutions.com/valet-trash-clermont-fl/',
+    canonical: 'https://ontheflywastesolutions.com/valet-trash-clermont-fl/',
   },
   openGraph: {
     title: 'Valet Trash Service Clermont, FL | On The Fly Waste Solutions',
     description: 'Trusted valet trash service for Clermont apartment communities with 100% collection guarantee.',
     type: 'website',
-    url: 'https://www.ontheflywastesolutions.com/valet-trash-clermont-fl/',
+    url: 'https://ontheflywastesolutions.com/valet-trash-clermont-fl/',
   },
 };
 

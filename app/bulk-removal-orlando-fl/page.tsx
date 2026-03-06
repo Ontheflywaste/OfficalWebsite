@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: 'Bulk Removal Service Orlando, FL | On The Fly Waste Solutions',
   description: 'Professional bulk item pickup and removal for Orlando apartment complexes. Furniture, appliances, and large item removal with photo documentation. Serving property managers across Orlando.',
   alternates: {
-    canonical: 'https://www.ontheflywastesolutions.com/bulk-removal-orlando-fl/',
+    canonical: 'https://ontheflywastesolutions.com/bulk-removal-orlando-fl/',
   },
   openGraph: {
     title: 'Bulk Removal Service Orlando, FL | On The Fly Waste Solutions',
     description: 'Scheduled bulk item pickup and removal for Orlando property managers.',
     type: 'website',
-    url: 'https://www.ontheflywastesolutions.com/bulk-removal-orlando-fl/',
+    url: 'https://ontheflywastesolutions.com/bulk-removal-orlando-fl/',
   },
 };
 

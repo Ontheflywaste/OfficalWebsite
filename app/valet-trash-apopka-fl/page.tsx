@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: 'Valet Trash Service Apopka, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartments, condos, and resorts in Apopka, FL. 100% collection rate guarantee with GPS tracking and photo verification. Trusted by property managers.',
   alternates: {
-    canonical: 'https://www.ontheflywastesolutions.com/valet-trash-apopka-fl/',
+    canonical: 'https://ontheflywastesolutions.com/valet-trash-apopka-fl/',
   },
   openGraph: {
     title: 'Valet Trash Service Apopka, FL | On The Fly Waste Solutions',
     description: 'Trusted valet trash service for Apopka apartment communities with 100% collection guarantee.',
     type: 'website',
-    url: 'https://www.ontheflywastesolutions.com/valet-trash-apopka-fl/',
+    url: 'https://ontheflywastesolutions.com/valet-trash-apopka-fl/',
   },
 };
 

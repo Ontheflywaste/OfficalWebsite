@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: 'Valet Trash Service Lake Mary, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for Lake Mary apartments and luxury communities. Serving Heathrow, Timacuan, and all Lake Mary neighborhoods in Seminole County.',
   alternates: {
-    canonical: 'https://www.ontheflywastesolutions.com/valet-trash-lake-mary-fl/',
+    canonical: 'https://ontheflywastesolutions.com/valet-trash-lake-mary-fl/',
   },
   openGraph: {
     title: 'Valet Trash Service Lake Mary, FL | On The Fly Waste Solutions',
     description: 'Premium valet trash service for Lake Mary apartment and luxury communities.',
     type: 'website',
-    url: 'https://www.ontheflywastesolutions.com/valet-trash-lake-mary-fl/',
+    url: 'https://ontheflywastesolutions.com/valet-trash-lake-mary-fl/',
   },
 };
 

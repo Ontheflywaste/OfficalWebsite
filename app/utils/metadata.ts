@@ -17,13 +17,13 @@ export function generateMetadata({
   description,
   path,
   keywords,
-  image = 'https://www.ontheflywastesolutions.com/Images/TruckImage.JPG',
+  image = 'https://ontheflywastesolutions.com/Images/TruckImage.JPG',
   imageAlt = 'On The Fly Waste Solutions - Professional Valet Trash Services',
   type = 'website',
   publishedTime,
   modifiedTime,
 }: GenerateMetadataProps): Metadata {
-  const baseUrl = 'https://www.ontheflywastesolutions.com';
+  const baseUrl = 'https://ontheflywastesolutions.com';
   const canonicalUrl = `${baseUrl}${path}`;
 
   const metadata: Metadata = {
@@ -81,5 +81,5 @@ export function generateMetadata({
   return metadata;
 }
 
-export const defaultOGImage = 'https://www.ontheflywastesolutions.com/Images/TruckImage.JPG';
-export const baseUrl = 'https://www.ontheflywastesolutions.com';
+export const defaultOGImage = 'https://ontheflywastesolutions.com/Images/TruckImage.JPG';
+export const baseUrl = 'https://ontheflywastesolutions.com';

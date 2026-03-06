@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   title: 'Valet Trash Service Kissimmee, FL | On The Fly Waste Solutions',
   description: 'Reliable valet trash service for apartment communities and resorts in Kissimmee, FL. Serving properties near Disney, Old Town, and throughout Osceola County.',
   alternates: {
-    canonical: 'https://www.ontheflywastesolutions.com/valet-trash-kissimmee-fl/',
+    canonical: 'https://ontheflywastesolutions.com/valet-trash-kissimmee-fl/',
   },
   openGraph: {
     title: 'Valet Trash Service Kissimmee, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for Kissimmee apartment communities and resort properties.',
     type: 'website',
-    url: 'https://www.ontheflywastesolutions.com/valet-trash-kissimmee-fl/',
+    url: 'https://ontheflywastesolutions.com/valet-trash-kissimmee-fl/',
   },
 };
 

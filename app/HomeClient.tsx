@@ -62,6 +62,7 @@ export default function HomeClient() {
   return (
     <>
       <FAQSchema faqs={faqs} />
+      <div>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <Image
@@ -789,7 +790,7 @@ export default function HomeClient() {
           </ScrollReveal>
         </div>
       </section>
-
+      </div>
     </>
   );
 }

@@ -82,7 +82,7 @@ export default function HomePage() {
   };
 
   return (
-    <>
+    <main>
       <Script
         id="video-schema"
         type="application/ld+json"
@@ -94,6 +94,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <HomeClient />
-    </>
+    </main>
   );
 }

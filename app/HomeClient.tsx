@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
@@ -12,7 +12,7 @@ export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -62,7 +62,6 @@ export default function HomeClient() {
   return (
     <>
       <FAQSchema faqs={faqs} />
-      <div suppressHydrationWarning={true}>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <Image
@@ -790,7 +789,24 @@ export default function HomeClient() {
           </ScrollReveal>
         </div>
       </section>
-      </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
     </>
   );
 }

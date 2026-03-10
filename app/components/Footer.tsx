@@ -128,6 +128,7 @@ export default function Footer() {
                 { text: 'Davenport', link: '/service-areas/davenport-fl/' },
                 { text: 'ChampionsGate', link: '/service-areas/championsgate-fl/' },
                 { text: 'Celebration', link: '/service-areas/celebration-fl/' },
+                { text: 'Four Corners', link: '/service-areas/four-corners-fl/' },
                 { text: 'Winter Haven', link: '/service-areas/winter-haven-fl/' },
                 { text: 'Winter Garden', link: '/service-areas/winter-garden-fl/' },
                 { text: 'Space Coast', link: '/service-areas/space-coast-fl/' },

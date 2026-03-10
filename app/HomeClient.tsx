@@ -657,7 +657,7 @@ export default function HomeClient() {
                   </a>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/asset-logo.png"
+                      src="/Images/asset-logo.png"
                       alt="Asset Living"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
@@ -666,7 +666,7 @@ export default function HomeClient() {
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/greystar-logo.png"
+                      src="/Images/greystar-logo.png"
                       alt="Greystar"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
@@ -675,7 +675,7 @@ export default function HomeClient() {
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/venterra-logo.png"
+                      src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
@@ -737,7 +737,7 @@ export default function HomeClient() {
                   </a>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/asset-logo.png"
+                      src="/Images/asset-logo.png"
                       alt="Asset Living"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
@@ -746,7 +746,7 @@ export default function HomeClient() {
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/greystar-logo.png"
+                      src="/Images/greystar-logo.png"
                       alt="Greystar"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
@@ -755,7 +755,7 @@ export default function HomeClient() {
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/venterra-logo.png"
+                      src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
                       className="object-contain"
                       style={{ height: '60px', width: 'auto', maxWidth: '160px' }}

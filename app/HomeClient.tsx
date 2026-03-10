@@ -613,8 +613,8 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll">
-                <div className="flex items-center gap-20 pr-20">
+              <div className="flex flex-nowrap animate-scroll">
+                <div className="flex items-center gap-20 flex-shrink-0">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/faa-full-color-full-logo.png"
@@ -654,7 +654,7 @@ export default function HomeClient() {
                     />
                   </a>
                 </div>
-                <div className="flex items-center gap-20 pr-20" aria-hidden="true">
+                <div className="flex items-center gap-20 flex-shrink-0 pl-20" aria-hidden="true">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/faa-full-color-full-logo.png"
@@ -694,7 +694,7 @@ export default function HomeClient() {
                     />
                   </a>
                 </div>
-                <div className="flex items-center gap-20 pr-20" aria-hidden="true">
+                <div className="flex items-center gap-20 flex-shrink-0 pl-20" aria-hidden="true">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/faa-full-color-full-logo.png"

@@ -150,9 +150,12 @@ export default function AboutClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <div className="bg-gray-200 rounded-2xl shadow-2xl flex items-center justify-center aspect-square">
-                  <span className="text-gray-600 text-xl font-medium">Image Coming Soon</span>
-                </div>
+                <img
+                  src="/Images/TradeshowTrevor.jpeg"
+                  alt="On The Fly Waste Solutions team at industry trade show"
+                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  loading="lazy"
+                />
                 <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl">
                   <div className="text-4xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>

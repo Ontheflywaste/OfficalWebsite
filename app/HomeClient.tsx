@@ -591,7 +591,7 @@ export default function HomeClient() {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/Images/TradeshowPicture"
+            src="/Images/TradeshowTrevor.jpeg"
             alt="Trade show background"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"

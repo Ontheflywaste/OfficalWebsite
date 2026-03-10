@@ -647,7 +647,7 @@ export default function HomeClient() {
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
                     <img
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
                       className="h-full w-full object-contain"
                       loading="lazy"
@@ -687,7 +687,7 @@ export default function HomeClient() {
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
                     <img
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
                       className="h-full w-full object-contain"
                       loading="lazy"
@@ -727,7 +727,7 @@ export default function HomeClient() {
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
                     <img
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
                       className="h-full w-full object-contain"
                       loading="lazy"

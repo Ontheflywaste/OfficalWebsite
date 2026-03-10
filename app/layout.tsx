@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     ],
     apple: '/Images/Favicon1.png',
   },
-  metadataBase: new URL('https://ontheflywastesolutions.com'),
+  metadataBase: new URL('https://www.ontheflywastesolutions.com'),
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://ontheflywastesolutions.com',
+    canonical: 'https://www.ontheflywastesolutions.com',
   },
 };
 
@@ -71,7 +71,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
               "name": "On The Fly Waste Solutions",
-              "image": "https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp",
+              "image": "https://www.ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp",
               "description": "Professional valet trash, bulk removal, junk removal, and pressure washing services for apartment communities, condos, and resorts in Orlando and Central Florida",
               "priceRange": "$$",
               "address": {
@@ -176,7 +176,7 @@ export default function RootLayout({
                 },
                 "geoRadius": "50000"
               },
-              "url": "https://ontheflywastesolutions.com",
+              "url": "https://www.ontheflywastesolutions.com",
               "telephone": "+1-407-274-5019",
               "openingHoursSpecification": {
                 "@type": "OpeningHoursSpecification",
@@ -255,6 +255,58 @@ export default function RootLayout({
                 "https://www.facebook.com/ontheflywastesolutions",
                 "https://www.instagram.com/ontheflywaste/",
                 "https://www.linkedin.com/in/on-the-fly-waste-solutions-23a48b296/"
+              ]
+            })
+          }}
+        />
+        <script
+          id="faq-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is valet trash service for apartments?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with photo verification and a 100% collection guarantee."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much does valet trash cost for an apartment community in Orlando?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Valet trash service costs typically range from $25-60 per unit per month for high-end resort style communities depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer bulk item removal for apartment complexes in Central Florida?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! We provide comprehensive bulk item pickup services for apartment complexes throughout Central Florida. Our bulk removal service handles furniture, appliances, mattresses, and other large items on a scheduled basis. We offer flexible pickup schedules and can accommodate both routine and on-demand bulk removal needs for property managers."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What areas in Central Florida do you serve?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We proudly serve Orlando, Kissimmee, Altamonte Springs, Winter Park, Lake Nona, and surrounding Central Florida communities. Our service area covers apartment communities, condos, and resort-style properties throughout the region. Contact us to confirm service availability in your specific location."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you serve resort communities and condos?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! We specialize in providing valet trash service for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove service, photo verification, and dedicated account management."
+                  }
+                }
               ]
             })
           }}

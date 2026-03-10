@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
-import FAQSchema from './components/FAQSchema';
 
 export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -61,7 +60,6 @@ export default function HomeClient() {
 
   return (
     <>
-      <FAQSchema faqs={faqs} />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
         <div className="absolute inset-0 bg-black">
           <Image

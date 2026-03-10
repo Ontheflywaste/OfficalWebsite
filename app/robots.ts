@@ -8,8 +8,8 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ['/api/', '/_next/', '/admin/'],
     },
     sitemap: [
-      'https://ontheflywastesolutions.com/sitemap.xml',
-      'https://ontheflywastesolutions.com/video-sitemap.xml',
+      'https://www.ontheflywastesolutions.com/sitemap.xml',
+      'https://www.ontheflywastesolutions.com/video-sitemap.xml',
     ],
   };
 }

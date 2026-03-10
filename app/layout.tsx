@@ -25,12 +25,6 @@ export const metadata: Metadata = {
     apple: '/Images/Favicon1.png',
   },
   metadataBase: new URL('https://www.ontheflywastesolutions.com'),
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
   verification: {
     google: 'your-google-verification-code',
   },
@@ -48,6 +42,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.ontheflywastesolutions.com',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({

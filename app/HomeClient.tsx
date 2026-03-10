@@ -651,6 +651,30 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </a>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/asset-logo.png"
+                      alt="Asset Living"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/greystar-logo.png"
+                      alt="Greystar"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/venterra-logo.png"
+                      alt="Venterra Realty"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 <div className="flex items-center flex-shrink-0" aria-hidden="true">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
@@ -691,6 +715,30 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </a>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/asset-logo.png"
+                      alt="Asset Living"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/greystar-logo.png"
+                      alt="Greystar"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/venterra-logo.png"
+                      alt="Venterra Realty"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
                 <div className="flex items-center flex-shrink-0" aria-hidden="true">
                   <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
@@ -731,6 +779,30 @@ export default function HomeClient() {
                       loading="lazy"
                     />
                   </a>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/asset-logo.png"
+                      alt="Asset Living"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/greystar-logo.png"
+                      alt="Greystar"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/venterra-logo.png"
+                      alt="Venterra Realty"
+                      className="h-full w-full object-contain p-4"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

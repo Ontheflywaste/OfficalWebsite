@@ -694,6 +694,46 @@ export default function HomeClient() {
                     />
                   </a>
                 </div>
+                <div className="flex items-center gap-20 pr-20" aria-hidden="true">
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/faa-full-color-full-logo.png"
+                      alt="Florida Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/NAA-logo_bgwhite.png"
+                      alt="National Apartment Association"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/Images/AAGO.png"
+                      alt="AAGO"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <a
+                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
+                    target="_blank"
+                    rel="nofollow"
+                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center p-4 hover:scale-105 transition-transform"
+                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
+                  >
+                    <img
+                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
+                      alt="On The Fly Waste Solutions BBB Business Review"
+                      className="h-full w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </ScrollReveal>

@@ -202,19 +202,20 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-100% / 3));
+    transform: translateX(-50%);
   }
 }
 
 .animate-scroll {
-  animation: scroll 25s linear infinite;
+  animation: scroll 30s linear infinite;
   display: flex;
   flex-wrap: nowrap;
+  width: max-content;
 }
 
 @media (min-width: 768px) {
   .animate-scroll {
-    animation: scroll 40s linear infinite;
+    animation: scroll 45s linear infinite;
   }
 }
 

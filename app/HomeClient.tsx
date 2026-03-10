@@ -612,28 +612,31 @@ export default function HomeClient() {
           <ScrollReveal delay={0.2}>
             <div className="relative overflow-hidden">
               <div className="flex animate-scroll">
-                <div className="flex items-center flex-shrink-0">
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                <div className="flex items-center gap-12 md:gap-16">
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/AAGO.png"
                       alt="AAGO"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
@@ -641,63 +644,79 @@ export default function HomeClient() {
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
                     rel="nofollow"
-                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20 hover:scale-105 transition-transform"
+                    className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
                     <img
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </a>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/asset-logo.png"
                       alt="Asset Living"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/greystar-logo.png"
                       alt="Greystar"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                    <img
+                      src="/ReunionWestPOALOgo.jpg"
+                      alt="Reunion West POA"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
                 </div>
-                <div className="flex items-center flex-shrink-0" aria-hidden="true">
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                <div className="flex items-center gap-12 md:gap-16" aria-hidden="true">
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/AAGO.png"
                       alt="AAGO"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
@@ -705,101 +724,50 @@ export default function HomeClient() {
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                     target="_blank"
                     rel="nofollow"
-                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20 hover:scale-105 transition-transform"
+                    className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
                     <img
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </a>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/asset-logo.png"
                       alt="Asset Living"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/greystar-logo.png"
                       alt="Greystar"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
                       src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
-                      className="h-full w-full object-contain p-4"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>
-                </div>
-                <div className="flex items-center flex-shrink-0" aria-hidden="true">
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
+                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img
-                      src="/Images/faa-full-color-full-logo.png"
-                      alt="Florida Apartment Association"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
-                      src="/Images/NAA-logo_bgwhite.png"
-                      alt="National Apartment Association"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
-                      src="/Images/AAGO.png"
-                      alt="AAGO"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <a
-                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
-                    target="_blank"
-                    rel="nofollow"
-                    className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20 hover:scale-105 transition-transform"
-                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
-                  >
-                    <img
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
-                      alt="On The Fly Waste Solutions BBB Business Review"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </a>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
-                      src="/Images/asset-logo.png"
-                      alt="Asset Living"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
-                      src="/Images/greystar-logo.png"
-                      alt="Greystar"
-                      className="h-full w-full object-contain p-4"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="flex-shrink-0 h-24 w-48 flex items-center justify-center pr-20" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
-                      src="/Images/venterra-logo.png"
-                      alt="Venterra Realty"
-                      className="h-full w-full object-contain p-4"
+                      src="/ReunionWestPOALOgo.jpg"
+                      alt="Reunion West POA"
+                      className="object-contain"
+                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
                       loading="lazy"
                     />
                   </div>

@@ -207,13 +207,14 @@ body {
 }
 
 .animate-scroll {
-  animation: scroll 20s linear infinite;
+  animation: scroll 25s linear infinite;
   display: flex;
+  flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) {
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
   }
 }
 

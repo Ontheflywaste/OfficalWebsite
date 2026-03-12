@@ -7,13 +7,10 @@ import HubSpotForm from '../../components/HubSpotForm';
 export const metadata: Metadata = {
   title: 'Valet Trash Service in ChampionsGate, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for luxury apartment communities, vacation rentals, and resort properties in ChampionsGate, FL. Reliable bulk removal and apartment waste management solutions.',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/service-areas/championsgate-fl/',
-  },
   openGraph: {
     title: 'Valet Trash Service in ChampionsGate, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for luxury apartment communities and resort properties in ChampionsGate, FL.',
-    url: 'https://ontheflywastesolutions.com/service-areas/championsgate-fl/',
+    url: 'https://ontheflywastesolutions.com/service-areas/championsgate-fl',
   },
 };
 

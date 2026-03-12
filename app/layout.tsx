@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ],
     apple: '/Images/Favicon1.png',
   },
-  metadataBase: new URL('https://ontheflywastesolutions.com'),
+  metadataBase: new URL('https://www.ontheflywastesolutions.com'),
   verification: {
     google: 'your-google-verification-code',
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://ontheflywastesolutions.com/',
+    canonical: 'https://www.ontheflywastesolutions.com',
   },
 };
 
@@ -61,7 +61,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "On The Fly Waste Solutions",
-    "image": "https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp",
+    "image": "https://www.ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp",
     "description": "Professional valet trash, bulk removal, junk removal, and pressure washing services for apartment communities, condos, and resorts in Orlando and Central Florida",
     "priceRange": "$$",
     "address": {
@@ -166,7 +166,7 @@ export default function RootLayout({
       },
       "geoRadius": "50000"
     },
-    "url": "https://ontheflywastesolutions.com",
+    "url": "https://www.ontheflywastesolutions.com",
     "telephone": "+1-407-274-5019",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

@@ -7,13 +7,10 @@ import HubSpotForm from '../../components/HubSpotForm';
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Davenport, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartment communities and vacation rentals in Davenport, FL. Reliable bulk removal and waste management solutions serving Davenport apartment complexes.',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/service-areas/davenport-fl/',
-  },
   openGraph: {
     title: 'Valet Trash Service in Davenport, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for apartment communities and vacation rentals in Davenport, FL.',
-    url: 'https://ontheflywastesolutions.com/service-areas/davenport-fl/',
+    url: 'https://ontheflywastesolutions.com/service-areas/davenport-fl',
   },
 };
 

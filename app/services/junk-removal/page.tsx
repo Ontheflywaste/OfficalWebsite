@@ -5,9 +5,6 @@ export const metadata: Metadata = {
   title: 'Professional Junk Removal Services Orlando FL | On The Fly',
   description: 'Fast, affordable junk removal for homes and businesses in Central Florida. Furniture, appliances, estate cleanouts, and more. Same-day service available.',
   keywords: 'junk removal orlando, furniture removal, appliance disposal, estate cleanout, same day junk removal central florida',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/services/junk-removal/',
-  },
 };
 
 export default function JunkRemovalPage() {

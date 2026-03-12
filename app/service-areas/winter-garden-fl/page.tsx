@@ -7,13 +7,10 @@ import HubSpotForm from '../../components/HubSpotForm';
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Winter Garden, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartment communities in Winter Garden, FL. Reliable bulk removal and apartment waste management solutions serving Winter Garden apartment complexes.',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/service-areas/winter-garden-fl/',
-  },
   openGraph: {
     title: 'Valet Trash Service in Winter Garden, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for apartment communities in Winter Garden, FL.',
-    url: 'https://ontheflywastesolutions.com/service-areas/winter-garden-fl/',
+    url: 'https://ontheflywastesolutions.com/service-areas/winter-garden-fl',
   },
 };
 

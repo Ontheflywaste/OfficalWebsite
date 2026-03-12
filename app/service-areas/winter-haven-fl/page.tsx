@@ -7,13 +7,10 @@ import HubSpotForm from '../../components/HubSpotForm';
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Winter Haven, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartment communities in Winter Haven, FL. Reliable bulk removal and apartment waste management solutions serving Winter Haven apartment complexes.',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/service-areas/winter-haven-fl/',
-  },
   openGraph: {
     title: 'Valet Trash Service in Winter Haven, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for apartment communities in Winter Haven, FL.',
-    url: 'https://ontheflywastesolutions.com/service-areas/winter-haven-fl/',
+    url: 'https://ontheflywastesolutions.com/service-areas/winter-haven-fl',
   },
 };
 

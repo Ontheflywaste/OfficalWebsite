@@ -10,12 +10,12 @@ export default function ServicesClient() {
     {
       icon: <Trash2 className="w-12 h-12" />,
       title: "Valet Trash Service",
-      description: "Generate ancillary income with our concierge trash service featuring nightly doorstep collection. Premier apartment trash valet for multifamily properties in Orlando and Central Florida with SLA-backed, GPS-verified service.",
+      description: "Premier doorstep trash pickup for apartment communities. Flexible scheduling up to 7 days per week with GPS-verified route completion.",
       features: [
-        "Revenue-generating amenity that boosts NOI",
         "SLA-backed 100% collection rate",
-        "GPS-verified nightly trash collection",
-        "Enhances resident retention"
+        "Advanced GPS geo-location tracking",
+        "Flexible scheduling up to 7 days/week",
+        "Customizable collection windows"
       ],
       link: "/services/valet-trash/",
       image: "/Images/Valettrashimage.jpg"
@@ -23,12 +23,12 @@ export default function ServicesClient() {
     {
       icon: <Package className="w-12 h-12" />,
       title: "Junk Removal",
-      description: "Professional junk removal Orlando services for apartment communities and residents across Central Florida. Part of our total multifamily waste management solution with same-day service and photo verification.",
+      description: "Fast, professional junk removal for homeowners and residents. Same-day service available with before & after photo verification.",
       features: [
-        "Same-day junk removal Orlando service",
+        "Same-day service available",
         "Before & after photo verification",
-        "Complements valet waste services",
-        "Prevents dumpster overflow"
+        "Full-service removal",
+        "Eco-friendly disposal"
       ],
       link: "/services/junk-removal/",
       image: "/Images/Junk.jpg"
@@ -36,12 +36,12 @@ export default function ServicesClient() {
     {
       icon: <Package className="w-12 h-12" />,
       title: "Bulk Removal",
-      description: "Prevent dumpster overflow with scheduled bulk removal Central Florida services for apartment complexes. Integrated with our valet waste services for total multifamily waste management across Orlando and surrounding areas.",
+      description: "Recurring and scheduled bulk removal exclusively for property managers. Perfect for move-outs and property turnovers with photo documentation.",
       features: [
-        "Prevents dumpster overflow issues",
-        "Complements nightly trash collection",
-        "Recurring bulk removal service plans",
-        "Part of total waste management solution"
+        "Recurring service plans",
+        "Before & after photo verification",
+        "Property-wide services",
+        "Turn-ready solutions"
       ],
       link: "/services/bulk-removal/",
       image: "/Images/Dumpster.jpg"
@@ -64,8 +64,8 @@ export default function ServicesClient() {
   const whyChooseUs = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "SLA-Backed Accountability",
-      description: "Our Service Level Agreements guarantee 100% collection rates with GPS-verified route completion for apartment trash valet services across Central Florida"
+      title: "SLA-Backed Service",
+      description: "Our service level agreements guarantee 100% collection rates with advanced GPS tracking technology"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,
@@ -91,7 +91,7 @@ export default function ServicesClient() {
               Our Services
             </h1>
             <p className="text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Total multifamily waste management solutions for Orlando and Central Florida. From valet trash services that generate ancillary income to bulk removal that prevents dumpster overflow—complete apartment complex service.
+              Comprehensive waste management and property maintenance solutions for Central Florida communities
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

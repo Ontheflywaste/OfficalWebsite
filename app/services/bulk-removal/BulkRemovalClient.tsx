@@ -47,8 +47,8 @@ export default function BulkRemovalClient() {
   const propertyServices = [
     {
       title: "Apartment Communities",
-      description: "Prevent dumpster overflow with recurring bulk removal Central Florida services. Complements our valet waste services for complete multifamily waste management.",
-      features: ["Prevents dumpster overflow issues", "Integrates with nightly trash collection", "After-hours service available"]
+      description: "Regular bulk item pickup for residents, keeping dumpster areas clean and organized.",
+      features: ["Weekly or bi-weekly pickups", "Resident notification systems", "After-hours service available"]
     },
     {
       title: "Property Management",
@@ -85,7 +85,7 @@ export default function BulkRemovalClient() {
     },
     {
       question: "Do you offer service for apartment complexes?",
-      answer: "Yes! Our bulk removal Central Florida service is designed for apartment complexes and multifamily properties across Orlando, Kissimmee, and surrounding areas. When combined with our valet trash services, we deliver complete multifamily waste management that prevents dumpster overflow and maintains pristine property appeal."
+      answer: "Absolutely! We specialize in serving apartment communities with regular scheduled bulk pickup services. This keeps your property clean and residents happy."
     }
   ];
 
@@ -121,10 +121,10 @@ export default function BulkRemovalClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Package className="w-12 h-12 text-[#049704]" />
-                <h1 className="text-5xl font-bold">Bulk Removal Central Florida</h1>
+                <h1 className="text-5xl font-bold">Bulk Removal Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Prevent dumpster overflow with scheduled bulk removal services for apartment complexes across Orlando and Central Florida. Part of our total multifamily waste management solution with valet trash services.
+                Recurring and scheduled bulk waste removal exclusively for property managers and commercial clients. Before & after photo verification included.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

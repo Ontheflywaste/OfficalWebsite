@@ -10,24 +10,24 @@ export default function ValetTrashClient() {
 
   const benefits = [
     {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Generate Ancillary Income",
-      description: "Turn waste management into a revenue-generating amenity that boosts NOI. Our concierge trash service creates a premium resident experience property managers can bill back, increasing your bottom line."
+      icon: <Shield className="w-8 h-8" />,
+      title: "SLA-Backed Service Guarantee",
+      description: "Our 100% collection rate is backed by a Service Level Agreement with advanced GPS tracking ensuring complete property coverage."
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Boost Resident Retention",
-      description: "Nightly doorstep collection eliminates dumpster trips and reduces complaints. This convenience amenity drives resident satisfaction and renewal rates while justifying premium rents."
+      title: "Improved Resident Satisfaction",
+      description: "Convenient door-to-door service enhances the living experience and reduces complaints about overflowing dumpsters."
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "SLA-Backed Accountability",
-      description: "Our Service Level Agreement guarantees 100% collection rates with GPS-verified route completion. Property managers receive instant notifications ensuring complete coverage every single night."
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Increased Property Value",
+      description: "Premium amenities like valet trash service make your property more competitive and justify higher rents."
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Prevent Dumpster Overflow",
-      description: "Our total multifamily waste management solution combines nightly trash collection with bulk removal services, keeping dumpsters manageable and your property pristine."
+      title: "Advanced GPS Tracking",
+      description: "Real-time geo-location tracking ensures 100% of your property footprint and every street is serviced with verified route completion."
     }
   ];
 
@@ -55,7 +55,7 @@ export default function ValetTrashClient() {
     },
     {
       question: "How much does valet trash service cost?",
-      answer: "Our valet trash services Orlando pricing creates an ancillary income opportunity for property managers. Rates typically range from $25-60 per unit per month based on property size, collection frequency, and service requirements. This revenue-generating amenity boosts NOI while residents enjoy nightly doorstep collection. Contact us for a customized multifamily waste management quote for your Orlando property."
+      answer: "Pricing varies based on the number of units, property layout, and specific service requirements. Contact us for a free, customized quote for your property."
     },
     {
       question: "What happens if trash is missed?",
@@ -103,10 +103,10 @@ export default function ValetTrashClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Trash2 className="w-12 h-12 text-[#049704]" />
-                <h1 className="text-5xl font-bold">Valet Trash Services Orlando</h1>
+                <h1 className="text-5xl font-bold">Valet Trash Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Nightly doorstep collection that generates ancillary income while elevating resident satisfaction. Premier apartment trash valet service for multifamily properties across Central Florida.
+                Convenient door-to-door trash collection for apartment communities across Central Florida
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -134,10 +134,10 @@ export default function ValetTrashClient() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Property Manager Benefits: ROI-Driven Valet Waste Services
+                Why Property Managers Choose Our Valet Trash Service
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our apartment complex trash pickup program delivers measurable financial returns while creating the premium amenity residents demand across Orlando and Central Florida.
+                Elevate your property's amenities with reliable, professional valet trash collection
               </p>
             </div>
           </ScrollReveal>
@@ -166,7 +166,7 @@ export default function ValetTrashClient() {
             <ScrollReveal>
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  How Our Concierge Trash Service Works
+                  How Our Valet Trash Service Works
                 </h2>
                 <div className="space-y-6">
                   <div className="flex gap-4">
@@ -186,9 +186,9 @@ export default function ValetTrashClient() {
                       2
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Nightly Doorstep Collection</h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional Collection</h3>
                       <p className="text-gray-600">
-                        Our uniformed team arrives between 8 PM and midnight for professional apartment trash valet pickup with GPS-verified route completion, ensuring quiet and efficient service.
+                        Our uniformed team arrives between 8 PM and midnight to collect all bags, ensuring quiet and efficient service.
                       </p>
                     </div>
                   </div>

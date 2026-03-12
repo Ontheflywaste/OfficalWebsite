@@ -7,10 +7,13 @@ import HubSpotForm from '../../components/HubSpotForm';
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Four Corners, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartment communities and residential properties in Four Corners, FL. Reliable bulk removal and waste management solutions near Orlando.',
+  alternates: {
+    canonical: 'https://ontheflywastesolutions.com/service-areas/four-corners-fl/',
+  },
   openGraph: {
     title: 'Valet Trash Service in Four Corners, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for apartment communities and residential properties in Four Corners, FL.',
-    url: 'https://ontheflywastesolutions.com/service-areas/four-corners-fl',
+    url: 'https://ontheflywastesolutions.com/service-areas/four-corners-fl/',
   },
 };
 

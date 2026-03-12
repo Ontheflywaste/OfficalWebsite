@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { allBlogPosts } from './data/blogPosts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.ontheflywastesolutions.com';
+  const baseUrl = 'https://ontheflywastesolutions.com';
 
   const staticPages = [
     {

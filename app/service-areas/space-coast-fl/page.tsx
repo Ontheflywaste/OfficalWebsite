@@ -4,6 +4,9 @@ import ServiceAreaClient from '../ServiceAreaClient';
 export const metadata: Metadata = {
   title: 'Valet Trash Service Space Coast, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartments and condos in Space Coast, FL. Serving Melbourne, Palm Bay, Cocoa Beach, and surrounding areas. Call (407) 274-5019 for a free quote.',
+  alternates: {
+    canonical: 'https://ontheflywastesolutions.com/service-areas/space-coast-fl/',
+  },
   openGraph: {
     title: 'Valet Trash Service Space Coast, FL | On The Fly Waste Solutions',
     description: 'Professional valet trash service for apartments and condos in Space Coast, FL. Serving Melbourne, Palm Bay, Cocoa Beach, and surrounding areas.',

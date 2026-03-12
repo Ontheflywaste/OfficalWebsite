@@ -5,6 +5,9 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: 'Customer Reviews | On The Fly Waste Solutions',
   description: 'Read reviews from property managers, HOAs, and residents who trust On The Fly Waste Solutions for valet trash, junk removal, and waste management services in Orlando.',
+  alternates: {
+    canonical: 'https://ontheflywastesolutions.com/reviews/',
+  },
   openGraph: {
     title: 'Customer Reviews | On The Fly Waste Solutions',
     description: 'Real reviews from satisfied clients. See why property managers choose On The Fly.',

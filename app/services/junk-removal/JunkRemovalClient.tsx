@@ -44,8 +44,8 @@ export default function JunkRemovalClient() {
   const benefits = [
     {
       icon: <Clock className="w-8 h-8" />,
-      title: "Same-Day Service Available",
-      description: "Need it gone today? We offer fast same-day and next-day junk removal services for homeowners and residents."
+      title: "Same-Day Junk Removal Orlando",
+      description: "Fast same-day service across Orlando, Kissimmee, and Central Florida. Complements our valet waste services for complete multifamily waste management."
     },
     {
       icon: <Camera className="w-8 h-8" />,
@@ -102,7 +102,7 @@ export default function JunkRemovalClient() {
     },
     {
       question: "How quickly can you remove my junk?",
-      answer: "We offer same-day and next-day service in most cases. Call us in the morning, and we can often have your items removed by the afternoon."
+      answer: "Our junk removal Orlando service offers same-day and next-day pickup across Central Florida. Call us in the morning and we can often complete your removal by afternoon. We work seamlessly with our valet waste services to provide complete multifamily waste management solutions for apartment complexes."
     },
     {
       question: "Do you recycle or donate items?",
@@ -146,10 +146,10 @@ export default function JunkRemovalClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Truck className="w-12 h-12 text-[#049704]" />
-                <h1 className="text-5xl font-bold">Junk Removal Service</h1>
+                <h1 className="text-5xl font-bold">Junk Removal Orlando</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Fast, affordable junk removal for homeowners and residents across Central Florida. Same-day service available with before & after photo verification.
+                Professional junk removal Orlando services for apartment communities and residents across Central Florida. Part of our total multifamily waste management solution with same-day service and photo verification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

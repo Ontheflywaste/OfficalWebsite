@@ -497,7 +497,7 @@ export default function HomeClient() {
                   Our <strong>valet trash service Orlando FL</strong> teams provide professional waste management solutions throughout the region. From luxury apartment communities to resort-style properties, we deliver reliable <strong>doorstep trash collection</strong> services that property managers trust.
                 </p>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  We proudly serve Orlando, Kissimmee, Altamonte Springs, Winter Park, Lake Nona, and surrounding Central Florida communities with comprehensive <strong>condo trash pickup Orlando</strong> services, <strong>bulk removal Central Florida</strong> solutions, and <strong>junk removal Orlando</strong> for apartment complexes and resort properties.
+                  We proudly serve the Central Florida communities listed below with comprehensive services including <strong>condo trash pickup Orlando</strong>, <strong>bulk removal Central Florida</strong>, and <strong>junk removal Orlando</strong> for apartment complexes and resort properties.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-gray-700">
                   <div className="flex items-center gap-2">

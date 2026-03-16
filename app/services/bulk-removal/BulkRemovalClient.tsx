@@ -25,7 +25,7 @@ export default function BulkRemovalClient() {
     {
       icon: <Calendar className="w-8 h-8" />,
       title: "Recurring Service Plans",
-      description: "Weekly, bi-weekly, or monthly scheduled pickups designed specifically for property managers with predictable budgets."
+      description: "Weekly, bi-weekly, or monthly scheduled bulk trash pickups designed specifically for Orlando apartment property managers with predictable budgets."
     },
     {
       icon: <Camera className="w-8 h-8" />,
@@ -47,7 +47,7 @@ export default function BulkRemovalClient() {
   const propertyServices = [
     {
       title: "Apartment Communities",
-      description: "Regular bulk item pickup for residents, keeping dumpster areas clean and organized.",
+      description: "Regular bulk trash pickup for apartment residents, keeping dumpster areas clean and organized.",
       features: ["Weekly or bi-weekly pickups", "Resident notification systems", "After-hours service available"]
     },
     {
@@ -84,8 +84,8 @@ export default function BulkRemovalClient() {
       answer: "Pricing varies based on the volume and type of items. For apartment communities, we offer competitive monthly rates. For individual removals, we provide upfront quotes. Contact us for a free estimate."
     },
     {
-      question: "Do you offer service for apartment complexes?",
-      answer: "Absolutely! We specialize in serving apartment communities with regular scheduled bulk pickup services. This keeps your property clean and residents happy."
+      question: "Do you offer bulk removal service for apartment complexes in Orlando?",
+      answer: "Absolutely! We specialize in serving Orlando apartment communities with regular scheduled bulk trash pickup services. This keeps your property clean and residents happy."
     }
   ];
 
@@ -121,10 +121,10 @@ export default function BulkRemovalClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Package className="w-12 h-12 text-[#049704]" />
-                <h1 className="text-5xl font-bold">Bulk Removal Service</h1>
+                <h1 className="text-5xl font-bold">Bulk Removal Service Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Recurring and scheduled bulk waste removal exclusively for property managers and commercial clients. Before & after photo verification included.
+                Recurring and scheduled bulk trash pickup and bulk item removal exclusively for Orlando property managers and apartment communities. Before & after photo verification included.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -155,7 +155,7 @@ export default function BulkRemovalClient() {
                 What We Remove
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                If it's too big for regular trash pickup, we can handle it
+                If it's too big for regular apartment trash pickup, our Orlando team can handle it
               </p>
             </div>
           </ScrollReveal>
@@ -178,7 +178,7 @@ export default function BulkRemovalClient() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Bulk Removal Service?
+                Why Choose Our Bulk Removal Service in Orlando?
               </h2>
               <p className="text-xl text-gray-600">
                 Professional, reliable, and convenient
@@ -212,7 +212,7 @@ export default function BulkRemovalClient() {
                 Services for Properties & Communities
               </h2>
               <p className="text-xl text-gray-600">
-                Customized bulk removal solutions for property managers and HOAs
+                Customized bulk item removal solutions for Orlando property managers and HOAs
               </p>
             </div>
           </ScrollReveal>
@@ -369,7 +369,7 @@ export default function BulkRemovalClient() {
               Ready to Schedule Your Bulk Removal?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Contact us today for a free quote and convenient scheduling
+              Contact us today for a free bulk removal quote in Orlando and convenient scheduling
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

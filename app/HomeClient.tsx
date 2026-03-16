@@ -38,7 +38,7 @@ export default function HomeClient() {
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with photo verification and a 100% collection guarantee."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS tracking, photo verification, and a 100% collection guarantee."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
@@ -46,7 +46,7 @@ export default function HomeClient() {
     },
     {
       question: "Do you offer bulk item removal for apartment complexes in Central Florida?",
-      answer: "Yes! We provide comprehensive bulk item pickup services for apartment complexes throughout Central Florida. Our bulk removal service handles furniture, appliances, mattresses, and other large items on a scheduled basis. We offer flexible pickup schedules and can accommodate both routine and on-demand bulk removal needs for property managers."
+      answer: "Yes! We provide comprehensive bulk trash pickup services for apartment complexes throughout Orlando and Central Florida. Our bulk item removal service handles furniture, appliances, mattresses, and other large items on a scheduled basis. We offer flexible pickup schedules and can accommodate both routine and on-demand bulk removal needs for property managers."
     },
     {
       question: "What areas in Central Florida do you serve?",
@@ -54,7 +54,7 @@ export default function HomeClient() {
     },
     {
       question: "Do you serve resort communities and condos?",
-      answer: "Absolutely! We specialize in providing valet trash service for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove service, photo verification, and dedicated account management."
+      answer: "Absolutely! We specialize in providing valet trash and condo trash pickup for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove doorstep collection, photo verification, and dedicated account management."
     }
   ];
 
@@ -79,13 +79,13 @@ export default function HomeClient() {
           <ScrollReveal>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
               Valet Trash, Bulk & Junk Removal Services<br />
-              <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>Orlando, FL</span>
+              <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>in Orlando, FL</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto px-4">
-              Orlando's trusted valet trash service for apartments, condos, and resort communities. Professional bulk removal and junk removal services across Central Florida.
+              Orlando's trusted apartment trash pickup and valet trash service for apartments, condos, and resort communities. Professional bulk trash removal and junk removal services across Central Florida.
             </p>
           </ScrollReveal>
 
@@ -198,7 +198,7 @@ export default function HomeClient() {
                 </h2>
                 <div className="space-y-4 text-gray-100 text-lg leading-relaxed">
                   <p>
-                    Since 2020, On The Fly Waste Solutions has been transforming property waste management across Central Florida with our innovative valet trash and comprehensive waste services.
+                    Since 2020, On The Fly Waste Solutions has been the go-to trash valet service transforming apartment waste management across Central Florida with innovative doorstep trash collection and comprehensive waste solutions.
                   </p>
                   <p>
                     We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-[#049704]">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-[#049704]">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
@@ -207,7 +207,7 @@ export default function HomeClient() {
                     As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
                   </p>
                   <p>
-                    Our team doesn't just collect trash—we partner with property managers to enhance resident satisfaction, reduce maintenance calls, and maintain pristine communities that prospects want to call home.
+                    Our team doesn't just handle apartment trash pickup—we partner with property managers to enhance resident satisfaction, reduce maintenance calls, and maintain pristine communities that prospects want to call home.
                   </p>
                 </div>
                 <div className="mt-8">
@@ -263,7 +263,7 @@ export default function HomeClient() {
                     <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash collection for apartments and condos in Orlando FL. SLA-backed 100% collection rate with photo verification.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.</p>
                   <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -278,7 +278,7 @@ export default function HomeClient() {
                     <Building2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal Orlando services for residents and apartment communities. Fast, reliable, and eco-friendly disposal solutions.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.</p>
                   <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -293,7 +293,7 @@ export default function HomeClient() {
                     <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Bulk removal Central Florida solutions for apartment complexes and property managers. Scheduled bulk item pickup and flexible service plans.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.</p>
                   <span className="text-[#049704] font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
                     Learn More <ArrowRight className="w-5 h-5" />
                   </span>
@@ -340,7 +340,7 @@ export default function HomeClient() {
                 The On The Fly Advantage
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Next-generation waste management with enterprise-grade accountability
+                Next-generation apartment waste management in Orlando with enterprise-grade accountability
               </p>
             </div>
           </ScrollReveal>
@@ -490,7 +490,7 @@ export default function HomeClient() {
           <ScrollReveal>
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Serving Apartments, Condos & Resorts Across Central Florida
+                Valet Trash & Waste Management Serving Apartments, Condos & Resorts Across Central Florida
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-xl text-gray-700 mb-6 leading-relaxed">
@@ -838,7 +838,7 @@ export default function HomeClient() {
                   Start Your 100% Collection Guarantee Today
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Ready to elevate your property's waste management? Contact us today for a free, no-obligation quote.
+                  Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
                 </p>
               </div>
               <HubSpotForm

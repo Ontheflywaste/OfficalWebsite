@@ -102,7 +102,7 @@ export default function AboutClient() {
                 About Orlando's Valet Trash Experts
               </h1>
               <p className="text-2xl text-gray-200 mb-8">
-                Central Florida's premier waste management partner, built on local roots and national-level service
+                Central Florida's premier valet trash and waste management partner for apartments, condos, and resort communities
               </p>
               <div className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg inline-flex border border-white/20">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="#4285F4">
@@ -133,7 +133,7 @@ export default function AboutClient() {
                 </h2>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p className="text-lg">
-                    On The Fly Waste Solutions was born from a simple observation: property managers in Central Florida deserved a waste management partner they could truly count on.
+                    On The Fly Waste Solutions was born from a simple observation: apartment and condo property managers in Central Florida deserved a waste management partner they could truly count on.
                   </p>
                   <p className="text-lg">
                     As lifelong Florida residents, our founders understood the unique challenges apartment communities face. Unreliable service, poor communication, and lack of accountability were creating headaches for property managers and residents alike.
@@ -142,7 +142,7 @@ export default function AboutClient() {
                     We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. Photo verification for every service. A 100% collection rate guarantee. Real people answering the phone. These weren't industry standards—they were our promises.
                   </p>
                   <p className="text-lg">
-                    Today, we're proud to serve communities across Orlando, Kissimmee, and the surrounding areas. We're more than a service provider—we're your partner in creating cleaner, happier communities.
+                    Today, we're proud to provide valet trash, junk removal, and bulk item removal to communities across Orlando, Kissimmee, and surrounding areas. We're more than a waste management company—we're your partner in creating cleaner, happier apartment communities.
                   </p>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function AboutClient() {
                 Our Mission
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                To provide Central Florida property managers with waste management services that actually work. We combine technology-driven accountability with personal service to deliver a level of reliability previously unheard of in our industry.
+                To provide Central Florida property managers with apartment waste management services that actually work. From doorstep trash collection to bulk removal and junk hauling, we combine technology-driven accountability with personal service to deliver a level of reliability previously unheard of in our industry.
               </p>
             </div>
           </ScrollReveal>
@@ -303,7 +303,7 @@ export default function AboutClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Comprehensive services beyond just trash pickup</span>
+                    <span className="text-lg">Comprehensive services: valet trash, bulk trash pickup, junk removal, and pressure washing</span>
                   </li>
                 </ul>
               </div>
@@ -313,7 +313,7 @@ export default function AboutClient() {
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
                 <h3 className="text-2xl font-bold mb-6">Ready to Experience the Difference?</h3>
                 <p className="text-gray-100 mb-8 text-lg leading-relaxed">
-                  Join the growing number of Central Florida property managers who trust On The Fly for reliable, accountable waste management services.
+                  Join the growing number of Orlando and Central Florida property managers who trust On The Fly for reliable valet trash, apartment trash pickup, and waste management services.
                 </p>
                 <div className="space-y-4">
                   <Link

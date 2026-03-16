@@ -45,7 +45,7 @@ export default function JunkRemovalClient() {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Same-Day Service Available",
-      description: "Need it gone today? We offer fast same-day and next-day junk removal services for homeowners and residents."
+      description: "Need it gone today? We offer fast same-day and next-day junk removal services for Orlando homeowners, apartment residents, and property managers."
     },
     {
       icon: <Camera className="w-8 h-8" />,
@@ -60,7 +60,7 @@ export default function JunkRemovalClient() {
     {
       icon: <Recycle className="w-8 h-8" />,
       title: "Eco-Friendly Disposal",
-      description: "We donate usable items, recycle materials, and properly dispose of waste to minimize environmental impact."
+      description: "We donate usable items, recycle materials, and properly dispose of waste throughout Central Florida to minimize environmental impact."
     }
   ];
 
@@ -93,8 +93,8 @@ export default function JunkRemovalClient() {
       answer: "We accept most household and commercial items including furniture, appliances, electronics, mattresses, construction debris, yard waste, and more. We cannot accept hazardous materials, chemicals, paint, asbestos, or medical waste."
     },
     {
-      question: "How much does junk removal cost?",
-      answer: "Pricing depends on the volume and type of items being removed. We provide free on-site quotes with no obligation. Most residential junk removal projects range from $150 to $600."
+      question: "How much does junk removal cost in Orlando?",
+      answer: "Pricing depends on the volume and type of items being removed. We provide free on-site quotes with no obligation. Most residential junk removal projects in the Orlando area range from $150 to $600."
     },
     {
       question: "Do I need to be present during removal?",
@@ -146,10 +146,10 @@ export default function JunkRemovalClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Truck className="w-12 h-12 text-[#049704]" />
-                <h1 className="text-5xl font-bold">Junk Removal Service</h1>
+                <h1 className="text-5xl font-bold">Junk Removal Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Fast, affordable junk removal for homeowners and residents across Central Florida. Same-day service available with before & after photo verification.
+                Fast, affordable junk removal and junk hauling for homeowners, residents, and apartment communities across Orlando and Central Florida. Same-day service available.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -180,7 +180,7 @@ export default function JunkRemovalClient() {
                 What We Remove
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From single items to complete property cleanouts, we handle it all
+                From single items to complete property cleanouts in Orlando, we handle it all
               </p>
             </div>
           </ScrollReveal>
@@ -240,7 +240,7 @@ export default function JunkRemovalClient() {
                 How It Works
               </h2>
               <p className="text-xl text-gray-600">
-                Simple, fast, and hassle-free junk removal
+                Simple, fast, and hassle-free junk hauling and removal in Orlando
               </p>
             </div>
           </ScrollReveal>
@@ -392,7 +392,7 @@ export default function JunkRemovalClient() {
               Ready to Clear Out That Junk?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Get a free, no-obligation quote today. Same-day service available!
+              Get a free, no-obligation junk removal quote in Orlando today. Same-day service available!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

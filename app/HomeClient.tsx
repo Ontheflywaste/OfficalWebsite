@@ -257,7 +257,7 @@ export default function HomeClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
-              <Link href="/services/valet-trash/" className="group h-full">
+              <Link href="/valet-trash-service-orlando-fl/" className="group h-full">
                 <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
                   <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
                     <Trash2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
@@ -272,7 +272,7 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Link href="/services/junk-removal/" className="group h-full">
+              <Link href="/junk-removal-orlando-fl/" className="group h-full">
                 <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
                   <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
                     <Building2 className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />
@@ -287,7 +287,7 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Link href="/services/bulk-removal/" className="group h-full">
+              <Link href="/bulk-removal-central-florida/" className="group h-full">
                 <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-[#049704] transition-all transform hover:-translate-y-2 h-full flex flex-col">
                   <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#049704] transition-colors">
                     <Recycle className="w-10 h-10 text-[#049704] group-hover:text-white transition-colors" />

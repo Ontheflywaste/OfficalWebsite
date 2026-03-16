@@ -18,7 +18,7 @@ export default function ServicesClient() {
         "Customizable collection windows"
       ],
       link: "/services/valet-trash/",
-      image: "/Images/Valettrashimage.jpg"
+      image: "/Images/Edgardo.jpeg"
     },
     {
       icon: <Package className="w-12 h-12" />,

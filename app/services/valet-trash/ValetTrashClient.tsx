@@ -223,7 +223,7 @@ export default function ValetTrashClient() {
             <ScrollReveal delay={0.2}>
               <div className="bg-white p-8 rounded-2xl shadow-xl h-full">
                 <img
-                  src="/Images/Valettrashimage.jpg"
+                  src="/Images/Edgardo.jpeg"
                   alt="Professional valet trash collection service"
                   className="w-full h-96 object-cover rounded-lg mb-6"
                 />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 
 interface HubSpotFormProps {
   region?: string;
@@ -29,7 +29,8 @@ export default function HubSpotForm({
   const formRef = useRef<HTMLDivElement>(null);
   const formCreatedRef = useRef(false);
   const [isLoading, setIsLoading] = useState(true);
-  const containerIdRef = useRef(`hubspot-form-${Math.random().toString(36).substr(2, 9)}`);
+  const reactId = useId();
+  const containerIdRef = useRef(`hubspot-form-${reactId.replace(/:/g, '')}`);
 
   useEffect(() => {
     if (formCreatedRef.current) return;

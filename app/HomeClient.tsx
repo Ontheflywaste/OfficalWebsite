@@ -611,7 +611,7 @@ export default function HomeClient() {
 
           <ScrollReveal delay={0.2}>
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll">
+              <div className="flex animate-scroll gap-12 md:gap-16">
                 <div className="flex items-center gap-12 md:gap-16">
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
                     <img

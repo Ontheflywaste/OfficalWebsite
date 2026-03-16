@@ -2,5 +2,11 @@
 command = "npx next build"
 publish = ".next"
 
+[[redirects]]
+from = "https://www.ontheflywastesolutions.com/*"
+to = "https://ontheflywastesolutions.com/:splat"
+status = 301
+force = true
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"

@@ -224,6 +224,15 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
+              <Link
+                href="/careers/"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
+                role="menuitem"
+              >
+                Careers
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
+              </Link>
+
               <a
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
@@ -315,6 +324,13 @@ export default function Navbar() {
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Reviews
+              </Link>
+
+              <Link
+                href="/careers/"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
+              >
+                Careers
               </Link>
 
               <a

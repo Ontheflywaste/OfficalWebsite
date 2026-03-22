@@ -140,8 +140,8 @@ export default function CareersClient() {
     },
     {
       icon: <Shield className="w-7 h-7" />,
-      title: 'Stability & Benefits',
-      description: 'Consistent schedules, health benefits eligibility, and paid time off for eligible team members.',
+      title: 'Stability & Growth',
+      description: 'Consistent schedules, paid time off for eligible team members, and long-term job stability.',
     },
     {
       icon: <Briefcase className="w-7 h-7" />,

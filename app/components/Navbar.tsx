@@ -11,8 +11,11 @@ export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [closeCompanyTimeout, setCloseCompanyTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -31,6 +34,7 @@ export default function Navbar() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsServicesDropdownOpen(false);
+    setIsCompanyDropdownOpen(false);
   }, [pathname]);
 
   const isPostPage = pathname?.startsWith('/blog/') || false;
@@ -124,14 +128,56 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
-              <Link
-                href="/about/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
-                role="menuitem"
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (closeCompanyTimeout) {
+                    clearTimeout(closeCompanyTimeout);
+                    setCloseCompanyTimeout(null);
+                  }
+                  setIsCompanyDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  const timeout = setTimeout(() => {
+                    setIsCompanyDropdownOpen(false);
+                  }, 300);
+                  setCloseCompanyTimeout(timeout);
+                }}
               >
-                About Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
-              </Link>
+                <span
+                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-[#049704] cursor-pointer"
+                  role="menuitem"
+                >
+                  Company
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                    isCompanyDropdownOpen ? 'rotate-180' : ''
+                  }`} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
+                </span>
+
+                <div
+                  className={`absolute top-full left-0 pt-2 w-48 transition-all duration-200 ${
+                    isCompanyDropdownOpen
+                      ? 'opacity-100 visible translate-y-0'
+                      : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                >
+                  <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
+                    <Link
+                      href="/about/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/careers/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-[#049704] hover:bg-opacity-10 hover:text-[#049704] transition-colors font-medium"
+                    >
+                      Careers
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               <div
                 className="relative"
@@ -224,15 +270,6 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </Link>
 
-              <Link
-                href="/careers/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#049704]"
-                role="menuitem"
-              >
-                Careers
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
-              </Link>
-
               <a
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
@@ -257,12 +294,34 @@ export default function Navbar() {
                 Home
               </Link>
 
-              <Link
-                href="/about/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
-              >
-                About Us
-              </Link>
+              <div>
+                <button
+                  onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
+                >
+                  Company
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
+                    isMobileCompanyOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
+
+                <div className={`overflow-hidden transition-all duration-300 ${isMobileCompanyOpen ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
+                    <Link
+                      href="/about/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/careers/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#049704] hover:bg-white/5"
+                    >
+                      Careers
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               <div>
                 <button
@@ -324,13 +383,6 @@ export default function Navbar() {
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
               >
                 Reviews
-              </Link>
-
-              <Link
-                href="/careers/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
-              >
-                Careers
               </Link>
 
               <a

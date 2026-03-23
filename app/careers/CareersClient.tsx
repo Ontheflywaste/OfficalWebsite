@@ -162,10 +162,10 @@ export default function CareersClient() {
           <img
             src="/Young_Team.JPEG"
             alt="On The Fly Waste Solutions young team"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[center_70%]"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

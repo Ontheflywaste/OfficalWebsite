@@ -262,12 +262,15 @@ export default function CareersClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <img
-                  src="/Our_team_Breast_Cancer_Awareness.JPG"
-                  alt="On The Fly Waste Solutions team supporting Breast Cancer Awareness"
-                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-                  loading="lazy"
-                />
+                <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+                  <img
+                    src="/Our_team_Breast_Cancer_Awareness.JPG"
+                    alt="On The Fly Waste Solutions team supporting Breast Cancer Awareness"
+                    className="w-full h-[500px] object-cover object-bottom"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/15 rounded-2xl" />
+                </div>
                 <div className="absolute -bottom-6 -left-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl">
                   <div className="text-2xl font-bold">Growing Fast</div>
                   <div className="text-sm text-white/90">New positions available</div>

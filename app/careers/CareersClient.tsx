@@ -160,8 +160,8 @@ export default function CareersClient() {
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <img
-            src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions team truck"
+            src="/Young_Team.JPEG"
+            alt="On The Fly Waste Solutions young team"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
           />
@@ -263,8 +263,8 @@ export default function CareersClient() {
             <ScrollReveal delay={0.2}>
               <div className="relative">
                 <img
-                  src="/Images/artemistradeshow.jpg"
-                  alt="On The Fly Waste Solutions team at industry event"
+                  src="/Our_team_Breast_Cancer_Awareness.JPG"
+                  alt="On The Fly Waste Solutions team supporting Breast Cancer Awareness"
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                   loading="lazy"
                 />

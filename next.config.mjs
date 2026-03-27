@@ -82,6 +82,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+                  source: '/home/',
+                  destination: '/',
+                  permanent: true,
+      },
+      }
+      {
         source: '/contact-us',
         destination: '/contact/',
         permanent: true,
@@ -99,16 +105,6 @@ const nextConfig = {
       {
         source: '/about-us/',
         destination: '/about/',
-        permanent: true,
-      },
-      {
-        source: '/blog/valet-trash-benefits',
-        destination: '/blog/valet-trash-benefits-orlando-apartments/',
-        permanent: true,
-      },
-      {
-        source: '/blog/valet-trash-benefits/',
-        destination: '/blog/valet-trash-benefits-orlando-apartments/',
         permanent: true,
       },
     ];

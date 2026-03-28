@@ -82,11 +82,10 @@ const nextConfig = {
         permanent: true,
       },
       {
-                  source: '/home/',
-                  destination: '/',
-                  permanent: true,
+        source: '/home/',
+        destination: '/',
+        permanent: true,
       },
-      }
       {
         source: '/contact-us',
         destination: '/contact/',
@@ -105,6 +104,36 @@ const nextConfig = {
       {
         source: '/about-us/',
         destination: '/about/',
+        permanent: true,
+      },
+      {
+        source: '/blog/valet-trash-benefits',
+        destination: '/blog/valet-trash-benefits-orlando-apartments/',
+        permanent: true,
+      },
+      {
+        source: '/blog/valet-trash-benefits/',
+        destination: '/blog/valet-trash-benefits-orlando-apartments/',
+        permanent: true,
+      },
+      {
+        source: '/blog/bulk-waste-removal-guide',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/bulk-waste-removal-guide/',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-property-managers-should-expect-valet-trash-company',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-property-managers-should-expect-valet-trash-company/',
+        destination: '/blog/',
         permanent: true,
       },
     ];

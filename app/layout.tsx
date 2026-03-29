@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://ontheflywastesolutions.com'),
   verification: {
-    google: 'your-google-verification-code',
+    google: 'tK6BlVpZq83PNDahaecRB7Ii7mxTvE9Wmc6lLzJiiaU',
   },
   robots: {
     index: true,

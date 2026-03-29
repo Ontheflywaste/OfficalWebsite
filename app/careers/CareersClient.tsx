@@ -162,7 +162,7 @@ export default function CareersClient() {
           <img
             src="/Young_Team.JPEG"
             alt="On The Fly Waste Solutions young team"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
           />
           <div className="absolute inset-0 bg-black/0" />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -314,6 +315,7 @@ export default function RootLayout({
         <Footer />
         <HubSpotChat />
         <AnalyticsWrapper />
+        <GoogleAnalytics gaId="G-GX402N41TM" />
       </body>
     </html>
   );

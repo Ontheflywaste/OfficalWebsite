@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HubSpotChat from './components/HubSpotChat';
 import { WebVitals } from './components/WebVitals';
-import { Analytics } from '@vercel/analytics/react';
+import AnalyticsWrapper from './components/AnalyticsWrapper';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -313,7 +313,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <HubSpotChat />
-        <Analytics />
+        <AnalyticsWrapper />
       </body>
     </html>
   );

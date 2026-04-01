@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -296,7 +296,16 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={inter.variable}>
+      <GoogleTagManager gtmId="GTM-MXVDRR9H" />
       <body className="min-h-screen bg-white">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MXVDRR9H"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Script
           id="schema-org"
           type="application/ld+json"

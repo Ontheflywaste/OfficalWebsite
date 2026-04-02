@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -296,7 +295,41 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={inter.variable}>
-      <GoogleTagManager gtmId="GTM-MXVDRR9H" />
+      <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-MXVDRR9H');
+            `,
+          }}
+        />
+        <Script
+          id="ga-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GX402N41TM"
+        />
+        <Script
+          id="ga-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-GX402N41TM', {
+                page_path: window.location.pathname,
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-white">
         <noscript>
           <iframe
@@ -324,7 +357,6 @@ export default function RootLayout({
         <Footer />
         <HubSpotChat />
         <AnalyticsWrapper />
-        <GoogleAnalytics gaId="G-GX402N41TM" />
       </body>
     </html>
   );

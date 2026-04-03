@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 z-50 hidden md:block"
+        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 z-[60] hidden md:block"
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +68,7 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`fixed w-full z-40 transition-all duration-300 ${
+        className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
             ? 'top-0 md:top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
             : 'top-0 md:top-10 bg-gradient-to-b from-[#050505]/95 to-[#1A1A1A]/95 backdrop-blur-md'

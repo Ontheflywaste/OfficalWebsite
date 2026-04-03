@@ -340,13 +340,3 @@ iframe#hubspot-conversations-iframe {
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
 }
-
-.safe-area-bottom {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-@media (max-width: 767px) {
-  body {
-    padding-bottom: 64px;
-  }
-}

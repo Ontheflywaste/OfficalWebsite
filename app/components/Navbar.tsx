@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, MapPin, Clock, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Menu, X, ChevronDown, Star } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
@@ -15,12 +16,19 @@ export default function Navbar() {
   const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const [closeCompanyTimeout, setCloseCompanyTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const pathname = usePathname();
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
+      setIsVisible(scrollPosition <= lastScrollY || scrollPosition < 50);
+      lastScrollY = scrollPosition;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -33,10 +41,20 @@ export default function Navbar() {
     setIsCompanyDropdownOpen(false);
   }, [pathname]);
 
+  const isPostPage = pathname?.startsWith('/blog/') || false;
+  const shouldUseBlackLogo = isScrolled || isPostPage;
+  const shouldUseBlackNavbar = isScrolled || isPostPage;
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <>
       <div
-        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 z-50 hidden md:block"
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-all duration-300 z-30 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        } hidden md:block`}
+        style={{ willChange: 'transform' }}
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +82,12 @@ export default function Navbar() {
       </div>
 
       <nav
-        className="fixed w-full z-40 top-0 md:top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg"
+        className={`fixed w-full z-40 transition-all duration-300 ${
+          shouldUseBlackNavbar
+            ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
+            : 'top-0 md:top-10 bg-gradient-to-b from-[#050505]/95 to-[#1A1A1A]/95 backdrop-blur-md'
+        }`}
+        style={{ willChange: 'transform, top' }}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -264,14 +287,6 @@ export default function Navbar() {
                 Testimonials
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </a>
-
-              <Link
-                href="/contact/"
-                className="bg-[#FF6B00] hover:bg-[#E55A00] text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                role="menuitem"
-              >
-                Get Quote
-              </Link>
             </div>
           </div>
         </div>
@@ -389,16 +404,6 @@ export default function Navbar() {
           </div>
         )}
       </nav>
-
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#FF6B00] safe-area-bottom">
-        <Link
-          href="/contact/"
-          className="flex items-center justify-center py-4 text-white font-bold text-lg tracking-wide"
-        >
-          <Phone className="h-5 w-5 mr-2" />
-          Get a Free Quote
-        </Link>
-      </div>
     </>
   );
 }

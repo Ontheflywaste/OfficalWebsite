@@ -16,10 +16,6 @@ export default function Navbar() {
   const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const [closeCompanyTimeout, setCloseCompanyTimeout] = useState<NodeJS.Timeout | null>(null);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -45,9 +41,6 @@ export default function Navbar() {
   const shouldUseBlackLogo = isScrolled || isPostPage;
   const shouldUseBlackNavbar = isScrolled || isPostPage;
 
-  if (!mounted) {
-    return null;
-  }
   return (
     <>
       <div

@@ -161,7 +161,12 @@ body {
   }
 }
 
-/* ScrollReveal animation */
+/* ScrollReveal animation - start visible, JS will handle animation */
+.scroll-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .scroll-reveal.is-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;

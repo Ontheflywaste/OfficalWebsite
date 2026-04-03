@@ -331,6 +331,45 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-white">
+        <Script
+          id="chunk-error-handler"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('error', function(e) {
+                if (e.message && (
+                  e.message.includes('Loading chunk') ||
+                  e.message.includes('ChunkLoadError') ||
+                  e.message.includes('Failed to fetch dynamically imported module') ||
+                  e.message.includes('Importing a module script failed')
+                )) {
+                  var retryCount = parseInt(sessionStorage.getItem('chunkRetryCount') || '0', 10);
+                  if (retryCount < 3) {
+                    sessionStorage.setItem('chunkRetryCount', String(retryCount + 1));
+                    window.location.reload();
+                  }
+                }
+              });
+              window.addEventListener('unhandledrejection', function(e) {
+                if (e.reason && e.reason.message && (
+                  e.reason.message.includes('Loading chunk') ||
+                  e.reason.message.includes('ChunkLoadError') ||
+                  e.reason.message.includes('Failed to fetch dynamically imported module') ||
+                  e.reason.message.includes('Importing a module script failed')
+                )) {
+                  var retryCount = parseInt(sessionStorage.getItem('chunkRetryCount') || '0', 10);
+                  if (retryCount < 3) {
+                    sessionStorage.setItem('chunkRetryCount', String(retryCount + 1));
+                    window.location.reload();
+                  }
+                }
+              });
+              if (sessionStorage.getItem('chunkRetryCount')) {
+                setTimeout(function() { sessionStorage.removeItem('chunkRetryCount'); }, 5000);
+              }
+            `,
+          }}
+        />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MXVDRR9H"

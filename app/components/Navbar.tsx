@@ -4,11 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Phone, Mail, MapPin, Clock, Menu, X, ChevronDown, Star } from 'lucide-react';
+import { Phone, MapPin, Clock, Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
@@ -19,12 +18,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
-      setIsVisible(scrollPosition <= lastScrollY || scrollPosition < 50);
-      lastScrollY = scrollPosition;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -44,10 +40,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 transition-all duration-300 z-30 ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
-        } hidden md:block`}
-        style={{ willChange: 'transform' }}
+        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#049704] to-[#037a03] text-white py-2 z-50 hidden md:block"
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,19 +69,31 @@ export default function Navbar() {
 
       <nav
         className={`fixed w-full z-40 transition-all duration-300 ${
-          shouldUseBlackNavbar
-            ? 'top-0 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
+          isScrolled
+            ? 'top-0 md:top-10 bg-gradient-to-b from-[#050505] to-[#1A1A1A] shadow-lg'
             : 'top-0 md:top-10 bg-gradient-to-b from-[#050505]/95 to-[#1A1A1A]/95 backdrop-blur-md'
         }`}
-        style={{ willChange: 'transform, top' }}
         role="navigation"
         aria-label="Main navigation"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex items-center justify-center md:justify-between transition-all duration-300 ${
-            isScrolled ? 'h-20' : 'h-24'
-          } relative`}>
-            <div className="flex-shrink-0 transform transition-all duration-300 hover:scale-105 relative">
+          <div className={`flex items-center justify-between transition-all duration-300 ${
+            isScrolled ? 'h-16 md:h-20' : 'h-16 md:h-24'
+          }`}>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden transition-colors duration-300 text-white hover:text-[#049704]"
+              aria-expanded={isMobileMenuOpen}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+
+            <div className="flex-shrink-0 transform transition-all duration-300 hover:scale-105">
               <Link
                 href="/"
                 aria-label="On The Fly Waste Solutions – Home"
@@ -100,23 +105,18 @@ export default function Navbar() {
                   width={250}
                   height={80}
                   priority
-                  className={`${isScrolled ? 'h-16' : 'h-20'} w-auto transition-all duration-300 object-contain opacity-100 relative`}
+                  className={`${isScrolled ? 'h-12 md:h-16' : 'h-12 md:h-20'} w-auto transition-all duration-300 object-contain`}
                 />
               </Link>
             </div>
 
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden absolute left-4 transition-colors duration-300 text-white hover:text-[#049704]"
-              aria-expanded={isMobileMenuOpen}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            <Link
+              href="/contact/"
+              className="md:hidden inline-flex items-center gap-1.5 bg-[#049704] text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-[#038503] transition-all shadow-lg"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+              Get Quote
+              <ArrowRight className="w-4 h-4" />
+            </Link>
 
             <div className="hidden md:flex items-center space-x-8" role="menubar">
               <Link

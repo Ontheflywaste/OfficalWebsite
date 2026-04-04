@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HubSpotChat from './components/HubSpotChat';
+import MobileStickyCTA from './components/MobileStickyCTA';
 import { WebVitals } from './components/WebVitals';
 import AnalyticsWrapper from './components/AnalyticsWrapper';
 
@@ -395,6 +396,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <HubSpotChat />
+        <MobileStickyCTA />
         <AnalyticsWrapper />
       </body>
     </html>

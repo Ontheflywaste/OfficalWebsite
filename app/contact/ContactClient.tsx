@@ -1,22 +1,33 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Phone, Mail, CheckCircle2, Star, Shield, Award, X } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
+import { Phone, CheckCircle2, Star, Shield, Award, X } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
-declare global {
-  interface Window {
-    hbspt?: {
-      forms: {
-        create: (options: any) => void;
-      };
-    };
-  }
-}
+
+const serviceLabels: Record<string, string> = {
+  'valet-trash': 'Valet Trash Service',
+  'junk-removal': 'Junk Removal',
+  'bulk-pickup': 'Bulk Pick-up',
+};
+
+const sizeLabels: Record<string, string> = {
+  '1-50': '1-50 Units',
+  '51-100': '51-100 Units',
+  '101-200': '101-200 Units',
+  '200+': '200+ Units',
+};
 
 export default function ContactClient() {
+  const searchParams = useSearchParams();
   const [showSuccess, setShowSuccess] = useState(false);
   const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  const serviceParam = searchParams.get('service');
+  const sizeParam = searchParams.get('size');
+
+  const hasPrefilledData = serviceParam || sizeParam;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,21 +53,37 @@ export default function ContactClient() {
 
   useEffect(() => {
     if (scriptLoaded && window.hbspt) {
+      const prefilledMessage: string[] = [];
+      if (serviceParam && serviceLabels[serviceParam]) {
+        prefilledMessage.push(`Service Interest: ${serviceLabels[serviceParam]}`);
+      }
+      if (sizeParam && sizeLabels[sizeParam]) {
+        prefilledMessage.push(`Property Size: ${sizeLabels[sizeParam]}`);
+      }
+
       window.hbspt.forms.create({
         region: 'na1',
         portalId: '22416220',
         formId: 'b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d',
         target: '#hubspot-form-container',
+        onFormReady: ($form: HTMLFormElement) => {
+          if (prefilledMessage.length > 0) {
+            const messageField = $form.querySelector('textarea[name="message"]') as HTMLTextAreaElement;
+            if (messageField) {
+              messageField.value = prefilledMessage.join('\n');
+              messageField.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+          }
+        },
         onFormSubmitted: () => {
           setShowSuccess(true);
         }
       });
     }
-  }, [scriptLoaded]);
+  }, [scriptLoaded, serviceParam, sizeParam]);
 
   return (
     <div className="min-h-screen bg-gray-50 pt-20 md:pt-24">
-      {/* Success Modal */}
       {showSuccess && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-scale-in">
@@ -92,7 +119,6 @@ export default function ContactClient() {
         </div>
       )}
 
-      {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-gray-900 to-[#049704] py-16 md:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
 
@@ -108,26 +134,38 @@ export default function ContactClient() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left Column - Form */}
             <div>
               <ScrollReveal>
-                {/* HubSpot Form Container */}
+                {hasPrefilledData && (
+                  <div className="bg-[#049704]/10 border border-[#049704]/30 rounded-xl p-4 mb-6">
+                    <p className="text-sm font-medium text-[#049704] mb-2">Your selections from the Quick Quote:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {serviceParam && serviceLabels[serviceParam] && (
+                        <span className="bg-[#049704] text-white text-sm px-3 py-1 rounded-full">
+                          {serviceLabels[serviceParam]}
+                        </span>
+                      )}
+                      {sizeParam && sizeLabels[sizeParam] && (
+                        <span className="bg-[#049704] text-white text-sm px-3 py-1 rounded-full">
+                          {sizeLabels[sizeParam]}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
                 <div id="hubspot-form-container"></div>
               </ScrollReveal>
             </div>
 
-            {/* Right Column - Trust Signals */}
             <div>
               <ScrollReveal delay={0.2}>
                 <div className="bg-gradient-to-br from-[#049704] to-[#027502] rounded-2xl p-8 text-white shadow-xl">
                   <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
 
                   <div className="space-y-6">
-                    {/* 5-Star Rated */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Star className="w-6 h-6 text-yellow-300 fill-yellow-300" />
@@ -140,7 +178,6 @@ export default function ContactClient() {
                       </div>
                     </div>
 
-                    {/* Licensed & Insured */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Shield className="w-6 h-6" />
@@ -153,7 +190,6 @@ export default function ContactClient() {
                       </div>
                     </div>
 
-                    {/* 100% Collection Guarantee */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Award className="w-6 h-6" />
@@ -166,7 +202,6 @@ export default function ContactClient() {
                       </div>
                     </div>
 
-                    {/* Advanced Technology */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <CheckCircle2 className="w-6 h-6" />
@@ -179,7 +214,6 @@ export default function ContactClient() {
                       </div>
                     </div>
 
-                    {/* 24/7 Support */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Phone className="w-6 h-6" />
@@ -192,7 +226,6 @@ export default function ContactClient() {
                       </div>
                     </div>
 
-                    {/* Flexible Scheduling */}
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
                         <CheckCircle2 className="w-6 h-6" />
@@ -206,7 +239,6 @@ export default function ContactClient() {
                     </div>
                   </div>
 
-                  {/* CTA Box */}
                   <div className="mt-8 p-6 bg-white/10 rounded-xl backdrop-blur-sm">
                     <p className="text-lg font-semibold mb-3">
                       Ready to get started?

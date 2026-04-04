@@ -345,3 +345,8 @@ iframe#hubspot-conversations-iframe {
 .animate-scale-in {
   animation: scale-in 0.3s ease-out;
 }
+
+/* Safe area padding for mobile sticky CTA */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

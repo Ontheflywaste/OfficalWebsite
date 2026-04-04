@@ -7,7 +7,7 @@ import { Home, Search, Phone, ArrowLeft } from 'lucide-react';
 
 export default function NotFound() {
   const router = useRouter();
-  const [countdown, setCountdown] = useState(8);
+  const [countdown, setCountdown] = useState(5);
 
   useEffect(() => {
     const timer = setInterval(() => {

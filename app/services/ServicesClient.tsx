@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Trash2, Package, Droplets, Sparkles, CheckCircle2, Shield, Clock, Phone } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
@@ -170,11 +171,14 @@ export default function ServicesClient() {
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
-                  <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                    <img
+                  <div className={`relative h-96 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-96 object-cover rounded-2xl shadow-xl"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover rounded-2xl shadow-xl"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -229,10 +233,13 @@ export default function ServicesClient() {
                 </ScrollReveal>
               </div>
               <div className="relative h-full min-h-[400px] lg:min-h-[600px]">
-                <img
-                  src="/Images/our-services.jpg"
+                <Image
+                  src="/Images/Valettrashimage.jpg"
                   alt="Contact us for waste management services"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>

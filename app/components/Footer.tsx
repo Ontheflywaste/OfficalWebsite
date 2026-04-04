@@ -196,27 +196,33 @@ export default function Footer() {
               Trusted Industry Partnerships
             </h3>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
-                <img
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity relative">
+                <Image
                   src="/Images/faa-full-color-full-logo.png"
                   alt="Florida Apartment Association Member"
-                  className="h-full w-full object-contain"
+                  width={128}
+                  height={64}
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
-              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
-                <img
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity relative">
+                <Image
                   src="/Images/NAA-logo_bgwhite.png"
                   alt="National Apartment Association Member"
-                  className="h-full w-full object-contain"
+                  width={128}
+                  height={64}
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
-              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity">
-                <img
+              <div className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity relative">
+                <Image
                   src="/Images/AAGO.png"
                   alt="AAGO Member"
-                  className="h-full w-full object-contain"
+                  width={128}
+                  height={64}
+                  className="object-contain"
                   loading="lazy"
                 />
               </div>
@@ -224,13 +230,15 @@ export default function Footer() {
                 href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
                 target="_blank"
                 rel="nofollow"
-                className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity"
+                className="flex items-center justify-center h-16 w-32 opacity-80 hover:opacity-100 transition-opacity relative"
                 aria-label="View our BBB Accredited Business profile"
               >
-                <img
+                <Image
                   src="https://seal-centralflorida.bbb.org/seals/blue-seal-200-42-bbb-235977450.png"
                   alt="On The Fly Waste Solutions BBB Business Review"
-                  className="h-full w-full object-contain"
+                  width={128}
+                  height={64}
+                  className="object-contain"
                   loading="lazy"
                 />
               </a>

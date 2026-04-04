@@ -29,8 +29,9 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   experimental: {
-    optimizePackageImports: ['lucide-react'],
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  transpilePackages: ['web-vitals'],
   generateBuildId: async () => {
     return `build-${Date.now()}`;
   },

@@ -1,12 +1,30 @@
 'use client';
 
-import dynamic from 'next/dynamic';
-
-const Analytics = dynamic(
-  () => import('@vercel/analytics/react').then((mod) => mod.Analytics),
-  { ssr: false }
-);
+import { useEffect, useState } from 'react';
 
 export default function AnalyticsWrapper() {
-  return <Analytics />;
+  const [AnalyticsComponent, setAnalyticsComponent] = useState<React.ComponentType | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    import('@vercel/analytics/react')
+      .then((mod) => {
+        if (isMounted) {
+          setAnalyticsComponent(() => mod.Analytics);
+        }
+      })
+      .catch(() => {
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  if (!AnalyticsComponent) {
+    return null;
+  }
+
+  return <AnalyticsComponent />;
 }

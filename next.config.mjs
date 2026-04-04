@@ -136,6 +136,101 @@ const nextConfig = {
         destination: '/blog/',
         permanent: true,
       },
+      {
+        source: '/post/:slug*',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/posts/:slug*',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/article/:slug*',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/articles/:slug*',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/news/:slug*',
+        destination: '/blog/',
+        permanent: true,
+      },
+      {
+        source: '/service/:slug*',
+        destination: '/services/',
+        permanent: true,
+      },
+      {
+        source: '/valet-trash',
+        destination: '/services/valet-trash/',
+        permanent: true,
+      },
+      {
+        source: '/junk-removal',
+        destination: '/services/junk-removal/',
+        permanent: true,
+      },
+      {
+        source: '/bulk-removal',
+        destination: '/services/bulk-removal/',
+        permanent: true,
+      },
+      {
+        source: '/pressure-washing',
+        destination: '/services/pressure-washing/',
+        permanent: true,
+      },
+      {
+        source: '/locations/:slug*',
+        destination: '/services/',
+        permanent: true,
+      },
+      {
+        source: '/area/:slug*',
+        destination: '/services/',
+        permanent: true,
+      },
+      {
+        source: '/areas/:slug*',
+        destination: '/services/',
+        permanent: true,
+      },
+      {
+        source: '/quote',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/quote/',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/get-quote',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/get-quote/',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/free-quote',
+        destination: '/contact/',
+        permanent: true,
+      },
+      {
+        source: '/free-quote/',
+        destination: '/contact/',
+        permanent: true,
+      },
     ];
   },
 };

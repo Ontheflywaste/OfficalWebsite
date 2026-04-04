@@ -1,17 +1,29 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Home, Search, Phone, ArrowLeft } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Page Not Found | On The Fly Waste Solutions',
-  description: 'The page you are looking for could not be found. Browse our valet trash and waste management services.',
-  robots: {
-    index: false,
-    follow: true,
-  },
-};
 
 export default function NotFound() {
+  const router = useRouter();
+  const [countdown, setCountdown] = useState(8);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          router.push('/services/');
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [router]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-2xl w-full text-center">
@@ -20,8 +32,11 @@ export default function NotFound() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Page Not Found
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-lg text-gray-600 mb-4">
             We couldn't find the page you're looking for. It may have been moved or no longer exists.
+          </p>
+          <p className="text-sm text-gray-500 mb-8">
+            Redirecting to our services page in <span className="font-bold text-[#049704]">{countdown}</span> seconds...
           </p>
         </div>
 

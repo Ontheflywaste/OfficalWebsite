@@ -8,6 +8,7 @@ import HubSpotChat from './components/HubSpotChat';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import { WebVitals } from './components/WebVitals';
 import AnalyticsWrapper from './components/AnalyticsWrapper';
+import ChunkErrorBoundary from './components/ChunkErrorBoundary';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -393,7 +394,9 @@ export default function RootLayout({
         />
         <WebVitals />
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <ChunkErrorBoundary>{children}</ChunkErrorBoundary>
+        </main>
         <Footer />
         <HubSpotChat />
         <MobileStickyCTA />

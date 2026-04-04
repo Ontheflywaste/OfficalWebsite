@@ -1,26 +1,37 @@
 'use client';
 
-import { useReportWebVitals } from 'next/web-vitals';
+import { useEffect } from 'react';
 
 export function WebVitals() {
-  useReportWebVitals((metric) => {
-    if (process.env.NODE_ENV === 'production') {
-      const body = JSON.stringify({
-        name: metric.name,
-        value: metric.value,
-        rating: metric.rating,
-        id: metric.id,
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB, onINP }) => {
+        const sendMetric = (metric: { name: string; value: number; rating?: string; id: string }) => {
+          const body = JSON.stringify({
+            name: metric.name,
+            value: metric.value,
+            rating: metric.rating,
+            id: metric.id,
+          });
+
+          const url = '/api/vitals';
+
+          if (navigator.sendBeacon) {
+            navigator.sendBeacon(url, body);
+          } else {
+            fetch(url, { body, method: 'POST', keepalive: true });
+          }
+        };
+
+        onCLS(sendMetric);
+        onFCP(sendMetric);
+        onLCP(sendMetric);
+        onTTFB(sendMetric);
+        onINP(sendMetric);
+      }).catch(() => {
       });
-
-      const url = '/api/vitals';
-
-      if (navigator.sendBeacon) {
-        navigator.sendBeacon(url, body);
-      } else {
-        fetch(url, { body, method: 'POST', keepalive: true });
-      }
     }
-  });
+  }, []);
 
   return null;
 }

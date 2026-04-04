@@ -18,11 +18,12 @@ export default class ChunkErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State | null {
+    const errorMessage = error?.message || '';
     const isChunkError =
-      error.name === 'ChunkLoadError' ||
-      error.message.includes('Loading chunk') ||
-      error.message.includes('Failed to fetch dynamically imported module') ||
-      error.message.includes('Importing a module script failed');
+      error?.name === 'ChunkLoadError' ||
+      errorMessage.includes('Loading chunk') ||
+      errorMessage.includes('Failed to fetch dynamically imported module') ||
+      errorMessage.includes('Importing a module script failed');
 
     if (isChunkError) {
       return { hasError: true, isRetrying: false };
@@ -31,11 +32,12 @@ export default class ChunkErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error) {
+    const errorMessage = error?.message || '';
     const isChunkError =
-      error.name === 'ChunkLoadError' ||
-      error.message.includes('Loading chunk') ||
-      error.message.includes('Failed to fetch dynamically imported module') ||
-      error.message.includes('Importing a module script failed');
+      error?.name === 'ChunkLoadError' ||
+      errorMessage.includes('Loading chunk') ||
+      errorMessage.includes('Failed to fetch dynamically imported module') ||
+      errorMessage.includes('Importing a module script failed');
 
     if (isChunkError && !this.state.isRetrying) {
       this.setState({ isRetrying: true });

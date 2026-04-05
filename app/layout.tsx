@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import dynamic from 'next/dynamic';
 import './globals.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import HubSpotChat from './components/HubSpotChat';
-import MobileStickyCTA from './components/MobileStickyCTA';
-import { WebVitals } from './components/WebVitals';
-import AnalyticsWrapper from './components/AnalyticsWrapper';
-import ChunkErrorBoundary from './components/ChunkErrorBoundary';
+
+const Navbar = dynamic(() => import('./components/Navbar'), { ssr: false });
+const Footer = dynamic(() => import('./components/Footer'), { ssr: false });
+const HubSpotChat = dynamic(() => import('./components/HubSpotChat'), { ssr: false });
+const MobileStickyCTA = dynamic(() => import('./components/MobileStickyCTA'), { ssr: false });
+const ChunkErrorBoundary = dynamic(() => import('./components/ChunkErrorBoundary'), { ssr: false });
 
 const inter = Inter({
   subsets: ['latin'],
@@ -392,7 +392,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           strategy="beforeInteractive"
         />
-        <WebVitals />
         <Navbar />
         <main>
           <ChunkErrorBoundary>{children}</ChunkErrorBoundary>
@@ -400,7 +399,6 @@ export default function RootLayout({
         <Footer />
         <HubSpotChat />
         <MobileStickyCTA />
-        <AnalyticsWrapper />
       </body>
     </html>
   );

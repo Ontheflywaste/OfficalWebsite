@@ -83,7 +83,7 @@ export default function ContactClient() {
   }, [scriptLoaded, serviceParam, sizeParam]);
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20 md:pt-24">
+    <div className="min-h-screen bg-gray-50">
       {showSuccess && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
           <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-scale-in">
@@ -119,7 +119,7 @@ export default function ContactClient() {
         </div>
       )}
 
-      <div className="relative bg-gradient-to-br from-gray-900 to-[#049704] py-16 md:py-20">
+      <div className="relative bg-gradient-to-br from-gray-900 to-[#049704] pt-32 md:pt-36 pb-16 md:pb-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

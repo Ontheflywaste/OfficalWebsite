@@ -127,7 +127,7 @@ export default function HomeClient() {
               </ScrollReveal>
 
               <div className="mt-8">
-                <p className="text-white/80 text-sm font-light tracking-wide">
+                <p className="text-white/80 text-sm font-light tracking-wide text-center">
                   Proudly serving premier communities like The Aston at Uptown
                 </p>
               </div>

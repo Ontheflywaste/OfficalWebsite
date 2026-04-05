@@ -60,7 +60,7 @@ export default function HomeClient() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <Image
             src="/Images/TruckImage.JPG"
@@ -75,9 +75,9 @@ export default function HomeClient() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-          <div className="max-w-3xl">
-            <div className="text-left">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-12 md:pb-20">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center">
               <ScrollReveal>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
                   Valet Trash, Bulk & Junk Removal Services<br />
@@ -86,13 +86,13 @@ export default function HomeClient() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
                   Orlando's trusted apartment trash pickup and valet trash service for apartments, condos, and resort communities. Professional bulk trash removal and junk removal services across Central Florida.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4 items-start mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-6">
                   <a
                     href="tel:407-274-5019"
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"

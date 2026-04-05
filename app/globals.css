@@ -1,5 +1,3 @@
-/* Import optimized font */
-@import '../node_modules/react-datepicker/dist/react-datepicker.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, ChevronDown } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
-import QuickQuoteWizard from './components/QuickQuoteWizard';
 
 export default function HomeClient() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -77,8 +76,8 @@ export default function HomeClient() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-center lg:text-left">
+          <div className="max-w-3xl">
+            <div className="text-left">
               <ScrollReveal>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
                   Valet Trash, Bulk & Junk Removal Services<br />
@@ -87,13 +86,13 @@ export default function HomeClient() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto lg:mx-0">
+                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
                   Orlando's trusted apartment trash pickup and valet trash service for apartments, condos, and resort communities. Professional bulk trash removal and junk removal services across Central Florida.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={0.4}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center mb-6">
+                <div className="flex flex-col sm:flex-row gap-4 items-start mb-6">
                   <a
                     href="tel:407-274-5019"
                     className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
@@ -127,24 +126,12 @@ export default function HomeClient() {
                 </a>
               </ScrollReveal>
 
-              <div className="hidden lg:block mt-8">
+              <div className="mt-8">
                 <p className="text-white/80 text-sm font-light tracking-wide">
                   Proudly serving premier communities like The Aston at Uptown
                 </p>
               </div>
             </div>
-
-            <div className="hidden md:block">
-              <ScrollReveal delay={0.3}>
-                <QuickQuoteWizard />
-              </ScrollReveal>
-            </div>
-          </div>
-
-          <div className="lg:hidden mt-6 text-center">
-            <p className="text-white/80 text-xs sm:text-sm font-light tracking-wide">
-              Proudly serving premier communities like The Aston at Uptown
-            </p>
           </div>
         </div>
       </section>

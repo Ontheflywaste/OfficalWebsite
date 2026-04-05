@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, ReactNode } from 'react';
+import React, { useEffect, useRef, ReactNode } from 'react';
 
 interface ScrollRevealProps {
   children: ReactNode;
@@ -10,10 +10,14 @@ interface ScrollRevealProps {
 
 export default function ScrollReveal({ children, delay = 0, className = '' }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    setIsReady(true);
+    const element = ref.current;
+    if (!element) return;
+
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,14 +35,10 @@ export default function ScrollReveal({ children, delay = 0, className = '' }: Sc
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      observer.unobserve(element);
     };
   }, [delay]);
 
@@ -46,11 +46,6 @@ export default function ScrollReveal({ children, delay = 0, className = '' }: Sc
     <div
       ref={ref}
       className={`scroll-reveal ${className}`}
-      style={isReady ? {
-        opacity: 0,
-        transform: 'translateY(20px)',
-        transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-      } : undefined}
     >
       {children}
     </div>

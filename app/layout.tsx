@@ -7,7 +7,6 @@ import './globals.css';
 const Navbar = dynamic(() => import('./components/Navbar'), { ssr: false });
 const Footer = dynamic(() => import('./components/Footer'), { ssr: false });
 const HubSpotChat = dynamic(() => import('./components/HubSpotChat'), { ssr: false });
-const MobileStickyCTA = dynamic(() => import('./components/MobileStickyCTA'), { ssr: false });
 const ChunkErrorBoundary = dynamic(() => import('./components/ChunkErrorBoundary'), { ssr: false });
 
 const inter = Inter({
@@ -398,7 +397,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <HubSpotChat />
-        <MobileStickyCTA />
       </body>
     </html>
   );

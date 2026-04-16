@@ -50,7 +50,7 @@ export default class ChunkErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-[200px] flex items-center justify-center">
           <div className="text-center p-8">
-            <div className="animate-spin w-8 h-8 border-4 border-[#049704] border-t-transparent rounded-full mx-auto mb-4" />
+            <div className="animate-spin w-8 h-8 border-4 border-[#16a34a] border-t-transparent rounded-full mx-auto mb-4" />
             <p className="text-gray-600">Loading latest version...</p>
           </div>
         </div>

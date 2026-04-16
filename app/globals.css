@@ -59,7 +59,7 @@ body {
 }
 
 .react-datepicker__header {
-  background-color: #049704;
+  background-color: #16a34a;
   border-bottom: none;
   padding-top: 0.75rem;
 }
@@ -75,15 +75,15 @@ body {
 }
 
 .react-datepicker__day--selected {
-  background-color: #049704 !important;
+  background-color: #16a34a !important;
 }
 
 .react-datepicker__day--keyboard-selected {
-  background-color: rgba(4, 151, 4, 0.2);
+  background-color: rgba(22, 163, 74, 0.2);
 }
 
 .react-datepicker__day:hover {
-  background-color: rgba(4, 151, 4, 0.1);
+  background-color: rgba(22, 163, 74, 0.1);
 }
 
 .react-datepicker__time-container {
@@ -91,7 +91,7 @@ body {
 }
 
 .react-datepicker__time-list-item--selected {
-  background-color: #049704 !important;
+  background-color: #16a34a !important;
 }
 
 /* Essential animations only */
@@ -105,13 +105,13 @@ body {
 
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 0 0 rgba(4, 151, 4, 0.4);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
   }
   70% {
-    box-shadow: 0 0 0 10px rgba(4, 151, 4, 0);
+    box-shadow: 0 0 0 10px rgba(22, 163, 74, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(4, 151, 4, 0);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
   }
 }
 
@@ -138,24 +138,23 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-white bg-[#049704] transition-all duration-300 transform hover:bg-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
-    animation: pulse-glow 2s infinite;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg text-white bg-[#16a34a] transition-all duration-300 transform hover:bg-[#15803d] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
   }
 
   .btn-primary-inverse {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-full text-[#049704] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-lg w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg text-[#16a34a] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-full border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-gray-900 hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 shadow-md w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-[#1f2328] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-md w-full sm:w-auto;
   }
 
   .btn-outline {
-    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white font-medium rounded-full transition-all duration-300 transform hover:bg-white hover:text-[#049704] hover:scale-105 hover:-translate-y-1 active:scale-95 active:translate-y-0 text-base;
+    @apply inline-flex items-center px-6 py-3 border-2 border-[#16a34a] text-[#16a34a] font-medium rounded-lg transition-all duration-300 transform hover:bg-[#16a34a] hover:text-white hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 text-base;
   }
 
   .btn-link {
-    @apply inline-flex items-center text-[#049704] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#049704] after:transition-all after:duration-300 hover:after:w-full;
+    @apply inline-flex items-center text-[#16a34a] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#16a34a] after:transition-all after:duration-300 hover:after:w-full;
   }
 }
 
@@ -248,8 +247,8 @@ html {
 .hubspot-form-wrapper .hs-button,
 .hubspot-form-wrapper .hs-submit .hs-button,
 .hubspot-form-wrapper input[type="submit"] {
-  background-color: #049704 !important;
-  background: #049704 !important;
+  background-color: #16a34a !important;
+  background: #16a34a !important;
   border: none !important;
   color: white !important;
   padding: 12px 24px !important;
@@ -266,8 +265,8 @@ html {
 .hubspot-form-wrapper .hs-button:hover,
 .hubspot-form-wrapper .hs-submit .hs-button:hover,
 .hubspot-form-wrapper input[type="submit"]:hover {
-  background-color: #016302 !important;
-  background: #016302 !important;
+  background-color: #052e16 !important;
+  background: #052e16 !important;
   transform: scale(1.05) !important;
 }
 
@@ -280,9 +279,9 @@ html {
 
 #hubspot-form-container .hs-input:focus,
 .hubspot-form-wrapper .hs-input:focus {
-  border-color: #049704 !important;
+  border-color: #16a34a !important;
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(2, 117, 2, 0.1) !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1) !important;
 }
 
 #hubspot-form-container .hs-error-msgs,
@@ -294,7 +293,7 @@ html {
 
 #hubspot-form-container .hs-form-field label,
 .hubspot-form-wrapper .hs-form-field label {
-  color: #1A1A1A !important;
+  color: #161b22 !important;
   font-weight: 500 !important;
   margin-bottom: 8px !important;
   display: block !important;

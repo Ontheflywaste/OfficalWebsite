@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Phone, MapPin, Clock, Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { trackClientLogin, trackPhoneCall, trackRequestDemo } from '../utils/track';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-[#16a34a] to-[#15803d] text-white py-2 z-[60] hidden md:block"
+        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-primary-dark text-white py-2 z-[60] hidden md:block"
         role="banner"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,6 +53,7 @@ export default function Navbar() {
             <span className="text-white/70" aria-hidden="true">|</span>
             <a
               href="tel:407-274-5019"
+              onClick={() => trackPhoneCall('top_banner')}
               className="text-sm flex items-center hover:scale-105 transition-transform duration-300"
               aria-label="Call us at 407-274-5019"
             >
@@ -70,8 +72,8 @@ export default function Navbar() {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'top-0 md:top-10 bg-[#0d1117]/95 backdrop-blur-md shadow-lg border-b border-[#21262d]'
-            : 'top-0 md:top-10 bg-gradient-to-b from-[#0d1117]/90 to-[#161b22]/90 backdrop-blur-md'
+            ? 'top-0 md:top-10 bg-surface-dark/95 backdrop-blur-md shadow-lg border-b border-surface-dark-border'
+            : 'top-0 md:top-10 bg-gradient-to-b from-surface-dark/90 to-surface-dark-2/90 backdrop-blur-md'
         }`}
         role="navigation"
         aria-label="Main navigation"
@@ -82,7 +84,7 @@ export default function Navbar() {
           }`}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden transition-colors duration-300 text-white hover:text-[#16a34a]"
+              className="md:hidden transition-colors duration-300 text-white hover:text-primary"
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
@@ -112,7 +114,7 @@ export default function Navbar() {
 
             <Link
               href="/contact/"
-              className="md:hidden inline-flex items-center gap-1.5 bg-[#16a34a] text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-[#15803d] transition-all shadow-lg"
+              className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-primary-dark transition-all shadow-lg"
             >
               Get Quote
               <ArrowRight className="w-4 h-4" />
@@ -121,11 +123,11 @@ export default function Navbar() {
             <div className="hidden md:flex items-center space-x-8" role="menubar">
               <Link
                 href="/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#16a34a]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </Link>
 
               <div
@@ -145,14 +147,14 @@ export default function Navbar() {
                 }}
               >
                 <span
-                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-[#16a34a] cursor-pointer"
+                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-primary cursor-pointer"
                   role="menuitem"
                 >
                   Company
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
                     isCompanyDropdownOpen ? 'rotate-180' : ''
                   }`} />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
                 </span>
 
                 <div
@@ -165,13 +167,13 @@ export default function Navbar() {
                   <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
                     <Link
                       href="/about/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       About Us
                     </Link>
                     <Link
                       href="/careers/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       Careers
                     </Link>
@@ -197,14 +199,14 @@ export default function Navbar() {
               >
                 <Link
                   href="/services/"
-                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-[#16a34a]"
+                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-primary"
                   role="menuitem"
                 >
                   Services
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
                     isServicesDropdownOpen ? 'rotate-180' : ''
                   }`} />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
                 </Link>
 
                 <div
@@ -217,25 +219,25 @@ export default function Navbar() {
                   <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
                     <Link
                       href="/services/valet-trash/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-[#16a34a] hover:bg-opacity-10 hover:text-[#16a34a] transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
                     >
                       Pressure Washing
                     </Link>
@@ -245,47 +247,48 @@ export default function Navbar() {
 
               <Link
                 href="/blog/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#16a34a]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Blog
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </Link>
 
               <Link
                 href="/contact/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#16a34a]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </Link>
 
               <Link
                 href="/reviews/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#16a34a]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Reviews
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </Link>
 
               <a
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-[#16a34a]"
+                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Testimonials
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#16a34a]" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </a>
 
               <a
                 href="https://app.ontheflywastesolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-sm px-4 py-2 rounded-lg border border-[#16a34a] text-[#16a34a] hover:bg-[#16a34a]/10 active:scale-[0.98] transition-all duration-300"
+                onClick={() => trackClientLogin()}
+                className="font-semibold text-sm px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 active:scale-[0.98] transition-all duration-300"
                 role="menuitem"
               >
                 Client Login
@@ -293,7 +296,8 @@ export default function Navbar() {
 
               <Link
                 href="/contact/"
-                className="font-semibold text-sm px-4 py-2 rounded-lg bg-[#16a34a] text-white hover:bg-[#15803d] active:scale-[0.98] transition-all duration-300 shadow-lg"
+                onClick={() => trackRequestDemo('navbar_desktop')}
+                className="font-semibold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg"
                 role="menuitem"
               >
                 Request Demo
@@ -303,11 +307,11 @@ export default function Navbar() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-white/20 bg-gradient-to-b from-[#0d1117] to-[#161b22]">
+          <div className="md:hidden border-t border-white/20 bg-gradient-to-b from-surface-dark to-surface-dark-2">
             <div className="px-4 py-4 space-y-2">
               <Link
                 href="/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Home
               </Link>
@@ -315,7 +319,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
                 >
                   Company
                   <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
@@ -327,13 +331,13 @@ export default function Navbar() {
                   <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
                     <Link
                       href="/about/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       About Us
                     </Link>
                     <Link
                       href="/careers/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Careers
                     </Link>
@@ -344,7 +348,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
                 >
                   Services
                   <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
@@ -356,25 +360,25 @@ export default function Navbar() {
                   <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
                     <Link
                       href="/services/valet-trash/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-[#16a34a] hover:bg-white/5"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Pressure Washing
                     </Link>
@@ -384,21 +388,21 @@ export default function Navbar() {
 
               <Link
                 href="/blog/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Blog
               </Link>
 
               <Link
                 href="/contact/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Contact
               </Link>
 
               <Link
                 href="/reviews/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Reviews
               </Link>
@@ -407,7 +411,7 @@ export default function Navbar() {
                 href="https://www.youtube.com/watch?v=gFYjibflN3U"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Testimonials
               </a>
@@ -416,14 +420,14 @@ export default function Navbar() {
                 href="https://app.ontheflywastesolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#16a34a] hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Client Login
               </a>
 
               <Link
                 href="/contact/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-[#16a34a] text-white hover:bg-[#15803d] mt-2"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-primary text-white hover:bg-primary-dark mt-2"
               >
                 Request Demo
               </Link>

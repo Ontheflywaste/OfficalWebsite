@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import PressureWashingClient from './PressureWashingClient';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
+import ServiceSchema from '../../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Professional Pressure Washing Services Central Florida | On The Fly',
@@ -11,5 +13,21 @@ export const metadata: Metadata = {
 };
 
 export default function PressureWashingPage() {
-  return <PressureWashingClient />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Pressure Washing', url: '/services/pressure-washing/' },
+        ]}
+      />
+      <ServiceSchema
+        name="Pressure Washing"
+        description="Commercial pressure washing for apartment communities, common areas, building exteriors, walkways, and driveways across Orlando and Central Florida."
+        slug="/services/pressure-washing/"
+      />
+      <PressureWashingClient />
+    </>
+  );
 }

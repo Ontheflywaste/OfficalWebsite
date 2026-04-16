@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import ServiceAreaClient from '../service-areas/ServiceAreaClient';
+import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Junk Removal Service Orlando, FL | On The Fly Waste Solutions',

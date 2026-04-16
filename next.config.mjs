@@ -253,6 +253,93 @@ const nextConfig = {
         destination: '/contact/',
         permanent: true,
       },
+      // Service-area URL consolidation: /service-areas/<city>-fl/ -> /valet-trash-<city>-fl/
+      {
+        source: '/service-areas/davenport-fl/:path*',
+        destination: '/valet-trash-davenport-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/davenport-fl',
+        destination: '/valet-trash-davenport-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/championsgate-fl/:path*',
+        destination: '/valet-trash-championsgate-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/championsgate-fl',
+        destination: '/valet-trash-championsgate-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/celebration-fl/:path*',
+        destination: '/valet-trash-celebration-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/celebration-fl',
+        destination: '/valet-trash-celebration-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/four-corners-fl/:path*',
+        destination: '/valet-trash-four-corners-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/four-corners-fl',
+        destination: '/valet-trash-four-corners-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/winter-haven-fl/:path*',
+        destination: '/valet-trash-winter-haven-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/winter-haven-fl',
+        destination: '/valet-trash-winter-haven-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/winter-garden-fl/:path*',
+        destination: '/valet-trash-winter-garden-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/winter-garden-fl',
+        destination: '/valet-trash-winter-garden-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/space-coast-fl/:path*',
+        destination: '/valet-trash-space-coast-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/space-coast-fl',
+        destination: '/valet-trash-space-coast-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/daytona-beach-fl/:path*',
+        destination: '/valet-trash-daytona-beach-fl/',
+        permanent: true,
+      },
+      {
+        source: '/service-areas/daytona-beach-fl',
+        destination: '/valet-trash-daytona-beach-fl/',
+        permanent: true,
+      },
+      // Catch any other /service-areas/* request
+      {
+        source: '/service-areas/:slug*',
+        destination: '/services/',
+        permanent: true,
+      },
     ];
   },
 };

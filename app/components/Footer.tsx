@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, 
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d1117] text-white border-t border-[#21262d]" role="contentinfo">
+    <footer className="bg-surface-dark text-white border-t border-surface-dark-border" role="contentinfo">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div>
@@ -125,14 +125,14 @@ export default function Footer() {
                 { text: 'Winter Park', link: '/valet-trash-winter-park-fl/' },
                 { text: 'St. Cloud', link: '/valet-trash-st-cloud-fl/' },
                 { text: 'Clermont', link: '/valet-trash-clermont-fl/' },
-                { text: 'Davenport', link: '/service-areas/davenport-fl/' },
-                { text: 'ChampionsGate', link: '/service-areas/championsgate-fl/' },
-                { text: 'Celebration', link: '/service-areas/celebration-fl/' },
-                { text: 'Four Corners', link: '/service-areas/four-corners-fl/' },
-                { text: 'Winter Haven', link: '/service-areas/winter-haven-fl/' },
-                { text: 'Winter Garden', link: '/service-areas/winter-garden-fl/' },
-                { text: 'Space Coast', link: '/service-areas/space-coast-fl/' },
-                { text: 'Daytona Beach', link: '/service-areas/daytona-beach-fl/' }
+                { text: 'Davenport', link: '/valet-trash-davenport-fl/' },
+                { text: 'ChampionsGate', link: '/valet-trash-championsgate-fl/' },
+                { text: 'Celebration', link: '/valet-trash-celebration-fl/' },
+                { text: 'Four Corners', link: '/valet-trash-four-corners-fl/' },
+                { text: 'Winter Haven', link: '/valet-trash-winter-haven-fl/' },
+                { text: 'Winter Garden', link: '/valet-trash-winter-garden-fl/' },
+                { text: 'Space Coast', link: '/valet-trash-space-coast-fl/' },
+                { text: 'Daytona Beach', link: '/valet-trash-daytona-beach-fl/' }
               ].map((item) => (
                 <li key={item.text}>
                   <Link
@@ -252,7 +252,7 @@ export default function Footer() {
                 href="https://app.ontheflywastesolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#16a34a] underline transition-colors"
+                className="text-white hover:text-primary underline transition-colors"
               >
                 app.ontheflywastesolutions.com
               </a>

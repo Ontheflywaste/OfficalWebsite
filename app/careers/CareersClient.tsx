@@ -170,7 +170,7 @@ export default function CareersClient() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-[#16a34a]/20 border border-[#16a34a]/40 text-[#4ade80] px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Briefcase className="w-4 h-4" />
                 We&apos;re Hiring
               </div>
@@ -210,7 +210,7 @@ export default function CareersClient() {
             {perks.map((perk, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
-                  <div className="w-14 h-14 bg-[#16a34a]/10 rounded-lg flex items-center justify-center text-[#16a34a] mb-5 group-hover:bg-[#16a34a] group-hover:text-white transition-colors duration-300">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {perk.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{perk.title}</h3>
@@ -241,19 +241,19 @@ export default function CareersClient() {
                 </div>
                 <div className="mt-8 grid grid-cols-2 gap-6">
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
-                    <div className="text-3xl font-bold text-[#16a34a]">2,500+</div>
+                    <div className="text-3xl font-bold text-primary">2,500+</div>
                     <div className="text-gray-600 text-sm mt-1">Residents Served</div>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
-                    <div className="text-3xl font-bold text-[#16a34a]">100%</div>
+                    <div className="text-3xl font-bold text-primary">100%</div>
                     <div className="text-gray-600 text-sm mt-1">Collection Rate</div>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
-                    <div className="text-3xl font-bold text-[#16a34a]">5.0</div>
+                    <div className="text-3xl font-bold text-primary">5.0</div>
                     <div className="text-gray-600 text-sm mt-1">Google Rating</div>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
-                    <div className="text-3xl font-bold text-[#16a34a]">2020</div>
+                    <div className="text-3xl font-bold text-primary">2020</div>
                     <div className="text-gray-600 text-sm mt-1">Founded</div>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export default function CareersClient() {
                   />
                   <div className="absolute inset-0 bg-black/15 rounded-2xl" />
                 </div>
-                <div className="absolute -bottom-6 -left-6 bg-[#16a34a] text-white p-6 rounded-xl shadow-xl">
+                <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-xl">
                   <div className="text-2xl font-bold">Growing Fast</div>
                   <div className="text-sm text-white/90">New positions available</div>
                 </div>
@@ -297,7 +297,7 @@ export default function CareersClient() {
 
           {loading ? (
             <div className="flex justify-center py-12">
-              <Loader2 className="w-8 h-8 text-[#16a34a] animate-spin" />
+              <Loader2 className="w-8 h-8 text-primary animate-spin" />
             </div>
           ) : jobs.length === 0 ? (
             <ScrollReveal>
@@ -322,7 +322,7 @@ export default function CareersClient() {
             <div className="space-y-4">
               {jobs.map((job, index) => (
                 <ScrollReveal key={job.id} delay={index * 0.1}>
-                  <div className="border border-gray-200 rounded-xl overflow-hidden hover:border-[#16a34a]/30 transition-colors duration-300">
+                  <div className="border border-gray-200 rounded-xl overflow-hidden hover:border-primary/30 transition-colors duration-300">
                     <button
                       onClick={() => setExpandedJob(expandedJob === job.id ? null : job.id)}
                       className="w-full text-left p-6 flex items-center justify-between gap-4"
@@ -331,15 +331,15 @@ export default function CareersClient() {
                         <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
                         <div className="flex flex-wrap gap-3">
                           <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <Briefcase className="w-4 h-4 text-[#16a34a]" />
+                            <Briefcase className="w-4 h-4 text-primary" />
                             {job.department}
                           </span>
                           <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4 text-[#16a34a]" />
+                            <MapPin className="w-4 h-4 text-primary" />
                             {job.location}
                           </span>
                           <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <Clock className="w-4 h-4 text-[#16a34a]" />
+                            <Clock className="w-4 h-4 text-primary" />
                             {job.type}
                           </span>
                         </div>
@@ -368,7 +368,7 @@ export default function CareersClient() {
                             <ul className="space-y-2">
                               {formatList(job.requirements).map((req, i) => (
                                 <li key={i} className="flex items-start gap-2 text-gray-700">
-                                  <CheckCircle2 className="w-5 h-5 text-[#16a34a] flex-shrink-0 mt-0.5" />
+                                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                                   <span>{req.trim()}</span>
                                 </li>
                               ))}
@@ -380,7 +380,7 @@ export default function CareersClient() {
                             <ul className="space-y-2">
                               {formatList(job.benefits).map((benefit, i) => (
                                 <li key={i} className="flex items-start gap-2 text-gray-700">
-                                  <CheckCircle2 className="w-5 h-5 text-[#16a34a] flex-shrink-0 mt-0.5" />
+                                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                                   <span>{benefit.trim()}</span>
                                 </li>
                               ))}
@@ -414,14 +414,14 @@ export default function CareersClient() {
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold text-gray-900 mb-2">Apply Now</h2>
                   <p className="text-gray-600">
-                    Applying for: <span className="font-semibold text-[#16a34a]">{selectedJob?.title || 'General Application'}</span>
+                    Applying for: <span className="font-semibold text-primary">{selectedJob?.title || 'General Application'}</span>
                   </p>
                 </div>
 
                 {submitStatus === 'success' ? (
                   <div className="text-center py-8">
-                    <div className="w-16 h-16 bg-[#16a34a]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 className="w-8 h-8 text-[#16a34a]" />
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">Application Received</h3>
                     <p className="text-gray-600 mb-6">
@@ -432,7 +432,7 @@ export default function CareersClient() {
                         setShowApplicationForm(false);
                         setSubmitStatus('idle');
                       }}
-                      className="text-[#16a34a] font-semibold hover:underline"
+                      className="text-primary font-semibold hover:underline"
                     >
                       Back to Open Positions
                     </button>
@@ -449,7 +449,7 @@ export default function CareersClient() {
                         required
                         value={formData.full_name}
                         onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#16a34a]/20 focus:border-[#16a34a] outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
                         placeholder="Your full name"
                       />
                     </div>
@@ -464,7 +464,7 @@ export default function CareersClient() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#16a34a]/20 focus:border-[#16a34a] outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -478,7 +478,7 @@ export default function CareersClient() {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#16a34a]/20 focus:border-[#16a34a] outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
                         placeholder="(407) 000-0000"
                       />
                     </div>
@@ -493,7 +493,7 @@ export default function CareersClient() {
                         rows={5}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#16a34a]/20 focus:border-[#16a34a] outline-none transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none"
                         placeholder="Share your relevant experience, why you're interested in this role, and what makes you a great fit..."
                       />
                     </div>
@@ -530,7 +530,7 @@ export default function CareersClient() {
       )}
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-gradient-to-br from-[#16a34a] to-[#15803d] text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -567,7 +567,7 @@ export default function CareersClient() {
                 <div className="space-y-4">
                   <a
                     href="mailto:info@ontheflywastesolutions.com?subject=Career%20Interest%20-%20General%20Inquiry"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-[#16a34a] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
+                    className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
                   >
                     <Send className="w-5 h-5" />
                     Email Your Resume

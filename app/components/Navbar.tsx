@@ -280,6 +280,24 @@ export default function Navbar() {
                 Testimonials
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-[#049704]" />
               </a>
+
+              <a
+                href="https://app.ontheflywastesolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-sm px-4 py-2 rounded-full border border-white/40 text-white hover:bg-white/10 transition-all duration-300"
+                role="menuitem"
+              >
+                Client Login
+              </a>
+
+              <Link
+                href="/contact/"
+                className="font-semibold text-sm px-4 py-2 rounded-full bg-[#049704] text-white hover:bg-[#038503] transition-all duration-300 shadow-lg"
+                role="menuitem"
+              >
+                Request Demo
+              </Link>
             </div>
           </div>
         </div>
@@ -393,6 +411,22 @@ export default function Navbar() {
               >
                 Testimonials
               </a>
+
+              <a
+                href="https://app.ontheflywastesolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-[#049704] hover:bg-white/10"
+              >
+                Client Login
+              </a>
+
+              <Link
+                href="/contact/"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-[#049704] text-white hover:bg-[#038503] mt-2"
+              >
+                Request Demo
+              </Link>
             </div>
           </div>
         )}

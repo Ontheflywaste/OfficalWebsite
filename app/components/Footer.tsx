@@ -245,6 +245,20 @@ export default function Footer() {
             </div>
           </div>
 
+          <div className="text-center mb-6">
+            <p className="text-gray-300 text-sm">
+              Client Portal:{' '}
+              <a
+                href="https://app.ontheflywastesolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#049704] underline transition-colors"
+              >
+                app.ontheflywastesolutions.com
+              </a>
+            </p>
+          </div>
+
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 pt-8">
             <p className="text-gray-400 text-sm text-center md:text-left">
               &copy; {new Date().getFullYear()} On The Fly Waste Solutions. All rights reserved.

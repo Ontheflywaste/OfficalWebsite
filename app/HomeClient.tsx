@@ -100,6 +100,13 @@ export default function HomeClient() {
                     <Phone className="w-5 h-5" />
                     (407) 274-5019
                   </a>
+                  <Link
+                    href="/contact/"
+                    className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all shadow-lg"
+                  >
+                    Request a Private Demo
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 </div>
               </ScrollReveal>
 

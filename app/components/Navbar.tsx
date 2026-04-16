@@ -12,10 +12,13 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
+  const [isMobileResourcesOpen, setIsMobileResourcesOpen] = useState(false);
   const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const [closeCompanyTimeout, setCloseCompanyTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [closeResourcesTimeout, setCloseResourcesTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -32,17 +35,17 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
     setIsServicesDropdownOpen(false);
     setIsCompanyDropdownOpen(false);
+    setIsResourcesDropdownOpen(false);
   }, [pathname]);
-
-  const isPostPage = pathname?.startsWith('/blog/') || false;
-  const shouldUseBlackLogo = isScrolled || isPostPage;
-  const shouldUseBlackNavbar = isScrolled || isPostPage;
 
   return (
     <>
       <div
-        className="fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-primary-dark text-white py-2 z-[60] hidden md:block"
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-primary to-primary-dark text-white py-2 z-[60] hidden md:block transition-transform duration-300 ${
+          isScrolled ? '-translate-y-full' : 'translate-y-0'
+        }`}
         role="banner"
+        aria-hidden={isScrolled}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center space-x-8">
@@ -72,7 +75,7 @@ export default function Navbar() {
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'top-0 md:top-10 bg-surface-dark/95 backdrop-blur-md shadow-lg border-b border-surface-dark-border'
+            ? 'top-0 bg-surface-dark/95 backdrop-blur-md shadow-lg border-b border-surface-dark-border'
             : 'top-0 md:top-10 bg-gradient-to-b from-surface-dark/90 to-surface-dark-2/90 backdrop-blur-md'
         }`}
         role="navigation"
@@ -80,7 +83,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? 'h-16 md:h-20' : 'h-16 md:h-24'
+            isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
           }`}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -107,79 +110,29 @@ export default function Navbar() {
                   width={250}
                   height={80}
                   priority
-                  className={`${isScrolled ? 'h-12 md:h-16' : 'h-12 md:h-20'} w-auto transition-all duration-300 object-contain`}
+                  className={`${isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'} w-auto transition-all duration-300 object-contain`}
                 />
               </Link>
             </div>
 
             <Link
               href="/contact/"
+              onClick={() => trackRequestDemo('navbar_mobile_topbar')}
               className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-primary-dark transition-all shadow-lg"
             >
-              Get Quote
+              App Demo
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-            <div className="hidden md:flex items-center space-x-8" role="menubar">
+            <div className="hidden md:flex items-center space-x-5 lg:space-x-6" role="menubar">
               <Link
                 href="/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
+                className="font-semibold text-sm relative group transition-all duration-300 text-white hover:text-primary"
                 role="menuitem"
               >
                 Home
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
               </Link>
-
-              <div
-                className="relative"
-                onMouseEnter={() => {
-                  if (closeCompanyTimeout) {
-                    clearTimeout(closeCompanyTimeout);
-                    setCloseCompanyTimeout(null);
-                  }
-                  setIsCompanyDropdownOpen(true);
-                }}
-                onMouseLeave={() => {
-                  const timeout = setTimeout(() => {
-                    setIsCompanyDropdownOpen(false);
-                  }, 300);
-                  setCloseCompanyTimeout(timeout);
-                }}
-              >
-                <span
-                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-primary cursor-pointer"
-                  role="menuitem"
-                >
-                  Company
-                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
-                    isCompanyDropdownOpen ? 'rotate-180' : ''
-                  }`} />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
-                </span>
-
-                <div
-                  className={`absolute top-full left-0 pt-2 w-48 transition-all duration-200 ${
-                    isCompanyDropdownOpen
-                      ? 'opacity-100 visible translate-y-0'
-                      : 'opacity-0 invisible -translate-y-2'
-                  }`}
-                >
-                  <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
-                    <Link
-                      href="/about/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      href="/careers/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
-                    >
-                      Careers
-                    </Link>
-                  </div>
-                </div>
-              </div>
 
               <div
                 className="relative"
@@ -199,7 +152,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/services/"
-                  className="font-semibold text-base relative group transition-all duration-300 flex items-center text-white hover:text-primary"
+                  className="font-semibold text-sm relative group transition-all duration-300 flex items-center text-white hover:text-primary"
                   role="menuitem"
                 >
                   Services
@@ -219,25 +172,25 @@ export default function Navbar() {
                   <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
                     <Link
                       href="/services/valet-trash/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
                     >
                       Valet Trash
                     </Link>
                     <Link
                       href="/services/junk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
                     >
                       Junk Removal
                     </Link>
                     <Link
                       href="/services/bulk-removal/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
                     >
                       Bulk Removal
                     </Link>
                     <Link
                       href="/services/pressure-washing/"
-                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
                     >
                       Pressure Washing
                     </Link>
@@ -245,43 +198,121 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link
-                href="/blog/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
-                role="menuitem"
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (closeCompanyTimeout) {
+                    clearTimeout(closeCompanyTimeout);
+                    setCloseCompanyTimeout(null);
+                  }
+                  setIsCompanyDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  const timeout = setTimeout(() => {
+                    setIsCompanyDropdownOpen(false);
+                  }, 300);
+                  setCloseCompanyTimeout(timeout);
+                }}
               >
-                Blog
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
-              </Link>
+                <span
+                  className="font-semibold text-sm relative group transition-all duration-300 flex items-center text-white hover:text-primary cursor-pointer"
+                  role="menuitem"
+                >
+                  Company
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                    isCompanyDropdownOpen ? 'rotate-180' : ''
+                  }`} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
+                </span>
 
-              <Link
-                href="/contact/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
-                role="menuitem"
-              >
-                Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
-              </Link>
+                <div
+                  className={`absolute top-full left-0 pt-2 w-48 transition-all duration-200 ${
+                    isCompanyDropdownOpen
+                      ? 'opacity-100 visible translate-y-0'
+                      : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                >
+                  <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
+                    <Link
+                      href="/about/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/careers/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Careers
+                    </Link>
+                    <Link
+                      href="/contact/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
-              <Link
-                href="/reviews/"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
-                role="menuitem"
+              <div
+                className="relative"
+                onMouseEnter={() => {
+                  if (closeResourcesTimeout) {
+                    clearTimeout(closeResourcesTimeout);
+                    setCloseResourcesTimeout(null);
+                  }
+                  setIsResourcesDropdownOpen(true);
+                }}
+                onMouseLeave={() => {
+                  const timeout = setTimeout(() => {
+                    setIsResourcesDropdownOpen(false);
+                  }, 300);
+                  setCloseResourcesTimeout(timeout);
+                }}
               >
-                Reviews
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
-              </Link>
+                <span
+                  className="font-semibold text-sm relative group transition-all duration-300 flex items-center text-white hover:text-primary cursor-pointer"
+                  role="menuitem"
+                >
+                  Resources
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                    isResourcesDropdownOpen ? 'rotate-180' : ''
+                  }`} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
+                </span>
 
-              <a
-                href="https://www.youtube.com/watch?v=gFYjibflN3U"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-base relative group transition-all duration-300 text-white hover:text-primary"
-                role="menuitem"
-              >
-                Testimonials
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-primary" />
-              </a>
+                <div
+                  className={`absolute top-full left-0 pt-2 w-48 transition-all duration-200 ${
+                    isResourcesDropdownOpen
+                      ? 'opacity-100 visible translate-y-0'
+                      : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                >
+                  <div className="bg-white rounded-lg shadow-xl py-2 border border-gray-200 mt-2">
+                    <Link
+                      href="/blog/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Blog
+                    </Link>
+                    <Link
+                      href="/reviews/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Reviews
+                    </Link>
+                    <a
+                      href="https://www.youtube.com/watch?v=gFYjibflN3U"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Testimonials
+                    </a>
+                  </div>
+                </div>
+              </div>
 
               <a
                 href="https://app.ontheflywastesolutions.com"
@@ -297,10 +328,11 @@ export default function Navbar() {
               <Link
                 href="/contact/"
                 onClick={() => trackRequestDemo('navbar_desktop')}
-                className="font-semibold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg"
+                className="font-semibold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg inline-flex items-center gap-1.5"
                 role="menuitem"
               >
-                Request Demo
+                Request App Demo
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -318,37 +350,9 @@ export default function Navbar() {
 
               <div>
                 <button
-                  onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
-                >
-                  Company
-                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
-                    isMobileCompanyOpen ? 'rotate-180' : ''
-                  }`} />
-                </button>
-
-                <div className={`overflow-hidden transition-all duration-300 ${isMobileCompanyOpen ? 'max-h-96' : 'max-h-0'}`}>
-                  <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
-                    <Link
-                      href="/about/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      href="/careers/"
-                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
-                    >
-                      Careers
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                   className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  aria-expanded={isMobileServicesOpen}
                 >
                   Services
                   <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
@@ -386,40 +390,85 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link
-                href="/blog/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
-              >
-                Blog
-              </Link>
+              <div>
+                <button
+                  onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  aria-expanded={isMobileCompanyOpen}
+                >
+                  Company
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
+                    isMobileCompanyOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
 
-              <Link
-                href="/contact/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
-              >
-                Contact
-              </Link>
+                <div className={`overflow-hidden transition-all duration-300 ${isMobileCompanyOpen ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
+                    <Link
+                      href="/about/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      href="/careers/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Careers
+                    </Link>
+                    <Link
+                      href="/contact/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
-              <Link
-                href="/reviews/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
-              >
-                Reviews
-              </Link>
+              <div>
+                <button
+                  onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  aria-expanded={isMobileResourcesOpen}
+                >
+                  Resources
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${
+                    isMobileResourcesOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
 
-              <a
-                href="https://www.youtube.com/watch?v=gFYjibflN3U"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
-              >
-                Testimonials
-              </a>
+                <div className={`overflow-hidden transition-all duration-300 ${isMobileResourcesOpen ? 'max-h-96' : 'max-h-0'}`}>
+                  <div className="ml-4 mt-2 space-y-1 border-l-2 border-white/30 pl-4">
+                    <Link
+                      href="/blog/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Blog
+                    </Link>
+                    <Link
+                      href="/reviews/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Reviews
+                    </Link>
+                    <a
+                      href="https://www.youtube.com/watch?v=gFYjibflN3U"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Testimonials
+                    </a>
+                  </div>
+                </div>
+              </div>
 
               <a
                 href="https://app.ontheflywastesolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackClientLogin()}
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Client Login
@@ -427,9 +476,10 @@ export default function Navbar() {
 
               <Link
                 href="/contact/"
+                onClick={() => trackRequestDemo('navbar_mobile')}
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-primary text-white hover:bg-primary-dark mt-2"
               >
-                Request Demo
+                Request App Demo
               </Link>
             </div>
           </div>

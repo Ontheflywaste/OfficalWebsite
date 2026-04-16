@@ -156,7 +156,7 @@ export default function AboutClient() {
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                   loading="lazy"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-[#049704] text-white p-6 rounded-xl shadow-xl">
+                <div className="absolute -bottom-6 -right-6 bg-[#16a34a] text-white p-6 rounded-xl shadow-xl">
                   <div className="text-4xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>
                 </div>
@@ -170,7 +170,7 @@ export default function AboutClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <Target className="w-16 h-16 text-[#049704] mx-auto mb-6" />
+              <Target className="w-16 h-16 text-[#16a34a] mx-auto mb-6" />
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Our Mission
               </h2>
@@ -184,7 +184,7 @@ export default function AboutClient() {
             {values.map((value, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-[#049704] bg-opacity-10 rounded-lg flex items-center justify-center text-[#049704] mb-6">
+                  <div className="w-16 h-16 bg-[#16a34a] bg-opacity-10 rounded-lg flex items-center justify-center text-[#16a34a] mb-6">
                     {value.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -222,7 +222,7 @@ export default function AboutClient() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <div className="text-[#049704] font-semibold mb-3">{member.title}</div>
+                    <div className="text-[#16a34a] font-semibold mb-3">{member.title}</div>
                     <p className="text-gray-600 leading-relaxed">{member.description}</p>
                   </div>
                 </div>
@@ -236,7 +236,7 @@ export default function AboutClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <TrendingUp className="w-16 h-16 text-[#049704] mx-auto mb-6" />
+              <TrendingUp className="w-16 h-16 text-[#16a34a] mx-auto mb-6" />
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Our Journey
               </h2>
@@ -247,17 +247,17 @@ export default function AboutClient() {
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#049704] hidden md:block"></div>
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#16a34a] hidden md:block"></div>
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
                 <ScrollReveal key={index} delay={index * 0.15}>
                   <div className="relative flex items-center gap-8">
-                    <div className="hidden md:flex w-16 h-16 bg-[#049704] text-white rounded-full items-center justify-center font-bold text-lg flex-shrink-0 shadow-lg z-10">
+                    <div className="hidden md:flex w-16 h-16 bg-[#16a34a] text-white rounded-full items-center justify-center font-bold text-lg flex-shrink-0 shadow-lg z-10">
                       {milestone.year.slice(2)}
                     </div>
                     <div className="flex-1 bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1">
                       <div className="flex items-center gap-4 mb-4">
-                        <span className="md:hidden inline-block px-4 py-1 bg-[#049704] text-white rounded-full text-sm font-bold">
+                        <span className="md:hidden inline-block px-4 py-1 bg-[#16a34a] text-white rounded-full text-sm font-bold">
                           {milestone.year}
                         </span>
                         <h3 className="text-2xl font-bold text-gray-900">{milestone.title}</h3>
@@ -272,7 +272,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#049704] to-[#049704] text-white">
+      <section className="py-20 bg-gradient-to-br from-[#16a34a] to-[#16a34a] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -318,7 +318,7 @@ export default function AboutClient() {
                 <div className="space-y-4">
                   <Link
                     href="/contact/"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-[#049704] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
+                    className="inline-flex items-center justify-center gap-2 bg-white text-[#16a34a] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
                   >
                     Get Free Quote
                     <ArrowRight className="w-5 h-5" />

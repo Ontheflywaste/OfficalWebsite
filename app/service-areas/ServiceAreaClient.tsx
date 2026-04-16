@@ -55,7 +55,7 @@ export default function ServiceAreaClient({
 
   return (
     <>
-      <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#049704] overflow-hidden pt-32 pb-20">
+      <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-[#16a34a] overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[url('/Images/Dumpster.jpg')] bg-cover bg-center"></div>
         </div>
@@ -68,7 +68,7 @@ export default function ServiceAreaClient({
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               {serviceTitle}<br />
-              <span className="text-[#049704] bg-white px-4 py-2 rounded-lg inline-block mt-2">
+              <span className="text-[#16a34a] bg-white px-4 py-2 rounded-lg inline-block mt-2">
                 {city}, {state}
               </span>
             </h1>
@@ -78,7 +78,7 @@ export default function ServiceAreaClient({
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-[#049704] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#038503] transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-[#16a34a] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#15803d] transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -109,7 +109,7 @@ export default function ServiceAreaClient({
                 <p className="text-lg text-gray-700 mb-6">
                   Our {serviceTitle.toLowerCase()} is designed specifically for property managers who demand excellence. We understand that clean communities start with reliable, accountable service.
                 </p>
-                <div className="bg-gray-50 border-l-4 border-[#049704] p-6 rounded-r-lg">
+                <div className="bg-gray-50 border-l-4 border-[#16a34a] p-6 rounded-r-lg">
                   <p className="text-gray-800 font-medium">
                     "We're proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, bringing enterprise-level service with a personal touch to every property we serve in {city}."
                   </p>
@@ -118,7 +118,7 @@ export default function ServiceAreaClient({
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-gradient-to-br from-[#049704] to-[#037a03] rounded-2xl p-8 text-white shadow-2xl">
+              <div className="bg-gradient-to-br from-[#16a34a] to-[#15803d] rounded-2xl p-8 text-white shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6">Why Choose Us in {city}?</h3>
                 <div className="space-y-4">
                   {serviceFeatures[service].map((feature, index) => (
@@ -155,7 +155,7 @@ export default function ServiceAreaClient({
                     key={index}
                     className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition-shadow"
                   >
-                    <Building2 className="w-6 h-6 text-[#049704] mx-auto mb-2" />
+                    <Building2 className="w-6 h-6 text-[#16a34a] mx-auto mb-2" />
                     <span className="text-gray-800 font-medium">{neighborhood}</span>
                   </div>
                 ))}
@@ -165,7 +165,7 @@ export default function ServiceAreaClient({
         </section>
       )}
 
-      <section className="py-20 bg-[#049704] text-white">
+      <section className="py-20 bg-[#16a34a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -177,7 +177,7 @@ export default function ServiceAreaClient({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-[#049704] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#16a34a] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Request a Quote
                 <ArrowRight className="w-5 h-5" />

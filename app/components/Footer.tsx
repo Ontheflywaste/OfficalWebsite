@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, 
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white" role="contentinfo">
+    <footer className="bg-[#0d1117] text-white border-t border-[#21262d]" role="contentinfo">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div>
@@ -252,7 +252,7 @@ export default function Footer() {
                 href="https://app.ontheflywastesolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-[#049704] underline transition-colors"
+                className="text-white hover:text-[#16a34a] underline transition-colors"
               >
                 app.ontheflywastesolutions.com
               </a>

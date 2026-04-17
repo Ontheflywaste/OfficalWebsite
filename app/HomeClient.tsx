@@ -84,13 +84,12 @@ export default function HomeClient() {
           ></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-12 md:pb-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-20 md:pb-28 min-h-[700px] flex flex-col justify-center">
           <div className="max-w-3xl mx-auto">
             <div className="text-center">
               <ScrollReveal>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
-                  Valet Trash, Bulk & Junk Removal Services<br />
-                  <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>in Orlando, FL</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight lg:leading-snug" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
+                  Valet Trash, Bulk & Junk Removal Services <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>in Orlando, FL</span>
                 </h1>
               </ScrollReveal>
 
@@ -111,11 +110,11 @@ export default function HomeClient() {
                     (407) 274-5019
                   </a>
                   <Link
-                    href="/contact/"
+                    href="/demo/"
                     onClick={() => trackRequestDemo('hero')}
                     className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
                   >
-                    Request a Private App Demo
+                    Request App Demo
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>

@@ -116,7 +116,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/contact/"
+              href="/demo/"
               onClick={() => trackRequestDemo('navbar_mobile_topbar')}
               className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-primary-dark transition-all shadow-lg"
             >
@@ -326,7 +326,7 @@ export default function Navbar() {
               </a>
 
               <Link
-                href="/contact/"
+                href="/demo/"
                 onClick={() => trackRequestDemo('navbar_desktop')}
                 className="font-semibold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg inline-flex items-center gap-1.5"
                 role="menuitem"
@@ -475,7 +475,7 @@ export default function Navbar() {
               </a>
 
               <Link
-                href="/contact/"
+                href="/demo/"
                 onClick={() => trackRequestDemo('navbar_mobile')}
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-primary text-white hover:bg-primary-dark mt-2"
               >

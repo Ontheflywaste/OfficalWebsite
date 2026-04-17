@@ -253,6 +253,16 @@ const nextConfig = {
         destination: '/contact/',
         permanent: true,
       },
+      {
+        source: '/private-demo',
+        destination: '/demo/',
+        permanent: true,
+      },
+      {
+        source: '/private-demo/',
+        destination: '/demo/',
+        permanent: true,
+      },
       // Service-area URL consolidation: /service-areas/<city>-fl/ -> /valet-trash-<city>-fl/
       {
         source: '/service-areas/davenport-fl/:path*',

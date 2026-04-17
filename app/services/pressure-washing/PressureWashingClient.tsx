@@ -194,8 +194,8 @@ export default function PressureWashingClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="h-full flex flex-col bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
                     {service.icon}
                   </div>
@@ -223,12 +223,12 @@ export default function PressureWashingClient() {
 
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {benefits.map((benefit, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
                 <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow h-full">
                   <div className="flex-shrink-0 w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary">
                     {benefit.icon}
                   </div>
-                  <div>
+                  <div className="flex flex-col">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                   </div>
@@ -254,8 +254,8 @@ export default function PressureWashingClient() {
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {propertyTypes.map((type, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow h-full">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow h-full flex flex-col">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">{type.title}</h3>
                   <ul className="space-y-3">
                     {type.features.map((feature, idx) => (
@@ -275,7 +275,7 @@ export default function PressureWashingClient() {
       <section className="py-20 bg-gradient-to-br from-primary to-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <ScrollReveal>
+            <ScrollReveal className="self-stretch flex flex-col justify-center">
               <div>
                 <Camera className="w-16 h-16 mb-6" />
                 <h2 className="text-4xl font-bold mb-6">
@@ -335,8 +335,8 @@ export default function PressureWashingClient() {
 
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {testimonials.map((testimonial, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-sm h-full">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="bg-white p-8 rounded-xl shadow-sm h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-primary text-primary" />
@@ -344,7 +344,7 @@ export default function PressureWashingClient() {
                   </div>
                   <Quote className="w-10 h-10 text-primary opacity-20 mb-4" />
                   <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.text}"</p>
-                  <div>
+                  <div className="mt-auto">
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>
                     <div className="text-sm text-gray-600">{testimonial.property}</div>
                   </div>

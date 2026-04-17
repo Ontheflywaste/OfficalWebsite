@@ -129,8 +129,8 @@ export default function ServicesClient() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {whyChooseUs.map((item, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="h-full flex flex-col text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
                   <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
                     {item.icon}
                   </div>
@@ -192,7 +192,7 @@ export default function ServicesClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="p-12 lg:p-16 text-white">
+              <div className="p-12 lg:p-16 text-white lg:min-h-[600px] flex flex-col justify-center">
                 <ScrollReveal>
                   <h2 className="text-4xl font-bold mb-6">
                     Ready to Get Started?

@@ -314,16 +314,14 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <a
-                href="https://app.ontheflywastesolutions.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/client-login/"
                 onClick={() => trackClientLogin()}
                 className="font-semibold text-sm px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 active:scale-[0.98] transition-all duration-300"
                 role="menuitem"
               >
                 Client Login
-              </a>
+              </Link>
 
               <Link
                 href="/demo/"
@@ -464,15 +462,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <a
-                href="https://app.ontheflywastesolutions.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/client-login/"
                 onClick={() => trackClientLogin()}
                 className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
               >
                 Client Login
-              </a>
+              </Link>
 
               <Link
                 href="/demo/"

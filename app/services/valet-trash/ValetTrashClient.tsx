@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Clock, Shield, Users, BarChart3, Phone, Star, Quote, ChevronDown, Trash2, Calendar, Camera, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -90,11 +91,13 @@ export default function ValetTrashClient() {
     <div className="min-h-screen">
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/ApartmentBuildingHero.webp"
             alt="Professional valet trash service at luxury apartment community"
-            className="w-full h-full object-cover"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -222,11 +225,15 @@ export default function ValetTrashClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="bg-white p-8 rounded-2xl shadow-xl h-full">
-                <img
-                  src="/Images/Edgardo.jpeg"
-                  alt="Professional valet trash collection service"
-                  className="w-full h-96 object-cover rounded-lg mb-6"
-                />
+                <div className="relative w-full h-96 rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="/Images/Edgardo.jpeg"
+                    alt="Professional valet trash collection service"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-gray-900">Service Features</h3>
                   <ul className="space-y-3">

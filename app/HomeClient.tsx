@@ -807,11 +807,12 @@ export default function HomeClient() {
 
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="/Images/TradeshowPicture"
+          <Image
+            src="/Images/TradeshowPicture.jpg"
             alt="Trade show background"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
+            fill
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-surface-dark-2/85"></div>
         </div>
@@ -833,31 +834,34 @@ export default function HomeClient() {
               <div className="flex animate-scroll gap-12 md:gap-16">
                 <div className="flex items-center gap-12 md:gap-16">
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/AAGO.png"
                       alt="AAGO"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <a
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
@@ -866,78 +870,86 @@ export default function HomeClient() {
                     className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
-                    <img
+                    <Image
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </a>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/asset-logo.png"
                       alt="Asset Living"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/greystar-logo.png"
                       alt="Greystar"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/ReunionWestPOALOgo.jpg"
                       alt="Reunion West POA"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                 </div>
                 <div className="flex items-center gap-12 md:gap-16" aria-hidden="true">
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/faa-full-color-full-logo.png"
                       alt="Florida Apartment Association"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/NAA-logo_bgwhite.png"
                       alt="National Apartment Association"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/AAGO.png"
                       alt="AAGO"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <a
                     href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
@@ -946,49 +958,54 @@ export default function HomeClient() {
                     className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
                     style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
                   >
-                    <img
+                    <Image
                       src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
                       alt="On The Fly Waste Solutions BBB Business Review"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </a>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/asset-logo.png"
                       alt="Asset Living"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/greystar-logo.png"
                       alt="Greystar"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/Images/venterra-logo.png"
                       alt="Venterra Realty"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                   <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <img
+                    <Image
                       src="/ReunionWestPOALOgo.jpg"
                       alt="Reunion West POA"
-                      className="object-contain"
-                      style={{ height: '60px', width: 'auto', maxWidth: '160px' }}
+                      width={160}
+                      height={60}
+                      className="h-[60px] w-auto max-w-[160px] object-contain"
                       loading="lazy"
-                    />
+                      />
                   </div>
                 </div>
               </div>

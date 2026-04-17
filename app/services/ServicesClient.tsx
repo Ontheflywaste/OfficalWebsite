@@ -84,7 +84,7 @@ export default function ServicesClient() {
     <div className="min-h-screen pt-32">
       <section className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/Images/our-services.jpg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('/Images/Valettrashimage.jpg')] bg-cover bg-center"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>

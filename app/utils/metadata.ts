@@ -17,7 +17,7 @@ export function generateMetadata({
   description,
   path,
   keywords,
-  image = 'https://ontheflywastesolutions.com/Images/TruckImage.JPG',
+  image = 'https://ontheflywastesolutions.com/Images/og-image.jpg',
   imageAlt = 'On The Fly Waste Solutions - Professional Valet Trash Services',
   type = 'website',
   publishedTime,
@@ -81,5 +81,5 @@ export function generateMetadata({
   return metadata;
 }
 
-export const defaultOGImage = 'https://ontheflywastesolutions.com/Images/TruckImage.JPG';
+export const defaultOGImage = 'https://ontheflywastesolutions.com/Images/og-image.jpg';
 export const baseUrl = 'https://ontheflywastesolutions.com';

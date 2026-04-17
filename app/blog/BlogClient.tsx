@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import { featuredPost, blogPosts } from '@/app/data/blogPosts';
@@ -22,7 +23,7 @@ export default function BlogClient() {
   return (
     <div className="min-h-screen">
       <div className="relative min-h-[70vh] bg-gradient-to-br from-gray-900 via-gray-800 to-primary overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-[url('/Images/ApartmentBuildingHero.webp')] bg-cover bg-center opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
@@ -59,11 +60,13 @@ export default function BlogClient() {
               <article className="relative overflow-hidden rounded-2xl bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="relative h-80 md:h-auto overflow-hidden">
-                    <img
+                    <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="eager"
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">
@@ -135,11 +138,12 @@ export default function BlogClient() {
                 <Link href={`/blog/${post.id}/`} className="block">
                   <article className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group h-full flex flex-col">
                     <div className="relative h-48 overflow-hidden">
-                      <img
+                      <Image
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-3 left-3">
                         <span className="inline-block px-3 py-1 bg-primary text-white rounded-full text-xs font-medium">

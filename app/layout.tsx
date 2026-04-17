@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import dynamic from 'next/dynamic';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './globals.css';
 
-const Navbar = dynamic(() => import('./components/Navbar'), { ssr: false });
-const Footer = dynamic(() => import('./components/Footer'), { ssr: false });
 const HubSpotChat = dynamic(() => import('./components/HubSpotChat'), { ssr: false });
 const ChunkErrorBoundary = dynamic(() => import('./components/ChunkErrorBoundary'), { ssr: false });
 const WebVitals = dynamic(() => import('./components/WebVitals'), { ssr: false });

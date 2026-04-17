@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Package, Clock, Shield, Calendar, Phone, Star, Quote, ChevronDown, Recycle, Truck, Camera } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -108,11 +109,13 @@ export default function BulkRemovalClient() {
     <div className="min-h-screen">
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/Dumpster.jpg"
             alt="Professional bulk removal service for apartment communities"
-            className="w-full h-full object-cover"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>

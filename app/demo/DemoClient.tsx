@@ -1,16 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 import { ArrowRight, MapPin, Camera, BarChart3, Phone, Star, Shield } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
-import HubSpotForm from '../components/HubSpotForm';
 import FaqAccordion from '../components/ui/FaqAccordion';
 import { trackPhoneCall, trackRequestDemo } from '../utils/track';
 
-// TODO: replace formId with the dedicated HubSpot "Request App Demo" form once
-// created in the HubSpot portal. Portal 22416220 is shared.
 const HUBSPOT_PORTAL_ID = '22416220';
-const HUBSPOT_DEMO_FORM_ID = 'b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d';
+const HUBSPOT_DEMO_FORM_ID = 'ad3044cf-7962-4d74-ab8d-ed336dface24';
+const HUBSPOT_EMBED_SRC = `https://js.hsforms.net/forms/embed/${HUBSPOT_PORTAL_ID}.js`;
 
 const demoFaqs = [
   {
@@ -130,45 +129,52 @@ export default function DemoClient() {
         </div>
       </section>
 
-      <section id="demo-form" className="py-20 bg-white">
+      <section id="demo-form" className="py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
                 Request Your Demo Access Code
               </h2>
-              <p className="text-lg text-ink-muted">
-                Fill out the short form below and we'll email your access code within minutes.
+              <p className="text-lg text-ink-muted max-w-2xl mx-auto leading-relaxed">
+                Request your private demo access code below. We'll email your code
+                within minutes so you can explore the On The Fly property manager
+                portal — no commitment required.
               </p>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-10">
-              <HubSpotForm
-                region="na1"
-                portalId={HUBSPOT_PORTAL_ID}
-                formId={HUBSPOT_DEMO_FORM_ID}
+            <div className="bg-white rounded-xl shadow-md border border-gray-100 max-w-[600px] mx-auto p-10">
+              <Script
+                src={HUBSPOT_EMBED_SRC}
+                strategy="afterInteractive"
+                defer
               />
-              <p className="mt-6 text-sm text-ink-muted text-center leading-relaxed">
-                Your information is never shared. You'll receive an email with your
-                access code and a link to{' '}
-                <a
-                  href="https://app.ontheflywastesolutions.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline font-medium"
-                >
-                  app.ontheflywastesolutions.com
-                </a>
-                .
-              </p>
+              <div
+                className="hs-form-frame"
+                data-region="na1"
+                data-form-id={HUBSPOT_DEMO_FORM_ID}
+                data-portal-id={HUBSPOT_PORTAL_ID}
+              />
             </div>
+            <p className="mt-6 text-sm text-ink-muted text-center leading-relaxed max-w-[600px] mx-auto">
+              Your information is never shared. You'll receive an email with your
+              access code and a link to{' '}
+              <a
+                href="https://app.ontheflywastesolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline font-medium"
+              >
+                app.ontheflywastesolutions.com
+              </a>
+            </p>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-12">
@@ -203,7 +209,7 @@ export default function DemoClient() {
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {demoTestimonials.map((t, i) => (
               <ScrollReveal key={t.author} delay={i * 0.1} className="h-full">
-                <div className="bg-white p-8 rounded-xl shadow-sm h-full flex flex-col border border-gray-100">
+                <div className="bg-gray-50 p-8 rounded-xl shadow-sm h-full flex flex-col border border-gray-100">
                   <div className="flex gap-1 mb-4" aria-label="5 out of 5 stars">
                     {[...Array(5)].map((_, idx) => (
                       <Star

@@ -266,7 +266,7 @@ export default function CareersClient() {
                   <img
                     src="/Our_team_Breast_Cancer_Awareness.JPG"
                     alt="On The Fly Waste Solutions team supporting Breast Cancer Awareness"
-                    className="w-full h-[500px] object-cover object-bottom"
+                    className="w-full h-[500px] object-cover object-top"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/15 rounded-2xl" />

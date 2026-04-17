@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import ServiceAreaClient from '../ServiceAreaClient';
+import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Daytona Beach, FL | On The Fly Waste Solutions',
   description: 'Professional valet trash service for apartments and condos in Daytona Beach, FL. Serving Ormond Beach, Port Orange, DeLand, and surrounding areas. Call (407) 274-5019 for a free quote.',
   alternates: {
-    canonical: 'https://ontheflywastesolutions.com/service-areas/daytona-beach-fl/',
+    canonical: 'https://ontheflywastesolutions.com/valet-trash-daytona-beach-fl/',
   },
   openGraph: {
     title: 'Valet Trash Service Daytona Beach, FL | On The Fly Waste Solutions',

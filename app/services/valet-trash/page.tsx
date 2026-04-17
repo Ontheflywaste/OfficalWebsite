@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ValetTrashClient from './ValetTrashClient';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
+import ServiceSchema from '../../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Door-to-Door Valet Trash Service Orlando - Apartment Communities | Call (407) 274-5019',
@@ -18,5 +20,21 @@ export const metadata: Metadata = {
 };
 
 export default function ValetTrashPage() {
-  return <ValetTrashClient />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Valet Trash', url: '/services/valet-trash/' },
+        ]}
+      />
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS tracking and a 100% collection guarantee."
+        slug="/services/valet-trash/"
+      />
+      <ValetTrashClient />
+    </>
+  );
 }

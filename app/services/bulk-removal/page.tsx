@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import BulkRemovalClient from './BulkRemovalClient';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema';
+import ServiceSchema from '../../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Bulk Removal Services for Apartments & Properties | On The Fly',
@@ -11,5 +13,21 @@ export const metadata: Metadata = {
 };
 
 export default function BulkRemovalPage() {
-  return <BulkRemovalClient />;
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Services', url: '/services/' },
+          { name: 'Bulk Removal', url: '/services/bulk-removal/' },
+        ]}
+      />
+      <ServiceSchema
+        name="Bulk Removal"
+        description="Scheduled and on-demand bulk item pickup for apartment communities, HOAs, and property managers in Central Florida. Furniture, appliances, mattresses, and oversized items."
+        slug="/services/bulk-removal/"
+      />
+      <BulkRemovalClient />
+    </>
+  );
 }

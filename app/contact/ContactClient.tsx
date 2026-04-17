@@ -96,7 +96,7 @@ export default function ContactClient() {
             </button>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-[#16a34a] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle2 className="w-12 h-12 text-white" />
               </div>
 
@@ -110,7 +110,7 @@ export default function ContactClient() {
 
               <button
                 onClick={() => setShowSuccess(false)}
-                className="w-full bg-[#16a34a] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#15803d] transition-all"
+                className="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all"
               >
                 Close
               </button>
@@ -119,7 +119,7 @@ export default function ContactClient() {
         </div>
       )}
 
-      <div className="relative bg-gradient-to-br from-gray-900 to-[#16a34a] pt-32 md:pt-36 pb-16 md:pb-20">
+      <div className="relative bg-gradient-to-br from-gray-900 to-primary pt-32 md:pt-36 pb-16 md:pb-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -140,16 +140,16 @@ export default function ContactClient() {
             <div>
               <ScrollReveal>
                 {hasPrefilledData && (
-                  <div className="bg-[#16a34a]/10 border border-[#16a34a]/30 rounded-xl p-4 mb-6">
-                    <p className="text-sm font-medium text-[#16a34a] mb-2">Your selections from the Quick Quote:</p>
+                  <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 mb-6">
+                    <p className="text-sm font-medium text-primary mb-2">Your selections from the Quick Quote:</p>
                     <div className="flex flex-wrap gap-2">
                       {serviceParam && serviceLabels[serviceParam] && (
-                        <span className="bg-[#16a34a] text-white text-sm px-3 py-1 rounded-full">
+                        <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
                           {serviceLabels[serviceParam]}
                         </span>
                       )}
                       {sizeParam && sizeLabels[sizeParam] && (
-                        <span className="bg-[#16a34a] text-white text-sm px-3 py-1 rounded-full">
+                        <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
                           {sizeLabels[sizeParam]}
                         </span>
                       )}
@@ -162,7 +162,7 @@ export default function ContactClient() {
 
             <div>
               <ScrollReveal delay={0.2}>
-                <div className="bg-gradient-to-br from-[#16a34a] to-[#027502] rounded-2xl p-8 text-white shadow-xl">
+                <div className="bg-gradient-to-br from-primary to-[#027502] rounded-2xl p-8 text-white shadow-xl">
                   <h3 className="text-2xl font-bold mb-6">Why Choose Us?</h3>
 
                   <div className="space-y-6">
@@ -248,7 +248,7 @@ export default function ContactClient() {
                     </p>
                     <a
                       href="tel:407-274-5019"
-                      className="block w-full text-center bg-white text-[#16a34a] px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all"
+                      className="block w-full text-center bg-white text-primary px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all"
                     >
                       (407) 274-5019
                     </a>

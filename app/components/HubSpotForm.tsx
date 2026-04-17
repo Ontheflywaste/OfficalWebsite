@@ -123,8 +123,8 @@ export default function HubSpotForm({
       {isLoading && (
         <div className="flex items-center justify-center py-8">
           <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-[#16a34a] border-t-transparent rounded-full animate-spin"></div>
-            <p className="text-[#161b22] text-sm font-medium">Loading form...</p>
+            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-ink text-sm font-medium">Loading form...</p>
           </div>
         </div>
       )}

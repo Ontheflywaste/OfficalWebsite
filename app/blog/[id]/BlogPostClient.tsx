@@ -58,14 +58,14 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                 <li
                   key={i}
                   className="flex items-start text-lg text-gray-700"
-                  dangerouslySetInnerHTML={{ __html: `<span class="text-[#16a34a] mr-3">•</span>${item}` }}
+                  dangerouslySetInnerHTML={{ __html: `<span class="text-primary mr-3">•</span>${item}` }}
                 />
               ))}
             </ul>
           );
         case 'quote':
           return (
-            <blockquote key={index} className="border-l-4 border-[#16a34a] pl-6 py-4 my-8 bg-gray-50 rounded-r-lg">
+            <blockquote key={index} className="border-l-4 border-primary pl-6 py-4 my-8 bg-gray-50 rounded-r-lg">
               <p className="text-xl text-gray-800 italic">{block.text}</p>
             </blockquote>
           );
@@ -91,7 +91,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <ScrollReveal>
                 <div className="mb-4">
-                  <span className="inline-block px-4 py-2 bg-[#16a34a] text-white rounded-full text-sm font-medium">
+                  <span className="inline-block px-4 py-2 bg-primary text-white rounded-full text-sm font-medium">
                     {post.category}
                   </span>
                 </div>
@@ -154,7 +154,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                     <ArrowLeft className="h-4 w-4 mr-2" />
                     Previous Article
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#16a34a] transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
                     {previousPost.title}
                   </h3>
                 </Link>
@@ -170,7 +170,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                     Next Article
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#16a34a] transition-colors">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors">
                     {nextPost.title}
                   </h3>
                 </Link>
@@ -180,7 +180,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         </div>
       </article>
 
-      <section className="py-20 bg-gradient-to-r from-[#16a34a] to-[#16a34a]">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -191,7 +191,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center px-8 py-4 bg-white text-[#16a34a] font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />

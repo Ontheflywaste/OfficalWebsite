@@ -37,7 +37,7 @@ export default function Error({
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full text-center">
         <div className="mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 bg-[#0B5E42] rounded-full flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto mb-4 bg-primary-dark rounded-full flex items-center justify-center">
             <svg
               className="w-8 h-8 text-white"
               fill="none"
@@ -62,7 +62,7 @@ export default function Error({
         <div className="space-y-3">
           <button
             onClick={handleRetry}
-            className="w-full bg-[#0B5E42] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#094a35] transition-colors"
+            className="w-full bg-primary-dark text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-deep transition-colors"
           >
             Refresh Page
           </button>
@@ -75,7 +75,7 @@ export default function Error({
         </div>
         <p className="mt-6 text-sm text-gray-500">
           If this problem persists, please{' '}
-          <a href="/contact/" className="text-[#0B5E42] underline">
+          <a href="/contact/" className="text-primary underline">
             contact us
           </a>
           .

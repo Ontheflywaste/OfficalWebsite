@@ -56,7 +56,9 @@ export default function HubSpotForm({
               clearTimeout(loadingTimeout);
             },
             onFormSubmit: () => {
-              console.log('Form submitted');
+              if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
+                window.dataLayer.push({ event: 'hubspot_form_submit' });
+              }
             }
           });
         } catch (error) {

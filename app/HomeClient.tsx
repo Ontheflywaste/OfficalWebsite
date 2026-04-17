@@ -290,15 +290,13 @@ export default function HomeClient() {
                     Request App Demo
                     <ArrowRight className="w-5 h-5" aria-hidden="true" />
                   </Link>
-                  <a
-                    href="https://app.ontheflywastesolutions.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/client-login/"
                     className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all"
                   >
                     <Smartphone className="w-5 h-5" aria-hidden="true" />
                     Open the App
-                  </a>
+                  </Link>
                 </div>
               </div>
             </ScrollReveal>

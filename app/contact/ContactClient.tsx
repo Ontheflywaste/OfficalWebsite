@@ -120,7 +120,7 @@ export default function ContactClient() {
       )}
 
       <div className="relative bg-gradient-to-br from-gray-900 to-primary pt-32 md:pt-36 pb-16 md:pb-20">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('/Images/TruckImage.JPG')] bg-cover bg-center opacity-10" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>

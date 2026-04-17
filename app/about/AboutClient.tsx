@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Target, Heart, Users, Award, TrendingUp, Shield, Phone, Star } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -87,11 +88,13 @@ export default function AboutClient() {
     <div className="min-h-screen">
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/ApartmentBuildingHero.webp"
             alt="Orlando skyline and Central Florida communities we serve"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -150,11 +153,13 @@ export default function AboutClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <img
+                <Image
                   src="/Images/TradeshowTrevor.jpeg"
                   alt="On The Fly Waste Solutions team at industry trade show"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-                  loading="lazy"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl">
                   <div className="text-4xl font-bold">100%</div>
@@ -213,11 +218,13 @@ export default function AboutClient() {
             {team.map((member, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="aspect-square overflow-hidden">
-                    <img
+                  <div className="aspect-square overflow-hidden relative">
+                    <Image
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="p-6">

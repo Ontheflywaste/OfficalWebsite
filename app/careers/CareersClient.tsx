@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ArrowRight,
   Briefcase,
@@ -159,11 +160,13 @@ export default function CareersClient() {
       {/* Hero */}
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Young_Team.JPEG"
             alt="On The Fly Waste Solutions young team"
-            className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_35%]"
           />
           <div className="absolute inset-0 bg-black/0" />
         </div>
@@ -262,12 +265,13 @@ export default function CareersClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <div className="relative rounded-2xl shadow-2xl overflow-hidden">
-                  <img
+                <div className="relative rounded-2xl shadow-2xl overflow-hidden h-[500px]">
+                  <Image
                     src="/Our_team_Breast_Cancer_Awareness.JPG"
                     alt="On The Fly Waste Solutions team supporting Breast Cancer Awareness"
-                    className="w-full h-[500px] object-cover object-top"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-black/15 rounded-2xl" />
                 </div>

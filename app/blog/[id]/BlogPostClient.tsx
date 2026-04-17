@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight, Tag } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import type { BlogPost } from '@/app/data/blogPosts';
@@ -38,11 +39,13 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
         case 'image':
           return (
             <figure key={index} className="my-12">
-              <img
+              <Image
                 src={block.src}
                 alt={block.alt}
+                width={1200}
+                height={800}
+                sizes="(max-width: 768px) 100vw, 800px"
                 className="w-full h-auto rounded-xl shadow-lg"
-                loading="lazy"
               />
               {block.alt && (
                 <figcaption className="text-sm text-gray-600 text-center mt-4 italic">
@@ -79,11 +82,13 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
     <div className="min-h-screen bg-white pt-32">
       <article>
         <div className="relative h-96 bg-gradient-to-br from-gray-900 to-gray-700 overflow-hidden">
-          <img
+          <Image
             src={post.image}
             alt={post.title}
-            className="w-full h-full object-cover opacity-40"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 

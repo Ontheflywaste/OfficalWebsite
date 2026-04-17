@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Sparkles, Clock, Shield, Home, Phone, Star, Quote, ChevronDown, Droplets, Building2, Camera } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -140,11 +141,13 @@ export default function PressureWashingClient() {
     <div className="min-h-screen">
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
-            src="/Images/a-worker-is-pressure-washing-the-side-of_4jePfEHITea46X2OheIHWw_tPeVeoSvTfSJ4M-NaPtkyw.jpeg"
+          <Image
+            src="/Images/PressureWashingService.jpeg"
             alt="Professional pressure washing services for commercial properties"
-            className="w-full h-full object-cover"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>

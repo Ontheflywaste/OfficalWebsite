@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, MapPin, Building2, Star } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import HubSpotForm from '../components/HubSpotForm';
@@ -22,12 +23,14 @@ export default function FourCornersServiceAreaPage() {
     <>
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/ApartmentBuildingHero.webp"
             alt="Apartment community in Four Corners FL"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-          />
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
@@ -105,12 +108,14 @@ export default function FourCornersServiceAreaPage() {
 
             <ScrollReveal delay={0.2}>
               <div className="relative">
-                <img
+                <Image
                   src="/Images/Valettrashimage.jpg"
                   alt="Valet trash service in Four Corners FL apartment community"
-                  className="rounded-2xl shadow-2xl"
-                  loading="lazy"
-                />
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  />
                 <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-xl">
                   <div className="text-3xl font-bold">100%</div>
                   <div className="text-sm">Collection Rate</div>

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Truck, Clock, DollarSign, Users, Phone, Star, Quote, ChevronDown, Recycle, Package, Camera } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -133,11 +134,13 @@ export default function JunkRemovalClient() {
     <div className="min-h-screen">
       <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
-          <img
+          <Image
             src="/Images/Junk.jpg"
             alt="Professional junk removal services in Central Florida"
-            className="w-full h-full object-cover"
-            loading="eager"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>

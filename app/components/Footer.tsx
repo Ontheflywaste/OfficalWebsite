@@ -5,11 +5,31 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, Trash2, Package, Droplet, Star } from 'lucide-react';
 
+const serviceAreas = [
+  { text: 'Orlando', link: '/valet-trash-orlando-fl/' },
+  { text: 'Kissimmee', link: '/valet-trash-kissimmee-fl/' },
+  { text: 'Altamonte Springs', link: '/valet-trash-altamonte-springs-fl/' },
+  { text: 'Lake Mary', link: '/valet-trash-lake-mary-fl/' },
+  { text: 'Apopka', link: '/valet-trash-apopka-fl/' },
+  { text: 'Sanford', link: '/valet-trash-sanford-fl/' },
+  { text: 'Winter Park', link: '/valet-trash-winter-park-fl/' },
+  { text: 'St. Cloud', link: '/valet-trash-st-cloud-fl/' },
+  { text: 'Clermont', link: '/valet-trash-clermont-fl/' },
+  { text: 'Davenport', link: '/valet-trash-davenport-fl/' },
+  { text: 'ChampionsGate', link: '/valet-trash-championsgate-fl/' },
+  { text: 'Celebration', link: '/valet-trash-celebration-fl/' },
+  { text: 'Four Corners', link: '/valet-trash-four-corners-fl/' },
+  { text: 'Winter Haven', link: '/valet-trash-winter-haven-fl/' },
+  { text: 'Winter Garden', link: '/valet-trash-winter-garden-fl/' },
+  { text: 'Space Coast', link: '/valet-trash-space-coast-fl/' },
+  { text: 'Daytona Beach', link: '/valet-trash-daytona-beach-fl/' },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-surface-dark text-white border-t border-surface-dark-border" role="contentinfo">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
           <div>
             <Image
               src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
@@ -19,7 +39,7 @@ export default function Footer() {
               className="h-12 sm:h-14 md:h-16 w-auto object-contain mb-6"
               loading="lazy"
             />
-            <p className="text-gray-200 mb-6">
+            <p className="text-gray-200 mb-6 leading-relaxed">
               Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
             </p>
             <Link
@@ -81,7 +101,7 @@ export default function Footer() {
                     className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center group"
                     aria-label={`Go to ${item} page`}
                   >
-                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300" aria-hidden="true" />
+                    <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all duration-300" aria-hidden="true" />
                     {item}
                   </Link>
                 </li>
@@ -105,42 +125,6 @@ export default function Footer() {
                     aria-label={`Learn more about ${item.text}`}
                   >
                     <item.icon className="h-4 w-4 mr-2" aria-hidden="true" />
-                    {item.text}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-6">Service Areas</h3>
-            <ul className="space-y-3" role="list">
-              {[
-                { text: 'Orlando', link: '/valet-trash-orlando-fl/' },
-                { text: 'Kissimmee', link: '/valet-trash-kissimmee-fl/' },
-                { text: 'Altamonte Springs', link: '/valet-trash-altamonte-springs-fl/' },
-                { text: 'Lake Mary', link: '/valet-trash-lake-mary-fl/' },
-                { text: 'Apopka', link: '/valet-trash-apopka-fl/' },
-                { text: 'Sanford', link: '/valet-trash-sanford-fl/' },
-                { text: 'Winter Park', link: '/valet-trash-winter-park-fl/' },
-                { text: 'St. Cloud', link: '/valet-trash-st-cloud-fl/' },
-                { text: 'Clermont', link: '/valet-trash-clermont-fl/' },
-                { text: 'Davenport', link: '/valet-trash-davenport-fl/' },
-                { text: 'ChampionsGate', link: '/valet-trash-championsgate-fl/' },
-                { text: 'Celebration', link: '/valet-trash-celebration-fl/' },
-                { text: 'Four Corners', link: '/valet-trash-four-corners-fl/' },
-                { text: 'Winter Haven', link: '/valet-trash-winter-haven-fl/' },
-                { text: 'Winter Garden', link: '/valet-trash-winter-garden-fl/' },
-                { text: 'Space Coast', link: '/valet-trash-space-coast-fl/' },
-                { text: 'Daytona Beach', link: '/valet-trash-daytona-beach-fl/' }
-              ].map((item) => (
-                <li key={item.text}>
-                  <Link
-                    href={item.link}
-                    className="text-gray-200 hover:text-white transition-colors duration-300 flex items-center group text-sm"
-                    aria-label={`${item.text} service area`}
-                  >
-                    <MapPin className="h-3 w-3 mr-2 flex-shrink-0" aria-hidden="true" />
                     {item.text}
                   </Link>
                 </li>
@@ -189,6 +173,53 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
+        {/* Serving Central Florida — full-width pill strip with all 17 service areas */}
+        <nav
+          className="mt-14 pt-10 border-t border-surface-dark-border"
+          aria-label="Service areas"
+        >
+          <div className="flex items-center justify-between flex-wrap gap-4 mb-5">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-primary/15 border border-primary/30 rounded-lg flex items-center justify-center">
+                <MapPin className="w-4 h-4 text-primary" aria-hidden="true" />
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-wider text-gray-400 font-semibold">
+                  Serving Central Florida
+                </div>
+                <div className="text-sm text-gray-300">
+                  17 cities across Orange, Osceola, Seminole, Lake, Polk, Volusia &amp; Brevard counties
+                </div>
+              </div>
+            </div>
+            <Link
+              href="/services/"
+              className="inline-flex items-center gap-1.5 text-sm text-gray-200 hover:text-white font-semibold transition-colors"
+            >
+              View all services
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </div>
+
+          <ul className="flex flex-wrap gap-2" role="list">
+            {serviceAreas.map((area) => (
+              <li key={area.text}>
+                <Link
+                  href={area.link}
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-gray-300 hover:text-white bg-white/5 hover:bg-primary/15 border border-white/10 hover:border-primary/40 rounded-full px-3 py-1.5 transition-all duration-300"
+                  aria-label={`${area.text} valet trash service area`}
+                >
+                  <span
+                    className="w-1.5 h-1.5 rounded-full bg-primary/70"
+                    aria-hidden="true"
+                  />
+                  {area.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className="border-t border-gray-800 mt-12 pt-12">
           <div className="mb-12">

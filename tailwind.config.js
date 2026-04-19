@@ -52,6 +52,8 @@ export default {
         'radial-drift': 'radial-drift 18s ease-in-out infinite',
         'shimmer': 'shimmer 2.5s ease-in-out infinite',
         'wave': 'wave 8s ease-in-out infinite',
+        'map-ping': 'map-ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'radar-sweep': 'radar-sweep 6s linear infinite',
       },
       keyframes: {
         'radial-drift': {
@@ -65,6 +67,14 @@ export default {
         wave: {
           '0%, 100%': { transform: 'translateX(0) translateY(0)' },
           '50%': { transform: 'translateX(-25%) translateY(-4px)' },
+        },
+        'map-ping': {
+          '0%': { transform: 'scale(0.85)', opacity: '0.8' },
+          '80%, 100%': { transform: 'scale(2.4)', opacity: '0' },
+        },
+        'radar-sweep': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
     },

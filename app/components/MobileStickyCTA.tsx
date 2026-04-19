@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Phone, FileText } from 'lucide-react';
-import { trackPhoneCall, trackRequestDemo } from '../utils/track';
+import { FileText } from 'lucide-react';
+import { trackRequestDemo } from '../utils/track';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,33 +58,28 @@ export default function MobileStickyCTA() {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-40 md:hidden transition-transform duration-300 ${
-        shouldShow ? 'translate-y-0' : 'translate-y-full'
+      className={`fixed left-4 z-40 md:hidden transition-all duration-300 ease-out ${
+        shouldShow
+          ? 'bottom-[max(1rem,env(safe-area-inset-bottom))] opacity-100 translate-y-0'
+          : 'bottom-0 opacity-0 translate-y-6 pointer-events-none'
       }`}
       aria-hidden={!shouldShow}
     >
-      {/* pr-24 leaves a 96 px gutter on the right so the HubSpot chat
-          bubble (which sits at bottom-right) never overlaps either CTA. */}
-      <div className="bg-primary shadow-[0_-4px_20px_rgba(0,0,0,0.25)] pl-4 pr-24 py-3 pb-safe">
-        <div className="flex items-center gap-3 max-w-lg mx-auto">
-          <a
-            href="tel:407-274-5019"
-            onClick={() => trackPhoneCall('mobile_sticky')}
-            className="flex items-center justify-center w-14 h-14 bg-white/20 rounded-lg border-2 border-white/30 hover:bg-white/30 transition-all flex-shrink-0"
-            aria-label="Call us at (407) 274-5019"
-          >
-            <Phone className="w-6 h-6 text-white" aria-hidden="true" />
-          </a>
-          <Link
-            href="/contact/"
-            onClick={() => trackRequestDemo('mobile_sticky')}
-            className="flex-1 flex items-center justify-center gap-2 bg-white text-primary px-6 py-3.5 rounded-lg font-bold text-base hover:bg-gray-100 transition-all shadow-md"
-          >
-            <FileText className="w-5 h-5" aria-hidden="true" />
-            Request Quote
-          </Link>
-        </div>
-      </div>
+      {/* A single, compact pill CTA that sits on the LEFT so the HubSpot
+          chat bubble (bottom-right) has its own clean corner. The phone
+          number is already reachable from the top banner, hero, and
+          footer, so the mobile sticky keeps a single primary CTA
+          (Request Quote) for clarity. */}
+      <Link
+        href="/contact/"
+        onClick={() => trackRequestDemo('mobile_sticky')}
+        className="inline-flex items-center gap-2 bg-primary text-white pl-4 pr-5 py-3 rounded-full font-bold text-sm shadow-[0_10px_30px_-6px_rgba(22,163,74,0.55)] active:scale-[0.97] transition-transform"
+      >
+        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
+          <FileText className="w-4 h-4" aria-hidden="true" />
+        </span>
+        Request Quote
+      </Link>
     </div>
   );
 }

@@ -917,62 +917,106 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden">
+        {/* Map-grid background pattern (subtle lat/long lines) */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.08]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(22,163,74,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(22,163,74,0.8) 1px, transparent 1px)',
+            backgroundSize: '56px 56px',
+          }}
+          aria-hidden="true"
+        />
+        {/* Concentric radar rings centered on Orlando */}
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+          aria-hidden="true"
+        >
+          <svg
+            viewBox="0 0 800 800"
+            width="800"
+            height="800"
+            className="opacity-[0.12]"
+          >
+            <circle cx="400" cy="400" r="120" fill="none" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4 6" />
+            <circle cx="400" cy="400" r="220" fill="none" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4 6" />
+            <circle cx="400" cy="400" r="320" fill="none" stroke="#16a34a" strokeWidth="1.5" strokeDasharray="4 6" />
+            <circle cx="400" cy="400" r="380" fill="none" stroke="#16a34a" strokeWidth="1" strokeDasharray="2 6" />
+          </svg>
+          {/* Slow rotating radar sweep */}
+          <div
+            className="absolute inset-0 animate-radar-sweep origin-center"
+            style={{
+              background:
+                'conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(22,163,74,0.18) 10deg, transparent 40deg)',
+              mask: 'radial-gradient(circle, black 0 380px, transparent 381px)',
+              WebkitMask: 'radial-gradient(circle, black 0 380px, transparent 381px)',
+            }}
+          />
+        </div>
+        {/* Warm primary radial glow behind Orlando */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 50%, rgba(22, 163, 74, 0.12) 0%, transparent 40%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5 backdrop-blur-sm">
+                <MapPin className="w-4 h-4" aria-hidden="true" />
+                Central Florida Coverage Map
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
                 Areas We Serve
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-ink-muted">
                 Proudly serving communities across Central Florida
               </p>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              <Link href="/valet-trash-orlando-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Orlando</span>
-              </Link>
-              <Link href="/valet-trash-kissimmee-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Kissimmee</span>
-              </Link>
-              <Link href="/valet-trash-altamonte-springs-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Altamonte Springs</span>
-              </Link>
-              <Link href="/valet-trash-lake-mary-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Lake Mary</span>
-              </Link>
-              <Link href="/valet-trash-apopka-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Apopka</span>
-              </Link>
-              <Link href="/valet-trash-clermont-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Clermont</span>
-              </Link>
-              <Link href="/valet-trash-winter-park-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Winter Park</span>
-              </Link>
-              <Link href="/valet-trash-sanford-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Sanford</span>
-              </Link>
-              <Link href="/valet-trash-st-cloud-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">St. Cloud</span>
-              </Link>
-              <Link href="/valet-trash-davenport-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Davenport</span>
-              </Link>
-              <Link href="/valet-trash-four-corners-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Four Corners</span>
-              </Link>
-              <Link href="/valet-trash-space-coast-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Space Coast</span>
-              </Link>
-              <Link href="/valet-trash-daytona-beach-fl/" className="bg-white border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all p-4 rounded-lg text-center group cursor-pointer">
-                <span className="font-semibold text-gray-900 group-hover:text-primary transition-colors">Daytona Beach</span>
-              </Link>
-            </div>
-          </ScrollReveal>
+          <div className="relative grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+            {[
+              { href: '/valet-trash-orlando-fl/', name: 'Orlando' },
+              { href: '/valet-trash-kissimmee-fl/', name: 'Kissimmee' },
+              { href: '/valet-trash-altamonte-springs-fl/', name: 'Altamonte Springs' },
+              { href: '/valet-trash-lake-mary-fl/', name: 'Lake Mary' },
+              { href: '/valet-trash-apopka-fl/', name: 'Apopka' },
+              { href: '/valet-trash-clermont-fl/', name: 'Clermont' },
+              { href: '/valet-trash-winter-park-fl/', name: 'Winter Park' },
+              { href: '/valet-trash-sanford-fl/', name: 'Sanford' },
+              { href: '/valet-trash-st-cloud-fl/', name: 'St. Cloud' },
+              { href: '/valet-trash-davenport-fl/', name: 'Davenport' },
+              { href: '/valet-trash-four-corners-fl/', name: 'Four Corners' },
+              { href: '/valet-trash-space-coast-fl/', name: 'Space Coast' },
+              { href: '/valet-trash-daytona-beach-fl/', name: 'Daytona Beach' },
+            ].map((city, i) => (
+              <ScrollReveal key={city.href} delay={i * 0.04}>
+                <Link
+                  href={city.href}
+                  className="group relative flex items-center justify-center gap-2 bg-white/90 backdrop-blur-sm border border-primary/20 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 p-4 rounded-xl cursor-pointer shadow-sm hover:shadow-[0_12px_30px_-10px_rgba(22,163,74,0.45)] hover:-translate-y-0.5"
+                >
+                  {/* Map pin with continuous ping (staggered per card) */}
+                  <span className="relative flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                    <span
+                      className="absolute inline-flex h-2 w-2 rounded-full bg-primary animate-map-ping"
+                      style={{ animationDelay: `${(i % 5) * 0.5}s` }}
+                    />
+                    <MapPin className="relative w-4 h-4 text-primary group-hover:text-white transition-colors" />
+                  </span>
+                  <span className="font-semibold text-gray-900 group-hover:text-white transition-colors text-sm md:text-base">
+                    {city.name}
+                  </span>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 

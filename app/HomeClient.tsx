@@ -283,7 +283,7 @@ export default function HomeClient() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link
-                    href="/contact/"
+                    href="/demo/"
                     onClick={() => trackRequestDemo('app_intro')}
                     className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
                   >

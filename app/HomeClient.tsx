@@ -580,21 +580,11 @@ export default function HomeClient() {
                         aria-hidden="true"
                       />
 
-                      {/* Gold top accent — expands from center on hover */}
+                      {/* Primary top accent — expands from center on hover */}
                       <div
-                        className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-all duration-700 ease-out group-hover:w-full"
+                        className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-primary/0 via-primary to-primary/0 transition-all duration-700 ease-out group-hover:w-full"
                         aria-hidden="true"
                       />
-
-                      {/* Gold shimmer sweep — slides across the card on hover */}
-                      <div
-                        className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        aria-hidden="true"
-                      >
-                        <div
-                          className="absolute -top-1/2 -left-1/4 w-1/3 h-[200%] bg-gradient-to-r from-transparent via-gold/25 to-transparent rotate-12 group-hover:animate-shimmer"
-                        />
-                      </div>
 
                       {/* Soft green radial glow — fades in on hover */}
                       <div
@@ -607,13 +597,13 @@ export default function HomeClient() {
                       />
 
                       <div className="relative p-8 flex flex-col flex-grow z-10">
-                        {/* Icon tile with gold ring on hover + rotate/scale + bg fill */}
+                        {/* Icon tile with rotate + scale + bg fill */}
                         <div className="relative mb-6">
                           <div
                             className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 bg-primary"
                             aria-hidden="true"
                           />
-                          <div className="relative w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center overflow-hidden ring-2 ring-transparent transition-all duration-500 group-hover:bg-primary group-hover:ring-gold/70 group-hover:ring-offset-2 group-hover:rotate-[-6deg] group-hover:scale-110 shadow-md">
+                          <div className="relative w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-primary group-hover:rotate-[-6deg] group-hover:scale-110 shadow-md">
                             <Icon className="w-9 h-9 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-[6deg]" aria-hidden="true" />
                           </div>
                         </div>
@@ -627,7 +617,7 @@ export default function HomeClient() {
                         <span className="inline-flex items-center gap-2 text-primary font-semibold mt-auto">
                           <span className="relative">
                             Learn More
-                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-gold group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
                           </span>
                           <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
                         </span>
@@ -657,59 +647,117 @@ export default function HomeClient() {
       </section>
 
       <section className="relative py-20 bg-gradient-to-b from-surface-dark to-surface-dark-2 overflow-hidden">
+        {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
         </div>
+        {/* Gold + primary radial accents — "prestige" backdrop on the dark section */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-60 animate-radial-drift"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.22) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+          }}
+          aria-hidden="true"
+        />
+        {/* Hairline gold top border */}
+        <div
+          className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"
+          aria-hidden="true"
+        />
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                The On The Fly Advantage
+            <div className="text-center mb-16 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/40 text-gold-light px-4 py-2 rounded-full text-sm font-semibold mb-5 backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-gold-light" aria-hidden="true" />
+                Enterprise-Grade Advantage
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight lg:leading-snug">
+                The On The Fly{' '}
+                <span className="bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent">
+                  Advantage
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300">
                 Next-generation apartment waste management in Orlando with enterprise-grade accountability
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <ScrollReveal delay={0.1}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-primary/30 hover:border-primary transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">GPS-Verified Accountability</h3>
-                <p className="text-gray-300 leading-relaxed flex-grow">
-                  Every bag, every building, tracked in real-time. Advanced geo-location technology ensures 100% route completion with documented proof of service.
-                </p>
-              </div>
-            </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
+            {[
+              {
+                icon: MapPin,
+                title: 'GPS-Verified Accountability',
+                description:
+                  'Every bag, every building, tracked in real-time. Advanced geo-location technology ensures 100% route completion with documented proof of service.',
+              },
+              {
+                icon: Shield,
+                title: '100% Collection Guarantee',
+                description:
+                  'Backed by our strict Service Level Agreement (SLA). If we miss it, we make it right immediately with full transparency and accountability.',
+              },
+              {
+                icon: Camera,
+                title: 'Property Manager Portal',
+                description:
+                  'Instant access to service reports and photo verification. Complete visibility into every pickup with time-stamped documentation at your fingertips.',
+              },
+            ].map((adv, i) => {
+              const Icon = adv.icon;
+              return (
+                <ScrollReveal key={adv.title} delay={(i + 1) * 0.12} className="h-full">
+                  <div className="group relative h-full bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-primary/30 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:border-gold/60 hover:shadow-[0_25px_70px_-20px_rgba(212,175,55,0.35)] flex flex-col overflow-hidden">
+                    {/* Gold top accent — expands from center on hover */}
+                    <div
+                      className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-all duration-700 ease-out group-hover:w-full"
+                      aria-hidden="true"
+                    />
+                    {/* Gold shimmer sweep on hover */}
+                    <div
+                      className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      aria-hidden="true"
+                    >
+                      <div className="absolute -top-1/2 -left-1/4 w-1/3 h-[200%] bg-gradient-to-r from-transparent via-gold/30 to-transparent rotate-12 group-hover:animate-shimmer" />
+                    </div>
+                    {/* Gold corner accent — small decorative bracket that appears on hover */}
+                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true">
+                      <Sparkles className="w-4 h-4 text-gold" />
+                    </div>
 
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-primary/30 hover:border-primary transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">100% Collection Guarantee</h3>
-                <p className="text-gray-300 leading-relaxed flex-grow">
-                  Backed by our strict Service Level Agreement (SLA). If we miss it, we make it right immediately with full transparency and accountability.
-                </p>
-              </div>
-            </ScrollReveal>
+                    {/* Icon tile with gold ring + primary fill */}
+                    <div className="relative mb-6">
+                      <div className="absolute inset-0 rounded-xl blur-xl bg-gold/0 group-hover:bg-gold/40 transition-all duration-500" aria-hidden="true" />
+                      <div className="relative w-16 h-16 bg-primary rounded-xl flex items-center justify-center ring-2 ring-transparent transition-all duration-500 group-hover:ring-gold group-hover:ring-offset-2 group-hover:ring-offset-surface-dark group-hover:scale-110 group-hover:-rotate-3 shadow-lg shadow-primary/40">
+                        <Icon className="w-8 h-8 text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" aria-hidden="true" />
+                      </div>
+                    </div>
 
-            <ScrollReveal delay={0.3}>
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-primary/30 hover:border-primary transition-all h-full flex flex-col group">
-                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Camera className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Property Manager Portal</h3>
-                <p className="text-gray-300 leading-relaxed flex-grow">
-                  Instant access to service reports and photo verification. Complete visibility into every pickup with time-stamped documentation at your fingertips.
-                </p>
-              </div>
-            </ScrollReveal>
+                    <h3 className="relative text-2xl font-bold text-white mb-4 transition-colors duration-500 group-hover:text-gold-light">
+                      {adv.title}
+                    </h3>
+                    <p className="relative text-gray-300 leading-relaxed flex-grow">
+                      {adv.description}
+                    </p>
+
+                    {/* Bottom hairline — gold gradient that expands on hover */}
+                    <div className="relative mt-6 h-px w-full overflow-hidden">
+                      <span className="absolute inset-y-0 left-0 w-0 bg-gradient-to-r from-gold via-gold-light to-transparent group-hover:w-full transition-all duration-700 ease-out" aria-hidden="true" />
+                    </div>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
+
+        {/* Hairline gold bottom border */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"
+          aria-hidden="true"
+        />
       </section>
 
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">

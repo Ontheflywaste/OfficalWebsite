@@ -139,7 +139,7 @@ export default function PressureWashingClient() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+      <section className="relative py-20 pt-32 md:pt-40 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black">
           <Image
             src="/Images/PressureWashingService.jpeg"
@@ -149,13 +149,57 @@ export default function PressureWashingClient() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          {/* Water-to-brand gradient: blue where the jet strikes, green on the right */}
+          <div className="absolute inset-0 bg-gradient-to-br from-water-deep/80 via-surface-dark/60 to-primary-deep/70"></div>
+          {/* Subtle radial water glint */}
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 25% 35%, rgba(56, 189, 248, 0.28) 0%, transparent 55%), radial-gradient(circle at 75% 75%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          ></div>
+
+          {/* Floating water droplets */}
+          <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+            {[
+              { left: '12%', top: '20%', size: 6, delay: '0s', dur: '4s' },
+              { left: '22%', top: '75%', size: 4, delay: '1.2s', dur: '5s' },
+              { left: '38%', top: '30%', size: 8, delay: '2s', dur: '6s' },
+              { left: '55%', top: '60%', size: 5, delay: '0.8s', dur: '4.5s' },
+              { left: '68%', top: '25%', size: 7, delay: '1.6s', dur: '5.5s' },
+              { left: '82%', top: '55%', size: 4, delay: '2.4s', dur: '4.8s' },
+              { left: '90%', top: '15%', size: 5, delay: '0.4s', dur: '5.2s' },
+            ].map((d, i) => (
+              <span
+                key={i}
+                className="absolute block rounded-full bg-water-light/50 shadow-[0_0_18px_rgba(56,189,248,0.6)] animate-pulse"
+                style={{
+                  left: d.left,
+                  top: d.top,
+                  width: `${d.size}px`,
+                  height: `${d.size}px`,
+                  animationDelay: d.delay,
+                  animationDuration: d.dur,
+                }}
+              />
+            ))}
+          </div>
         </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 bg-water/20 border border-water-light/40 text-water-light px-4 py-2 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+                <Droplets className="w-4 h-4" aria-hidden="true" />
+                Water-Powered. Results-Driven.
+              </div>
               <div className="flex items-center gap-3 mb-6">
-                <Sparkles className="w-12 h-12 text-primary" />
+                <div className="relative">
+                  <div className="absolute inset-0 bg-water blur-xl opacity-50" aria-hidden="true" />
+                  <Sparkles className="relative w-12 h-12 text-water-light" />
+                </div>
                 <h1 className="text-5xl font-bold">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
@@ -164,14 +208,14 @@ export default function PressureWashingClient() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-semibold hover:from-primary-dark hover:to-primary transition-all transform hover:scale-105 shadow-lg shadow-primary/40"
                 >
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <a
                   href="tel:407-274-5019"
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+                  className="inline-flex items-center justify-center gap-2 bg-water/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-water/30 transition-all border border-water-light/40"
                 >
                   <Phone className="w-5 h-5" />
                   (407) 274-5019
@@ -180,10 +224,43 @@ export default function PressureWashingClient() {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Animated wave SVG divider — water flowing into the next section */}
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
+          <svg
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+            className="w-full h-16 md:h-24 animate-wave"
+          >
+            <defs>
+              <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.45" />
+                <stop offset="50%" stopColor="#38bdf8" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="#16a34a" stopOpacity="0.35" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,64 C240,96 480,32 720,56 C960,80 1200,24 1440,64 L1440,120 L0,120 Z"
+              fill="url(#waveGradient)"
+            />
+            <path
+              d="M0,80 C240,112 480,48 720,72 C960,96 1200,40 1440,80 L1440,120 L0,120 Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-b from-white via-water-mist/40 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-60"
+          style={{
+            background:
+              'radial-gradient(circle at 10% 30%, rgba(56, 189, 248, 0.15) 0%, transparent 55%), radial-gradient(circle at 90% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 55%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -198,12 +275,17 @@ export default function PressureWashingClient() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ScrollReveal key={index} delay={index * 0.1} className="h-full">
-                <div className="h-full flex flex-col bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-4">
+                <div className="group relative h-full flex flex-col bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                  {/* Water ripple on hover — radial gradient blooms from icon */}
+                  <div
+                    className="absolute -top-6 -left-6 w-40 h-40 rounded-full bg-water/15 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    aria-hidden="true"
+                  />
+                  <div className="relative w-16 h-16 bg-gradient-to-br from-water/15 to-primary/15 rounded-xl flex items-center justify-center text-water group-hover:from-water group-hover:to-primary group-hover:text-white transition-all duration-500 mb-4 shadow-sm">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <h3 className="relative text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="relative text-gray-600">{service.description}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -211,8 +293,16 @@ export default function PressureWashingClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-br from-water-mist/60 via-gray-50 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-50"
+          style={{
+            background:
+              'radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -227,8 +317,9 @@ export default function PressureWashingClient() {
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {benefits.map((benefit, index) => (
               <ScrollReveal key={index} delay={index * 0.1} className="h-full">
-                <div className="flex gap-6 p-8 bg-white rounded-xl hover:shadow-lg transition-shadow h-full">
-                  <div className="flex-shrink-0 w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary">
+                <div className="group relative flex gap-6 p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 h-full overflow-hidden">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-water-light via-water to-primary transition-all duration-700 ease-out group-hover:w-full" aria-hidden="true" />
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-water/15 to-primary/15 rounded-xl flex items-center justify-center text-water group-hover:from-water group-hover:to-primary group-hover:text-white transition-all duration-500 shadow-sm">
                     {benefit.icon}
                   </div>
                   <div className="flex flex-col">
@@ -275,12 +366,23 @@ export default function PressureWashingClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary to-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-br from-water-deep via-primary-deep to-primary text-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40 animate-radial-drift"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.35) 0%, transparent 55%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.3) 0%, transparent 55%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <ScrollReveal className="self-stretch flex flex-col justify-center">
               <div>
-                <Camera className="w-16 h-16 mb-6" />
+                <div className="relative inline-block mb-6">
+                  <div className="absolute inset-0 bg-water-light blur-2xl opacity-40" aria-hidden="true" />
+                  <Camera className="relative w-16 h-16" />
+                </div>
                 <h2 className="text-4xl font-bold mb-6">
                   100% Photo Verification
                 </h2>
@@ -398,11 +500,46 @@ export default function PressureWashingClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative py-20 bg-gradient-to-br from-water via-primary to-primary-dark text-white overflow-hidden">
+        {/* Top wave divider */}
+        <div className="absolute top-0 left-0 right-0 pointer-events-none rotate-180" aria-hidden="true">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-12 md:h-16">
+            <path
+              d="M0,64 C240,96 480,32 720,56 C960,80 1200,24 1440,64 L1440,120 L0,120 Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+        {/* Floating droplets */}
+        <div className="absolute inset-0 pointer-events-none opacity-70" aria-hidden="true">
+          {[
+            { left: '8%', top: '30%', size: 6, delay: '0s', dur: '4s' },
+            { left: '28%', top: '65%', size: 5, delay: '1s', dur: '5s' },
+            { left: '48%', top: '25%', size: 8, delay: '2s', dur: '6s' },
+            { left: '72%', top: '55%', size: 5, delay: '0.5s', dur: '4.5s' },
+            { left: '88%', top: '30%', size: 7, delay: '1.5s', dur: '5.5s' },
+          ].map((d, i) => (
+            <span
+              key={i}
+              className="absolute block rounded-full bg-white/70 shadow-[0_0_16px_rgba(255,255,255,0.7)] animate-pulse"
+              style={{
+                left: d.left,
+                top: d.top,
+                width: `${d.size}px`,
+                height: `${d.size}px`,
+                animationDelay: d.delay,
+                animationDuration: d.dur,
+              }}
+            />
+          ))}
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
           <ScrollReveal>
-            <Sparkles className="w-16 h-16 mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-6">
+            <div className="relative inline-block mb-6">
+              <div className="absolute inset-0 bg-white blur-2xl opacity-30" aria-hidden="true" />
+              <Sparkles className="relative w-16 h-16 mx-auto" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight lg:leading-snug">
               Ready to Restore Your Property's Shine?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
@@ -411,14 +548,14 @@ export default function PressureWashingClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 active:scale-[0.98] transition-all transform hover:scale-105 shadow-xl"
               >
                 Request Free Quote
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <a
                 href="tel:407-274-5019"
-                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/40"
               >
                 <Phone className="w-5 h-5" />
                 Call (407) 274-5019

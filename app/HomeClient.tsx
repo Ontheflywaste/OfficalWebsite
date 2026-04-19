@@ -499,90 +499,123 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 15% 20%, rgba(22, 163, 74, 0.12) 0%, transparent 50%), radial-gradient(circle at 85% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
                 Our Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-xl text-ink-muted max-w-2xl mx-auto">
                 Comprehensive apartment community waste management solutions. Serving Orlando, Kissimmee & Central Florida resorts and apartment communities.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ScrollReveal delay={0.1}>
-              <Link href="/services/valet-trash/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-primary transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <Trash2 className="w-10 h-10 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Valet Trash Service</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.</p>
-                  <span className="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+            {[
+              {
+                href: '/services/valet-trash/',
+                icon: Trash2,
+                title: 'Valet Trash Service',
+                description:
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.',
+              },
+              {
+                href: '/junk-removal-orlando-fl/',
+                icon: Building2,
+                title: 'Junk Removal',
+                description:
+                  'Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.',
+              },
+              {
+                href: '/services/bulk-removal/',
+                icon: Recycle,
+                title: 'Bulk Removal',
+                description:
+                  'Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.',
+              },
+              {
+                href: '/services/pressure-washing/',
+                icon: Sparkles,
+                title: 'Pressure Washing',
+                description:
+                  'Professional pressure washing services to maintain clean, attractive common areas and building exteriors.',
+              },
+            ].map((svc, index) => {
+              const Icon = svc.icon;
+              return (
+                <ScrollReveal key={svc.href} delay={index * 0.12} className="h-full">
+                  <Link href={svc.href} className="group block h-full">
+                    <div className="relative h-full bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_24px_60px_-20px_rgba(22,163,74,0.35)] hover:-translate-y-2 hover:border-primary/40">
+                      {/* Top accent bar – expands from center on hover */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-1 w-0 bg-gradient-to-r from-primary/50 via-primary to-primary/50 rounded-b-full transition-all duration-500 ease-out group-hover:w-full" aria-hidden="true" />
+                      {/* Soft radial glow – fades in on hover */}
+                      <div
+                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{
+                          background:
+                            'radial-gradient(circle at 50% 0%, rgba(22, 163, 74, 0.12) 0%, transparent 60%)',
+                        }}
+                        aria-hidden="true"
+                      />
 
-            <ScrollReveal delay={0.2}>
-              <Link href="/junk-removal-orlando-fl/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-primary transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <Building2 className="w-10 h-10 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Junk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.</p>
-                  <span className="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
+                      <div className="relative p-8 h-full flex flex-col">
+                        {/* Icon tile with rotate + scale + bg fill animation */}
+                        <div className="relative mb-6">
+                          <div
+                            className="absolute inset-0 rounded-xl bg-primary/0 blur-xl group-hover:bg-primary/40 transition-all duration-500"
+                            aria-hidden="true"
+                          />
+                          <div className="relative w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-primary group-hover:rotate-[-6deg] group-hover:scale-110">
+                            <Icon className="w-9 h-9 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-[6deg]" aria-hidden="true" />
+                          </div>
+                        </div>
 
-            <ScrollReveal delay={0.3}>
-              <Link href="/services/bulk-removal/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-primary transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <Recycle className="w-10 h-10 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Bulk Removal</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.</p>
-                  <span className="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <Link href="/services/pressure-washing/" className="group h-full">
-                <div className="bg-white border-2 border-gray-200 p-8 rounded-xl hover:shadow-2xl hover:border-primary transition-all transform hover:-translate-y-2 h-full flex flex-col">
-                  <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <Sparkles className="w-10 h-10 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Pressure Washing</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Professional pressure washing services to maintain clean, attractive common areas and building exteriors.</p>
-                  <span className="text-primary font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
-              </Link>
-            </ScrollReveal>
+                        <h3 className="text-2xl font-bold text-ink mb-3 transition-colors group-hover:text-primary">
+                          {svc.title}
+                        </h3>
+                        <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
+                          {svc.description}
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-primary font-semibold mt-auto">
+                          <span className="relative">
+                            Learn More
+                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                          </span>
+                          <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:gap-4 transition-all"
-            >
-              View All Services
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+          <ScrollReveal delay={0.5}>
+            <div className="mt-14 text-center">
+              <Link
+                href="/services/"
+                className="group inline-flex items-center gap-2 text-primary font-semibold text-lg"
+              >
+                <span className="relative">
+                  View All Services
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                </span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -89,7 +89,7 @@ export default function HomeClient() {
             <div className="text-center">
               <ScrollReveal>
                 <h1
-                  className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
+                  className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
                   style={{
                     textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)',
                     textWrap: 'balance',
@@ -127,7 +127,7 @@ export default function HomeClient() {
                   <Link
                     href="/demo/"
                     onClick={() => trackRequestDemo('hero')}
-                    className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
+                    className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
                   >
                     Request App Demo
                     <ArrowRight className="w-5 h-5" />
@@ -251,7 +251,7 @@ export default function HomeClient() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-5">
                 <Sparkles className="w-4 h-4" aria-hidden="true" />
                 New — Property Manager App
               </div>
@@ -338,14 +338,14 @@ export default function HomeClient() {
                   <Link
                     href="/demo/"
                     onClick={() => trackRequestDemo('app_intro')}
-                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
                   >
                     Request App Demo
                     <ArrowRight className="w-5 h-5" aria-hidden="true" />
                   </Link>
                   <Link
                     href="/client-login/"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all"
                   >
                     <Smartphone className="w-5 h-5" aria-hidden="true" />
                     Open the App
@@ -431,7 +431,7 @@ export default function HomeClient() {
                         </div>
                       </div>
 
-                      <div className="mt-3 bg-primary rounded-xl py-2.5 text-center text-xs font-semibold">
+                      <div className="mt-3 bg-primary rounded-xl py-2.5 text-center text-xs font-bold">
                         Request Bulk Pickup
                       </div>
                     </div>
@@ -485,7 +485,7 @@ export default function HomeClient() {
                 <div className="mt-8">
                   <Link
                     href="/about/"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
                     Learn More About Us
                     <ArrowRight className="w-5 h-5" />
@@ -1154,7 +1154,7 @@ export default function HomeClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
             >
               Schedule Consultation
               <ArrowRight className="w-5 h-5" />

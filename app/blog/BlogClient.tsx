@@ -34,7 +34,7 @@ export default function BlogClient() {
                   Industry Insights
                 </span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                 Orlando Waste Management
                 <span className="block text-primary">Insights & Tips</span>
               </h1>
@@ -202,7 +202,7 @@ export default function BlogClient() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Get Started Today
               <ArrowRight className="ml-2 h-5 w-5" />

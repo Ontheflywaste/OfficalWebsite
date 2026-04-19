@@ -66,7 +66,7 @@ export default function ServiceAreaClient({
               <MapPin className="w-5 h-5" />
               <span className="text-sm font-medium">Serving {city}, {state}</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               {serviceTitle}<br />
               <span className="text-primary bg-white px-4 py-2 rounded-lg inline-block mt-2">
                 {city}, {state}
@@ -78,7 +78,7 @@ export default function ServiceAreaClient({
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />
@@ -177,7 +177,7 @@ export default function ServiceAreaClient({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Request a Quote
                 <ArrowRight className="w-5 h-5" />

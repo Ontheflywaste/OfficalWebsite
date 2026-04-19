@@ -124,7 +124,7 @@ export default function BulkRemovalClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Package className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-bold">Bulk Removal Service Orlando FL</h1>
+                <h1 className="text-5xl font-extrabold">Bulk Removal Service Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Recurring and scheduled bulk trash pickup and bulk item removal exclusively for Orlando property managers and apartment communities. Before & after photo verification included.
@@ -132,7 +132,7 @@ export default function BulkRemovalClient() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105"
                 >
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
@@ -377,7 +377,7 @@ export default function BulkRemovalClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Request Free Quote
                 <ArrowRight className="w-5 h-5" />

@@ -18,7 +18,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
       switch (block.type) {
         case 'heading1':
           return (
-            <h1 key={index} className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 key={index} className="text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
               {block.text}
             </h1>
           );
@@ -100,7 +100,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
                     {post.category}
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
                   {post.title}
                 </h1>
                 <div className="flex items-center justify-center gap-6 text-white/90">
@@ -196,7 +196,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               Contact Us
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -12,7 +12,7 @@ export default function TermsPage() {
   return (
     <article className="bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-40 pb-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-ink mb-4">Terms of Service</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-ink mb-4">Terms of Service</h1>
         <p className="text-ink-muted mb-10">Last updated: {lastUpdated}</p>
 
         <div className="prose prose-lg max-w-none text-ink">

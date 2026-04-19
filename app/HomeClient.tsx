@@ -529,6 +529,8 @@ export default function HomeClient() {
                 title: 'Valet Trash Service',
                 description:
                   'Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.',
+                image: '/Images/Valettrashimage.jpg',
+                imageAlt: 'Professional valet trash doorstep collection service',
               },
               {
                 href: '/junk-removal-orlando-fl/',
@@ -536,6 +538,8 @@ export default function HomeClient() {
                 title: 'Junk Removal',
                 description:
                   'Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.',
+                image: '/Images/Junk.jpg',
+                imageAlt: 'Professional junk removal hauling service',
               },
               {
                 href: '/services/bulk-removal/',
@@ -543,6 +547,8 @@ export default function HomeClient() {
                 title: 'Bulk Removal',
                 description:
                   'Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.',
+                image: '/Images/Dumpster.jpg',
+                imageAlt: 'Bulk dumpster pickup at apartment community',
               },
               {
                 href: '/services/pressure-washing/',
@@ -550,38 +556,69 @@ export default function HomeClient() {
                 title: 'Pressure Washing',
                 description:
                   'Professional pressure washing services to maintain clean, attractive common areas and building exteriors.',
+                image: '/Images/PressureWashingService.jpeg',
+                imageAlt: 'Pressure washing exterior surfaces',
               },
             ].map((svc, index) => {
               const Icon = svc.icon;
               return (
                 <ScrollReveal key={svc.href} delay={index * 0.12} className="h-full">
                   <Link href={svc.href} className="group block h-full">
-                    <div className="relative h-full bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_24px_60px_-20px_rgba(22,163,74,0.35)] hover:-translate-y-2 hover:border-primary/40">
-                      {/* Top accent bar – expands from center on hover */}
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-1 w-0 bg-gradient-to-r from-primary/50 via-primary to-primary/50 rounded-b-full transition-all duration-500 ease-out group-hover:w-full" aria-hidden="true" />
-                      {/* Soft radial glow – fades in on hover */}
+                    <div className="relative h-full min-h-[480px] rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_30px_70px_-20px_rgba(22,163,74,0.45)] hover:-translate-y-2 hover:border-primary/50 flex flex-col">
+                      {/* Background image — scales on hover */}
+                      <Image
+                        src={svc.image}
+                        alt={svc.imageAlt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                      />
+
+                      {/* Readability overlay — white/neutral at rest, warms toward primary on hover */}
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-white via-white/96 to-white/86 transition-all duration-500 group-hover:from-white group-hover:via-white/92 group-hover:to-white/70"
+                        aria-hidden="true"
+                      />
+
+                      {/* Gold top accent — expands from center on hover */}
+                      <div
+                        className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-all duration-700 ease-out group-hover:w-full"
+                        aria-hidden="true"
+                      />
+
+                      {/* Gold shimmer sweep — slides across the card on hover */}
+                      <div
+                        className="absolute inset-0 pointer-events-none overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        aria-hidden="true"
+                      >
+                        <div
+                          className="absolute -top-1/2 -left-1/4 w-1/3 h-[200%] bg-gradient-to-r from-transparent via-gold/25 to-transparent rotate-12 group-hover:animate-shimmer"
+                        />
+                      </div>
+
+                      {/* Soft green radial glow — fades in on hover */}
                       <div
                         className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                         style={{
                           background:
-                            'radial-gradient(circle at 50% 0%, rgba(22, 163, 74, 0.12) 0%, transparent 60%)',
+                            'radial-gradient(circle at 50% 100%, rgba(22, 163, 74, 0.18) 0%, transparent 60%)',
                         }}
                         aria-hidden="true"
                       />
 
-                      <div className="relative p-8 h-full flex flex-col">
-                        {/* Icon tile with rotate + scale + bg fill animation */}
+                      <div className="relative p-8 flex flex-col flex-grow z-10">
+                        {/* Icon tile with gold ring on hover + rotate/scale + bg fill */}
                         <div className="relative mb-6">
                           <div
-                            className="absolute inset-0 rounded-xl bg-primary/0 blur-xl group-hover:bg-primary/40 transition-all duration-500"
+                            className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 bg-primary"
                             aria-hidden="true"
                           />
-                          <div className="relative w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-primary group-hover:rotate-[-6deg] group-hover:scale-110">
+                          <div className="relative w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center overflow-hidden ring-2 ring-transparent transition-all duration-500 group-hover:bg-primary group-hover:ring-gold/70 group-hover:ring-offset-2 group-hover:rotate-[-6deg] group-hover:scale-110 shadow-md">
                             <Icon className="w-9 h-9 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-[6deg]" aria-hidden="true" />
                           </div>
                         </div>
 
-                        <h3 className="text-2xl font-bold text-ink mb-3 transition-colors group-hover:text-primary">
+                        <h3 className="text-2xl font-bold text-ink mb-3 transition-colors duration-500 group-hover:text-primary">
                           {svc.title}
                         </h3>
                         <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
@@ -590,7 +627,7 @@ export default function HomeClient() {
                         <span className="inline-flex items-center gap-2 text-primary font-semibold mt-auto">
                           <span className="relative">
                             Learn More
-                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-gold group-hover:w-full transition-all duration-500" aria-hidden="true" />
                           </span>
                           <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
                         </span>
@@ -876,209 +913,126 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/Images/TradeshowPicture.jpg"
-            alt="Trade show background"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-surface-dark-2/85"></div>
-        </div>
+      <section className="relative py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+        {/* Soft gold radial accent to signal 'premium partners' */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-50"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 35%, rgba(212, 175, 55, 0.10) 0%, transparent 55%), radial-gradient(circle at 85% 85%, rgba(22, 163, 74, 0.08) 0%, transparent 60%)',
+          }}
+          aria-hidden="true"
+        />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold-dark px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                <Star className="w-4 h-4 fill-gold text-gold" aria-hidden="true" />
+                Trusted Industry Partner
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
                 Proud Members Of
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-ink-muted">
                 Affiliated with leading industry associations
               </p>
             </div>
           </ScrollReveal>
 
+          {/* Edge-fade mask wrapper so logos softly fade in/out of the scroll */}
           <ScrollReveal delay={0.2}>
-            <div className="relative overflow-hidden">
-              <div className="flex animate-scroll gap-12 md:gap-16">
-                <div className="flex items-center gap-12 md:gap-16">
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/faa-full-color-full-logo.png"
-                      alt="Florida Apartment Association"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/NAA-logo_bgwhite.png"
-                      alt="National Apartment Association"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/AAGO.png"
-                      alt="AAGO"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <a
-                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
-                    target="_blank"
-                    rel="nofollow"
-                    className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
-                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
+            <div
+              className="relative overflow-hidden"
+              style={{
+                maskImage:
+                  'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                WebkitMaskImage:
+                  'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+              }}
+            >
+              <div className="flex animate-scroll gap-10 md:gap-14">
+                {[0, 1].map((copy) => (
+                  <div
+                    key={copy}
+                    className="flex items-center gap-10 md:gap-14 flex-shrink-0"
+                    aria-hidden={copy === 1}
                   >
-                    <Image
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
-                      alt="On The Fly Waste Solutions BBB Business Review"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </a>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/asset-logo.png"
-                      alt="Asset Living"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
+                    {[
+                      {
+                        src: '/Images/faa-full-color-full-logo.png',
+                        alt: 'Florida Apartment Association',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: '/Images/NAA-logo_bgwhite.png',
+                        alt: 'National Apartment Association',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: '/Images/AAGO.png',
+                        alt: 'AAGO',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: 'https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png',
+                        alt: 'On The Fly Waste Solutions BBB Business Review',
+                        href: 'https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick',
+                        blend: 'normal' as const,
+                      },
+                      {
+                        src: '/Images/asset-logo.png',
+                        alt: 'Asset Living',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: '/Images/greystar-logo.png',
+                        alt: 'Greystar',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: '/Images/venterra-logo.png',
+                        alt: 'Venterra Realty',
+                        blend: 'multiply' as const,
+                      },
+                      {
+                        src: '/ReunionWestPOALOgo.jpg',
+                        alt: 'Reunion West POA',
+                        blend: 'multiply' as const,
+                      },
+                    ].map((logo) => {
+                      const img = (
+                        <Image
+                          src={logo.src}
+                          alt={logo.alt}
+                          width={200}
+                          height={80}
+                          className="h-[70px] w-auto max-w-[180px] object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+                          style={{ mixBlendMode: logo.blend }}
+                          loading="lazy"
+                        />
+                      );
+                      return logo.href ? (
+                        <a
+                          key={`${copy}-${logo.alt}`}
+                          href={logo.href}
+                          target="_blank"
+                          rel="nofollow"
+                          className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
+                        >
+                          {img}
+                        </a>
+                      ) : (
+                        <div
+                          key={`${copy}-${logo.alt}`}
+                          className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
+                        >
+                          {img}
+                        </div>
+                      );
+                    })}
                   </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/greystar-logo.png"
-                      alt="Greystar"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/venterra-logo.png"
-                      alt="Venterra Realty"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/ReunionWestPOALOgo.jpg"
-                      alt="Reunion West POA"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                </div>
-                <div className="flex items-center gap-12 md:gap-16" aria-hidden="true">
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/faa-full-color-full-logo.png"
-                      alt="Florida Apartment Association"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/NAA-logo_bgwhite.png"
-                      alt="National Apartment Association"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/AAGO.png"
-                      alt="AAGO"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <a
-                    href="https://www.bbb.org/us/fl/apopka/profile/garbage-removal/on-the-fly-waste-solutions-0733-235977450/#sealclick"
-                    target="_blank"
-                    rel="nofollow"
-                    className="flex-shrink-0 flex items-center justify-center hover:scale-105 transition-transform"
-                    style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}
-                  >
-                    <Image
-                      src="https://seal-centralflorida.bbb.org/seals/blue-seal-250-52-whitetxt-bbb-235977450.png"
-                      alt="On The Fly Waste Solutions BBB Business Review"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </a>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/asset-logo.png"
-                      alt="Asset Living"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/greystar-logo.png"
-                      alt="Greystar"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/Images/venterra-logo.png"
-                      alt="Venterra Realty"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                  <div className="flex-shrink-0 flex items-center justify-center" style={{ filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3))' }}>
-                    <Image
-                      src="/ReunionWestPOALOgo.jpg"
-                      alt="Reunion West POA"
-                      width={160}
-                      height={60}
-                      className="h-[60px] w-auto max-w-[160px] object-contain"
-                      loading="lazy"
-                      />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </ScrollReveal>

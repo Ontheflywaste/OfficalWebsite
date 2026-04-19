@@ -31,6 +31,17 @@ export default {
           muted: '#656d76',
           nav: '#8b949e',
         },
+        gold: {
+          DEFAULT: '#d4af37',
+          light: '#e9c967',
+          dark: '#a8801f',
+        },
+        water: {
+          DEFAULT: '#0ea5e9',
+          light: '#38bdf8',
+          deep: '#0c4a6e',
+          mist: '#e0f2fe',
+        },
       },
       aspectRatio: {
         '4/3': '4 / 3',
@@ -39,11 +50,21 @@ export default {
       animation: {
         'image-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'radial-drift': 'radial-drift 18s ease-in-out infinite',
+        'shimmer': 'shimmer 2.5s ease-in-out infinite',
+        'wave': 'wave 8s ease-in-out infinite',
       },
       keyframes: {
         'radial-drift': {
           '0%, 100%': { transform: 'translate3d(-5%, -5%, 0) scale(1)' },
           '50%': { transform: 'translate3d(5%, 5%, 0) scale(1.1)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-120%)' },
+          '100%': { transform: 'translateX(120%)' },
+        },
+        wave: {
+          '0%, 100%': { transform: 'translateX(0) translateY(0)' },
+          '50%': { transform: 'translateX(-25%) translateY(-4px)' },
         },
       },
     },

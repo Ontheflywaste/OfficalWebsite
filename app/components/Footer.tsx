@@ -34,9 +34,9 @@ export default function Footer() {
             <Image
               src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
               alt="On The Fly Waste Solutions Logo"
-              width={150}
-              height={48}
-              className="h-12 sm:h-14 md:h-16 w-auto object-contain mb-6"
+              width={200}
+              height={80}
+              className="h-[60px] sm:h-[70px] md:h-20 w-auto object-contain mb-6"
               loading="lazy"
             />
             <p className="text-gray-200 mb-6 leading-relaxed">

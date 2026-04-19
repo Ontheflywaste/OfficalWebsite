@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, Smartphone, Bell, BarChart3, MessageSquare } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, Smartphone, Bell, BarChart3, MessageSquare, Calendar } from 'lucide-react';
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
 import FaqAccordion from './components/ui/FaqAccordion';
@@ -153,35 +153,73 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                <Sparkles className="w-4 h-4" aria-hidden="true" />
+                By the Numbers
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
                 Trusted by Leading Properties
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-ink-muted">
                 Join the growing number of communities that trust On The Fly
               </p>
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={0.2}>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-primary transition-all">
-                <div className="text-6xl font-bold text-primary mb-3">2,000+</div>
-                <div className="text-gray-800 font-semibold text-lg">Units Served</div>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+            <ScrollReveal className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">2,000+</div>
+                <div className="text-ink font-semibold text-lg">Units Served</div>
               </div>
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-primary transition-all">
-                <div className="text-6xl font-bold text-primary mb-3">100%</div>
-                <div className="text-gray-800 font-semibold text-lg">Client Satisfaction</div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1} className="h-full">
+              <div className="relative h-full bg-gradient-to-br from-primary to-primary-dark p-8 pt-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group md:-mt-4 md:mb-0">
+                <div
+                  className="absolute inset-0 opacity-25 pointer-events-none"
+                  style={{
+                    background:
+                      'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
+                  }}
+                  aria-hidden="true"
+                />
+                <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
+                </div>
+                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
+                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
               </div>
-              <div className="bg-white p-8 rounded-xl text-center shadow-lg border-2 border-gray-100 hover:border-primary transition-all">
-                <div className="text-6xl font-bold text-primary mb-3">7</div>
-                <div className="text-gray-800 font-semibold text-lg">Days a Week Service</div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2} className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Calendar className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">7</div>
+                <div className="text-ink font-semibold text-lg">Days a Week Service</div>
               </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 

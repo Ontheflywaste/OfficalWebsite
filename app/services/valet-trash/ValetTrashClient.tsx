@@ -106,7 +106,7 @@ export default function ValetTrashClient() {
             <div className="max-w-3xl">
               <div className="flex items-center gap-3 mb-6">
                 <Trash2 className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-bold">Valet Trash Service Orlando FL</h1>
+                <h1 className="text-5xl font-extrabold">Valet Trash Service Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Convenient doorstep trash collection and apartment trash pickup for communities across Orlando and Central Florida
@@ -114,7 +114,7 @@ export default function ValetTrashClient() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105"
                 >
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
@@ -338,7 +338,7 @@ export default function ValetTrashClient() {
                 href="https://g.page/r/CQxqX8YvX9YQEBM/review"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105"
               >
                 <Star className="w-5 h-5" />
                 Write a Review on Google
@@ -401,7 +401,7 @@ export default function ValetTrashClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
               >
                 Request Free Quote
                 <ArrowRight className="w-5 h-5" />

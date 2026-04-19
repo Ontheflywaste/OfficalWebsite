@@ -110,7 +110,7 @@ export default function ContactClient() {
 
               <button
                 onClick={() => setShowSuccess(false)}
-                className="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all"
+                className="w-full bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all"
               >
                 Close
               </button>
@@ -124,7 +124,7 @@ export default function ContactClient() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
               Get Your Free Quote
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">

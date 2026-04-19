@@ -47,7 +47,7 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
               <MapPin className="w-6 h-6 text-primary" />
               <span className="text-white text-lg font-semibold">Serving {data.city}, FL</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               Valet Trash Service in {data.city}, FL
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
@@ -56,7 +56,7 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRight className="w-5 h-5" />

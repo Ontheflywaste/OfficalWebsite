@@ -30,7 +30,7 @@ export default function UnderConstruction({
           />
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight lg:leading-snug">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight lg:leading-snug">
           {title}
         </h1>
 
@@ -40,7 +40,7 @@ export default function UnderConstruction({
 
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
+          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
         >
           <ArrowLeft className="w-5 h-5" aria-hidden="true" />
           Back to Home

@@ -101,7 +101,7 @@ export default function AboutClient() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
                 About Orlando's Valet Trash Experts
               </h1>
               <p className="text-2xl text-gray-200 mb-8">
@@ -325,7 +325,7 @@ export default function AboutClient() {
                 <div className="space-y-4">
                   <Link
                     href="/contact/"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
+                    className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
                   >
                     Get Free Quote
                     <ArrowRight className="w-5 h-5" />

@@ -98,7 +98,7 @@ export default function ReviewsClient() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="mb-20 mt-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-ink mb-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-ink mb-4 text-center">
               Client Success Stories
             </h1>
             <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
@@ -212,7 +212,7 @@ export default function ReviewsClient() {
               href={googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-3 bg-primary text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
             >
               Leave Us a Review on Google
               <ExternalLink className="w-5 h-5" />
@@ -228,13 +228,13 @@ export default function ReviewsClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
               >
                 Request a Quote
               </Link>
               <a
                 href="tel:407-274-5019"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-md"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-50 transition-all shadow-md"
               >
                 Call (407) 274-5019
               </a>

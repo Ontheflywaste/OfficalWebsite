@@ -137,24 +137,26 @@ body {
 }
 
 @layer components {
+  /* 700 bold — primary CTAs */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg text-white bg-[#16a34a] transition-all duration-300 transform hover:bg-[#15803d] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg text-white bg-[#16a34a] transition-all duration-300 transform hover:bg-[#15803d] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
   }
 
   .btn-primary-inverse {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg text-[#16a34a] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-lg text-[#16a34a] bg-white transition-all duration-300 transform hover:bg-gray-100 hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-lg w-full sm:w-auto;
   }
 
+  /* 600 semibold — secondary buttons */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-[#1f2328] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-md w-full sm:w-auto;
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-semibold rounded-lg border-2 border-white text-white transition-all duration-300 transform hover:bg-white hover:text-[#1f2328] hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 shadow-md w-full sm:w-auto;
   }
 
   .btn-outline {
-    @apply inline-flex items-center px-6 py-3 border-2 border-[#16a34a] text-[#16a34a] font-medium rounded-lg transition-all duration-300 transform hover:bg-[#16a34a] hover:text-white hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 text-base;
+    @apply inline-flex items-center px-6 py-3 border-2 border-[#16a34a] text-[#16a34a] font-semibold rounded-lg transition-all duration-300 transform hover:bg-[#16a34a] hover:text-white hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0 text-base;
   }
 
   .btn-link {
-    @apply inline-flex items-center text-[#16a34a] font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#16a34a] after:transition-all after:duration-300 hover:after:w-full;
+    @apply inline-flex items-center text-[#16a34a] font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#16a34a] after:transition-all after:duration-300 hover:after:w-full;
   }
 }
 
@@ -189,10 +191,19 @@ body {
   }
 }
 
-/* Base typography scale — keeps headings consistent across pages */
+/* Base typography scale + brand weight system
+ * Inter weight scale used across the site:
+ *   800 extrabold -> H1 (headlines, hero text)
+ *   700 bold      -> H2 (section headers) and primary CTAs (.btn-primary*)
+ *   600 semibold  -> H3/H4, nav, labels, secondary buttons
+ *   400 regular   -> body copy and descriptions (default)
+ */
 @layer base {
+  body {
+    @apply font-normal text-ink;
+  }
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight;
   }
   h2 {
     @apply text-3xl md:text-4xl font-bold leading-tight tracking-tight;
@@ -202,6 +213,9 @@ body {
   }
   h4 {
     @apply text-lg md:text-xl font-semibold;
+  }
+  label {
+    @apply font-semibold;
   }
 }
 
@@ -270,7 +284,7 @@ html {
   border: none !important;
   color: white !important;
   padding: 12px 24px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border-radius: 9999px !important;
   cursor: pointer !important;
   transition: all 0.3s ease !important;
@@ -312,7 +326,7 @@ html {
 #hubspot-form-container .hs-form-field label,
 .hubspot-form-wrapper .hs-form-field label {
   color: #161b22 !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   margin-bottom: 8px !important;
   display: block !important;
 }

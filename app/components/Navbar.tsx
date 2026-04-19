@@ -119,7 +119,7 @@ export default function Navbar() {
               <Link
                 href="/demo/"
                 onClick={() => trackRequestDemo('navbar_mobile_topbar')}
-                className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-primary-dark transition-all shadow-lg"
+                className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-primary-dark transition-all shadow-lg"
               >
                 App Demo
                 <ArrowRight className="w-4 h-4" />
@@ -321,7 +321,7 @@ export default function Navbar() {
               <Link
                 href="/client-login/"
                 onClick={() => trackClientLogin()}
-                className="font-semibold text-sm px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 active:scale-[0.98] transition-all duration-300"
+                className="font-bold text-sm px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary/10 active:scale-[0.98] transition-all duration-300"
                 role="menuitem"
               >
                 Client Login
@@ -330,7 +330,7 @@ export default function Navbar() {
               <Link
                 href="/demo/"
                 onClick={() => trackRequestDemo('navbar_desktop')}
-                className="font-semibold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg inline-flex items-center gap-1.5"
+                className="font-bold text-sm px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark active:scale-[0.98] transition-all duration-300 shadow-lg inline-flex items-center gap-1.5"
                 role="menuitem"
               >
                 Request App Demo
@@ -345,7 +345,7 @@ export default function Navbar() {
             <div className="px-4 py-4 space-y-2">
               <Link
                 href="/"
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-white hover:text-primary hover:bg-white/10"
               >
                 Home
               </Link>
@@ -353,7 +353,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-white hover:text-primary hover:bg-white/10"
                   aria-expanded={isMobileServicesOpen}
                 >
                   Services
@@ -395,7 +395,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-white hover:text-primary hover:bg-white/10"
                   aria-expanded={isMobileCompanyOpen}
                 >
                   Company
@@ -431,7 +431,7 @@ export default function Navbar() {
               <div>
                 <button
                   onClick={() => setIsMobileResourcesOpen(!isMobileResourcesOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                  className="w-full flex items-center justify-between py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-white hover:text-primary hover:bg-white/10"
                   aria-expanded={isMobileResourcesOpen}
                 >
                   Resources
@@ -469,7 +469,7 @@ export default function Navbar() {
               <Link
                 href="/client-login/"
                 onClick={() => trackClientLogin()}
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-white hover:text-primary hover:bg-white/10"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-white hover:text-primary hover:bg-white/10"
               >
                 Client Login
               </Link>
@@ -477,7 +477,7 @@ export default function Navbar() {
               <Link
                 href="/demo/"
                 onClick={() => trackRequestDemo('navbar_mobile')}
-                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-semibold text-center bg-primary text-white hover:bg-primary-dark mt-2"
+                className="block py-3 px-4 rounded-lg transition-colors duration-300 font-bold text-center bg-primary text-white hover:bg-primary-dark mt-2"
               >
                 Request App Demo
               </Link>

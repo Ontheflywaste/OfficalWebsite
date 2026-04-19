@@ -52,7 +52,7 @@ export default function Error({
               />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+          <h1 className="text-2xl font-extrabold text-gray-900 mb-2">
             Something went wrong
           </h1>
           <p className="text-gray-600 mb-6">
@@ -62,7 +62,7 @@ export default function Error({
         <div className="space-y-3">
           <button
             onClick={handleRetry}
-            className="w-full bg-primary-dark text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-deep transition-colors"
+            className="w-full bg-primary-dark text-white py-3 px-6 rounded-lg font-bold hover:bg-primary-deep transition-colors"
           >
             Refresh Page
           </button>

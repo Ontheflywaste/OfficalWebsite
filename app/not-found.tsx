@@ -28,7 +28,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-2xl w-full text-center">
         <div className="mb-8">
-          <h1 className="text-9xl font-bold text-primary mb-4">404</h1>
+          <h1 className="text-9xl font-extrabold text-primary mb-4">404</h1>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Page Not Found
           </h2>

@@ -200,7 +200,7 @@ export default function PressureWashingClient() {
                   <div className="absolute inset-0 bg-water blur-xl opacity-50" aria-hidden="true" />
                   <Sparkles className="relative w-12 h-12 text-water-light" />
                 </div>
-                <h1 className="text-5xl font-bold">Pressure Washing Service</h1>
+                <h1 className="text-5xl font-extrabold">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Professional pressure washing for breezeways, sidewalks, pool decks, building exteriors, and all concrete surfaces. Before & after photo verification included.
@@ -208,7 +208,7 @@ export default function PressureWashingClient() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact/"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-semibold hover:from-primary-dark hover:to-primary transition-all transform hover:scale-105 shadow-lg shadow-primary/40"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-bold hover:from-primary-dark hover:to-primary transition-all transform hover:scale-105 shadow-lg shadow-primary/40"
                 >
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
@@ -548,7 +548,7 @@ export default function PressureWashingClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 active:scale-[0.98] transition-all transform hover:scale-105 shadow-xl"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 active:scale-[0.98] transition-all transform hover:scale-105 shadow-xl"
               >
                 Request Free Quote
                 <ArrowRight className="w-5 h-5" />

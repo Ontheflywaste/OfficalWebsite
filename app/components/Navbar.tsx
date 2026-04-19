@@ -83,7 +83,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex items-center justify-between transition-all duration-300 ${
-            isScrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+            isScrolled ? 'h-16 md:h-20' : 'h-20 md:h-24'
           }`}>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -110,7 +110,7 @@ export default function Navbar() {
                   width={250}
                   height={80}
                   priority
-                  className={`${isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'} w-auto transition-all duration-300 object-contain`}
+                  className={`${isScrolled ? 'h-[50px] md:h-[60px]' : 'h-[60px] md:h-20'} w-auto transition-all duration-300 object-contain`}
                 />
               </Link>
             </div>

@@ -84,17 +84,32 @@ export default function HomeClient() {
           ></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-20 md:pb-28 min-h-[700px] flex flex-col justify-center">
-          <div className="max-w-3xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-40 pb-20 md:pb-28 min-h-[700px] flex flex-col justify-center">
+          <div className="max-w-4xl mx-auto">
             <div className="text-center">
               <ScrollReveal>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight lg:leading-snug" style={{ textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)' }}>
-                  Valet Trash, Bulk & Junk Removal Services <span className="text-white font-semibold" style={{ letterSpacing: '0.05em' }}>in Orlando, FL</span>
+                <h1
+                  className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
+                  style={{
+                    textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)',
+                    textWrap: 'balance',
+                  }}
+                >
+                  Valet Trash, Bulk &amp; Junk Removal Services{' '}
+                  <span
+                    className="block sm:inline-block text-white/95 font-semibold mt-2 sm:mt-0"
+                    style={{ letterSpacing: '0.03em' }}
+                  >
+                    in Orlando, FL
+                  </span>
                 </h1>
               </ScrollReveal>
 
               <ScrollReveal delay={0.2}>
-                <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                <p
+                  className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed"
+                  style={{ textWrap: 'pretty' }}
+                >
                   Orlando's trusted apartment trash pickup and valet trash service for apartments, condos, and resort communities. Professional bulk trash removal and junk removal services across Central Florida.
                 </p>
               </ScrollReveal>

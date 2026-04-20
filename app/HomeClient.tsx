@@ -92,7 +92,7 @@ export default function HomeClient() {
                 <Slogan
                   variant="light"
                   as="badge"
-                  className="text-xs md:text-sm"
+                  className="text-sm md:text-base"
                 />
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
@@ -1179,7 +1179,7 @@ export default function HomeClient() {
           <ScrollReveal>
             <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
               <div className="text-center mb-8">
-                <Slogan variant="dark" as="badge" className="text-xs md:text-sm" />
+                <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
                 <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
                   Start Your 100% Collection Guarantee Today
                 </h2>

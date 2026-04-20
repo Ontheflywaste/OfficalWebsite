@@ -35,18 +35,21 @@ export default function AboutClient() {
       name: "Donnell Edwards",
       title: "CEO & Founder",
       image: "/Images/Donnell2.jpg",
+      imagePosition: "center 25%",
       description: "Visionary leader committed to revolutionizing waste management in Central Florida"
     },
     {
       name: "Trevor Alston",
       title: "Operations Manager",
       image: "/Images/team/Trevor-Alston.jpg",
+      imagePosition: "center top",
       description: "Ensures flawless execution and customer satisfaction across all properties"
     },
     {
       name: "Steven Edwards",
       title: "Chief Financial Officer",
       image: "/Images/Steven2.jpg",
+      imagePosition: "center 20%",
       description: "Leads our dedicated team with hands-on expertise and commitment to quality"
     }
   ];
@@ -214,20 +217,22 @@ export default function AboutClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {team.map((member, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
-                  <div className="aspect-square overflow-hidden relative">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="h-full flex flex-col bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="aspect-square overflow-hidden relative bg-gray-100">
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={90}
                       className="object-cover hover:scale-105 transition-transform duration-300"
+                      style={{ objectPosition: member.imagePosition }}
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
                     <div className="text-primary font-semibold mb-3">{member.title}</div>
                     <p className="text-gray-600 leading-relaxed">{member.description}</p>

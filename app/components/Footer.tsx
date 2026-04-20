@@ -40,7 +40,7 @@ export default function Footer() {
               className="h-[60px] sm:h-[70px] md:h-20 w-auto object-contain mb-4"
               loading="lazy"
             />
-            <Slogan variant="light" className="text-sm mb-6" />
+            <Slogan variant="light" className="text-base mb-6" />
             <p className="text-gray-200 mb-6 leading-relaxed">
               Professional valet trash services in Central Florida. Committed to excellence and environmental responsibility.
             </p>

@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Spar
 import ScrollReveal from './components/ScrollReveal';
 import HubSpotForm from './components/HubSpotForm';
 import FaqAccordion from './components/ui/FaqAccordion';
+import Slogan from './components/Slogan';
 import { trackPhoneCall, trackRequestDemo } from './utils/track';
 
 export default function HomeClient() {
@@ -88,6 +89,14 @@ export default function HomeClient() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center">
               <ScrollReveal>
+                <Slogan
+                  variant="light"
+                  as="badge"
+                  className="text-xs md:text-sm"
+                />
+              </ScrollReveal>
+              <ScrollReveal delay={0.1}>
+                <div className="h-6" aria-hidden="true" />
                 <h1
                   className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
                   style={{
@@ -1170,7 +1179,8 @@ export default function HomeClient() {
           <ScrollReveal>
             <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
               <div className="text-center mb-8">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <Slogan variant="dark" as="badge" className="text-xs md:text-sm" />
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
                   Start Your 100% Collection Guarantee Today
                 </h2>
                 <p className="text-xl text-gray-600">

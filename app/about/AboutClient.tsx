@@ -346,16 +346,16 @@ export default function AboutClient() {
               <X className="w-5 h-5" aria-hidden="true" />
             </button>
 
-            <div className="grid md:grid-cols-5">
-              <div className="md:col-span-2 relative aspect-square md:aspect-auto md:h-full bg-gray-100">
+            <div className="grid md:grid-cols-5 md:items-start">
+              <div className="md:col-span-2 relative aspect-square md:aspect-[4/5] bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden">
                 <Image
                   src={openMember.image}
                   alt={openMember.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   quality={92}
-                  className="object-cover"
-                  style={{ objectPosition: openMember.imagePosition }}
+                  className="object-contain"
+                  style={{ objectPosition: 'center' }}
                 />
               </div>
 

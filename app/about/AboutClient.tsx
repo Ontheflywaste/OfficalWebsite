@@ -1,10 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Target, Heart, Users, Award, TrendingUp, Shield, Phone, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Target, Heart, Users, Award, TrendingUp, Shield, Phone, Star, X, Mail, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
+
+interface TeamMember {
+  name: string;
+  title: string;
+  image: string;
+  imagePosition: string;
+  description: string;
+  // Extended bio content — these surface inside the modal
+  bio: string[];
+  focusAreas: string[];
+  quote?: string;
+  email?: string;
+  linkedin?: string;
+}
 
 export default function AboutClient() {
   const values = [
@@ -30,28 +44,67 @@ export default function AboutClient() {
     }
   ];
 
-  const team = [
+  const team: TeamMember[] = [
     {
       name: "Donnell Edwards",
       title: "CEO & Founder",
       image: "/Images/Donnell2.jpg",
       imagePosition: "center 25%",
-      description: "Visionary leader committed to revolutionizing waste management in Central Florida"
+      description: "Visionary leader committed to revolutionizing waste management in Central Florida",
+      bio: [
+        "Donnell founded On The Fly Waste Solutions with a simple belief: apartment communities in Central Florida deserve a waste-management partner that shows up, shows proof, and stands behind every pickup.",
+        "From day one he set the bar at a 100% collection guarantee backed by GPS tracking and time-stamped photo verification, bringing enterprise-level accountability to a category that had long settled for less.",
+        "Today he leads company strategy, key partnerships with resorts and property-management groups, and the continued rollout of the On The Fly property-manager app.",
+      ],
+      focusAreas: [
+        "Company strategy & growth",
+        "Property-manager & resort partnerships",
+        "Service-level standards and SLA accountability",
+        "Technology roadmap for the client app",
+      ],
+      quote:
+        "We don't just collect trash — we protect a property manager's reputation with every pickup.",
     },
     {
       name: "Trevor Alston",
       title: "Operations Manager",
       image: "/Images/team/Trevor-Alston.jpg",
       imagePosition: "center top",
-      description: "Ensures flawless execution and customer satisfaction across all properties"
+      description: "Ensures flawless execution and customer satisfaction across all properties",
+      bio: [
+        "Trevor runs day-to-day operations across every property on the On The Fly roster. From crew scheduling to route optimization to on-property service checks, if something touches a resident's door, it goes through his team.",
+        "He's the direct line for property managers who want an answer fast — and the reason complaints are typically resolved the same night they're reported.",
+        "Trevor trains every new crew member personally, so the bar for uniform presentation, noise discipline, and pickup quality stays consistent from the first building we onboard to the hundredth.",
+      ],
+      focusAreas: [
+        "Nightly crew dispatch & routing",
+        "Property-manager escalation & resolution",
+        "Crew hiring, training, and uniform standards",
+        "Quality audits and photo-verification reviews",
+      ],
+      quote:
+        "Our job is to make property managers look good. If the property is clean, we did our job right.",
     },
     {
       name: "Steven Edwards",
       title: "Chief Financial Officer",
       image: "/Images/Steven2.jpg",
       imagePosition: "center 20%",
-      description: "Leads our dedicated team with hands-on expertise and commitment to quality"
-    }
+      description: "Leads our dedicated team with hands-on expertise and commitment to quality",
+      bio: [
+        "Steven anchors the financial side of the business — contracts, billing, and the numbers that keep On The Fly's service guarantees backed by real operational discipline.",
+        "He works directly with property managers on pricing that fits their budget cycles, whether that's a per-unit valet-trash contract, a recurring bulk-pickup plan, or a one-off pressure-washing engagement.",
+        "Steven also leads long-term planning — the investments in equipment, staffing, and technology that let the company keep expanding across Central Florida without sacrificing service quality.",
+      ],
+      focusAreas: [
+        "Contracts, pricing, and billing",
+        "Financial planning & budgeting",
+        "Investment in equipment & technology",
+        "Long-term growth and hiring roadmap",
+      ],
+      quote:
+        "Predictable service needs predictable finances. We run the business so the crews can run the routes.",
+    },
   ];
 
   const milestones = [
@@ -86,6 +139,23 @@ export default function AboutClient() {
       description: "Now serving 2,500+ residents with partners like ZRS, Rangewater, and RPM Living"
     }
   ];
+
+  const [openMember, setOpenMember] = useState<TeamMember | null>(null);
+
+  // ESC to close + lock body scroll while modal is open
+  useEffect(() => {
+    if (!openMember) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpenMember(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [openMember]);
 
   return (
     <div className="min-h-screen">
@@ -220,7 +290,12 @@ export default function AboutClient() {
           <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {team.map((member, index) => (
               <ScrollReveal key={index} delay={index * 0.1} className="h-full">
-                <div className="h-full flex flex-col bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-shadow">
+                <button
+                  type="button"
+                  onClick={() => setOpenMember(member)}
+                  aria-label={`Read more about ${member.name}, ${member.title}`}
+                  className="group w-full text-left h-full flex flex-col bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                >
                   <div className="aspect-square overflow-hidden relative bg-gray-100">
                     <Image
                       src={member.image}
@@ -228,21 +303,125 @@ export default function AboutClient() {
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       quality={90}
-                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       style={{ objectPosition: member.imagePosition }}
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
                     <div className="text-primary font-semibold mb-3">{member.title}</div>
-                    <p className="text-gray-600 leading-relaxed">{member.description}</p>
+                    <p className="text-gray-600 leading-relaxed mb-4">{member.description}</p>
+                    <span className="mt-auto inline-flex items-center gap-1.5 text-primary font-semibold text-sm group-hover:gap-2.5 transition-all">
+                      Read full bio
+                      <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    </span>
                   </div>
-                </div>
+                </button>
               </ScrollReveal>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Team-member detail modal */}
+      {openMember && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="team-modal-title"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+        >
+          <div
+            className="absolute inset-0 bg-surface-dark/80 backdrop-blur-sm"
+            onClick={() => setOpenMember(null)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto">
+            <button
+              type="button"
+              onClick={() => setOpenMember(null)}
+              aria-label="Close"
+              className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/90 hover:bg-gray-100 text-gray-700 shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              <X className="w-5 h-5" aria-hidden="true" />
+            </button>
+
+            <div className="grid md:grid-cols-5">
+              <div className="md:col-span-2 relative aspect-square md:aspect-auto md:h-full bg-gray-100">
+                <Image
+                  src={openMember.image}
+                  alt={openMember.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  quality={92}
+                  className="object-cover"
+                  style={{ objectPosition: openMember.imagePosition }}
+                />
+              </div>
+
+              <div className="md:col-span-3 p-6 sm:p-8 md:p-10">
+                <h2 id="team-modal-title" className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 leading-tight">
+                  {openMember.name}
+                </h2>
+                <div className="text-primary font-semibold mb-6">{openMember.title}</div>
+
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  {openMember.bio.map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+
+                {openMember.focusAreas.length > 0 && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <div className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+                      Focus areas
+                    </div>
+                    <ul className="space-y-2">
+                      {openMember.focusAreas.map((area, i) => (
+                        <li key={i} className="flex items-start gap-2 text-gray-700">
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <span>{area}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {openMember.quote && (
+                  <blockquote className="mt-6 pl-4 border-l-4 border-primary italic text-gray-700">
+                    "{openMember.quote}"
+                  </blockquote>
+                )}
+
+                {(openMember.email || openMember.linkedin) && (
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {openMember.email && (
+                      <a
+                        href={`mailto:${openMember.email}`}
+                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                      >
+                        <Mail className="w-4 h-4" aria-hidden="true" />
+                        {openMember.email}
+                      </a>
+                    )}
+                    {openMember.linkedin && (
+                      <a
+                        href={openMember.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                      >
+                        <Linkedin className="w-4 h-4" aria-hidden="true" />
+                        LinkedIn
+                      </a>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

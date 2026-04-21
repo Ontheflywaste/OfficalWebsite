@@ -90,18 +90,19 @@ export default function ServicesClient() {
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-25"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-surface-dark/95 via-surface-dark/75 to-primary-deep/70" />
-        <div
-          className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(60% 40% at 20% 30%, rgba(22,163,74,0.25), transparent 70%), radial-gradient(40% 30% at 85% 70%, rgba(4,151,4,0.22), transparent 70%)',
-          }}
-          aria-hidden="true"
-        />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white/90 mb-6">

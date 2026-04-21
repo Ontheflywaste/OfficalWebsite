@@ -158,8 +158,8 @@ export default function CareersClient() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-b from-black via-black to-black text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black">
+      <section className="relative py-20 pt-32 md:pt-40 bg-surface-dark text-white overflow-hidden">
+        <div className="absolute inset-0">
           <Image
             src="/Young_Team.JPEG"
             alt="On The Fly Waste Solutions young team"
@@ -167,8 +167,17 @@ export default function CareersClient() {
             priority
             sizes="100vw"
             className="object-cover object-[center_35%]"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
           />
-          <div className="absolute inset-0 bg-black/0" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

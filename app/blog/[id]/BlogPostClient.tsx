@@ -81,16 +81,25 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   return (
     <div className="min-h-screen bg-white pt-32">
       <article>
-        <div className="relative h-96 bg-gradient-to-br from-gray-900 to-gray-700 overflow-hidden">
+        <div className="relative h-96 bg-surface-dark overflow-hidden">
           <Image
             src={post.image}
             alt={post.title}
             fill
             priority
             sizes="100vw"
-            className="object-cover opacity-40"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          />
 
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

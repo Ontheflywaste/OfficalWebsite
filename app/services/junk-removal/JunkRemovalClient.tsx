@@ -140,18 +140,19 @@ export default function JunkRemovalClient() {
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-surface-dark/92 via-surface-dark/70 to-primary-deep/60" />
-        <div
-          className="absolute inset-0 opacity-50 mix-blend-screen pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(55% 45% at 15% 30%, rgba(22,163,74,0.3), transparent 70%), radial-gradient(45% 35% at 90% 80%, rgba(4,151,4,0.25), transparent 70%)',
-          }}
-          aria-hidden="true"
-        />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">

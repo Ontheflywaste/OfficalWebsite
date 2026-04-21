@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, Mail, Trash2, Recycle, Building2, Sparkles, Star, MapPin, Camera, Shield, Smartphone, Bell, BarChart3, MessageSquare, Calendar } from 'lucide-react';
@@ -11,32 +11,6 @@ import Slogan from './components/Slogan';
 import { trackPhoneCall, trackRequestDemo } from './utils/track';
 
 export default function HomeClient() {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isVideoLoaded) {
-            setIsVideoLoaded(true);
-          }
-        });
-      },
-      { rootMargin: '50px' }
-    );
-
-    const videoSection = document.getElementById('video-section');
-    if (videoSection) {
-      observer.observe(videoSection);
-    }
-
-    return () => {
-      if (videoSection) {
-        observer.unobserve(videoSection);
-      }
-    };
-  }, [isVideoLoaded]);
-
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
@@ -64,16 +38,18 @@ export default function HomeClient() {
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-surface-dark">
-          <Image
-            src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions providing valet trash services at luxury apartment communities in Central Florida"
-            fill
-            priority
-            quality={85}
-            sizes="100vw"
-            className="object-cover object-center"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/Images/TruckImage.JPG"
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
-          />
+            aria-hidden="true"
+          >
+            <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80"></div>
           <div
             className="absolute inset-0 pointer-events-none animate-radial-drift"
@@ -452,21 +428,18 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section id="video-section" className="relative py-20 overflow-hidden">
+      <section id="welcome-section" className="relative py-20 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute inset-0">
-          {isVideoLoaded && (
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="none"
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src="/videos/HerosectionvideoNew.mp4" type="video/mp4" />
-            </video>
-          )}
+        <div className="absolute inset-0 bg-surface-dark">
+          <Image
+            src="/Images/TruckImage.JPG"
+            alt="On The Fly Waste Solutions truck serving Central Florida apartment communities"
+            fill
+            sizes="100vw"
+            loading="lazy"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
 

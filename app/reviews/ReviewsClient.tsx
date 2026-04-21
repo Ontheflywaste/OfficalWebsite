@@ -99,7 +99,7 @@ export default function ReviewsClient() {
       <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-surface-dark text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Images/Theastonatuptownheroimage.webp"
+            src="/Images/ApartmentBuildingHero.webp"
             alt="Satisfied residents and property managers across Central Florida"
             fill
             priority

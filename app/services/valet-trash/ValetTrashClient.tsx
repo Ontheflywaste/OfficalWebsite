@@ -92,7 +92,7 @@ export default function ValetTrashClient() {
       <section className="relative py-20 pt-32 md:pt-40 bg-surface-dark text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Images/Theastonatuptownheroimage.webp"
+            src="/Images/ApartmentBuildingHero.webp"
             alt="Professional valet trash service at a luxury Orlando apartment community"
             fill
             priority

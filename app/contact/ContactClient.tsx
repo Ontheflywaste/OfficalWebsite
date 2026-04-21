@@ -120,11 +120,11 @@ export default function ContactClient() {
         </div>
       )}
 
-      <div className="relative bg-surface-dark pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden">
+      <section className="relative min-h-[60vh] md:min-h-[65vh] flex items-center bg-surface-dark pt-32 md:pt-40 pb-20 md:pb-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions truck ready to serve Central Florida"
+            src="/Images/ApartmentBuildingHero.webp"
+            alt="Apartment community property manager requesting a free quote from On The Fly"
             fill
             priority
             sizes="100vw"
@@ -142,17 +142,35 @@ export default function ContactClient() {
           />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white/90 mb-6">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+              Free, no-obligation quote within 24 hours
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 text-balance">
               Get Your Free Quote
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Transform your property with professional waste management services
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-10">
+              Tell us about your property — we will reply with a customized proposal for valet trash, bulk, junk removal, or pressure washing.
             </p>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm md:text-base text-white/85">
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" />
+                Same-day response
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" />
+                No long-term contract
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" />
+                100% collection guarantee
+              </span>
+            </div>
           </ScrollReveal>
         </div>
-      </div>
+      </section>
 
       <div className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

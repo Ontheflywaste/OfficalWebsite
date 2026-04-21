@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Phone, MapPin, Building2, Star } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -55,9 +56,26 @@ export default function ServiceAreaClient({
 
   return (
     <>
-      <section className="relative min-h-[60vh] bg-gradient-to-br from-gray-900 via-gray-800 to-primary overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('/Images/Dumpster.jpg')] bg-cover bg-center"></div>
+      <section className="relative min-h-[60vh] bg-surface-dark overflow-hidden pt-32 pb-20">
+        <div className="absolute inset-0">
+          <Image
+            src="/Images/ApartmentBuildingHero.webp"
+            alt={`${city}, ${state} apartment communities served by On The Fly`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[calc(60vh-8rem)]">

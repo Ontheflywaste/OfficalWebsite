@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { Phone, CheckCircle2, Star, Shield, Award, X } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -119,8 +120,27 @@ export default function ContactClient() {
         </div>
       )}
 
-      <div className="relative bg-gradient-to-br from-gray-900 to-primary pt-32 md:pt-36 pb-16 md:pb-20">
-        <div className="absolute inset-0 bg-[url('/Images/TruckImage.JPG')] bg-cover bg-center opacity-10" />
+      <div className="relative bg-surface-dark pt-32 md:pt-40 pb-16 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/Images/TruckImage.JPG"
+            alt="On The Fly Waste Solutions truck ready to serve Central Florida"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-deep/80 via-surface-dark/60 to-surface-dark/80" />
+          <div
+            className="absolute inset-0 pointer-events-none animate-radial-drift"
+            style={{
+              background:
+                'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.18) 0%, transparent 55%)',
+            }}
+            aria-hidden="true"
+          />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>

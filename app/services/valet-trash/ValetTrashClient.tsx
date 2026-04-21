@@ -89,24 +89,36 @@ export default function ValetTrashClient() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative py-20 pt-32 md:pt-40 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black">
+      <section className="relative py-20 pt-32 md:pt-40 bg-surface-dark text-white overflow-hidden">
+        <div className="absolute inset-0">
           <Image
-            src="/Images/ApartmentBuildingHero.webp"
-            alt="Professional valet trash service at luxury apartment community"
+            src="/Images/Theastonatuptownheroimage.webp"
+            alt="Professional valet trash service at a luxury Orlando apartment community"
             fill
             priority
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
         </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-surface-dark/92 via-surface-dark/70 to-primary-deep/60" />
+        <div
+          className="absolute inset-0 opacity-50 mix-blend-screen pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(55% 45% at 15% 30%, rgba(22,163,74,0.3), transparent 70%), radial-gradient(45% 35% at 90% 80%, rgba(4,151,4,0.25), transparent 70%)',
+          }}
+          aria-hidden="true"
+        />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white/90 mb-6">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
+                Central Florida's #1 valet trash partner
+              </div>
               <div className="flex items-center gap-3 mb-6">
                 <Trash2 className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-extrabold">Valet Trash Service Orlando FL</h1>
+                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Convenient doorstep trash collection and apartment trash pickup for communities across Orlando and Central Florida

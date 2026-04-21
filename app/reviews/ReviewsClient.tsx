@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { Star, Quote, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
@@ -94,16 +95,50 @@ export default function ReviewsClient() {
   const duplicatedReviews = [...reviews, ...reviews, ...reviews];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <div className="mb-20 mt-8">
-            <h1 className="text-5xl md:text-6xl font-extrabold text-ink mb-4 text-center">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pb-20">
+      <section className="relative pt-32 md:pt-40 pb-16 md:pb-20 bg-surface-dark text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/Images/Theastonatuptownheroimage.webp"
+            alt="Satisfied residents and property managers across Central Florida"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-25"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-surface-dark/95 via-surface-dark/75 to-primary-deep/60" />
+        <div
+          className="absolute inset-0 opacity-50 mix-blend-screen pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(55% 45% at 15% 30%, rgba(22,163,74,0.28), transparent 70%), radial-gradient(45% 35% at 90% 80%, rgba(4,151,4,0.22), transparent 70%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white/90 mb-6">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              5-Star rated on Google
+            </div>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4 text-balance">
               Client Success Stories
             </h1>
-            <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
               Hear directly from property managers and community leaders about their experience with On The Fly.
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div className="mb-20 mt-16">
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-surface-dark-2 border-2 border-primary rounded-2xl p-6 shadow-2xl">

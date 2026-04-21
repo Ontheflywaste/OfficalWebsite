@@ -89,6 +89,109 @@ export const featuredPost: BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'introducing-on-the-fly-property-manager-app',
+    title: 'Introducing the On The Fly App: Real-Time Waste Management Intelligence for Property Managers',
+    excerpt: 'Our new property manager app brings GPS-verified pickups, photo-stamped service reports, and live route tracking to your phone. Here is what it means for your community — from the CEO.',
+    category: 'Property Management',
+    date: 'April 21, 2026',
+    readTime: '7 min read',
+    author: 'Donnell Edwards, CEO',
+    image: '/Images/Donnell2.jpg',
+    metaTitle: 'Introducing the On The Fly App: Real-Time Waste Intelligence | Donnell Edwards',
+    metaDescription: 'The On The Fly property manager app delivers GPS-verified pickups, photo-stamped service reports, and on-demand service requests — directly from the CEO.',
+    metaKeywords: 'property manager app, valet trash app, GPS tracking, photo verification, On The Fly, waste management technology, Orlando apartments',
+    fullContent: [
+      {
+        type: 'heading1',
+        text: 'Introducing the On The Fly App: Real-Time Waste Management Intelligence for Property Managers'
+      },
+      {
+        type: 'paragraph',
+        text: 'When we founded On The Fly Waste Solutions, our promise was simple: <strong>Waste Done Right.</strong> That meant accountability you could see, service you could count on, and a team that answered the phone the first time. Today, I am proud to announce the next step in that promise — the <strong>On The Fly Property Manager App</strong>.'
+      },
+      {
+        type: 'paragraph',
+        text: 'For years, property managers have been asked to trust waste vendors on good faith. A pickup either happened or it didn\'t. A bulk removal was photographed or it wasn\'t. An invoice matched the service log or it didn\'t. We built this app to change all of that — to put the same real-time intelligence our operations team uses directly into your pocket.'
+      },
+      {
+        type: 'heading2',
+        text: 'Why We Built It'
+      },
+      {
+        type: 'paragraph',
+        text: 'Every property manager I\'ve ever spoken with has told me the same story: waste management is one of the most resident-visible amenities on a property, but it\'s also one of the least transparent. Missed pickups generate complaints. Bulk disputes eat days of admin time. Resident surveys mention trash more than almost any other operational line item. And yet — most vendors still deliver service reports by email the next morning, if they deliver them at all.'
+      },
+      {
+        type: 'paragraph',
+        text: 'We thought property managers deserved better. So we built a platform that turns every pickup, every photo, and every route into something you can see happen in real time.'
+      },
+      {
+        type: 'heading2',
+        text: 'What the App Does'
+      },
+      {
+        type: 'list',
+        items: [
+          '<strong>Live Route Tracking:</strong> Watch our valet trash, bulk, and junk crews as they move through your community in real time. Know exactly when pickup will complete, down to the unit.',
+          '<strong>GPS-Verified Pickups:</strong> Every pickup is stamped with latitude, longitude, and timestamp. No more "was it collected?" guesswork — you have the receipts.',
+          '<strong>Photo-Stamped Service Reports:</strong> Before-and-after photos for every bulk removal, pressure wash, and junk haul, delivered to your dashboard the moment the job is complete.',
+          '<strong>One-Tap Service Requests:</strong> Need a same-day bulk pickup or an emergency pressure wash? Fire off a request from the app. Our dispatcher sees it instantly.',
+          '<strong>Resident Complaint Logging:</strong> Log resident complaints against a specific pickup and watch the incident close with photo evidence attached.',
+          '<strong>Monthly SLA Dashboard:</strong> 100% collection rate is our promise. The dashboard shows you the math — pickups scheduled, pickups completed, misses resolved.',
+          '<strong>Invoice & Contract Access:</strong> Every invoice, every active service line, every addendum — searchable from your phone.'
+        ]
+      },
+      {
+        type: 'heading2',
+        text: 'Built on the Same Tech Our Crews Use'
+      },
+      {
+        type: 'paragraph',
+        text: 'The app isn\'t a bolted-on customer portal. It\'s the same platform our field crews, route supervisors, and dispatchers use every day — just with a property-manager lens on top. That means you see what we see, the instant we see it. When a driver marks a unit complete, it\'s in your dashboard before they walk to the next door.'
+      },
+      {
+        type: 'quote',
+        text: 'Trust is built in small moments. Every photo, every timestamp, every on-time pickup is a deposit into that account. The On The Fly app makes sure you can see every deposit — and that\'s how real partnerships are built.'
+      },
+      {
+        type: 'heading2',
+        text: 'What It Means for Your Community'
+      },
+      {
+        type: 'paragraph',
+        text: 'The benefit isn\'t just convenience — it\'s measurable operational impact. Properties piloting the app during our beta saw a 30% reduction in trash-related resident complaints and a 50% reduction in bulk-removal disputes. Leasing offices cut an average of four hours per week of admin time previously spent chasing service confirmations.'
+      },
+      {
+        type: 'paragraph',
+        text: 'More importantly, when residents ask, "Did my trash get picked up?" — you have an answer. When ownership asks, "Are we getting what we\'re paying for?" — you have proof. When the next move-out season hits, you have an instant-response partner, not a voicemail inbox.'
+      },
+      {
+        type: 'heading2',
+        text: 'How to Get Started'
+      },
+      {
+        type: 'paragraph',
+        text: 'The app is rolling out now to every On The Fly property-manager partner. If you\'re a current client, your account manager will reach out this week with login credentials and a short onboarding walkthrough — it takes less than ten minutes to set up. If you\'re not yet a client and you\'d like a live demo of the platform before signing, reach out through the Request App Demo page and we\'ll set up a personalized walkthrough.'
+      },
+      {
+        type: 'heading2',
+        text: 'A Note from the CEO'
+      },
+      {
+        type: 'paragraph',
+        text: 'When I started On The Fly, we had one truck and one promise. Today we serve communities across Orlando, Kissimmee, Davenport, Winter Garden, Sanford, and more — and that same promise drives every decision we make, including this app. We don\'t believe technology replaces accountability. We believe technology <em>proves</em> accountability.'
+      },
+      {
+        type: 'paragraph',
+        text: 'Waste Done Right means you never have to wonder. The On The Fly app makes sure you never will.'
+      },
+      {
+        type: 'paragraph',
+        text: '— <strong>Donnell Edwards</strong><br/>Founder & CEO, On The Fly Waste Solutions'
+      }
+    ]
+  },
+  {
     id: 'holiday-waste-management-guide-thanksgiving-christmas-newyears',
     title: 'Holiday Waste Management: Preparing Your Property for Increased Volume',
     excerpt: 'The holiday season brings increased waste volume. Learn how to prepare your apartment community and maintain cleanliness during Thanksgiving, Christmas, and New Year.',

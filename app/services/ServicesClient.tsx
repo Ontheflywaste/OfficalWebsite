@@ -86,7 +86,7 @@ export default function ServicesClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Central Florida apartment communities served by On The Fly"
+            alt="Door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
             fill
             priority
             sizes="100vw"
@@ -205,6 +205,56 @@ export default function ServicesClient() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community-type callout — HOA / resort / condo / door-to-door */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Door to Door Trash Collection for HOA, Resort Style &amp; Condo Communities
+              </h2>
+              <p className="text-lg text-gray-700">
+                We build door to door trash collection and doorstep valet trash service programs tailored to the specific community type you manage — from HOA boards and resort style apartments to condo associations, vacation rentals, and multifamily new construction across Central Florida.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link
+              href="/hoa-resort-valet-trash/"
+              className="group bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-primary/40 hover:shadow-lg transition-all"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                Valet trash for HOA &amp; resort communities
+              </h3>
+              <p className="text-gray-600 mb-4">
+                HOA door to door trash collection, resort community valet trash service, and luxury community valet trash service across Central Florida.
+              </p>
+              <span className="inline-flex items-center gap-2 text-primary font-semibold">
+                Learn more
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </Link>
+
+            <Link
+              href="/door-to-door-trash-collection/"
+              className="group bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-primary/40 hover:shadow-lg transition-all"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                How door to door trash collection works
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Doorstep trash pickup apartments, door to door garbage collection service, and doorstep valet trash service — step by step.
+              </p>
+              <span className="inline-flex items-center gap-2 text-primary font-semibold">
+                See the process
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

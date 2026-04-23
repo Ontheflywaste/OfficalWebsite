@@ -433,7 +433,7 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-surface-dark">
           <Image
             src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions truck serving Central Florida apartment communities"
+            alt="On The Fly Waste Solutions truck providing door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
             fill
             sizes="100vw"
             loading="lazy"
@@ -637,6 +637,85 @@ export default function HomeClient() {
                   <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
                 </span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
+      <section id="community-types" className="relative py-20 bg-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 12% 20%, rgba(22, 163, 74, 0.10) 0%, transparent 50%), radial-gradient(circle at 88% 80%, rgba(22, 163, 74, 0.08) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-5">
+                <Building2 className="w-4 h-4" aria-hidden="true" />
+                Built for every community type
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-5 leading-tight">
+                Trusted Door to Door Trash Collection for HOA, Resort Style & Condo Communities Across Central Florida
+              </h2>
+              <p className="text-lg text-ink-muted leading-relaxed">
+                From gated HOA neighborhoods and luxury resort style apartment communities to condo associations, vacation rental properties, and multifamily new construction — On The Fly delivers doorstep trash pickup that residents love and property managers can count on. Serving Orlando, Kissimmee, Champions Gate, Lake Nona, Windermere, Winter Garden, Orange County, and Osceola County.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'HOA Communities',
+                blurb: 'HOA door to door trash collection with board-friendly reporting and photo-verified pickups.',
+              },
+              {
+                title: 'Resort Style & Luxury',
+                blurb: 'Resort community trash collection and luxury community valet trash service for upscale apartments and condos.',
+              },
+              {
+                title: 'Condo & Gated',
+                blurb: 'Condo community valet trash provider and gated community valet trash service with discreet, uniformed crews.',
+              },
+              {
+                title: 'Multifamily & New Build',
+                blurb: 'Valet trash service multifamily — including valet trash for new construction apartments and lease-up communities.',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  <Building2 className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <h3 className="text-lg font-semibold text-ink mb-2">{card.title}</h3>
+                <p className="text-ink-muted leading-relaxed text-sm">{card.blurb}</p>
+              </div>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/hoa-resort-valet-trash/"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-all shadow-lg"
+              >
+                Valet trash for HOA &amp; resort communities
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+              <Link
+                href="/door-to-door-trash-collection/"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all"
+              >
+                How door to door trash collection works
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </Link>
             </div>
           </ScrollReveal>

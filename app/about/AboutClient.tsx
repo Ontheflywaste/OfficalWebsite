@@ -163,7 +163,7 @@ export default function AboutClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Orlando skyline and Central Florida communities we serve"
+            alt="Resort style and HOA apartment communities we serve with door to door trash collection across Orlando and Central Florida"
             fill
             priority
             sizes="100vw"

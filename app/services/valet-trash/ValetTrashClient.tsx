@@ -93,7 +93,7 @@ export default function ValetTrashClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Professional valet trash service at a luxury Orlando apartment community"
+            alt="Doorstep valet trash service and door to door trash collection at a luxury resort style Orlando apartment community"
             fill
             priority
             sizes="100vw"

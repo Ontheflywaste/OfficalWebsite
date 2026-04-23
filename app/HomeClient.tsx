@@ -14,7 +14,7 @@ export default function HomeClient() {
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS tracking, photo verification, and a 100% collection guarantee."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night missed-pickup cure."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
@@ -30,7 +30,7 @@ export default function HomeClient() {
     },
     {
       question: "Do you serve resort communities and condos?",
-      answer: "Absolutely! We specialize in providing valet trash and condo trash pickup for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove doorstep collection, photo verification, and dedicated account management."
+      answer: "Absolutely! We specialize in providing valet trash and condo trash pickup for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove doorstep collection, GPS-tracked routing, and dedicated account management."
     }
   ];
 
@@ -272,10 +272,10 @@ export default function HomeClient() {
                     <Camera className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Verified Pickups</h3>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Documented Bulk &amp; Pressure Jobs</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Every doorstep and bulk pickup is photographed and timestamped —
-                      no more "did they service my building?" questions.
+                      Every bulk removal, junk haul, and pressure-washing job includes
+                      before &amp; after photos, attached to the completion notification.
                     </p>
                   </div>
                 </div>
@@ -298,10 +298,10 @@ export default function HomeClient() {
                     <BarChart3 className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly SLA Dashboards</h3>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly Service Dashboards</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Collection-rate reports, trend analytics, and compliance
-                      documentation ready to drop into your owner reviews.
+                      Collection-rate reports, route completion analytics, and
+                      service history ready to drop into your owner reviews.
                     </p>
                   </div>
                 </div>
@@ -525,7 +525,7 @@ export default function HomeClient() {
                 icon: Trash2,
                 title: 'Valet Trash Service',
                 description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.',
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and same-night missed-pickup cure.',
                 image: '/Images/Valettrashimage.jpg',
                 imageAlt: 'Professional valet trash doorstep collection service',
               },
@@ -673,7 +673,7 @@ export default function HomeClient() {
             {[
               {
                 title: 'HOA Communities',
-                blurb: 'HOA door to door trash collection with board-friendly reporting and photo-verified pickups.',
+                blurb: 'HOA door to door trash collection with board-friendly reporting and GPS-tracked nightly routes.',
               },
               {
                 title: 'Resort Style & Luxury',
@@ -765,21 +765,21 @@ export default function HomeClient() {
             {[
               {
                 icon: MapPin,
-                title: 'GPS-Verified Accountability',
+                title: 'GPS-Tracked Routing',
                 description:
-                  'Every bag, every building, tracked in real-time. Advanced geo-location technology ensures 100% route completion with documented proof of service.',
+                  'Every truck is GPS-tracked on every route, so we can confirm when our team was on your property. Clear route history available to property managers on request.',
               },
               {
                 icon: Shield,
-                title: '100% Collection Guarantee',
+                title: '100% Collection Commitment',
                 description:
-                  'Backed by our strict Service Level Agreement (SLA). If we miss it, we make it right immediately with full transparency and accountability.',
+                  'If a pickup is ever reported missed, we send a crew back out the same night to cure it — no paperwork, no excuses, no finger-pointing.',
               },
               {
                 icon: Camera,
                 title: 'Property Manager Portal',
                 description:
-                  'Instant access to service reports and photo verification. Complete visibility into every pickup with time-stamped documentation at your fingertips.',
+                  'Instant access to service reports and route history. Complete visibility into nightly route completion and any cured misses at your fingertips.',
               },
             ].map((adv, i) => {
               const Icon = adv.icon;

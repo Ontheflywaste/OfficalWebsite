@@ -13,10 +13,10 @@ export default function ServicesClient() {
       title: "Valet Trash Service",
       description: "Premier doorstep trash pickup for apartment communities. Flexible scheduling up to 7 days per week with GPS-verified route completion.",
       features: [
-        "SLA-backed 100% collection rate",
-        "Advanced GPS geo-location tracking",
-        "Flexible scheduling up to 7 days/week",
-        "Customizable collection windows"
+        "100% collection commitment",
+        "GPS-tracked truck routing",
+        "Same-night missed-pickup cure",
+        "Flexible scheduling up to 7 days/week"
       ],
       link: "/services/valet-trash/",
       image: "/Images/Edgardo.jpeg"
@@ -65,13 +65,13 @@ export default function ServicesClient() {
   const whyChooseUs = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "SLA-Backed Service",
-      description: "Our service level agreements guarantee 100% collection rates with advanced GPS tracking technology"
+      title: "100% Collection Commitment",
+      description: "If a pickup is ever reported missed, we send a crew back out the same night to cure it — backed by GPS-tracked truck routing"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,
       title: "Advanced Technology",
-      description: "GPS geo-location tracking for valet trash, photo verification for junk removal, bulk services, and pressure washing"
+      description: "GPS-tracked truck routing for valet trash, and before & after photo documentation on every bulk removal, junk haul, and pressure washing job"
     },
     {
       icon: <Clock className="w-8 h-8" />,

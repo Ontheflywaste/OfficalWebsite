@@ -29,11 +29,11 @@ export default function ServiceAreaClient({
 
   const serviceFeatures = {
     'valet-trash': [
-      '100% Collection Rate Guarantee',
-      'GPS Tracking & Photo Verification',
+      '100% Collection Commitment',
+      'GPS-Tracked Truck Routing',
+      'Same-Night Missed-Pickup Cure',
       'Flexible 5-7 Day Service',
       'Professional Uniformed Staff',
-      'Same-Day Issue Resolution',
       'Dedicated Account Management'
     ],
     'bulk-removal': [

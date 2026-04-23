@@ -12,8 +12,8 @@ export default function ValetTrashClient() {
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "SLA-Backed Service Guarantee",
-      description: "Our 100% collection rate is backed by a Service Level Agreement with advanced GPS tracking ensuring complete property coverage."
+      title: "100% Collection Commitment",
+      description: "GPS-tracked truck routing confirms our team is on your property every scheduled night — and if a pickup is ever reported missed, we cure it the same night."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -33,7 +33,7 @@ export default function ValetTrashClient() {
   ];
 
   const features = [
-    "SLA-backed 100% collection rate guarantee",
+    "100% collection commitment with same-night missed-pickup cure",
     "Advanced GPS geo-location tracking",
     "Flexible scheduling up to 7 days per week",
     "Professional, uniformed collection staff",
@@ -60,7 +60,7 @@ export default function ValetTrashClient() {
     },
     {
       question: "What happens if trash is missed?",
-      answer: "We maintain a 100% collection rate with our SLA-backed guarantee and GPS-verified route completion. In the rare event of any issue, residents can contact us directly for immediate resolution. We provide property managers with real-time service reports and route tracking data."
+      answer: "We maintain a 100% collection commitment with GPS-tracked truck routing. If a pickup is ever reported missed, we send a crew back out the same night to cure it — and if a property manager ever wants truck GPS confirmation for a specific night or building, we can pull it on request."
     },
     {
       question: "Do you provide recycling services?",

@@ -18,7 +18,7 @@ export default function DoorToDoorClient() {
       icon: <Truck className="w-6 h-6" aria-hidden="true" />,
       title: '2. Uniformed Crews Collect Door to Door',
       description:
-        'Our uniformed team collects trash door to door across the entire property, GPS-verifying every building and photo-stamping every pickup.',
+        'Our uniformed team collects trash door to door across the entire property. Every truck runs a GPS-tracked route, so we can confirm on-property time for any night on request.',
     },
     {
       icon: <Recycle className="w-6 h-6" aria-hidden="true" />,
@@ -28,9 +28,9 @@ export default function DoorToDoorClient() {
     },
     {
       icon: <Camera className="w-6 h-6" aria-hidden="true" />,
-      title: '4. Property Managers Get Photo-Verified Reports',
+      title: '4. Same-Night Cure on Any Reported Miss',
       description:
-        'Property managers and HOA boards receive photo-verified service confirmation the moment the route completes.',
+        'If a property manager or resident reports a missed pickup, we send a crew back out the same night to cure it — no paperwork, no questions, no excuses.',
     },
   ];
 
@@ -38,12 +38,12 @@ export default function DoorToDoorClient() {
     'Door to door trash pickup service 5–7 nights per week',
     'Doorstep trash pickup apartments, condos, resorts, and HOA communities',
     'Door to door trash collection multifamily (including new construction apartments)',
-    'Doorstep valet trash service with photo-verified pickups',
-    'Door to door garbage collection service backed by a 100% collection SLA',
+    'GPS-tracked truck routing on every nightly route',
+    '100% collection commitment with same-night missed-pickup cure',
     'Door to door waste collection Central Florida — Orlando, Kissimmee, Champions Gate, Lake Nona',
     'Compactor area cleaning service and compactor enclosure management service included',
     'Pet waste station service apartment communities love',
-    'Bulk item removal apartment community add-ons available',
+    'Bulk item removal with before & after photo documentation available',
   ];
 
   return (
@@ -111,7 +111,7 @@ export default function DoorToDoorClient() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every pickup is GPS-verified, photo-stamped, and backed by a 100% collection guarantee written into a formal Service Level Agreement.
+              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a pickup is ever reported missed, we cure it the same night.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>

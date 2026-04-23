@@ -40,11 +40,11 @@ const data: CityPageData = {
   benefits: [
     {
       title: 'GPS-Verified Collection',
-      description: 'Real-time tracking with photo verification for every pickup',
+      description: 'GPS-tracked truck routing on every nightly route',
     },
     {
       title: '100% Collection Guarantee',
-      description: "SLA-backed commitment perfect for Celebration's high standards",
+      description: "GPS-tracked routing with same-night missed-pickup cure",
     },
     {
       title: 'Resort-Grade Service',
@@ -57,7 +57,7 @@ const data: CityPageData = {
   whySubtitle: 'Trusted by premier resort communities and luxury apartment complexes',
   serviceCardDescriptions: {
     valetTrash:
-      'Premium doorstep trash collection for Celebration luxury communities with GPS tracking and photo verification.',
+      'Premium doorstep trash collection for Celebration luxury communities with GPS-tracked routing and same-night missed-pickup cure.',
     bulkRemoval:
       'Scheduled bulk item pickup for furniture, appliances, and large items at your Celebration property.',
     junkRemoval:

@@ -9,15 +9,15 @@ import ScrollReveal from '@/app/components/ScrollReveal';
 export default function HoaResortValetTrashClient() {
   const features = [
     'HOA door to door trash collection with monthly board-ready reporting',
-    'Resort community valet trash service with photo verification for every pickup',
+    'Resort community valet trash service with GPS-tracked truck routing',
     'Luxury community valet trash service — discreet, uniformed, always on schedule',
     'Gated community valet trash service with controlled-access coordination',
     'Condo community valet trash provider with per-unit billing support',
     'Vacation rental community valet trash and short term rental community trash service',
     'Compactor enclosure management service and compactor area cleaning service for apartments',
     'Pet waste station service apartment communities love',
-    'Bulk item removal apartment community coverage between move-outs',
-    '100% collection rate backed by a written Service Level Agreement',
+    'Bulk item removal with before & after photo documentation for your records',
+    '100% collection commitment with same-night missed-pickup cure',
   ];
 
   const communityTypes = [
@@ -107,7 +107,7 @@ export default function HoaResortValetTrashClient() {
               Door to Door Trash Collection for HOA &amp; Resort Community Valet Trash Service — Central Florida
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-10">
-              On The Fly Waste Solutions is the HOA waste management company Central Florida property boards, resort managers, and condo associations rely on for discreet, photo-verified, doorstep valet trash service.
+              On The Fly Waste Solutions is the HOA waste management company Central Florida property boards, resort managers, and condo associations rely on for discreet, GPS-tracked, doorstep valet trash service — backed by a 100% collection commitment and same-night cure for any reported miss.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -138,7 +138,7 @@ export default function HoaResortValetTrashClient() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              Whether you run a <strong>gated community</strong>, a <strong>luxury resort style apartment</strong> complex, a <strong>condo association</strong>, a <strong>vacation rental community</strong>, or a brand-new <strong>multifamily development</strong>, On The Fly delivers the same enterprise-grade waste program: GPS-verified routes, photo-stamped pickups, uniformed crews, and a 100% collection guarantee backed by a written SLA.
+              Whether you run a <strong>gated community</strong>, a <strong>luxury resort style apartment</strong> complex, a <strong>condo association</strong>, a <strong>vacation rental community</strong>, or a brand-new <strong>multifamily development</strong>, On The Fly delivers the same enterprise-grade waste program: GPS-tracked truck routing, uniformed crews, before &amp; after photo documentation on every bulk removal, and a 100% collection commitment with same-night cure on any reported miss.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>

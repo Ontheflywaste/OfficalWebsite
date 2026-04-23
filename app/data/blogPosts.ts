@@ -91,15 +91,15 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'introducing-on-the-fly-property-manager-app',
     title: 'The On The Fly App Is Coming This Summer: Automatic Completion Notifications for Property Managers and Homeowners',
-    excerpt: 'This summer we are launching the On The Fly app — the first time property managers and homeowners will receive automatic, photo-stamped completion notifications the moment their pickup is done. A preview from the CEO.',
+    excerpt: 'This summer we are launching the On The Fly app — the first time property managers and homeowners will receive automatic completion notifications the moment their pickup is done, backed by GPS-tracked truck routing. A preview from the CEO.',
     category: 'Property Management',
     date: 'April 21, 2026',
     readTime: '7 min read',
     author: 'Donnell Edwards, CEO',
     image: '/Images/app-preview-blog.jpg',
     metaTitle: 'The On The Fly App — Coming Summer 2026 | Automatic Completion Notifications',
-    metaDescription: 'Launching summer 2026: the On The Fly app delivers automatic, photo-stamped completion notifications to property managers and homeowners the moment a pickup is done.',
-    metaKeywords: 'property manager app, homeowner app, valet trash app, completion notifications, photo verification, On The Fly, waste management technology, Orlando apartments, launching summer 2026',
+    metaDescription: 'Launching summer 2026: the On The Fly app delivers automatic completion notifications and GPS-tracked route history to property managers and homeowners the moment a pickup is done.',
+    metaKeywords: 'property manager app, homeowner app, valet trash app, completion notifications, GPS truck tracking, On The Fly, waste management technology, Orlando apartments, launching summer 2026',
     fullContent: [
       {
         type: 'heading1',
@@ -131,14 +131,14 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is the feature I am most excited about. The second our crew closes out a pickup — a valet trash route, a bulk removal, a junk haul, a pressure wash — the app will send an <strong>automatic completion notification</strong> with a timestamp and a photo receipt.'
+        text: 'This is the feature I am most excited about. The second our crew closes out a job — a valet trash route, a bulk removal, a junk haul, or a pressure wash — the app will send an <strong>automatic completion notification</strong> with a timestamp and GPS-tracked route data. For bulk, junk, and pressure-washing jobs, the notification also includes before &amp; after photo documentation.'
       },
       {
         type: 'list',
         items: [
           '<strong>Property Managers</strong> will get a single nightly summary notification when the property-wide pickup is complete, plus instant alerts for one-off bulk, junk, and pressure-washing jobs.',
-          '<strong>Homeowners</strong> will get their own confirmation the moment their scheduled service wraps — with a photo of the completed work.',
-          '<strong>Ownership and regionals</strong> can be auto-copied on completions and monthly SLA summaries, with zero extra admin lift from the on-site team.'
+          '<strong>Homeowners</strong> will get their own confirmation the moment their scheduled service wraps — with a photo of the completed work on bulk, junk, and pressure-washing jobs.',
+          '<strong>Ownership and regionals</strong> can be auto-copied on completions and monthly route-completion summaries, with zero extra admin lift from the on-site team.'
         ]
       },
       {
@@ -156,8 +156,8 @@ export const blogPosts: BlogPost[] = [
           '<strong>GPS-Verified Pickups:</strong> Every pickup is stamped with latitude, longitude, and timestamp. No more "was it collected?" guesswork.',
           '<strong>Photo-Stamped Service Reports:</strong> Before-and-after photos for every bulk removal, pressure wash, and junk haul, attached directly to the completion notification.',
           '<strong>One-Tap Service Requests:</strong> Need a same-day bulk pickup or an emergency pressure wash? Fire off a request from the app — our dispatcher will see it instantly.',
-          '<strong>Resident and Homeowner Complaint Logging:</strong> Log a concern against a specific pickup and watch the incident close with photo evidence attached.',
-          '<strong>Monthly SLA Dashboard:</strong> 100% collection rate is our promise. The dashboard will show the math — pickups scheduled, pickups completed, misses resolved.',
+          '<strong>Resident and Homeowner Complaint Logging:</strong> Log a concern against a specific pickup and watch the incident close — with GPS route confirmation for valet trash, and photo evidence for bulk, junk, and pressure-washing jobs.',
+          '<strong>Monthly Service Dashboard:</strong> 100% collection commitment is our promise. The dashboard will show the math — routes scheduled, routes completed, and any reported misses that were cured the same night.',
           '<strong>Invoice & Contract Access:</strong> Every invoice, every active service line, every addendum — searchable from your phone.'
         ]
       },
@@ -171,7 +171,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'quote',
-        text: 'Trust is built in small moments. Every photo, every timestamp, every on-time pickup is a deposit into that account. The On The Fly app will make sure you can see every deposit the moment it lands.'
+        text: 'Trust is built in small moments. Every on-time pickup, every GPS-confirmed route, every bulk job documented end to end is a deposit into that account. The On The Fly app will make sure you can see every deposit the moment it lands.'
       },
       {
         type: 'heading2',

@@ -14,7 +14,7 @@ export default function HomeClient() {
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS tracking, photo verification, and a 100% collection guarantee."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night missed-pickup cure."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
@@ -30,7 +30,7 @@ export default function HomeClient() {
     },
     {
       question: "Do you serve resort communities and condos?",
-      answer: "Absolutely! We specialize in providing valet trash and condo trash pickup for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove doorstep collection, photo verification, and dedicated account management."
+      answer: "Absolutely! We specialize in providing valet trash and condo trash pickup for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove doorstep collection, GPS-tracked routing, and dedicated account management."
     }
   ];
 
@@ -272,10 +272,10 @@ export default function HomeClient() {
                     <Camera className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Verified Pickups</h3>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Documented Bulk &amp; Pressure Jobs</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Every doorstep and bulk pickup is photographed and timestamped —
-                      no more "did they service my building?" questions.
+                      Every bulk removal, junk haul, and pressure-washing job includes
+                      before &amp; after photos, attached to the completion notification.
                     </p>
                   </div>
                 </div>
@@ -298,10 +298,10 @@ export default function HomeClient() {
                     <BarChart3 className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly SLA Dashboards</h3>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly Service Dashboards</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Collection-rate reports, trend analytics, and compliance
-                      documentation ready to drop into your owner reviews.
+                      Collection-rate reports, route completion analytics, and
+                      service history ready to drop into your owner reviews.
                     </p>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function HomeClient() {
         <div className="absolute inset-0 bg-surface-dark">
           <Image
             src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions truck serving Central Florida apartment communities"
+            alt="On The Fly Waste Solutions truck providing door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
             fill
             sizes="100vw"
             loading="lazy"
@@ -525,7 +525,7 @@ export default function HomeClient() {
                 icon: Trash2,
                 title: 'Valet Trash Service',
                 description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. SLA-backed 100% collection rate with GPS tracking and photo verification.',
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and same-night missed-pickup cure.',
                 image: '/Images/Valettrashimage.jpg',
                 imageAlt: 'Professional valet trash doorstep collection service',
               },
@@ -643,6 +643,85 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
+      <section id="community-types" className="relative py-20 bg-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 12% 20%, rgba(22, 163, 74, 0.10) 0%, transparent 50%), radial-gradient(circle at 88% 80%, rgba(22, 163, 74, 0.08) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-5">
+                <Building2 className="w-4 h-4" aria-hidden="true" />
+                Built for every community type
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-5 leading-tight">
+                Trusted Door to Door Trash Collection for HOA, Resort Style & Condo Communities Across Central Florida
+              </h2>
+              <p className="text-lg text-ink-muted leading-relaxed">
+                From gated HOA neighborhoods and luxury resort style apartment communities to condo associations, vacation rental properties, and multifamily new construction — On The Fly delivers doorstep trash pickup that residents love and property managers can count on. Serving Orlando, Kissimmee, Champions Gate, Lake Nona, Windermere, Winter Garden, Orange County, and Osceola County.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'HOA Communities',
+                blurb: 'HOA door to door trash collection with board-friendly reporting and GPS-tracked nightly routes.',
+              },
+              {
+                title: 'Resort Style & Luxury',
+                blurb: 'Resort community trash collection and luxury community valet trash service for upscale apartments and condos.',
+              },
+              {
+                title: 'Condo & Gated',
+                blurb: 'Condo community valet trash provider and gated community valet trash service with discreet, uniformed crews.',
+              },
+              {
+                title: 'Multifamily & New Build',
+                blurb: 'Valet trash service multifamily — including valet trash for new construction apartments and lease-up communities.',
+              },
+            ].map((card) => (
+              <div
+                key={card.title}
+                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
+                  <Building2 className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <h3 className="text-lg font-semibold text-ink mb-2">{card.title}</h3>
+                <p className="text-ink-muted leading-relaxed text-sm">{card.blurb}</p>
+              </div>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.2}>
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/hoa-resort-valet-trash/"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-all shadow-lg"
+              >
+                Valet trash for HOA &amp; resort communities
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+              <Link
+                href="/door-to-door-trash-collection/"
+                className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all"
+              >
+                How door to door trash collection works
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="relative py-20 bg-gradient-to-b from-surface-dark to-surface-dark-2 overflow-hidden">
         {/* Grid pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -686,21 +765,21 @@ export default function HomeClient() {
             {[
               {
                 icon: MapPin,
-                title: 'GPS-Verified Accountability',
+                title: 'GPS-Tracked Routing',
                 description:
-                  'Every bag, every building, tracked in real-time. Advanced geo-location technology ensures 100% route completion with documented proof of service.',
+                  'Every truck is GPS-tracked on every route, so we can confirm when our team was on your property. Clear route history available to property managers on request.',
               },
               {
                 icon: Shield,
-                title: '100% Collection Guarantee',
+                title: '100% Collection Commitment',
                 description:
-                  'Backed by our strict Service Level Agreement (SLA). If we miss it, we make it right immediately with full transparency and accountability.',
+                  'If a pickup is ever reported missed, we send a crew back out the same night to cure it — no paperwork, no excuses, no finger-pointing.',
               },
               {
                 icon: Camera,
                 title: 'Property Manager Portal',
                 description:
-                  'Instant access to service reports and photo verification. Complete visibility into every pickup with time-stamped documentation at your fingertips.',
+                  'Instant access to service reports and route history. Complete visibility into nightly route completion and any cured misses at your fingertips.',
               },
             ].map((adv, i) => {
               const Icon = adv.icon;

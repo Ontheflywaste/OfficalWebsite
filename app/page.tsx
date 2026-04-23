@@ -3,15 +3,15 @@ import Script from 'next/script';
 import HomeClient from './HomeClient';
 
 export const metadata: Metadata = {
-  title: 'Professional Valet Trash & Junk Removal Services Orlando FL | On The Fly',
-  description: 'On The Fly Waste Solutions provides professional valet trash, bulk removal, and pressure washing services for apartment communities and HOAs in Orlando, Kissimmee & Central Florida.',
-  keywords: 'valet trash service orlando, junk removal orlando, bulk waste removal central florida, apartment trash service, property management waste solutions',
+  title: 'Door to Door Valet Trash & Waste Management for HOA, Resort & Multifamily Communities | Central Florida | On The Fly Waste Solutions',
+  description: 'On The Fly Waste Solutions provides door to door trash collection, doorstep valet trash service, bulk removal, and pressure washing for HOA, resort style, condo, and multifamily communities in Orlando, Kissimmee, Champions Gate, Lake Nona & Central Florida.',
+  keywords: 'door to door trash collection, doorstep trash collection service, doorstep valet trash service, valet trash service HOA, resort community trash collection service, condo community valet trash provider, luxury community valet trash service, gated community valet trash service, valet trash service multifamily, HOA waste management company Central Florida, Orlando door to door trash collection, Kissimmee valet trash service, Lake Nona valet trash service, Champions Gate Florida valet trash, Osceola County waste management, Orange County valet trash company, compactor enclosure management service, pet waste station service apartment, bulk item removal apartment community',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/',
   },
   openGraph: {
-    title: 'Professional Valet Trash & Junk Removal Services Orlando FL | On The Fly',
-    description: 'Trusted by property managers across Central Florida for reliable valet trash and waste management solutions.',
+    title: 'Door to Door Valet Trash & Waste Management for HOA, Resort & Multifamily Communities | Central Florida',
+    description: 'Trusted by HOA boards, resort communities, condo associations, and multifamily property managers across Central Florida for door to door trash collection and doorstep valet trash service.',
     type: 'website',
     url: 'https://ontheflywastesolutions.com/',
     siteName: 'On The Fly Waste Solutions',
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
         url: 'https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp',
         width: 1200,
         height: 630,
-        alt: 'On The Fly Waste Solutions - Valet Trash Services Orlando FL',
+        alt: 'On The Fly Waste Solutions — door to door valet trash service for HOA, resort style, and condo communities in Central Florida',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Valet Trash & Junk Removal Services Orlando FL',
-    description: 'Trusted by property managers across Central Florida for reliable valet trash and waste management solutions.',
+    title: 'Door to Door Valet Trash for HOA, Resort & Multifamily Communities | Central Florida',
+    description: 'Trusted door to door trash collection and doorstep valet trash service for HOA, resort style, condo, and multifamily communities across Central Florida.',
     images: ['https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp'],
   },
 };

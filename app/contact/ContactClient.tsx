@@ -235,7 +235,7 @@ export default function ContactClient() {
                       <div>
                         <h4 className="font-bold text-lg mb-1">100% Collection Guarantee</h4>
                         <p className="text-white/90">
-                          SLA-backed service with GPS tracking ensures every pickup, every time
+                          GPS-tracked routing with same-night missed-pickup cure — every pickup, every time
                         </p>
                       </div>
                     </div>

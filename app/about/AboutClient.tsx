@@ -25,7 +25,7 @@ export default function AboutClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Accountability",
-      description: "Every service is documented with time-stamped photos. We stand behind our work with a 100% collection rate guarantee."
+      description: "Our trucks run on GPS-tracked routes every night, and if a pickup is ever reported missed, we cure it the same night. We stand behind our work with a 100% collection commitment."
     },
     {
       icon: <Heart className="w-8 h-8" />,
@@ -53,13 +53,13 @@ export default function AboutClient() {
       description: "Visionary leader committed to revolutionizing waste management in Central Florida",
       bio: [
         "Donnell founded On The Fly Waste Solutions with a simple belief: apartment communities in Central Florida deserve a waste-management partner that shows up, shows proof, and stands behind every pickup.",
-        "From day one he set the bar at a 100% collection guarantee backed by GPS tracking and time-stamped photo verification, bringing enterprise-level accountability to a category that had long settled for less.",
+        "From day one he set the bar at a 100% collection commitment backed by GPS-tracked truck routing and same-night missed-pickup cure, bringing enterprise-level accountability to a category that had long settled for less.",
         "Today he leads company strategy, key partnerships with resorts and property-management groups, and the continued rollout of the On The Fly property-manager app.",
       ],
       focusAreas: [
         "Company strategy & growth",
         "Property-manager & resort partnerships",
-        "Service-level standards and SLA accountability",
+        "Service-level standards and missed-pickup cure accountability",
         "Technology roadmap for the client app",
       ],
       quote:
@@ -163,7 +163,7 @@ export default function AboutClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Orlando skyline and Central Florida communities we serve"
+            alt="Resort style and HOA apartment communities we serve with door to door trash collection across Orlando and Central Florida"
             fill
             priority
             sizes="100vw"
@@ -483,7 +483,7 @@ export default function AboutClient() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">100% collection rate backed by our SLA guarantee</span>
+                    <span className="text-lg">100% collection commitment with same-night missed-pickup cure</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />

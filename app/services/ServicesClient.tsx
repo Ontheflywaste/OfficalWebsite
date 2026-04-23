@@ -13,10 +13,10 @@ export default function ServicesClient() {
       title: "Valet Trash Service",
       description: "Premier doorstep trash pickup for apartment communities. Flexible scheduling up to 7 days per week with GPS-verified route completion.",
       features: [
-        "SLA-backed 100% collection rate",
-        "Advanced GPS geo-location tracking",
-        "Flexible scheduling up to 7 days/week",
-        "Customizable collection windows"
+        "100% collection commitment",
+        "GPS-tracked truck routing",
+        "Same-night missed-pickup cure",
+        "Flexible scheduling up to 7 days/week"
       ],
       link: "/services/valet-trash/",
       image: "/Images/Edgardo.jpeg"
@@ -65,13 +65,13 @@ export default function ServicesClient() {
   const whyChooseUs = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "SLA-Backed Service",
-      description: "Our service level agreements guarantee 100% collection rates with advanced GPS tracking technology"
+      title: "100% Collection Commitment",
+      description: "If a pickup is ever reported missed, we send a crew back out the same night to cure it — backed by GPS-tracked truck routing"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,
       title: "Advanced Technology",
-      description: "GPS geo-location tracking for valet trash, photo verification for junk removal, bulk services, and pressure washing"
+      description: "GPS-tracked truck routing for valet trash, and before & after photo documentation on every bulk removal, junk haul, and pressure washing job"
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -86,7 +86,7 @@ export default function ServicesClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Central Florida apartment communities served by On The Fly"
+            alt="Door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
             fill
             priority
             sizes="100vw"
@@ -205,6 +205,56 @@ export default function ServicesClient() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community-type callout — HOA / resort / condo / door-to-door */}
+      <section className="py-20 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-10 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Door to Door Trash Collection for HOA, Resort Style &amp; Condo Communities
+              </h2>
+              <p className="text-lg text-gray-700">
+                We build door to door trash collection and doorstep valet trash service programs tailored to the specific community type you manage — from HOA boards and resort style apartments to condo associations, vacation rentals, and multifamily new construction across Central Florida.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <Link
+              href="/hoa-resort-valet-trash/"
+              className="group bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-primary/40 hover:shadow-lg transition-all"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                Valet trash for HOA &amp; resort communities
+              </h3>
+              <p className="text-gray-600 mb-4">
+                HOA door to door trash collection, resort community valet trash service, and luxury community valet trash service across Central Florida.
+              </p>
+              <span className="inline-flex items-center gap-2 text-primary font-semibold">
+                Learn more
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </Link>
+
+            <Link
+              href="/door-to-door-trash-collection/"
+              className="group bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-primary/40 hover:shadow-lg transition-all"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                How door to door trash collection works
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Doorstep trash pickup apartments, door to door garbage collection service, and doorstep valet trash service — step by step.
+              </p>
+              <span className="inline-flex items-center gap-2 text-primary font-semibold">
+                See the process
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

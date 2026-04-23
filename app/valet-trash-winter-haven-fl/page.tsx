@@ -42,7 +42,7 @@ const data: CityPageData = {
     },
     {
       title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with same-night missed-pickup cure',
+      description: 'GPS-tracked routing with same-night cure on verified missed pickups',
     },
     {
       title: 'Flexible Service Schedule',
@@ -55,7 +55,7 @@ const data: CityPageData = {
   whySubtitle: 'Trusted by property managers throughout Winter Haven and Polk County',
   serviceCardDescriptions: {
     valetTrash:
-      'Professional doorstep trash collection for your Winter Haven apartment community with GPS-tracked routing and same-night missed-pickup cure.',
+      'Professional doorstep trash collection for your Winter Haven apartment community with GPS-tracked routing and same-night cure on verified missed pickups.',
     bulkRemoval:
       'Scheduled bulk item pickup for furniture, appliances, and large items at your Winter Haven property.',
     junkRemoval:

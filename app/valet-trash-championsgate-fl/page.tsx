@@ -43,7 +43,7 @@ const data: CityPageData = {
     },
     {
       title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with same-night missed-pickup cure',
+      description: 'GPS-tracked routing with same-night cure on verified missed pickups',
     },
     {
       title: 'Resort-Grade Service',
@@ -56,7 +56,7 @@ const data: CityPageData = {
   whySubtitle: 'Trusted by premier resort communities and luxury apartment complexes',
   serviceCardDescriptions: {
     valetTrash:
-      'Premium doorstep trash collection for ChampionsGate luxury communities with GPS-tracked routing and same-night missed-pickup cure.',
+      'Premium doorstep trash collection for ChampionsGate luxury communities with GPS-tracked routing and same-night cure on verified missed pickups.',
     bulkRemoval:
       'Scheduled bulk item pickup for furniture, appliances, and large items at your ChampionsGate property.',
     junkRemoval:

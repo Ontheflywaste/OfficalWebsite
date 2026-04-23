@@ -235,7 +235,7 @@ export default function ContactClient() {
                       <div>
                         <h4 className="font-bold text-lg mb-1">100% Collection Guarantee</h4>
                         <p className="text-white/90">
-                          GPS-tracked routing with same-night missed-pickup cure — every pickup, every time
+                          GPS-tracked routing with same-night cure on verified missed pickups — every pickup, every time
                         </p>
                       </div>
                     </div>

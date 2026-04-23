@@ -3,7 +3,7 @@ import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Orlando, FL | On The Fly Waste Solutions',
-  description: 'Professional valet trash service for apartments, condos, and resorts in Orlando, FL. 100% collection commitment with GPS-tracked truck routing and same-night missed-pickup cure. Serving all Orlando neighborhoods.',
+  description: 'Professional valet trash service for apartments, condos, and resorts in Orlando, FL. 100% collection commitment with GPS-tracked truck routing and same-night cure on verified missed pickups. Serving all Orlando neighborhoods.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/valet-trash-orlando-fl/',
   },

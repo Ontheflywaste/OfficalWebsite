@@ -28,9 +28,9 @@ export default function DoorToDoorClient() {
     },
     {
       icon: <Camera className="w-6 h-6" aria-hidden="true" />,
-      title: '4. Same-Night Cure on Any Reported Miss',
+      title: '4. Same-Night Cure on Any Verified Miss',
       description:
-        'If a property manager or resident reports a missed pickup, we send a crew back out the same night to cure it — no paperwork, no questions, no excuses.',
+        'If a missed trash bin or building-level miss is verified — by a Ring camera, a property manager, or our own truck GPS data — we send a crew back out the same night to collect. No paperwork, no questions, no excuses.',
     },
   ];
 
@@ -39,7 +39,7 @@ export default function DoorToDoorClient() {
     'Doorstep trash pickup apartments, condos, resorts, and HOA communities',
     'Door to door trash collection multifamily (including new construction apartments)',
     'GPS-tracked truck routing on every nightly route',
-    '100% collection commitment with same-night missed-pickup cure',
+    '100% collection commitment with same-night cure on verified missed pickups',
     'Door to door waste collection Central Florida — Orlando, Kissimmee, Champions Gate, Lake Nona',
     'Compactor area cleaning service and compactor enclosure management service included',
     'Pet waste station service apartment communities love',
@@ -74,7 +74,7 @@ export default function DoorToDoorClient() {
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-semibold text-white/90 mb-6">
               <Truck className="w-4 h-4 text-primary" aria-hidden="true" />
-              Door to door &middot; Doorstep &middot; Photo-verified
+              Door to door &middot; Doorstep &middot; GPS-tracked
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 text-balance leading-tight">
               Door to Door Trash Collection &amp; Doorstep Trash Pickup Service — Central Florida
@@ -111,7 +111,7 @@ export default function DoorToDoorClient() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a pickup is ever reported missed, we cure it the same night.
+              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>

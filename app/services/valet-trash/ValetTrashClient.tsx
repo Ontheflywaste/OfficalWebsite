@@ -13,7 +13,7 @@ export default function ValetTrashClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "100% Collection Commitment",
-      description: "GPS-tracked truck routing confirms our team is on your property every scheduled night — and if a pickup is ever reported missed, we cure it the same night."
+      description: "GPS-tracked truck routing confirms our team is on your property every scheduled night. If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we send a crew back out the same night to collect."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -33,7 +33,7 @@ export default function ValetTrashClient() {
   ];
 
   const features = [
-    "100% collection commitment with same-night missed-pickup cure",
+    "100% collection commitment with same-night cure on verified missed pickups",
     "Advanced GPS geo-location tracking",
     "Flexible scheduling up to 7 days per week",
     "Professional, uniformed collection staff",
@@ -60,7 +60,7 @@ export default function ValetTrashClient() {
     },
     {
       question: "What happens if trash is missed?",
-      answer: "We maintain a 100% collection commitment with GPS-tracked truck routing. If a pickup is ever reported missed, we send a crew back out the same night to cure it — and if a property manager ever wants truck GPS confirmation for a specific night or building, we can pull it on request."
+      answer: "We maintain a 100% collection commitment with GPS-tracked truck routing. If a missed pickup is verified — through a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect. If a property manager wants truck GPS confirmation for a specific night, building, or trash bin, we can pull it on request."
     },
     {
       question: "Do you provide recycling services?",

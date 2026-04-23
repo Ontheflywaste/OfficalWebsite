@@ -257,7 +257,7 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Service",
             "name": "Door to Door Trash Collection",
-            "description": "Door to door trash collection and doorstep trash pickup service for apartment communities, HOA, resort, and condo communities across Central Florida. GPS-tracked truck routing with same-night missed-pickup cure.",
+            "description": "Door to door trash collection and doorstep trash pickup service for apartment communities, HOA, resort, and condo communities across Central Florida. GPS-tracked truck routing with same-night cure on verified missed pickups.",
             "provider": {
               "@type": "LocalBusiness",
               "name": "On The Fly Waste Solutions"
@@ -281,7 +281,7 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Service",
             "name": "Valet Trash Service",
-            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with a 100% collection commitment, GPS-tracked routing, and same-night missed-pickup cure",
+            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with a 100% collection commitment, GPS-tracked routing, and same-night cure on verified missed pickups",
             "provider": {
               "@type": "LocalBusiness",
               "name": "On The Fly Waste Solutions"
@@ -395,7 +395,7 @@ export default function RootLayout({
         "name": "What is valet trash service for apartments?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night missed-pickup cure."
+          "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night cure on verified missed pickups."
         }
       },
       {

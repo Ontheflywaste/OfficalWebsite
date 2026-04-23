@@ -14,7 +14,7 @@ export default function HomeClient() {
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night missed-pickup cure."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night cure on any verified missed pickup."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
@@ -525,7 +525,7 @@ export default function HomeClient() {
                 icon: Trash2,
                 title: 'Valet Trash Service',
                 description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and same-night missed-pickup cure.',
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and same-night cure on any verified missed pickup.',
                 image: '/Images/Valettrashimage.jpg',
                 imageAlt: 'Professional valet trash doorstep collection service',
               },
@@ -773,7 +773,7 @@ export default function HomeClient() {
                 icon: Shield,
                 title: '100% Collection Commitment',
                 description:
-                  'If a pickup is ever reported missed, we send a crew back out the same night to cure it — no paperwork, no excuses, no finger-pointing.',
+                  'If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect. No paperwork, no excuses, no finger-pointing.',
               },
               {
                 icon: Camera,

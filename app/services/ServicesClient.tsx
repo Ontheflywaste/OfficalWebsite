@@ -15,7 +15,7 @@ export default function ServicesClient() {
       features: [
         "100% collection commitment",
         "GPS-tracked truck routing",
-        "Same-night missed-pickup cure",
+        "Same-night cure on verified missed pickups",
         "Flexible scheduling up to 7 days/week"
       ],
       link: "/services/valet-trash/",
@@ -66,7 +66,7 @@ export default function ServicesClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "100% Collection Commitment",
-      description: "If a pickup is ever reported missed, we send a crew back out the same night to cure it — backed by GPS-tracked truck routing"
+      description: "If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we send a crew back out the same night to collect"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,

@@ -1,3 +1,18 @@
+# On The Fly Waste Solutions — robots.txt
+# Single source of truth. Keep in sync with app/sitemap.ts.
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Allow Googlebot to fetch JS, CSS, and images so the rendered preview
+# matches what users see (required for proper indexing of a Next.js site).
+User-agent: Googlebot
+Allow: /_next/static/
+Allow: /_next/image
+Allow: /Images/
+Allow: /videos/
+
 Sitemap: https://ontheflywastesolutions.com/sitemap.xml
+Sitemap: https://ontheflywastesolutions.com/video-sitemap.xml

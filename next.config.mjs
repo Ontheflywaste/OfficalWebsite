@@ -140,22 +140,22 @@ const nextConfig = {
       },
       {
         source: '/blog/bulk-waste-removal-guide',
-        destination: '/blog/',
+        destination: '/blog/bulk-item-removal-best-practices/',
         permanent: true,
       },
       {
         source: '/blog/bulk-waste-removal-guide/',
-        destination: '/blog/',
+        destination: '/blog/bulk-item-removal-best-practices/',
         permanent: true,
       },
       {
         source: '/blog/what-property-managers-should-expect-valet-trash-company',
-        destination: '/blog/',
+        destination: '/blog/valet-trash-benefits-orlando-apartments/',
         permanent: true,
       },
       {
         source: '/blog/what-property-managers-should-expect-valet-trash-company/',
-        destination: '/blog/',
+        destination: '/blog/valet-trash-benefits-orlando-apartments/',
         permanent: true,
       },
       {

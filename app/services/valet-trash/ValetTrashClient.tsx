@@ -74,7 +74,7 @@ export default function ValetTrashClient() {
 
   const testimonials = [
     {
-      name: "Aura Zeland",
+      name: "Aura Zelada",
       property: "Manager at Reunion West",
       rating: 5,
       text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."

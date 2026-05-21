@@ -93,7 +93,7 @@ export default function BulkRemovalClient() {
   const testimonials = [
     {
       name: "Aura Zelada",
-      property: "Manager at Reunion West",
+      property: "CAM",
       rating: 5,
       text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
     },

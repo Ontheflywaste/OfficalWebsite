@@ -90,18 +90,26 @@ export default function BulkRemovalClient() {
     }
   ];
 
+  // Real reviews from the On The Fly Waste Solutions Google Business
+  // Profile (5.0 ⭐). Text is verbatim — do not edit wording.
   const testimonials = [
     {
-      name: "Aura Zelada",
-      property: "CAM",
+      name: "Adam Branvold",
+      property: "Short-Term Rental Owner · Google Review",
       rating: 5,
-      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
+      text: "I recently needed to get rid of three old king-sized mattresses to prepare the property as a short term rental. On The Fly Waste Solutions made the whole process a breeze! As far as the bulk removal, their team showed up right on time, super professional and efficient. My HOA uses them for regular trash removal and I couldn't be happier with their service. If you're in Central Florida and need reliable waste removal, these guys are top-notch. Highly recommend!"
     },
     {
-      name: "William Barber",
-      property: "Vendor Supervisor",
+      name: "Antonio Marcuz",
+      property: "Local Guide · Property Management",
       rating: 5,
-      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
+      text: "I'd like to say how good they are, very responsive. I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
+    },
+    {
+      name: "Onli Realty",
+      property: "Realty Partner · Google Review",
+      rating: 5,
+      text: "Great service, highly recommended!"
     }
   ];
 

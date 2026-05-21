@@ -115,18 +115,32 @@ export default function JunkRemovalClient() {
     }
   ];
 
+  // Real reviews from the On The Fly Waste Solutions Google Business
+  // Profile (5.0 ⭐). Text is verbatim — do not edit wording.
   const testimonials = [
     {
-      name: "Aura Zelada",
-      location: "CAM",
+      name: "Emma Franzone",
+      location: "Google Review",
       rating: 5,
-      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
+      text: "Donnell was absolutely amazing to work with. The process to rent the trailer was easy, straightforward and simple allowing us to not have to stress about the rental. The morning of our rental Donnell showed up promptly, walked me through the dos and donts, and empowered me to take videos prior to use to ensure we both had an accurate account of the status of the trailer. He was professional, polite, and you could really tell he takes a pride in his work. The trailer was in great condition, large enough that we were able to get rid of so much junk - much more than what we were expecting. Collection the next day was easy, and we received proof of the dump disposal cost to pay for that at the end of our rental. Although I hope I won't need to rent a trailer again for getting rid of junk myself, if I ever need to I will always go through On The Fly Waste Solutions, and I will always recommend this company to everyone I know."
     },
     {
-      name: "William Barber",
-      location: "Vendor Supervisor",
+      name: "Carmen Abreu",
+      location: "Local Guide · Junk Removal, Cleanouts",
       rating: 5,
-      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
+      text: "Quick work!"
+    },
+    {
+      name: "Ivett López",
+      location: "Google Review",
+      rating: 5,
+      text: "I called On the fly waste solutions for a job I needed done in my garage asap. Donnell was so accommodating, came the same day and was so professional and did a great job. I highly recommend them."
+    },
+    {
+      name: "Renato Lambrigger",
+      location: "Google Review",
+      rating: 5,
+      text: "Awesome job, Donnel was able to come out the next day and got everything hauled away. Amazing service and very professional. Will definitely be using them again in the future."
     }
   ];
 

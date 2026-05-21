@@ -72,18 +72,38 @@ export default function ValetTrashClient() {
     }
   ];
 
+  // Real reviews from the On The Fly Waste Solutions Google Business
+  // Profile (5.0 ⭐). Text is verbatim — do not edit wording.
   const testimonials = [
     {
-      name: "Aura Zelada",
-      property: "CAM",
+      name: "Jay Barnes",
+      property: "Google Review",
       rating: 5,
-      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
+      text: "Best Valet Trash service I've ever experienced. They took every bag no matter how heavy and took our loose trash. Thank you guys"
     },
     {
-      name: "William Barber",
-      property: "Vendor Supervisor",
+      name: "Lynn Mollison",
+      property: "Local Guide · HOA Member",
       rating: 5,
-      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
+      text: "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated to their job - no short-cuts with them. They work super fast, and they are helpful and friendly. Donnell will go above and beyond to help anyone out - he is amazing."
+    },
+    {
+      name: "Edwin Paula",
+      property: "Google Review",
+      rating: 5,
+      text: "Best waste solution company around, the 2 took all my trash even the trash inside my house because he asked if I had any trash inside my house, he was very respectful and very kind, the driver called him felix or Fenix he's too tier he's really responsible and respectful one of the best I've talked to from that whole company"
+    },
+    {
+      name: "Millie Ayala",
+      property: "Google Review",
+      rating: 5,
+      text: "These guys make it happen! Always responsive."
+    },
+    {
+      name: "Shaianne Berry",
+      property: "Google Review",
+      rating: 5,
+      text: "On The Fly is great! They are professional and are always on top of things in the neighborhood. Anytime I see them they are friendly and would definitely recommend their services to anyone looking."
     }
   ];
 

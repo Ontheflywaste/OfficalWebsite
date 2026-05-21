@@ -122,13 +122,10 @@ export default function JunkRemovalClient() {
       name: "Emma Franzone",
       location: "Google Review",
       rating: 5,
-      text: "Donnell was absolutely amazing to work with. The process to rent the trailer was easy, straightforward and simple allowing us to not have to stress about the rental. The morning of our rental Donnell showed up promptly, walked me through the dos and donts, and empowered me to take videos prior to use to ensure we both had an accurate account of the status of the trailer. He was professional, polite, and you could really tell he takes a pride in his work. The trailer was in great condition, large enough that we were able to get rid of so much junk - much more than what we were expecting. Collection the next day was easy, and we received proof of the dump disposal cost to pay for that at the end of our rental. Although I hope I won't need to rent a trailer again for getting rid of junk myself, if I ever need to I will always go through On The Fly Waste Solutions, and I will always recommend this company to everyone I know."
-    },
-    {
-      name: "Carmen Abreu",
-      location: "Local Guide · Junk Removal, Cleanouts",
-      rating: 5,
-      text: "Quick work!"
+      // Excerpt of a much longer full Google review — trimmed so it sits
+      // at a similar visual length to the other two on this page. Ellipsis
+      // marks the cut from the original; nothing reworded.
+      text: "Donnell was absolutely amazing to work with. The process to rent the trailer was easy, straightforward and simple. He was professional, polite, and you could really tell he takes a pride in his work… If I ever need to, I will always go through On The Fly Waste Solutions, and I will always recommend this company to everyone I know."
     },
     {
       name: "Ivett López",

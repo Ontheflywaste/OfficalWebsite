@@ -115,18 +115,29 @@ export default function JunkRemovalClient() {
     }
   ];
 
+  // Real reviews from the On The Fly Waste Solutions Google Business
+  // Profile (5.0 ⭐). Text is verbatim — do not edit wording.
   const testimonials = [
     {
-      name: "Aura Zeland",
-      location: "Manager at Reunion West",
+      name: "Emma Franzone",
+      location: "Google Review",
       rating: 5,
-      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
+      // Excerpt of a much longer full Google review — trimmed so it sits
+      // at a similar visual length to the other two on this page. Ellipsis
+      // marks the cut from the original; nothing reworded.
+      text: "Donnell was absolutely amazing to work with. The process to rent the trailer was easy, straightforward and simple. He was professional, polite, and you could really tell he takes a pride in his work… If I ever need to, I will always go through On The Fly Waste Solutions, and I will always recommend this company to everyone I know."
     },
     {
-      name: "William Barber",
-      location: "Vendor Supervisor",
+      name: "Ivett López",
+      location: "Google Review",
       rating: 5,
-      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
+      text: "I called On the fly waste solutions for a job I needed done in my garage asap. Donnell was so accommodating, came the same day and was so professional and did a great job. I highly recommend them."
+    },
+    {
+      name: "Renato Lambrigger",
+      location: "Google Review",
+      rating: 5,
+      text: "Awesome job, Donnel was able to come out the next day and got everything hauled away. Amazing service and very professional. Will definitely be using them again in the future."
     }
   ];
 

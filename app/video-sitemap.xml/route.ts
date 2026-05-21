@@ -7,7 +7,7 @@ export async function GET() {
     <video:video>
       <video:thumbnail_loc>https://img.youtube.com/vi/gFYjibflN3U/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Encore Resort at Reunion - On The Fly Waste Solutions Testimonial</video:title>
-      <video:description>Community Manager Aura Zeland and Vendor Supervisor William Barber from Encore Resort at Reunion discuss why On The Fly is the most reliable valet trash partner they've ever worked with. Serving over 700 units in Orlando, Florida.</video:description>
+      <video:description>Community Manager Aura Zelada and Vendor Supervisor William Barber from Encore Resort at Reunion discuss why On The Fly is the most reliable valet trash partner they've ever worked with. Serving over 700 units in Orlando, Florida.</video:description>
       <video:player_loc>https://www.youtube.com/embed/gFYjibflN3U</video:player_loc>
       <video:duration>120</video:duration>
       <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import UnderConstruction from '../components/UnderConstruction';
+import { LogIn, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Client Login | On The Fly Waste Solutions',
   description:
-    'The On The Fly client portal is launching soon. Sign in will be available here shortly.',
+    'Access the On The Fly Waste Solutions client portal to manage your community.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/client-login/',
   },
@@ -16,9 +16,41 @@ export const metadata: Metadata = {
 
 export default function ClientLoginPage() {
   return (
-    <UnderConstruction
-      title="Client Login Coming Soon"
-      message="Our secure property-manager portal is almost ready. Please check back shortly to sign in and manage your community."
-    />
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-surface-dark via-primary-deep to-surface-dark overflow-hidden">
+      <div
+        className="absolute inset-0 pointer-events-none opacity-60"
+        style={{
+          background:
+            'radial-gradient(circle at 30% 40%, rgba(22, 163, 74, 0.25) 0%, transparent 55%), radial-gradient(circle at 70% 60%, rgba(22, 163, 74, 0.15) 0%, transparent 50%)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-xl mx-auto px-6 py-24 text-center">
+        <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-primary/15 border-2 border-primary/40 mb-8">
+          <LogIn
+            className="w-12 h-12 text-primary"
+            strokeWidth={1.75}
+            aria-hidden="true"
+          />
+        </div>
+
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight lg:leading-snug">
+          Client Login
+        </h1>
+
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10">
+          Sign in to the On The Fly Waste Solutions client portal to manage your community.
+        </p>
+
+        <a
+          href="https://app.ontheflywastesolutions.com"
+          className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
+        >
+          Go to Client Portal
+          <ArrowRight className="w-5 h-5" aria-hidden="true" />
+        </a>
+      </div>
+    </section>
   );
 }

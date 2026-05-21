@@ -360,10 +360,10 @@ export default function HomeClient() {
                       <div className="flex items-center justify-between mb-5">
                         <div>
                           <div className="text-xs text-gray-400">Good morning</div>
-                          <div className="text-base font-semibold">Reunion West</div>
+                          <div className="text-base font-semibold">Magnolia Bay</div>
                         </div>
                         <div className="w-9 h-9 bg-primary/20 border border-primary/40 rounded-full flex items-center justify-center">
-                          <span className="text-primary text-sm font-bold">RW</span>
+                          <span className="text-primary text-sm font-bold">MB</span>
                         </div>
                       </div>
 

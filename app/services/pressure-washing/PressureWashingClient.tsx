@@ -122,18 +122,28 @@ export default function PressureWashingClient() {
     }
   ];
 
+  // Real reviews from the On The Fly Waste Solutions Google Business
+  // Profile (5.0 ⭐). Text is verbatim — do not edit wording.
+  // Pressure Washing has no service-tagged reviews on the profile yet,
+  // so these three are service-neutral 5-star reviews per spec.
   const testimonials = [
     {
-      name: "Aura Zeland",
-      property: "Manager at Reunion West",
+      name: "Alison Jones",
+      property: "Google Review",
       rating: 5,
-      text: "On The Fly is a fabulous company... I never get complaints that they missed a house or didn't pick everything up. It's the best company I've ever worked with."
+      text: "Exceptional service. Quick, efficient and friendly. Highly recommended."
     },
     {
-      name: "William Barber",
-      property: "Vendor Supervisor",
+      name: "Kyle Agoo",
+      property: "Local Guide · Google Review",
       rating: 5,
-      text: "The workers are very conscientious... always in uniform and vehicles are clean. It has been a pleasure working with them."
+      text: "These guys go above and beyond for their clients. I will definitely be using them again!"
+    },
+    {
+      name: "vasquezmma21",
+      property: "Google Review",
+      rating: 5,
+      text: "Amazing service! Arrived on time and quickly handled all work that needed to be done. Very professional. Highly recommend."
     }
   ];
 

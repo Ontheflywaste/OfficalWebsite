@@ -63,7 +63,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "name": "On The Fly Waste Solutions",
-    "image": "https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp",
+    "image": "https://ontheflywastesolutions.com/Images/orlando-community-hero.webp",
     "description": "Professional valet trash, bulk removal, junk removal, and pressure washing services for apartment communities, condos, and resorts in Orlando and Central Florida",
     "priceRange": "$$",
     "address": {

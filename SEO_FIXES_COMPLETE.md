@@ -73,7 +73,7 @@ openGraph: {
   siteName: 'On The Fly Waste Solutions',
   locale: 'en_US',
   images: [{
-    url: 'https://www.ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp',
+    url: 'https://www.ontheflywastesolutions.com/Images/orlando-community-hero.webp',
     width: 1200,
     height: 630,
     alt: 'On The Fly Waste Solutions - Valet Trash Services Orlando FL',

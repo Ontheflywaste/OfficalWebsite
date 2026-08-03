@@ -14,16 +14,6 @@ export async function GET() {
       <video:family_friendly>yes</video:family_friendly>
       <video:live>no</video:live>
     </video:video>
-    <video:video>
-      <video:thumbnail_loc>https://img.youtube.com/vi/3tCkAWYyJuE/maxresdefault.jpg</video:thumbnail_loc>
-      <video:title>The Aston at Uptown - On The Fly Waste Solutions Testimonial</video:title>
-      <video:description>Property management team at The Aston at Uptown shares their experience with On The Fly Waste Solutions' reliable valet trash and waste management services in Orlando, Florida.</video:description>
-      <video:player_loc>https://www.youtube.com/embed/3tCkAWYyJuE</video:player_loc>
-      <video:duration>120</video:duration>
-      <video:publication_date>2024-01-01T00:00:00+00:00</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-      <video:live>no</video:live>
-    </video:video>
   </url>
 </urlset>`;
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: 'https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp',
+        url: 'https://ontheflywastesolutions.com/Images/orlando-community-hero.webp',
         width: 1200,
         height: 630,
         alt: 'On The Fly Waste Solutions — door to door valet trash service for HOA, resort style, and condo communities in Central Florida',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Door to Door Valet Trash for HOA, Resort & Multifamily Communities | Central Florida',
     description: 'Trusted door to door trash collection and doorstep valet trash service for HOA, resort style, condo, and multifamily communities across Central Florida.',
-    images: ['https://ontheflywastesolutions.com/Images/Theastonatuptownheroimage.webp'],
+    images: ['https://ontheflywastesolutions.com/Images/orlando-community-hero.webp'],
   },
 };
 

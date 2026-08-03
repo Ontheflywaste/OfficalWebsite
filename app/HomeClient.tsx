@@ -145,7 +145,7 @@ export default function HomeClient() {
 
               <div className="mt-8">
                 <p className="text-white/80 text-sm font-light tracking-wide text-center">
-                  Proudly serving premier communities like The Aston at Uptown
+                  Proudly serving premier resort, HOA, and multifamily communities across Central Florida
                 </p>
               </div>
             </div>

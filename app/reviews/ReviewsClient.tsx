@@ -141,7 +141,7 @@ export default function ReviewsClient() {
         <ScrollReveal>
           <div className="mb-20 mt-16">
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="max-w-2xl mx-auto">
               <div className="bg-surface-dark-2 border-2 border-primary rounded-2xl p-6 shadow-2xl">
                 <div className="aspect-video mb-6 rounded-lg overflow-hidden">
                   <iframe
@@ -163,26 +163,6 @@ export default function ReviewsClient() {
                 </p>
               </div>
 
-              <div className="bg-surface-dark-2 border-2 border-primary rounded-2xl p-6 shadow-2xl">
-                <div className="aspect-video mb-6 rounded-lg overflow-hidden">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/3tCkAWYyJuE"
-                    title="The Aston at Uptown Testimonial - On The Fly Waste Solutions"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="rounded-lg"
-                  ></iframe>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  The Aston at Uptown
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  See how On The Fly Waste Solutions has transformed waste management at The Aston at Uptown community.
-                </p>
-              </div>
             </div>
           </div>
         </ScrollReveal>

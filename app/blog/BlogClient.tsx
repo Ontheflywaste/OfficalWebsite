@@ -10,7 +10,7 @@ import { featuredPost, blogPosts } from '@/app/data/blogPosts';
 export default function BlogClient() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Property Management', 'Holiday Tips', 'Cost Analysis', 'Valet Trash', 'Sustainability', 'Bulk Removal'];
+  const categories = ['All', 'Technology', 'Industry Trends', 'Property Management', 'Holiday Tips', 'Cost Analysis', 'Valet Trash', 'Sustainability', 'Bulk Removal'];
 
   const sortedBlogPosts = [...blogPosts].sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();

@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './globals.css';
 
 const HubSpotChat = dynamic(() => import('./components/HubSpotChat'), { ssr: false });
-const ChunkErrorBoundary = dynamic(() => import('./components/ChunkErrorBoundary'), { ssr: false });
+import ChunkErrorBoundary from './components/ChunkErrorBoundary';
 const WebVitals = dynamic(() => import('./components/WebVitals'), { ssr: false });
 const MobileStickyCTA = dynamic(() => import('./components/MobileStickyCTA'), { ssr: false });
 

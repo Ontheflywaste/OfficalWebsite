@@ -142,7 +142,7 @@ export default function ValetTrashClient() {
                 <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service for HOA &amp; Resort Communities</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Convenient doorstep trash collection and apartment trash pickup serving HOA, resort, and multifamily communities across Central Florida
+                Convenient doorstep trash collection for apartment, HOA, resort, and multifamily communities across Central Florida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

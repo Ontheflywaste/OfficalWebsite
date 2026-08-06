@@ -56,7 +56,7 @@ export default function ServiceAreaClient({
 
   return (
     <>
-      <section className="relative min-h-[60vh] bg-surface-dark overflow-hidden pt-32 pb-20">
+      <section className="relative min-h-[60vh] bg-surface-dark overflow-hidden pt-hero-safe pb-20">
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"

@@ -28,7 +28,7 @@ export interface CityPageData {
 export default function CityValetTrashTemplate({ data }: { data: CityPageData }) {
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-hero-safe">
         <div className="absolute inset-0 bg-black">
           <Image
             src="/Images/ApartmentBuildingHero.webp"

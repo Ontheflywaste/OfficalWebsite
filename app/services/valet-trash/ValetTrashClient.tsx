@@ -23,7 +23,7 @@ export default function ValetTrashClient() {
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Increased Property Value",
-      description: "Premium amenities like a trash valet service make your Orlando apartment property more competitive and justify higher rents."
+      description: "Premium amenities like a trash valet service make your Central Florida apartment property more competitive and justify higher rents."
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -113,7 +113,7 @@ export default function ValetTrashClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Doorstep valet trash service and door to door trash collection at a luxury resort style Orlando apartment community"
+            alt="Uniformed valet trash porter collecting doorstep trash at a Central Florida resort community"
             fill
             priority
             sizes="100vw"
@@ -139,10 +139,10 @@ export default function ValetTrashClient() {
               </div>
               <div className="flex items-center gap-3 mb-6">
                 <Trash2 className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service Orlando FL</h1>
+                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service for HOA &amp; Resort Communities</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
-                Convenient doorstep trash collection and apartment trash pickup for communities across Orlando and Central Florida
+                Convenient doorstep trash collection for apartment, HOA, resort, and multifamily communities across Central Florida.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -170,7 +170,7 @@ export default function ValetTrashClient() {
           <ScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Why Orlando Property Managers Choose Our Valet Trash Service
+                Why Central Florida Property Managers Choose Our Valet Trash Service
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Elevate your property's amenities with reliable, professional valet trash collection
@@ -248,7 +248,7 @@ export default function ValetTrashClient() {
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">Clean Community</h3>
                       <p className="text-gray-600">
-                        Your Orlando apartment community stays clean and residents wake up to a trash-free environment every morning.
+                        Your Central Florida apartment community stays clean and residents wake up to a trash-free environment every morning.
                       </p>
                     </div>
                   </div>
@@ -429,7 +429,11 @@ export default function ValetTrashClient() {
               Ready to Enhance Your Property?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Get a free quote and discover how our valet trash service in Orlando can improve resident satisfaction at your apartment community
+              Get a free quote and discover how our valet trash service across Central Florida can improve resident satisfaction at your apartment community. In the city?{' '}
+              <Link href="/valet-trash-orlando-fl/" className="underline font-semibold hover:text-white">
+                See valet trash in Orlando
+              </Link>
+              .
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

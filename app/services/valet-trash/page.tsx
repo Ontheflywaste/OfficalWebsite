@@ -4,12 +4,12 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 import ServiceSchema from '../../components/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'Door-to-Door Valet Trash Service Orlando - Apartment Communities | Call (407) 274-5019',
-  description: 'Professional valet trash service for Orlando, Kissimmee & Central Florida apartment communities. Licensed & insured with 5+ days weekly service. Door-to-door pickup, uniformed staff, 24/7 support. Call (407) 274-5019 for free quote!',
-  keywords: 'valet trash service Orlando, doorstep trash pickup Orlando, apartment trash collection Orlando, professional valet trash Florida, multifamily waste services Orlando, top valet trash companies in Orlando, waste management for apartment complexes, valet trash services for student housing, contract valet trash for property managers',
+  title: 'Valet Trash Service for HOA & Resort Communities | Central Florida',
+  description: 'Door-to-door valet trash for HOA, resort, and multifamily communities across Central Florida — 7 nights a week, GPS-verified routes, timestamped photo proof, and a 4-hour missed-pickup guarantee. Call (407) 274-5019.',
+  keywords: 'valet trash service, doorstep trash collection, door to door trash collection, HOA valet trash, resort community valet trash, gated community valet trash, multifamily valet trash, Central Florida valet trash, doorstep trash pickup',
   openGraph: {
-    title: 'Door-to-Door Valet Trash Service Orlando | On The Fly',
-    description: 'Professional valet trash service for Orlando apartment communities. Licensed & insured with flexible schedules and 24/7 support.',
+    title: 'Valet Trash Service for HOA & Resort Communities | Central Florida',
+    description: 'Reliable door-to-door valet trash across Central Florida — 7 nights a week, GPS-verified, photo-documented, backed by a 4-hour resolution guarantee.',
     type: 'website',
     url: 'https://ontheflywastesolutions.com/services/valet-trash/',
     images: ['https://ontheflywastesolutions.com/Images/gallery12813_1920x831@2x.jpg'],

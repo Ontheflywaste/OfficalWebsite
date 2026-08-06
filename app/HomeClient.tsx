@@ -80,7 +80,9 @@ export default function HomeClient() {
                     textWrap: 'balance',
                   }}
                 >
-                  Valet Trash, Bulk &amp; Junk Removal Services{' '}
+                  Valet Trash, Bulk &amp; Junk Removal
+                  <br className="hidden md:block" />{' '}
+                  Services{' '}
                   <span
                     className="block sm:inline-block text-white/95 font-semibold mt-2 sm:mt-0"
                     style={{ letterSpacing: '0.03em' }}

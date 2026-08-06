@@ -47,7 +47,7 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
               <MapPin className="w-6 h-6 text-primary" />
               <span className="text-white text-lg font-semibold">Serving {data.city}, FL</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            <h1 className="text-[1.625rem] min-[400px]:text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
               Valet Trash Service{' '}
               <span className="whitespace-nowrap">in {data.city}, FL</span>
             </h1>

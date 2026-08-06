@@ -79,7 +79,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-32">
+    <div className="min-h-screen bg-white pt-hero-safe">
       <article>
         <div className="relative h-96 bg-surface-dark overflow-hidden">
           <Image

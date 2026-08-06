@@ -379,3 +379,18 @@ iframe#hubspot-conversations-iframe {
 .pb-safe {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+/* Fixed-navbar clearance for hero sections.
+   --nav-stack mirrors Navbar.tsx: main nav h-20 (5rem) on mobile;
+   utility bar (2.5rem, why the nav sits at md:top-10) + nav md:h-24 (6rem) = 8.5rem at md+.
+   Update these vars if the navbar heights ever change. */
+:root {
+  --nav-stack: 5rem;
+}
+@media (min-width: 768px) {
+  :root {
+    --nav-stack: 8.5rem;
+  }
+}
+.pt-hero-safe {
+  padding-top: calc(var(--nav-stack) + 3rem);
+}

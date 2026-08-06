@@ -44,5 +44,43 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
     notFound();
   }
 
-  return <BlogPostClient post={post} />;
+  const blogPostingSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDescription,
+    image: post.image.startsWith('http')
+      ? post.image
+      : `https://ontheflywastesolutions.com${post.image}`,
+    datePublished: new Date(post.date).toISOString(),
+    author: {
+      '@type': 'Person',
+      name: post.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'On The Fly Waste Solutions',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ontheflywastesolutions.com/Images/asset-logo.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://ontheflywastesolutions.com/blog/${post.id}/`,
+    },
+  };
+
+  // Inline <script> from a server component is deferred to hydration in this
+  // setup; wrapping it in raw HTML keeps the JSON-LD in the prerendered page.
+  const schemaHtml = `<script type="application/ld+json">${JSON.stringify(
+    blogPostingSchema
+  ).replace(/</g, '\\u003c')}</script>`;
+
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: schemaHtml }} />
+      <BlogPostClient post={post} />
+    </>
+  );
 }

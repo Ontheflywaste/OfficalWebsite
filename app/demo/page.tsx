@@ -1,24 +1,22 @@
 import type { Metadata } from 'next';
-import UnderConstruction from '../components/UnderConstruction';
+import DemoClient from './DemoClient';
 
 export const metadata: Metadata = {
-  title: 'Request App Demo | On The Fly Waste Solutions',
+  title: 'Schedule a Live Demo — On The Fly Waste Solutions',
   description:
-    'Our property-manager demo portal is launching soon. Check back to request your access code.',
+    'Schedule a live, guided demo of the On The Fly valet trash platform for resort communities, HOAs, and property managers across Central Florida — GPS-verified routes, photo documentation, and real service visibility.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/demo/',
   },
-  robots: {
-    index: false,
-    follow: true,
+  openGraph: {
+    title: 'Schedule a Live Demo — On The Fly Waste Solutions',
+    description:
+      'A guided walkthrough of GPS-verified valet trash service for resort communities and HOAs across Central Florida.',
+    type: 'website',
+    url: 'https://ontheflywastesolutions.com/demo/',
   },
 };
 
 export default function DemoPage() {
-  return (
-    <UnderConstruction
-      title="Demo Coming Soon"
-      message="We're putting the finishing touches on our property manager demo portal. Please check back shortly to request your access code."
-    />
-  );
+  return <DemoClient />;
 }

@@ -83,6 +83,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/client-login',
+        destination: 'https://app.ontheflywastesolutions.com',
+        permanent: false,
+      },
+      {
+        source: '/client-login/',
+        destination: 'https://app.ontheflywastesolutions.com',
+        permanent: false,
+      },
+      {
         source: '/:path*',
         has: [
           {

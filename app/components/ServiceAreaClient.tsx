@@ -6,12 +6,22 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Phone, MapPin, Building2, Star } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
+export interface ServiceAreaFaqItem {
+  question: string;
+  answer: string;
+}
+
 interface ServiceAreaClientProps {
   city: string;
   state?: string;
   service: 'valet-trash' | 'bulk-removal' | 'junk-removal';
   serviceTitle: string;
   neighborhoods?: string[];
+  intro?: {
+    heading: string;
+    paragraphs: string[];
+  };
+  faq?: ServiceAreaFaqItem[];
 }
 
 export default function ServiceAreaClient({
@@ -19,7 +29,9 @@ export default function ServiceAreaClient({
   state = 'FL',
   service,
   serviceTitle,
-  neighborhoods = []
+  neighborhoods = [],
+  intro,
+  faq
 }: ServiceAreaClientProps) {
   const serviceDescriptions = {
     'valet-trash': `professional valet trash service for apartments, condos, and resort communities`,
@@ -113,6 +125,28 @@ export default function ServiceAreaClient({
         </div>
       </section>
 
+      {intro && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                {intro.heading}
+              </h2>
+              {intro.paragraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={`text-lg text-gray-700 leading-relaxed ${
+                    index === intro.paragraphs.length - 1 ? '' : 'mb-4'
+                  }`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </ScrollReveal>
+          </div>
+        </section>
+      )}
+
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -179,6 +213,30 @@ export default function ServiceAreaClient({
                 ))}
               </div>
             </ScrollReveal>
+          </div>
+        </section>
+      )}
+
+      {faq && faq.length > 0 && (
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
+                Frequently Asked Questions
+              </h2>
+            </ScrollReveal>
+            <div className="space-y-6">
+              {faq.map((item, index) => (
+                <ScrollReveal key={index} delay={index * 0.05}>
+                  <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {item.question}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed">{item.answer}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </section>
       )}

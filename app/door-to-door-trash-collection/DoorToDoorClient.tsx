@@ -28,9 +28,9 @@ export default function DoorToDoorClient() {
     },
     {
       icon: <Camera className="w-6 h-6" aria-hidden="true" />,
-      title: '4. Same-Night Cure on Any Verified Miss',
+      title: '4. Verified Misses Made Right',
       description:
-        'If a missed trash bin or building-level miss is verified — by a Ring camera, a property manager, or our own truck GPS data — we send a crew back out the same night to collect. No paperwork, no questions, no excuses.',
+        'If a missed trash bin or building-level miss is verified — by a Ring camera, a property manager, or our own truck GPS data — we make it right. No paperwork, no questions, no excuses.',
     },
   ];
 
@@ -39,7 +39,7 @@ export default function DoorToDoorClient() {
     'Doorstep trash pickup apartments, condos, resorts, and HOA communities',
     'Door to door trash collection multifamily (including new construction apartments)',
     'GPS-tracked truck routing on every nightly route',
-    '100% collection commitment with same-night cure on verified missed pickups',
+    '100% collection commitment with verified missed pickups made right',
     'Door to door waste collection Central Florida — Orlando, Kissimmee, Champions Gate, Lake Nona',
     'Compactor area cleaning service and compactor enclosure management service included',
     'Pet waste station service apartment communities love',
@@ -111,7 +111,7 @@ export default function DoorToDoorClient() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect.
+              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>

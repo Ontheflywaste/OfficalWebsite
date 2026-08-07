@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Door to Door Valet Trash for HOA & Resort Communities — Central Florida',
-    description: 'Discreet, uniformed, GPS-tracked door to door trash collection for HOA, resort style, and condo communities across Central Florida — with same-night cure on verified missed pickups.',
+    description: 'Discreet, uniformed, GPS-tracked door to door trash collection for HOA, resort style, and condo communities across Central Florida — with verified missed pickups made right.',
     type: 'website',
     url: 'https://ontheflywastesolutions.com/hoa-resort-valet-trash/',
     siteName: 'On The Fly Waste Solutions',

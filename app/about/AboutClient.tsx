@@ -25,7 +25,7 @@ export default function AboutClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Accountability",
-      description: "Our trucks run on GPS-tracked routes every night. If a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect. We stand behind our work with a 100% collection commitment."
+      description: "Our trucks run on GPS-tracked routes every night. If a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. We stand behind our work with a 100% collection commitment."
     },
     {
       icon: <Heart className="w-8 h-8" />,
@@ -53,13 +53,13 @@ export default function AboutClient() {
       description: "Visionary leader committed to revolutionizing waste management in Central Florida",
       bio: [
         "Donnell founded On The Fly Waste Solutions with a simple belief: apartment communities in Central Florida deserve a waste-management partner that shows up, shows proof, and stands behind every pickup.",
-        "From day one he set the bar at a 100% collection commitment backed by GPS-tracked truck routing and same-night cure on verified missed pickups, bringing enterprise-level accountability to a category that had long settled for less.",
+        "From day one he set the bar at a 100% collection commitment backed by GPS-tracked truck routing and verified missed pickups made right, bringing enterprise-level accountability to a category that had long settled for less.",
         "Today he leads company strategy, key partnerships with resorts and property-management groups, and the continued rollout of the On The Fly property-manager app.",
       ],
       focusAreas: [
         "Company strategy & growth",
         "Property-manager & resort partnerships",
-        "Service-level standards and verified missed-pickup cure accountability",
+        "Service-level standards and verified missed-pickup accountability",
         "Technology roadmap for the client app",
       ],
       quote:
@@ -73,7 +73,7 @@ export default function AboutClient() {
       description: "Ensures flawless execution and customer satisfaction across all properties",
       bio: [
         "Trevor runs day-to-day operations across every property on the On The Fly roster. From crew scheduling to route optimization to on-property service checks, if something touches a resident's door, it goes through his team.",
-        "He's the direct line for property managers who want an answer fast — and the reason complaints are typically resolved the same night they're reported.",
+        "He's the direct line for property managers who want an answer fast — and the reason complaints get resolved with a record to show for it.",
         "Trevor trains every new crew member personally, so the bar for uniform presentation, noise discipline, and pickup quality stays consistent from the first building we onboard to the hundredth.",
       ],
       focusAreas: [
@@ -224,7 +224,7 @@ export default function AboutClient() {
                     As lifelong Florida residents, our founders understood the unique challenges apartment communities face. Unreliable service, poor communication, and lack of accountability were creating headaches for property managers and residents alike.
                   </p>
                   <p className="text-lg">
-                    We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. Photo verification for every service. A 100% collection rate guarantee. Real people answering the phone. These weren't industry standards—they were our promises.
+                    We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. GPS route verification every night. Photo documentation when it matters. A 100% collection rate guarantee. Real people answering the phone. These weren't industry standards—they were our promises.
                   </p>
                   <p className="text-lg">
                     Today, we're proud to provide valet trash, junk removal, and bulk item removal to communities across Orlando, Kissimmee, and surrounding areas. We're more than a waste management company—we're your partner in creating cleaner, happier apartment communities.
@@ -483,7 +483,7 @@ export default function AboutClient() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">100% collection commitment with same-night cure on verified missed pickups</span>
+                    <span className="text-lg">100% collection commitment with verified missed pickups made right</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />

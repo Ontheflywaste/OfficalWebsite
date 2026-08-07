@@ -31,7 +31,7 @@ export default function ServiceAreaClient({
     'valet-trash': [
       '100% Collection Commitment',
       'GPS-Tracked Truck Routing',
-      'Same-Night Cure on Verified Missed Pickups',
+      'Verified Missed Pickups Made Right',
       'Flexible 5-7 Day Service',
       'Professional Uniformed Staff',
       'Dedicated Account Management'

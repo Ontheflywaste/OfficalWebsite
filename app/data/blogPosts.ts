@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'technology-doorstep-trash-collection-hoa-resort-communities',
     title: 'How Technology Is Changing Doorstep Trash Collection for HOA & Resort Communities',
-    excerpt: 'Boards and property managers are no longer satisfied with "the trash is usually gone." They want proof, the same night. Here\'s how GPS-verified routes, timestamped photos, and real-time apps are resetting the standard for doorstep trash collection.',
+    excerpt: 'Boards and property managers are no longer satisfied with "the trash is usually gone." They want proof. Here\'s how GPS-verified routes, timestamped photos, and real-time apps are resetting the standard for doorstep trash collection.',
     category: 'Technology',
     date: 'August 4, 2026',
     readTime: '7 min read',
@@ -111,7 +111,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'That model is quietly disappearing. Across HOA, resort-style, and multifamily communities in Central Florida, boards and property managers are no longer satisfied with "the trash is usually gone." They want proof. They want it the same night. And technology is finally making that possible.'
+        text: 'That model is quietly disappearing. Across HOA, resort-style, and multifamily communities in Central Florida, boards and property managers are no longer satisfied with "the trash is usually gone." They want proof. And technology is finally making that possible.'
       },
       {
         type: 'paragraph',
@@ -127,15 +127,15 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'A modern valet trash operation captures a <strong>timestamped photo at every single door, every night</strong>. Not a sample. Not the ones that looked messy. Every door. When a resident insists their trash was left out and skipped, the answer used to be a shrug. Now it\'s a photo with a time stamp showing exactly what was — or wasn\'t — at that door when our porter arrived.'
+        text: 'A modern valet trash operation runs every route with <strong>GPS verification</strong> — a record that the whole community was covered, building by building. And when it matters, it documents with <strong>timestamped photos</strong>: a violation like trash left out against community rules, or confirmation that a specific unit was serviced. When a resident insists their trash was skipped, the answer used to be a shrug. Now there\'s a record to look at instead of a guess.'
       },
       {
         type: 'paragraph',
-        text: 'That single change resolves the disputes that used to eat up a property manager\'s week. It also protects the community: if a bag genuinely was missed, the record shows it, and it gets corrected fast rather than argued about.'
+        text: 'That single change resolves the disputes that used to eat up a property manager\'s week. It also protects the community: if a bag genuinely was missed, the record shows it, and it gets corrected rather than argued about.'
       },
       {
         type: 'paragraph',
-        text: 'We pair every photo with our <strong>4-hour missed-pickup resolution policy</strong>. If something is reported missed, it\'s handled within four hours — not "we\'ll get it tomorrow." Together, the photo record and the resolution window are what let us stand behind a <strong>100% collection guarantee</strong>: the guarantee isn\'t a slogan, it\'s backed by the documentation and the response time that make it real.'
+        text: 'We pair that record with a simple standard: if a missed pickup is verified, we make it right. Together, the GPS verification and the photo documentation are what let us stand behind a <strong>100% collection guarantee</strong>: the guarantee isn\'t a slogan, it\'s backed by the records that make it real.'
       },
       {
         type: 'heading2',
@@ -163,7 +163,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'We send a <strong>daily route confirmation to management</strong> — a same-day summary that lands where managers already communicate. No logging into a portal, no waiting for a report. Every morning, the person responsible for the community can see that last night\'s service was completed, with the documentation behind it. When a board asks "is the valet service actually running seven nights a week?", the manager has the answer in hand instead of hoping.'
+        text: 'We send a <strong>daily route confirmation to management</strong> — a summary that lands where managers already communicate. No logging into a portal, no waiting for a report. Every morning, the person responsible for the community can see that last night\'s service was completed, with the documentation behind it. When a board asks "is the valet service actually running seven nights a week?", the manager has the answer in hand instead of hoping.'
       },
       {
         type: 'paragraph',
@@ -192,9 +192,9 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'list',
         items: [
-          '<strong>Can you show that every door was serviced last night?</strong> (Timestamped photos.)',
+          '<strong>Can you document what happened at a specific door when it matters?</strong> (Timestamped photos when necessary.)',
           '<strong>Can you prove the whole community was covered, not just part of it?</strong> (GPS-verified routes.)',
-          '<strong>How fast is a missed pickup actually resolved?</strong> (A defined window — ours is four hours.)',
+          '<strong>How is a missed pickup handled?</strong> (Verified misses get made right — backed by the records, not a shrug.)',
           '<strong>How often do you actually collect?</strong> (Seven nights, or five dressed up as seven?)',
           '<strong>How do I see all of this without chasing you?</strong> (Daily reporting, and increasingly, a live app.)'
         ]
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'At On The Fly Waste Solutions, that standard is how we\'ve built the company from day one: <a href="/services/valet-trash/" class="text-primary font-semibold hover:underline">doorstep valet trash service</a> seven nights a week, GPS-verified, photo-documented, and backed by a guarantee we can prove. If your community deserves that level of accountability — whether you need <a href="/valet-trash-orlando-fl/" class="text-primary font-semibold hover:underline">valet trash in Orlando</a> or anywhere across Central Florida — <a href="/contact/" class="text-primary font-semibold hover:underline">talk to our team</a>.'
+        text: 'At On The Fly Waste Solutions, that standard is how we\'ve built the company from day one: <a href="/services/valet-trash/" class="text-primary font-semibold hover:underline">doorstep valet trash service</a> seven nights a week, GPS-verified, photo-documented when it matters, and backed by a guarantee we can prove. If your community deserves that level of accountability — whether you need <a href="/valet-trash-orlando-fl/" class="text-primary font-semibold hover:underline">valet trash in Orlando</a> or anywhere across Central Florida — <a href="/contact/" class="text-primary font-semibold hover:underline">talk to our team</a>.'
       },
       {
         type: 'paragraph',
@@ -260,7 +260,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'By 2030, boards will expect every doorstep collection to come with proof — a <strong>timestamped photo at each door</strong> and a <strong>GPS-verified record</strong> that the entire community was covered. Not because managers are suspicious, but because they\'re accountable to residents and to a budget, and "it probably got done" isn\'t something you can put in a board report.'
+        text: 'By 2030, boards will expect every doorstep collection to come with proof — a <strong>GPS-verified record</strong> that the entire community was covered, backed by <strong>timestamped photo documentation</strong> when a specific unit or violation calls for it. Not because managers are suspicious, but because they\'re accountable to residents and to a budget, and "it probably got done" isn\'t something you can put in a board report.'
       },
       {
         type: 'paragraph',
@@ -296,15 +296,15 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'heading2',
-        text: '4. Reliability Measured in Hours, Not "We\'ll Get to It"'
+        text: '4. Reliability You Can Hold a Vendor To, Not "We\'ll Get to It"'
       },
       {
         type: 'paragraph',
-        text: 'As communities professionalize, so do their service-level expectations. A missed pickup won\'t be acceptable to resolve "next visit." The benchmark is shifting toward same-day, defined resolution windows — the kind of commitment you can write into a service agreement and hold a vendor to.'
+        text: 'As communities professionalize, so do their service-level expectations. A missed pickup won\'t be acceptable to resolve "next visit." The benchmark is shifting toward defined, accountable resolution — the kind of commitment you can write into a service agreement and hold a vendor to.'
       },
       {
         type: 'paragraph',
-        text: 'We already operate on a <strong>4-hour missed-pickup resolution policy</strong> and collect <strong>7 nights a week, no exceptions</strong>, because that\'s the reliability standard a resident-facing amenity actually requires. By 2030, that won\'t be a differentiator — it\'ll be the floor. Communities should be wary of any provider still running five days a week and calling it doorstep service.'
+        text: 'We already make verified missed pickups right and collect <strong>7 nights a week, no exceptions</strong>, because that\'s the reliability standard a resident-facing amenity actually requires. By 2030, that won\'t be a differentiator — it\'ll be the floor. Communities should be wary of any provider still running five days a week and calling it doorstep service.'
       },
       {
         type: 'heading2',
@@ -316,7 +316,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'A guarantee only means something when there\'s a system behind it. Our <strong>100% collection guarantee</strong> works because it\'s backed by GPS-verified routes, timestamped photo documentation, daily reporting to management, and that four-hour resolution window — the guarantee and the evidence are the same thing. Smart communities will stop accepting guarantees on their own and start asking, "what\'s the system that makes this true?" That question is going to reshape how boards choose vendors.'
+        text: 'A guarantee only means something when there\'s a system behind it. Our <strong>100% collection guarantee</strong> works because it\'s backed by GPS-verified routes, timestamped photo documentation when it matters, and daily reporting to management — the guarantee and the evidence are the same thing. Smart communities will stop accepting guarantees on their own and start asking, "what\'s the system that makes this true?" That question is going to reshape how boards choose vendors.'
       },
       {
         type: 'heading2',
@@ -332,7 +332,7 @@ export const blogPosts: BlogPost[] = [
           'Can you show me proof of service at the door and across the route?',
           'Can I see the night\'s service in real time, on my own?',
           'How do you support and report on recycling and sustainability?',
-          'What\'s your defined resolution window for a missed pickup?',
+          'What\'s your standard for making a verified missed pickup right?',
           'What\'s the system behind your reliability claims?'
         ]
       },
@@ -427,7 +427,7 @@ export const blogPosts: BlogPost[] = [
           '<strong>Photo-Stamped Service Reports:</strong> Before-and-after photos for every bulk removal, pressure wash, and junk haul, attached directly to the completion notification.',
           '<strong>One-Tap Service Requests:</strong> Need a same-day bulk pickup or an emergency pressure wash? Fire off a request from the app — our dispatcher will see it instantly.',
           '<strong>Resident and Homeowner Complaint Logging:</strong> Log a concern against a specific pickup and watch the incident close — with GPS route confirmation for valet trash, and photo evidence for bulk, junk, and pressure-washing jobs.',
-          '<strong>Monthly Service Dashboard:</strong> 100% collection commitment is our promise. The dashboard will show the math — routes scheduled, routes completed, and any reported misses that were cured the same night.',
+          '<strong>Monthly Service Dashboard:</strong> 100% collection commitment is our promise. The dashboard will show the math — routes scheduled, routes completed, and any reported misses that were made right.',
           '<strong>Invoice & Contract Access:</strong> Every invoice, every active service line, every addendum — searchable from your phone.'
         ]
       },

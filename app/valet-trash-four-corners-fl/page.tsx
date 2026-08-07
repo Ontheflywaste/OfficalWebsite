@@ -43,7 +43,7 @@ const data: CityPageData = {
     },
     {
       title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with same-night cure on verified missed pickups',
+      description: 'GPS-tracked routing with verified missed pickups made right',
     },
     {
       title: 'Flexible Service Options',
@@ -56,7 +56,7 @@ const data: CityPageData = {
   whySubtitle: 'Trusted by property managers across Central Florida',
   serviceCardDescriptions: {
     valetTrash:
-      'Professional doorstep trash collection for Four Corners communities with GPS-tracked routing and same-night cure on verified missed pickups.',
+      'Professional doorstep trash collection for Four Corners communities with GPS-tracked routing and verified missed pickups made right.',
     bulkRemoval:
       'Scheduled bulk item pickup for furniture, appliances, and large items at your Four Corners property.',
     junkRemoval:

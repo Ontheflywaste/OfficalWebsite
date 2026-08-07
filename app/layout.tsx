@@ -257,7 +257,7 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Service",
             "name": "Door to Door Trash Collection",
-            "description": "Door to door trash collection and doorstep trash pickup service for apartment communities, HOA, resort, and condo communities across Central Florida. GPS-tracked truck routing with same-night cure on verified missed pickups.",
+            "description": "Door to door trash collection and doorstep trash pickup service for apartment communities, HOA, resort, and condo communities across Central Florida. GPS-tracked truck routing with verified missed pickups made right.",
             "provider": {
               "@type": "LocalBusiness",
               "name": "On The Fly Waste Solutions"
@@ -281,7 +281,7 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Service",
             "name": "Valet Trash Service",
-            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with a 100% collection commitment, GPS-tracked routing, and same-night cure on verified missed pickups",
+            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with a 100% collection commitment, GPS-tracked routing, and verified missed pickups made right",
             "provider": {
               "@type": "LocalBusiness",
               "name": "On The Fly Waste Solutions"
@@ -395,7 +395,7 @@ export default function RootLayout({
         "name": "What is valet trash service for apartments?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night cure on verified missed pickups."
+          "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and verified missed pickups made right."
         }
       },
       {
@@ -403,7 +403,7 @@ export default function RootLayout({
         "name": "How much does valet trash cost for an apartment community in Orlando?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Valet trash service costs typically range from $25-60 per unit per month for high-end resort style communities depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
+          "text": "Valet trash for an apartment community in Orlando is priced per unit, per month. The exact rate comes down to two things: how big your community is and which services you want included — nightly valet trash, recycling, bulk pickup, and so on. Larger communities usually get a lower per-unit rate; smaller ones are priced a little higher per unit, or paired with nearby routes to keep it affordable. The best way to get a real number is a quick quote for your property — call (407) 274-5019 or request one online and we'll price it for your community."
         }
       },
       {

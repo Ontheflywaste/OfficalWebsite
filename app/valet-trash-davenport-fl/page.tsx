@@ -43,7 +43,7 @@ const data: CityPageData = {
     },
     {
       title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with same-night cure on verified missed pickups',
+      description: 'GPS-tracked routing with verified missed pickups made right',
     },
     {
       title: 'Flexible Service Schedule',
@@ -56,7 +56,7 @@ const data: CityPageData = {
   whySubtitle: 'Trusted by property managers throughout Davenport and Polk County',
   serviceCardDescriptions: {
     valetTrash:
-      'Professional doorstep trash collection for your Davenport apartment community with GPS-tracked routing and same-night cure on verified missed pickups.',
+      'Professional doorstep trash collection for your Davenport apartment community with GPS-tracked routing and verified missed pickups made right.',
     bulkRemoval:
       'Scheduled bulk item pickup for furniture, appliances, and large items at your Davenport property.',
     junkRemoval:

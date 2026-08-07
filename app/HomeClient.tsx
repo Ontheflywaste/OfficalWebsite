@@ -14,11 +14,11 @@ export default function HomeClient() {
   const faqs = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and same-night cure on any verified missed pickup."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and verified missed pickups made right."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
-      answer: "Valet trash service costs typically range from $25-60 per unit per month for high-end resort style communities depending on property size, collection frequency, and specific service requirements. We offer customized pricing based on your property's unique needs. Contact us for a free, no-obligation quote tailored to your Orlando apartment community."
+      answer: "Valet trash for an apartment community in Orlando is priced per unit, per month. The exact rate comes down to two things: how big your community is and which services you want included — nightly valet trash, recycling, bulk pickup, and so on. Larger communities usually get a lower per-unit rate; smaller ones are priced a little higher per unit, or paired with nearby routes to keep it affordable. The best way to get a real number is a quick quote for your property — call (407) 274-5019 or request one online and we'll price it for your community."
     },
     {
       question: "Do you offer bulk item removal for apartment complexes in Central Florida?",
@@ -290,7 +290,7 @@ export default function HomeClient() {
                     <h3 className="text-lg font-semibold text-ink mb-1">Instant Service Alerts</h3>
                     <p className="text-ink-muted leading-relaxed">
                       Get notified about delays, weather holds, and completed bulk
-                      requests. Issues are resolved in minutes, not days.
+                      requests. Issues get resolved with records, not back-and-forth.
                     </p>
                   </div>
                 </div>
@@ -527,7 +527,7 @@ export default function HomeClient() {
                 icon: Trash2,
                 title: 'Valet Trash Service',
                 description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and same-night cure on any verified missed pickup.',
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and verified missed pickups made right.',
                 image: '/Images/Valettrashimage.jpg',
                 imageAlt: 'Professional valet trash doorstep collection service',
               },
@@ -775,13 +775,13 @@ export default function HomeClient() {
                 icon: Shield,
                 title: '100% Collection Commitment',
                 description:
-                  'If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we send a crew back out the same night to collect. No paperwork, no excuses, no finger-pointing.',
+                  'If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. No paperwork, no excuses, no finger-pointing.',
               },
               {
                 icon: Camera,
                 title: 'Property Manager Portal',
                 description:
-                  'Instant access to service reports and route history. Complete visibility into nightly route completion and any cured misses at your fingertips.',
+                  'Instant access to service reports and route history. Complete visibility into nightly route completion and any verified misses made right, at your fingertips.',
               },
             ].map((adv, i) => {
               const Icon = adv.icon;

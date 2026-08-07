@@ -3,7 +3,7 @@ import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Sanford, FL | On The Fly Waste Solutions',
-  description: 'Professional valet trash service for apartments, condos, and resorts in Sanford, FL. 100% collection commitment with GPS-tracked truck routing and same-night cure on verified missed pickups. Reliable service for Seminole County.',
+  description: 'Professional valet trash service for apartments, condos, and resorts in Sanford, FL. 100% collection commitment with GPS-tracked truck routing and verified missed pickups made right. Reliable service for Seminole County.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/valet-trash-sanford-fl/',
   },

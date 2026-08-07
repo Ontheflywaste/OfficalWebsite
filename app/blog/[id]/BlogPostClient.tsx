@@ -77,7 +77,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pt-nav-stack">
       <article>
         <div className="relative bg-surface-dark overflow-hidden">
           <Image
@@ -99,7 +99,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 min-h-96 flex items-center justify-center pt-hero-safe pb-14">
+          <div className="relative z-10 min-h-96 flex items-center justify-center py-14">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <ScrollReveal>
                 <div className="mb-4">

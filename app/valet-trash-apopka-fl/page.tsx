@@ -3,7 +3,7 @@ import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Apopka, FL | On The Fly Waste Solutions',
-  description: 'Professional valet trash service for apartments, condos, and resorts in Apopka, FL. 100% collection commitment with GPS-tracked truck routing and same-night cure on verified missed pickups. Trusted by property managers.',
+  description: 'Professional valet trash service for apartments, condos, and resorts in Apopka, FL. 100% collection commitment with GPS-tracked truck routing and verified missed pickups made right. Trusted by property managers.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/valet-trash-apopka-fl/',
   },

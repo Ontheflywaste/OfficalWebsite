@@ -17,7 +17,7 @@ export default function HoaResortValetTrashClient() {
     'Compactor enclosure management service and compactor area cleaning service for apartments',
     'Pet waste station service apartment communities love',
     'Bulk item removal with before & after photo documentation for your records',
-    '100% collection commitment with same-night cure on verified missed pickups',
+    '100% collection commitment with verified missed pickups made right',
   ];
 
   const communityTypes = [
@@ -107,7 +107,7 @@ export default function HoaResortValetTrashClient() {
               Door to Door Trash Collection for HOA &amp; Resort Community Valet Trash Service — Central Florida
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto mb-10">
-              On The Fly Waste Solutions is the HOA waste management company Central Florida property boards, resort managers, and condo associations rely on for discreet, GPS-tracked, doorstep valet trash service — backed by a 100% collection commitment and same-night cure on any verified missed pickup (Ring camera, building-level confirmation, or our truck GPS data).
+              On The Fly Waste Solutions is the HOA waste management company Central Florida property boards, resort managers, and condo associations rely on for discreet, GPS-tracked, doorstep valet trash service — backed by a 100% collection commitment and verified missed pickups made right (Ring camera, building-level confirmation, or our truck GPS data).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -138,7 +138,7 @@ export default function HoaResortValetTrashClient() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              Whether you run a <strong>gated community</strong>, a <strong>luxury resort style apartment</strong> complex, a <strong>condo association</strong>, a <strong>vacation rental community</strong>, or a brand-new <strong>multifamily development</strong>, On The Fly delivers the same enterprise-grade waste program: GPS-tracked truck routing, uniformed crews, before &amp; after photo documentation on every bulk removal, and a 100% collection commitment with same-night cure on any verified missed pickup.
+              Whether you run a <strong>gated community</strong>, a <strong>luxury resort style apartment</strong> complex, a <strong>condo association</strong>, a <strong>vacation rental community</strong>, or a brand-new <strong>multifamily development</strong>, On The Fly delivers the same enterprise-grade waste program: GPS-tracked truck routing, uniformed crews, before &amp; after photo documentation on every bulk removal, and a 100% collection commitment with verified missed pickups made right.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>

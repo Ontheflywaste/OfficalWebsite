@@ -3,7 +3,7 @@ import ServiceAreaClient from '../components/ServiceAreaClient';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Clermont, FL | On The Fly Waste Solutions',
-  description: 'Professional valet trash service for apartments, condos, and resorts in Clermont, FL. 100% collection commitment with GPS-tracked truck routing and same-night cure on verified missed pickups. Serving all Clermont neighborhoods.',
+  description: 'Professional valet trash service for apartments, condos, and resorts in Clermont, FL. 100% collection commitment with GPS-tracked truck routing and verified missed pickups made right. Serving all Clermont neighborhoods.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/valet-trash-clermont-fl/',
   },

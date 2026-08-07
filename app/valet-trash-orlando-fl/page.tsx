@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServiceAreaClient from '../components/ServiceAreaClient';
+import FaqSchema from '../components/FaqSchema';
 
 const orlandoFaqs = [
   {
@@ -54,7 +55,9 @@ export const metadata: Metadata = {
 
 export default function ValetTrashOrlandoPage() {
   return (
-    <ServiceAreaClient
+    <>
+      <FaqSchema faqs={orlandoFaqs} />
+      <ServiceAreaClient
       city="Orlando"
       state="FL"
       service="valet-trash"
@@ -76,5 +79,6 @@ export default function ValetTrashOrlandoPage() {
         'Waterford Lakes'
       ]}
     />
+    </>
   );
 }

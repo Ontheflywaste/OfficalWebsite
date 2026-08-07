@@ -386,52 +386,6 @@ export default function RootLayout({
     ]
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is valet trash service for apartments?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Valet trash service is a convenient waste removal solution where residents place their bagged trash outside their door, and our professional team collects it directly from their doorstep. This eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and verified missed pickups made right."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does valet trash cost for an apartment community in Orlando?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Valet trash for an apartment community in Orlando is priced per unit, per month. The exact rate comes down to two things: how big your community is and which services you want included — nightly valet trash, recycling, bulk pickup, and so on. Larger communities usually get a lower per-unit rate; smaller ones are priced a little higher per unit, or paired with nearby routes to keep it affordable. The best way to get a real number is a quick quote for your property — call (407) 274-5019 or request one online and we'll price it for your community."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer bulk item removal for apartment complexes in Central Florida?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! We provide comprehensive bulk item pickup services for apartment complexes throughout Central Florida. Our bulk removal service handles furniture, appliances, mattresses, and other large items on a scheduled basis. We offer flexible pickup schedules and can accommodate both routine and on-demand bulk removal needs for property managers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What areas in Central Florida do you serve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We proudly serve Orlando, Kissimmee, Altamonte Springs, Winter Park, Lake Nona, and surrounding Central Florida communities. Our service area covers apartment communities, condos, and resort-style properties throughout the region. Contact us to confirm service availability in your specific location."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you serve resort communities and condos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! We specialize in providing valet trash service for resort communities, luxury condos, and high-end apartment properties across Central Florida. Our resort valet trash service is designed to meet the elevated expectations of upscale properties, with white-glove service, GPS-tracked routing, and dedicated account management."
-        }
-      }
-    ]
-  };
 
   return (
     <html lang="en" className={inter.variable}>
@@ -522,12 +476,6 @@ export default function RootLayout({
           id="schema-org"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-          strategy="beforeInteractive"
-        />
-        <Script
-          id="faq-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
           strategy="beforeInteractive"
         />
         <Navbar />

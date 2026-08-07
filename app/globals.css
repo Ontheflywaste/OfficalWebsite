@@ -394,3 +394,9 @@ iframe#hubspot-conversations-iframe {
 .pt-hero-safe {
   padding-top: calc(var(--nav-stack) + 3rem);
 }
+
+/* Exact navbar-stack offset (no cushion) — for full-bleed sections whose
+   top edge should sit flush against the fixed navbar's bottom edge. */
+.pt-nav-stack {
+  padding-top: var(--nav-stack);
+}

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import ValetTrashClient from './ValetTrashClient';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 import ServiceSchema from '../../components/ServiceSchema';
+import FaqSchema from '../../components/FaqSchema';
+import { faqs } from './faqs';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service for HOA & Resort Communities | Central Florida',
@@ -34,6 +36,7 @@ export default function ValetTrashPage() {
         description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS tracking and a 100% collection guarantee."
         slug="/services/valet-trash/"
       />
+      <FaqSchema faqs={faqs} />
       <ValetTrashClient />
     </>
   );

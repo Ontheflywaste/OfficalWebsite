@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import HomeClient from './HomeClient';
+import FaqSchema from './components/FaqSchema';
+import { faqs } from './data/homeFaqs';
 
 export const metadata: Metadata = {
   title: 'Door to Door Valet Trash & Waste Management for HOA, Resort & Multifamily Communities | Central Florida | On The Fly Waste Solutions',
@@ -52,6 +54,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
+      <FaqSchema faqs={faqs} />
       <HomeClient />
     </>
   );

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import JunkRemovalClient from './JunkRemovalClient';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema';
 import ServiceSchema from '../../components/ServiceSchema';
+import FaqSchema from '../../components/FaqSchema';
+import { faqs } from './faqs';
 
 export const metadata: Metadata = {
   title: 'Professional Junk Removal Services Orlando FL | On The Fly',
@@ -27,6 +29,7 @@ export default function JunkRemovalPage() {
         description="Professional junk removal for homes, businesses, and apartment communities in Orlando and Central Florida. Furniture, appliances, estate cleanouts, and same-day service options."
         slug="/services/junk-removal/"
       />
+      <FaqSchema faqs={faqs} />
       <JunkRemovalClient />
     </>
   );

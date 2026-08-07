@@ -17,11 +17,9 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
     return content.map((block, index) => {
       switch (block.type) {
         case 'heading1':
-          return (
-            <h1 key={index} className="text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
-              {block.text}
-            </h1>
-          );
+          // The hero renders the post title as the page's only H1; body-level
+          // heading1 blocks (every post opens with one) would duplicate it.
+          return null;
         case 'heading2':
           return (
             <h2 key={index} className="text-3xl font-bold text-gray-900 mb-4 mt-12 leading-tight">
@@ -79,9 +77,9 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-hero-safe">
+    <div className="min-h-screen bg-white">
       <article>
-        <div className="relative h-96 bg-surface-dark overflow-hidden">
+        <div className="relative bg-surface-dark overflow-hidden">
           <Image
             src={post.image}
             alt={post.title}
@@ -101,7 +99,7 @@ export default function BlogPostClient({ post }: { post: BlogPost }) {
             aria-hidden="true"
           />
 
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="relative z-10 min-h-96 flex items-center justify-center pt-hero-safe pb-14">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <ScrollReveal>
                 <div className="mb-4">

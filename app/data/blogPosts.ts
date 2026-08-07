@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The Future of Waste Management: What Smart Communities Will Expect by 2030',
     excerpt: 'By 2030, HOA and resort communities will expect verifiable service, real-time transparency, measured sustainability, and accountability backed by a system — not a promise. Here\'s where waste management is heading and what boards should start asking for now.',
     category: 'Industry Trends',
-    date: 'August 4, 2026',
+    date: 'December 3, 2025',
     readTime: '8 min read',
     author: 'Donnell Edwards, CEO & Founder',
     image: '/Images/ApartmentBuildingHero.webp',

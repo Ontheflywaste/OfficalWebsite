@@ -22,13 +22,17 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'On The Fly Waste Solutions | Professional Valet Trash Services Orlando FL',
   description: 'Professional valet trash, bulk removal, and pressure washing services for Central Florida communities.',
+  // Icon set is copied verbatim from the app repo (OTFapp1/public) so
+  // both properties share one mark — re-copy from there when it changes,
+  // and bump ?v= so returning visitors' cached favicons refresh.
   icons: {
     icon: [
-      { url: '/Images/Favicon1.png' },
-      { url: '/Images/Favicon1.png', sizes: '32x32', type: 'image/png' },
-      { url: '/Images/Favicon1.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico?v=2', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg?v=2', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png?v=2', sizes: '96x96', type: 'image/png' },
     ],
-    apple: '/Images/Favicon1.png',
+    shortcut: '/favicon.ico?v=2',
+    apple: '/apple-touch-icon.png?v=2',
   },
   metadataBase: new URL('https://ontheflywastesolutions.com'),
   verification: {

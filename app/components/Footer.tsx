@@ -281,12 +281,12 @@ export default function Footer() {
           <div className="text-center mb-6">
             <p className="text-gray-300 text-sm">
               Client Portal:{' '}
-              <Link
-                href="/client-login/"
+              <a
+                href="https://app.ontheflywastesolutions.com"
                 className="text-white hover:text-primary underline transition-colors"
               >
                 Client Login
-              </Link>
+              </a>
             </p>
           </div>
 

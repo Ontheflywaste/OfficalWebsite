@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import DemoClient from './DemoClient';
 
 export const metadata: Metadata = {
-  title: 'Schedule a Live Demo — On The Fly Waste Solutions',
+  title: 'Try the On The Fly App — On The Fly Waste Solutions',
   description:
-    'Schedule a live, guided demo of the On The Fly valet trash platform for resort communities, HOAs, and property managers across Central Florida — GPS-verified routes, photo documentation, and real service visibility.',
+    'Two easy ways to see the On The Fly app: request a self-guided demo link or book a live Zoom walkthrough. GPS-verified routes, photo documentation, and nightly service visibility for resort communities and HOAs across Central Florida.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/demo/',
   },
   openGraph: {
-    title: 'Schedule a Live Demo — On The Fly Waste Solutions',
+    title: 'Try the On The Fly App — On The Fly Waste Solutions',
     description:
-      'A guided walkthrough of GPS-verified valet trash service for resort communities and HOAs across Central Florida.',
+      'Explore the On The Fly app on your own with a demo link, or book a live Zoom walkthrough — proof-of-service valet trash for resort communities and HOAs across Central Florida.',
     type: 'website',
     url: 'https://ontheflywastesolutions.com/demo/',
   },

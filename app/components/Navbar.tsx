@@ -115,18 +115,9 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {pathname !== '/demo/' && pathname !== '/client-login/' ? (
-              <Link
-                href="/demo/"
-                onClick={() => trackRequestDemo('navbar_mobile_topbar')}
-                className="md:hidden inline-flex items-center gap-1.5 bg-primary text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-primary-dark transition-all shadow-lg"
-              >
-                App Demo
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            ) : (
-              <span className="md:hidden w-6" aria-hidden="true" />
-            )}
+            {/* Spacer mirrors the 24px hamburger so the logo stays centered;
+                the demo CTA lives in the hero and the mobile menu instead. */}
+            <span className="md:hidden w-6" aria-hidden="true" />
 
             <div className="hidden md:flex items-center space-x-5 lg:space-x-6" role="menubar">
               <Link

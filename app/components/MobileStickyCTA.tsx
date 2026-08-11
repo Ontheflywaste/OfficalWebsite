@@ -72,7 +72,16 @@ export default function MobileStickyCTA() {
           (Request Quote) for clarity. */}
       <Link
         href="/contact/"
-        onClick={() => trackRequestDemo('mobile_sticky')}
+        onClick={(e) => {
+          trackRequestDemo('mobile_sticky');
+          // On pages with an in-page quote form (homepage), smooth-scroll to it
+          // instead of navigating; everywhere else fall through to /contact/.
+          const quote = document.getElementById('quote');
+          if (quote) {
+            e.preventDefault();
+            quote.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }}
         className="inline-flex items-center gap-2 bg-primary text-white pl-4 pr-5 py-3 rounded-full font-bold text-sm shadow-[0_10px_30px_-6px_rgba(22,163,74,0.55)] active:scale-[0.97] transition-transform"
       >
         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">

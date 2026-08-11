@@ -134,73 +134,343 @@ export default function HomeClient() {
         </div>
       </section>
 
+      <section id="welcome-section" className="relative py-20 overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute inset-0 bg-surface-dark">
+          <Image
+            src="/Images/TruckImage.JPG"
+            alt="On The Fly Waste Solutions truck providing door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
+            fill
+            sizes="100vw"
+            loading="lazy"
+            className="object-cover object-center"
+            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-black/70"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <ScrollReveal>
+              <div className="lg:pr-8">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                  Welcome to On The Fly Waste Solutions
+                </h2>
+                <div className="space-y-4 text-gray-100 text-lg leading-relaxed">
+                  <p>
+                    Since 2020, On The Fly Waste Solutions has been the go-to trash valet service transforming apartment waste management across Central Florida with innovative doorstep trash collection and comprehensive waste solutions.
+                  </p>
+                  <p>
+                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-primary">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-primary">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
+                  </p>
+                  <p>
+                    As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
+                  </p>
+                  <p>
+                    Our team doesn't just handle apartment trash pickup—we partner with property managers to enhance resident satisfaction, reduce maintenance calls, and maintain pristine communities that prospects want to call home.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/about/"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    Learn More About Us
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src="/Images/artemistradeshow.jpg"
+                  alt="On The Fly Waste Solutions team at trade show"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-2xl shadow-2xl border-4 border-white/10 object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden lg:block">
+                  <div className="text-3xl font-bold">100%</div>
+                  <div className="text-sm">Collection Rate</div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
           style={{
             background:
-              'radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 15% 20%, rgba(22, 163, 74, 0.12) 0%, transparent 50%), radial-gradient(circle at 85% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
-                <Sparkles className="w-4 h-4" aria-hidden="true" />
-                By the Numbers
-              </div>
+            <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
-                Trusted by Leading Properties
+                Our Services
               </h2>
-              <p className="text-xl text-ink-muted">
-                Join the growing number of communities that trust On The Fly
+              <p className="text-xl text-ink-muted max-w-2xl mx-auto">
+                Comprehensive apartment community waste management solutions. Serving Orlando, Kissimmee & Central Florida resorts and apartment communities.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            <ScrollReveal className="h-full">
-              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+            {[
+              {
+                href: '/services/valet-trash/',
+                icon: Trash2,
+                title: 'Valet Trash Service',
+                description:
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and verified missed pickups made right.',
+                image: '/Images/Valettrashimage.jpg',
+                imageAlt: 'Professional valet trash doorstep collection service',
+              },
+              {
+                href: '/junk-removal-orlando-fl/',
+                icon: Building2,
+                title: 'Junk Removal',
+                description:
+                  'Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.',
+                image: '/Images/Junk.jpg',
+                imageAlt: 'Professional junk removal hauling service',
+              },
+              {
+                href: '/services/bulk-removal/',
+                icon: Recycle,
+                title: 'Bulk Removal',
+                description:
+                  'Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.',
+                image: '/Images/Dumpster.jpg',
+                imageAlt: 'Bulk dumpster pickup at apartment community',
+              },
+              {
+                href: '/services/pressure-washing/',
+                icon: Sparkles,
+                title: 'Pressure Washing',
+                description:
+                  'Professional pressure washing services to maintain clean, attractive common areas and building exteriors.',
+                image: '/Images/PressureWashingService.jpeg',
+                imageAlt: 'Pressure washing exterior surfaces',
+              },
+            ].map((svc, index) => {
+              const Icon = svc.icon;
+              return (
+                <ScrollReveal key={svc.href} delay={index * 0.12} className="h-full">
+                  <Link href={svc.href} className="group block h-full">
+                    <div className="relative h-full min-h-[480px] rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_30px_70px_-20px_rgba(22,163,74,0.45)] hover:-translate-y-2 hover:border-primary/50 flex flex-col">
+                      {/* Photo band — full-strength image confined to the top, text never overlaps it */}
+                      <div className="relative h-44 sm:h-48 flex-shrink-0 overflow-hidden">
+                        <Image
+                          src={svc.image}
+                          alt={svc.imageAlt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                        />
+                        {/* Soft seam into the solid body */}
+                        <div
+                          className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white to-transparent"
+                          aria-hidden="true"
+                        />
+                      </div>
+
+                      {/* Primary top accent — expands from center on hover */}
+                      <div
+                        className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-primary/0 via-primary to-primary/0 transition-all duration-700 ease-out group-hover:w-full"
+                        aria-hidden="true"
+                      />
+
+                      {/* Soft green radial glow — fades in on hover */}
+                      <div
+                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{
+                          background:
+                            'radial-gradient(circle at 50% 100%, rgba(22, 163, 74, 0.18) 0%, transparent 60%)',
+                        }}
+                        aria-hidden="true"
+                      />
+
+                      <div className="relative px-8 pb-8 flex flex-col flex-grow z-10">
+                        {/* Icon tile straddles the photo/body seam */}
+                        <div className="relative mb-6 -mt-8">
+                          <div
+                            className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 bg-primary"
+                            aria-hidden="true"
+                          />
+                          <div className="relative w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-primary group-hover:rotate-[-6deg] group-hover:scale-110 shadow-md">
+                            <Icon className="w-9 h-9 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-[6deg]" aria-hidden="true" />
+                          </div>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-ink mb-3 transition-colors duration-500 group-hover:text-primary">
+                          {svc.title}
+                        </h3>
+                        <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
+                          {svc.description}
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-primary font-semibold mt-auto">
+                          <span className="relative">
+                            Learn More
+                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                          </span>
+                          <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+
+          <ScrollReveal delay={0.5}>
+            <div className="mt-14 text-center">
+              <Link
+                href="/services/"
+                className="group inline-flex items-center gap-2 text-primary font-semibold text-lg"
+              >
+                <span className="relative">
+                  View All Services
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
+                </span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="#4285F4">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  5-Star Rated on Google
+                </h2>
+              </div>
+              <p className="text-xl text-gray-600 mb-8">
+                See what property managers and residents say about our valet trash service in Orlando
+              </p>
+              <a
+                href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all"
+              >
+                View All Reviews on Google
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <ScrollReveal delay={0.1}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">2,000+</div>
-                <div className="text-ink font-semibold text-lg">Units Served</div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated—no short-cuts. Donnell will go above and beyond."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    L
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Lynn Mollison</div>
+                    <div className="text-sm text-gray-600">HOA Board Member</div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.1} className="h-full">
-              <div className="relative h-full bg-gradient-to-br from-primary to-primary-dark p-8 pt-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group md:-mt-4 md:mb-0">
-                <div
-                  className="absolute inset-0 opacity-25 pointer-events-none"
-                  style={{
-                    background:
-                      'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
-                  }}
-                  aria-hidden="true"
-                />
-                <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
-                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
-                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    A
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Antonio Marcuz</div>
+                    <div className="text-sm text-gray-600">Property Management Company Owner</div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.2} className="h-full">
-              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <Calendar className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+            <ScrollReveal delay={0.3}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">7</div>
-                <div className="text-ink font-semibold text-lg">Days a Week Service</div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    W
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">William Barber</div>
+                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <section id="quote" className="py-20 bg-gray-50 scroll-mt-40">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
+              <div className="text-center mb-8">
+                <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
+                  Start Your 100% Collection Guarantee Today
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
+                </p>
+              </div>
+              <HubSpotForm
+                region="na1"
+                portalId="22416220"
+                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -409,222 +679,76 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section id="welcome-section" className="relative py-20 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute inset-0 bg-surface-dark">
-          <Image
-            src="/Images/TruckImage.JPG"
-            alt="On The Fly Waste Solutions truck providing door to door trash collection and doorstep valet trash service for HOA, resort style, and condo apartment communities across Central Florida"
-            fill
-            sizes="100vw"
-            loading="lazy"
-            className="object-cover object-center"
-            style={{ filter: 'brightness(0.85) contrast(1.1) saturate(1.15)' }}
-          />
-          <div className="absolute inset-0 bg-black/70"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <ScrollReveal>
-              <div className="lg:pr-8">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                  Welcome to On The Fly Waste Solutions
-                </h2>
-                <div className="space-y-4 text-gray-100 text-lg leading-relaxed">
-                  <p>
-                    Since 2020, On The Fly Waste Solutions has been the go-to trash valet service transforming apartment waste management across Central Florida with innovative doorstep trash collection and comprehensive waste solutions.
-                  </p>
-                  <p>
-                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-primary">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-primary">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
-                  </p>
-                  <p>
-                    As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resorts like Margaritaville and Reunion to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
-                  </p>
-                  <p>
-                    Our team doesn't just handle apartment trash pickup—we partner with property managers to enhance resident satisfaction, reduce maintenance calls, and maintain pristine communities that prospects want to call home.
-                  </p>
-                </div>
-                <div className="mt-8">
-                  <Link
-                    href="/about/"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold bg-white text-primary hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    Learn More About Us
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src="/Images/artemistradeshow.jpg"
-                  alt="On The Fly Waste Solutions team at trade show"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="rounded-2xl shadow-2xl border-4 border-white/10 object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden lg:block">
-                  <div className="text-3xl font-bold">100%</div>
-                  <div className="text-sm">Collection Rate</div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
           style={{
             background:
-              'radial-gradient(circle at 15% 20%, rgba(22, 163, 74, 0.12) 0%, transparent 50%), radial-gradient(circle at 85% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                <Sparkles className="w-4 h-4" aria-hidden="true" />
+                By the Numbers
+              </div>
               <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
-                Our Services
+                Trusted by Leading Properties
               </h2>
-              <p className="text-xl text-ink-muted max-w-2xl mx-auto">
-                Comprehensive apartment community waste management solutions. Serving Orlando, Kissimmee & Central Florida resorts and apartment communities.
+              <p className="text-xl text-ink-muted">
+                Join the growing number of communities that trust On The Fly
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
-            {[
-              {
-                href: '/services/valet-trash/',
-                icon: Trash2,
-                title: 'Valet Trash Service',
-                description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and verified missed pickups made right.',
-                image: '/Images/Valettrashimage.jpg',
-                imageAlt: 'Professional valet trash doorstep collection service',
-              },
-              {
-                href: '/junk-removal-orlando-fl/',
-                icon: Building2,
-                title: 'Junk Removal',
-                description:
-                  'Professional junk removal in Orlando FL for homeowners, residents, and apartment communities. Fast, reliable, and eco-friendly hauling and disposal.',
-                image: '/Images/Junk.jpg',
-                imageAlt: 'Professional junk removal hauling service',
-              },
-              {
-                href: '/services/bulk-removal/',
-                icon: Recycle,
-                title: 'Bulk Removal',
-                description:
-                  'Bulk trash pickup and bulk item removal for Orlando apartment complexes and Central Florida property managers. Scheduled service with flexible plans.',
-                image: '/Images/Dumpster.jpg',
-                imageAlt: 'Bulk dumpster pickup at apartment community',
-              },
-              {
-                href: '/services/pressure-washing/',
-                icon: Sparkles,
-                title: 'Pressure Washing',
-                description:
-                  'Professional pressure washing services to maintain clean, attractive common areas and building exteriors.',
-                image: '/Images/PressureWashingService.jpeg',
-                imageAlt: 'Pressure washing exterior surfaces',
-              },
-            ].map((svc, index) => {
-              const Icon = svc.icon;
-              return (
-                <ScrollReveal key={svc.href} delay={index * 0.12} className="h-full">
-                  <Link href={svc.href} className="group block h-full">
-                    <div className="relative h-full min-h-[480px] rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_30px_70px_-20px_rgba(22,163,74,0.45)] hover:-translate-y-2 hover:border-primary/50 flex flex-col">
-                      {/* Background image — scales on hover */}
-                      <Image
-                        src={svc.image}
-                        alt={svc.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
-                      />
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+            <ScrollReveal className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">2,000+</div>
+                <div className="text-ink font-semibold text-lg">Units Served</div>
+              </div>
+            </ScrollReveal>
 
-                      {/* Readability overlay — white/neutral at rest, warms toward primary on hover */}
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-white via-white/96 to-white/86 transition-all duration-500 group-hover:from-white group-hover:via-white/92 group-hover:to-white/70"
-                        aria-hidden="true"
-                      />
+            <ScrollReveal delay={0.1} className="h-full">
+              <div className="relative h-full bg-gradient-to-br from-primary to-primary-dark p-8 pt-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group md:-mt-4 md:mb-0">
+                <div
+                  className="absolute inset-0 opacity-25 pointer-events-none"
+                  style={{
+                    background:
+                      'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
+                  }}
+                  aria-hidden="true"
+                />
+                <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
+                </div>
+                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
+                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
+              </div>
+            </ScrollReveal>
 
-                      {/* Primary top accent — expands from center on hover */}
-                      <div
-                        className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] w-0 bg-gradient-to-r from-primary/0 via-primary to-primary/0 transition-all duration-700 ease-out group-hover:w-full"
-                        aria-hidden="true"
-                      />
-
-                      {/* Soft green radial glow — fades in on hover */}
-                      <div
-                        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        style={{
-                          background:
-                            'radial-gradient(circle at 50% 100%, rgba(22, 163, 74, 0.18) 0%, transparent 60%)',
-                        }}
-                        aria-hidden="true"
-                      />
-
-                      <div className="relative p-8 flex flex-col flex-grow z-10">
-                        {/* Icon tile with rotate + scale + bg fill */}
-                        <div className="relative mb-6">
-                          <div
-                            className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 bg-primary"
-                            aria-hidden="true"
-                          />
-                          <div className="relative w-16 h-16 bg-primary/15 rounded-xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-primary group-hover:rotate-[-6deg] group-hover:scale-110 shadow-md">
-                            <Icon className="w-9 h-9 text-primary transition-all duration-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-[6deg]" aria-hidden="true" />
-                          </div>
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-ink mb-3 transition-colors duration-500 group-hover:text-primary">
-                          {svc.title}
-                        </h3>
-                        <p className="text-ink-muted mb-6 leading-relaxed flex-grow">
-                          {svc.description}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-primary font-semibold mt-auto">
-                          <span className="relative">
-                            Learn More
-                            <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
-                          </span>
-                          <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </ScrollReveal>
-              );
-            })}
+            <ScrollReveal delay={0.2} className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Calendar className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">7</div>
+                <div className="text-ink font-semibold text-lg">Days a Week Service</div>
+              </div>
+            </ScrollReveal>
           </div>
-
-          <ScrollReveal delay={0.5}>
-            <div className="mt-14 text-center">
-              <Link
-                href="/services/"
-                className="group inline-flex items-center gap-2 text-primary font-semibold text-lg"
-              >
-                <span className="relative">
-                  View All Services
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500" aria-hidden="true" />
-                </span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1.5" aria-hidden="true" />
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
-      {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
       <section id="community-types" className="relative py-20 bg-white overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -815,106 +939,6 @@ export default function HomeClient() {
           className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"
           aria-hidden="true"
         />
-      </section>
-
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="#4285F4">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  5-Star Rated on Google
-                </h2>
-              </div>
-              <p className="text-xl text-gray-600 mb-8">
-                See what property managers and residents say about our valet trash service in Orlando
-              </p>
-              <a
-                href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all"
-              >
-                View All Reviews on Google
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <ScrollReveal delay={0.1}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated—no short-cuts. Donnell will go above and beyond."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    L
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Lynn Mollison</div>
-                    <div className="text-sm text-gray-600">HOA Board Member</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    A
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Antonio Marcuz</div>
-                    <div className="text-sm text-gray-600">Property Management Company Owner</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    W
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">William Barber</div>
-                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
       </section>
 
       <section className="py-20 bg-white">
@@ -1203,29 +1227,6 @@ export default function HomeClient() {
 
           <ScrollReveal>
             <FaqAccordion items={faqs} />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
-              <div className="text-center mb-8">
-                <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
-                <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
-                  Start Your 100% Collection Guarantee Today
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
-                </p>
-              </div>
-              <HubSpotForm
-                region="na1"
-                portalId="22416220"
-                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
-              />
-            </div>
           </ScrollReveal>
         </div>
       </section>

@@ -134,281 +134,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-40"
-          style={{
-            background:
-              'radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
-          }}
-          aria-hidden="true"
-        />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
-                <Sparkles className="w-4 h-4" aria-hidden="true" />
-                By the Numbers
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
-                Trusted by Leading Properties
-              </h2>
-              <p className="text-xl text-ink-muted">
-                Join the growing number of communities that trust On The Fly
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-            <ScrollReveal className="h-full">
-              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
-                </div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">2,000+</div>
-                <div className="text-ink font-semibold text-lg">Units Served</div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1} className="h-full">
-              <div className="relative h-full bg-gradient-to-br from-primary to-primary-dark p-8 pt-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group md:-mt-4 md:mb-0">
-                <div
-                  className="absolute inset-0 opacity-25 pointer-events-none"
-                  style={{
-                    background:
-                      'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
-                  }}
-                  aria-hidden="true"
-                />
-                <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
-                </div>
-                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
-                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2} className="h-full">
-              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                  <Calendar className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
-                </div>
-                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">7</div>
-                <div className="text-ink font-semibold text-lg">Days a Week Service</div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <section id="app-intro" className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-40"
-          style={{
-            background:
-              'radial-gradient(circle at 80% 20%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
-          }}
-          aria-hidden="true"
-        />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-14 max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-5">
-                <Sparkles className="w-4 h-4" aria-hidden="true" />
-                New — Property Manager App
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-5 leading-tight">
-                Manage Your Property's Waste Program from Your Pocket
-              </h2>
-              <p className="text-xl text-ink-muted leading-relaxed">
-                The On The Fly app brings real-time service tracking, photo
-                verification, and one-tap bulk pickup requests to property managers
-                and residents — all in a single, easy-to-use mobile experience.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Live GPS Route Tracking</h3>
-                    <p className="text-ink-muted leading-relaxed">
-                      Watch crews move through your property in real time and confirm
-                      every unit is serviced with GPS-verified check-ins.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Camera className="w-6 h-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Documented Bulk &amp; Pressure Jobs</h3>
-                    <p className="text-ink-muted leading-relaxed">
-                      Every bulk removal, junk haul, and pressure-washing job includes
-                      before &amp; after photos, attached to the completion notification.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Bell className="w-6 h-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Instant Service Alerts</h3>
-                    <p className="text-ink-muted leading-relaxed">
-                      Get notified about delays, weather holds, and completed bulk
-                      requests. Issues get resolved with records, not back-and-forth.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <BarChart3 className="w-6 h-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly Service Dashboards</h3>
-                    <p className="text-ink-muted leading-relaxed">
-                      Collection-rate reports, route completion analytics, and
-                      service history ready to drop into your owner reviews.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-6 h-6 text-primary" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-ink mb-1">Direct Team Messaging</h3>
-                    <p className="text-ink-muted leading-relaxed">
-                      Message your dedicated account lead and on-site crew directly
-                      from the app — no phone tag, no lost emails.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Link
-                    href="/demo/"
-                    onClick={() => trackRequestDemo('app_intro')}
-                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
-                  >
-                    Request App Demo
-                    <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                  </Link>
-                  <a
-                    href="https://app.ontheflywastesolutions.com"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all"
-                  >
-                    <Smartphone className="w-5 h-5" aria-hidden="true" />
-                    Open the App
-                  </a>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="relative mx-auto max-w-[320px]">
-                <div
-                  className="absolute -inset-8 bg-primary/10 rounded-full blur-3xl"
-                  aria-hidden="true"
-                />
-                <div className="relative rounded-[2.5rem] bg-surface-dark p-3 shadow-2xl border border-surface-dark-border">
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-surface-dark rounded-b-2xl z-20" aria-hidden="true" />
-                  <div className="rounded-[2rem] bg-gradient-to-b from-surface-dark-2 to-surface-dark overflow-hidden aspect-[9/19.5] relative">
-                    <div className="absolute inset-0 flex flex-col pt-10 px-5 pb-5 text-white">
-                      <div className="flex items-center justify-between mb-4 text-[10px] text-gray-400">
-                        <span>9:41</span>
-                        <div className="flex items-center gap-1">
-                          <span>5G</span>
-                          <span>●●●●</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center justify-between mb-5">
-                        <div>
-                          <div className="text-xs text-gray-400">Good morning</div>
-                          <div className="text-base font-semibold">Magnolia Bay</div>
-                        </div>
-                        <div className="w-9 h-9 bg-primary/20 border border-primary/40 rounded-full flex items-center justify-center">
-                          <span className="text-primary text-sm font-bold">MB</span>
-                        </div>
-                      </div>
-
-                      <div className="bg-primary/15 border border-primary/30 rounded-xl p-4 mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-[10px] uppercase tracking-wider text-primary font-bold">Live</span>
-                          <span className="text-[10px] text-gray-400">7:42 PM</span>
-                        </div>
-                        <div className="text-sm font-semibold mb-1">Crew on site — Building 3</div>
-                        <div className="text-[11px] text-gray-400 mb-3">24 of 48 units serviced</div>
-                        <div className="h-1.5 bg-surface-dark rounded-full overflow-hidden">
-                          <div className="h-full w-1/2 bg-primary rounded-full" />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-3 gap-2 mb-4">
-                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
-                          <div className="text-lg font-bold text-primary">100%</div>
-                          <div className="text-[9px] text-gray-400">Collection</div>
-                        </div>
-                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
-                          <div className="text-lg font-bold text-primary">248</div>
-                          <div className="text-[9px] text-gray-400">Photos</div>
-                        </div>
-                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
-                          <div className="text-lg font-bold text-primary">5</div>
-                          <div className="text-[9px] text-gray-400">Bulks</div>
-                        </div>
-                      </div>
-
-                      <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold mb-2">Today</div>
-                      <div className="space-y-2 flex-1">
-                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-3 flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="text-xs font-semibold">Bulk pickup confirmed</div>
-                            <div className="text-[10px] text-gray-400">Unit 2104 • Sofa</div>
-                          </div>
-                        </div>
-                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-3 flex items-center gap-3">
-                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Camera className="w-4 h-4 text-primary" aria-hidden="true" />
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="text-xs font-semibold">Photo verification</div>
-                            <div className="text-[10px] text-gray-400">Building 2 • 7:15 PM</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-3 bg-primary rounded-xl py-2.5 text-center text-xs font-bold">
-                        Request Bulk Pickup
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       <section id="welcome-section" className="relative py-20 overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10"></div>
         <div className="absolute inset-0 bg-surface-dark">
@@ -625,6 +350,304 @@ export default function HomeClient() {
       </section>
 
       {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
+      <section id="quote" className="py-20 bg-gray-50 scroll-mt-40">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
+              <div className="text-center mb-8">
+                <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
+                  Start Your 100% Collection Guarantee Today
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
+                </p>
+              </div>
+              <HubSpotForm
+                region="na1"
+                portalId="22416220"
+                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section id="app-intro" className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 80% 20%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-bold mb-5">
+                <Sparkles className="w-4 h-4" aria-hidden="true" />
+                New — Property Manager App
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-5 leading-tight">
+                Manage Your Property's Waste Program from Your Pocket
+              </h2>
+              <p className="text-xl text-ink-muted leading-relaxed">
+                The On The Fly app brings real-time service tracking, photo
+                verification, and one-tap bulk pickup requests to property managers
+                and residents — all in a single, easy-to-use mobile experience.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <ScrollReveal>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Live GPS Route Tracking</h3>
+                    <p className="text-ink-muted leading-relaxed">
+                      Watch crews move through your property in real time and confirm
+                      every unit is serviced with GPS-verified check-ins.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Camera className="w-6 h-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Photo-Documented Bulk &amp; Pressure Jobs</h3>
+                    <p className="text-ink-muted leading-relaxed">
+                      Every bulk removal, junk haul, and pressure-washing job includes
+                      before &amp; after photos, attached to the completion notification.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Bell className="w-6 h-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Instant Service Alerts</h3>
+                    <p className="text-ink-muted leading-relaxed">
+                      Get notified about delays, weather holds, and completed bulk
+                      requests. Issues get resolved with records, not back-and-forth.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <BarChart3 className="w-6 h-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Monthly Service Dashboards</h3>
+                    <p className="text-ink-muted leading-relaxed">
+                      Collection-rate reports, route completion analytics, and
+                      service history ready to drop into your owner reviews.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-6 h-6 text-primary" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-ink mb-1">Direct Team Messaging</h3>
+                    <p className="text-ink-muted leading-relaxed">
+                      Message your dedicated account lead and on-site crew directly
+                      from the app — no phone tag, no lost emails.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Link
+                    href="/demo/"
+                    onClick={() => trackRequestDemo('app_intro')}
+                    className="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark active:scale-[0.98] transition-all shadow-lg"
+                  >
+                    Request App Demo
+                    <ArrowRight className="w-5 h-5" aria-hidden="true" />
+                  </Link>
+                  <a
+                    href="https://app.ontheflywastesolutions.com"
+                    className="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary hover:text-white transition-all"
+                  >
+                    <Smartphone className="w-5 h-5" aria-hidden="true" />
+                    Open the App
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="relative mx-auto max-w-[320px]">
+                <div
+                  className="absolute -inset-8 bg-primary/10 rounded-full blur-3xl"
+                  aria-hidden="true"
+                />
+                <div className="relative rounded-[2.5rem] bg-surface-dark p-3 shadow-2xl border border-surface-dark-border">
+                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-surface-dark rounded-b-2xl z-20" aria-hidden="true" />
+                  <div className="rounded-[2rem] bg-gradient-to-b from-surface-dark-2 to-surface-dark overflow-hidden aspect-[9/19.5] relative">
+                    <div className="absolute inset-0 flex flex-col pt-10 px-5 pb-5 text-white">
+                      <div className="flex items-center justify-between mb-4 text-[10px] text-gray-400">
+                        <span>9:41</span>
+                        <div className="flex items-center gap-1">
+                          <span>5G</span>
+                          <span>●●●●</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between mb-5">
+                        <div>
+                          <div className="text-xs text-gray-400">Good morning</div>
+                          <div className="text-base font-semibold">Magnolia Bay</div>
+                        </div>
+                        <div className="w-9 h-9 bg-primary/20 border border-primary/40 rounded-full flex items-center justify-center">
+                          <span className="text-primary text-sm font-bold">MB</span>
+                        </div>
+                      </div>
+
+                      <div className="bg-primary/15 border border-primary/30 rounded-xl p-4 mb-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-[10px] uppercase tracking-wider text-primary font-bold">Live</span>
+                          <span className="text-[10px] text-gray-400">7:42 PM</span>
+                        </div>
+                        <div className="text-sm font-semibold mb-1">Crew on site — Building 3</div>
+                        <div className="text-[11px] text-gray-400 mb-3">24 of 48 units serviced</div>
+                        <div className="h-1.5 bg-surface-dark rounded-full overflow-hidden">
+                          <div className="h-full w-1/2 bg-primary rounded-full" />
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-3 gap-2 mb-4">
+                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
+                          <div className="text-lg font-bold text-primary">100%</div>
+                          <div className="text-[9px] text-gray-400">Collection</div>
+                        </div>
+                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
+                          <div className="text-lg font-bold text-primary">248</div>
+                          <div className="text-[9px] text-gray-400">Photos</div>
+                        </div>
+                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
+                          <div className="text-lg font-bold text-primary">5</div>
+                          <div className="text-[9px] text-gray-400">Bulks</div>
+                        </div>
+                      </div>
+
+                      <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold mb-2">Today</div>
+                      <div className="space-y-2 flex-1">
+                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-3 flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <CheckCircle2 className="w-4 h-4 text-primary" aria-hidden="true" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-xs font-semibold">Bulk pickup confirmed</div>
+                            <div className="text-[10px] text-gray-400">Unit 2104 • Sofa</div>
+                          </div>
+                        </div>
+                        <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-3 flex items-center gap-3">
+                          <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <Camera className="w-4 h-4 text-primary" aria-hidden="true" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-xs font-semibold">Photo verification</div>
+                            <div className="text-[10px] text-gray-400">Building 2 • 7:15 PM</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-3 bg-primary rounded-xl py-2.5 text-center text-xs font-bold">
+                        Request Bulk Pickup
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-20 bg-gradient-to-b from-white via-primary/5 to-white overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40"
+          style={{
+            background:
+              'radial-gradient(circle at 20% 30%, rgba(22, 163, 74, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(22, 163, 74, 0.1) 0%, transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-14 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-5">
+                <Sparkles className="w-4 h-4" aria-hidden="true" />
+                By the Numbers
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-ink mb-4 leading-tight lg:leading-snug">
+                Trusted by Leading Properties
+              </h2>
+              <p className="text-xl text-ink-muted">
+                Join the growing number of communities that trust On The Fly
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+            <ScrollReveal className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">2,000+</div>
+                <div className="text-ink font-semibold text-lg">Units Served</div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1} className="h-full">
+              <div className="relative h-full bg-gradient-to-br from-primary to-primary-dark p-8 pt-10 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group md:-mt-4 md:mb-0">
+                <div
+                  className="absolute inset-0 opacity-25 pointer-events-none"
+                  style={{
+                    background:
+                      'radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35) 0%, transparent 60%)',
+                  }}
+                  aria-hidden="true"
+                />
+                <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
+                </div>
+                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
+                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2} className="h-full">
+              <div className="relative h-full bg-white p-8 pt-10 rounded-2xl shadow-sm border border-gray-100 hover:border-primary hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" aria-hidden="true" />
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Calendar className="w-7 h-7 text-primary group-hover:text-white transition-colors" aria-hidden="true" />
+                </div>
+                <div className="text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight leading-none">7</div>
+                <div className="text-ink font-semibold text-lg">Days a Week Service</div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section id="community-types" className="relative py-20 bg-white overflow-hidden">
         <div
           className="absolute inset-0 pointer-events-none opacity-40"
@@ -1203,29 +1226,6 @@ export default function HomeClient() {
 
           <ScrollReveal>
             <FaqAccordion items={faqs} />
-          </ScrollReveal>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
-              <div className="text-center mb-8">
-                <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
-                <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
-                  Start Your 100% Collection Guarantee Today
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
-                </p>
-              </div>
-              <HubSpotForm
-                region="na1"
-                portalId="22416220"
-                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
-              />
-            </div>
           </ScrollReveal>
         </div>
       </section>

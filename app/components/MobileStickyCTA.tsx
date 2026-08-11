@@ -69,7 +69,7 @@ export default function MobileStickyCTA() {
           chat bubble (bottom-right) has its own clean corner. The phone
           number is already reachable from the top banner, hero, and
           footer, so the mobile sticky keeps a single primary CTA
-          (Request Quote) for clarity. */}
+          (Get a Quote) for clarity. */}
       <Link
         href="/contact/"
         onClick={(e) => {
@@ -87,7 +87,7 @@ export default function MobileStickyCTA() {
         <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20">
           <FileText className="w-4 h-4" aria-hidden="true" />
         </span>
-        Request Quote
+        Get a Quote
       </Link>
     </div>
   );

@@ -116,7 +116,7 @@ export default function AboutClient() {
     {
       year: "2021",
       title: "Major Partnership",
-      description: "Established partnership with Encore Resort at Reunion, marking our first major property"
+      description: "Established partnership with our first major resort property in Central Florida"
     },
     {
       year: "2022",
@@ -131,7 +131,7 @@ export default function AboutClient() {
     {
       year: "2024",
       title: "Premium Properties",
-      description: "Expanded to premier locations including Margaritaville and Reunion Resort"
+      description: "Expanded to premier resort communities across Central Florida"
     },
     {
       year: "2025",

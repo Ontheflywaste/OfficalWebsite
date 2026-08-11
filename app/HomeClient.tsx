@@ -41,7 +41,9 @@ export default function HomeClient() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-40 pb-20 md:pb-28 min-h-[700px] flex flex-col justify-center">
-          <div className="max-w-4xl mx-auto">
+          {/* 5xl (not 4xl): the H1's first line is 894px at lg's 60px, which
+              overflowed a 896px box and forced a third line. */}
+          <div className="max-w-5xl mx-auto">
             <div className="text-center">
               <ScrollReveal>
                 <Slogan
@@ -53,19 +55,15 @@ export default function HomeClient() {
               <ScrollReveal delay={0.1}>
                 <div className="h-6" aria-hidden="true" />
                 <h1
-                  className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
+                  className="text-[2rem] sm:text-4xl md:text-[2.75rem] lg:text-6xl font-extrabold text-white mb-6 leading-[1.15] lg:leading-[1.12] tracking-tight"
                   style={{
                     textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)',
-                    textWrap: 'balance',
                   }}
                 >
                   Valet Trash, Bulk &amp; Junk Removal
                   <br className="hidden md:block" />{' '}
                   Services{' '}
-                  <span
-                    className="block sm:inline-block text-white/95 font-semibold mt-2 sm:mt-0"
-                    style={{ letterSpacing: '0.03em' }}
-                  >
+                  <span className="block sm:inline-block mt-2 sm:mt-0">
                     in Orlando, FL
                   </span>
                 </h1>

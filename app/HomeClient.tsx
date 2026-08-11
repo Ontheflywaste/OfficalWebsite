@@ -267,21 +267,22 @@ export default function HomeClient() {
               return (
                 <ScrollReveal key={svc.href} delay={index * 0.12} className="h-full">
                   <Link href={svc.href} className="group block h-full">
-                    <div className="relative h-full min-h-[480px] rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_30px_70px_-20px_rgba(22,163,74,0.45)] hover:-translate-y-2 hover:border-primary/50 flex flex-col">
-                      {/* Background image — scales on hover */}
-                      <Image
-                        src={svc.image}
-                        alt={svc.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
-                      />
-
-                      {/* Readability overlay — white/neutral at rest, warms toward primary on hover */}
-                      <div
-                        className="absolute inset-0 bg-gradient-to-t from-white via-white/96 to-white/86 transition-all duration-500 group-hover:from-white group-hover:via-white/92 group-hover:to-white/70"
-                        aria-hidden="true"
-                      />
+                    <div className="relative h-full min-h-[480px] rounded-2xl overflow-hidden bg-white shadow-sm border border-gray-100 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_30px_70px_-20px_rgba(22,163,74,0.45)] hover:-translate-y-2 hover:border-primary/50 flex flex-col">
+                      {/* Photo band — full-strength image confined to the top, text never overlaps it */}
+                      <div className="relative h-44 sm:h-48 flex-shrink-0 overflow-hidden">
+                        <Image
+                          src={svc.image}
+                          alt={svc.imageAlt}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-110"
+                        />
+                        {/* Soft seam into the solid body */}
+                        <div
+                          className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white to-transparent"
+                          aria-hidden="true"
+                        />
+                      </div>
 
                       {/* Primary top accent — expands from center on hover */}
                       <div
@@ -299,9 +300,9 @@ export default function HomeClient() {
                         aria-hidden="true"
                       />
 
-                      <div className="relative p-8 flex flex-col flex-grow z-10">
-                        {/* Icon tile with rotate + scale + bg fill */}
-                        <div className="relative mb-6">
+                      <div className="relative px-8 pb-8 flex flex-col flex-grow z-10">
+                        {/* Icon tile straddles the photo/body seam */}
+                        <div className="relative mb-6 -mt-8">
                           <div
                             className="absolute inset-0 rounded-xl blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 bg-primary"
                             aria-hidden="true"
@@ -350,6 +351,106 @@ export default function HomeClient() {
       </section>
 
       {/* Community-type callout — HOA / Resort Style / Condo / Multifamily door-to-door collection */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="#4285F4">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  5-Star Rated on Google
+                </h2>
+              </div>
+              <p className="text-xl text-gray-600 mb-8">
+                See what property managers and residents say about our valet trash service in Orlando
+              </p>
+              <a
+                href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all"
+              >
+                View All Reviews on Google
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <ScrollReveal delay={0.1}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated—no short-cuts. Donnell will go above and beyond."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    L
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Lynn Mollison</div>
+                    <div className="text-sm text-gray-600">HOA Board Member</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    A
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Antonio Marcuz</div>
+                    <div className="text-sm text-gray-600">Property Management Company Owner</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
+                  "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions."
+                </p>
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                    W
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">William Barber</div>
+                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       <section id="quote" className="py-20 bg-gray-50 scroll-mt-40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -838,106 +939,6 @@ export default function HomeClient() {
           className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"
           aria-hidden="true"
         />
-      </section>
-
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <svg viewBox="0 0 24 24" className="w-8 h-8" fill="#4285F4">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                </svg>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  5-Star Rated on Google
-                </h2>
-              </div>
-              <p className="text-xl text-gray-600 mb-8">
-                See what property managers and residents say about our valet trash service in Orlando
-              </p>
-              <a
-                href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all"
-              >
-                View All Reviews on Google
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            <ScrollReveal delay={0.1}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "Our HOA uses On The Fly for our trash collection service, and I am just super impressed with Donnell and his team. They are professional and dedicated—no short-cuts. Donnell will go above and beyond."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    L
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Lynn Mollison</div>
-                    <div className="text-sm text-gray-600">HOA Board Member</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "I own a property management company and anytime we need them, they show up fast and their team members are always smiling. I strongly recommend On The Fly."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    A
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">Antonio Marcuz</div>
-                    <div className="text-sm text-gray-600">Property Management Company Owner</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.3}>
-              <div className="bg-white p-6 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary transition-all h-full flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed flex-grow">
-                  "Excellent service! The team is reliable, professional, and always goes the extra mile. Highly recommend On The Fly Waste Solutions."
-                </p>
-                <div className="flex items-center gap-3 mt-auto">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold">
-                    W
-                  </div>
-                  <div>
-                    <div className="font-semibold text-gray-900">William Barber</div>
-                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
       </section>
 
       <section className="py-20 bg-white">

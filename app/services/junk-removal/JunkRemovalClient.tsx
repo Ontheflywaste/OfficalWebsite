@@ -147,8 +147,8 @@ export default function JunkRemovalClient() {
                 Same-day service available
               </div>
               <div className="flex items-center gap-3 mb-6">
-                <Truck className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-extrabold text-balance">Junk Removal Orlando FL</h1>
+                <Truck className="w-12 h-12 text-primary flex-shrink-0" />
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance">Junk Removal Orlando FL</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Fast, affordable junk removal and junk hauling for homeowners, residents, and apartment communities across Orlando and Central Florida. Same-day service available.

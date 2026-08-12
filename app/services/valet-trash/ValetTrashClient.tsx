@@ -88,7 +88,7 @@ export default function ValetTrashClient() {
         <div className="absolute inset-0">
           <Image
             src="/Images/ApartmentBuildingHero.webp"
-            alt="Uniformed valet trash porter collecting doorstep trash at a Central Florida resort community"
+            alt="Uniformed valet trash porter collecting doorstep trash at a Central Florida apartment community"
             fill
             priority
             sizes="100vw"
@@ -114,7 +114,7 @@ export default function ValetTrashClient() {
               </div>
               <div className="flex items-center gap-3 mb-6">
                 <Trash2 className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service for HOA &amp; Resort Communities</h1>
+                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service for Apartment, HOA &amp; Resort Communities</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Convenient doorstep trash collection for apartment, HOA, resort, and multifamily communities across Central Florida.
@@ -148,7 +148,7 @@ export default function ValetTrashClient() {
                 Why Central Florida Property Managers Choose Our Valet Trash Service
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Elevate your property's amenities with reliable, professional valet trash collection
+                Elevate your apartment, HOA, or resort community's amenities with reliable, professional valet trash collection
               </p>
             </div>
           </ScrollReveal>
@@ -404,7 +404,7 @@ export default function ValetTrashClient() {
               Ready to Enhance Your Property?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-              Get a free quote and discover how our valet trash service across Central Florida can improve resident satisfaction at your apartment community. In the city?{' '}
+              Get a free quote and discover how our valet trash service across Central Florida can improve resident satisfaction at your apartment, HOA, or resort community. In the city?{' '}
               <Link href="/valet-trash-orlando-fl/" className="underline font-semibold hover:text-white">
                 See valet trash in Orlando
               </Link>

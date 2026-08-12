@@ -180,7 +180,7 @@ export default function PressureWashingClient() {
                 <Droplets className="w-4 h-4" aria-hidden="true" />
                 Water-Powered. Results-Driven.
               </div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
                 <div className="relative">
                   <div className="absolute inset-0 bg-water blur-xl opacity-50" aria-hidden="true" />
                   <Sparkles className="relative w-12 h-12 text-water-light flex-shrink-0" />

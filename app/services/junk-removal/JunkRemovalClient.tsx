@@ -146,7 +146,7 @@ export default function JunkRemovalClient() {
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
                 Same-day service available
               </div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
                 <Truck className="w-12 h-12 text-primary flex-shrink-0" />
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance">Junk Removal Orlando FL</h1>
               </div>

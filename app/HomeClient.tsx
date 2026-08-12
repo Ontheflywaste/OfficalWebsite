@@ -104,7 +104,7 @@ export default function HomeClient() {
                   href="https://www.google.com/search?q=on+the+fly+waste+solutions#lrd=0x88e771e84f7b6b0d:0x3c99f8d5f69668d2,1,,,,"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="inline-flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-3 gap-y-1.5 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-300 cursor-pointer"
                   aria-label="View our 5-star Google reviews"
                 >
                   <span className="inline-flex items-center gap-2">

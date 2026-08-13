@@ -112,9 +112,9 @@ export default function ValetTrashClient() {
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse" aria-hidden="true" />
                 Central Florida's #1 valet trash partner
               </div>
-              <div className="flex items-center gap-3 mb-6">
-                <Trash2 className="w-12 h-12 text-primary" />
-                <h1 className="text-5xl font-extrabold text-balance">Valet Trash Service for Apartment, HOA &amp; Resort Communities</h1>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
+                <Trash2 className="w-12 h-12 text-primary flex-shrink-0" />
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance">Valet Trash Service for Apartment, HOA &amp; Resort Communities</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Convenient doorstep trash collection for apartment, HOA, resort, and multifamily communities across Central Florida.

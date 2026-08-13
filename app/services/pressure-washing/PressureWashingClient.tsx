@@ -180,12 +180,12 @@ export default function PressureWashingClient() {
                 <Droplets className="w-4 h-4" aria-hidden="true" />
                 Water-Powered. Results-Driven.
               </div>
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
                 <div className="relative">
                   <div className="absolute inset-0 bg-water blur-xl opacity-50" aria-hidden="true" />
-                  <Sparkles className="relative w-12 h-12 text-water-light" />
+                  <Sparkles className="relative w-12 h-12 text-water-light flex-shrink-0" />
                 </div>
-                <h1 className="text-5xl font-extrabold">Pressure Washing Service</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-balance">Pressure Washing Service</h1>
               </div>
               <p className="text-2xl text-gray-200 mb-8">
                 Professional pressure washing for breezeways, sidewalks, pool decks, building exteriors, and all concrete surfaces. Before & after photo verification included.

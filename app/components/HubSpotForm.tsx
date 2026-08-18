@@ -10,8 +10,8 @@ interface HubSpotFormProps {
   /** Reserved height while HubSpot paints, so nothing below shifts. Defaults
    *  match the measured quote form (~965px on phones, ~790px at md+). */
   minHeightClassName?: string;
-  /** Fired when HubSpot reports the form was submitted (cross-origin iframe
-   *  postMessage `hsFormCallback` / `onFormSubmitted`). */
+  /** Fired when HubSpot reports a successful submission
+   *  (`hs-form-event:on-submission:success`). */
   onSubmitted?: () => void;
   /** Value pushed to dataLayer as `form` alongside the standard event. */
   trackingLabel?: string;
@@ -54,23 +54,20 @@ export default function HubSpotForm({
   const containerId = `hubspot-form-${reactId.replace(/:/g, '')}`;
   const src = `https://js.hsforms.net/forms/embed/${portalId}.js`;
 
+  // The new embed announces submissions as a bubbling CustomEvent on the
+  // frame container (`hs-form-event:on-submission:success`, detail.formId) —
+  // not the legacy `hsFormCallback` postMessage, which these forms never send.
   useEffect(() => {
-    const onMessage = (event: MessageEvent) => {
-      const data = event.data;
-      if (
-        data &&
-        data.type === 'hsFormCallback' &&
-        data.eventName === 'onFormSubmitted' &&
-        (!data.id || data.id === formId)
-      ) {
-        if (Array.isArray(window.dataLayer)) {
-          window.dataLayer.push({ event: 'hubspot_form_submit', form: trackingLabel ?? formId });
-        }
-        onSubmittedRef.current?.();
+    const onSuccess = (event: Event) => {
+      const detail = (event as CustomEvent<{ formId?: string }>).detail;
+      if (detail?.formId && detail.formId !== formId) return;
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({ event: 'hubspot_form_submit', form: trackingLabel ?? formId });
       }
+      onSubmittedRef.current?.();
     };
-    window.addEventListener('message', onMessage);
-    return () => window.removeEventListener('message', onMessage);
+    window.addEventListener('hs-form-event:on-submission:success', onSuccess);
+    return () => window.removeEventListener('hs-form-event:on-submission:success', onSuccess);
   }, [formId, trackingLabel]);
 
   // Watchdog: on mount → re-mount the placeholder unless HubSpot already

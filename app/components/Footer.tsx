@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, Trash2, Package, Droplet, Star } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, ArrowRight, Trash2, Package, Droplet, Sparkles, Star } from 'lucide-react';
 import Slogan from './Slogan';
 
 const serviceAreas = [
@@ -118,7 +118,8 @@ export default function Footer() {
                 { icon: Trash2, text: 'Valet Trash', link: '/services/valet-trash/' },
                 { icon: Package, text: 'Junk Removal', link: '/services/junk-removal/' },
                 { icon: Package, text: 'Bulk Removal', link: '/services/bulk-removal/' },
-                { icon: Droplet, text: 'Pressure Washing', link: '/services/pressure-washing/' }
+                { icon: Droplet, text: 'Pressure Washing', link: '/services/pressure-washing/' },
+                { icon: Sparkles, text: 'Trash Bin Cleaning', link: '/trash-bin-cleaning/' }
               ].map((item) => (
                 <li key={item.text}>
                   <Link

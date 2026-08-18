@@ -158,7 +158,7 @@ export default function Navbar() {
                 </Link>
 
                 <div
-                  className={`absolute top-full left-0 pt-2 w-56 transition-all duration-200 ${
+                  className={`absolute top-full left-0 pt-2 w-64 transition-all duration-200 ${
                     isServicesDropdownOpen
                       ? 'opacity-100 visible translate-y-0'
                       : 'opacity-0 invisible -translate-y-2'
@@ -188,6 +188,15 @@ export default function Navbar() {
                       className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
                     >
                       Pressure Washing
+                    </Link>
+                    <Link
+                      href="/trash-bin-cleaning/"
+                      className="flex items-center justify-between gap-2 whitespace-nowrap px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Trash Bin Cleaning
+                      <span className="shrink-0 rounded-full border border-primary/40 bg-primary/10 px-1.5 py-0.5 text-[10px] leading-none font-bold uppercase tracking-wider text-primary">
+                        Coming Dec
+                      </span>
                     </Link>
                   </div>
                 </div>
@@ -378,6 +387,15 @@ export default function Navbar() {
                       className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Pressure Washing
+                    </Link>
+                    <Link
+                      href="/trash-bin-cleaning/"
+                      className="flex items-center gap-2 whitespace-nowrap py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Trash Bin Cleaning
+                      <span className="shrink-0 rounded-full border border-primary/50 bg-primary/15 px-1.5 py-0.5 text-[10px] leading-none font-bold uppercase tracking-wider text-primary">
+                        Coming Dec
+                      </span>
                     </Link>
                   </div>
                 </div>

@@ -206,6 +206,28 @@ export default function ServicesClient() {
               </ScrollReveal>
             ))}
           </div>
+
+          {/* New service — pre-launch registration */}
+          <ScrollReveal>
+            <Link
+              href="/trash-bin-cleaning/"
+              className="group mt-16 flex flex-col items-start gap-4 rounded-2xl border border-primary/30 bg-gradient-to-r from-[#071a10] to-[#0c3019] p-8 text-white transition-all hover:border-primary/60 hover:shadow-lg sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div>
+                <span className="inline-block rounded-full bg-[#84e166] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#071a10]">
+                  New · Launching December
+                </span>
+                <h3 className="mt-3 text-2xl font-bold">Trash Bin Cleaning</h3>
+                <p className="mt-1 text-white/80">
+                  Hot-pressure washed, sanitized &amp; deodorized — right at your curb. First 100 sign-ups lock pre-launch pricing.
+                </p>
+              </div>
+              <span className="inline-flex flex-shrink-0 items-center gap-2 font-semibold text-[#84e166]">
+                Reserve your spot
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </span>
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 

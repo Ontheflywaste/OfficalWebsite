@@ -2,10 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FileText } from 'lucide-react';
 import { trackRequestDemo } from '../utils/track';
 
+// Routes with a single in-page conversion action; the "Get a Quote" pill
+// links to /contact/ and would pull visitors out of that flow.
+const HIDDEN_ROUTES = ['/trash-bin-cleaning'];
+
 export default function MobileStickyCTA() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
@@ -53,6 +59,10 @@ export default function MobileStickyCTA() {
       window.removeEventListener('resize', detectChatOpen);
     };
   }, []);
+
+  if (HIDDEN_ROUTES.some((r) => pathname === r || pathname?.startsWith(`${r}/`))) {
+    return null;
+  }
 
   const shouldShow = isVisible && !isChatOpen;
 

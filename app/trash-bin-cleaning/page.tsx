@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Check, Star, Phone } from 'lucide-react';
+import { Check, Star, Phone, ArrowDown } from 'lucide-react';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import ServiceSchema from '../components/ServiceSchema';
-import LazyHubSpotForm from './LazyHubSpotForm';
+import HubSpotFormEmbed from './HubSpotFormEmbed';
 import { generateMetadata } from '../utils/metadata';
 
 // Pre-launch registration form — same HubSpot portal as the homepage quote form.
@@ -111,6 +111,9 @@ export default function TrashBinCleaningPage() {
         @media (prefers-reduced-motion: reduce) {
           .tbc-bubble { animation: none; }
         }
+        /* Skeleton shows only while HubSpot hasn't injected its iframe yet. */
+        .tbc-form-skeleton { display: none; }
+        .hs-form-frame:empty + .tbc-form-skeleton { display: block; }
       `}</style>
 
       <div
@@ -181,6 +184,14 @@ export default function TrashBinCleaningPage() {
             <p className="mt-6 text-2xl font-semibold text-white/90 sm:text-3xl">
               We can fix that.
             </p>
+            <a
+              href="#register"
+              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full border-2 px-6 py-3 text-base font-bold text-white transition-colors hover:bg-white/10 sm:text-lg"
+              style={{ borderColor: LIME }}
+            >
+              Reserve My Spot
+              <ArrowDown className="h-5 w-5" style={{ color: LIME }} aria-hidden="true" />
+            </a>
           </section>
 
           {/* Service list */}
@@ -265,7 +276,7 @@ export default function TrashBinCleaningPage() {
           </section>
 
           {/* Registration */}
-          <section id="register" className="mt-16 sm:mt-20" aria-labelledby="tbc-register">
+          <section id="register" className="mt-16 scroll-mt-6 sm:mt-20" aria-labelledby="tbc-register">
             <div className="mx-auto max-w-2xl rounded-3xl bg-white p-6 text-ink shadow-2xl sm:p-10">
               <h2
                 id="tbc-register"
@@ -277,8 +288,21 @@ export default function TrashBinCleaningPage() {
                 First 100 sign-ups lock pre-launch pricing.
               </p>
 
-              <div className="mt-8">
-                <LazyHubSpotForm portalId={HUBSPOT_PORTAL_ID} formId={HUBSPOT_FORM_ID} />
+              <div className="relative mt-8 min-h-[600px]">
+                {/* Server-rendered so it exists before any HubSpot script runs. */}
+                <div
+                  className="hs-form-frame"
+                  data-region="na1"
+                  data-form-id={HUBSPOT_FORM_ID}
+                  data-portal-id={HUBSPOT_PORTAL_ID}
+                />
+                <div className="tbc-form-skeleton absolute inset-0 space-y-4 pt-2" aria-hidden="true">
+                  {[0, 1, 2, 3].map((i) => (
+                    <div key={i} className="h-12 animate-pulse rounded-lg bg-surface-page" />
+                  ))}
+                  <div className="h-12 w-40 animate-pulse rounded-full bg-primary/20" />
+                </div>
+                <HubSpotFormEmbed portalId={HUBSPOT_PORTAL_ID} formId={HUBSPOT_FORM_ID} />
               </div>
             </div>
           </section>

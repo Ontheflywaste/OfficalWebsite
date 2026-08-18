@@ -4,6 +4,7 @@ import { Check, Star, Phone } from 'lucide-react';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import ServiceSchema from '../components/ServiceSchema';
 import HubSpotForm from '../components/HubSpotForm';
+import { generateMetadata } from '../utils/metadata';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TODO(HubSpot): paste the real portal ID + form ID for the pre-launch
@@ -15,25 +16,15 @@ const HUBSPOT_FORM_ID = '';
 
 const LIME = '#84e166';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Trash Bin Cleaning Central Florida | Launching December',
   description:
     'Trash bins hot-pressure washed, sanitized & deodorized right at your curb. Launching December in Central Florida — first 100 sign-ups lock pre-launch pricing.',
+  path: '/trash-bin-cleaning/',
   keywords:
     'trash bin cleaning central florida, trash can cleaning orlando, garbage bin cleaning service, curbside bin washing, HOA bin cleaning',
-  alternates: {
-    canonical: 'https://ontheflywastesolutions.com/trash-bin-cleaning/',
-  },
-  openGraph: {
-    title: 'Trash Bin Cleaning Central Florida | Launching December',
-    description:
-      'Your bin stinks. We can fix that. Hot-pressure washed, sanitized & deodorized at your curb. Reserve pre-launch pricing now.',
-    url: 'https://ontheflywastesolutions.com/trash-bin-cleaning/',
-    siteName: 'On The Fly Waste Solutions',
-    type: 'website',
-    locale: 'en_US',
-  },
-};
+  imageAlt: 'On The Fly Waste Solutions — trash bin cleaning, launching December in Central Florida',
+});
 
 const services = [
   'Hot-pressure washed inside & out',
@@ -156,7 +147,7 @@ export default function TrashBinCleaningPage() {
                 aria-hidden="true"
               />
               <Image
-                src="/logos/white-logo.png"
+                src="/Images/OnTheFlyRecycleLogoWhitenobackground.png"
                 alt="On The Fly Waste Solutions"
                 width={320}
                 height={124}

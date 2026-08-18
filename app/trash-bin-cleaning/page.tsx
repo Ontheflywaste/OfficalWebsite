@@ -23,6 +23,10 @@ export const metadata: Metadata = generateMetadata({
   path: '/trash-bin-cleaning/',
   keywords:
     'trash bin cleaning central florida, trash can cleaning orlando, garbage bin cleaning service, curbside bin washing, HOA bin cleaning',
+  // TODO(OG image): using the site default og-image.jpg. To swap in flyer
+  // art, drop a 1200x630 JPG in public/Images/ and pass
+  // `image: 'https://ontheflywastesolutions.com/Images/<file>.jpg'` here —
+  // it feeds both the OpenGraph and Twitter card tags.
   imageAlt: 'On The Fly Waste Solutions — trash bin cleaning, launching December in Central Florida',
 });
 

@@ -3,16 +3,12 @@ import Image from 'next/image';
 import { Check, Star, Phone } from 'lucide-react';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import ServiceSchema from '../components/ServiceSchema';
-import HubSpotForm from '../components/HubSpotForm';
+import LazyHubSpotForm from './LazyHubSpotForm';
 import { generateMetadata } from '../utils/metadata';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// TODO(HubSpot): paste the real portal ID + form ID for the pre-launch
-// registration form. While either is empty the page renders a visible
-// placeholder card instead of loading the HubSpot embed.
-// ─────────────────────────────────────────────────────────────────────────────
-const HUBSPOT_PORTAL_ID = '';
-const HUBSPOT_FORM_ID = '';
+// Pre-launch registration form — same HubSpot portal as the homepage quote form.
+const HUBSPOT_PORTAL_ID = '22416220';
+const HUBSPOT_FORM_ID = '5774a8fd-6c1e-49ec-9a16-4ef523adbfb5';
 
 const LIME = '#84e166';
 
@@ -80,8 +76,6 @@ const bubbles = [
 ];
 
 export default function TrashBinCleaningPage() {
-  const formConfigured = HUBSPOT_PORTAL_ID !== '' && HUBSPOT_FORM_ID !== '';
-
   return (
     <>
       <BreadcrumbSchema
@@ -96,6 +90,9 @@ export default function TrashBinCleaningPage() {
         description="Curbside trash bin cleaning for homes, HOAs and resort communities across Central Florida — hot-pressure washed inside and out, sanitized and deodorized. Launching December."
         slug="/trash-bin-cleaning/"
       />
+
+      <link rel="preconnect" href="https://js.hsforms.net" />
+      <link rel="preconnect" href="https://forms.hsforms.com" />
 
       {/* Page-scoped keyframes (tbc- prefix) so the bubble float never leaks
           into site-wide styles. */}
@@ -281,28 +278,7 @@ export default function TrashBinCleaningPage() {
               </p>
 
               <div className="mt-8">
-                {formConfigured ? (
-                  <HubSpotForm portalId={HUBSPOT_PORTAL_ID} formId={HUBSPOT_FORM_ID} />
-                ) : (
-                  /* HUBSPOT FORM PLACEHOLDER — replaced automatically once the
-                     IDs at the top of this file are filled in. */
-                  <div className="rounded-2xl border-2 border-dashed border-primary/40 bg-primary/5 p-6 text-center">
-                    <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">
-                      HubSpot form placeholder
-                    </p>
-                    <p className="mt-2 text-sm text-ink-muted">
-                      Set <code>HUBSPOT_PORTAL_ID</code> and <code>HUBSPOT_FORM_ID</code> in{' '}
-                      <code>app/trash-bin-cleaning/page.tsx</code> to embed the registration form.
-                    </p>
-                    <a
-                      href="tel:407-274-5019"
-                      className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-base font-bold text-white transition-colors hover:bg-primary-dark"
-                    >
-                      <Phone className="h-4 w-4" aria-hidden="true" />
-                      Reserve by phone: 407-274-5019
-                    </a>
-                  </div>
-                )}
+                <LazyHubSpotForm portalId={HUBSPOT_PORTAL_ID} formId={HUBSPOT_FORM_ID} />
               </div>
             </div>
           </section>

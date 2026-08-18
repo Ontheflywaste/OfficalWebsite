@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Check, Star, Phone, ArrowDown } from 'lucide-react';
 import BreadcrumbSchema from '../components/BreadcrumbSchema';
 import ServiceSchema from '../components/ServiceSchema';
-import HubSpotFormEmbed from './HubSpotFormEmbed';
+import HubSpotForm from '../components/HubSpotForm';
 import { generateMetadata } from '../utils/metadata';
 
 // Pre-launch registration form — same HubSpot portal as the homepage quote form.
@@ -111,9 +111,6 @@ export default function TrashBinCleaningPage() {
         @media (prefers-reduced-motion: reduce) {
           .tbc-bubble { animation: none; }
         }
-        /* Skeleton shows only while HubSpot hasn't injected its iframe yet. */
-        .tbc-form-skeleton { display: none; }
-        .hs-form-frame:empty + .tbc-form-skeleton { display: block; }
       `}</style>
 
       <div
@@ -288,21 +285,14 @@ export default function TrashBinCleaningPage() {
                 First 100 sign-ups lock pre-launch pricing.
               </p>
 
-              <div className="relative mt-8 min-h-[600px]">
-                {/* Server-rendered so it exists before any HubSpot script runs. */}
-                <div
-                  className="hs-form-frame"
-                  data-region="na1"
-                  data-form-id={HUBSPOT_FORM_ID}
-                  data-portal-id={HUBSPOT_PORTAL_ID}
+              <div className="mt-8">
+                <HubSpotForm
+                  region="na1"
+                  portalId={HUBSPOT_PORTAL_ID}
+                  formId={HUBSPOT_FORM_ID}
+                  minHeightClassName="min-h-[1195px] md:min-h-[948px]"
+                  trackingLabel="trash-bin-cleaning"
                 />
-                <div className="tbc-form-skeleton absolute inset-0 space-y-4 pt-2" aria-hidden="true">
-                  {[0, 1, 2, 3].map((i) => (
-                    <div key={i} className="h-12 animate-pulse rounded-lg bg-surface-page" />
-                  ))}
-                  <div className="h-12 w-40 animate-pulse rounded-full bg-primary/20" />
-                </div>
-                <HubSpotFormEmbed portalId={HUBSPOT_PORTAL_ID} formId={HUBSPOT_FORM_ID} />
               </div>
             </div>
           </section>

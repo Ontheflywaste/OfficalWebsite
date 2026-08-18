@@ -247,6 +247,7 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
                 region="na1"
                 portalId="22416220"
                 formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+                trackingLabel="city-quote"
               />
             </div>
           </ScrollReveal>

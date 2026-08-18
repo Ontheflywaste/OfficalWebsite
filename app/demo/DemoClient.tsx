@@ -143,6 +143,8 @@ export default function DemoClient() {
                 region="na1"
                 portalId="22416220"
                 formId="ad3044cf-7962-4d74-ab8d-ed336dface24"
+                minHeightClassName="min-h-[990px] md:min-h-[672px]"
+                trackingLabel="demo"
               />
               <p className="text-center text-gray-600 mt-8">
                 Prefer to talk now? Call{' '}

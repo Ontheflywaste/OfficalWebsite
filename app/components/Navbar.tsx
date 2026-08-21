@@ -195,7 +195,7 @@ export default function Navbar() {
                     >
                       Trash Bin Cleaning
                       <span className="shrink-0 rounded-full border border-primary/40 bg-primary/10 px-1.5 py-0.5 text-[10px] leading-none font-bold uppercase tracking-wider text-primary">
-                        Coming Dec
+                        Coming Jan
                       </span>
                     </Link>
                   </div>
@@ -394,7 +394,7 @@ export default function Navbar() {
                     >
                       Trash Bin Cleaning
                       <span className="shrink-0 rounded-full border border-primary/50 bg-primary/15 px-1.5 py-0.5 text-[10px] leading-none font-bold uppercase tracking-wider text-primary">
-                        Coming Dec
+                        Coming Jan
                       </span>
                     </Link>
                   </div>

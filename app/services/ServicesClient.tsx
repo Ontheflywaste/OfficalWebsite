@@ -215,7 +215,7 @@ export default function ServicesClient() {
             >
               <div>
                 <span className="inline-block rounded-full bg-[#84e166] px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-[#071a10]">
-                  New · Launching December
+                  New · Launching January 2027
                 </span>
                 <h3 className="mt-3 text-2xl font-bold">Trash Bin Cleaning</h3>
                 <p className="mt-1 text-white/80">

@@ -13,9 +13,9 @@ const HUBSPOT_FORM_ID = '5774a8fd-6c1e-49ec-9a16-4ef523adbfb5';
 const LIME = '#84e166';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Trash Bin Cleaning Central Florida | Launching December',
+  title: 'Trash Bin Cleaning Central Florida | Launching January 2027',
   description:
-    'Trash bins hot-pressure washed, sanitized & deodorized right at your curb. Launching December in Central Florida — first 100 sign-ups lock pre-launch pricing.',
+    'Trash bins hot-pressure washed, sanitized & deodorized at your curb. Launching January 2027 in Central Florida — first 100 sign-ups lock pre-launch pricing.',
   path: '/trash-bin-cleaning/',
   keywords:
     'trash bin cleaning central florida, trash can cleaning orlando, garbage bin cleaning service, curbside bin washing, HOA bin cleaning',
@@ -23,7 +23,7 @@ export const metadata: Metadata = generateMetadata({
   // art, drop a 1200x630 JPG in public/Images/ and pass
   // `image: 'https://ontheflywastesolutions.com/Images/<file>.jpg'` here —
   // it feeds both the OpenGraph and Twitter card tags.
-  imageAlt: 'On The Fly Waste Solutions — trash bin cleaning, launching December in Central Florida',
+  imageAlt: 'On The Fly Waste Solutions — trash bin cleaning, launching January 2027 in Central Florida',
 });
 
 const services = [
@@ -87,7 +87,7 @@ export default function TrashBinCleaningPage() {
       />
       <ServiceSchema
         name="Trash Bin Cleaning"
-        description="Curbside trash bin cleaning for homes, HOAs and resort communities across Central Florida — hot-pressure washed inside and out, sanitized and deodorized. Launching December."
+        description="Curbside trash bin cleaning for homes, HOAs and resort communities across Central Florida — hot-pressure washed inside and out, sanitized and deodorized. Launching January 2027."
         slug="/trash-bin-cleaning/"
       />
 
@@ -161,7 +161,7 @@ export default function TrashBinCleaningPage() {
               className="mt-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#071a10] sm:text-sm"
               style={{ backgroundColor: LIME }}
             >
-              Launching December · Reserve Now
+              Launching January 2027 · Reserve Now
             </span>
           </header>
 

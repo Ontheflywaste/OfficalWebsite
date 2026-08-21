@@ -273,6 +273,14 @@ html {
   min-height: 600px;
 }
 
+/* HubSpotForm skeleton: visible only until HubSpot injects its iframe. */
+.hs-form-skeleton {
+  display: none;
+}
+.hs-form-frame:empty + .hs-form-skeleton {
+  display: block;
+}
+
 #hubspot-form-container .hs-button,
 #hubspot-form-container .hs-submit .hs-button,
 #hubspot-form-container input[type="submit"],

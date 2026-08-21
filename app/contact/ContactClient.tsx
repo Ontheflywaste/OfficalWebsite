@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { Phone, CheckCircle2, Star, Shield, Award, X } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import HubSpotForm from '@/app/components/HubSpotForm';
 
 
 const serviceLabels: Record<string, string> = {
@@ -20,68 +21,35 @@ const sizeLabels: Record<string, string> = {
   '200+': '200+ Units',
 };
 
-export default function ContactClient() {
+// useSearchParams forces client-side rendering of everything above its
+// nearest Suspense boundary, so it lives in this small child — the rest of
+// the page (including the HubSpot form placeholder) stays in the server HTML.
+function QuickQuoteSelections() {
   const searchParams = useSearchParams();
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
   const serviceParam = searchParams.get('service');
   const sizeParam = searchParams.get('size');
+  if (!serviceParam && !sizeParam) return null;
+  return (
+    <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 mb-6">
+      <p className="text-sm font-medium text-primary mb-2">Your selections from the Quick Quote:</p>
+      <div className="flex flex-wrap gap-2">
+        {serviceParam && serviceLabels[serviceParam] && (
+          <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
+            {serviceLabels[serviceParam]}
+          </span>
+        )}
+        {sizeParam && sizeLabels[sizeParam] && (
+          <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
+            {sizeLabels[sizeParam]}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
 
-  const hasPrefilledData = serviceParam || sizeParam;
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const script = document.createElement('script');
-      script.src = '//js.hsforms.net/forms/embed/v2.js';
-      script.async = true;
-      script.defer = true;
-      script.charset = 'utf-8';
-      script.onload = () => {
-        setScriptLoaded(true);
-      };
-      document.body.appendChild(script);
-    }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-      const existingScript = document.querySelector('script[src*="hsforms.net"]');
-      if (existingScript && document.body.contains(existingScript)) {
-        document.body.removeChild(existingScript);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (scriptLoaded && window.hbspt) {
-      const prefilledMessage: string[] = [];
-      if (serviceParam && serviceLabels[serviceParam]) {
-        prefilledMessage.push(`Service Interest: ${serviceLabels[serviceParam]}`);
-      }
-      if (sizeParam && sizeLabels[sizeParam]) {
-        prefilledMessage.push(`Property Size: ${sizeLabels[sizeParam]}`);
-      }
-
-      window.hbspt.forms.create({
-        region: 'na1',
-        portalId: '22416220',
-        formId: 'b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d',
-        target: '#hubspot-form-container',
-        onFormReady: ($form: HTMLFormElement) => {
-          if (prefilledMessage.length > 0) {
-            const messageField = $form.querySelector('textarea[name="message"]') as HTMLTextAreaElement;
-            if (messageField) {
-              messageField.value = prefilledMessage.join('\n');
-              messageField.dispatchEvent(new Event('input', { bubbles: true }));
-            }
-          }
-        },
-        onFormSubmitted: () => {
-          setShowSuccess(true);
-        }
-      });
-    }
-  }, [scriptLoaded, serviceParam, sizeParam]);
+export default function ContactClient() {
+  const [showSuccess, setShowSuccess] = useState(false);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -177,24 +145,17 @@ export default function ContactClient() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <ScrollReveal>
-                {hasPrefilledData && (
-                  <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 mb-6">
-                    <p className="text-sm font-medium text-primary mb-2">Your selections from the Quick Quote:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {serviceParam && serviceLabels[serviceParam] && (
-                        <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
-                          {serviceLabels[serviceParam]}
-                        </span>
-                      )}
-                      {sizeParam && sizeLabels[sizeParam] && (
-                        <span className="bg-primary text-white text-sm px-3 py-1 rounded-full">
-                          {sizeLabels[sizeParam]}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                )}
-                <div id="hubspot-form-container"></div>
+                <Suspense fallback={null}>
+                  <QuickQuoteSelections />
+                </Suspense>
+                <HubSpotForm
+                  region="na1"
+                  portalId="22416220"
+                  formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+                  minHeightClassName="min-h-[895px] md:min-h-[820px]"
+                  trackingLabel="contact"
+                  onSubmitted={() => setShowSuccess(true)}
+                />
               </ScrollReveal>
             </div>
 

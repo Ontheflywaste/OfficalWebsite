@@ -1,140 +1,114 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
+import Script from 'next/script';
 
 interface HubSpotFormProps {
   region?: string;
   portalId: string;
   formId: string;
+  /** Reserved height while HubSpot paints, so nothing below shifts. Defaults
+   *  match the measured quote form (~965px on phones, ~790px at md+). */
+  minHeightClassName?: string;
+  /** Fired when HubSpot reports a successful submission
+   *  (`hs-form-event:on-submission:success`). */
+  onSubmitted?: () => void;
+  /** Value pushed to dataLayer as `form` alongside the standard event. */
+  trackingLabel?: string;
 }
 
-declare global {
-  interface Window {
-    hbspt?: {
-      forms: {
-        create: (options: any) => void;
-      };
-    };
-  }
-}
-
-let scriptLoaded = false;
-let scriptLoading = false;
-
+// Every form on this site was built in HubSpot's new forms editor, which
+// renders inside a cross-origin iframe. The right embed for those is the
+// per-portal script (js.hsforms.net/forms/embed/<portal>.js) + a
+// `.hs-form-frame` placeholder — the legacy hbspt.forms.create() API only
+// wraps that same mechanism, never fires onFormReady for iframe forms, and
+// costs a 600 KB v2.js download.
+//
+// Reliability rules learned on /trash-bin-cleaning/:
+//  • The placeholder is server-rendered (client components SSR) so it exists
+//    before ANY HubSpot script executes — the site-wide HubSpotChat loader
+//    also pulls this forms module in, and it scans for placeholders once.
+//  • The script loads `afterInteractive` (deterministic; `lazyOnload`'s idle
+//    path was observed to skip injection on some cold loads).
+//  • Client-side navigations: the already-loaded embed only notices NEW
+//    `.hs-form-frame` nodes via a MutationObserver that looks ≤5 levels
+//    below each added node — a whole new page subtree is deeper than that,
+//    so the placeholder is silently missed. The watchdog therefore re-mounts
+//    the placeholder itself (key bump → a fresh, directly-added node) when
+//    no iframe has appeared, and re-injects the script as a last resort.
+//  • The skeleton is CSS-only (`.hs-form-frame:empty + .hs-form-skeleton`,
+//    see globals.css) so it disappears the instant HubSpot paints.
 export default function HubSpotForm({
   region = 'na1',
   portalId,
-  formId
+  formId,
+  minHeightClassName = 'min-h-[965px] md:min-h-[790px]',
+  onSubmitted,
+  trackingLabel,
 }: HubSpotFormProps) {
-  const formRef = useRef<HTMLDivElement>(null);
-  const formCreatedRef = useRef(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const hostRef = useRef<HTMLDivElement>(null);
+  const [frameKey, setFrameKey] = useState(0);
+  const onSubmittedRef = useRef(onSubmitted);
+  onSubmittedRef.current = onSubmitted;
   const reactId = useId();
-  const containerIdRef = useRef(`hubspot-form-${reactId.replace(/:/g, '')}`);
+  const containerId = `hubspot-form-${reactId.replace(/:/g, '')}`;
+  const src = `https://js.hsforms.net/forms/embed/${portalId}.js`;
 
+  // The new embed announces submissions as a bubbling CustomEvent on the
+  // frame container (`hs-form-event:on-submission:success`, detail.formId) —
+  // not the legacy `hsFormCallback` postMessage, which these forms never send.
   useEffect(() => {
-    if (formCreatedRef.current) return;
-
-    const loadingTimeout = setTimeout(() => {
-      if (!formCreatedRef.current) {
-        setIsLoading(false);
-        console.warn('HubSpot form loading timeout');
+    const onSuccess = (event: Event) => {
+      const detail = (event as CustomEvent<{ formId?: string }>).detail;
+      if (detail?.formId && detail.formId !== formId) return;
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({ event: 'hubspot_form_submit', form: trackingLabel ?? formId });
       }
-    }, 5000);
-
-    const createForm = () => {
-      if (window.hbspt?.forms && formRef.current && !formCreatedRef.current) {
-        try {
-          window.hbspt.forms.create({
-            region,
-            portalId,
-            formId,
-            target: `#${containerIdRef.current}`,
-            onFormReady: () => {
-              formCreatedRef.current = true;
-              setIsLoading(false);
-              clearTimeout(loadingTimeout);
-            },
-            onFormSubmit: () => {
-              if (typeof window !== 'undefined' && Array.isArray(window.dataLayer)) {
-                window.dataLayer.push({ event: 'hubspot_form_submit' });
-              }
-            }
-          });
-        } catch (error) {
-          console.error('Error creating HubSpot form:', error);
-          setIsLoading(false);
-          clearTimeout(loadingTimeout);
-        }
-      }
+      onSubmittedRef.current?.();
     };
+    window.addEventListener('hs-form-event:on-submission:success', onSuccess);
+    return () => window.removeEventListener('hs-form-event:on-submission:success', onSuccess);
+  }, [formId, trackingLabel]);
 
-    const loadScript = () => {
-      if (scriptLoaded) {
-        createForm();
-        return;
-      }
-
-      if (scriptLoading) {
-        const checkInterval = setInterval(() => {
-          if (scriptLoaded && window.hbspt?.forms) {
-            clearInterval(checkInterval);
-            createForm();
-          }
-        }, 100);
-        return;
-      }
-
-      scriptLoading = true;
-      const script = document.createElement('script');
-      script.src = 'https://js.hsforms.net/forms/embed/v2.js';
-      script.async = true;
-      script.charset = 'utf-8';
-      script.type = 'text/javascript';
-
-      script.onload = () => {
-        scriptLoaded = true;
-        scriptLoading = false;
-
-        if (window.hbspt?.forms) {
-          createForm();
-        } else {
-          setTimeout(createForm, 100);
-        }
-      };
-
-      script.onerror = () => {
-        console.error('Failed to load HubSpot form script');
-        scriptLoading = false;
-        setIsLoading(false);
-        clearTimeout(loadingTimeout);
-      };
-
-      document.body.appendChild(script);
-    };
-
-    loadScript();
-
+  // Watchdog: on mount → re-mount the placeholder unless HubSpot already
+  // painted (covers client-side navigation instantly); 1.5s → re-mount again
+  // if still blank; 4.5s → re-mount and re-inject the script as a last resort.
+  useEffect(() => {
+    const painted = () => !!hostRef.current?.querySelector('.hs-form-frame iframe');
+    if (!painted()) setFrameKey((k) => k + 1);
+    const t1 = window.setTimeout(() => {
+      if (!painted()) setFrameKey((k) => k + 1);
+    }, 1500);
+    const t2 = window.setTimeout(() => {
+      if (painted()) return;
+      setFrameKey((k) => k + 1);
+      const s = document.createElement('script');
+      s.src = `${src}?retry=${Date.now()}`;
+      s.async = true;
+      document.body.appendChild(s);
+    }, 4500);
     return () => {
-      clearTimeout(loadingTimeout);
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
     };
-  }, [region, portalId, formId]);
+  }, [src]);
 
   return (
-    <div className="relative w-full">
-      {isLoading && (
-        <div className="flex items-center justify-center py-8">
-          <div className="flex flex-col items-center gap-4">
-            <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-            <p className="text-ink text-sm font-medium">Loading form...</p>
-          </div>
-        </div>
-      )}
+    <div id={containerId} ref={hostRef} className={`relative w-full ${minHeightClassName}`}>
       <div
-        id={containerIdRef.current}
-        ref={formRef}
-        className="hubspot-form-wrapper w-full"
+        key={frameKey}
+        className="hs-form-frame"
+        data-region={region}
+        data-form-id={formId}
+        data-portal-id={portalId}
       />
+      <div className="hs-form-skeleton absolute inset-0 space-y-4 pt-2" aria-hidden="true">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="h-12 animate-pulse rounded-lg bg-surface-page" />
+        ))}
+        <div className="h-12 w-40 animate-pulse rounded-full bg-primary/20" />
+      </div>
+      <Script id={`hs-form-embed-${portalId}`} src={src} strategy="afterInteractive" />
     </div>
   );
 }

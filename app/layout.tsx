@@ -22,18 +22,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'On The Fly Waste Solutions | Professional Valet Trash Services Orlando FL',
   description: 'Professional valet trash, bulk removal, and pressure washing services for Central Florida communities.',
-  // Icon set is resampled from the official mark masters in the app repo
-  // (OTFapp1 assets/app-icon/official, recipe in that README) so both
-  // properties share one mark — regenerate from there when it changes,
-  // and bump ?v= so returning visitors' cached favicons refresh.
+  // The WEBSITE keeps the ORIGINAL mark (the "n" logo tile) — on purpose.
+  // The green recycling mark is reserved for the APP icon (OTFapp1); do not
+  // "re-fix" this site to match it. Tab icons are the pre-#55 files from git
+  // history; apple-touch-icon + manifest tiles are that same artwork
+  // flattened onto opaque white (iOS renders alpha as black). Bump ?v= on
+  // any change so returning visitors' cached favicons refresh.
   icons: {
     icon: [
-      { url: '/favicon.ico?v=3', sizes: '48x48', type: 'image/x-icon' },
-      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
-      { url: '/favicon-96x96.png?v=3', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.ico?v=4', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg?v=4', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png?v=4', sizes: '96x96', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=3',
-    apple: '/apple-touch-icon.png?v=3',
+    shortcut: '/favicon.ico?v=4',
+    apple: '/apple-touch-icon.png?v=4',
   },
   metadataBase: new URL('https://ontheflywastesolutions.com'),
   verification: {

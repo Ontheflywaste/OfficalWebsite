@@ -49,6 +49,60 @@ export interface GalleryPhoto {
 /** Newest first. */
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
+    src: '/Images/gallery/2026-08-industry-dinner-gift-basket.jpg',
+    alt: 'Team member in a black suit and a woman in a dark green gown holding a large woven gift basket at an evening event',
+    caption: 'Delivering a gift basket at an industry dinner',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/2026-08-industry-dinner-group.jpg',
+    alt: 'Four people in formal wear smiling together in front of patterned curtains at an evening industry event',
+    caption: 'Dressed up for an industry awards dinner',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/2026-07-trade-show-selfie.jpg',
+    alt: 'Team member in an On The Fly polo and lanyard taking a selfie with a smiling attendee in front of a fireworks backdrop at a trade show',
+    caption: 'A quick selfie with a new friend at a property management trade show',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/2026-06-pressure-washing-parking-lot.jpg',
+    alt: 'Crew member pressure washing a parking space beside a gray cargo van at a residential community',
+    caption: 'Pressure washing a parking area at a Central Florida community',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/2026-05-bulk-removal-trailer-loaded.jpg',
+    alt: 'Green On The Fly dump trailer loaded with a couch and other bulk items in a parking lot',
+    caption: 'A full trailer after a bulk removal pickup',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/branded-truck-and-trailer-palms.jpg',
+    alt: 'White and green On The Fly branded pickup truck towing a loaded trailer, parked under palm trees',
+    caption: 'Truck and trailer loaded and ready to roll',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/trade-show-booth-balloons.jpg',
+    alt: 'Four people holding branded coffee mugs in front of the On The Fly booth with silver balloon letters and star balloons at a trade show',
+    caption: 'Mugs and smiles at our balloon-letter booth',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/2025-08-community-event-kitchen.jpg',
+    alt: 'Three people smiling in a bright kitchen, the one in the middle wearing an On The Fly polo',
+    caption: 'Visiting with a community team',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/2025-03-crew-member-trailer-portrait.jpg',
+    alt: 'Crew member in a neon green On The Fly shirt and cap smiling in front of a company trailer',
+    caption: 'One of our crew, ready for the route',
+    category: 'our-team',
+  },
+  {
     src: '/Images/gallery/2026-10-trade-show-booth.jpg',
     alt: 'Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at a Central Florida property management trade show',
     caption: 'Our booth at a Central Florida property management trade show',

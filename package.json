@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "photo": "node scripts/add-gallery-photo.mjs"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.15.9",

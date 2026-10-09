@@ -197,6 +197,12 @@ export default function HomeClient() {
                   <div className="text-sm">Verified Routes</div>
                 </div>
               </div>
+              <p className="mt-8">
+                <Link href="/gallery/" className="btn-link text-sm gap-2">
+                  See more photos from the field
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </p>
             </ScrollReveal>
           </div>
         </div>

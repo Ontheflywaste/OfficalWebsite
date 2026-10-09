@@ -1,14 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
   ArrowRight,
   Briefcase,
-  MapPin,
-  Clock,
-  ChevronDown,
   Users,
   TrendingUp,
   Heart,
@@ -18,100 +15,112 @@ import {
   Phone,
   CheckCircle2,
   Loader2,
+  Paperclip,
+  X,
 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
 
-interface JobOpening {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  description: string;
-  requirements: string;
-  benefits: string;
-  created_at: string;
-}
+const HIRING_EMAIL = 'info@ontheflywastesolutions.com';
+const MAX_RESUME_BYTES = 3 * 1024 * 1024; // 3 MB
+const ALLOWED_RESUME_EXTENSIONS = ['pdf', 'doc', 'docx'];
+
+const RESUME_FALLBACK = `Please email your resume to ${HIRING_EMAIL} instead and we'll add it to your application.`;
+const GENERIC_ERROR = `Something went wrong and your application didn't go through. Please try again, or email your resume to ${HIRING_EMAIL}.`;
 
 export default function CareersClient() {
-  const [jobs, setJobs] = useState<JobOpening[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [expandedJob, setExpandedJob] = useState<string | null>(null);
-  const [showApplicationForm, setShowApplicationForm] = useState(false);
-  const [selectedJob, setSelectedJob] = useState<JobOpening | null>(null);
   const [formData, setFormData] = useState({
     full_name: '',
     email: '',
     phone: '',
     message: '',
   });
+  const [resume, setResume] = useState<File | null>(null);
+  const [resumeError, setResumeError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState(GENERIC_ERROR);
+  // Time trap: set after mount so the server can tell instant bot posts from people.
+  const [formTs, setFormTs] = useState(0);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    fetchJobs();
+    setFormTs(Date.now());
   }, []);
 
-  async function fetchJobs() {
-    try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-      if (!supabaseUrl || !supabaseKey) return;
-
-      const response = await fetch(
-        `${supabaseUrl}/rest/v1/job_openings?is_active=eq.true&order=created_at.desc`,
-        {
-          headers: {
-            apikey: supabaseKey,
-            Authorization: `Bearer ${supabaseKey}`,
-          },
-        }
-      );
-
-      if (response.ok) {
-        const data = await response.json();
-        setJobs(data);
-      }
-    } catch (err) {
-      // silently fail - page still works with empty state
-    } finally {
-      setLoading(false);
+  function handleResumeChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0] ?? null;
+    setResumeError(null);
+    if (!file) {
+      setResume(null);
+      return;
     }
+    const ext = file.name.split('.').pop()?.toLowerCase() ?? '';
+    if (!ALLOWED_RESUME_EXTENSIONS.includes(ext)) {
+      setResume(null);
+      e.target.value = '';
+      setResumeError(`We can only accept PDF, DOC, or DOCX files. ${RESUME_FALLBACK}`);
+      return;
+    }
+    if (file.size > MAX_RESUME_BYTES) {
+      setResume(null);
+      e.target.value = '';
+      setResumeError(
+        `That file is ${(file.size / (1024 * 1024)).toFixed(1)} MB, and the limit is 3 MB. Try a smaller file, or ${RESUME_FALLBACK.charAt(0).toLowerCase()}${RESUME_FALLBACK.slice(1)}`
+      );
+      return;
+    }
+    setResume(file);
   }
 
-  function handleApply(job: JobOpening) {
-    setSelectedJob(job);
-    setShowApplicationForm(true);
+  function clearResume() {
+    setResume(null);
+    setResumeError(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }
+
+  function resetForm() {
+    setFormData({ full_name: '', email: '', phone: '', message: '' });
+    clearResume();
     setSubmitStatus('idle');
-    setTimeout(() => {
-      document.getElementById('application-form')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    setErrorMessage(GENERIC_ERROR);
+    setFormTs(Date.now());
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (resumeError) return;
     setSubmitting(true);
     setSubmitStatus('idle');
 
+    const body = new FormData();
+    body.append('full_name', formData.full_name);
+    body.append('email', formData.email);
+    body.append('phone', formData.phone);
+    body.append('message', formData.message);
+    body.append('form_ts', String(formTs));
+    // Honeypot: real users never see or fill this field.
+    body.append('website', (e.currentTarget.elements.namedItem('website') as HTMLInputElement | null)?.value ?? '');
+    if (resume) body.append('resume', resume, resume.name);
+
     try {
-      const response = await fetch('/api/careers', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          job_opening_id: selectedJob?.id || null,
-          job_title: selectedJob?.title || 'General Application',
-        }),
-      });
+      // Trailing slash avoids a 308 redirect of the multipart body (next.config trailingSlash: true).
+      const response = await fetch('/api/careers/', { method: 'POST', body });
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ full_name: '', email: '', phone: '', message: '' });
-      } else {
-        setSubmitStatus('error');
+        return;
       }
+
+      let serverMessage: string | undefined;
+      try {
+        serverMessage = (await response.json())?.error;
+      } catch {
+        // Non-JSON error (for example a 413 from the platform). Fall through to the generic message.
+      }
+      setErrorMessage(serverMessage || GENERIC_ERROR);
+      setSubmitStatus('error');
     } catch {
+      setErrorMessage(GENERIC_ERROR);
       setSubmitStatus('error');
     } finally {
       setSubmitting(false);
@@ -151,9 +160,6 @@ export default function CareersClient() {
     },
   ];
 
-  function formatList(text: string) {
-    return text.split('.').filter((s) => s.trim().length > 0);
-  }
 
   return (
     <div className="min-h-screen">
@@ -193,10 +199,10 @@ export default function CareersClient() {
                 Build your career with Central Florida&apos;s fastest-growing waste management company. We&apos;re looking for dedicated people who want to make a difference.
               </p>
               <a
-                href="#open-positions"
+                href="#join-our-team"
                 className="btn-primary inline-flex items-center gap-2"
               >
-                View Open Positions
+                Apply Now
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -294,253 +300,192 @@ export default function CareersClient() {
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20 bg-white scroll-mt-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      {/* Join Our Team */}
+      <section id="join-our-team" className="py-20 bg-white scroll-mt-32">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Open Positions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Find your next opportunity with On The Fly Waste Solutions
-              </p>
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Team</h2>
+              <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left md:text-center">
+                <p>
+                  We&apos;re a Central Florida crew that keeps apartment, HOA, and resort communities clean, and we&apos;re growing. Most of our team started as collection associates and moved up from there. If you show up, work hard, and take pride in a job done right, we want to hear from you.
+                </p>
+                <p>
+                  Shifts vary by the community you&apos;re assigned to. Some run in the morning, some in the evening, so you&apos;ll need some flexibility. We&apos;ll go over the schedule with you before you start.
+                </p>
+                <p>Tell us a little about yourself below. We read every application and reply personally.</p>
+              </div>
             </div>
           </ScrollReveal>
 
-          {loading ? (
-            <div className="flex justify-center py-12">
-              <Loader2 className="w-8 h-8 text-primary animate-spin" />
-            </div>
-          ) : jobs.length === 0 ? (
-            <ScrollReveal>
-              <div className="text-center py-12 bg-gray-50 rounded-2xl px-8">
-                <Briefcase className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  No Specific Openings Right Now
-                </h3>
-                <p className="text-gray-600 max-w-lg mx-auto mb-6">
-                  We&apos;re always looking for great people. Send us your resume and we&apos;ll reach out when a position that fits your skills becomes available.
-                </p>
-                <a
-                  href="mailto:info@ontheflywastesolutions.com?subject=Career%20Interest%20-%20General%20Application"
-                  className="btn-primary inline-flex items-center gap-2"
-                >
-                  <Send className="w-5 h-5" />
-                  Send Your Resume
-                </a>
-              </div>
-            </ScrollReveal>
-          ) : (
-            <div className="space-y-4">
-              {jobs.map((job, index) => (
-                <ScrollReveal key={job.id} delay={index * 0.1}>
-                  <div className="border border-gray-200 rounded-xl overflow-hidden hover:border-primary/30 transition-colors duration-300">
-                    <button
-                      onClick={() => setExpandedJob(expandedJob === job.id ? null : job.id)}
-                      className="w-full text-left p-6 flex items-center justify-between gap-4"
-                    >
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                        <div className="flex flex-wrap gap-3">
-                          <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <Briefcase className="w-4 h-4 text-primary" />
-                            {job.department}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4 text-primary" />
-                            {job.location}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 text-sm text-gray-600">
-                            <Clock className="w-4 h-4 text-primary" />
-                            {job.type}
-                          </span>
-                        </div>
-                      </div>
-                      <ChevronDown
-                        className={`w-6 h-6 text-gray-400 flex-shrink-0 transition-transform duration-300 ${
-                          expandedJob === job.id ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        expandedJob === job.id ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <div className="px-6 pb-6 border-t border-gray-100 pt-6">
-                        <div className="space-y-6">
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-900 mb-3">About This Role</h4>
-                            <p className="text-gray-700 leading-relaxed">{job.description}</p>
-                          </div>
-
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements</h4>
-                            <ul className="space-y-2">
-                              {formatList(job.requirements).map((req, i) => (
-                                <li key={i} className="flex items-start gap-2 text-gray-700">
-                                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                  <span>{req.trim()}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <div>
-                            <h4 className="text-lg font-semibold text-gray-900 mb-3">What We Offer</h4>
-                            <ul className="space-y-2">
-                              {formatList(job.benefits).map((benefit, i) => (
-                                <li key={i} className="flex items-start gap-2 text-gray-700">
-                                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                                  <span>{benefit.trim()}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-
-                          <button
-                            onClick={() => handleApply(job)}
-                            className="btn-primary inline-flex items-center gap-2"
-                          >
-                            Apply for This Position
-                            <ArrowRight className="w-5 h-5" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+          <ScrollReveal delay={0.1}>
+            <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-10 border-t-8 border-primary">
+              {submitStatus === 'success' ? (
+                <div className="text-center py-8" role="status">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-primary" />
                   </div>
-                </ScrollReveal>
-              ))}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Thanks, we got your application.</h3>
+                  <p className="text-gray-600 mb-6">We&apos;ll be in touch soon.</p>
+                  <button onClick={resetForm} className="text-primary font-semibold hover:underline">
+                    Submit another application
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="relative space-y-6">
+                  <div>
+                    <label htmlFor="full_name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="full_name"
+                      name="full_name"
+                      required
+                      maxLength={200}
+                      autoComplete="name"
+                      value={formData.full_name}
+                      onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                      placeholder="Your full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      maxLength={254}
+                      autoComplete="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      maxLength={40}
+                      autoComplete="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                      placeholder="(407) 000-0000"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Tell Us About Yourself *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      minLength={10}
+                      maxLength={5000}
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none"
+                      placeholder="Your experience, the kind of work you're looking for, and when you could start..."
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="resume" className="block text-sm font-medium text-gray-700 mb-2">
+                      Resume <span className="text-gray-500 font-normal">(optional) &mdash; PDF or Word, up to 3 MB</span>
+                    </label>
+                    {resume ? (
+                      <div className="flex items-center justify-between gap-3 bg-white border border-gray-300 rounded-lg px-4 py-3">
+                        <span className="flex items-center gap-2 text-gray-800 text-sm truncate">
+                          <Paperclip className="w-4 h-4 text-primary flex-shrink-0" aria-hidden="true" />
+                          <span className="truncate">{resume.name}</span>
+                          <span className="text-gray-500 flex-shrink-0">({(resume.size / 1024).toFixed(0)} KB)</span>
+                        </span>
+                        <button
+                          type="button"
+                          onClick={clearResume}
+                          className="text-gray-500 hover:text-gray-900 flex-shrink-0"
+                          aria-label="Remove resume"
+                        >
+                          <X className="w-4 h-4" />
+                        </button>
+                      </div>
+                    ) : (
+                      <input
+                        ref={fileInputRef}
+                        type="file"
+                        id="resume"
+                        name="resume"
+                        accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                        onChange={handleResumeChange}
+                        className="block w-full text-sm text-gray-700 file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20 file:cursor-pointer"
+                      />
+                    )}
+                    {resumeError && (
+                      <p className="mt-2 text-sm text-red-700" role="alert">
+                        {resumeError}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Honeypot: hidden from people, filled by bots. */}
+                  <div className="absolute -left-[9999px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" defaultValue="" />
+                  </div>
+
+                  {submitStatus === 'error' && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm" role="alert">
+                      {errorMessage}
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting || !!resumeError}
+                    className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {submitting ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5" />
+                        Submit Application
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-gray-500 text-center">
+                    Prefer email? Send your resume to{' '}
+                    <a href={`mailto:${HIRING_EMAIL}?subject=Job%20Application`} className="text-primary hover:underline">
+                      {HIRING_EMAIL}
+                    </a>
+                    .
+                  </p>
+                </form>
+              )}
             </div>
-          )}
+          </ScrollReveal>
         </div>
       </section>
-
-      {/* Application Form */}
-      {showApplicationForm && (
-        <section id="application-form" className="py-20 bg-gray-50 scroll-mt-32">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <ScrollReveal>
-              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">Apply Now</h2>
-                  <p className="text-gray-600">
-                    Applying for: <span className="font-semibold text-primary">{selectedJob?.title || 'General Application'}</span>
-                  </p>
-                </div>
-
-                {submitStatus === 'success' ? (
-                  <div className="text-center py-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Application Received</h3>
-                    <p className="text-gray-600 mb-6">
-                      Thank you for your interest in joining our team. We will review your application and get back to you soon.
-                    </p>
-                    <button
-                      onClick={() => {
-                        setShowApplicationForm(false);
-                        setSubmitStatus('idle');
-                      }}
-                      className="text-primary font-semibold hover:underline"
-                    >
-                      Back to Open Positions
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <label htmlFor="full_name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="full_name"
-                        required
-                        value={formData.full_name}
-                        onChange={(e) => setFormData({ ...formData, full_name: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-                        placeholder="Your full name"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
-                        placeholder="(407) 000-0000"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Tell Us About Yourself *
-                      </label>
-                      <textarea
-                        id="message"
-                        required
-                        rows={5}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors resize-none"
-                        placeholder="Share your relevant experience, why you're interested in this role, and what makes you a great fit..."
-                      />
-                    </div>
-
-                    {submitStatus === 'error' && (
-                      <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
-                        Something went wrong. Please try again or email us directly at info@ontheflywastesolutions.com.
-                      </div>
-                    )}
-
-                    <button
-                      type="submit"
-                      disabled={submitting}
-                      className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {submitting ? (
-                        <>
-                          <Loader2 className="w-5 h-5 animate-spin" />
-                          Submitting...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-5 h-5" />
-                          Submit Application
-                        </>
-                      )}
-                    </button>
-                  </form>
-                )}
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      )}
 
       {/* Bottom CTA */}
       <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">

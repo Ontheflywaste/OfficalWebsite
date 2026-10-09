@@ -54,4 +54,40 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     caption: 'Our booth at a Central Florida property management trade show',
     category: 'events',
   },
+  {
+    src: '/Images/gallery/trade-show-booth-green-vests.jpg',
+    alt: 'Two team members in green vests standing at the On The Fly booth with a branded table banner at an apartment industry trade show',
+    caption: 'Ready for visitors at an apartment industry trade show',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/trade-show-booth-crown.jpg',
+    alt: 'Team member wearing a crown and green vest standing with a visitor at the On The Fly booth at a trade show',
+    caption: 'Having some fun with a visitor at our trade show booth',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/crew-member-apartment-pool-deck.jpg',
+    alt: 'Crew member in a high-visibility vest standing on the pool deck of an apartment community',
+    caption: 'On the route at a Central Florida apartment community',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/valet-trash-truck-and-trailer.jpg',
+    alt: 'On The Fly branded pickup truck with an enclosed trailer parked outside a row of storage units',
+    caption: 'One of our valet trash trucks and trailers',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/crew-pink-vests-breast-cancer-awareness.jpg',
+    alt: 'Three crew members in pink safety vests and hard hats standing on a sidewalk at a residential community',
+    caption: 'Our crew in pink for Breast Cancer Awareness Month',
+    category: 'our-team',
+  },
+  {
+    src: '/Images/gallery/next-generation-helpers.jpg',
+    alt: 'Two young girls in bright green tutus and pink shirts pushing a trash bin across a lawn',
+    caption: 'The next generation of the On The Fly family, helping out at home',
+    category: 'our-team',
+  },
 ];

@@ -35,7 +35,11 @@ if (existsSync(out)) {
 }
 
 try {
-  execFileSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '80', '-Z', '2000', source, '--out', out], { stdio: 'ignore' });
+  const srcDims = execFileSync('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', source]).toString().match(/\d+/g).slice(-2).map(Number);
+  const longEdge = Math.max(...srcDims);
+  // Only shrink. Never upsample a small photo to 2000px.
+  const resize = longEdge > 2000 ? ['-Z', '2000'] : [];
+  execFileSync('sips', ['-s', 'format', 'jpeg', '-s', 'formatOptions', '80', ...resize, source, '--out', out], { stdio: 'ignore' });
 } catch {
   console.error('Could not run `sips`. This helper expects macOS. On another OS, resize to 2000px long edge as JPEG and save to public/Images/gallery/ by hand.');
   process.exit(1);

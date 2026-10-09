@@ -223,7 +223,7 @@ export default function AboutClient() {
                     On The Fly Waste Solutions was born from a simple observation: apartment and condo property managers in Central Florida deserved a waste management partner they could truly count on.
                   </p>
                   <p className="text-lg">
-                    As lifelong Florida residents, our founders understood the unique challenges apartment communities face. Unreliable service, poor communication, and lack of accountability were creating headaches for property managers and residents alike.
+                    As a lifelong Florida resident, our founder understood the unique challenges apartment communities face. Unreliable service, poor communication, and lack of accountability were creating headaches for property managers and residents alike.
                   </p>
                   <p className="text-lg">
                     We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. GPS route verification every day. Photo documentation when it matters. A route confirmation to management every day. Real people answering the phone. These weren't industry standards—they were our promises.

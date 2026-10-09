@@ -236,14 +236,13 @@ export default function AboutClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative">
+              <div className="relative aspect-[3/2] w-full">
                 <Image
-                  src="/Images/TradeshowTrevor.jpeg"
-                  alt="On The Fly Waste Solutions team at industry trade show"
-                  width={1200}
-                  height={800}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                  src="/Images/tradeshow-booth-team.jpg"
+                  alt="Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at a Central Florida property management trade show"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="rounded-2xl shadow-2xl object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl">
                   <div className="text-4xl font-bold">GPS</div>
@@ -271,8 +270,8 @@ export default function AboutClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
             {values.map((value, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
-                <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+              <ScrollReveal key={index} delay={index * 0.1} className="h-full">
+                <div className="h-full flex flex-col bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
                   <div className="w-16 h-16 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center text-primary mb-6">
                     {value.icon}
                   </div>

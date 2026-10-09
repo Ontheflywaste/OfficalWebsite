@@ -257,8 +257,8 @@ export default function CareersClient() {
                     <div className="text-gray-600 text-sm mt-1">Residents Served</div>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
-                    <div className="text-3xl font-bold text-primary">100%</div>
-                    <div className="text-gray-600 text-sm mt-1">Collection Rate</div>
+                    <div className="text-3xl font-bold text-primary">GPS</div>
+                    <div className="text-gray-600 text-sm mt-1">Verified Routes</div>
                   </div>
                   <div className="bg-white p-5 rounded-xl shadow-sm text-center">
                     <div className="text-3xl font-bold text-primary">5.0</div>

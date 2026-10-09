@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CityValetTrashTemplate, { type CityPageData } from '../components/CityValetTrashTemplate';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Four Corners, FL | On The Fly Waste Solutions',
@@ -26,8 +27,7 @@ const data: CityPageData = {
     <>
       On The Fly Waste Solutions provides reliable <strong>valet trash service</strong> to
       apartment communities and residential properties throughout Four Corners, FL. Our
-      professional team delivers consistent, high-quality service with our industry-leading 100%
-      collection guarantee.
+      professional team delivers consistent, high-quality service with our GPS-verified routes and daily route confirmation.
     </>,
     <>
       Located at the intersection of Osceola and Polk counties, Four Corners is a rapidly growing
@@ -39,11 +39,11 @@ const data: CityPageData = {
   benefits: [
     {
       title: 'GPS-Verified Collection',
-      description: 'GPS-tracked truck routing on every nightly route',
+      description: 'GPS-tracked truck routing on every daily route',
     },
     {
-      title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with verified missed pickups made right',
+      title: 'Daily Route Confirmation',
+      description: 'A route confirmation to management every day, with verified missed pickups made right',
     },
     {
       title: 'Flexible Service Options',
@@ -67,5 +67,15 @@ const data: CityPageData = {
 };
 
 export default function FourCornersServiceAreaPage() {
-  return <CityValetTrashTemplate data={data} />;
+  return (
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-four-corners-fl/"
+        areaServed={['Four Corners']}
+      />
+      <CityValetTrashTemplate data={data} />
+    </>
+  );
 }

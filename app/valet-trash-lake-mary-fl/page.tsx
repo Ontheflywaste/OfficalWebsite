@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServiceAreaClient from '../components/ServiceAreaClient';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Lake Mary, FL | On The Fly Waste Solutions',
@@ -17,7 +18,14 @@ export const metadata: Metadata = {
 
 export default function ValetTrashLakeMaryPage() {
   return (
-    <ServiceAreaClient
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-lake-mary-fl/"
+        areaServed={['Lake Mary']}
+      />
+      <ServiceAreaClient
       city="Lake Mary"
       state="FL"
       service="valet-trash"
@@ -31,5 +39,6 @@ export default function ValetTrashLakeMaryPage() {
         'Greenwood Lakes'
       ]}
     />
+    </>
   );
 }

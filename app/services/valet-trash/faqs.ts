@@ -18,7 +18,7 @@ export const faqs: FaqItem[] = [
     },
     {
       question: "What happens if trash is missed?",
-      answer: "We maintain a 100% collection commitment with GPS-tracked truck routing. If a missed pickup is verified — through a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. If a property manager wants truck GPS confirmation for a specific night, building, or trash bin, we can pull it on request."
+      answer: "Every route is GPS-verified and management receives a daily route confirmation. If a missed pickup is verified — through a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. If a property manager wants truck GPS confirmation for a specific day, building, or trash bin, we can pull it on request."
     },
     {
       question: "Do you provide recycling services?",

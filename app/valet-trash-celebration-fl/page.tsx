@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CityValetTrashTemplate, { type CityPageData } from '../components/CityValetTrashTemplate';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Celebration, FL | On The Fly Waste Solutions',
@@ -26,8 +27,7 @@ const data: CityPageData = {
     <>
       On The Fly Waste Solutions provides elite <strong>valet trash service</strong> to luxury
       apartment communities, vacation rentals, and resort properties throughout Celebration, FL.
-      Our professional team delivers white-glove service with our industry-leading 100% collection
-      guarantee.
+      Our professional team delivers white-glove service with our GPS-verified routes and daily route confirmation.
     </>,
     <>
       Serving Disney's renowned master-planned community, we understand the elevated standards
@@ -40,11 +40,11 @@ const data: CityPageData = {
   benefits: [
     {
       title: 'GPS-Verified Collection',
-      description: 'GPS-tracked truck routing on every nightly route',
+      description: 'GPS-tracked truck routing on every daily route',
     },
     {
-      title: '100% Collection Guarantee',
-      description: "GPS-tracked routing with verified missed pickups made right",
+      title: 'Daily Route Confirmation',
+      description: 'A route confirmation to management every day, with verified missed pickups made right',
     },
     {
       title: 'Resort-Grade Service',
@@ -68,5 +68,15 @@ const data: CityPageData = {
 };
 
 export default function CelebrationServiceAreaPage() {
-  return <CityValetTrashTemplate data={data} />;
+  return (
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-celebration-fl/"
+        areaServed={['Celebration']}
+      />
+      <CityValetTrashTemplate data={data} />
+    </>
+  );
 }

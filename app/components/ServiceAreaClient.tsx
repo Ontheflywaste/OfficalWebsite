@@ -41,10 +41,10 @@ export default function ServiceAreaClient({
 
   const serviceFeatures = {
     'valet-trash': [
-      '100% Collection Commitment',
+      'Daily Route Confirmation',
       'GPS-Tracked Truck Routing',
       'Verified Missed Pickups Made Right',
-      'Flexible 5-7 Day Service',
+      'Service 7 Days a Week',
       'Professional Uniformed Staff',
       'Dedicated Account Management'
     ],

@@ -4,7 +4,7 @@ import DemoClient from './DemoClient';
 export const metadata: Metadata = {
   title: 'Try the On The Fly App — On The Fly Waste Solutions',
   description:
-    'Two easy ways to see the On The Fly app: request a self-guided demo link or book a live Zoom walkthrough. GPS-verified routes, photo documentation, and nightly service visibility for resort communities and HOAs across Central Florida.',
+    'Two easy ways to see the On The Fly app: request a self-guided demo link or book a live Zoom walkthrough. GPS-verified routes, photo documentation, and daily service visibility for resort communities and HOAs across Central Florida.',
   alternates: {
     canonical: 'https://ontheflywastesolutions.com/demo/',
   },

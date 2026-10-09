@@ -13,7 +13,7 @@ export default function ServicesClient() {
       title: "Valet Trash Service",
       description: "Premier doorstep trash pickup for apartment communities. Flexible scheduling up to 7 days per week with GPS-verified route completion.",
       features: [
-        "100% collection commitment",
+        "Daily route confirmation",
         "GPS-tracked truck routing",
         "Verified missed pickups made right",
         "Flexible scheduling up to 7 days/week"
@@ -65,8 +65,8 @@ export default function ServicesClient() {
   const whyChooseUs = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "100% Collection Commitment",
-      description: "If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we make it right"
+      title: "Daily Route Confirmation",
+      description: "GPS-verified routes with a confirmation to management every day. If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we make it right"
     },
     {
       icon: <CheckCircle2 className="w-8 h-8" />,

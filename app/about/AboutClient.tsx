@@ -25,7 +25,7 @@ export default function AboutClient() {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Accountability",
-      description: "Our trucks run on GPS-tracked routes every night. If a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. We stand behind our work with a 100% collection commitment."
+      description: "Our trucks run on GPS-tracked routes every day, and management receives a route confirmation daily. If a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right."
     },
     {
       icon: <Heart className="w-8 h-8" />,
@@ -53,7 +53,7 @@ export default function AboutClient() {
       description: "Visionary leader committed to revolutionizing waste management in Central Florida",
       bio: [
         "Donnell founded On The Fly Waste Solutions with a simple belief: apartment communities in Central Florida deserve a waste-management partner that shows up, shows proof, and stands behind every pickup.",
-        "From day one he set the bar at a 100% collection commitment backed by GPS-tracked truck routing and verified missed pickups made right, bringing enterprise-level accountability to a category that had long settled for less.",
+        "From day one he set the bar at GPS-verified routes, daily route confirmation, and verified missed pickups made right, bringing enterprise-level accountability to a category that had long settled for less.",
         "Today he leads company strategy, key partnerships with resorts and property-management groups, and the continued rollout of the On The Fly property-manager app.",
       ],
       focusAreas: [
@@ -77,10 +77,10 @@ export default function AboutClient() {
         "Trevor trains every new crew member personally, so the bar for uniform presentation, noise discipline, and pickup quality stays consistent from the first building we onboard to the hundredth.",
       ],
       focusAreas: [
-        "Nightly crew dispatch & routing",
+        "Daily crew dispatch & routing",
         "Property-manager escalation & resolution",
         "Crew hiring, training, and uniform standards",
-        "Quality audits and photo-verification reviews",
+        "Quality audits and GPS route reviews",
       ],
       quote:
         "Our job is to make property managers look good. If the property is clean, we did our job right.",
@@ -226,7 +226,7 @@ export default function AboutClient() {
                     As lifelong Florida residents, our founders understood the unique challenges apartment communities face. Unreliable service, poor communication, and lack of accountability were creating headaches for property managers and residents alike.
                   </p>
                   <p className="text-lg">
-                    We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. GPS route verification every night. Photo documentation when it matters. A 100% collection rate guarantee. Real people answering the phone. These weren't industry standards—they were our promises.
+                    We set out to change that. From day one, we've combined cutting-edge technology with old-fashioned reliability. GPS route verification every day. Photo documentation when it matters. A route confirmation to management every day. Real people answering the phone. These weren't industry standards—they were our promises.
                   </p>
                   <p className="text-lg">
                     Today, we're proud to provide valet trash, junk removal, and bulk item removal to communities across Orlando, Kissimmee, and surrounding areas. We're more than a waste management company—we're your partner in creating cleaner, happier apartment communities.
@@ -246,8 +246,8 @@ export default function AboutClient() {
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl">
-                  <div className="text-4xl font-bold">100%</div>
-                  <div className="text-sm">Collection Rate</div>
+                  <div className="text-4xl font-bold">GPS</div>
+                  <div className="text-sm">Verified Routes</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -485,11 +485,11 @@ export default function AboutClient() {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">100% collection commitment with verified missed pickups made right</span>
+                    <span className="text-lg">GPS-verified routes with daily route confirmation and verified missed pickups made right</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Photo verification with every single service</span>
+                    <span className="text-lg">Photo documentation for violations or a specific unit when needed</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />

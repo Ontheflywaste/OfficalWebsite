@@ -7,11 +7,11 @@ import { faqs } from './faqs';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service for Apartment, HOA & Resort Communities | Central Florida',
-  description: 'Door-to-door valet trash for HOA, resort, and multifamily communities across Central Florida — 7 nights a week, GPS-verified routes, and photo documentation when it matters, backed by a 100% collection guarantee. Call (407) 274-5019.',
+  description: 'Door-to-door valet trash for HOA, resort, and multifamily communities across Central Florida — 7 days a week, GPS-verified routes, daily route confirmation, and photo documentation when it matters. Call (407) 274-5019.',
   keywords: 'valet trash service, doorstep trash collection, door to door trash collection, HOA valet trash, resort community valet trash, gated community valet trash, multifamily valet trash, Central Florida valet trash, doorstep trash pickup',
   openGraph: {
     title: 'Valet Trash Service for Apartment, HOA & Resort Communities | Central Florida',
-    description: 'Reliable door-to-door valet trash across Central Florida — 7 nights a week, GPS-verified, photo-documented when it matters, backed by a 100% collection guarantee.',
+    description: 'Reliable door-to-door valet trash across Central Florida — 7 days a week, GPS-verified, confirmed to management daily, and photo-documented when it matters.',
     type: 'website',
     url: 'https://ontheflywastesolutions.com/services/valet-trash/',
     images: ['https://ontheflywastesolutions.com/Images/gallery12813_1920x831@2x.jpg'],
@@ -33,7 +33,7 @@ export default function ValetTrashPage() {
       />
       <ServiceSchema
         name="Valet Trash Service"
-        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS tracking and a 100% collection guarantee."
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
         slug="/services/valet-trash/"
       />
       <FaqSchema faqs={faqs} />

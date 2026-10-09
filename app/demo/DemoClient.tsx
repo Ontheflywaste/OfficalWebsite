@@ -65,7 +65,7 @@ export default function DemoClient() {
               service? There are two easy ways to explore it — on your own, or with a
               guided walkthrough. Either way, you&apos;ll see exactly how the app
               delivers GPS-verified routes, photo documentation when it matters, and
-              clear visibility into every night&apos;s collection for resort
+              clear visibility into every day&apos;s collection for resort
               communities, HOAs, and property managers across Central Florida.
             </p>
           </ScrollReveal>

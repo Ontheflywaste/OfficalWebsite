@@ -115,8 +115,8 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-xl">
-                  <div className="text-3xl font-bold">100%</div>
-                  <div className="text-sm">Collection Rate</div>
+                  <div className="text-3xl font-bold">GPS</div>
+                  <div className="text-sm">Verified Routes</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -205,8 +205,8 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollReveal delay={0.1}>
               <div className="text-center">
-                <div className="text-5xl font-bold text-primary mb-2">100%</div>
-                <div className="text-gray-700 font-semibold">Collection Guarantee</div>
+                <div className="text-5xl font-bold text-primary mb-2">Daily</div>
+                <div className="text-gray-700 font-semibold">Route Confirmation</div>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>

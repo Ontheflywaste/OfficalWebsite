@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CityValetTrashTemplate, { type CityPageData } from '../components/CityValetTrashTemplate';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service in Davenport, FL | On The Fly Waste Solutions',
@@ -26,8 +27,7 @@ const data: CityPageData = {
     <>
       On The Fly Waste Solutions provides comprehensive <strong>valet trash service</strong> to
       apartment communities and vacation rentals throughout Davenport, FL. Our professional team
-      ensures reliable doorstep trash collection with our industry-leading 100% collection
-      guarantee.
+      ensures reliable doorstep trash collection with our GPS-verified routes and daily route confirmation.
     </>,
     <>
       Serving the growing Davenport area, we understand the unique needs of{' '}
@@ -39,15 +39,15 @@ const data: CityPageData = {
   benefits: [
     {
       title: 'GPS-Verified Collection',
-      description: 'Real-time tracking ensures every unit is serviced',
+      description: 'GPS-tracked truck routing on every daily route',
     },
     {
-      title: '100% Collection Guarantee',
-      description: 'GPS-tracked routing with verified missed pickups made right',
+      title: 'Daily Route Confirmation',
+      description: 'A route confirmation to management every day, with verified missed pickups made right',
     },
     {
-      title: 'Flexible Service Schedule',
-      description: '5-7 nights per week service options available',
+      title: 'Service 7 Days a Week',
+      description: '7 days a week, including Sundays and holidays',
     },
   ],
   inlineImageAlt: 'Valet trash service in Davenport FL apartment community',
@@ -67,5 +67,15 @@ const data: CityPageData = {
 };
 
 export default function DavenportServiceAreaPage() {
-  return <CityValetTrashTemplate data={data} />;
+  return (
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-davenport-fl/"
+        areaServed={['Davenport']}
+      />
+      <CityValetTrashTemplate data={data} />
+    </>
+  );
 }

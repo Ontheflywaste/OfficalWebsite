@@ -6,11 +6,11 @@ export interface FaqItem {
 export const faqs: FaqItem[] = [
     {
       question: "What is valet trash service for apartments?",
-      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 5-7 nights per week with GPS-tracked truck routing, a 100% collection commitment, and verified missed pickups made right."
+      answer: "Valet trash service is a convenient doorstep trash collection solution where residents place their bagged trash outside their door, and our professional team picks it up directly. This apartment trash pickup service eliminates the need for residents to walk to distant dumpsters and keeps your property cleaner. We provide service 7 days a week with GPS-verified routes, daily route confirmation, and verified missed pickups made right."
     },
     {
       question: "How much does valet trash cost for an apartment community in Orlando?",
-      answer: "Valet trash for an apartment community in Orlando is priced per unit, per month. The exact rate comes down to two things: how big your community is and which services you want included — nightly valet trash, recycling, bulk pickup, and so on. Larger communities usually get a lower per-unit rate; smaller ones are priced a little higher per unit, or paired with nearby routes to keep it affordable. The best way to get a real number is a quick quote for your property — call (407) 274-5019 or request one online and we'll price it for your community."
+      answer: "Valet trash for an apartment community in Orlando is priced per unit, per month. The exact rate comes down to two things: how big your community is and which services you want included — daily valet trash, recycling, bulk pickup, and so on. Larger communities usually get a lower per-unit rate; smaller ones are priced a little higher per unit, or paired with nearby routes to keep it affordable. The best way to get a real number is a quick quote for your property — call (407) 274-5019 or request one online and we'll price it for your community."
     },
     {
       question: "Do you offer bulk item removal for apartment complexes in Central Florida?",

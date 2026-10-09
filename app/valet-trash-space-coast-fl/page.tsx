@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServiceAreaClient from '../components/ServiceAreaClient';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Space Coast, FL | On The Fly Waste Solutions',
@@ -31,12 +32,20 @@ const neighborhoods = [
 
 export default function SpaceCoastPage() {
   return (
-    <ServiceAreaClient
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-space-coast-fl/"
+        areaServed={['Space Coast']}
+      />
+      <ServiceAreaClient
       city="Space Coast"
       state="FL"
       service="valet-trash"
       serviceTitle="Valet Trash Service"
       neighborhoods={neighborhoods}
     />
+    </>
   );
 }

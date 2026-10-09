@@ -13,8 +13,8 @@ export default function ValetTrashClient() {
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "100% Collection Commitment",
-      description: "GPS-tracked truck routing confirms our team is on your property every scheduled night. If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we make it right."
+      title: "Daily Route Confirmation",
+      description: "GPS-tracked truck routing confirms our team is on your property every scheduled day, and management receives a route confirmation daily. If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our truck GPS data — we make it right."
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -29,12 +29,12 @@ export default function ValetTrashClient() {
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Advanced GPS Tracking",
-      description: "Real-time geo-location tracking ensures 100% of your property footprint and every street is serviced with verified route completion."
+      description: "Real-time geo-location tracking shows your full property footprint and every street was serviced, with verified route completion."
     }
   ];
 
   const features = [
-    "100% collection commitment with verified missed pickups made right",
+    "GPS-verified routes with daily route confirmation and verified missed pickups made right",
     "Advanced GPS geo-location tracking",
     "Flexible scheduling up to 7 days per week",
     "Professional, uniformed collection staff",
@@ -223,7 +223,7 @@ export default function ValetTrashClient() {
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">Clean Community</h3>
                       <p className="text-gray-600">
-                        Your Central Florida apartment community stays clean and residents wake up to a trash-free environment every morning.
+                        Your Central Florida apartment community stays clean and residents enjoy a trash-free environment every day.
                       </p>
                     </div>
                   </div>
@@ -269,7 +269,7 @@ export default function ValetTrashClient() {
                   Route-Completion Assurance via GPS
                 </h2>
                 <p className="text-xl text-gray-100 mb-6 leading-relaxed">
-                  Every service is verified using advanced geo-location tracking that ensures 100% of your property footprint and every street is serviced. Complete accountability through GPS-verified route completion.
+                  Every service is verified using advanced geo-location tracking that shows your full property footprint and every street was serviced. Complete accountability through GPS-verified route completion.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -278,7 +278,7 @@ export default function ValetTrashClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />
-                    <span className="text-lg">Verified coverage of 100% property footprint</span>
+                    <span className="text-lg">Verified coverage of your full property footprint</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 flex-shrink-0 mt-1" />

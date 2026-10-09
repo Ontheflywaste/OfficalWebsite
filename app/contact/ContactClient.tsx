@@ -133,7 +133,7 @@ export default function ContactClient() {
               </span>
               <span className="inline-flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-primary" aria-hidden="true" />
-                100% collection guarantee
+                GPS-verified routes, confirmed daily
               </span>
             </div>
           </ScrollReveal>
@@ -194,9 +194,9 @@ export default function ContactClient() {
                         <Award className="w-6 h-6" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-1">100% Collection Guarantee</h4>
+                        <h4 className="font-bold text-lg mb-1">Daily Route Confirmation</h4>
                         <p className="text-white/90">
-                          GPS-tracked routing with verified missed pickups made right — every pickup, every time
+                          GPS-verified routes with a confirmation to management every day, and verified missed pickups made right
                         </p>
                       </div>
                     </div>

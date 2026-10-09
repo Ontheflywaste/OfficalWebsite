@@ -60,11 +60,11 @@ export default function HomeClient() {
                     textShadow: '2px 4px 12px rgba(0, 0, 0, 0.6)',
                   }}
                 >
-                  Valet Trash, Bulk &amp; Junk Removal
+                  Valet Trash for HOA, Resort &amp;
                   <br className="hidden md:block" />{' '}
-                  Services{' '}
+                  Multifamily Communities{' '}
                   <span className="block sm:inline-block mt-2 sm:mt-0">
-                    in Orlando, FL
+                    in Central Florida
                   </span>
                 </h1>
               </ScrollReveal>
@@ -161,7 +161,7 @@ export default function HomeClient() {
                     Since 2020, On The Fly Waste Solutions has been the go-to trash valet service transforming apartment waste management across Central Florida with innovative doorstep trash collection and comprehensive waste solutions.
                   </p>
                   <p>
-                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on a <span className="font-semibold text-primary">100% collection rate guarantee</span> and cutting-edge <span className="font-semibold text-primary">GPS tracking technology</span> that ensures every street and building is serviced exactly as promised.
+                    We understand that clean communities start with reliable, accountable service. That's why we've built our reputation on <span className="font-semibold text-primary">GPS-verified routes</span>, <span className="font-semibold text-primary">daily route confirmation</span>, and cutting-edge tracking technology that shows every street and building was serviced exactly as promised.
                   </p>
                   <p>
                     As proud members of the Florida Apartment Association (FAA), National Apartment Association (NAA), and AAGO, we bring enterprise-level service with a personal touch. From luxury resort communities across Central Florida to thriving apartment communities, property managers trust us to deliver exceptional results that residents notice.
@@ -193,8 +193,8 @@ export default function HomeClient() {
                   loading="lazy"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl hidden lg:block">
-                  <div className="text-3xl font-bold">100%</div>
-                  <div className="text-sm">Collection Rate</div>
+                  <div className="text-3xl font-bold">GPS</div>
+                  <div className="text-sm">Verified Routes</div>
                 </div>
               </div>
             </ScrollReveal>
@@ -231,7 +231,7 @@ export default function HomeClient() {
                 icon: Trash2,
                 title: 'Valet Trash Service',
                 description:
-                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. 100% collection commitment with GPS-tracked routing and verified missed pickups made right.',
+                  'Premier doorstep trash collection and apartment trash pickup in Orlando FL. GPS-verified routes with daily route confirmation and verified missed pickups made right.',
                 image: '/Images/Valettrashimage.jpg',
                 imageAlt: 'Professional valet trash doorstep collection service',
               },
@@ -442,7 +442,7 @@ export default function HomeClient() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">William Barber</div>
-                    <div className="text-sm text-gray-600">Vendor Supervisor, Encore Resort</div>
+                    <div className="text-sm text-gray-600">Vendor Supervisor, resort community</div>
                   </div>
                 </div>
               </div>
@@ -458,7 +458,7 @@ export default function HomeClient() {
               <div className="text-center mb-8">
                 <Slogan variant="dark" as="badge" className="text-sm md:text-base" />
                 <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-5">
-                  Start Your 100% Collection Guarantee Today
+                  Start GPS-Verified Valet Trash Service Today
                 </h2>
                 <p className="text-xl text-gray-600">
                   Ready to elevate your property's waste management in Orlando? Contact us today for a free, no-obligation quote for valet trash, bulk removal, or junk hauling.
@@ -496,8 +496,8 @@ export default function HomeClient() {
                 Manage Your Property's Waste Program from Your Pocket
               </h2>
               <p className="text-xl text-ink-muted leading-relaxed">
-                The On The Fly app brings real-time service tracking, photo
-                verification, and one-tap bulk pickup requests to property managers
+                The On The Fly app brings real-time service tracking, daily route
+                confirmation, and one-tap bulk pickup requests to property managers
                 and residents — all in a single, easy-to-use mobile experience.
               </p>
             </div>
@@ -513,8 +513,8 @@ export default function HomeClient() {
                   <div>
                     <h3 className="text-lg font-semibold text-ink mb-1">Live GPS Route Tracking</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Watch crews move through your property in real time and confirm
-                      every unit is serviced with GPS-verified check-ins.
+                      Watch crews move through your property in real time and get a
+                      GPS-verified route confirmation every day.
                     </p>
                   </div>
                 </div>
@@ -633,12 +633,12 @@ export default function HomeClient() {
 
                       <div className="grid grid-cols-3 gap-2 mb-4">
                         <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
-                          <div className="text-lg font-bold text-primary">100%</div>
-                          <div className="text-[9px] text-gray-400">Collection</div>
+                          <div className="text-lg font-bold text-primary">GPS</div>
+                          <div className="text-[9px] text-gray-400">Verified</div>
                         </div>
                         <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
-                          <div className="text-lg font-bold text-primary">248</div>
-                          <div className="text-[9px] text-gray-400">Photos</div>
+                          <div className="text-lg font-bold text-primary">7</div>
+                          <div className="text-[9px] text-gray-400">Days</div>
                         </div>
                         <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-2 text-center">
                           <div className="text-lg font-bold text-primary">5</div>
@@ -659,11 +659,11 @@ export default function HomeClient() {
                         </div>
                         <div className="bg-surface-dark-2/60 border border-surface-dark-border rounded-lg p-3 flex items-center gap-3">
                           <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Camera className="w-4 h-4 text-primary" aria-hidden="true" />
+                            <MapPin className="w-4 h-4 text-primary" aria-hidden="true" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="text-xs font-semibold">Photo verification</div>
-                            <div className="text-[10px] text-gray-400">Building 2 • 7:15 PM</div>
+                            <div className="text-xs font-semibold">Route confirmation sent</div>
+                            <div className="text-[10px] text-gray-400">Management • 9:05 PM</div>
                           </div>
                         </div>
                       </div>
@@ -731,8 +731,8 @@ export default function HomeClient() {
                 <div className="relative w-14 h-14 rounded-xl bg-white/20 border border-white/30 flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-7 h-7 text-white fill-white" aria-hidden="true" />
                 </div>
-                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">100%</div>
-                <div className="relative text-white/90 font-semibold text-lg">Client Satisfaction</div>
+                <div className="relative text-5xl md:text-6xl font-bold text-white mb-2 tracking-tight leading-none">Daily</div>
+                <div className="relative text-white/90 font-semibold text-lg">Route Confirmation</div>
               </div>
             </ScrollReveal>
 
@@ -779,7 +779,7 @@ export default function HomeClient() {
             {[
               {
                 title: 'HOA Communities',
-                blurb: 'HOA door to door trash collection with board-friendly reporting and GPS-tracked nightly routes.',
+                blurb: 'HOA door to door trash collection with board-friendly reporting and GPS-tracked daily routes.',
               },
               {
                 title: 'Resort Style & Luxury',
@@ -877,15 +877,15 @@ export default function HomeClient() {
               },
               {
                 icon: Shield,
-                title: '100% Collection Commitment',
+                title: 'Daily Route Confirmation',
                 description:
-                  'If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. No paperwork, no excuses, no finger-pointing.',
+                  'Management gets a GPS-verified route confirmation every day. If a missed pickup is verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right. No paperwork, no excuses, no finger-pointing.',
               },
               {
                 icon: Camera,
                 title: 'Property Manager Portal',
                 description:
-                  'Instant access to service reports and route history. Complete visibility into nightly route completion and any verified misses made right, at your fingertips.',
+                  'Instant access to service reports and route history. Complete visibility into daily route completion and any verified misses made right, at your fingertips.',
               },
             ].map((adv, i) => {
               const Icon = adv.icon;

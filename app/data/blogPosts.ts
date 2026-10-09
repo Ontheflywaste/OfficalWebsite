@@ -47,7 +47,7 @@ export const featuredPost: BlogPost = {
     },
     {
       type: 'paragraph',
-      text: 'Valet trash service is a premium amenity where trained professionals collect trash and recycling directly from residents\' doorsteps on scheduled evenings, typically 5-7 days per week. This service eliminates the need for residents to walk to distant dumpsters, especially beneficial in Orlando\'s hot and humid climate.'
+      text: 'Valet trash service is a premium amenity where trained professionals collect trash and recycling directly from residents\' doorsteps on scheduled days, 7 days per week. This service eliminates the need for residents to walk to distant dumpsters, especially beneficial in Orlando\'s hot and humid climate.'
     },
     {
       type: 'heading2',
@@ -59,7 +59,7 @@ export const featuredPost: BlogPost = {
         '<strong>Increased Property Value:</strong> Valet trash is a highly desired amenity that can justify higher rent prices',
         '<strong>Improved Cleanliness:</strong> Professional collection reduces overflow at dumpsters and improves overall property appearance',
         '<strong>Resident Satisfaction:</strong> Convenience amenities significantly boost resident retention rates',
-        '<strong>Safety Enhancement:</strong> Residents don\'t need to walk to dumpsters late at night',
+        '<strong>Safety Enhancement:</strong> Residents never have to haul trash across the property to a dumpster',
         '<strong>Pest Control:</strong> Regular collection reduces attraction of pests and rodents',
         '<strong>Weather Consideration:</strong> Particularly valuable during Orlando\'s rainy season and extreme heat'
       ]
@@ -135,7 +135,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'We pair that record with a simple standard: if a missed pickup is verified, we make it right. Together, the GPS verification and the photo documentation are what let us stand behind a <strong>100% collection guarantee</strong>: the guarantee isn\'t a slogan, it\'s backed by the records that make it real.'
+        text: 'We pair that record with a simple standard: if a missed pickup is verified, we make it right. Together, the GPS verification and the daily route confirmation are what let us stand behind our service: the standard isn\'t a slogan, it\'s backed by the records that make it real.'
       },
       {
         type: 'heading2',
@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Every night our crews run <strong>GPS-verified routes</strong>, so there\'s a verifiable record that the full community was covered — building by building, not just the easy loop near the entrance. For a property manager, this closes the oldest blind spot in the business: you no longer have to take anyone\'s word that the back buildings got serviced at the same standard as the front.'
+        text: 'Every day our crews run <strong>GPS-verified routes</strong>, so there\'s a verifiable record that the full community was covered — building by building, not just the easy loop near the entrance. For a property manager, this closes the oldest blind spot in the business: you no longer have to take anyone\'s word that the back buildings got serviced at the same standard as the front.'
       },
       {
         type: 'paragraph',
@@ -163,11 +163,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'We send a <strong>daily route confirmation to management</strong> — a summary that lands where managers already communicate. No logging into a portal, no waiting for a report. Every morning, the person responsible for the community can see that last night\'s service was completed, with the documentation behind it. When a board asks "is the valet service actually running seven nights a week?", the manager has the answer in hand instead of hoping.'
+        text: 'We send a <strong>daily route confirmation to management</strong> — a summary that lands where managers already communicate. No logging into a portal, no waiting for a report. Every morning, the person responsible for the community can see that the previous day\'s service was completed, with the documentation behind it. When a board asks "is the valet service actually running seven days a week?", the manager has the answer in hand instead of hoping.'
       },
       {
         type: 'paragraph',
-        text: 'And seven nights genuinely means seven. A lot of providers run five days and call it valet trash. We collect <strong>7 nights a week, no exceptions</strong> — holidays included — because residents generate trash on Sundays and holidays too, and a community that markets doorstep service can\'t have dark nights.'
+        text: 'And seven days genuinely means seven. A lot of providers run five days and call it valet trash. We collect <strong>7 days a week, no exceptions</strong> — holidays included — because residents generate trash on Sundays and holidays too, and a community that markets doorstep service can\'t have skipped days.'
       },
       {
         type: 'heading2',
@@ -179,7 +179,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'This is where the industry is heading: not more marketing claims, but live, self-serve visibility. A manager will be able to open an app and confirm the night\'s service the same way they\'d check a delivery — see the route, see the confirmation, see the proof. Communities that expect this level of transparency in every other vendor relationship have started expecting it from waste service too. (<a href="/demo/" class="text-primary font-semibold hover:underline">Request an app demo</a> if you\'d like an early look.)'
+        text: 'This is where the industry is heading: not more marketing claims, but live, self-serve visibility. A manager will be able to open an app and confirm the day\'s service the same way they\'d check a delivery — see the route, see the confirmation, see the proof. Communities that expect this level of transparency in every other vendor relationship have started expecting it from waste service too. (<a href="/demo/" class="text-primary font-semibold hover:underline">Request an app demo</a> if you\'d like an early look.)'
       },
       {
         type: 'heading2',
@@ -195,7 +195,7 @@ export const blogPosts: BlogPost[] = [
           '<strong>Can you document what happened at a specific door when it matters?</strong> (Timestamped photos when necessary.)',
           '<strong>Can you prove the whole community was covered, not just part of it?</strong> (GPS-verified routes.)',
           '<strong>How is a missed pickup handled?</strong> (Verified misses get made right — backed by the records, not a shrug.)',
-          '<strong>How often do you actually collect?</strong> (Seven nights, or five dressed up as seven?)',
+          '<strong>How often do you actually collect?</strong> (Seven days, or five dressed up as seven?)',
           '<strong>How do I see all of this without chasing you?</strong> (Daily reporting, and increasingly, a live app.)'
         ]
       },
@@ -213,7 +213,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'At On The Fly Waste Solutions, that standard is how we\'ve built the company from day one: <a href="/services/valet-trash/" class="text-primary font-semibold hover:underline">doorstep valet trash service</a> seven nights a week, GPS-verified, photo-documented when it matters, and backed by a guarantee we can prove. If your community deserves that level of accountability — whether you need <a href="/valet-trash-orlando-fl/" class="text-primary font-semibold hover:underline">valet trash in Orlando</a> or anywhere across Central Florida — <a href="/contact/" class="text-primary font-semibold hover:underline">talk to our team</a>.'
+        text: 'At On The Fly Waste Solutions, that standard is how we\'ve built the company from day one: <a href="/services/valet-trash/" class="text-primary font-semibold hover:underline">doorstep valet trash service</a> seven days a week, GPS-verified, photo-documented when it matters, and backed by a daily route confirmation we can prove. If your community deserves that level of accountability — whether you need <a href="/valet-trash-orlando-fl/" class="text-primary font-semibold hover:underline">valet trash in Orlando</a> or anywhere across Central Florida — <a href="/contact/" class="text-primary font-semibold hover:underline">talk to our team</a>.'
       },
       {
         type: 'paragraph',
@@ -276,7 +276,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'Smart communities will expect to open an app and see the night\'s route, the confirmation, and the documentation — without emailing anyone or waiting for a monthly summary. This is exactly the shift we\'re building toward with our own proprietary route-verification app: real-time pickup confirmation and GPS verification designed for the person actually responsible for the community, not buried in a back office.'
+        text: 'Smart communities will expect to open an app and see the day\'s route, the confirmation, and the documentation — without emailing anyone or waiting for a monthly summary. This is exactly the shift we\'re building toward with our own proprietary route-verification app: real-time pickup confirmation and GPS verification designed for the person actually responsible for the community, not buried in a back office.'
       },
       {
         type: 'paragraph',
@@ -304,7 +304,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'We already make verified missed pickups right and collect <strong>7 nights a week, no exceptions</strong>, because that\'s the reliability standard a resident-facing amenity actually requires. By 2030, that won\'t be a differentiator — it\'ll be the floor. Communities should be wary of any provider still running five days a week and calling it doorstep service.'
+        text: 'We already make verified missed pickups right and collect <strong>7 days a week, no exceptions</strong>, because that\'s the reliability standard a resident-facing amenity actually requires. By 2030, that won\'t be a differentiator — it\'ll be the floor. Communities should be wary of any provider still running five days a week and calling it doorstep service.'
       },
       {
         type: 'heading2',
@@ -316,7 +316,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'paragraph',
-        text: 'A guarantee only means something when there\'s a system behind it. Our <strong>100% collection guarantee</strong> works because it\'s backed by GPS-verified routes, timestamped photo documentation when it matters, and daily reporting to management — the guarantee and the evidence are the same thing. Smart communities will stop accepting guarantees on their own and start asking, "what\'s the system that makes this true?" That question is going to reshape how boards choose vendors.'
+        text: 'A service standard only means something when there\'s a system behind it. Our <strong>daily route confirmation</strong> works because it\'s backed by GPS-verified routes, timestamped photo documentation when it matters, and daily reporting to management — the standard and the evidence are the same thing. Smart communities will stop accepting promises on their own and start asking, "what\'s the system that makes this true?" That question is going to reshape how boards choose vendors.'
       },
       {
         type: 'heading2',
@@ -330,7 +330,7 @@ export const blogPosts: BlogPost[] = [
         type: 'list',
         items: [
           'Can you show me proof of service at the door and across the route?',
-          'Can I see the night\'s service in real time, on my own?',
+          'Can I see the day\'s service in real time, on my own?',
           'How do you support and report on recycling and sustainability?',
           'What\'s your standard for making a verified missed pickup right?',
           'What\'s the system behind your reliability claims?'
@@ -406,7 +406,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: 'list',
         items: [
-          '<strong>Property Managers</strong> will get a single nightly summary notification when the property-wide pickup is complete, plus instant alerts for one-off bulk, junk, and pressure-washing jobs.',
+          '<strong>Property Managers</strong> will get a single daily summary notification when the property-wide pickup is complete, plus instant alerts for one-off bulk, junk, and pressure-washing jobs.',
           '<strong>Homeowners</strong> will get their own confirmation the moment their scheduled service wraps — with a photo of the completed work on bulk, junk, and pressure-washing jobs.',
           '<strong>Ownership and regionals</strong> can be auto-copied on completions and monthly route-completion summaries, with zero extra admin lift from the on-site team.'
         ]
@@ -427,7 +427,7 @@ export const blogPosts: BlogPost[] = [
           '<strong>Photo-Stamped Service Reports:</strong> Before-and-after photos for every bulk removal, pressure wash, and junk haul, attached directly to the completion notification.',
           '<strong>One-Tap Service Requests:</strong> Need a same-day bulk pickup or an emergency pressure wash? Fire off a request from the app — our dispatcher will see it instantly.',
           '<strong>Resident and Homeowner Complaint Logging:</strong> Log a concern against a specific pickup and watch the incident close — with GPS route confirmation for valet trash, and photo evidence for bulk, junk, and pressure-washing jobs.',
-          '<strong>Monthly Service Dashboard:</strong> 100% collection commitment is our promise. The dashboard will show the math — routes scheduled, routes completed, and any reported misses that were made right.',
+          '<strong>Monthly Service Dashboard:</strong> GPS-verified routes and daily route confirmation are our standard. The dashboard will show the math — routes scheduled, routes completed, and any reported misses that were made right.',
           '<strong>Invoice & Contract Access:</strong> Every invoice, every active service line, every addendum — searchable from your phone.'
         ]
       },

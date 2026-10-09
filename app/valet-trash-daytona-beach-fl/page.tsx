@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServiceAreaClient from '../components/ServiceAreaClient';
+import ServiceSchema from '../components/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Valet Trash Service Daytona Beach, FL | On The Fly Waste Solutions',
@@ -31,12 +32,20 @@ const neighborhoods = [
 
 export default function DaytonaBeachPage() {
   return (
-    <ServiceAreaClient
+    <>
+      <ServiceSchema
+        name="Valet Trash Service"
+        description="Door-to-door doorstep trash collection for apartment communities, condos, and resort properties across Central Florida with GPS-verified routes and daily route confirmation."
+        slug="/valet-trash-daytona-beach-fl/"
+        areaServed={['Daytona Beach']}
+      />
+      <ServiceAreaClient
       city="Daytona Beach"
       state="FL"
       service="valet-trash"
       serviceTitle="Valet Trash Service"
       neighborhoods={neighborhoods}
     />
+    </>
   );
 }

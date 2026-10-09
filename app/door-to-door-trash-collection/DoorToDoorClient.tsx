@@ -18,7 +18,7 @@ export default function DoorToDoorClient() {
       icon: <Truck className="w-6 h-6" aria-hidden="true" />,
       title: '2. Uniformed Crews Collect Door to Door',
       description:
-        'Our uniformed team collects trash door to door across the entire property. Every truck runs a GPS-tracked route, so we can confirm on-property time for any night on request.',
+        'Our uniformed team collects trash door to door across the entire property. Every truck runs a GPS-tracked route, so we can confirm on-property time for any day on request.',
     },
     {
       icon: <Recycle className="w-6 h-6" aria-hidden="true" />,
@@ -35,11 +35,11 @@ export default function DoorToDoorClient() {
   ];
 
   const highlights = [
-    'Door to door trash pickup service 5–7 nights per week',
+    'Door to door trash pickup service 7 days a week',
     'Doorstep trash pickup apartments, condos, resorts, and HOA communities',
     'Door to door trash collection multifamily (including new construction apartments)',
-    'GPS-tracked truck routing on every nightly route',
-    '100% collection commitment with verified missed pickups made right',
+    'GPS-tracked truck routing on every daily route',
+    'Daily route confirmation with verified missed pickups made right',
     'Door to door waste collection Central Florida — Orlando, Kissimmee, Champions Gate, Lake Nona',
     'Compactor area cleaning service and compactor enclosure management service included',
     'Pet waste station service apartment communities love',
@@ -106,12 +106,12 @@ export default function DoorToDoorClient() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-lg text-gray-700 leading-relaxed">
           <ScrollReveal>
             <p>
-              <strong>Door to door trash collection</strong> — also called <strong>doorstep trash pickup</strong> or <strong>doorstep valet trash service</strong> — is a convenience amenity where residents place tied trash bags at their apartment door and a professional crew collects every bag on a scheduled evening route. It is consistently rated one of the most valuable amenities in apartment and condo resident surveys.
+              <strong>Door to door trash collection</strong> — also called <strong>doorstep trash pickup</strong> or <strong>doorstep valet trash service</strong> — is a convenience amenity where residents place tied trash bags at their apartment door and a professional crew collects every bag on a scheduled daily route. It is consistently rated one of the most valuable amenities in apartment and condo resident surveys.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, we stand behind a 100% collection commitment, and if a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right.
+              On The Fly provides <strong>door to door trash pickup service</strong> for apartment communities, HOAs, condos, resort style properties, and multifamily new construction across Central Florida. Every truck runs a GPS-tracked route, management receives a daily route confirmation, and if a missed pickup is ever verified — by a Ring camera, a building-level confirmation, or our own truck GPS data — we make it right.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
@@ -130,7 +130,7 @@ export default function DoorToDoorClient() {
                 How Door to Door Trash Collection Works
               </h2>
               <p className="text-lg text-gray-700">
-                Four steps. Every night. No surprises, no misses, no excuses.
+                Four steps. Every day. No surprises, no misses, no excuses.
               </p>
             </div>
           </ScrollReveal>

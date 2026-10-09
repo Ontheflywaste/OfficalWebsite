@@ -286,7 +286,7 @@ export default function RootLayout({
           "itemOffered": {
             "@type": "Service",
             "name": "Valet Trash Service",
-            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with a 100% collection commitment, GPS-tracked routing, and verified missed pickups made right",
+            "description": "Door-to-door trash collection for apartment communities, condos, and resorts with GPS-verified routes, daily route confirmation, and verified missed pickups made right",
             "provider": {
               "@type": "LocalBusiness",
               "name": "On The Fly Waste Solutions"

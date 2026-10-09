@@ -183,10 +183,10 @@ export default function HomeClient() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="relative aspect-[4/3] w-full">
+              <div className="relative aspect-[3/2] w-full">
                 <Image
-                  src="/Images/artemistradeshow.jpg"
-                  alt="On The Fly Waste Solutions team at trade show"
+                  src="/Images/tradeshow-booth-team.jpg"
+                  alt="Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at a Central Florida property management trade show"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="rounded-2xl shadow-2xl border-4 border-white/10 object-cover"

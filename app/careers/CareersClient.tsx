@@ -8,6 +8,7 @@ import {
   Users,
   TrendingUp,
   Heart,
+  Shield,
   Send,
   Phone,
   CheckCircle2,
@@ -144,6 +145,11 @@ export default function CareersClient() {
       description: 'Make a visible difference every day by keeping apartment communities clean and welcoming.',
     },
     {
+      icon: <Shield className="w-7 h-7" />,
+      title: 'Steady Work',
+      description: "We've been growing in Central Florida since 2020, and the communities we serve aren't going anywhere. This is a real job with a future, not a gig that dries up next month.",
+    },
+    {
       icon: <Briefcase className="w-7 h-7" />,
       title: 'Equipment Provided',
       description: 'We supply uniforms, tools, and everything you need to do your job right from day one.',
@@ -214,9 +220,13 @@ export default function CareersClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid gap-8 md:grid-cols-4 lg:grid-cols-6">
             {perks.map((perk, index) => (
-              <ScrollReveal key={index} delay={index * 0.1}>
+              <ScrollReveal
+                key={index}
+                delay={index * 0.1}
+                className={`md:col-span-2 ${index === 3 ? 'lg:col-start-2' : ''} ${index === 4 ? 'md:col-start-2 lg:col-start-auto' : ''}`}
+              >
                 <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
                   <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                     {perk.icon}

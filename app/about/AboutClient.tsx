@@ -295,6 +295,12 @@ export default function AboutClient() {
               <p className="text-xl text-gray-600">
                 Experienced professionals dedicated to your success
               </p>
+              <p className="mt-4">
+                <Link href="/gallery/" className="inline-flex items-center gap-2 text-primary font-semibold hover:underline">
+                  See more photos of our team and events
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </p>
             </div>
           </ScrollReveal>
 

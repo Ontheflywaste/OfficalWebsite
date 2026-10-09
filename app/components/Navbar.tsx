@@ -306,6 +306,12 @@ export default function Navbar() {
                     >
                       Reviews
                     </Link>
+                    <Link
+                      href="/gallery/"
+                      className="block px-4 py-3 text-gray-900 hover:bg-primary hover:bg-opacity-10 hover:text-primary transition-colors font-medium text-sm"
+                    >
+                      Gallery
+                    </Link>
                     <a
                       href="https://www.youtube.com/watch?v=gFYjibflN3U"
                       target="_blank"
@@ -462,6 +468,12 @@ export default function Navbar() {
                       className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
                     >
                       Reviews
+                    </Link>
+                    <Link
+                      href="/gallery/"
+                      className="block py-2 px-4 rounded-lg transition-colors duration-300 text-gray-300 hover:text-primary hover:bg-white/5"
+                    >
+                      Gallery
                     </Link>
                     <a
                       href="https://www.youtube.com/watch?v=gFYjibflN3U"

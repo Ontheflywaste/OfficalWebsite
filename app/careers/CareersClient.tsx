@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import {
   ArrowRight,
@@ -9,8 +8,6 @@ import {
   Users,
   TrendingUp,
   Heart,
-  DollarSign,
-  Shield,
   Send,
   Phone,
   CheckCircle2,
@@ -19,6 +16,7 @@ import {
   X,
 } from 'lucide-react';
 import ScrollReveal from '@/app/components/ScrollReveal';
+import { OPEN_ROLES, OTHER_OPTION } from './roles';
 
 const HIRING_EMAIL = 'info@ontheflywastesolutions.com';
 const MAX_RESUME_BYTES = 3 * 1024 * 1024; // 3 MB
@@ -32,6 +30,7 @@ export default function CareersClient() {
     full_name: '',
     email: '',
     phone: '',
+    position: '',
     message: '',
   });
   const [resume, setResume] = useState<File | null>(null);
@@ -79,7 +78,7 @@ export default function CareersClient() {
   }
 
   function resetForm() {
-    setFormData({ full_name: '', email: '', phone: '', message: '' });
+    setFormData({ full_name: '', email: '', phone: '', position: '', message: '' });
     clearResume();
     setSubmitStatus('idle');
     setErrorMessage(GENERIC_ERROR);
@@ -96,6 +95,7 @@ export default function CareersClient() {
     body.append('full_name', formData.full_name);
     body.append('email', formData.email);
     body.append('phone', formData.phone);
+    body.append('position', formData.position);
     body.append('message', formData.message);
     body.append('form_ts', String(formTs));
     // Honeypot: real users never see or fill this field.
@@ -129,11 +129,6 @@ export default function CareersClient() {
 
   const perks = [
     {
-      icon: <DollarSign className="w-7 h-7" />,
-      title: 'Competitive Pay',
-      description: 'Earn above-market wages with performance bonuses that reward your hard work and dedication.',
-    },
-    {
       icon: <TrendingUp className="w-7 h-7" />,
       title: 'Growth Opportunities',
       description: 'We promote from within. Many of our supervisors started as collection associates.',
@@ -147,11 +142,6 @@ export default function CareersClient() {
       icon: <Heart className="w-7 h-7" />,
       title: 'Community Impact',
       description: 'Make a visible difference every day by keeping apartment communities clean and welcoming.',
-    },
-    {
-      icon: <Shield className="w-7 h-7" />,
-      title: 'Stability & Growth',
-      description: 'Consistent schedules, paid time off for eligible team members, and long-term job stability.',
     },
     {
       icon: <Briefcase className="w-7 h-7" />,
@@ -224,7 +214,7 @@ export default function CareersClient() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {perks.map((perk, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 group">
@@ -309,15 +299,28 @@ export default function CareersClient() {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Team</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed text-left md:text-center">
                 <p>
-                  We&apos;re a Central Florida crew that keeps apartment, HOA, and resort communities clean, and we&apos;re growing. Most of our team started as collection associates and moved up from there. If you show up, work hard, and take pride in a job done right, we want to hear from you.
+                  We&apos;re hiring right now. We&apos;re a Central Florida crew that keeps apartment, HOA, and resort communities clean, and we have three roles open today. Most of our team started as collection associates and moved up from there. If you show up, work hard, and take pride in a job done right, we want to hear from you.
                 </p>
-                <p>
-                  Shifts vary by the community you&apos;re assigned to. Some run in the morning, some in the evening, so you&apos;ll need some flexibility. We&apos;ll go over the schedule with you before you start.
-                </p>
-                <p>Tell us a little about yourself below. We read every application and reply personally.</p>
+                <p>Pick the role you&apos;re interested in and tell us a little about yourself. We read every application and reply personally.</p>
               </div>
             </div>
           </ScrollReveal>
+
+          {/* Open roles. Edit app/careers/roles.ts to change this list. */}
+          <div className="grid gap-4 md:grid-cols-3 mb-10">
+            {OPEN_ROLES.map((role, index) => (
+              <ScrollReveal key={role.id} delay={index * 0.08}>
+                <div className="h-full bg-white border-2 border-gray-100 rounded-xl p-6 hover:border-primary transition-colors">
+                  <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-3">
+                    <Briefcase className="w-3.5 h-3.5" aria-hidden="true" />
+                    Open role
+                  </span>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{role.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{role.blurb}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
 
           <ScrollReveal delay={0.1}>
             <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-10 border-t-8 border-primary">
@@ -385,6 +388,30 @@ export default function CareersClient() {
                       className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
                       placeholder="(407) 000-0000"
                     />
+                  </div>
+
+                  <div>
+                    <label htmlFor="position" className="block text-sm font-medium text-gray-700 mb-2">
+                      Position You&apos;re Applying For *
+                    </label>
+                    <select
+                      id="position"
+                      name="position"
+                      required
+                      value={formData.position}
+                      onChange={(e) => setFormData({ ...formData, position: e.target.value })}
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-colors"
+                    >
+                      <option value="" disabled>
+                        Select a role
+                      </option>
+                      {OPEN_ROLES.map((role) => (
+                        <option key={role.id} value={role.title}>
+                          {role.title}
+                        </option>
+                      ))}
+                      <option value={OTHER_OPTION}>{OTHER_OPTION}</option>
+                    </select>
                   </div>
 
                   <div>
@@ -487,67 +514,29 @@ export default function CareersClient() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <ScrollReveal>
-              <div>
-                <h2 className="text-4xl font-bold mb-6">
-                  Don&apos;t See the Right Fit?
-                </h2>
-                <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                  We&apos;re always looking for talented, hardworking people to join our growing team. Even if you don&apos;t see a position that matches your skills right now, we&apos;d love to hear from you.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    <span>Send your resume for future opportunities</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    <span>We respond to every application personally</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    <span>New positions are added regularly as we grow</span>
-                  </li>
-                </ul>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
-                <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-                <p className="text-white/90 mb-8 leading-relaxed">
-                  Reach out to us directly with your resume or any questions about working at On The Fly Waste Solutions.
-                </p>
-                <div className="space-y-4">
-                  <a
-                    href="mailto:info@ontheflywastesolutions.com?subject=Career%20Interest%20-%20General%20Inquiry"
-                    className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105 w-full"
-                  >
-                    <Send className="w-5 h-5" />
-                    Email Your Resume
-                  </a>
-                  <a
-                    href="tel:407-274-5019"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30 w-full"
-                  >
-                    <Phone className="w-5 h-5" />
-                    Call (407) 274-5019
-                  </a>
-                  <Link
-                    href="/contact/"
-                    className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30 w-full"
-                  >
-                    <ArrowRight className="w-5 h-5" />
-                    Contact Page
-                  </Link>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+      {/* Questions before applying */}
+      <section className="py-16 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Have a question before you apply?</h2>
+            <p className="text-lg text-white/90 mb-8">Call or email and a real person will answer.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:407-274-5019"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-all transform hover:scale-105"
+              >
+                <Phone className="w-5 h-5" />
+                Call (407) 274-5019
+              </a>
+              <a
+                href={`mailto:${HIRING_EMAIL}?subject=Question%20about%20working%20at%20On%20The%20Fly`}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+              >
+                <Send className="w-5 h-5" />
+                Email {HIRING_EMAIL}
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { POSITION_OPTIONS } from '../../careers/roles';
 
 /**
  * Careers application endpoint.
@@ -77,6 +78,7 @@ export async function POST(request: NextRequest) {
   const fullName = field('full_name');
   const email = field('email');
   const phone = field('phone');
+  const position = field('position');
   const message = field('message');
   const honeypot = field('website');
   const formTs = Number(field('form_ts'));
@@ -102,6 +104,9 @@ export async function POST(request: NextRequest) {
   }
   if (phone.length > LIMITS.phone) {
     return reject('Please enter a valid phone number.');
+  }
+  if (!POSITION_OPTIONS.includes(position)) {
+    return reject("Please choose the position you're applying for.");
   }
   if (message.length < 10 || message.length > LIMITS.message) {
     return reject('Please tell us a little more about yourself (10 to 5,000 characters).');
@@ -140,6 +145,7 @@ export async function POST(request: NextRequest) {
   const text = [
     `New job application from the website`,
     ``,
+    `Position: ${position}`,
     `Name:   ${fullName}`,
     `Email:  ${email}`,
     `Phone:  ${phone || '(not provided)'}`,
@@ -156,6 +162,7 @@ export async function POST(request: NextRequest) {
     <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#111">
       <h2 style="margin:0 0 16px;font-size:20px">New job application from the website</h2>
       <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:20px">
+        <tr><td style="padding:4px 16px 4px 0;color:#555">Position</td><td style="padding:4px 0"><strong>${escapeHtml(position)}</strong></td></tr>
         <tr><td style="padding:4px 16px 4px 0;color:#555">Name</td><td style="padding:4px 0"><strong>${escapeHtml(fullName)}</strong></td></tr>
         <tr><td style="padding:4px 16px 4px 0;color:#555">Email</td><td style="padding:4px 0"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
         <tr><td style="padding:4px 16px 4px 0;color:#555">Phone</td><td style="padding:4px 0">${escapeHtml(phone || '(not provided)')}</td></tr>
@@ -171,7 +178,7 @@ export async function POST(request: NextRequest) {
     from: FROM_ADDRESS,
     to: [TO_ADDRESS],
     reply_to: email,
-    subject: `Job application: ${fullName}`,
+    subject: `Job application: ${position} - ${fullName}`,
     text,
     html,
   };

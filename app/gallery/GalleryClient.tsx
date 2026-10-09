@@ -8,6 +8,9 @@ import { GALLERY_CATEGORIES, GALLERY_PHOTOS, type GalleryCategoryId } from './ph
 
 const PAGE_SIZE = 24;
 
+/** Tile crop anchor. Portrait photos crop vertically inside the 4:3 tile; keeping the top keeps heads in frame. */
+const FOCUS_CLASS = { top: 'object-top', center: 'object-center', bottom: 'object-bottom' } as const;
+
 type Filter = 'all' | GalleryCategoryId;
 
 export default function GalleryClient() {
@@ -143,7 +146,7 @@ export default function GalleryClient() {
                         alt={photo.alt}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                        className={`object-cover ${FOCUS_CLASS[photo.focus ?? 'top']} group-hover:scale-[1.03] transition-transform duration-500`}
                         loading={i < 3 ? 'eager' : 'lazy'}
                       />
                     </button>

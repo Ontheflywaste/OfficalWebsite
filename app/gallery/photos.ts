@@ -91,8 +91,8 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
   },
   {
     src: '/Images/gallery/trade-show-booth-balloons.jpg',
-    alt: 'Four people holding branded coffee mugs in front of the On The Fly booth with silver balloon letters and star balloons at a trade show',
-    caption: 'Mugs and smiles at our balloon-letter booth',
+    alt: 'Four people holding branded coffee mugs in front of the On The Fly booth with silver balloon letters and star balloons at the Artemis Day trade show',
+    caption: 'Mugs and smiles at our balloon-letter booth at Artemis Day',
     category: 'events',
     focus: 55,
   },

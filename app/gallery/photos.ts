@@ -45,20 +45,22 @@ export interface GalleryPhoto {
   caption: string;
   category: GalleryCategoryId;
   /**
-   * Which part of the photo to keep when the 4:3 tile crops it. Tiles keep
-   * the TOP of the photo by default, which keeps heads in frame on portrait
-   * shots of people. Set 'center' or 'bottom' only when a photo needs it.
-   * The lightbox always shows the whole photo, uncropped.
+   * Vertical crop anchor for the 4:3 tile, as a percentage of the photo's
+   * height: 0 keeps the very top, 50 is centered, 100 keeps the bottom.
+   * Only matters for portrait photos (landscape photos crop at the sides).
+   * Defaults to 30. Raise the number to move the subject UP in the tile;
+   * lower it to move the subject down. The lightbox always shows the whole
+   * photo, uncropped.
    */
-  focus?: 'top' | 'center' | 'bottom';
+  focus?: number;
 }
 
-/** Newest first. */
+/** Display order: first entry is the first tile. */
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
-    src: '/Images/gallery/2026-08-industry-dinner-gift-basket.jpg',
-    alt: 'Team member in a black suit and a woman in a dark green gown holding a large woven gift basket at an evening event',
-    caption: 'Delivering a gift basket at an industry dinner',
+    src: '/Images/gallery/2026-10-trade-show-booth.jpg',
+    alt: 'Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at the Artemis Day property management trade show in Central Florida',
+    caption: 'Our booth at Artemis Day, a Central Florida property management trade show',
     category: 'events',
   },
   {
@@ -66,12 +68,7 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     alt: 'Four people in formal wear smiling together in front of patterned curtains at an evening industry event',
     caption: 'Dressed up for an industry awards dinner',
     category: 'events',
-  },
-  {
-    src: '/Images/gallery/2026-07-trade-show-selfie.jpg',
-    alt: 'Team member in an On The Fly polo and lanyard taking a selfie with a smiling attendee in front of a fireworks backdrop at a trade show',
-    caption: 'A quick selfie with a new friend at a property management trade show',
-    category: 'events',
+    focus: 0,
   },
   {
     src: '/Images/gallery/2026-06-pressure-washing-parking-lot.jpg',
@@ -84,6 +81,7 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     alt: 'Green On The Fly dump trailer loaded with a couch and other bulk items in a parking lot',
     caption: 'A full trailer after a bulk removal pickup',
     category: 'on-the-job',
+    focus: 45,
   },
   {
     src: '/Images/gallery/branded-truck-and-trailer-palms.jpg',
@@ -96,24 +94,21 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     alt: 'Four people holding branded coffee mugs in front of the On The Fly booth with silver balloon letters and star balloons at a trade show',
     caption: 'Mugs and smiles at our balloon-letter booth',
     category: 'events',
+    focus: 55,
   },
   {
     src: '/Images/gallery/2025-08-community-event-kitchen.jpg',
     alt: 'Three people smiling in a bright kitchen, the one in the middle wearing an On The Fly polo',
     caption: 'Visiting with a community team',
     category: 'events',
+    focus: 45,
   },
   {
     src: '/Images/gallery/2025-03-crew-member-trailer-portrait.jpg',
     alt: 'Crew member in a neon green On The Fly shirt and cap smiling in front of a company trailer',
     caption: 'One of our crew, ready for the route',
     category: 'our-team',
-  },
-  {
-    src: '/Images/gallery/2026-10-trade-show-booth.jpg',
-    alt: 'Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at a Central Florida property management trade show',
-    caption: 'Our booth at a Central Florida property management trade show',
-    category: 'events',
+    focus: 25,
   },
   {
     src: '/Images/gallery/trade-show-booth-green-vests.jpg',
@@ -126,12 +121,14 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     alt: 'Team member wearing a crown and green vest standing with a visitor at the On The Fly booth at a trade show',
     caption: 'Having some fun with a visitor at our trade show booth',
     category: 'events',
+    focus: 30,
   },
   {
     src: '/Images/gallery/crew-member-apartment-pool-deck.jpg',
     alt: 'Crew member in a high-visibility vest standing on the pool deck of an apartment community',
     caption: 'On the route at a Central Florida apartment community',
     category: 'on-the-job',
+    focus: 25,
   },
   {
     src: '/Images/gallery/valet-trash-truck-and-trailer.jpg',
@@ -144,11 +141,13 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     alt: 'Three crew members in pink safety vests and hard hats standing on a sidewalk at a residential community',
     caption: 'Our crew in pink for Breast Cancer Awareness Month',
     category: 'our-team',
+    focus: 30,
   },
   {
     src: '/Images/gallery/next-generation-helpers.jpg',
     alt: 'Two young girls in bright green tutus and pink shirts pushing a trash bin across a lawn',
     caption: 'The next generation of the On The Fly family, helping out at home',
     category: 'our-team',
+    focus: 0,
   },
 ];

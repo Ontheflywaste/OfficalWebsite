@@ -44,6 +44,13 @@ export interface GalleryPhoto {
   /** Shown under the tile and in the lightbox. */
   caption: string;
   category: GalleryCategoryId;
+  /**
+   * Which part of the photo to keep when the 4:3 tile crops it. Tiles keep
+   * the TOP of the photo by default, which keeps heads in frame on portrait
+   * shots of people. Set 'center' or 'bottom' only when a photo needs it.
+   * The lightbox always shows the whole photo, uncropped.
+   */
+  focus?: 'top' | 'center' | 'bottom';
 }
 
 /** Newest first. */

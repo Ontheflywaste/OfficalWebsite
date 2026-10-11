@@ -36,9 +36,7 @@ export default function ValetTrashKissimmeePage() {
         'Old Town',
         'West Kissimmee',
         'East Kissimmee',
-        'Buenaventura Lakes',
-        'Reunion',
-        'Champions Gate'
+        'Buenaventura Lakes'
       ]}
     />
     </>

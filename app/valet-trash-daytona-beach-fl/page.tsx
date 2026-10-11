@@ -19,15 +19,12 @@ const neighborhoods = [
   'Daytona Beach',
   'Ormond Beach',
   'Port Orange',
-  'DeLand',
   'Daytona Beach Shores',
   'Holly Hill',
   'South Daytona',
   'Edgewater',
   'New Smyrna Beach',
-  'Ponce Inlet',
-  'Deltona',
-  'Orange City'
+  'Ponce Inlet'
 ];
 
 export default function DaytonaBeachPage() {
@@ -45,6 +42,8 @@ export default function DaytonaBeachPage() {
       service="valet-trash"
       serviceTitle="Valet Trash Service"
       neighborhoods={neighborhoods}
+      neighborhoodsHeading="Areas We Serve near Daytona Beach"
+      neighborhoodsSubtitle="We serve communities along the Volusia County coast, from Ormond Beach to New Smyrna Beach"
     />
     </>
   );

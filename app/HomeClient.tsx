@@ -558,8 +558,8 @@ export default function HomeClient() {
                   <div>
                     <h3 className="text-lg font-semibold text-ink mb-1">Monthly Service Dashboards</h3>
                     <p className="text-ink-muted leading-relaxed">
-                      Collection-rate reports, route completion analytics, and
-                      service history ready to drop into your owner reviews.
+                      Route completion reports and service history ready to drop
+                      into your owner reviews.
                     </p>
                   </div>
                 </div>
@@ -631,7 +631,7 @@ export default function HomeClient() {
                           <span className="text-[10px] text-gray-400">7:42 PM</span>
                         </div>
                         <div className="text-sm font-semibold mb-1">Crew on site — Building 3</div>
-                        <div className="text-[11px] text-gray-400 mb-3">24 of 48 units serviced</div>
+                        <div className="text-[11px] text-gray-400 mb-3">Route in progress</div>
                         <div className="h-1.5 bg-surface-dark rounded-full overflow-hidden">
                           <div className="h-full w-1/2 bg-primary rounded-full" />
                         </div>

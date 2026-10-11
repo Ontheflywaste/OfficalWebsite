@@ -34,7 +34,6 @@ export default function ValetTrashAltamonteSpringsPage() {
         'Uptown Altamonte',
         'Cranes Roost',
         'Westmonte',
-        'Pearl Lake',
         'Sanlando Springs'
       ]}
     />

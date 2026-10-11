@@ -20,7 +20,6 @@ const neighborhoods = [
   'Ormond Beach',
   'Port Orange',
   'Daytona Beach Shores',
-  'Holly Hill',
   'South Daytona',
   'Edgewater',
   'New Smyrna Beach',

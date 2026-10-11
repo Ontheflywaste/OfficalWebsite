@@ -13,8 +13,15 @@
  *      (name = year-month-a-few-words, lowercase, hyphens only.)
  *      The script prints a ready-to-paste entry when it finishes.
  *
- *   2. Paste that entry at the TOP of GALLERY_PHOTOS below (newest first),
- *      write the alt text and caption, pick a category, and commit.
+ *   2. Paste that entry into GALLERY_PHOTOS below, write the alt text and
+ *      caption, pick a category, and commit.
+ *
+ *      The array is ordered by strength, not by date. The first 24 entries
+ *      are what visitors see before "Show more", so put a new photo where it
+ *      belongs: the lead tile is the trade show booth photo (the same one on
+ *      the homepage), then events with people and branding, then team photos,
+ *      then branded trucks and trailers, then set-out and in-progress job
+ *      shots, and "before" shots last.
  *
  * RULES FOR CAPTIONS AND ALT TEXT
  *   - No client or community names, and no client logos visible in the photo,
@@ -58,106 +65,23 @@ export interface GalleryPhoto {
 /** Display order: first entry is the first tile. */
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
-    src: '/Images/gallery/2026-02-branded-trailer-bulk-load.jpg',
-    alt: 'Green On The Fly branded dump trailer heaped with a mattress, lumber, and boxes against a blue sky, with the company services and website printed on the side',
-    caption: 'Our branded dump trailer loaded after a bulk removal',
-    category: 'on-the-job',
-    focus: 60,
-  },
-  {
-    src: '/Images/gallery/2026-02-bulk-pile-fridge-dresser.jpg',
-    alt: 'Refrigerator, dresser, chair, boxes, and other bulk items lined up along a wooden fence under oak trees, ready for pickup',
-    caption: 'A bulk pickup staged and ready to load',
-    category: 'on-the-job',
-    focus: 50,
-  },
-  {
-    src: '/Images/gallery/2025-12-doorstep-bags-townhome-tree.jpg',
-    alt: 'Tied white trash bags and a cardboard box set out on the lawn beside a young tree in front of a townhome',
-    caption: 'Bags set out for doorstep collection at a townhome community',
-    category: 'on-the-job',
-    focus: 60,
-  },
-  {
-    src: '/Images/gallery/2025-12-doorstep-bags-palms.jpg',
-    alt: 'Tied white trash bags on the grass in front of ornamental grasses and palm trees outside a residence',
-    caption: 'Doorstep collection at a resort community',
-    category: 'on-the-job',
-    focus: 65,
-  },
-  {
-    src: '/Images/gallery/2025-12-single-bag-townhome-curb.jpg',
-    alt: 'A single tied white trash bag at the base of a light pole on a grass strip between townhomes',
-    caption: 'One bag at the curb, ready for the route',
-    category: 'on-the-job',
-    focus: 70,
-  },
-  {
-    src: '/Images/gallery/2025-12-bags-and-boxes-curbside.jpg',
-    alt: 'Black and white trash bags and shipping boxes stacked on the grass beside a sidewalk',
-    caption: 'Bags and boxes out for collection',
-    category: 'on-the-job',
-  },
-  {
-    src: '/Images/gallery/2025-10-halloween-team-selfie.jpg',
-    alt: 'Three women making silly faces for a selfie in a kitchen, one dressed as a witch with green face paint and an On The Fly polo',
-    caption: 'Halloween fun with the team',
-    category: 'our-team',
-  },
-  {
-    src: '/Images/gallery/2023-04-trailer-mattress-wicker-dresser.jpg',
-    alt: 'A mattress, wicker dresser, and black cabinet loaded in the back of a trailer',
-    caption: 'Furniture loaded for a bulk removal',
-    category: 'on-the-job',
-    focus: 50,
-  },
-  {
-    src: '/Images/gallery/2023-04-trailer-loaded-furniture.jpg',
-    alt: 'Open mesh trailer filled with a mattress, dressers, cabinets, and a file cabinet, parked outside an apartment building',
-    caption: 'A full trailer from an apartment move-out',
-    category: 'on-the-job',
-    focus: 50,
-  },
-  {
-    src: '/Images/gallery/2023-04-white-bags-pink-ties.jpg',
-    alt: 'A large pile of white trash bags with pink drawstrings beside a stucco wall at a residence',
-    caption: 'A busy pickup day at a vacation rental community',
-    category: 'on-the-job',
-    focus: 45,
-  },
-  {
-    src: '/Images/gallery/2023-04-bags-by-stucco-wall.jpg',
-    alt: 'Black and white trash bags grouped on a paver path beside a stucco wall and a green shrub',
-    caption: 'Bags out for doorstep collection',
-    category: 'on-the-job',
-    focus: 40,
-  },
-  {
-    src: '/Images/gallery/2022-01-two-bags-branded-truck.jpg',
-    alt: 'Two tied white trash bags on a grass strip with an On The Fly branded white pickup truck parked at the curb',
-    caption: 'Curbside pickup with one of our trucks on the route',
-    category: 'on-the-job',
-    focus: 35,
-  },
-  {
-    src: '/Images/gallery/2022-01-litter-side-yard.jpg',
-    alt: 'Loose trash scattered across a side yard lawn, with a torn bag and bins along the house',
-    caption: 'A side yard before our crew cleaned it up',
-    category: 'on-the-job',
-    focus: 45,
-  },
-  {
-    src: '/Images/gallery/2021-09-storm-debris-curb-street.jpg',
-    alt: 'Branches and brush piled on the grass beside a residential street with a mailbox nearby',
-    caption: 'Storm cleanup along a neighborhood street',
-    category: 'on-the-job',
-    focus: 35,
-  },
-  {
     src: '/Images/gallery/2026-10-trade-show-booth.jpg',
     alt: 'Two On The Fly Waste Solutions team members standing at the company booth, with branded banners and a prize wheel, at the Artemis Day property management trade show in Central Florida',
     caption: 'Our booth at Artemis Day, a Central Florida property management trade show',
     category: 'events',
+  },
+  {
+    src: '/Images/gallery/trade-show-booth-green-vests.jpg',
+    alt: 'Two team members in green vests standing at the On The Fly booth with a branded table banner at an apartment industry trade show',
+    caption: 'Ready for visitors at an apartment industry trade show',
+    category: 'events',
+  },
+  {
+    src: '/Images/gallery/trade-show-booth-crown.jpg',
+    alt: 'Team member wearing a crown and green vest standing with a visitor at the On The Fly booth at a trade show',
+    caption: 'Having some fun with a visitor at our trade show booth',
+    category: 'events',
+    focus: 30,
   },
   {
     src: '/Images/gallery/2026-08-industry-dinner-group.jpg',
@@ -165,25 +89,6 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     caption: 'Dressed up for an industry awards dinner',
     category: 'events',
     focus: 0,
-  },
-  {
-    src: '/Images/gallery/2026-06-pressure-washing-parking-lot.jpg',
-    alt: 'Crew member pressure washing a parking space beside a gray cargo van at a residential community',
-    caption: 'Pressure washing a parking area at a Central Florida community',
-    category: 'on-the-job',
-  },
-  {
-    src: '/Images/gallery/2026-05-bulk-removal-trailer-loaded.jpg',
-    alt: 'Green On The Fly dump trailer loaded with a couch and other bulk items in a parking lot',
-    caption: 'A full trailer after a bulk removal pickup',
-    category: 'on-the-job',
-    focus: 45,
-  },
-  {
-    src: '/Images/gallery/branded-truck-and-trailer-palms.jpg',
-    alt: 'White and green On The Fly branded pickup truck towing a loaded trailer, parked under palm trees',
-    caption: 'Truck and trailer loaded and ready to roll',
-    category: 'on-the-job',
   },
   {
     src: '/Images/gallery/trade-show-booth-balloons.jpg',
@@ -200,6 +105,13 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     focus: 45,
   },
   {
+    src: '/Images/gallery/crew-pink-vests-breast-cancer-awareness.jpg',
+    alt: 'Three crew members in pink safety vests and hard hats standing on a sidewalk at a residential community',
+    caption: 'Our crew in pink for Breast Cancer Awareness Month',
+    category: 'our-team',
+    focus: 30,
+  },
+  {
     src: '/Images/gallery/2025-03-crew-member-trailer-portrait.jpg',
     alt: 'Crew member in a neon green On The Fly shirt and cap smiling in front of a company trailer',
     caption: 'One of our crew, ready for the route',
@@ -207,17 +119,111 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     focus: 25,
   },
   {
-    src: '/Images/gallery/trade-show-booth-green-vests.jpg',
-    alt: 'Two team members in green vests standing at the On The Fly booth with a branded table banner at an apartment industry trade show',
-    caption: 'Ready for visitors at an apartment industry trade show',
-    category: 'events',
+    src: '/Images/gallery/next-generation-helpers.jpg',
+    alt: 'Two young girls in bright green tutus and pink shirts pushing a trash bin across a lawn',
+    caption: 'The next generation of the On The Fly family, helping out at home',
+    category: 'our-team',
+    focus: 0,
   },
   {
-    src: '/Images/gallery/trade-show-booth-crown.jpg',
-    alt: 'Team member wearing a crown and green vest standing with a visitor at the On The Fly booth at a trade show',
-    caption: 'Having some fun with a visitor at our trade show booth',
-    category: 'events',
-    focus: 30,
+    src: '/Images/gallery/2025-10-halloween-team-selfie.jpg',
+    alt: 'Three women making silly faces for a selfie in a kitchen, one dressed as a witch with green face paint and an On The Fly polo',
+    caption: 'Halloween fun with the team',
+    category: 'our-team',
+  },
+  {
+    src: '/Images/gallery/branded-truck-and-trailer-palms.jpg',
+    alt: 'White and green On The Fly branded pickup truck towing a loaded trailer, parked under palm trees',
+    caption: 'Truck and trailer loaded and ready to roll',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/2026-02-branded-trailer-bulk-load.jpg',
+    alt: 'Green On The Fly branded dump trailer heaped with a mattress, lumber, and boxes against a blue sky, with the company services and website printed on the side',
+    caption: 'Our branded dump trailer loaded after a bulk removal',
+    category: 'on-the-job',
+    focus: 60,
+  },
+  {
+    src: '/Images/gallery/valet-trash-truck-and-trailer.jpg',
+    alt: 'On The Fly branded pickup truck with an enclosed trailer parked outside a row of storage units',
+    caption: 'One of our valet trash trucks and trailers',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/2026-05-bulk-removal-trailer-loaded.jpg',
+    alt: 'Green On The Fly dump trailer loaded with a couch and other bulk items in a parking lot',
+    caption: 'A full trailer after a bulk removal pickup',
+    category: 'on-the-job',
+    focus: 45,
+  },
+  {
+    src: '/Images/gallery/2022-01-two-bags-branded-truck.jpg',
+    alt: 'Two tied white trash bags on a grass strip with an On The Fly branded white pickup truck parked at the curb',
+    caption: 'Curbside pickup with one of our trucks on the route',
+    category: 'on-the-job',
+    focus: 35,
+  },
+  {
+    src: '/Images/gallery/2025-12-doorstep-bags-townhome-tree.jpg',
+    alt: 'Tied white trash bags and a cardboard box set out on the lawn beside a young tree in front of a townhome',
+    caption: 'Bags set out for doorstep collection at a townhome community',
+    category: 'on-the-job',
+    focus: 60,
+  },
+  {
+    src: '/Images/gallery/2023-04-trailer-loaded-furniture.jpg',
+    alt: 'Open mesh trailer filled with a mattress, dressers, cabinets, and a file cabinet, parked outside an apartment building',
+    caption: 'A full trailer from an apartment move-out',
+    category: 'on-the-job',
+    focus: 50,
+  },
+  {
+    src: '/Images/gallery/2025-12-doorstep-bags-palms.jpg',
+    alt: 'Tied white trash bags on the grass in front of ornamental grasses and palm trees outside a residence',
+    caption: 'Doorstep collection at a resort community',
+    category: 'on-the-job',
+    focus: 65,
+  },
+  {
+    src: '/Images/gallery/2023-04-white-bags-pink-ties.jpg',
+    alt: 'A large pile of white trash bags with pink drawstrings beside a stucco wall at a residence',
+    caption: 'A busy pickup day at a vacation rental community',
+    category: 'on-the-job',
+    focus: 45,
+  },
+  {
+    src: '/Images/gallery/2023-04-trailer-mattress-wicker-dresser.jpg',
+    alt: 'A mattress, wicker dresser, and black cabinet loaded in the back of a trailer',
+    caption: 'Furniture loaded for a bulk removal',
+    category: 'on-the-job',
+    focus: 50,
+  },
+  {
+    src: '/Images/gallery/2025-12-single-bag-townhome-curb.jpg',
+    alt: 'A single tied white trash bag at the base of a light pole on a grass strip between townhomes',
+    caption: 'One bag at the curb, ready for the route',
+    category: 'on-the-job',
+    focus: 70,
+  },
+  {
+    src: '/Images/gallery/2025-12-bags-and-boxes-curbside.jpg',
+    alt: 'Black and white trash bags and shipping boxes stacked on the grass beside a sidewalk',
+    caption: 'Bags and boxes out for collection',
+    category: 'on-the-job',
+  },
+  {
+    src: '/Images/gallery/2023-04-bags-by-stucco-wall.jpg',
+    alt: 'Black and white trash bags grouped on a paver path beside a stucco wall and a green shrub',
+    caption: 'Bags out for doorstep collection',
+    category: 'on-the-job',
+    focus: 40,
+  },
+  {
+    src: '/Images/gallery/2026-06-pressure-washing-parking-lot.jpg',
+    alt: 'Crew member pressure washing a parking space beside a gray cargo van at a residential community',
+    caption: 'Pressure washing a parking area at a Central Florida community',
+    category: 'on-the-job',
   },
   {
     src: '/Images/gallery/crew-member-apartment-pool-deck.jpg',
@@ -227,23 +233,24 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     focus: 25,
   },
   {
-    src: '/Images/gallery/valet-trash-truck-and-trailer.jpg',
-    alt: 'On The Fly branded pickup truck with an enclosed trailer parked outside a row of storage units',
-    caption: 'One of our valet trash trucks and trailers',
+    src: '/Images/gallery/2026-02-bulk-pile-fridge-dresser.jpg',
+    alt: 'Refrigerator, dresser, chair, boxes, and other bulk items lined up along a wooden fence under oak trees, ready for pickup',
+    caption: 'A bulk pickup staged and ready to load',
     category: 'on-the-job',
+    focus: 50,
   },
   {
-    src: '/Images/gallery/crew-pink-vests-breast-cancer-awareness.jpg',
-    alt: 'Three crew members in pink safety vests and hard hats standing on a sidewalk at a residential community',
-    caption: 'Our crew in pink for Breast Cancer Awareness Month',
-    category: 'our-team',
-    focus: 30,
+    src: '/Images/gallery/2022-01-litter-side-yard.jpg',
+    alt: 'Loose trash scattered across a side yard lawn, with a torn bag and bins along the house',
+    caption: 'A side yard before our crew cleaned it up',
+    category: 'on-the-job',
+    focus: 45,
   },
   {
-    src: '/Images/gallery/next-generation-helpers.jpg',
-    alt: 'Two young girls in bright green tutus and pink shirts pushing a trash bin across a lawn',
-    caption: 'The next generation of the On The Fly family, helping out at home',
-    category: 'our-team',
-    focus: 0,
+    src: '/Images/gallery/2021-09-storm-debris-curb-street.jpg',
+    alt: 'Branches and brush piled on the grass beside a residential street with a mailbox nearby',
+    caption: 'Storm cleanup along a neighborhood street',
+    category: 'on-the-job',
+    focus: 35,
   },
 ];

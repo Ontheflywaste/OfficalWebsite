@@ -73,14 +73,16 @@ export default function RootLayout({
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Orlando",
+      "streetAddress": "2755 Border Lake Rd #102",
+      "addressLocality": "Apopka",
       "addressRegion": "FL",
+      "postalCode": "32703",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 28.5383,
-      "longitude": -81.3792
+      "latitude": 28.6729,
+      "longitude": -81.4568
     },
     "areaServed": [
       {

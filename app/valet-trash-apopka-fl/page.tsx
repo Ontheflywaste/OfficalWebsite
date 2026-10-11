@@ -33,12 +33,8 @@ export default function ValetTrashApopkaPage() {
       neighborhoods={[
         'Rock Springs',
         'Kelly Park',
-        'Errol Estate',
-        'Piedmont Lakes',
-        'Wellesley',
         'Wekiva Springs',
-        'Plymouth',
-        'Sorrento'
+        'Plymouth'
       ]}
     />
     </>

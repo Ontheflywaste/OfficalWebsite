@@ -32,10 +32,8 @@ export default function ValetTrashLakeMaryPage() {
       serviceTitle="Valet Trash Service"
       neighborhoods={[
         'Heathrow',
-        'Timacuan',
         'Markham Woods',
         'Colonial Town Park',
-        'Bella Vista',
         'Greenwood Lakes'
       ]}
     />

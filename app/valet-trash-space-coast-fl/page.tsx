@@ -45,6 +45,8 @@ export default function SpaceCoastPage() {
       service="valet-trash"
       serviceTitle="Valet Trash Service"
       neighborhoods={neighborhoods}
+      neighborhoodsHeading="Areas We Serve on the Space Coast"
+      neighborhoodsSubtitle="We serve communities across Brevard County, from Titusville to Palm Bay"
     />
     </>
   );

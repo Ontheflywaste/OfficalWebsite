@@ -33,9 +33,7 @@ export default function ValetTrashAltamonteSpringsPage() {
       neighborhoods={[
         'Uptown Altamonte',
         'Cranes Roost',
-        'Spring Lake Hills',
         'Westmonte',
-        'Pearl Lake',
         'Sanlando Springs'
       ]}
     />

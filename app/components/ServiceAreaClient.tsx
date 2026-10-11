@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { type ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2, Phone, MapPin, Building2, Star } from 'lucide-react';
@@ -9,6 +9,22 @@ import ScrollReveal from '@/app/components/ScrollReveal';
 export interface ServiceAreaFaqItem {
   question: string;
   answer: string;
+}
+
+/** One block of page-specific body copy: a paragraph or a bulleted list. */
+export type ServiceAreaBodyBlock = { p: ReactNode } | { ul: ReactNode[] };
+
+export interface ServiceAreaBodySection {
+  /** Optional H2. The opening section straight after the H1 has none. */
+  heading?: string;
+  blocks: ServiceAreaBodyBlock[];
+}
+
+export interface ServiceAreaCta {
+  heading: string;
+  text: ReactNode;
+  /** Optional closing line under the buttons, e.g. "Consider It Done!". */
+  signoff?: string;
 }
 
 interface ServiceAreaClientProps {
@@ -22,6 +38,23 @@ interface ServiceAreaClientProps {
     paragraphs: string[];
   };
   faq?: ServiceAreaFaqItem[];
+  /** First line of the H1. Defaults to serviceTitle. */
+  headline?: string;
+  /**
+   * Page-specific body copy. When set, it replaces the default
+   * "Trusted ... / Why Choose Us" section; every other section is unchanged.
+   */
+  body?: ServiceAreaBodySection[];
+  /** Heading for the FAQ section. Defaults to "Frequently Asked Questions". */
+  faqHeading?: string;
+  /** Page-specific closing CTA copy. The buttons are unchanged. */
+  cta?: ServiceAreaCta;
+  /**
+   * What the hero subtitle says the service is for, e.g.
+   * "professional valet trash service for HOA and gated communities".
+   * Defaults to the generic description for the service.
+   */
+  serviceDescription?: string;
 }
 
 export default function ServiceAreaClient({
@@ -31,7 +64,12 @@ export default function ServiceAreaClient({
   serviceTitle,
   neighborhoods = [],
   intro,
-  faq
+  faq,
+  headline,
+  body,
+  faqHeading,
+  cta,
+  serviceDescription
 }: ServiceAreaClientProps) {
   const serviceDescriptions = {
     'valet-trash': `professional valet trash service for apartments, condos, and resort communities`,
@@ -97,13 +135,13 @@ export default function ServiceAreaClient({
               <span className="text-sm font-medium">Serving {city}, {state}</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              {serviceTitle}<br />
+              {headline ?? serviceTitle}<br />
               <span className="text-primary bg-white px-4 py-2 rounded-lg inline-block mt-2">
                 {city}, {state}
               </span>
             </h1>
             <p className="text-xl text-gray-200 mb-8 max-w-3xl">
-              On The Fly Waste Solutions provides {serviceDescriptions[service]} in {city} and surrounding Central Florida communities.
+              On The Fly Waste Solutions provides {serviceDescription ?? serviceDescriptions[service]} in {city} and surrounding Central Florida communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -147,6 +185,39 @@ export default function ServiceAreaClient({
         </section>
       )}
 
+      {body && body.length > 0 ? (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+            {body.map((section, sectionIndex) => (
+              <ScrollReveal key={sectionIndex}>
+                {section.heading && (
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    {section.heading}
+                  </h2>
+                )}
+                <div className="space-y-4">
+                  {section.blocks.map((block, blockIndex) =>
+                    'ul' in block ? (
+                      <ul
+                        key={blockIndex}
+                        className="list-disc pl-6 space-y-3 text-lg text-gray-700 leading-relaxed"
+                      >
+                        {block.ul.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p key={blockIndex} className="text-lg text-gray-700 leading-relaxed">
+                        {block.p}
+                      </p>
+                    )
+                  )}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      ) : (
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -185,6 +256,7 @@ export default function ServiceAreaClient({
           </div>
         </div>
       </section>
+      )}
 
       {neighborhoods.length > 0 && (
         <section className="py-16 bg-gray-50">
@@ -222,7 +294,7 @@ export default function ServiceAreaClient({
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
-                Frequently Asked Questions
+                {faqHeading ?? 'Frequently Asked Questions'}
               </h2>
             </ScrollReveal>
             <div className="space-y-6">
@@ -245,10 +317,16 @@ export default function ServiceAreaClient({
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Get Started in {city}?
+              {cta ? cta.heading : <>Ready to Get Started in {city}?</>}
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Get a free, no-obligation quote for {serviceTitle.toLowerCase()} in {city}. Contact us today to learn how we can help keep your property clean and your residents happy.
+              {cta ? (
+                cta.text
+              ) : (
+                <>
+                  Get a free, no-obligation quote for {serviceTitle.toLowerCase()} in {city}. Contact us today to learn how we can help keep your property clean and your residents happy.
+                </>
+              )}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -266,6 +344,11 @@ export default function ServiceAreaClient({
                 Call (407) 274-5019
               </a>
             </div>
+            {cta?.signoff && (
+              <p className="mt-10 text-2xl md:text-3xl font-extrabold italic tracking-tight">
+                {cta.signoff}
+              </p>
+            )}
           </ScrollReveal>
         </div>
       </section>

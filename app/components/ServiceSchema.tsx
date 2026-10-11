@@ -40,8 +40,10 @@ export default function ServiceSchema({
       url: 'https://ontheflywastesolutions.com',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Orlando',
+        streetAddress: '2755 Border Lake Rd #102',
+        addressLocality: 'Apopka',
         addressRegion: 'FL',
+        postalCode: '32703',
         addressCountry: 'US',
       },
     },

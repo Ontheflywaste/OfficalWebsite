@@ -55,6 +55,10 @@ interface ServiceAreaClientProps {
    * Defaults to the generic description for the service.
    */
   serviceDescription?: string;
+  /** Grid heading override for pages whose list is cities/areas rather than neighborhoods. */
+  neighborhoodsHeading?: string;
+  /** Grid subtitle override, used with neighborhoodsHeading. */
+  neighborhoodsSubtitle?: string;
 }
 
 export default function ServiceAreaClient({
@@ -69,7 +73,9 @@ export default function ServiceAreaClient({
   body,
   faqHeading,
   cta,
-  serviceDescription
+  serviceDescription,
+  neighborhoodsHeading,
+  neighborhoodsSubtitle
 }: ServiceAreaClientProps) {
   const serviceDescriptions = {
     'valet-trash': `professional valet trash service for apartments, condos, and resort communities`,
@@ -264,10 +270,12 @@ export default function ServiceAreaClient({
             <ScrollReveal>
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Neighborhoods We Serve in {city}
+                  {neighborhoodsHeading ?? <>Neighborhoods We Serve in {city}</>}
                 </h2>
                 <p className="text-lg text-gray-700">
-                  We provide service to all major neighborhoods and communities throughout {city}
+                  {neighborhoodsSubtitle ?? (
+                    <>We provide service to all major neighborhoods and communities throughout {city}</>
+                  )}
                 </p>
               </div>
             </ScrollReveal>

@@ -55,6 +55,12 @@ interface ServiceAreaClientProps {
    * Defaults to the generic description for the service.
    */
   serviceDescription?: string;
+  /**
+   * Full hero subtitle override, e.g. "professional valet trash service for ... across
+   * Kissimmee and Osceola County". Rendered as "On The Fly Waste Solutions provides {heroSubtitle}."
+   * and bypasses the default "in {city} and surrounding Central Florida communities" suffix.
+   */
+  heroSubtitle?: string;
   /** Grid heading override for pages whose list is cities/areas rather than neighborhoods. */
   neighborhoodsHeading?: string;
   /** Grid subtitle override, used with neighborhoodsHeading. */
@@ -74,6 +80,7 @@ export default function ServiceAreaClient({
   faqHeading,
   cta,
   serviceDescription,
+  heroSubtitle,
   neighborhoodsHeading,
   neighborhoodsSubtitle
 }: ServiceAreaClientProps) {
@@ -146,9 +153,15 @@ export default function ServiceAreaClient({
                 {city}, {state}
               </span>
             </h1>
+            {heroSubtitle ? (
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl">
+                On The Fly Waste Solutions provides {heroSubtitle}.
+              </p>
+            ) : (
             <p className="text-xl text-gray-200 mb-8 max-w-3xl">
               On The Fly Waste Solutions provides {serviceDescription ?? serviceDescriptions[service]} in {city} and surrounding Central Florida communities.
             </p>
+            )}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact/"

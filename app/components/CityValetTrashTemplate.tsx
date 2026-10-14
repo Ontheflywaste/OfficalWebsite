@@ -4,11 +4,19 @@ import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Phone, MapPin, Building2, Star } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 import HubSpotForm from './HubSpotForm';
+import type { ServiceAreaBodySection, ServiceAreaFaqItem } from './ServiceAreaClient';
 
-export interface CityPageData {
+interface CityPageBase {
   city: string;
   heroAlt: string;
   heroSubtitle: string;
+  ctaH2: string;
+  ctaSubtitle: ReactNode;
+}
+
+/** Default layout: intro + benefits, the three service cards, and the stats row. */
+export interface CityPageDefaultData extends CityPageBase {
+  body?: undefined;
   introH2: string;
   introParagraphs: ReactNode[];
   benefits: Array<{ title: string; description: string }>;
@@ -21,59 +29,186 @@ export interface CityPageData {
     bulkRemoval: string;
     junkRemoval: string;
   };
-  ctaH2: string;
-  ctaSubtitle: string;
 }
 
-export default function CityValetTrashTemplate({ data }: { data: CityPageData }) {
+/**
+ * Custom layout: page-specific body copy (same shape as ServiceAreaClient's
+ * `body` prop) replaces the intro, service cards, and stats row. The hero and
+ * the quote-form CTA are shared with the default layout.
+ */
+export interface CityPageCustomData extends CityPageBase {
+  body: ServiceAreaBodySection[];
+  /** Optional FAQ. Feed FaqSchema the SAME array so the schema can't drift. */
+  faq?: ServiceAreaFaqItem[];
+  /** Heading for the FAQ section. Defaults to "Frequently Asked Questions". */
+  faqHeading?: string;
+  /** Optional closing line under the quote form, e.g. "Consider It Done!". */
+  ctaSignoff?: string;
+}
+
+export type CityPageData = CityPageDefaultData | CityPageCustomData;
+
+function CityHero({ data }: { data: CityPageBase }) {
+  return (
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-hero-safe">
+      <div className="absolute inset-0 bg-black">
+        <Image
+          src="/Images/ApartmentBuildingHero.webp"
+          alt={data.heroAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+        <ScrollReveal>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <MapPin className="w-6 h-6 text-primary" />
+            <span className="text-white text-lg font-semibold">Serving {data.city}, FL</span>
+          </div>
+          <h1 className="text-[1.625rem] min-[400px]:text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+            Valet Trash Service{' '}
+            <span className="whitespace-nowrap">in {data.city}, FL</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            {data.heroSubtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              href="/contact/"
+              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
+            >
+              Get Free Quote
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a
+              href="tel:407-274-5019"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
+            >
+              <Phone className="w-5 h-5" />
+              (407) 274-5019
+            </a>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
+function CityQuoteCta({ data, signoff }: { data: CityPageBase; signoff?: string }) {
+  const form = (
+    <HubSpotForm
+      region="na1"
+      portalId="22416220"
+      formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
+      trackingLabel="city-quote"
+    />
+  );
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">{data.ctaH2}</h2>
+              <p className="text-xl text-gray-600">{data.ctaSubtitle}</p>
+            </div>
+            {signoff ? (
+              <>
+                {form}
+                <p className="mt-10 text-center text-2xl md:text-3xl font-extrabold italic tracking-tight text-primary">
+                  {signoff}
+                </p>
+              </>
+            ) : (
+              form
+            )}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+}
+
+function CityCustomBody({ data }: { data: CityPageCustomData }) {
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-hero-safe">
-        <div className="absolute inset-0 bg-black">
-          <Image
-            src="/Images/ApartmentBuildingHero.webp"
-            alt={data.heroAlt}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-          <ScrollReveal>
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span className="text-white text-lg font-semibold">Serving {data.city}, FL</span>
-            </div>
-            <h1 className="text-[1.625rem] min-[400px]:text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
-              Valet Trash Service{' '}
-              <span className="whitespace-nowrap">in {data.city}, FL</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              {data.heroSubtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/contact/"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg"
-              >
-                Get Free Quote
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <a
-                href="tel:407-274-5019"
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all border border-white/30"
-              >
-                <Phone className="w-5 h-5" />
-                (407) 274-5019
-              </a>
-            </div>
-          </ScrollReveal>
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+          {data.body.map((section, sectionIndex) => (
+            <ScrollReveal key={sectionIndex}>
+              {section.heading && (
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  {section.heading}
+                </h2>
+              )}
+              <div className="space-y-4">
+                {section.blocks.map((block, blockIndex) =>
+                  'ul' in block ? (
+                    <ul
+                      key={blockIndex}
+                      className="list-disc pl-6 space-y-3 text-lg text-gray-700 leading-relaxed"
+                    >
+                      {block.ul.map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p key={blockIndex} className="text-lg text-gray-700 leading-relaxed">
+                      {block.p}
+                    </p>
+                  )
+                )}
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 
+      {data.faq && data.faq.length > 0 && (
+        <section className="py-20 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 text-center">
+                {data.faqHeading ?? 'Frequently Asked Questions'}
+              </h2>
+            </ScrollReveal>
+            <div className="space-y-6">
+              {data.faq.map((item, index) => (
+                <ScrollReveal key={index} delay={index * 0.05}>
+                  <div className="bg-gray-50 rounded-xl p-6 shadow-md border border-gray-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.question}</h3>
+                    <p className="text-gray-700 leading-relaxed">{item.answer}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </>
+  );
+}
+
+export default function CityValetTrashTemplate({ data }: { data: CityPageData }) {
+  if (data.body !== undefined) {
+    // Custom layout. The default branch below is left byte-for-byte as it was
+    // so the pages still on it render identical HTML.
+    return (
+      <>
+        <CityHero data={data} />
+        <CityCustomBody data={data} />
+        <CityQuoteCta data={data} signoff={data.ctaSignoff} />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <CityHero data={data} />
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -235,24 +370,7 @@ export default function CityValetTrashTemplate({ data }: { data: CityPageData })
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-t-8 border-primary">
-              <div className="text-center mb-8">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">{data.ctaH2}</h2>
-                <p className="text-xl text-gray-600">{data.ctaSubtitle}</p>
-              </div>
-              <HubSpotForm
-                region="na1"
-                portalId="22416220"
-                formId="b6cf29bc-2fdc-48cb-adfc-0d201a5aa15d"
-                trackingLabel="city-quote"
-              />
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      <CityQuoteCta data={data} />
     </>
   );
 }
